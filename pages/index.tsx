@@ -33,7 +33,7 @@ export default function Home() {
         <meta name="twitter:site" content="@jameswattnz" />
       </Head>
 
-      <main className={styles.main}>
+      <main className="w-11/12 mx-auto">
         <LandingSection />
       </main>
     </div>

@@ -5,7 +5,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      header: ["kanit"]
+    },
+    colors: {
+      brown: "#FFF1E4",
+      darkbrown: "#F2DFCE",
+      white: "#FFFFFF",
+      black: "#000000",
+      grey: "#808080",
+    }
   },
   plugins: [],
 }
