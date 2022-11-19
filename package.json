@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "next lint --fix"
+    "format": "next lint --fix",
+    "lint-config": "eslint --print-config .eslintrc"
   },
   "dependencies": {
     "@types/node": "18.11.9",
