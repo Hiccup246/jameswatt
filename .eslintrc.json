@@ -1,4 +1,6 @@
 {
-  "extends": "next/core-web-vitals",
-  "quotes": "double"
+  "extends": [ "next/core-web-vitals", "next" ],
+  "rules": {
+    "quotes": [ "error", "double" ]
+  }
 }
