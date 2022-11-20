@@ -1,6 +1,8 @@
 import Head from "next/head";
 import LandingSection from "../components/LandingSection";
 import styles from "../styles/Home.module.css";
+import AboutMeSection from "../components/AboutMeSection";
+import ExperienceSection from "../components/ExperienceSection";
 
 export default function Home() {
   return (
@@ -33,9 +35,11 @@ export default function Home() {
         <meta name="twitter:site" content="@jameswattnz" />
       </Head>
 
-      <main className="w-11/12 mx-auto">
+      <div>
         <LandingSection />
-      </main>
+        <AboutMeSection />
+        <ExperienceSection />
+      </div>
     </div>
   );
 }

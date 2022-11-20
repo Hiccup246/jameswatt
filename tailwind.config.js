@@ -2,11 +2,11 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     fontFamily: {
-      header: ["kanit"]
+      sans: ['var(--font-roboto)']
     },
     colors: {
       brown: "#FFF1E4",
