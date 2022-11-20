@@ -8,9 +8,9 @@ export default function AboutMeSection() {
         <div className="w-full bg-white flex flex-row justify-center pt-10 pb-28">
             <div className="flex flex-col justify-start w-9/12 mx-auto">
                 <h1 className="self-center text-3xl font-bold mb-10">Who am I?</h1>
-                
+
                 <p className="self-center text-lg text-center font-serif mb-8">
-                    I'm a software engineer based out of London, England and an xpat of New Zealand. I enjoy
+                    I&apos;m a software engineer based out of London, England and an xpat of New Zealand. I enjoy
                     software engineering for its sometimes mind bending mix of subjectiveness and objectivness
                     where there is almost never a sliver bullet. This has helped me develop extensive software
                     skill over 6 years of programming and 3 years of working in high performing agile teams.
