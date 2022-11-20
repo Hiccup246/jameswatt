@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Spring, WaveTank } from "./WaveTank";
 import Image from "next/image";
 
-// Make a custom image to fit the drip that looks something like https://www.youtube.com/watch?v=v0hhwAMLnzU&ab_channel=DaviesMediaDesign
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));
 }

@@ -1,5 +1,7 @@
 # James Watt Portfolio
-## ToD0
+![](site-design.png)
+
+## ToDo
 - Remove redundant global CSS
 - Ensure its easy to change section colours
 - Complete about me section by
@@ -22,4 +24,7 @@
   - Document how the wave and drop code works in a blog
   - Create SVG "Human Developer" text in Gimp
   - Decide what I want the main image to look like
+  - Inspiration for custom images include
+    - https://www.youtube.com/watch?v=v0hhwAMLnzU&ab_channel=DaviesMediaDesign
+
   - Consider colour changes
