@@ -1,0 +1,30 @@
+.tab-item.activated {
+    color: var(--body-font-color);
+  }
+  
+  .tab-item {
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: fit-content;
+    height: var(--tab-height);
+    line-height: 42px;
+    padding: 0px 20px;
+    background-color: transparent;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 4;
+    color: var(--grey-font-color);
+    -webkit-tap-highlight-color: transparent;
+    margin-top: var(--tab-margin-top);
+  }
+  
+  .tab-item:focus-visible {
+    border: none;
+    background-color: transparent;
+  }
+  

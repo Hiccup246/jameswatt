@@ -1,0 +1,60 @@
+.tab-panel {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+  }
+  
+  .tab-panel h3 {
+    margin: 0;
+  }
+  
+  .experience-points {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+  
+  .experience-points li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .experience-points li::before {
+    content: "→";
+    position: absolute;
+    left: 0px;
+    color: var(--body-font-color);
+  }
+  
+  .company-name {
+    color: var(--header-font-color);
+  }
+  
+  .company-role {
+    color: var(--body-font-color);
+  }
+  
+  .date-range {
+    margin-top: 5px;
+    color: var(--grey-font-color);
+    -webkit-text-fill-color: var(--grey-font-color);
+  }
+  
+  .company-description {
+    padding-bottom: 16px;
+  }
+  
+  .tab-panel.activated {
+    padding-top: 10px;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+  }
+  

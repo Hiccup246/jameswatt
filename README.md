@@ -4,11 +4,10 @@
 ## ToDo
 - Remove redundant global CSS
 - Ensure its easy to change section colours
-- Complete about me section by
-    - Adding socials icons
-    - Updating text to be real
 - Complete my experience section
   - By importing component from old project
+  - Updating and dealing with old css
+  - Adding types to existing old javascript
 - Complete project showcase section
 - Complete Books section
 - Complete Credits section

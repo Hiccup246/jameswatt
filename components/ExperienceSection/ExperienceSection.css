@@ -1,0 +1,100 @@
+.tab-component {
+    width: 100%;
+    display: flex;
+  }
+  
+  .tab-menu {
+    position: relative;
+    z-index: 3;
+    width: max-content;
+    margin: 0;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .tab-menu > .tab-item:first-child {
+    margin-top: 0;
+  }
+  
+  .selected-tab {
+    color: var(--body-font-color);
+  }
+  
+  .tab-content {
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  .selected-tab-item {
+    visibility: visible;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    width: 80px;
+    height: 42px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: var(--secondary-color);
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  }
+  
+  .menu-border {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    background: var(--body-font-color);
+    margin-left: 4px;
+    height: calc(100% - var(--tab-margin-top))
+  }
+  
+  @media (max-width: 400px) {
+  .tab-component {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 550px) and (min-width: 401px) {
+    .tab-component {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .tab-menu > .tab-item {
+      margin-top: 0;
+      max-width: var(--tab-width);
+      flex: 0 0 var(--tab-width);
+      justify-content: center;
+    }
+  
+    .tab-menu {
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: 100%;
+    }
+  
+    .menu-border {
+      display: none;
+    }
+  
+    .tab-content {
+      margin-left: 0px;
+      position: relative;
+    }
+  
+    .selected-tab-item {
+      top: auto;
+      bottom: 0;
+      width: var( --tab-width);
+      height: 2px;
+      z-index: 5;
+      background-color: var(--body-font-color);
+      transform: translateX(calc(0 * var( --tab-width)));
+    }
+  }
+  
