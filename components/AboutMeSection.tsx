@@ -16,13 +16,13 @@ export default function AboutMeSection() {
                     skill over 6 years of programming and 3 years of working in high performing agile teams.
                 </p>
 
-                <p className="self-center text-lg text-center font-serif">
+                <p className="self-center text-lg text-center font-serif mb-10">
                     Outside of software my interests include writing, journalism, hiking throughout the world,
                     exploring Londons historic pubs, running, reading books relating to topics such as sociology,
                     fantasy, politics, philosophy and...sensory deprivation tanks ;)
                 </p>
 
-                <div className="flex flex-row justify-center mt-10">
+                <div className="flex flex-row justify-center">
                     <div className="w-8 my-auto mr-8 hover:scale-125 transition duration-150">
                         <GithubIcon src="https://www.google.com" />
                     </div>
