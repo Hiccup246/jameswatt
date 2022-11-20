@@ -2,7 +2,7 @@ import Head from "next/head";
 import LandingSection from "../components/LandingSection";
 import styles from "../styles/Home.module.css";
 import AboutMeSection from "../components/AboutMeSection";
-import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
+import WorkExperienceSection from "../components/WorkExperienceSection/WorkExperienceSection";
 
 export default function Home() {
   return (
@@ -38,7 +38,7 @@ export default function Home() {
       <div>
         <LandingSection />
         <AboutMeSection />
-        <ExperienceSection />
+        <WorkExperienceSection />
       </div>
     </div>
   );
