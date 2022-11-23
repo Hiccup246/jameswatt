@@ -23,19 +23,20 @@ export default function AboutMeSection() {
                 </p>
 
                 <div className="flex flex-row justify-center">
-                    <div className="w-8 my-auto mr-8 hover:scale-125 transition duration-150">
+                    {/* text-grey transition-colors ease-[cubic-bezier(0.05,0,0,1)] duration-500 */}
+                    <div className="w-8 my-auto mr-8 hover:scale-105 duration-200 ease-in">
                         <GithubIcon src="https://www.google.com" />
                     </div>
 
-                    <div className="w-8 my-auto mr-8 hover:cursor-pointer hover:scale-125 duration-200 ease-in">
+                    <div className="w-8 my-auto mr-8 hover:scale-105 duration-200 ease-in">
                         <LinkedInIcon src="https://www.google.com" />
                     </div>
 
-                    <div className="w-10 my-auto mr-8 hover:cursor-pointer hover:scale-125 duration-200 ease-in">
+                    <div className="w-10 my-auto mr-8 hover:scale-105 duration-200 ease-in">
                         <EmailIcon src="https://www.google.com" />
                     </div>
 
-                    <div className="w-10 my-auto hover:cursor-pointer hover:scale-125 duration-200 ease-in">
+                    <div className="w-10 my-auto hover:scale-105 duration-200 ease-in">
                         <ResumeIcon src="https://www.google.com" />
                     </div>
                 </div>
