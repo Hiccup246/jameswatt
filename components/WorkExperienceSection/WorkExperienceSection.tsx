@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react"
 
 // import './programming-history.css'
-import { PROGRAMMING_EXPERIENCES } from '../../constants/WorkExperiences'
-import ContentPanelButton from './ContentPanelButton'
-import ContentPanel from './ContentPanel'
+import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences"
+import ContentPanelButton from "./ContentPanelButton"
+import ContentPanel from "./ContentPanel"
 
 export default function ExperienceSection() {
     const [currentTabIndex, setCurrentTabIndex] = useState(0)
-  const [sliderStyle, setSliderStyle] = useState({ width: '' })
+  const [sliderStyle, setSliderStyle] = useState({ width: "" })
 
   const tabComponentRef = React.createRef()
-  const mobileViewWidth = '550px'
+  const mobileViewWidth = "550px"
 
   const setupComponent = () => {
     const panelContainer = tabComponentRef.current
     const newSliderWidth = panelContainer.querySelector(
-      '.tab-item.activated'
+      ".tab-item.activated"
     ).clientWidth
     const selectedTabItemWidth =
-      tabComponentRef.current.querySelector('.selected-tab-item')
+      tabComponentRef.current.querySelector(".selected-tab-item")
 
     selectedTabItemWidth.style.width = `${newSliderWidth}px`
     panelContainer.style.height = largestPanelHeight()
@@ -29,7 +29,7 @@ export default function ExperienceSection() {
 
     for (let i = 0; i < PROGRAMMING_EXPERIENCES.length; i++) {
       const panelHeight =
-        tabComponentRef.current.querySelector('.tab-panel').clientHeight
+        tabComponentRef.current.querySelector(".tab-panel").clientHeight
 
       if (panelHeight > largestPanelHeight) {
         largestPanelHeight = panelHeight
@@ -67,41 +67,48 @@ export default function ExperienceSection() {
   }
 
   useEffect(() => {
-    setupComponent()
+    // setupComponent()
   }, [])
 
   return (
-    <div className="programming-history">
-      <h2>📜 Programming History</h2>
-      <div ref={tabComponentRef} className="tab-component">
-        <div className="tab-menu">
-          {PROGRAMMING_EXPERIENCES.map((job, index) => {
-            return (
-              <ContentPanelButton
-                key={index + job.company}
-                companyName={job.company}
-                activated={index === currentTabIndex}
-                clickHandler={(width) => clickOnTab(index, width)}
-              />
-            )
-          })}
-
-          <div style={sliderStyle} className="selected-tab-item"></div>
-          <div className="menu-border" />
-        </div>
-
-        <div className="tab-content">
-          {PROGRAMMING_EXPERIENCES.map((job, index) => {
-            return (
-              <ContentPanel
-                key={index + job.dateRange}
-                job={job}
-                activated={index === currentTabIndex}
-              />
-            )
-          })}
-        </div>
+    <div className="w-full bg-white flex flex-row justify-center pt-10 pb-28">
+      <div className="flex flex-col justify-start w-9/12 mx-auto">
+        <h1 className="self-center text-3xl font-bold mb-10">My Experience</h1>
       </div>
     </div>
   )
+  // return (
+  //   <div className="programming-history">
+  //     <h2>📜 Programming History</h2>
+  //     <div ref={tabComponentRef} className="tab-component">
+  //       <div className="tab-menu">
+  //         {PROGRAMMING_EXPERIENCES.map((job, index) => {
+  //           return (
+  //             <ContentPanelButton
+  //               key={index + job.company}
+  //               companyName={job.company}
+  //               activated={index === currentTabIndex}
+  //               clickHandler={(width) => clickOnTab(index, width)}
+  //             />
+  //           )
+  //         })}
+
+  //         <div style={sliderStyle} className="selected-tab-item"></div>
+  //         <div className="menu-border" />
+  //       </div>
+
+  //       <div className="tab-content">
+  //         {PROGRAMMING_EXPERIENCES.map((job, index) => {
+  //           return (
+  //             <ContentPanel
+  //               key={index + job.dateRange}
+  //               job={job}
+  //               activated={index === currentTabIndex}
+  //             />
+  //           )
+  //         })}
+  //       </div>
+  //     </div>
+  //   </div>
+  // )
 }

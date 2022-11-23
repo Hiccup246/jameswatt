@@ -3,6 +3,7 @@ import LandingSection from "../components/LandingSection";
 import styles from "../styles/Home.module.css";
 import AboutMeSection from "../components/AboutMeSection";
 import WorkExperienceSection from "../components/WorkExperienceSection/WorkExperienceSection";
+import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
         <LandingSection />
         <AboutMeSection />
         <WorkExperienceSection />
+        <ProjectShowcaseSection />
       </div>
     </div>
   );

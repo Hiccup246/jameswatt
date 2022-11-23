@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
 // import './content-panel.css'
 
 export default function ContentPanel({ job, activated }: { job:{ role:string, company:string, dateRange:string, description:string, bullets:[] }, activated:boolean }) {
   return (
-    <div className={activated ? 'tab-panel activated' : 'tab-panel'}>
+    <div className={activated ? "tab-panel activated" : "tab-panel"}>
       <h3>
         <span className="company-role">{job.role}</span>
         <span className="company-name"> @ {job.company}</span>
