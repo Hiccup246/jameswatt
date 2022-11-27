@@ -78,7 +78,7 @@ export default function ExperienceSection() {
       </h1>
 
       <div ref={tabComponentRef} className="w-full flex min-[400px]:block">
-        <div className="relative w-max m-0 px-2.5 list-none z-10 h-full">
+        <div className="relative w-max m-0 list-none z-10 h-full py-2.5">
            {
             PROGRAMMING_EXPERIENCES.map((job, index) => {
               return (
@@ -91,8 +91,17 @@ export default function ExperienceSection() {
               )
             })
            }
-          <div style={sliderStyle} className="visible absolute top-0 left-0 z-10 w-20 h-[var(--tab-height)] my-2.5 bg-darkbrown"></div>
-          <div className="visible absolute top-0 left-0 w-0.5 bg-black ml-1 h-[calc(100%-var(--tab-margin-top))]" />
+          <div style={sliderStyle}
+            className={`
+              visible absolute top-0 left-0 z-10 w-20
+              h-[var(--tab-height)] my-2.5 bg-darkbrown
+              transition-[transform width] duration-200 delay-100
+              ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
+            `}></div>
+          <div className={`
+            visible absolute top-0 left-0 w-0.5 bg-black
+            ml-1 h-[calc(100%-var(--tab-margin-top))]
+          `} />
         </div>
       </div>
     </SectionLayout>
