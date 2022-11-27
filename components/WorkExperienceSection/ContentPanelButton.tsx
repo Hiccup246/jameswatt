@@ -3,12 +3,13 @@ import React from "react"
 // import './content-panel-button.css'
 
 export default function ContentPanelButton({ companyName, activated, clickHandler }: { companyName:string, activated: boolean, clickHandler:Function }) {
-  const activatedClasses = activated ? "text-black" : ""
+  const activatedClasses = activated ? "text-black activated" : ""
 
   return (
     <button
       aria-label={companyName}
       className={`
+        tab-item
         cursor-pointer relative flex w-fit
         h-[var(--tab-height)]
         leading-[var(--tab-height)] px-5 bg-transparent

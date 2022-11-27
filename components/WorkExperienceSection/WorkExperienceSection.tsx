@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef, ReactElement } from "react"
 
 // import './programming-history.css'
 import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences"
@@ -7,21 +7,27 @@ import ContentPanel from "./ContentPanel"
 import SectionLayout from "../SectionLayout"
 
 export default function ExperienceSection() {
-    const [currentTabIndex, setCurrentTabIndex] = useState(0)
-  const [sliderStyle, setSliderStyle] = useState({ width: "" })
+  const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
+  const [sliderStyle, setSliderStyle] = useState<{ width: string, transform:string }>({ width: "", transform: "" })
 
-  const tabComponentRef = React.createRef()
+  const tabComponentRef = useRef<HTMLElement>()
   const mobileViewWidth = "550px"
 
   const setupComponent = () => {
-    const panelContainer = tabComponentRef.current
-    const newSliderWidth = panelContainer.querySelector(
-      ".tab-item.activated"
-    ).clientWidth
-    const selectedTabItemWidth =
-      tabComponentRef.current.querySelector(".selected-tab-item")
+    const panelContainer:HTMLElement = tabComponentRef.current as HTMLElement;
 
-    selectedTabItemWidth.style.width = `${newSliderWidth}px`
+    const tabItem:HTMLElement = panelContainer.querySelector(
+      ".tab-item.activated"
+    ) as HTMLElement
+
+    const selectedTabItem:HTMLElement = panelContainer.querySelector(
+      ".selected-tab-item"
+    ) as HTMLElement
+
+    const newSliderWidth:Number = tabItem.clientWidth
+
+    selectedTabItem.style.width = `${newSliderWidth}px`
+    
     panelContainer.style.height = largestPanelHeight()
   }
 
@@ -29,8 +35,15 @@ export default function ExperienceSection() {
     let largestPanelHeight = 0
 
     for (let i = 0; i < PROGRAMMING_EXPERIENCES.length; i++) {
-      const panelHeight =
-        tabComponentRef.current.querySelector(".tab-panel").clientHeight
+      const panelContainer:HTMLElement = tabComponentRef.current as HTMLElement;
+      const tabPanel:NodeListOf<HTMLElement> = panelContainer.querySelectorAll(
+        ".tab-panel"
+      ) as NodeListOf<HTMLElement>
+
+      // console.log(panelContainer.clientHeight)
+      const panelHeight = tabPanel[i].clientHeight
+      console.log(panelHeight)
+
 
       if (panelHeight > largestPanelHeight) {
         largestPanelHeight = panelHeight
@@ -40,12 +53,12 @@ export default function ExperienceSection() {
     return `${largestPanelHeight}px`
   }
 
-  const clickOnTab = (newTabIndex, buttonWidth) => {
+  const clickOnTab = (newTabIndex:Number, buttonWidth:Number) => {
     updateSelectedTabItem(newTabIndex, `${buttonWidth}px`)
     setCurrentTabIndex(newTabIndex)
   }
 
-  const updateSelectedTabItem = (newTabIndex, newSliderWidth) => {
+  const updateSelectedTabItem = (newTabIndex:Number, newSliderWidth:string) => {
     const isMobile = window.matchMedia(
       `(max-width: ${mobileViewWidth})`
     ).matches
@@ -68,7 +81,7 @@ export default function ExperienceSection() {
   }
 
   useEffect(() => {
-    // setupComponent()
+    setupComponent()
   }, [])
 
   return (
@@ -77,7 +90,7 @@ export default function ExperienceSection() {
         My Experience
       </h1>
 
-      <div ref={tabComponentRef} className="w-full flex min-[400px]:block">
+      <div ref={tabComponentRef} className="w-full flex max-[400px]:block">
         <div className="relative w-max m-0 list-none z-10 h-full py-2.5">
            {
             PROGRAMMING_EXPERIENCES.map((job, index) => {
@@ -91,8 +104,9 @@ export default function ExperienceSection() {
               )
             })
            }
-          <div style={sliderStyle}
+          <div style={sliderStyle.width.length > 0 ? sliderStyle: {}}
             className={`
+              selected-tab-item
               visible absolute top-0 left-0 z-10 w-20
               h-[var(--tab-height)] my-2.5 bg-darkbrown
               transition-[transform width] duration-200 delay-100
@@ -102,6 +116,19 @@ export default function ExperienceSection() {
             visible absolute top-0 left-0 w-0.5 bg-black
             ml-1 h-[calc(100%-var(--tab-margin-top))]
           `} />
+        </div>
+
+        <div className="relative w-full ml-5">
+          {
+            PROGRAMMING_EXPERIENCES.map((job, index) => {
+              return (
+              <ContentPanel
+                key={index + job.dateRange}
+                job={job}
+                activated={index === currentTabIndex} />
+              )
+            })
+          }
         </div>
       </div>
     </SectionLayout>
