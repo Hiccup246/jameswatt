@@ -1,9 +1,9 @@
 import GithubIcon from "./GithubIcon";
 import Image from "next/image";
 
-export default function ShowcaseProject(props: ShowcaseProjectProps) {
+export default function ShowcaseProject(props: ShowcaseProject) {
     return (
-        <div className="w-full max-w-sm mx-auto group hover">
+        <div className="w-full mx-auto group hover">
             <div className="aspect-video">
                 <a className="aspect-video"
                     href={props.websiteUrl}

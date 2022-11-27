@@ -1,7 +1,14 @@
 import SectionLayout from "./SectionLayout";
 import ShowcaseProject from "./ShowcaseProject";
 
-const PROJECTS = new Array<ShowcaseProjectProps>(
+const PROJECTS = new Array<ShowcaseProject>(
+    {
+        websiteUrl: "https://www.custom-sound-board.com/",
+        githubRepoUrl: "https://github.com/Hiccup246/custom-sound-board",
+        projectName: "Custom Sound Board",
+        projectImageSrc: "/custom-sound-board.webp",
+        firstPublished: new Date(2022, 10, 5) // "5/11/2022"
+    },
     {
         websiteUrl: "https://www.freeonlinetextedit.com/",
         githubRepoUrl: "https://github.com/Hiccup246/free-online-text-edit",
@@ -39,15 +46,30 @@ const PROJECTS = new Array<ShowcaseProjectProps>(
     },
 );
 
+const orderedByPublishDate = PROJECTS.sort((a, b) => b.firstPublished.getTime() - a.firstPublished.getTime());
+const mostRecentProject = orderedByPublishDate[0];
+const olderProjects = orderedByPublishDate.slice(1);
+
 export default function ProjectShowcaseSection() {
     return (
         <SectionLayout isBgColorPrimary={true}>
-            <h1 className="self-center text-3xl font-bold mb-10">Project Showcase</h1>
-            <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-8 gap-y-12">
+            <h1 className="self-center text-3xl font-bold mb-14">
+                Project Showcase
+            </h1>
+            
+            <div className="w-1/2 self-center mb-10">
+                <ShowcaseProject
+                    websiteUrl={mostRecentProject.websiteUrl}
+                    githubRepoUrl={mostRecentProject.githubRepoUrl}
+                    projectName={mostRecentProject.projectName}
+                    projectImageSrc={mostRecentProject.projectImageSrc}
+                    firstPublished={mostRecentProject.firstPublished} />                
+            </div>
+
+            <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-8 gap-y-14">
                 {
-                    PROJECTS
-                    .sort((a, b) => b.firstPublished.getTime() - a.firstPublished.getTime())
-                    .map((project: ShowcaseProjectProps) => {
+                    olderProjects
+                    .map((project: ShowcaseProject) => {
                         return (
                             <ShowcaseProject
                                 websiteUrl={project.websiteUrl}

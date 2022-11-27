@@ -1,6 +1,6 @@
 declare module "*.pdf";
 
-type ShowcaseProjectProps = {
+type ShowcaseProject = {
     websiteUrl: string;
     githubRepoUrl: string;
     projectName: string;
