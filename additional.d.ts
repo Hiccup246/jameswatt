@@ -5,6 +5,7 @@ type ShowcaseProjectProps = {
     githubRepoUrl: string;
     projectName: string;
     projectImageSrc: string;
+    firstPublished: Date;
 }
 
 type SectionLayoutProps = {

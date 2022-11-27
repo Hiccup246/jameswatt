@@ -6,8 +6,37 @@ const PROJECTS = new Array<ShowcaseProjectProps>(
         websiteUrl: "https://www.freeonlinetextedit.com/",
         githubRepoUrl: "https://github.com/Hiccup246/free-online-text-edit",
         projectName: "Free Online Text Edit",
-        projectImageSrc: "/freeonlinetextedit.png"
-    }
+        projectImageSrc: "/freeonlinetextedit.webp",
+        firstPublished: new Date("30/11/2021")
+    },
+    {
+        websiteUrl: "https://www.old.jameswatt.io",
+        githubRepoUrl: "https://github.com/Hiccup246/old-jameswatt-portfolio",
+        projectName: "Old Portfolio Site",
+        projectImageSrc: "/old-portfolio-site.webp",
+        firstPublished: new Date("22/11/2022")
+    },
+    {
+        websiteUrl: "https://www.normmacdonaldquotes.com/",
+        githubRepoUrl: "https://github.com/Hiccup246/norm-macdonald-quotes",
+        projectName: "Norm MacDonald Quotes",
+        projectImageSrc: "/norm-macdonald-quotes.webp",
+        firstPublished: new Date("26/05/2022")
+    },
+    {
+        websiteUrl: "https://www.guncontrolpolicies.com/",
+        githubRepoUrl: "https://github.com/Hiccup246/gun-control-policies",
+        projectName: "Gun Control Policies",
+        projectImageSrc: "/gun-control-policies.webp",
+        firstPublished: new Date("13/06/2022")
+    },
+    {
+        websiteUrl: "https://www.npmjs.com/package/james-watt-calling-card",
+        githubRepoUrl: "https://github.com/Hiccup246/james-watt-calling-card",
+        projectName: "James Watt Calling Card",
+        projectImageSrc: "/james-watt-calling-card.webp",
+        firstPublished: new Date("7/10/2022")
+    },
 )
 
 export default function ProjectShowcaseSection() {
@@ -19,10 +48,11 @@ export default function ProjectShowcaseSection() {
                     PROJECTS.map((project: ShowcaseProjectProps) => {
                         return (
                             <ShowcaseProject
-                            websiteUrl={project.websiteUrl}
-                            githubRepoUrl={project.githubRepoUrl}
-                            projectName={project.projectName}
-                            projectImageSrc={project.projectImageSrc} />
+                                websiteUrl={project.websiteUrl}
+                                githubRepoUrl={project.githubRepoUrl}
+                                projectName={project.projectName}
+                                projectImageSrc={project.projectImageSrc}
+                                firstPublished={project.firstPublished} />
                         )
                     })
                 }
