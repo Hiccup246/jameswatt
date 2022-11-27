@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --tab-height: 42px;
+    --tab-margin-top: 31.25px;
+    --tab-width: 120px;
+  }
+
   html,
   body { 
     padding: 0;

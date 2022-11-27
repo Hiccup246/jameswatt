@@ -39,7 +39,7 @@ export default function Home() {
       <div>
         {/* <LandingSection /> */}
         <AboutMeSection />
-        {/* <WorkExperienceSection /> */}
+        <WorkExperienceSection />
         <ProjectShowcaseSection />
       </div>
     </div>
