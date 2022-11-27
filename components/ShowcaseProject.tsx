@@ -10,7 +10,7 @@ export default function ShowcaseProject(props: ShowcaseProjectProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Free online text edit url">
-                    <Image src={props.websiteUrl}
+                    <Image src={props.projectImageSrc}
                         width={600}
                         className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border"
                         height={337}
