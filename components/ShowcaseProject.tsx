@@ -4,15 +4,14 @@ import Image from "next/image";
 export default function ShowcaseProject(props: ShowcaseProject) {
     return (
         <div className="w-full mx-auto group hover">
-            <div className="aspect-video">
-                <a className="aspect-video"
-                    href={props.websiteUrl}
+            <div>
+                <a  href={props.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Free online text edit url">
                     <Image src={props.projectImageSrc}
                         width={600}
-                        className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border"
+                        className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border aspect-video"
                         height={337}
                         alt={`${props.projectName} Website Screenshot`} />
                 </a>
@@ -26,7 +25,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
                         {props.projectName}
                     </a>
 
-                    <div className="w-6 h-6 my-auto">
+                    <div className="w-6 h-6 my-auto min-w-[1.5rem] ml-2">
                         <a className="hover:cursor-pointer hover:text-black text-grey duration-200 ease-in"
                             href={props.githubRepoUrl}
                             target="_blank"

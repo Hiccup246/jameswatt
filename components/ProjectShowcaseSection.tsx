@@ -53,11 +53,11 @@ const olderProjects = orderedByPublishDate.slice(1);
 export default function ProjectShowcaseSection() {
     return (
         <SectionLayout isBgColorPrimary={true}>
-            <h1 className="self-center text-3xl font-bold mb-14">
+            <h1 className="self-center text-2xl sm:text-3xl font-bold mb-14">
                 Project Showcase
             </h1>
             
-            <div className="w-1/2 self-center mb-10">
+            <div className="md:w-1/2 self-center mb-10">
                 <ShowcaseProject
                     websiteUrl={mostRecentProject.websiteUrl}
                     githubRepoUrl={mostRecentProject.githubRepoUrl}
@@ -66,12 +66,13 @@ export default function ProjectShowcaseSection() {
                     firstPublished={mostRecentProject.firstPublished} />                
             </div>
 
-            <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-8 gap-y-14">
+            <div className="pt-8 grid grid-cols-1 md:grid-cols-3 items-start gap-8 gap-y-14">
                 {
                     olderProjects
                     .map((project: ShowcaseProject) => {
                         return (
                             <ShowcaseProject
+                                key={project.projectName}
                                 websiteUrl={project.websiteUrl}
                                 githubRepoUrl={project.githubRepoUrl}
                                 projectName={project.projectName}
