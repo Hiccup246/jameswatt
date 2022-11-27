@@ -13,6 +13,9 @@ export default function ShowcaseProject(props: ShowcaseProject) {
                         width={600}
                         className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border aspect-video"
                         height={337}
+                        sizes="(min-width: 640px) 480px,
+                                (min-width: 785px) 180px,
+                                180px"
                         alt={`${props.projectName} Website Screenshot`} />
                 </a>
 
