@@ -23,7 +23,7 @@ export default function ShowcaseProject(props: ShowcaseProjectProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${props.projectName} Url`}>
-                        My Website
+                        {props.projectName}
                     </a>
 
                     <div className="w-6 h-6 my-auto">
