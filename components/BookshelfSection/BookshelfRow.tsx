@@ -1,17 +1,9 @@
-import React from 'react'
-import ThumbsUpIcon from '../ThumbsUpIcon'
+import React from "react"
 import Image from "next/image";
 
-// import bookDark from '../../../assets/book-dark.gif'
-// import bookLight from '../../../assets/book-light.gif'
-// import Completed from '../../../assets/svg/clipboard-check.svg'
-
-// import './bookshelf-row.css'
-
 export default function BookshelfRow({ book }: { book: Book }) {
-
     function getBookStatusIcon(status: string) {
-      if (status === 'Read') {
+      if (status === "Read") {
         return (
           <div className="h-5 w-5 mx-auto">
              <Image src="/book.png"

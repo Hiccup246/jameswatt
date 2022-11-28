@@ -1,13 +1,10 @@
-import React, { useState } from 'react'
-
-import { BOOKS } from '../../constants/Books'
+import React, { useState } from "react"
+import { BOOKS } from "../../constants/Books"
 import SectionLayout from "../SectionLayout";
+import BookshelfRow from "./BookshelfRow";
 
-// import './bookshelf.css'
-import BookshelfRow from './BookshelfRow';
 export default function BookshelfSection() {
     const previewBooks = 4
-
     const renderBooks = (numberOfBooks: number) => {
         return BOOKS.slice(0, numberOfBooks).map((book: Book, index) => {
             return (
@@ -18,23 +15,23 @@ export default function BookshelfSection() {
         })
     }
 
-    const [buttonText, setButtonText] = useState('Show More')
+    const [buttonText, setButtonText] = useState("Show More")
     const [books, setBooks] = useState(renderBooks(previewBooks))
 
     const showHideBooks = () => {
-        if (buttonText === 'Show More') {
+        if (buttonText === "Show More") {
             setBooks(renderBooks(BOOKS.length))
-            setButtonText('Show Less')
+            setButtonText("Show Less")
         } else {
             setBooks(renderBooks(previewBooks))
-            setButtonText('Show More')
+            setButtonText("Show More")
         }
     }
 
     return (
         <SectionLayout isBgColorPrimary={true}>
             <h1 className="self-center text-2xl sm:text-3xl font-bold mb-14">
-                Books I'm Involved With
+                Books I&apos;m Involved With
             </h1>
 
             <div className="bookshelf__table-wrapper bg-white p-3.5 rounded-xl">
