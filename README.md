@@ -29,6 +29,7 @@
 - No hanging commas
 - Update linter with stricter rules so evrything can be formatted nicley. Emphasis on styling long class names
 - Consider overall site theme perhaps in relation to eventual landing section colors
+- SEO Optimisation https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance
 
 ### Work Experience Section
 - Clean up tab selection javascript
