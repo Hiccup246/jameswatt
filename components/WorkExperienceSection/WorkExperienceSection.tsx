@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, ReactElement } from "react"
+import React, { useEffect, useState, useRef } from "react"
 
 // import './programming-history.css'
 import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences"

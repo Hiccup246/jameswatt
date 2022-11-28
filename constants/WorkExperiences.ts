@@ -5,7 +5,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     dateRange: "2022/02 - Present",
     description:
       "APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience",
-    bullets: [
+    jobHighlights: [
       `<p>
         Currently leading all software development initiatives for the UK office
         which involves managing and participating in product/feature development
@@ -31,7 +31,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     dateRange: "2020/01 - 2022/02",
     description:
       "APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience",
-    bullets: [
+    jobHighlights: [
       `<p>
         Currently performing full stack development utilising <b>Vue.JS</b>,
         Angular.JS and <b>Ruby on Rails</b> to create KYC/AML and financial
@@ -58,7 +58,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     dateRange: "2019/04 - 2019/09",
     description:
       "A social music application to aid artists in optimising their reach and influence using artifical intelligence",
-    bullets: [
+    jobHighlights: [
       `<p>
         Worked closley with the founders of the company in an agile team to
         develop and expand the back-end of the main product using <b>Koa.JS</b>{" "}
@@ -73,7 +73,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     dateRange: "2018/11 - 2019/02",
     description:
       "Halter is a solar-powered GPS enabled smart collar, which guides cows around a farm using sound and vibrations, allowing farmers to automate herd movements and create virtual fences",
-    bullets: [
+    jobHighlights: [
       "Worked in two high performing agile teams which developed the minimal viable product of the company under tight product deadlines",
       `<p>
         Developed and expanded the back-end and <b>cloud infrastructure</b> of
@@ -91,7 +91,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     company: "BNZ",
     dateRange: "2017/11 - 2018/02",
     description: "Bank of New Zealand is one of New Zealand's big four banks",
-    bullets: [
+    jobHighlights: [
       `<p>
         Developed front-end software using the <b>React.JS</b> framework
         alongside technologies such as JavaScript, HTML, CSS, JSS and Node.JS to
@@ -110,7 +110,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     dateRange: "2016 - 2020",
     description:
       "Victoria University of Wellington is a university in Wellington, New Zealand. The university has a strong software engineering school and an impressive reputation regarding artifical intelligence research",
-    bullets: [
+    jobHighlights: [
       "Graduated with a Bachelor of Engineering in Software Engineering with first class honours",
       `<p>
         Key study interests included <b>artificial intelligence</b>, software

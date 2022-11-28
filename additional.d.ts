@@ -18,5 +18,5 @@ type Job = {
     company: string;
     dateRange: string;
     description: string;
-    bullets: string[];
+    jobHighlights: string[];
 }
