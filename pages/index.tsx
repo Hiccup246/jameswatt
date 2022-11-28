@@ -5,6 +5,7 @@ import AboutMeSection from "../components/AboutMeSection";
 import WorkExperienceSection from "../components/WorkExperienceSection/WorkExperienceSection";
 import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
 import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
+import CreditsSection from "../components/CreditsSection";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
         <WorkExperienceSection />
         <ProjectShowcaseSection />
         <BookshelfSection />
+        <CreditsSection />
       </div>
     </div>
   );
