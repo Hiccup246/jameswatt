@@ -5,6 +5,7 @@
 - Remove redundant global CSS
 - Complete Books section
 - Complete Credits section
+  - Consider some different designs
 - Complete footer
 - Complete Technologies section
   - Complete draft design in figma
@@ -35,5 +36,5 @@
 - Think about possible alternative component splits
 
 ### Bookshelf Section
-- Convert CSS to tailwind
-- Mobile view after conversion
+- Refactor react code
+- Consider alternative component splits
