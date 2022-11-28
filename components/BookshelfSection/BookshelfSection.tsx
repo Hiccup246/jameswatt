@@ -33,13 +33,13 @@ export default function BookshelfSection() {
                 Books I'm Involved With
             </h1>
 
-            <div className="bookshelf__table-wrapper">
-                <table className="bookshelf__table">
+            <div className="bookshelf__table-wrapper bg-white p-3.5 rounded-xl">
+                <table className="bookshelf__table w-full">
                     <thead>
                         <tr>
-                            <th>Book</th>
-                            <th className="bookshelf__genre-header">Genre</th>
-                            <th className="bookshelf__status-header">Status</th>
+                            <th className="text-sm pb-2.5 text-left text-black">Book</th>
+                            <th className="bookshelf__genre-header text-sm pb-2.5 text-left text-black w-24">Genre</th>
+                            <th className="bookshelf__status-header text-sm pb-2.5 text-center text-black">Status</th>
                         </tr>
                     </thead>
                     <tbody>{books}</tbody>
@@ -47,9 +47,9 @@ export default function BookshelfSection() {
 
                 <button
                     aria-label="Show More Books"
-                    className="bookshelf__show-more-button"
+                    className="bookshelf__show-more-button border rounded-md px-2 py-1 mx-auto w-fit block hover:opacity-50"
                     onClick={() => showHideBooks()}
-                >
+                    >
                     {buttonText}
                 </button>
             </div>
