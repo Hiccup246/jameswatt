@@ -19,7 +19,8 @@ module.exports = {
     },
     extend: {
       screens: {
-        "small": "550px"
+        "small": "550px",
+        "smaller": "400px"
       },
       transitionTimingFunction: {
         'slider': 'transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s',

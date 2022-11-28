@@ -10,7 +10,11 @@ export default function BookshelfSection() {
 
     const renderBooks = (numberOfBooks: number) => {
         return BOOKS.slice(0, numberOfBooks).map((book: Book, index) => {
-            return <BookshelfRow key={index} book={book} />
+            return (
+                <tr key={index} className="[&>td]:pt-10 [&>td]:first:pt-0">
+                    <BookshelfRow book={book} />
+                </tr>
+            )
         })
     }
 
@@ -38,7 +42,7 @@ export default function BookshelfSection() {
                     <thead>
                         <tr>
                             <th className="text-sm pb-2.5 text-left text-black">Book</th>
-                            <th className="bookshelf__genre-header text-sm pb-2.5 text-left text-black w-24">Genre</th>
+                            <th className="bookshelf__genre-header text-sm pb-2.5 text-left text-black w-24 max-smaller:hidden">Genre</th>
                             <th className="bookshelf__status-header text-sm pb-2.5 text-center text-black">Status</th>
                         </tr>
                     </thead>
@@ -47,7 +51,7 @@ export default function BookshelfSection() {
 
                 <button
                     aria-label="Show More Books"
-                    className="bookshelf__show-more-button border rounded-md px-2 py-1 mx-auto w-fit block hover:opacity-50"
+                    className="bookshelf__show-more-button border rounded-md px-2 py-1 mx-auto w-fit block hover:opacity-50 mt-8"
                     onClick={() => showHideBooks()}
                     >
                     {buttonText}

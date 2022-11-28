@@ -40,12 +40,12 @@
 } */
 
 @media (max-width: 375px) {
-  .bookshelf__genre-header {
+  /* .bookshelf__genre-header {
     display: none;
-  }
+  } */
 }
 
-.bookshelf__show-more-button {
+/* .bookshelf__show-more-button {
   border: 1px solid var(--body-font-color);
   background-color: var(--secondary-color);
   width: fit-content;
@@ -58,4 +58,4 @@
 
 .bookshelf__show-more-button:hover {
   cursor: pointer;
-}
+} */

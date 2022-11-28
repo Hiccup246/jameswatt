@@ -24,9 +24,9 @@
 } */
 
 @media (max-width: 375px) {
-  .bookshelf__genre-cell {
+  /* .bookshelf__genre-cell {
     display: inline;
-  }
+  } */
 
   .bookshelf__name-cell {
     display: inline;

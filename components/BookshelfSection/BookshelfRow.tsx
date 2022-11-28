@@ -32,22 +32,22 @@ export default function BookshelfRow({ book }: { book: Book }) {
                    sizes="(min-width: 640px) 48px,
                           (min-width: 785px) 48px,
                           48px"
-                   alt="Completed Book Icon" />
+                   alt="Currently Reading Icon" />
             </div>
         )
       }
     }
 
     return (
-        <tr>
-          <td className="bookshelf__name-cell flex justify-start flex-col pr-2.5 break-keep align-top pb-10">
+        <>
+          <td className="bookshelf__name-cell flex justify-start flex-col pr-2.5 break-keep align-top">
             <h3 className="my-0 max-w-lg font-bold">{book.name}</h3>
             <div className="text-sm">{book.author}</div>
           </td>
-          <td className="bookshelf__genre-cell align-top text-sm">{book.genre}</td>
+          <td className="bookshelf__genre-cell align-top text-sm max-smaller:inline">{book.genre}</td>
           <td className="bookshelf__status-cell align-top">
             {getBookStatusIcon(book.status)}
           </td>
-        </tr>
+        </>
       )
 }
