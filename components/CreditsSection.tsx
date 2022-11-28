@@ -7,7 +7,7 @@ export default function CreditsSection() {
                 The Work Which Inspired This Site
             </h1>
 
-            <h2 className="text-center mb-10">"Good artists borrow, great artists steal" - Pablo Picasso</h2>
+            <h2 className="text-center mb-10">&quot;Good artists borrow, great artists steal&quot; - Pablo Picasso</h2>
 
             <div>
                 <ul>
