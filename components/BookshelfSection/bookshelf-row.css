@@ -1,0 +1,46 @@
+.bookshelf__completed {
+  fill: var(--body-font-color);
+}
+
+.bookshelf__reading-icon,
+.bookshelf_completed-icon {
+  height: 19px;
+}
+
+.bookshelf__name-cell {
+  display: inline;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-right: 10px;
+  word-break: keep-all;
+}
+
+.bookshelf__name-cell h3 {
+  color: var(--body-font-color);
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: 540px;
+}
+
+@media (max-width: 375px) {
+  .bookshelf__genre-cell {
+    display: inline;
+  }
+
+  .bookshelf__name-cell {
+    display: inline;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: unset;
+  }
+}
+
+.bookshelf__status-cell {
+  text-align: center;
+}
+
+.bookshelf__genre-cell {
+  font-size: small;
+}

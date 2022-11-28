@@ -20,3 +20,12 @@ type Job = {
     description: string;
     jobHighlights: string[];
 }
+
+type Book = {
+    name: string;
+    author: string;
+    genre: string;
+    status: string;
+    dateStarted: string;
+    dateCompleted: string;
+}

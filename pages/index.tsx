@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import AboutMeSection from "../components/AboutMeSection";
 import WorkExperienceSection from "../components/WorkExperienceSection/WorkExperienceSection";
 import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
+import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
         <AboutMeSection />
         <WorkExperienceSection />
         <ProjectShowcaseSection />
+        <BookshelfSection />
       </div>
     </div>
   );

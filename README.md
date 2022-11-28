@@ -27,3 +27,11 @@
     - https://www.youtube.com/watch?v=v0hhwAMLnzU&ab_channel=DaviesMediaDesign
 
   - Consider colour changes
+
+  - Update all styles to be mobile first then apply larger styles at bigger breakpoints as per tailwind docs. Make sure to read tailwind docs on responsive design first as this site is desktop first.
+
+- Clean up raw CSS files
+- Check all semi colon usgae
+- Check all single quote usage
+- No hanging commas
+- Update linter with stricter rules so evrything can be formatted nicley. Emphasis on styling long class names 
