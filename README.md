@@ -34,4 +34,9 @@
 - Check all semi colon usgae
 - Check all single quote usage
 - No hanging commas
-- Update linter with stricter rules so evrything can be formatted nicley. Emphasis on styling long class names 
+- Update linter with stricter rules so evrything can be formatted nicley. Emphasis on styling long class names
+
+### Work Experience Section
+- Clean up tab selection javascript
+- Clean up and carefully check tailwind css classes
+- Think about possible alternative component splits
