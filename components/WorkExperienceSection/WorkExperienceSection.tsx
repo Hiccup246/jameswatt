@@ -91,7 +91,7 @@ export default function ExperienceSection() {
       </h1>
 
       <div ref={tabComponentRef} className="w-full flex max-[400px]:block">
-        <div className="relative w-max m-0 list-none z-10 h-full py-2.5">
+        <div className="relative w-max m-0 list-none z-10 h-fit py-2.5">
            {
             PROGRAMMING_EXPERIENCES.map((job, index) => {
               return (
