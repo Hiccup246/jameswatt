@@ -10,7 +10,7 @@ export default function ExperienceSection() {
   const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
   const [sliderStyle, setSliderStyle] = useState<{ width: string, transform:string }>({ width: "", transform: "" })
 
-  const tabComponentRef = useRef<HTMLElement>()
+  const tabComponentRef = useRef<HTMLDivElement>(null)
   const mobileViewWidth = "550px"
 
   const setupComponent = () => {
@@ -24,7 +24,7 @@ export default function ExperienceSection() {
       ".selected-tab-item"
     ) as HTMLElement
 
-    const newSliderWidth:Number = tabItem.clientWidth
+    const newSliderWidth:number = tabItem.clientWidth
 
     selectedTabItem.style.width = `${newSliderWidth}px`
     
@@ -53,12 +53,12 @@ export default function ExperienceSection() {
     return `${largestPanelHeight}px`
   }
 
-  const clickOnTab = (newTabIndex:Number, buttonWidth:Number) => {
+  const clickOnTab = (newTabIndex:number, buttonWidth:number) => {
     updateSelectedTabItem(newTabIndex, `${buttonWidth}px`)
     setCurrentTabIndex(newTabIndex)
   }
 
-  const updateSelectedTabItem = (newTabIndex:Number, newSliderWidth:string) => {
+  const updateSelectedTabItem = (newTabIndex:number, newSliderWidth:string) => {
     const isMobile = window.matchMedia(
       `(max-width: ${mobileViewWidth})`
     ).matches
@@ -99,7 +99,7 @@ export default function ExperienceSection() {
                   key={index + job.company}
                   companyName={job.company}
                   activated={index === currentTabIndex}
-                  clickHandler={(width) => clickOnTab(index, width)}
+                  clickHandler={(width: number) => clickOnTab(index, width)}
                 />
               )
             })
@@ -120,7 +120,7 @@ export default function ExperienceSection() {
 
         <div className="relative w-full ml-5">
           {
-            PROGRAMMING_EXPERIENCES.map((job, index) => {
+            PROGRAMMING_EXPERIENCES.map((job: Job, index) => {
               return (
               <ContentPanel
                 key={index + job.dateRange}

@@ -12,3 +12,11 @@ type SectionLayoutProps = {
     children: ReactElement;
     isBgColorPrimary: Boolean;
 }
+
+type Job = {
+    role: string;
+    company: string;
+    dateRange: string;
+    description: string;
+    bullets: string[];
+}
