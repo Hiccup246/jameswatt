@@ -12,7 +12,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
         from conception and planning to production deployment.
       </p>`,
       `<p>
-        Building desktop and mobile optimised web applications in <b>Vue.JS</b>{" "}
+        Building desktop and mobile optimised web applications in <b>Vue.JS</b>
         and <b>Ruby on Rails</b> with an emphasis on the development process to
         produce high quality code. Key aspects of this development process
         involve supporting product managers, performing technical review and
@@ -46,7 +46,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
       </p>`,
       `<p>
         Collaborated closley with the founders of the company, key sales staff,
-        developers, designers, third party vendors and customer support to{" "}
+        developers, designers, third party vendors and customer support to
         navigate complex AML regulation and data policies to produce slick
         onboarding products.
       </p>`,
@@ -61,7 +61,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
     jobHighlights: [
       `<p>
         Worked closley with the founders of the company in an agile team to
-        develop and expand the back-end of the main product using <b>Koa.JS</b>{" "}
+        develop and expand the back-end of the main product using <b>Koa.JS</b>
         which included Javascript, Typescript, HTML and CSS
       </p>`,
       "Participated in key strategic meetings regarding business strategy and product design",
@@ -117,7 +117,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
         ethics and <b>organisational culture</b>
       </p>`,
       `<p>
-        Completed a year long thesis which involved developing a series of{" "}
+        Completed a year long thesis which involved developing a series of
         <b>IoT</b> connected radios for the purpose of tracking birds within
         dense native bush
       </p>`,
