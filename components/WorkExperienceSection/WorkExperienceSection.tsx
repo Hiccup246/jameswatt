@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef } from "react";
 
-// import './programming-history.css'
-import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences"
-import ContentPanelButton from "./ContentPanelButton"
-import ContentPanel from "./ContentPanel"
-import SectionLayout from "../SectionLayout"
+import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences";
+import ContentPanelButton from "./ContentPanelButton";
+import ContentPanel from "./ContentPanel";
+import SectionLayout from "../SectionLayout";
 
 export default function ExperienceSection() {
   const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)

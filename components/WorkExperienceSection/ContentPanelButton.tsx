@@ -1,7 +1,5 @@
 import React from "react"
 
-// import './content-panel-button.css'
-
 export default function ContentPanelButton({ companyName, activated, clickHandler }: { companyName:string, activated: boolean, clickHandler:Function }) {
   const activatedClasses = activated ? "text-black activated" : ""
 

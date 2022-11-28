@@ -1,7 +1,5 @@
 import React from "react"
 
-// import './content-panel.css'
-
 export default function ContentPanel({ job, activated }: { job:Job, activated:boolean }) {
   const activatedClasses = "pt-2.5 visible relative opacity-100 activated"
   const deactivatedClasses = "opacity-0 invisible"
