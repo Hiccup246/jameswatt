@@ -15,6 +15,9 @@ export default function ContentPanelButton({ companyName, activated, clickHandle
         leading-[var(--tab-height)] px-5 bg-transparent
         whitespace-nowrap z-20 text-grey
         mb-[var(--tab-margin-top)] focus-visible:border-none
+        max-small:mb-0 max-small:max-w-[var(--tab-width)]
+        max-small:grow-0 max-small:shrink-0 max-small:basis-[var(--tab-width)]
+        max-small:justify-center
         ${activatedClasses}
       `}
       onClick={(element) => clickHandler(element.currentTarget.offsetWidth)}

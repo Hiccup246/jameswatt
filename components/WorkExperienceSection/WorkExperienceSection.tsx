@@ -90,8 +90,8 @@ export default function ExperienceSection() {
         My Experience
       </h1>
 
-      <div ref={tabComponentRef} className="w-full flex max-[400px]:block my-10">
-        <div className="relative w-max m-0 list-none z-10 h-fit py-2.5">
+      <div ref={tabComponentRef} className="w-full flex max-small:block my-10">
+        <div className="relative w-max m-0 list-none z-10 h-fit py-2.5 max-small:flex max-small:w-full max-small:overflow-x-scroll max-small:overflow-y-hidden">
            {
             PROGRAMMING_EXPERIENCES.map((job, index) => {
               return (
@@ -111,14 +111,17 @@ export default function ExperienceSection() {
               h-[var(--tab-height)] my-2.5 bg-darkbrown
               transition-[transform width] duration-200 delay-100
               ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
+              max-small:top-auto max-small:bottom-0 max-small:w-[var(--tab-width)]
+              max-small:h-0.5 max-small:z-20 max-small:translate-x-[calc(0 * var(--tab-width))]
             `}></div>
           <div className={`
             visible absolute top-0 left-0 w-0.5 bg-black
             ml-1 h-[calc(100%-var(--tab-margin-top))]
+            max-small:hidden
           `} />
         </div>
 
-        <div className="relative w-full ml-5">
+        <div className="relative w-full ml-5 max-small:ml-0">
           {
             PROGRAMMING_EXPERIENCES.map((job: Job, index) => {
               return (
