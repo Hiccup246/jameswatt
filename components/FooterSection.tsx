@@ -1,9 +1,52 @@
+import { useEffect, useState } from "react";
 import MoonIcon from "./MoonIcon";
 import NextJsIcon from "./NextJsIcon";
 import SectionLayout from "./SectionLayout";
 import SunIcon from "./SunIcon";
 
 export default function FooterSection() {
+    const [darkMode, setDarkMode] = useState<boolean>()
+
+    function toggleTheme() {
+        if (document.documentElement.classList.contains("dark")) {
+            setDarkMode(false)
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+        } else {
+            setDarkMode(true)
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+        }
+    }
+
+    function setTheme() {
+        if (document.documentElement.classList.contains("dark")) {
+            setDarkMode(true)
+        } else {
+            setDarkMode(false)
+        }
+    }
+
+    function toggleText() {
+        if (darkMode != null) {
+            return (darkMode ? "Light Mode" : "Dark Mode")
+        } else {
+            return (<></>)
+        }
+    }
+
+    function toggleIcon() {
+        if (darkMode != null) {
+            return (darkMode ? <SunIcon /> : <MoonIcon />)
+        } else {
+            return (<></>)
+        }
+    }
+
+    useEffect(() => {
+        setTheme()
+      }, [])
+
     return (
         <SectionLayout isBgColorPrimary={true}>
             <div className="grid grid-cols-1 md:grid-cols-3 text-sm text-center">
@@ -21,18 +64,14 @@ export default function FooterSection() {
                     Designed & Built by James Watt
                 </h1>
 
-                <button className="flex justify-center group hover">
-                    <div className="h-3.5 w-3.5 mr-3">
-                        <MoonIcon />
+                <button className="flex justify-center group hover" onClick={toggleTheme}>
+                    <div className="h-4 w-4 mr-2">
+                        {toggleIcon()}
                     </div>
 
                     <span className="group-hover:underline">
-                        Dark Mode
+                        {toggleText()}
                     </span>
-
-                    <div className="h-5 w-7 ml-3">
-                        <SunIcon />
-                    </div>
                 </button>
             </div>
         </SectionLayout>

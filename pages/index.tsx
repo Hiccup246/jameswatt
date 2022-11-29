@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import LandingSection from "../components/LandingSection";
 import styles from "../styles/Home.module.css";
 import AboutMeSection from "../components/AboutMeSection";
@@ -39,6 +40,17 @@ export default function Home() {
         {/* Non-Essential, But Required for Analytics */}
         <meta name="twitter:site" content="@jameswattnz" />
       </Head>
+
+      <Script id="themeLoader">
+        {`
+          // On page load or when changing themes, best to add inline in head to avoid FOUC
+          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }
+        `}
+      </Script>
 
       <div>
         {/* <LandingSection /> */}
