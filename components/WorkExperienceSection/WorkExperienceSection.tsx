@@ -82,7 +82,7 @@ export default function ExperienceSection() {
 
   return (
     <SectionLayout isBgColorPrimary={false}>
-      <h1 className="self-center text-2xl sm:text-3xl font-bold mb-10">
+      <h1 className="text-center text-2xl sm:text-3xl font-bold mb-10">
         My Experience
       </h1>
 

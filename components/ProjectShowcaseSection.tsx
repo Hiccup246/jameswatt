@@ -9,7 +9,7 @@ const olderProjects = orderedByPublishDate.slice(1);
 export default function ProjectShowcaseSection() {
     return (
         <SectionLayout isBgColorPrimary={true}>
-            <h1 className="self-center text-2xl sm:text-3xl font-bold mb-14">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-14">
                 Project Showcase
             </h1>
             

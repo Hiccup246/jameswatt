@@ -8,7 +8,7 @@ import FreshIcon from "./FreshIcon";
 export default function CreditsSection() {
     return (
         <SectionLayout isBgColorPrimary={false}>
-            <h1 className="self-center text-2xl sm:text-3xl font-bold mb-2">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2">
                 The Work Which Inspired This Site
             </h1>
             
