@@ -32,6 +32,7 @@
 - SEO Optimisation https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance
 - Think about tooltip implementation and perhaps use or base
 custom solution off https://floating-ui.com/
+- Review all next image "sizes" attributes
 
 ### Work Experience Section
 - Clean up tab selection javascript
