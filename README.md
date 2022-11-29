@@ -33,6 +33,7 @@
 - Think about tooltip implementation and perhaps use or base
 custom solution off https://floating-ui.com/
 - Review all next image "sizes" attributes
+- Consider animating theme toggle to be link link where it slides into the text then out of it
 
 ### Work Experience Section
 - Clean up tab selection javascript
