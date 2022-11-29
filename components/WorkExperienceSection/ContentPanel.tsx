@@ -7,10 +7,10 @@ export default function ContentPanel({ job, activated }: { job:Job, activated:bo
 
   return (
     <div className={`tab-panel ${tabPanelClasses}`}>
-      <h3 className="m-0">
+      <h2 className="m-0">
         <span className="text-black font-bold text-xl">{job.role}</span>
         <span className="text-black font-bold text-xl"> @ {job.company}</span>
-      </h3>
+      </h2>
       <p className="mt-1 text-black mb-4">{job.dateRange}</p>
       <div className="pb-4">{job.description}</div>
       <ul className="p-0 m-0 list-none">

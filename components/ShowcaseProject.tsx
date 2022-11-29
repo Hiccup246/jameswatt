@@ -11,7 +11,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
                     aria-label="Free online text edit url">
                     <Image src={props.projectImageSrc}
                         width={600}
-                        className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border aspect-video"
+                        className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border"
                         height={337}
                         sizes="(min-width: 640px) 480px,
                                 (min-width: 785px) 180px,
