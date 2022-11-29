@@ -34,6 +34,8 @@
 custom solution off https://floating-ui.com/
 - Review all next image "sizes" attributes
 - Consider animating theme toggle to be link link where it slides into the text then out of it
+- Consider changing project showcase so that projects move upward a bit like the about me section. Perhaps box shadow like
+the "Visit the Expo" section https://bulma.io/
 
 ### Work Experience Section
 - Clean up tab selection javascript
