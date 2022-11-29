@@ -7,6 +7,7 @@ import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
 import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
 import CreditsSection from "../components/CreditsSection";
 import FooterSection from "../components/FooterSection";
+import TechnologiesSection from "../components/TechnologiesSection";
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
         <AboutMeSection />
         <WorkExperienceSection />
         <ProjectShowcaseSection />
+        <TechnologiesSection />
         <BookshelfSection />
         <CreditsSection />
       </div>
