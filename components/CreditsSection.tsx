@@ -14,9 +14,9 @@ export default function CreditsSection() {
             
             <h2 className="text-center mb-10">&quot;Good artists borrow, great artists steal&quot; - Pablo Picasso</h2>
 
-            <div>
+            <div className="text-center">
                 <ul>
-                    <li className="group hover">
+                    <li className="group hover mb-5">
                         <a className="group-hover:underline pr-2" href="https://icons8.com/" aria-label="Icons8 Homepage">
                             Icons8 (Icons)
                         </a>
@@ -26,7 +26,7 @@ export default function CreditsSection() {
                         </a>
                     </li>
 
-                    <li className="group hover">
+                    <li className="group hover mb-5">
                         <a className="group-hover:underline pr-2" href="https://fontawesome.com/" aria-label="Font Awesome Homepage">
                             Font Awesome (Icons)
                         </a>
@@ -36,17 +36,17 @@ export default function CreditsSection() {
                         </a>
                     </li>
 
-                    <li className="group hover">
+                    <li className="group hover mb-5">
                         <a className="group-hover:underline pr-2" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
                             Brittany Chiang (Inspired the programming experience component)
                         </a>
 
-                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
+                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-2" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
                             <BrittanyChiangIcon />
                         </a>
                     </li>
 
-                    <li className="group hover">
+                    <li className="group hover mb-5">
                         <a className="group-hover:underline pr-2" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
                             Marguerite Roth (Inspired the bookshelf component)
                         </a>
@@ -61,7 +61,7 @@ export default function CreditsSection() {
                         </div>
                     </li>
 
-                    <li className="group hover">
+                    <li className="group hover mb-5">
                         <a className="group-hover:underline pr-2" href="https://fresh.deno.dev/" aria-label="Fresh Framework Homepage">
                             Fresh Framework (Dripping Design + Project Showcase)
                         </a>
