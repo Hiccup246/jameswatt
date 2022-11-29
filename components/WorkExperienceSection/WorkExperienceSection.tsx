@@ -109,11 +109,12 @@ export default function ExperienceSection() {
               ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
               max-small:top-auto max-small:bottom-0 max-small:w-[var(--tab-width)]
               max-small:h-0.5 max-small:z-20 max-small:translate-x-[calc(0 * var(--tab-width))]
+              rounded
             `}></div>
           <div className={`
             visible absolute top-0 left-0 w-0.5 bg-black
             ml-1 h-[calc(100%-var(--tab-margin-top))]
-            max-small:hidden
+            max-small:hidden rounded-sm
           `} />
         </div>
 
