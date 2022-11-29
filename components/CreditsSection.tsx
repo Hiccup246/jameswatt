@@ -1,3 +1,6 @@
+import BrittanyChiangIcon from "./BrittanyChiangIcon";
+import FontAwesomeIcon from "./FontAwesomeIcon";
+import Icons8Icon from "./Icons8Icon";
 import SectionLayout from "./SectionLayout";
 
 export default function CreditsSection() {
@@ -15,18 +18,30 @@ export default function CreditsSection() {
                         <a className="hover:underline" href="https://icons8.com/" aria-label="Icons8 Homepage">
                             Icons8 (Icons)
                         </a>
+
+                        <div className="h-4 w-4">
+                            <Icons8Icon />
+                        </div>
                     </li>
 
                     <li>
                         <a className="hover:underline" href="https://fontawesome.com/" aria-label="Font Awesome Homepage">
                             Font Awesome (Icons)
                         </a>
+
+                        <div className="h-4 w-4">
+                            <FontAwesomeIcon />
+                        </div>
                     </li>
 
                     <li>
                         <a className="hover:underline" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
                             Brittany Chiang (Inspired the programming experience component)
                         </a>
+
+                        <div className="h-4 w-4">
+                            <BrittanyChiangIcon />
+                        </div>
                     </li>
 
                     <li>
