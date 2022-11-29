@@ -81,9 +81,9 @@ export default function CreditsSection() {
                         <a className="relative inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://www.joshwcomeau.com/" aria-label="Josh Comeau Website">
                             <Image src="/josh-comeau.webp"
                                    fill
-                                   sizes="(min-width: 640px) 17px,
-                                          (min-width: 785px) 17px,
-                                          17px"
+                                   sizes="(min-width: 640px) 170px,
+                                          (min-width: 785px) 170px,
+                                          170px"
                                    alt="Josh Comeau Icon" />
                         </a>
                     </li>
