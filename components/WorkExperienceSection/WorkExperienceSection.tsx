@@ -39,10 +39,7 @@ export default function ExperienceSection() {
         ".tab-panel"
       ) as NodeListOf<HTMLElement>
 
-      // console.log(panelContainer.clientHeight)
       const panelHeight = tabPanel[i].clientHeight
-      console.log(panelHeight)
-
 
       if (panelHeight > largestPanelHeight) {
         largestPanelHeight = panelHeight
