@@ -6,6 +6,7 @@ import WorkExperienceSection from "../components/WorkExperienceSection/WorkExper
 import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
 import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
 import CreditsSection from "../components/CreditsSection";
+import FooterSection from "../components/FooterSection";
 
 export default function Home() {
   return (
@@ -46,6 +47,8 @@ export default function Home() {
         <BookshelfSection />
         <CreditsSection />
       </div>
+      
+      <FooterSection />
     </div>
   );
 }
