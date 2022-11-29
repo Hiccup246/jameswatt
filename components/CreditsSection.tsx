@@ -2,6 +2,8 @@ import BrittanyChiangIcon from "./BrittanyChiangIcon";
 import FontAwesomeIcon from "./FontAwesomeIcon";
 import Icons8Icon from "./Icons8Icon";
 import SectionLayout from "./SectionLayout";
+import Image from "next/image";
+import FreshIcon from "./FreshIcon";
 
 export default function CreditsSection() {
     return (
@@ -48,12 +50,25 @@ export default function CreditsSection() {
                         <a className="hover:underline" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
                             Marguerite Roth (Inspired the bookshelf component)
                         </a>
+
+                        <div className="h-5 w-5 relative">
+                            <Image src="/marguerite.webp"
+                                   fill
+                                   sizes="(min-width: 640px) 17px,
+                                          (min-width: 785px) 17px,
+                                          17px"
+                                   alt="Marguerite Roth Icon" />
+                        </div>
                     </li>
 
                     <li>
                         <a className="hover:underline" href="https://fresh.deno.dev/" aria-label="Fresh Framework Homepage">
                             Fresh Framework (Dripping Design + Project Showcase)
                         </a>
+
+                        <div className="h-5 w-5">
+                            <FreshIcon />
+                        </div>
                     </li>
                 </ul>
             </div>
