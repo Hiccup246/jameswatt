@@ -36,7 +36,7 @@ custom solution off https://floating-ui.com/
 - Consider animating theme toggle to be link link where it slides into the text then out of it
 - Consider changing project showcase so that projects move upward a bit like the about me section. Perhaps box shadow like
 the "Visit the Expo" section https://bulma.io/
-
+- Use title attribute for automatic tool tips
 ### Work Experience Section
 - Clean up tab selection javascript
 - Clean up and carefully check tailwind css classes
