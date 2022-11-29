@@ -53,14 +53,14 @@ export default function CreditsSection() {
                             Marguerite Roth (Inspired the bookshelf component)
                         </a>
 
-                        <div className="h-6 w-6 relative inline-block opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1">
+                        <a className="h-6 w-6 relative inline-block opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
                             <Image src="/marguerite.webp"
                                    fill
                                    sizes="(min-width: 640px) 17px,
                                           (min-width: 785px) 17px,
                                           17px"
                                    alt="Marguerite Roth Icon" />
-                        </div>
+                        </a>
                     </li>
 
                     <li className="group hover mb-5">
@@ -68,9 +68,24 @@ export default function CreditsSection() {
                             Fresh Framework (Dripping Design + Project Showcase)
                         </a>
 
-                        <div className="inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1">
+                        <a className="inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://fresh.deno.dev/" aria-label="Fresh Framework Homepage">
                             <FreshIcon />
-                        </div>
+                        </a>
+                    </li>
+
+                    <li className="group hover mb-5">
+                        <a className="group-hover:underline pr-2" href="https://www.joshwcomeau.com/" aria-label="Josh Comeau Website">
+                            Josh Comeau (Moon Icon)
+                        </a>
+
+                        <a className="relative inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://www.joshwcomeau.com/" aria-label="Josh Comeau Website">
+                            <Image src="/josh-comeau.webp"
+                                   fill
+                                   sizes="(min-width: 640px) 17px,
+                                          (min-width: 785px) 17px,
+                                          17px"
+                                   alt="Josh Comeau Icon" />
+                        </a>
                     </li>
                 </ul>
             </div>
