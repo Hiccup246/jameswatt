@@ -7,7 +7,7 @@ import SectionLayout from "./SectionLayout";
 export default function AboutMeSection() {
     return (
         <SectionLayout isBgColorPrimary={true}>
-            <h1 className=" text-center text-2xl sm:text-3xl font-bold mb-10">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-10">
                 Who am I?
             </h1>
 
@@ -27,7 +27,7 @@ export default function AboutMeSection() {
             <div className="flex flex-row justify-center">
                 {/* text-grey transition-colors ease-[cubic-bezier(0.05,0,0,1)] duration-500 */}
                 <div className="w-8 my-auto mr-8 hover:-translate-y-0.5 duration-150 ease-in">
-                    <a className="hover:text-grey duration-200 ease-in" 
+                    <a className="hover:text-grey duration-150 ease-in" 
                         href="https://github.com/Hiccup246"
                         aria-label="Github Profile">
                         <GithubIcon />
@@ -35,7 +35,7 @@ export default function AboutMeSection() {
                 </div>
 
                 <div className="w-8 my-auto mr-8 hover:-translate-y-0.5 duration-150 ease-in">
-                    <a className="hover:text-grey duration-200 ease-in" 
+                    <a className="hover:text-grey duration-150 ease-in" 
                         href="https://www.linkedin.com/in/jameswattpro"
                         aria-label="LinkedIn Profile">
                         <LinkedInIcon />
@@ -43,7 +43,7 @@ export default function AboutMeSection() {
                 </div>
 
                 <div className="w-10 my-auto mr-8 hover:-translate-y-0.5 duration-200 ease-in">
-                    <a className="hover:text-grey duration-200 ease-in"
+                    <a className="hover:text-grey duration-150 ease-in"
                         href="mailto:james@jameswatt.io"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function AboutMeSection() {
                 </div>
 
                 <div className="w-10 my-auto hover:-translate-y-0.5 duration-150 ease-in">
-                    <a className="hover:text-grey duration-200 ease-in" 
+                    <a className="hover:text-grey duration-150 ease-in" 
                         href="/jameswatt-resume.pdf"
                         target="_blank"
                         rel="noreferrer"

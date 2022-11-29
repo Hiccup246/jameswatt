@@ -1,5 +1,7 @@
+import MoonIcon from "./MoonIcon";
 import NextJsIcon from "./NextJsIcon";
 import SectionLayout from "./SectionLayout";
+import SunIcon from "./SunIcon";
 
 export default function FooterSection() {
     return (
@@ -19,9 +21,19 @@ export default function FooterSection() {
                     Designed & Built by James Watt
                 </h1>
 
-                <div>
-                    Toggle Theme
-                </div>
+                <button className="flex justify-center group hover">
+                    <div className="h-3.5 w-3.5 mr-3">
+                        <MoonIcon />
+                    </div>
+
+                    <span className="group-hover:underline">
+                        Dark Mode
+                    </span>
+
+                    <div className="h-5 w-7 ml-3">
+                        <SunIcon />
+                    </div>
+                </button>
             </div>
         </SectionLayout>
     )
