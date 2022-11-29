@@ -56,9 +56,9 @@ export default function CreditsSection() {
                         <a className="h-6 w-6 relative inline-block opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
                             <Image src="/marguerite.webp"
                                    fill
-                                   sizes="(min-width: 640px) 17px,
-                                          (min-width: 785px) 17px,
-                                          17px"
+                                   sizes="(min-width: 640px) 300px,
+                                          (min-width: 785px) 300px,
+                                          300px"
                                    alt="Marguerite Roth Icon" />
                         </a>
                     </li>
