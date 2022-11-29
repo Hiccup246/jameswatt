@@ -21,37 +21,37 @@ export default function CreditsSection() {
                             Icons8 (Icons)
                         </a>
 
-                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-200 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://icons8.com/">
+                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://icons8.com/" aria-label="Icons8 Homepage">
                             <Icons8Icon />
                         </a>
                     </li>
 
-                    <li>
-                        <a className="hover:underline" href="https://fontawesome.com/" aria-label="Font Awesome Homepage">
+                    <li className="group hover">
+                        <a className="group-hover:underline pr-2" href="https://fontawesome.com/" aria-label="Font Awesome Homepage">
                             Font Awesome (Icons)
                         </a>
 
-                        <div className="h-4 w-4">
+                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://fontawesome.com/" aria-label="Font Awesome Homepage">
                             <FontAwesomeIcon />
-                        </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <a className="hover:underline" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
+                    <li className="group hover">
+                        <a className="group-hover:underline pr-2" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
                             Brittany Chiang (Inspired the programming experience component)
                         </a>
 
-                        <div className="h-4 w-4">
+                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://brittanychiang.com/" aria-label="Brittany Chiang Website">
                             <BrittanyChiangIcon />
-                        </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <a className="hover:underline" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
+                    <li className="group hover">
+                        <a className="group-hover:underline pr-2" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
                             Marguerite Roth (Inspired the bookshelf component)
                         </a>
 
-                        <div className="h-5 w-5 relative">
+                        <div className="h-6 w-6 relative inline-block opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1">
                             <Image src="/marguerite.webp"
                                    fill
                                    sizes="(min-width: 640px) 17px,
@@ -61,12 +61,12 @@ export default function CreditsSection() {
                         </div>
                     </li>
 
-                    <li>
-                        <a className="hover:underline" href="https://fresh.deno.dev/" aria-label="Fresh Framework Homepage">
+                    <li className="group hover">
+                        <a className="group-hover:underline pr-2" href="https://fresh.deno.dev/" aria-label="Fresh Framework Homepage">
                             Fresh Framework (Dripping Design + Project Showcase)
                         </a>
 
-                        <div className="h-5 w-5">
+                        <div className="inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1">
                             <FreshIcon />
                         </div>
                     </li>
