@@ -11,19 +11,19 @@ export default function CreditsSection() {
             <h1 className="self-center text-2xl sm:text-3xl font-bold mb-2">
                 The Work Which Inspired This Site
             </h1>
-
+            
             <h2 className="text-center mb-10">&quot;Good artists borrow, great artists steal&quot; - Pablo Picasso</h2>
 
             <div>
                 <ul>
-                    <li>
-                        <a className="hover:underline" href="https://icons8.com/" aria-label="Icons8 Homepage">
+                    <li className="group hover">
+                        <a className="group-hover:underline pr-2" href="https://icons8.com/" aria-label="Icons8 Homepage">
                             Icons8 (Icons)
                         </a>
 
-                        <div className="h-4 w-4">
+                        <a className="inline-block h-4 w-4 opacity-0 -rotate-45 group-hover:opacity-70 duration-200 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://icons8.com/">
                             <Icons8Icon />
-                        </div>
+                        </a>
                     </li>
 
                     <li>
