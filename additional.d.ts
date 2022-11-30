@@ -29,3 +29,9 @@ type Book = {
     dateStarted: string;
     dateCompleted: string;
 }
+
+type TechnologyIcon = { 
+    icon: JSX.Element;
+    link: string;
+    name: string;
+}

@@ -24,45 +24,46 @@ import SectionLayout from "./SectionLayout";
 
 export default function TechnologiesSection() {
 
-    const group1Icons:JSX.Element[] = [
-        <HtmlIcon />,
-        <AngularIcon />,
-        <BulmaIcon />,
-        <CssIcon />,
-        <DenoIcon />,
-        <RubyOnRailsIcon />,
-        <TailwindIcon />
+    const group1Icons:TechnologyIcon[] = [
+        { icon: <HtmlIcon />, link: "", name: "" },
+        { icon: <AngularIcon />, link: "", name: "" },
+        { icon: <BulmaIcon />, link: "", name: "" },
+        { icon: <CssIcon />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS", name: "MDN CSS Homepage" },
+        { icon: <DenoIcon />, link: "https://deno.land/", name: "Deno Homepage" },
+        { icon: <RubyOnRailsIcon />, link: "https://rubyonrails.org/", name: "Ruby On Rails Homepage" },
+        { icon: <TailwindIcon />, link: "https://tailwindcss.com/", name: "Tailwind Homepage" }
     ]
 
-    const group2Icons:JSX.Element[] = [
-        <VueIcon />,
-        <SolidityIcon />,
-        <JavascriptIcon />,
-        <GatsbyIcon />,
-        <FreshIcon />,
-        <FigmaIcon />,
-        <GoIcon />
+    const group2Icons:TechnologyIcon[] = [
+        { icon: <VueIcon />, link: "https://vuejs.org/", name: "Vue Framework Homepage" },
+        { icon: <SolidityIcon />, link: "https://www.solidity.io/", name: "Solidity Homepage" },
+        { icon: <JavascriptIcon />, link: "https://www.javascript.com/", name: "Javascript Language Homepage" },
+        { icon: <GatsbyIcon />, link: "https://www.gatsbyjs.com/", name: "Gatsby Framework Homepage" },
+        { icon: <FreshIcon />, link: "https://fresh.deno.dev/", name: "Fresh Framework Homepage" },
+        { icon: <FigmaIcon />, link: "https://www.figma.com/", name: "Figma Homepage" },
+        { icon: <GoIcon />, link: "https://go.dev/", name: "Go Language Homepage" }
     ]
 
-    const group3Icons:JSX.Element[] = [
-        <SvelteIcon />,
-        <RubyIcon />,
-        <ReactIcon />,
-        <NuxtIcon />,
-        <NodeIcon />,
-        <NextJsIcon />,
-        <PostgresIcon />
+    const group3Icons:TechnologyIcon[] = [
+        { icon: <SvelteIcon />, link: "https://svelte.dev/", name: "Svelte Framework Homepage" },
+        { icon: <RubyIcon />, link: "https://www.ruby-lang.org/en/", name: "Ruby Language Homepage" },
+        { icon: <ReactIcon />, link: "https://reactjs.org/", name: "React Framework Homepage" },
+        { icon: <NuxtIcon />, link: "https://nuxt.com/", name: "Nuxt Framework Homepage" },
+        { icon: <NodeIcon />, link: "https://nodejs.org/en/", name: "Node.JS Homepage" },
+        { icon: <NextJsIcon />, link: "https://nextjs.org/", name: "Next.JS Homepage" },
+        { icon: <PostgresIcon />, link: "https://www.postgresql.org/", name: "PostgreSQL Homepage" }
     ]
 
 
 
-    function slideIcon(icon:JSX.Element) {
+    function slideIcon(technologyIcon:TechnologyIcon) {
         return (
             <div className="relative slide h-[100px] w-[200px]">
                 <div className="h-[86px] w-[86px] group hover relative">
-                    <a className="w-full h-full relative flex items-center justify-center bg-white rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
+                    <a href={technologyIcon.link} aria-label={technologyIcon.name} title={technologyIcon.name}
+                       className="w-full h-full relative flex items-center justify-center bg-white rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
                         <div className="flex justify-center h-[48px] w-[48px]">
-                            {icon}
+                            {technologyIcon.icon}
                         </div>
                     </a>
 
@@ -83,7 +84,7 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll hover:animation-pause">
                         {
-                            [...group1Icons, ...group1Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
+                            [...group1Icons, ...group1Icons].map((technologyIcon, index) => (<div key={technologyIcon.name + index}>{slideIcon(technologyIcon)}</div>))
                         }
                     </div>
                 </div>
