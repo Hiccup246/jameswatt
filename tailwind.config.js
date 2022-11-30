@@ -34,7 +34,8 @@ module.exports = {
       },
       animation: {
         scroll: "scroll 30s linear infinite",
-        "scroll-reverse": "scroll 30s linear infinite reverse"
+        "scroll-reverse": "scroll 30s linear infinite reverse",
+        rotate: "gradient-rotate 5s linear 0s infinite reverse"
       }
     } 
   },
