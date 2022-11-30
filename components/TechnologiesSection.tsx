@@ -23,7 +23,6 @@ import VueIcon from "./Icons/VueIcon";
 import SectionLayout from "./SectionLayout";
 
 export default function TechnologiesSection() {
-
     const group1Icons:TechnologyIcon[] = [
         { icon: <HtmlIcon />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML", name: "MDN HTML Homepage" },
         { icon: <AngularIcon />, link: "https://angular.io/", name: "Angular Framework Homepage" },
@@ -54,8 +53,6 @@ export default function TechnologiesSection() {
         { icon: <PostgresIcon />, link: "https://www.postgresql.org/", name: "PostgreSQL Homepage" }
     ]
 
-
-
     function slideIcon(technologyIcon:TechnologyIcon) {
         return (
             <div className="relative slide h-[100px] w-[200px]">
@@ -77,10 +74,9 @@ export default function TechnologiesSection() {
                          `}>
                     </div>
                 </div>
-              </div>
+            </div>
         )
     }
-
 
     return (
         <SectionLayout isBgColorPrimary={false}>
@@ -134,8 +130,6 @@ export default function TechnologiesSection() {
                 <div className="absolute top-0 left-0 h-full w-[20px] sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-r from-brown via-brown dark:from-black to-transparent z-[1"></div>
                 <div className="absolute top-0 right-0 h-full w-[20px] sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-l from-brown via-brown dark:from-black to-transparent z-[1]"></div>
             </div>
-
-
         </SectionLayout>
     )
 }

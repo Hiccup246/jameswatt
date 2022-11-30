@@ -10,12 +10,12 @@ export default function FooterSection() {
     function toggleTheme() {
         if (document.documentElement.classList.contains("dark")) {
             setDarkMode(false)
-            localStorage.theme = 'light'
-            document.documentElement.classList.remove('dark')
+            localStorage.theme = "light"
+            document.documentElement.classList.remove("dark")
         } else {
             setDarkMode(true)
-            localStorage.theme = 'dark'
-            document.documentElement.classList.add('dark')
+            localStorage.theme = "dark"
+            document.documentElement.classList.add("dark")
         }
     }
 
