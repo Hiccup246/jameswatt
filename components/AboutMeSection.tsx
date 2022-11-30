@@ -29,7 +29,8 @@ export default function AboutMeSection() {
                 <div className="w-8 my-auto mr-8 hover:-translate-y-0.5 duration-150 ease-in">
                     <a className="hover:text-grey duration-150 ease-in" 
                         href="https://github.com/Hiccup246"
-                        aria-label="Github Profile">
+                        aria-label="Github Profile"
+                        title="Github Profile">
                         <GithubIcon />
                     </a>
                 </div>
@@ -37,7 +38,8 @@ export default function AboutMeSection() {
                 <div className="w-8 my-auto mr-8 hover:-translate-y-0.5 duration-150 ease-in">
                     <a className="hover:text-grey duration-150 ease-in" 
                         href="https://www.linkedin.com/in/jameswattpro"
-                        aria-label="LinkedIn Profile">
+                        aria-label="LinkedIn Profile"
+                        title="LinkedIn Profile">
                         <LinkedInIcon />
                     </a>
                 </div>
@@ -47,7 +49,8 @@ export default function AboutMeSection() {
                         href="mailto:james@jameswatt.io"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Email Address">
+                        aria-label="Email Address"
+                        title="James Watt Email">
                         <EmailIcon />
                     </a>
                 </div>
@@ -57,7 +60,8 @@ export default function AboutMeSection() {
                         href="/jameswatt-resume.pdf"
                         target="_blank"
                         rel="noreferrer"
-                        aria-label="PDF Resume">
+                        aria-label="PDF Resume"
+                        title="James Watt PDF C.V.">
                         <ResumeIcon />
                     </a>
                 </div>

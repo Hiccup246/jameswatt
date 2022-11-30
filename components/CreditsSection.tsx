@@ -4,6 +4,7 @@ import Icons8Icon from "./Icons/Icons8Icon";
 import SectionLayout from "./SectionLayout";
 import Image from "next/image";
 import FreshIcon from "./Icons/FreshIcon";
+import NuxtIcon from "./Icons/NuxtIcon";
 
 export default function CreditsSection() {
     return (
@@ -85,6 +86,16 @@ export default function CreditsSection() {
                                           (min-width: 785px) 170px,
                                           170px"
                                    alt="Josh Comeau Icon" />
+                        </a>
+                    </li>
+
+                    <li className="group hover mb-5">
+                        <a className="group-hover:underline pr-2" href="https://nuxt.com/" aria-label="Nuxt Framework Homepage">
+                            Nuxt Framework (Technologies Section)
+                        </a>
+
+                        <a className="pt-1 inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle" href="https://nuxt.com/" aria-label="Nuxt Framework Homepage">
+                            <NuxtIcon />
                         </a>
                     </li>
                 </ul>

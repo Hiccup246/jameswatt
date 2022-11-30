@@ -95,7 +95,7 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] hover:animation-pause animate-scroll mb-2 sm:mb-8">
                         {
-                            [   ...group3Icons, ...group3Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
+                            [...group3Icons, ...group3Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
                         }
                     </div>
                 </div>
