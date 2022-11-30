@@ -1,7 +1,7 @@
-import EmailIcon from "./EmailIcon";
-import GithubIcon from "./GithubIcon";
-import LinkedInIcon from "./LinkedInIcon";
-import ResumeIcon from "./ResumeIcon";
+import EmailIcon from "./Icons/EmailIcon";
+import GithubIcon from "./Icons/GithubIcon";
+import LinkedInIcon from "./Icons/LinkedInIcon";
+import ResumeIcon from "./Icons/ResumeIcon";
 import SectionLayout from "./SectionLayout";
 
 export default function AboutMeSection() {

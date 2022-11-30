@@ -1,4 +1,4 @@
-import GithubIcon from "./GithubIcon";
+import GithubIcon from "./Icons/GithubIcon";
 import Image from "next/image";
 
 export default function ShowcaseProject(props: ShowcaseProject) {

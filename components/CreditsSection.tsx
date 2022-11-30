@@ -1,9 +1,9 @@
-import BrittanyChiangIcon from "./BrittanyChiangIcon";
-import FontAwesomeIcon from "./FontAwesomeIcon";
-import Icons8Icon from "./Icons8Icon";
+import BrittanyChiangIcon from "./Icons/BrittanyChiangIcon";
+import FontAwesomeIcon from "./Icons/FontAwesomeIcon";
+import Icons8Icon from "./Icons/Icons8Icon";
 import SectionLayout from "./SectionLayout";
 import Image from "next/image";
-import FreshIcon from "./FreshIcon";
+import FreshIcon from "./Icons/FreshIcon";
 
 export default function CreditsSection() {
     return (
