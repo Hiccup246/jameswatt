@@ -20,6 +20,12 @@
     font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     @apply bg-brown;
   }
+
+  @property --gradient-angle {
+    syntax:"<angle>";
+    inherits:false;
+    initial-value:1turn;
+  }
 }
 
 @layer utilities {
@@ -30,32 +36,4 @@
   .animation-play {
     animation-play-state:running;
   }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@property
---gradient-angle {
-  syntax:"<angle>";
-  inherits:false;
-  initial-value:1turn;
-}
-
-.gradient-border {
-  background: linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE);
-  border-radius: 8px;
-  height: 88px;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  transform: translate(-1px,-1px);
-  width: 88px;
 }

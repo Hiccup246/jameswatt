@@ -67,7 +67,15 @@ export default function TechnologiesSection() {
                         </div>
                     </a>
 
-                    <div className="group-hover:animation-play group-hover:opacity-100 group-hover:animate-rotate transition-all duration-300 z-10 ease-linear gradient-border"></div>
+                    <div className={`
+                            group-hover:animation-play group-hover:opacity-100
+                            group-hover:animate-rotate transition-all
+                            duration-300 z-10 ease-linear
+                            absolute top-0 left-0 w-[88px] h-[88px]
+                            opacity-0 rounded-lg -translate-x-px -translate-y-px
+                            bg-tech-icon-gradient
+                         `}>
+                    </div>
                 </div>
               </div>
         )

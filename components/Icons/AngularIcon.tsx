@@ -4,7 +4,7 @@ export default function AngularIcon() {
             <title>shield-large</title>
             <desc>Created with Sketch.</desc>
             <defs/>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="shield-large">
                     <g id="Imported-Layers" transform="translate(8.000000, 11.000000)">
                         <path d="M83.2,1.03249275 L83.2,1.02860145 L0.3068,30.4481594 L12.8986,139.673181 L82.9998,178.450029 L154.0981,139.150449 L167.9587,29.9267246 L83.2,1.03249275" id="Fill-1" fill="#E23237"/>

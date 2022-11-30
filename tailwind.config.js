@@ -20,6 +20,9 @@ module.exports = {
       blue: "rgb(0, 95, 204)"
     },
     extend: {
+      backgroundImage: {
+        'tech-icon-gradient': "linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE)",
+      },
       screens: {
         "small": "550px",
         "smaller": "400px"
