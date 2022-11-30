@@ -49,7 +49,7 @@ a {
 }
 
 .gradient-border {
-  background: linear-gradient(var(--gradient-angle),#00dc82,#fff,rgba(54,228,218,.5),rgba(29,224,177,.3));
+  background: linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE);
   border-radius: 8px;
   height: 88px;
   left: 0;
