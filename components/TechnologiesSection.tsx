@@ -58,15 +58,17 @@ export default function TechnologiesSection() {
 
     function slideIcon(icon:JSX.Element) {
         return (
-            <div className="relative group hover slide h-[100px] w-[200px]">
-                <a className="relative flex items-center justify-center bg-white h-[86px] w-[86px] rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
-                    <div className="flex justify-center h-[48px] w-[48px]">
-                        {icon}
-                    </div>
-                </a>
+            <div className="relative slide h-[100px] w-[200px]">
+                <div className="h-[86px] w-[86px] group hover relative">
+                    <a className="w-full h-full relative flex items-center justify-center bg-white rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
+                        <div className="flex justify-center h-[48px] w-[48px]">
+                            {icon}
+                        </div>
+                    </a>
 
-                <div className="group-hover:animation-play group-hover:opacity-100 group-hover:animate-rotate transition-all duration-300 z-10 ease-linear gradient-border"></div>
-            </div>
+                    <div className="group-hover:animation-play group-hover:opacity-100 group-hover:animate-rotate transition-all duration-300 z-10 ease-linear gradient-border"></div>
+                </div>
+              </div>
         )
     }
 
