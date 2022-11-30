@@ -25,9 +25,9 @@ import SectionLayout from "./SectionLayout";
 export default function TechnologiesSection() {
 
     const group1Icons:TechnologyIcon[] = [
-        { icon: <HtmlIcon />, link: "", name: "" },
-        { icon: <AngularIcon />, link: "", name: "" },
-        { icon: <BulmaIcon />, link: "", name: "" },
+        { icon: <HtmlIcon />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML", name: "MDN HTML Homepage" },
+        { icon: <AngularIcon />, link: "https://angular.io/", name: "Angular Framework Homepage" },
+        { icon: <BulmaIcon />, link: "https://bulma.io/", name: "Bulma Homepage" },
         { icon: <CssIcon />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS", name: "MDN CSS Homepage" },
         { icon: <DenoIcon />, link: "https://deno.land/", name: "Deno Homepage" },
         { icon: <RubyOnRailsIcon />, link: "https://rubyonrails.org/", name: "Ruby On Rails Homepage" },
@@ -84,7 +84,13 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll hover:animation-pause">
                         {
-                            [...group1Icons, ...group1Icons].map((technologyIcon, index) => (<div key={technologyIcon.name + index}>{slideIcon(technologyIcon)}</div>))
+                            [...group1Icons, ...group1Icons].map((technologyIcon, index) => {
+                                return (
+                                    <div key={technologyIcon.name + index}>
+                                        {slideIcon(technologyIcon)}
+                                    </div>
+                                )
+                            })
                         }
                     </div>
                 </div>
@@ -92,7 +98,13 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] hover:animation-pause animate-scroll-reverse">
                         {
-                            [...group2Icons, ...group2Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
+                            [...group2Icons, ...group2Icons].map((technologyIcon, index) => {
+                                return (
+                                    <div key={technologyIcon.name + index}>
+                                        {slideIcon(technologyIcon)}
+                                    </div>
+                                )
+                            })
                         }
                     </div>
                 </div>
@@ -100,7 +112,13 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] hover:animation-pause animate-scroll">
                         {
-                            [...group3Icons, ...group3Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
+                            [...group3Icons, ...group3Icons].map((technologyIcon, index) => {
+                                return (
+                                    <div key={technologyIcon.name + index}>
+                                        {slideIcon(technologyIcon)}
+                                    </div>
+                                )
+                            })
                         }
                     </div>
                 </div>
