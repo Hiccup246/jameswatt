@@ -55,11 +55,11 @@ export default function TechnologiesSection() {
 
     function slideIcon(technologyIcon:TechnologyIcon) {
         return (
-            <div className="relative slide h-[100px] w-[200px]">
+            <div className="relative slide h-[100px] w-[var(--slider-item-width)]">
                 <div className="h-[86px] w-[86px] group hover relative">
                     <a href={technologyIcon.link} aria-label={technologyIcon.name} title={technologyIcon.name}
                        className="w-full h-full relative flex items-center justify-center bg-white rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
-                        <div className="flex justify-center h-[48px] w-[48px]">
+                        <div className="flex justify-center h-12 w-12">
                             {technologyIcon.icon}
                         </div>
                     </a>
@@ -67,10 +67,10 @@ export default function TechnologiesSection() {
                     <div className={`
                             group-hover:animation-play group-hover:opacity-100
                             group-hover:animate-rotate transition-all
-                            duration-300 z-10 ease-linear
+                            duration-300 ease-linear
                             absolute top-0 left-0 w-[88px] h-[88px]
                             opacity-0 rounded-lg -translate-x-px -translate-y-px
-                            bg-tech-icon-gradient
+                            bg-tech-icon-gradient z-10
                          `}>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ export default function TechnologiesSection() {
 
             <div className="w-full container relative overflow-hidden">
                 <div className="w-full relative m-auto h-24">
-                    <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll hover:animation-pause">
+                    <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] hover:animation-pause animate-scroll">
                         {
                             [...group1Icons, ...group1Icons].map((technologyIcon, index) => {
                                 return (

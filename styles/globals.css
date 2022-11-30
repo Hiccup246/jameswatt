@@ -10,7 +10,7 @@
     --slider-items: 7;
     --slider-item-sets: 2;
     --all-slider-items: calc(var(--slider-items)*var(--slider-item-sets));
-    --slider-item-width: 192px;
+    --slider-item-width: 200px;
   }
 
   html,

@@ -33,7 +33,7 @@ module.exports = {
       keyframes: {
         scroll: {
           "0%": { transform: "translate(0)" },
-          "to": { transform: "translate(calc(-200px*var(--slider-items)))" },
+          "to": { transform: "translate(calc(var(--slider-item-width)*-1*var(--slider-items)))" },
         },
         "gradient-rotate": {
          "0%": {
