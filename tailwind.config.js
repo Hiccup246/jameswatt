@@ -16,6 +16,7 @@ module.exports = {
       white: "#FFFFFF",
       black: "#000000",
       grey: "#808080",
+      lightgrey: "rgb(228 228 231)",
       blue: "rgb(0, 95, 204)"
     },
     extend: {
@@ -29,8 +30,16 @@ module.exports = {
       keyframes: {
         scroll: {
           "0%": { transform: "translate(0)" },
-          "to": { transform: "translate(calc(-200px*7))" },
+          "to": { transform: "translate(calc(-200px*var(--slider-items)))" },
         },
+        "gradient-rotate": {
+         "0%": {
+            "--gradient-angle":"360deg"
+          },
+          "to": {
+            "--gradient-angle":"0deg"
+          }
+        }
       },
       animation: {
         scroll: "scroll 30s linear infinite",
