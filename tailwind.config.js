@@ -24,7 +24,17 @@ module.exports = {
         "smaller": "400px"
       },
       transitionTimingFunction: {
-        'slider': 'transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s',
+        "slider": "transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translate(0)" },
+          "to": { transform: "translate(calc(-200px*7))" },
+        },
+      },
+      animation: {
+        scroll: "scroll 30s linear infinite",
+        "scroll-reverse": "scroll 30s linear infinite reverse"
       }
     } 
   },
