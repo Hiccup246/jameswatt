@@ -79,7 +79,7 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll hover:animation-pause">
                         {
-                            [...group1Icons, ...group1Icons].map((icon, index) => (<div key={index}>{slideIcon(icon)}</div>))
+                            [...group1Icons, ...group1Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
                         }
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function TechnologiesSection() {
                 <div className="w-full relative m-auto h-24">
                     <div className="flex slide-track w-[calc(var(--slider-item-width)*var(--all-slider-items))] hover:animation-pause animate-scroll-reverse">
                         {
-                            [...group2Icons, ...group2Icons].map((icon, index) => (<div key={index}>{slideIcon(icon)}</div>))
+                            [...group2Icons, ...group2Icons].map((icon, index) => (<div key={icon.type.name + index}>{slideIcon(icon)}</div>))
                         }
                     </div>
                 </div>
