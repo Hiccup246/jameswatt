@@ -1,6 +1,6 @@
 export default function DenoIcon() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="1024.000000pt" height="1024.000000pt" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet">
             <metadata>
                 Created by potrace 1.15, written by Peter Selinger 2001-2017
             </metadata>

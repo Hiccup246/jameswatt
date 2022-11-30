@@ -12,6 +12,7 @@ import JavascriptIcon from "./Icons/JavascriptIcon";
 import NextJsIcon from "./Icons/NextJsIcon";
 import NodeIcon from "./Icons/NodeIcon";
 import NuxtIcon from "./Icons/NuxtIcon";
+import PostgresIcon from "./Icons/PostgresIcon";
 import ReactIcon from "./Icons/ReactIcon";
 import RubyIcon from "./Icons/RubyIcon";
 import RubyOnRailsIcon from "./Icons/RubyOnRailsIcon";
@@ -49,7 +50,8 @@ export default function TechnologiesSection() {
         <ReactIcon />,
         <NuxtIcon />,
         <NodeIcon />,
-        <NextJsIcon />
+        <NextJsIcon />,
+        <PostgresIcon />
     ]
 
 
@@ -58,7 +60,7 @@ export default function TechnologiesSection() {
         return (
             <div className="relative group hover slide h-[100px] w-[200px]">
                 <a className="relative flex items-center justify-center bg-white h-[86px] w-[86px] rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
-                    <div className="h-[48px] w-[48px]">
+                    <div className="flex justify-center h-[48px] w-[48px]">
                         {icon}
                     </div>
                 </a>
