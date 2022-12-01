@@ -86,7 +86,7 @@ export default function ExperienceSection() {
           <div style={sliderStyle.width.length > 0 ? sliderStyle: {}}
             className={`
               selected-tab-item
-              visible absolute top-0 left-0 z-10 w-20
+              visible absolute top-0 left-0 z-10 w-[85px]
               h-[var(--tab-height)] my-2.5 bg-darkbrown
               transition-[transform width] duration-200 delay-100
               ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
