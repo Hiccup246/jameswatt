@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ShowcaseProject(props: ShowcaseProject) {
     return (
-        <div className="w-full mx-auto group hover">
+        <div className="w-full mx-auto group hover hover:-translate-y-1 duration-150 transition-transform">
             <div>
                 <a  href={props.websiteUrl}
                     target="_blank"
@@ -11,7 +11,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
                     aria-label="Free online text edit url">
                     <Image src={props.projectImageSrc}
                         width={600}
-                        className="group-hover:shadow-xl group-hover:opacity-70 rounded-lg shadow-lg border-blue border"
+                        className="group-hover:shadow-project-showcase group-hover:opacity-70 transition-shadow duration-150 rounded-lg border-blue border"
                         height={337}
                         sizes="(min-width: 640px) 480px,
                                 (min-width: 785px) 180px,

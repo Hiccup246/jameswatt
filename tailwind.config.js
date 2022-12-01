@@ -20,6 +20,9 @@ module.exports = {
       blue: "rgb(0, 95, 204)"
     },
     extend: {
+      boxShadow: {
+        "project-showcase": "0 1em 1em rgb(0 0 0 / 10%)"
+      },
       backgroundImage: {
         'tech-icon-gradient': "linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE)",
       },
