@@ -18,7 +18,7 @@ export default function ContentPanelButton({ companyName, activated, clickHandle
         max-small:justify-center
         ${activatedClasses}
       `}
-      onClick={(element) => clickHandler(element.currentTarget.offsetWidth)}
+      onClick={(element) => clickHandler(element.currentTarget)}
     >
       {companyName}
     </button>

@@ -5,80 +5,63 @@ import ContentPanelButton from "./ContentPanelButton";
 import ContentPanel from "./ContentPanel";
 import SectionLayout from "../SectionLayout";
 
+import resolveConfig from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../tailwind.config';
+
 export default function ExperienceSection() {
+  const contentPanelsWrapper = useRef<HTMLDivElement>(null)
+
+  const tailwindScreenBreakpoints = (resolveConfig(tailwindConfig)?.theme?.screens) as { small:string }
+  const mobileViewWidth:string = (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px"
+
   const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
   const [sliderStyle, setSliderStyle] = useState<{ width: string, transform:string }>({ width: "", transform: "" })
 
-  const tabComponentRef = useRef<HTMLDivElement>(null)
-  const mobileViewWidth = "550px"
-
-  const setupComponent = () => {
-    const panelContainer:HTMLElement = tabComponentRef.current as HTMLElement;
-
-    const tabItem:HTMLElement = panelContainer.querySelector(
-      ".tab-item.activated"
-    ) as HTMLElement
-
-    const selectedTabItem:HTMLElement = panelContainer.querySelector(
-      ".selected-tab-item"
-    ) as HTMLElement
-
-    const newSliderWidth:number = tabItem.clientWidth
-
-    selectedTabItem.style.width = `${newSliderWidth}px`
-    
-    panelContainer.style.height = largestPanelHeight()
-  }
-
-  const largestPanelHeight = () => {
-    let largestPanelHeight = 0
-
-    for (let i = 0; i < PROGRAMMING_EXPERIENCES.length; i++) {
-      const panelContainer:HTMLElement = tabComponentRef.current as HTMLElement;
-      const tabPanel:NodeListOf<HTMLElement> = panelContainer.querySelectorAll(
-        ".tab-panel"
-      ) as NodeListOf<HTMLElement>
-
-      const panelHeight = tabPanel[i].clientHeight
-
-      if (panelHeight > largestPanelHeight) {
-        largestPanelHeight = panelHeight
-      }
+  useEffect(() => {
+    if (contentPanelsWrapper.current) {
+      contentPanelsWrapper.current.style.height = `${largestContentPanelHeight()}px`
     }
+  }, [])
 
-    return `${largestPanelHeight}px`
-  }
+  function clickOnTabItem(index:number, button:HTMLButtonElement):void {
+    let sliderTransform:string;
 
-  const clickOnTab = (newTabIndex:number, buttonWidth:number) => {
-    updateSelectedTabItem(newTabIndex, `${buttonWidth}px`)
-    setCurrentTabIndex(newTabIndex)
-  }
-
-  const updateSelectedTabItem = (newTabIndex:number, newSliderWidth:string) => {
     const isMobile = window.matchMedia(
       `(max-width: ${mobileViewWidth})`
     ).matches
-    let sliderTransformString
 
     if (isMobile) {
       // If the device is a mobile the tabs are horizontal
-      const paddingX = `calc(${newTabIndex}*var(--tab-width))`
-      const transformXString = `translateX(${paddingX})`
-      sliderTransformString = transformXString
+      const selectedButtonXPosition = `${index} * var(--tab-width)`
+      sliderTransform = `translateX(calc(${selectedButtonXPosition}))`
     } else {
       // If the device is a tablet or dekstop then the tabs are vertical
-      const paddingY = `calc(${newTabIndex}* var(--tab-margin-top))`
-      const heightGap = `calc(${newTabIndex}* var(--tab-height))`
-      const transformYString = `translateY(calc(${paddingY} + ${heightGap}))`
-      sliderTransformString = transformYString
+      const selectedButtonYPosition = `(${index} * var(--tab-height)) + (${index} * var(--tab-margin-top))`
+      sliderTransform = `translateY(calc(${selectedButtonYPosition})`
     }
 
-    setSliderStyle({ width: newSliderWidth, transform: sliderTransformString })
+    setCurrentTabIndex(index)
+    setSliderStyle({ width: button.offsetWidth.toString() + "px", transform: sliderTransform })
   }
+  
+  function largestContentPanelHeight():number {
+    // The largest panel is not know till after rendering. As a result to ensure content
+    // does not spill over the section and to not dynamically resize (which moves/pushes other components around)
+    // we need to manually determine the max height and set it
+    const contentPanels:NodeListOf<HTMLElement> | undefined = contentPanelsWrapper.current?.querySelectorAll(
+      ".tab-panel"
+    )
 
-  useEffect(() => {
-    setupComponent()
-  }, [])
+    if(!contentPanels) return 1000
+
+    let largestPanelHeight:number = 0
+
+    contentPanels.forEach(panel => {
+      if (panel.clientHeight > largestPanelHeight) largestPanelHeight = panel.clientHeight
+    })
+
+    return largestPanelHeight
+  }
 
   return (
     <SectionLayout isBgColorPrimary={false}>
@@ -86,7 +69,7 @@ export default function ExperienceSection() {
         My Experience
       </h1>
 
-      <div ref={tabComponentRef} className="w-full flex max-small:block my-10">
+      <div className="w-full flex max-small:block my-10">
         <div className="relative w-max m-0 list-none z-10 h-fit py-2.5 max-small:flex max-small:w-full max-small:overflow-x-scroll max-small:overflow-y-hidden">
            {
             PROGRAMMING_EXPERIENCES.map((job, index) => {
@@ -95,7 +78,7 @@ export default function ExperienceSection() {
                   key={index + job.company}
                   companyName={job.company}
                   activated={index === currentTabIndex}
-                  clickHandler={(width: number) => clickOnTab(index, width)}
+                  clickHandler={(button: HTMLButtonElement) => clickOnTabItem(index, button)}
                 />
               )
             })
@@ -118,14 +101,14 @@ export default function ExperienceSection() {
           `} />
         </div>
 
-        <div className="relative w-full ml-5 max-small:ml-0">
+        <div className="relative w-full ml-5 max-small:ml-0" ref={contentPanelsWrapper}>
           {
             PROGRAMMING_EXPERIENCES.map((job: Job, index) => {
               return (
-              <ContentPanel
-                key={index + job.dateRange}
-                job={job}
-                activated={index === currentTabIndex} />
+                <ContentPanel
+                  key={index + job.dateRange}
+                  job={job}
+                  activated={index === currentTabIndex} />
               )
             })
           }
@@ -133,38 +116,4 @@ export default function ExperienceSection() {
       </div>
     </SectionLayout>
   )
-  {/* // return (
-  //   <div className="programming-history">
-  //     <h2>📜 Programming History</h2>
-  //     <div ref={tabComponentRef} className="tab-component">
-  //       <div className="tab-menu">
-  //         {PROGRAMMING_EXPERIENCES.map((job, index) => {
-  //           return (
-  //             <ContentPanelButton
-  //               key={index + job.company}
-  //               companyName={job.company}
-  //               activated={index === currentTabIndex}
-  //               clickHandler={(width) => clickOnTab(index, width)}
-  //             />
-  //           )
-  //         })}
-
-  //         <div style={sliderStyle} className="selected-tab-item"></div>
-  //         <div className="menu-border" />
-  //       </div>
-
-  //       <div className="tab-content">
-  //         {PROGRAMMING_EXPERIENCES.map((job, index) => {
-  //           return (
-  //             <ContentPanel
-  //               key={index + job.dateRange}
-  //               job={job}
-  //               activated={index === currentTabIndex}
-  //             />
-  //           )
-  //         })}
-  //       </div>
-  //     </div>
-  //   </div>
-  // ) */}
 }
