@@ -17,12 +17,6 @@ export default function ExperienceSection() {
   const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
   const [sliderStyle, setSliderStyle] = useState<{ width: string, transform:string }>({ width: "", transform: "" })
 
-  useEffect(() => {
-    if (contentPanelsWrapper.current) {
-      contentPanelsWrapper.current.style.height = `${largestContentPanelHeight()}px`
-    }
-  }, [])
-
   function clickOnTabItem(index:number, button:HTMLButtonElement):void {
     let sliderTransform:string;
 
@@ -62,6 +56,12 @@ export default function ExperienceSection() {
 
     return largestPanelHeight
   }
+
+  useEffect(() => {
+    if (contentPanelsWrapper.current) {
+      contentPanelsWrapper.current.style.height = `${largestContentPanelHeight()}px`
+    }
+  }, [])
 
   return (
     <SectionLayout isBgColorPrimary={false}>
