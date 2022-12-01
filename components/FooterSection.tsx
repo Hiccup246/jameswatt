@@ -19,7 +19,7 @@ export default function FooterSection() {
         }
     }
 
-    function setTheme() {
+    function setInitialTheme() {
         if (document.documentElement.classList.contains("dark")) {
             setDarkMode(true)
         } else {
@@ -31,7 +31,7 @@ export default function FooterSection() {
         if (darkMode != null) {
             return (darkMode ? "Light Mode" : "Dark Mode")
         } else {
-            return (<></>)
+            return ("")
         }
     }
 
@@ -44,7 +44,7 @@ export default function FooterSection() {
     }
 
     useEffect(() => {
-        setTheme()
+        setInitialTheme()
       }, [])
 
     return (

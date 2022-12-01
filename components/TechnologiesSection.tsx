@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import AngularIcon from "./Icons/AngularIcon";
 import BulmaIcon from "./Icons/BulmaIcon";
 import CssIcon from "./Icons/CssIcon";
@@ -68,7 +67,7 @@ export default function TechnologiesSection() {
                             group-hover:animation-play group-hover:opacity-100
                             group-hover:animate-rotate transition-all
                             duration-300 ease-linear
-                            absolute top-0 left-0 w-[88px] h-[88px]
+                            absolute top-0 left-0 w-[calc(100%+2px)] h-[calc(100%+2px)]
                             opacity-0 rounded-lg -translate-x-px -translate-y-px
                             bg-tech-icon-gradient z-10
                          `}>
@@ -127,8 +126,8 @@ export default function TechnologiesSection() {
                     </div>
                 </div>
 
-                <div className="absolute top-0 left-0 h-full w-[20px] sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-r from-brown via-brown dark:from-black to-transparent z-[1"></div>
-                <div className="absolute top-0 right-0 h-full w-[20px] sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-l from-brown via-brown dark:from-black to-transparent z-[1]"></div>
+                <div className="absolute top-0 left-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-r from-brown via-brown dark:from-black to-transparent"></div>
+                <div className="absolute top-0 right-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-l from-brown via-brown dark:from-black to-transparent"></div>
             </div>
         </SectionLayout>
     )
