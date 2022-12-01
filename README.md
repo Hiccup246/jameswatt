@@ -49,3 +49,8 @@ the "Visit the Expo" section https://bulma.io/
 ### Bookshelf Section
 - Refactor react code
 - Consider alternative component splits
+
+### Landing Section
+- Start off with "Human" and "Developer" SVGs
+- Start with simple drip cirlce SVG in GIMP
+- Follow complex tutorial for very cool trip effect/SVG
