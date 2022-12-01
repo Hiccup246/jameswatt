@@ -54,3 +54,6 @@ the "Visit the Expo" section https://bulma.io/
 - Start off with "Human" and "Developer" SVGs
 - Start with simple drip cirlce SVG in GIMP
 - Follow complex tutorial for very cool trip effect/SVG
+- Start with similar font to new york post
+- add black border perhaps of 3px
+- Add box shadow of -1px 1px 2px -2px
