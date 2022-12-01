@@ -53,7 +53,7 @@ export default function Home() {
       </Script>
 
       <div>
-        {/* <LandingSection /> */}
+        <LandingSection />
         <AboutMeSection />
         <WorkExperienceSection />
         <ProjectShowcaseSection />

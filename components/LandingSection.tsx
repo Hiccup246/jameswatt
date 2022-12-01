@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Spring, WaveTank } from "./WaveTank";
 import Image from "next/image";
+import CircleDripIcon from "./Icons/CircleDripIcon";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));
@@ -94,10 +95,17 @@ function LandingSection() {
   return (
     <div className="w-full">
       <div className="w-9/12 mx-auto flex flex-col relative mb-40">
-        <div className="w-64 h-72 relative self-center mt-24 z-0">
-          <Image src="/author.webp" fill alt="James Watt" />
-          <Image src="/author-overlay-brown.png" fill alt="James Watt" />
+        <div className="w-60 h-72 relative self-center mt-24 z-0">
+
+          <div className="w-[300px] h-[366px] absolute top-0 z-20">
+              <CircleDripIcon />
+          </div>
+
+          <div className="w-[300px] h-[366px] z-10 absolute top-0">
+            <Image src="/author.webp" fill alt="James Watt" objectFit="contain" />
+          </div>
         </div>
+        
         <svg
             width="100"
             height="300"
