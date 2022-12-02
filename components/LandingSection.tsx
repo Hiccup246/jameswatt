@@ -103,7 +103,7 @@ function LandingSection() {
           width="100"
           height="200"
           viewBox="0 0 100 200"
-          className="absolute left-[216px] top-[261px] z-20"
+          className="absolute left-[216.5px] top-[261px] z-20"
           aria-label="Water Drop"
         >
           <circle cx="24" cy={dropy} r="4" className="fill-white"></circle>
