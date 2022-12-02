@@ -110,13 +110,14 @@ function LandingSection() {
             viewBox="0 0 100 300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute left-[240px] top-[280px] z-50"
+            className="absolute left-[240px] top-[285px] z-20"
             role="img"
             aria-label="Fresh logo"
         >
             {/* <circle cx="23" cy={dropy} r="6" fill="#D0CFE1" className=""></circle> */}
             {/* <circle cx="23" cy="0" r={6} className="h-20" fill="red"></circle> */}
-            <ellipse cx="23.5" cy="10" rx="7" ry={(counter * 2) + 10} className="z-30 opacity-70" fill="#D0CFE1" />
+            <path d={`M0,50 a1,${counter} 0 0,0 20,0`} fill="blue" />
+            {/* <ellipse cx="23.5" cy="10" rx="7" ry={(counter * 2) + 5} className="z-30 opacity-100" fill="#D0CFE1" /> */}
 
             {/* <path d={`M18 ${63 + 20} C15 ${63 + 20} 16 ${
                   63 + 20
