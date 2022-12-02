@@ -89,36 +89,30 @@ function LandingSection() {
   }, []);
 
   return (
-    <div className="w-full">
-      <div className="w-full mx-auto flex flex-col relative mb-40">
-        <div className="w-[340px] h-[406px] relative self-center mt-20 z-0">
-          <div className="w-[340px] h-[406px] text-brown absolute top-0 left-0 z-20">
-              <CircleDripIcon />
-          </div>
-
-          <div className="w-[340px] h-[406px] absolute top-0 left-3 z-10">
-            <Image src="/pantheon-portrait-small-edited-white.webp" fill alt="James Watt" className="object-scale-down" />
-          </div>
-
-          <svg
-            width="100"
-            height="300"
-            viewBox="0 0 100 300"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute left-[240px] top-[285px] z-20"
-            role="img"
-            aria-label="Fresh logo"
-          >
-            <circle cx="24" cy={dropy} r="7" fill="white" className=""></circle>
-          </svg>
-
-          <svg  width="100" className="absolute left-[256px] top-[243px] z-20"
-            height="300"
-            viewBox="0 0 100 300">
-            <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 15,0`} fill="white" />
-          </svg>
+    <div className="w-full bg-brown">
+      <div className="w-[340px] h-[406px] relative mx-auto mt-20 bg-brown bg-[red]">
+        <div className="w-full h-full text-brown absolute top-0 left-0 z-20">
+            <CircleDripIcon />
         </div>
+
+        <div className="w-full h-full text-brown absolute top-0 left-0 z-10">
+          <Image src="/pantheon-portrait-small-edited-white.webp" fill alt="James Watt" className="object-scale-down" />
+        </div>
+
+        <svg
+          width="100"
+          height="200"
+          viewBox="0 0 100 200"
+          className="absolute left-[240px] top-[285px] z-20"
+          aria-label="Water Drop"
+        >
+          <circle cx="24" cy={dropy} r="7" className="fill-white"></circle>
+        </svg>
+
+        <svg className="absolute left-[256px] top-[243px] z-20"
+          viewBox="0 0 100 300">
+          <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 15,0`} className="fill-white" />
+        </svg>
       </div>
 
       <svg
@@ -130,8 +124,7 @@ function LandingSection() {
       >
         <polygon
           points={springsPath}
-          fill="white"
-          transform="translate(0, 50)"
+          className="fill-white"
         >
         </polygon>
       </svg>
