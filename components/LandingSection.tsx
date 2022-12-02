@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Spring, WaveTank } from "./WaveTank";
 import Image from "next/image";
 import CircleDripIcon from "./Icons/CircleDripIcon";
-import JamesWattImage from "../public/pantheon-portrait-small-edited-white.webp";
+import JamesWattImage from "../public/panthy-tiny.webp";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));

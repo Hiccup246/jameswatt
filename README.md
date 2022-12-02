@@ -57,3 +57,4 @@ the "Visit the Expo" section https://bulma.io/
 - Search for text font with black outline
   - If none available use webps or attempt an SVG
 - Compress main image, crop it too and give it high priority
+- Make animation start after image has loaded in
