@@ -58,3 +58,4 @@ the "Visit the Expo" section https://bulma.io/
   - If none available use webps or attempt an SVG
 - Compress main image, crop it too and give it high priority
 - Make animation start after image has loaded in
+- Some SVGs are far too large/height is too much
