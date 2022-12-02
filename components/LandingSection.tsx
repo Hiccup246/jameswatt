@@ -12,7 +12,7 @@ const waveTank = new WaveTank();
 function LandingSection() {
   const SVG_WIDTH = 100;
   const [counter, setCounter] = useState(0);
-  const [dropy, setDropy] = useState(60);
+  const [dropy, setDropy] = useState(10);
   const [width, setWidth] = useState(SVG_WIDTH);
   const widthRef = useRef(width);
   const [springs, setSprings] = useState<Spring[]>(waveTank.springs);
@@ -38,10 +38,10 @@ function LandingSection() {
     const saw = x - Math.floor(x);
     if (saw < 0.6) {
       setCounter(easeInCirc(saw) * amp);
-      setDropy(0);
+      setDropy(10);
     } else {
       setCounter(easeInCirc(1 - saw) * amp * 0.1);
-      setDropy(0 + Math.pow(saw - 0.6, 2) * 10000);
+      setDropy(10 + Math.pow(saw - 0.6, 2) * 10000);
     }
   }
 
@@ -101,7 +101,7 @@ function LandingSection() {
           </div>
 
           <div className="w-[340px] h-[406px] absolute top-0 left-3 z-10">
-            <Image src="/pantheon-portrait-small.webp" fill alt="James Watt" className="object-scale-down" />
+            <Image src="/pantheon-portrait-small-edited-white.webp" fill alt="James Watt" className="object-scale-down" />
           </div>
 
           <svg
@@ -114,9 +114,9 @@ function LandingSection() {
             role="img"
             aria-label="Fresh logo"
         >
-            {/* <circle cx="23" cy={dropy} r="6" fill="#D0CFE1" className=""></circle> */}
+            <circle cx="24" cy={dropy} r="7" fill="white" className=""></circle>
             {/* <circle cx="23" cy="0" r={6} className="h-20" fill="red"></circle> */}
-            <path d={`M0,50 a1,${counter} 0 0,0 20,0`} fill="blue" />
+            {/* <path d={`M0,50 a1,${(counter + 3 * 0.5) + 3} 0 0,0 12,0`} fill="blue" /> */}
             {/* <ellipse cx="23.5" cy="10" rx="7" ry={(counter * 2) + 5} className="z-30 opacity-100" fill="#D0CFE1" /> */}
 
             {/* <path d={`M18 ${63 + 20} C15 ${63 + 20} 16 ${
@@ -125,6 +125,12 @@ function LandingSection() {
                   63 + 20
                 } 21 ${63 + 20} 18 ${63 + 20}Z`} fill="red" /> */}
         </svg>
+
+          <svg  width="100" className="absolute left-[256px] top-[243px] z-20"
+            height="300"
+            viewBox="0 0 100 300">
+            <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 15,0`} fill="white" />
+          </svg>
         </div>
         
       </div>
