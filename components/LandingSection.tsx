@@ -90,7 +90,7 @@ function LandingSection() {
 
   return (
     <div className="w-full bg-brown">
-      <div className="w-[310px] h-[376px] relative mx-auto mt-20 bg-brown bg-brown">
+      <div className="w-[310px] h-[376px] relative mx-auto mt-20 mb-52 bg-brown bg-brown">
         <div className="w-full h-full text-brown absolute top-0 left-0 z-20">
             <CircleDripIcon />
         </div>
@@ -101,17 +101,17 @@ function LandingSection() {
 
         <svg
           width="100"
-          height="200"
+          height="350"
           viewBox="0 0 100 200"
-          className="absolute left-[216.5px] top-[261px] z-20"
+          className="absolute left-[216.5px] top-[184px] z-20"
           aria-label="Water Drop"
         >
-          <circle cx="24" cy={dropy} r="4" className="fill-white"></circle>
+          <circle cx="24" cy={dropy} r="6" className="fill-white"></circle>
         </svg>
 
-        <svg className="absolute left-[234.5px] top-[230px] z-20"
+        <svg className="absolute left-[232.5px] top-[230px] z-20"
           viewBox="0 0 100 300">
-          <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 15,0`} className="fill-white" />
+          <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 20,0`} className="fill-white" />
         </svg>
       </div>
 
