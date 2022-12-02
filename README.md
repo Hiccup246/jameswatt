@@ -51,9 +51,9 @@ the "Visit the Expo" section https://bulma.io/
 - Consider alternative component splits
 
 ### Landing Section
-- Start off with "Human" and "Developer" SVGs
-- Start with simple drip cirlce SVG in GIMP
-- Follow complex tutorial for very cool trip effect/SVG
-- Start with similar font to new york post
-- add black border perhaps of 3px
-- Add box shadow of -1px 1px 2px -2px
+- Center main image
+- Make main image have different sizes for smaller devices
+- Ensure white water tank is always visible on all scren sizes
+- Search for text font with black outline
+  - If none available use webps or attempt an SVG
+- Compress main image, crop it too and give it high priority
