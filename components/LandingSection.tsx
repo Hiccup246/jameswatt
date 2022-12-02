@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Spring, WaveTank } from "./WaveTank";
 import Image from "next/image";
 import CircleDripIcon from "./Icons/CircleDripIcon";
+import JamesWattImage from "../public/pantheon-portrait-small-edited-white.webp";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));
@@ -96,7 +97,13 @@ function LandingSection() {
         </div>
 
         <div className="w-full h-full text-brown absolute top-0 left-0 z-10">
-          <Image src="/pantheon-portrait-small-edited-white.webp" fill alt="James Watt" className="object-scale-down" />
+          <Image src={JamesWattImage} 
+                 fill
+                 priority
+                 placeholder="blur"
+                 alt="James Watt"
+                 sizes="310px"
+                 className="object-scale-down" />
         </div>
 
         <svg
