@@ -12,7 +12,7 @@ const waveTank = new WaveTank();
 function LandingSection() {
   const SVG_WIDTH = 100;
   const [counter, setCounter] = useState(0);
-  const [dropy, setDropy] = useState(0);
+  const [dropy, setDropy] = useState(60);
   const [width, setWidth] = useState(SVG_WIDTH);
   const widthRef = useRef(width);
   const [springs, setSprings] = useState<Spring[]>(waveTank.springs);
@@ -95,29 +95,37 @@ function LandingSection() {
   return (
     <div className="w-full">
       <div className="w-9/12 mx-auto flex flex-col relative mb-40">
-        <div className="w-60 h-72 relative self-center mt-24 z-0">
-
-          <div className="w-[300px] h-[366px] absolute top-0 z-20">
+        <div className="w-[340px] h-[406px] relative self-center mt-20 z-0">
+          <div className="w-[340px] h-[406px] text-brown absolute top-0 left-0 z-20">
               <CircleDripIcon />
           </div>
 
-          <div className="w-[300px] h-[366px] z-10 absolute top-0">
-            <Image src="/author.webp" fill alt="James Watt" objectFit="contain" />
+          <div className="w-[340px] h-[406px] absolute top-0 left-3 z-10">
+            <Image src="/pantheon-portrait-small.webp" fill alt="James Watt" className="object-scale-down" />
           </div>
-        </div>
-        
-        <svg
+
+          <svg
             width="100"
             height="300"
             viewBox="0 0 100 300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute left-[calc(50%-50px)] top-[94%] z-50"
+            className="absolute left-[240px] top-[280px] z-50"
             role="img"
             aria-label="Fresh logo"
         >
-            <circle cx="52.5" cy={dropy} r="6" fill="white"></circle>        
+            {/* <circle cx="23" cy={dropy} r="6" fill="#D0CFE1" className=""></circle> */}
+            {/* <circle cx="23" cy="0" r={6} className="h-20" fill="red"></circle> */}
+            <ellipse cx="23.5" cy="10" rx="7" ry={(counter * 2) + 10} className="z-30 opacity-70" fill="#D0CFE1" />
+
+            {/* <path d={`M18 ${63 + 20} C15 ${63 + 20} 16 ${
+                  63 + 20
+                } 12 61L9 56C2 33 62 -3 80 12C103 27 44 56 ${
+                  63 + 20
+                } 21 ${63 + 20} 18 ${63 + 20}Z`} fill="red" /> */}
         </svg>
+        </div>
+        
       </div>
       <svg
           width="100%"
