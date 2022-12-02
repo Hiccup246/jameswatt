@@ -89,8 +89,8 @@ function LandingSection() {
   }, []);
 
   return (
-    <div className="w-full bg-brown">
-      <div className="w-[310px] h-[376px] relative mx-auto mt-20 mb-52 bg-brown bg-brown">
+    <div className="w-full h-full bg-brown">
+      <div className="w-[310px] h-[376px] relative mx-auto mt-20 mb-44 bg-brown bg-brown">
         <div className="w-full h-full text-brown absolute top-0 left-0 z-20">
             <CircleDripIcon />
         </div>
@@ -120,11 +120,13 @@ function LandingSection() {
         height="100px"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="mt-5"
+        className="-mt-5"
       >
         <polygon
           points={springsPath}
           className="fill-white"
+          stroke="white"
+          transform="translate(0, 50)"
         >
         </polygon>
       </svg>
