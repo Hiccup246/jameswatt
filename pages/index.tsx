@@ -9,6 +9,7 @@ import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
 import CreditsSection from "../components/CreditsSection";
 import FooterSection from "../components/FooterSection";
 import TechnologiesSection from "../components/TechnologiesSection";
+import LandingSectionTwo from "../components/LandingSectionTwo";
 
 export default function Home() {
   return (
