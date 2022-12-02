@@ -113,18 +113,9 @@ function LandingSection() {
             className="absolute left-[240px] top-[285px] z-20"
             role="img"
             aria-label="Fresh logo"
-        >
+          >
             <circle cx="24" cy={dropy} r="7" fill="white" className=""></circle>
-            {/* <circle cx="23" cy="0" r={6} className="h-20" fill="red"></circle> */}
-            {/* <path d={`M0,50 a1,${(counter + 3 * 0.5) + 3} 0 0,0 12,0`} fill="blue" /> */}
-            {/* <ellipse cx="23.5" cy="10" rx="7" ry={(counter * 2) + 5} className="z-30 opacity-100" fill="#D0CFE1" /> */}
-
-            {/* <path d={`M18 ${63 + 20} C15 ${63 + 20} 16 ${
-                  63 + 20
-                } 12 61L9 56C2 33 62 -3 80 12C103 27 44 56 ${
-                  63 + 20
-                } 21 ${63 + 20} 18 ${63 + 20}Z`} fill="red" /> */}
-        </svg>
+          </svg>
 
           <svg  width="100" className="absolute left-[256px] top-[243px] z-20"
             height="300"
@@ -132,21 +123,21 @@ function LandingSection() {
             <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 15,0`} fill="white" />
           </svg>
         </div>
-        
       </div>
+
       <svg
-          width="100%"
-          height="100px"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="-mt-5"
+        width="100%"
+        height="100px"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        className="-mt-5"
       >
-          <polygon
-              points={springsPath}
-              fill="white"
-              transform="translate(0, 50)"
-          >
-          </polygon>
+        <polygon
+          points={springsPath}
+          fill="white"
+          transform="translate(0, 50)"
+        >
+        </polygon>
       </svg>
     </div>
   );
