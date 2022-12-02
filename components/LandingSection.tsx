@@ -11,6 +11,7 @@ const waveTank = new WaveTank();
 
 function LandingSection() {
   const SVG_WIDTH = 100;
+  const waveDropOffset = 100;
   const [counter, setCounter] = useState(0);
   const [dropy, setDropy] = useState(10);
   const [width, setWidth] = useState(SVG_WIDTH);
@@ -26,11 +27,6 @@ function LandingSection() {
     [width, 100],
   ];
   const springsPath = `${points.map((x) => x.join(",")).join(" ")}`;
-  const juice = `M18 ${63 + counter} C15 ${63 + counter} 16 ${
-    63 + counter
-  } 12 61L9 56C2 33 62 -3 80 12C103 27 44 56 29 58C27 58 25 59 24 61C20 ${
-    63 + counter
-  } 21 ${63 + counter} 18 ${63 + counter}Z`;
 
   function updateJuice(timestamp: number) {
     const amp = 40;
@@ -65,7 +61,7 @@ function LandingSection() {
 
   function drop() {
     const dropPosition = Math.round(
-      ((widthRef.current / 2 - 30) / widthRef.current) * 100,
+      ((widthRef.current / 2 + waveDropOffset) / widthRef.current) * 100,
     );
     waveTank.springs[dropPosition].p = -60;
   }
@@ -94,7 +90,7 @@ function LandingSection() {
 
   return (
     <div className="w-full">
-      <div className="w-9/12 mx-auto flex flex-col relative mb-40">
+      <div className="w-full mx-auto flex flex-col relative mb-40">
         <div className="w-[340px] h-[406px] relative self-center mt-20 z-0">
           <div className="w-[340px] h-[406px] text-brown absolute top-0 left-0 z-20">
               <CircleDripIcon />
@@ -130,7 +126,7 @@ function LandingSection() {
         height="100px"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="-mt-5"
+        className="mt-5"
       >
         <polygon
           points={springsPath}
