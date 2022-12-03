@@ -3,6 +3,8 @@ import { Spring, WaveTank } from "./WaveTank";
 import Image from "next/image";
 import CircleDripIcon from "./Icons/CircleDripIcon";
 import JamesWattImage from "../public/panthy-tiny.webp";
+import Human from "../public/Human.png";
+import Developer from "../public/Developer.png";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));
@@ -90,8 +92,28 @@ function LandingSection() {
   }, []);
 
   return (
-    <div className="w-full h-full bg-brown">
-      <div className="w-[310px] h-[376px] relative mx-auto mt-20 mb-44 bg-brown bg-brown">
+    <div className="w-full h-full bg-brown flex flex-col">
+      <div className="w-full px-32 grid grid-cols-1 md:grid-cols-2 h-fit mt-12 gap-96 gap-y-8">
+        <div className="relative w-full h-full md:place-self-end flex md:flex-col justify-center">
+          <Image src={Human} 
+                    width="225"
+                    height="48"
+                    priority
+                    className="object-scale-down"
+                    alt="Human Text" />
+        </div>
+
+        <div className="relative w-full h-full md:place-self-start flex md:flex-col justify-center">
+          <Image src={Developer} 
+            width="323"
+            height="48"
+            priority
+            className="object-scale-down"
+            alt="Developer Text" />
+        </div>
+      </div>
+      
+      <div className="w-[310px] h-[376px] relative mx-auto mb-44 bg-brown bg-brown">
         <div className="w-full h-full text-brown absolute top-0 left-0 z-20">
             <CircleDripIcon />
         </div>
