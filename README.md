@@ -37,6 +37,8 @@ custom solution off https://floating-ui.com/
 - Consider changing project showcase so that projects move upward a bit like the about me section. Perhaps box shadow like
 the "Visit the Expo" section https://bulma.io/
 - Use title attribute for automatic tool tips
+- Make padding consistent across sections (Complexity around about me due to water tank)
+- Consider alternative primary color (not blue based)
 ### Work Experience Section
 - Clean up tab selection javascript
 - Clean up and carefully check tailwind css classes
@@ -51,11 +53,8 @@ the "Visit the Expo" section https://bulma.io/
 - Consider alternative component splits
 
 ### Landing Section
-- Center main image
-- Make main image have different sizes for smaller devices
+- Sort out mobile views
 - Ensure white water tank is always visible on all scren sizes
-- Search for text font with black outline
-  - If none available use webps or attempt an SVG
-- Compress main image, crop it too and give it high priority
 - Make animation start after image has loaded in
-- Some SVGs are far too large/height is too much
+
+
