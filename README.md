@@ -43,18 +43,11 @@ the "Visit the Expo" section https://bulma.io/
 - Clean up tab selection javascript
 - Clean up and carefully check tailwind css classes
 - Think about possible alternative component splits
-- Refactor click logic
-  - When you click on a side menu item you know where
-  the slider highlight should be
-  - When you click on a side menu item you know which  index is activated thus you know which panel should be displayed
 
 ### Bookshelf Section
-- Refactor react code
 - Consider alternative component splits
 
 ### Landing Section
-- Sort out mobile views
-- Ensure white water tank is always visible on all scren sizes
 - Make animation start after image has loaded in
 
 
