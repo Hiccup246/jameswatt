@@ -9,6 +9,8 @@ export default function TechnologiesSection() {
                     <a href={technologyIcon.link} aria-label={technologyIcon.name} title={technologyIcon.name}
                        className="w-full h-full relative flex items-center justify-center bg-white rounded-md border-lightgrey border group-hover:border-0 mt-1 z-20">
                         <div className="flex justify-center h-12 w-12">
+                            <title>{technologyIcon.name}</title>
+                            
                             {technologyIcon.icon}
                         </div>
                     </a>
