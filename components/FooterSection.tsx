@@ -48,7 +48,7 @@ export default function FooterSection() {
       }, [])
 
     return (
-        <SectionLayout isBgColorPrimary={true}>
+        <SectionLayout isBgColorPrimary={true} largeBottomPadding={false}>
             <div className="grid grid-cols-1 md:grid-cols-3 text-sm text-center">
                 <div className="flex justify-center mb-6 md:mb-0">
                     <h1 className="mr-1.5">
