@@ -65,11 +65,11 @@ export default function ExperienceSection() {
 
   return (
     <SectionLayout isBgColorPrimary={false}>
-      <h1 className="text-center text-2xl sm:text-3xl font-bold mb-10">
+      <h1 className="text-center text-2xl sm:text-3xl font-bold mb-16">
         My Experience
       </h1>
 
-      <div className="w-full flex max-small:block my-10">
+      <div className="w-full flex max-small:block">
         <div className="relative w-max m-0 list-none z-10 h-fit py-2.5 max-small:flex max-small:w-full max-small:overflow-x-scroll max-small:overflow-y-hidden">
            {
             PROGRAMMING_EXPERIENCES.map((job, index) => {

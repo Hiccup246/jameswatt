@@ -7,7 +7,7 @@ import SectionLayout from "./SectionLayout";
 export default function AboutMeSection() {
     return (
         <SectionLayout isBgColorPrimary={true}>
-            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-10 mt-20">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-16 mt-16">
                 Who am I?
             </h1>
 
@@ -18,14 +18,13 @@ export default function AboutMeSection() {
                 skill over 6 years of programming and 3 years of working in high performing agile teams.
             </p>
 
-            <p className="self-center text-lg text-center font-serif mb-10">
+            <p className="self-center text-lg text-center font-serif">
                 Outside of software my interests include writing, journalism, hiking throughout the world,
                 exploring Londons historic pubs, running, reading books relating to topics such as sociology,
                 fantasy, politics, philosophy and...sensory deprivation tanks ;)
             </p>
 
-            <div className="flex flex-row justify-center">
-                {/* text-grey transition-colors ease-[cubic-bezier(0.05,0,0,1)] duration-500 */}
+            <div className="flex flex-row justify-center mt-16">
                 <div className="w-8 my-auto mr-8 hover:-translate-y-0.5 duration-150 ease-in">
                     <a className="hover:text-grey duration-150 ease-in" 
                         href="https://github.com/Hiccup246"

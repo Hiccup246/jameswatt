@@ -9,11 +9,11 @@ import NuxtIcon from "./Icons/NuxtIcon";
 export default function CreditsSection() {
     return (
         <SectionLayout isBgColorPrimary={false}>
-            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-2">
+            <h1 className="text-center text-2xl sm:text-3xl font-bold">
                 The Work Which Inspired This Site
             </h1>
             
-            <h2 className="text-center mb-10">
+            <h2 className="text-center mb-16">
                 &quot;Good artists borrow, great artists steal&quot; - Pablo Picasso
             </h2>
 
