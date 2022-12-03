@@ -93,25 +93,34 @@ function LandingSection() {
 
   return (
     <div className="w-full h-full bg-brown flex flex-col">
-      <div className="w-full px-32 grid grid-cols-1 md:grid-cols-2 gap-96 h-fit mt-12 gap-y-8">
-        <div className="relative w-auto h-32 md:place-self-end flex md:flex-col justify-start">
+      <div className={`
+             w-full grid grid-cols-1 md:grid-cols-2
+             h-fit md:mb-10 lg:mt-12
+      `}>
+        <div className={`
+               relative w-full h-auto flex flex-col
+               justify-start md:justify-start md:pr-10 lg:pr-28
+        `}>
           <Image src={Human} 
                     priority
                     height="80"
-                    className="object-scale-down"
+                    className="object-scale-down place-self-center md:place-self-end"
                     alt="Human Text" />
         </div>
 
-        <div className="relative w-auto h-32 md:place-self-start flex md:flex-col justify-start">
+        <div className={`
+               relative w-full h-auto flex flex-col
+               justify-start md:justify-start md:pl-10 lg:pl-28
+        `}>
           <Image src={Developer} 
             priority
             height="80"
-            className="object-scale-down"
+            className="object-scale-down place-self-center md:place-self-start"
             alt="Developer Text" />
         </div>
       </div>
       
-      <div className="w-[310px] h-[376px] relative mx-auto mb-44 bg-brown bg-brown">
+      <div className="w-[310px] h-[376px] relative mx-auto mb-20 md:mb-28 lg:mb-16 xl:mb-36 bg-brown bg-brown">
         <div className="w-full h-full text-brown absolute top-0 left-0 z-20">
             <CircleDripIcon />
         </div>
