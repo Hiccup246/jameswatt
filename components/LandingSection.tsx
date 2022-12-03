@@ -117,7 +117,7 @@ function LandingSection() {
         </svg>
 
         <svg className="absolute left-[232.5px] top-[230px] z-20"
-             viewBox="0 0 100 300"
+             viewBox="0 0 100 100"
              aria-label="Growing Drop">
           <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 20,0`} className="fill-white" />
         </svg>
