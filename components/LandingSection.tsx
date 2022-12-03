@@ -79,7 +79,6 @@ function LandingSection() {
       return;
     }
 
-    requestIdRef.current = requestAnimationFrame(update);
     globalThis.addEventListener("resize", resize);
     resize();
 
@@ -90,6 +89,10 @@ function LandingSection() {
       }
     };
   }, []);
+
+  function startAnimation() {
+    requestIdRef.current = requestAnimationFrame(update);
+  }
 
   return (
     <div className="w-full h-full bg-brown flex flex-col">
@@ -131,6 +134,8 @@ function LandingSection() {
                  priority
                  placeholder="blur"
                  alt="James Watt"
+                 onLoad={()=>startAnimation()}
+                 onError={()=>startAnimation()}
                  sizes="310px"
                  className="object-scale-down" />
         </div>
