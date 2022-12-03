@@ -3,8 +3,8 @@ import { Spring, WaveTank } from "./WaveTank";
 import Image from "next/image";
 import CircleDripIcon from "./Icons/CircleDripIcon";
 import JamesWattImage from "../public/panthy-tiny.webp";
-import Human from "../public/human-med.png";
-import Developer from "../public/developer-med.png";
+import Human from "../public/human.png";
+import Developer from "../public/developer.png";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));

@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import "../styles/reset.css";
 import type { AppProps } from "next/app";
-import { Roboto, Open_Sans } from "@next/font/google"
+import { Roboto, Open_Sans } from "@next/font/google";
 
 const roboto = Roboto({
   weight: ["400", "700"],

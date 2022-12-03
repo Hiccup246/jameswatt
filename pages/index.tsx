@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
 import LandingSection from "../components/LandingSection";
-import styles from "../styles/Home.module.css";
 import AboutMeSection from "../components/AboutMeSection";
 import WorkExperienceSection from "../components/WorkExperienceSection/WorkExperienceSection";
 import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
@@ -9,11 +8,10 @@ import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
 import CreditsSection from "../components/CreditsSection";
 import FooterSection from "../components/FooterSection";
 import TechnologiesSection from "../components/TechnologiesSection";
-import LandingSectionTwo from "../components/LandingSectionTwo";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>James Watt</title>
         <meta name="description" content="`The personal portfolio for London based software engineer James Watt." />
