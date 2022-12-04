@@ -5,6 +5,9 @@ import SectionLayout from "../layouts/SectionLayout";
 import Image from "next/image";
 import FreshIcon from "../Icons/FreshIcon";
 import NuxtIcon from "../Icons/NuxtIcon";
+import Marguerite from "../../public/marguerite.webp";
+import JoshComeau from "../../public/josh-comeau.webp"
+
 
 export default function CreditsSection() {
     return (
@@ -55,7 +58,7 @@ export default function CreditsSection() {
                         </a>
 
                         <a className="h-6 w-6 relative inline-block opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://marguerite.io/" aria-label="Marguerite Roth Website">
-                            <Image src="/marguerite.webp"
+                            <Image src={Marguerite}
                                    fill
                                    sizes="(min-width: 640px) 300px,
                                           (min-width: 785px) 300px,
@@ -80,7 +83,7 @@ export default function CreditsSection() {
                         </a>
 
                         <a className="relative inline-block h-6 w-6 opacity-0 -rotate-45 group-hover:opacity-70 duration-500 transition-opacity-transform ease-in-out translate-x-[-8px] group-hover:transform-none align-middle mb-1" href="https://www.joshwcomeau.com/" aria-label="Josh Comeau Website">
-                            <Image src="/josh-comeau.webp"
+                            <Image src={JoshComeau}
                                    fill
                                    sizes="(min-width: 640px) 170px,
                                           (min-width: 785px) 170px,
