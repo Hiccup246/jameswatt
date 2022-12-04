@@ -16,7 +16,7 @@ function easeInCirc(x: number) {
 
 const waveTank = new WaveTank();
 
-function LandingSection() {
+export default function LandingSection() {
   const SVG_WIDTH = 100;
   const waveDropOffset = 100;
   const [counter, setCounter] = useState(0);
@@ -196,5 +196,3 @@ function LandingSection() {
     </div>
   );
 }
-
-export default LandingSection;
