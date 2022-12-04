@@ -1,13 +1,10 @@
-import React from "react"
-
-export default function ContentPanelButton({ companyName, activated, clickHandler }: { companyName:string, activated: boolean, clickHandler:Function }) {
+export default function TabButton({ companyName, activated, clickHandler }: { companyName:string, activated: boolean, clickHandler:Function }) {
   const activatedClasses = activated ? "text-black activated" : ""
 
   return (
     <button
       aria-label={companyName}
       className={`
-        tab-item
         cursor-pointer relative flex w-fit
         h-[var(--tab-height)]
         leading-[var(--tab-height)] px-5 bg-transparent

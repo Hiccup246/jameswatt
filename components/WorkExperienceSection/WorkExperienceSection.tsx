@@ -1,23 +1,23 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences";
-import ContentPanelButton from "./ContentPanelButton";
-import ContentPanel from "./ContentPanel";
+import TabButton from "./TabButton";
+import ExperiencePanel from "./ExperiencePanel";
 import SectionLayout from "../SectionLayout";
 
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../tailwind.config';
 
-export default function ExperienceSection() {
+export default function WorkExperienceSection() {
   const contentPanelsWrapper = useRef<HTMLDivElement>(null)
 
   const tailwindScreenBreakpoints = (resolveConfig(tailwindConfig)?.theme?.screens) as { small:string }
   const mobileViewWidth:string = (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px"
 
   const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
-  const [sliderStyle, setSliderStyle] = useState<{ width: string, transform:string }>({ width: "", transform: "" })
+  const [sliderStyle, setSliderStyle] = useState<{ width:string, transform:string }>({ width:"", transform:"" })
 
-  function clickOnTabItem(index:number, button:HTMLButtonElement):void {
+  function clickOnTabButton(index:number, button:HTMLButtonElement):void {
     let sliderTransform:string;
 
     const isMobile = window.matchMedia(
@@ -70,22 +70,24 @@ export default function ExperienceSection() {
       </h1>
 
       <div className="w-full flex max-small:block">
-        <div className="relative w-max m-0 list-none z-10 h-fit py-2.5 max-small:flex max-small:w-full max-small:overflow-x-scroll max-small:overflow-y-hidden">
+        <div className={`
+               relative w-max m-0 list-none z-10 h-fit py-2.5
+               max-small:flex max-small:w-full max-small:overflow-x-scroll max-small:overflow-y-hidden
+        `}>
            {
-            PROGRAMMING_EXPERIENCES.map((job, index) => {
+            PROGRAMMING_EXPERIENCES.map((job:Job, index:number) => {
               return (
-                <ContentPanelButton
+                <TabButton
                   key={index + job.company}
                   companyName={job.company}
                   activated={index === currentTabIndex}
-                  clickHandler={(button: HTMLButtonElement) => clickOnTabItem(index, button)}
+                  clickHandler={(button: HTMLButtonElement) => clickOnTabButton(index, button)}
                 />
               )
             })
            }
           <div style={sliderStyle.width.length > 0 ? sliderStyle: {}}
             className={`
-              selected-tab-item
               visible absolute top-0 left-0 z-10 w-[85px]
               h-[var(--tab-height)] my-2.5 bg-brown
               transition-[transform width] duration-200 delay-100
@@ -103,9 +105,9 @@ export default function ExperienceSection() {
 
         <div className="relative w-full ml-5 max-small:ml-0" ref={contentPanelsWrapper}>
           {
-            PROGRAMMING_EXPERIENCES.map((job: Job, index) => {
+            PROGRAMMING_EXPERIENCES.map((job:Job, index:number) => {
               return (
-                <ContentPanel
+                <ExperiencePanel
                   key={index + job.dateRange}
                   job={job}
                   activated={index === currentTabIndex} />

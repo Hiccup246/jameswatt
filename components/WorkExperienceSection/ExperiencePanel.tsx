@@ -1,6 +1,4 @@
-import React from "react"
-
-export default function ContentPanel({ job, activated }: { job:Job, activated:boolean }) {
+export default function ExperiencePanel({ job, activated }: { job:Job, activated:boolean }) {
   const activatedClasses = "pt-2.5 visible relative opacity-100 activated"
   const deactivatedClasses = "opacity-0 invisible"
   const tabPanelClasses = `absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 ${activated ? activatedClasses : deactivatedClasses}`
@@ -15,7 +13,7 @@ export default function ContentPanel({ job, activated }: { job:Job, activated:bo
       <div className="pb-4">{job.description}</div>
       <ul className="p-0 m-0 list-none">
         {
-          job.jobHighlights.map((highlight: string, index) => {
+          job.jobHighlights.map((highlight: string, index:number) => {
             return (
               <li className={`
                     relative mt-4 pl-8 pb-2.5 before:content-['→']
