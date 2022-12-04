@@ -4,5 +4,5 @@ export default function Icons8Icon() {
             <path d="M7 0H0v14h7V0z"></path>
             <path d="M10.5 7a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm0 7a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"></path>
         </svg>
-    )
+    );
 }

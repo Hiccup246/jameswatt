@@ -6,7 +6,7 @@ import Image from "next/image";
 import FreshIcon from "../Icons/FreshIcon";
 import NuxtIcon from "../Icons/NuxtIcon";
 import Marguerite from "../../public/marguerite.webp";
-import JoshComeau from "../../public/josh-comeau.webp"
+import JoshComeau from "../../public/josh-comeau.webp";
 
 
 export default function CreditsSection() {
@@ -100,5 +100,5 @@ export default function CreditsSection() {
                 </ul>
             </div>
         </SectionLayout>
-    )
+    );
 }

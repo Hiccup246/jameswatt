@@ -39,5 +39,5 @@ export default function ShowcaseProject(props: ShowcaseProject) {
                 </div>
             </div>
         </div>
-    )
+    );
 }

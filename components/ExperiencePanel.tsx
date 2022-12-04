@@ -1,7 +1,7 @@
 export default function ExperiencePanel({ job, activated }: { job:Job, activated:boolean }) {
-  const activatedClasses = "pt-2.5 visible relative opacity-100 activated"
-  const deactivatedClasses = "opacity-0 invisible"
-  const tabPanelClasses = `absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 ${activated ? activatedClasses : deactivatedClasses}`
+  const activatedClasses = "pt-2.5 visible relative opacity-100 activated";
+  const deactivatedClasses = "opacity-0 invisible";
+  const tabPanelClasses = `absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 ${activated ? activatedClasses : deactivatedClasses}`;
 
   return (
     <div className={`tab-panel ${tabPanelClasses}`}>
@@ -22,10 +22,10 @@ export default function ExperiencePanel({ job, activated }: { job:Job, activated
                   key={index}
                   dangerouslySetInnerHTML={{__html: highlight}}>
               </li>
-            )
+            );
           })
         }
       </ul>
     </div>
-  )
+  );
 }

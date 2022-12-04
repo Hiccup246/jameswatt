@@ -8,14 +8,14 @@ const roboto = Roboto({
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-roboto",
-})
+});
 
 const openSans = Open_Sans({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-open-sans",
-})
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

@@ -30,7 +30,7 @@ export default function BookshelfSection() {
                                         <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
                                             <BookshelfCells book={book} />
                                         </tr>
-                                    )
+                                    );
                                 })
                         }
                     </tbody>
@@ -45,5 +45,5 @@ export default function BookshelfSection() {
                 </button>
             </div>
         </SectionLayout>
-    )
-};
+    );
+}

@@ -1,5 +1,5 @@
 export default function TabButton({ companyName, activated, clickHandler }: { companyName:string, activated: boolean, clickHandler:Function }) {
-  const activatedClasses = activated ? "text-black activated" : ""
+  const activatedClasses = activated ? "text-black activated" : "";
 
   return (
     <button
@@ -19,5 +19,5 @@ export default function TabButton({ companyName, activated, clickHandler }: { co
     >
       {companyName}
     </button>
-  )
+  );
 }

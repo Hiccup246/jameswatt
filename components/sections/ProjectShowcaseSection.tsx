@@ -34,7 +34,7 @@ export default function ProjectShowcaseSection() {
                                 projectName={project.projectName}
                                 projectImageSrc={project.projectImageSrc}
                                 firstPublished={project.firstPublished} />
-                        )
+                        );
                     })
                 }
             </div>

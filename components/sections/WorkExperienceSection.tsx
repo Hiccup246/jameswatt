@@ -5,37 +5,37 @@ import TabButton from "../TabButton";
 import ExperiencePanel from "../ExperiencePanel";
 import SectionLayout from "../layouts/SectionLayout";
 
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../tailwind.config';
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../tailwind.config";
 
 export default function WorkExperienceSection() {
-  const contentPanelsWrapper = useRef<HTMLDivElement>(null)
+  const contentPanelsWrapper = useRef<HTMLDivElement>(null);
 
-  const tailwindScreenBreakpoints = (resolveConfig(tailwindConfig)?.theme?.screens) as { small:string }
-  const mobileViewWidth:string = (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px"
+  const tailwindScreenBreakpoints = (resolveConfig(tailwindConfig)?.theme?.screens) as { small:string };
+  const mobileViewWidth:string = (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
 
-  const [currentTabIndex, setCurrentTabIndex] = useState<number>(0)
-  const [sliderStyle, setSliderStyle] = useState<{ width:string, transform:string }>({ width:"", transform:"" })
+  const [currentTabIndex, setCurrentTabIndex] = useState<number>(0);
+  const [sliderStyle, setSliderStyle] = useState<{ width:string, transform:string }>({ width: "", transform: "" });
 
   function clickOnTabButton(index:number, button:HTMLButtonElement):void {
     let sliderTransform:string;
 
     const isMobile = window.matchMedia(
       `(max-width: ${mobileViewWidth})`
-    ).matches
+    ).matches;
 
     if (isMobile) {
       // If the device is a mobile the tabs are horizontal
-      const selectedButtonXPosition = `${index} * var(--tab-width)`
-      sliderTransform = `translateX(calc(${selectedButtonXPosition}))`
+      const selectedButtonXPosition = `${index} * var(--tab-width)`;
+      sliderTransform = `translateX(calc(${selectedButtonXPosition}))`;
     } else {
       // If the device is a tablet or dekstop then the tabs are vertical
-      const selectedButtonYPosition = `(${index} * var(--tab-height)) + (${index} * var(--tab-margin-top))`
-      sliderTransform = `translateY(calc(${selectedButtonYPosition})`
+      const selectedButtonYPosition = `(${index} * var(--tab-height)) + (${index} * var(--tab-margin-top))`;
+      sliderTransform = `translateY(calc(${selectedButtonYPosition})`;
     }
 
-    setCurrentTabIndex(index)
-    setSliderStyle({ width: button.offsetWidth.toString() + "px", transform: sliderTransform })
+    setCurrentTabIndex(index);
+    setSliderStyle({ width: button.offsetWidth.toString() + "px", transform: sliderTransform });
   }
   
   function largestContentPanelHeight():number {
@@ -44,24 +44,24 @@ export default function WorkExperienceSection() {
     // we need to manually determine the max height and set it
     const contentPanels:NodeListOf<HTMLElement> | undefined = contentPanelsWrapper.current?.querySelectorAll(
       ".tab-panel"
-    )
+    );
 
-    if(!contentPanels) return 1000
+    if (!contentPanels) return 1000;
 
-    let largestPanelHeight:number = 0
+    let largestPanelHeight:number = 0;
 
     contentPanels.forEach(panel => {
-      if (panel.clientHeight > largestPanelHeight) largestPanelHeight = panel.clientHeight
-    })
+      if (panel.clientHeight > largestPanelHeight) largestPanelHeight = panel.clientHeight;
+    });
 
-    return largestPanelHeight
+    return largestPanelHeight;
   }
 
   useEffect(() => {
     if (contentPanelsWrapper.current) {
-      contentPanelsWrapper.current.style.height = `${largestContentPanelHeight()}px`
+      contentPanelsWrapper.current.style.height = `${largestContentPanelHeight()}px`;
     }
-  }, [])
+  }, []);
 
   return (
     <SectionLayout>
@@ -83,7 +83,7 @@ export default function WorkExperienceSection() {
                   activated={index === currentTabIndex}
                   clickHandler={(button: HTMLButtonElement) => clickOnTabButton(index, button)}
                 />
-              )
+              );
             })
            }
           <div style={sliderStyle.width.length > 0 ? sliderStyle: {}}
@@ -111,11 +111,11 @@ export default function WorkExperienceSection() {
                   key={index + job.dateRange}
                   job={job}
                   activated={index === currentTabIndex} />
-              )
+              );
             })
           }
         </div>
       </div>
     </SectionLayout>
-  )
+  );
 }

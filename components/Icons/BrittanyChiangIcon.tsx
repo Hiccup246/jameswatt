@@ -9,5 +9,5 @@ export default function BrittanyChiangIcon() {
                     </g>
                 </g>
         </svg>
-    )
+    );
 }

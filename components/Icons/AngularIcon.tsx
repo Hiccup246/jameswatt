@@ -15,5 +15,5 @@ export default function AngularIcon() {
                 </g>
             </g>
         </svg>
-    )
+    );
 }

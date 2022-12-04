@@ -11,7 +11,7 @@ export default function BookshelfCells({ book }: { book: Book }) {
              sizes="20px"
             alt="Completed Book Icon" />
     </div>
-  )
+  );
 
   const currentlyReadingIcon = (
     <div className="h-5 w-5 mx-auto">
@@ -21,7 +21,7 @@ export default function BookshelfCells({ book }: { book: Book }) {
               sizes="20px"
               alt="Currently Reading Icon" />
     </div>
-  )
+  );
 
   return (
     <>
@@ -38,5 +38,5 @@ export default function BookshelfCells({ book }: { book: Book }) {
         }
       </td>
     </>
-  )
+  );
 }

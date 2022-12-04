@@ -11,5 +11,5 @@ export default function GoIcon() {
                 </g>
             </g>
         </svg>
-    )
+    );
 }

@@ -5,47 +5,47 @@ import SectionLayout from "../layouts/SectionLayout";
 import SunIcon from "../Icons/SunIcon";
 
 export default function FooterSection() {
-    const [darkMode, setDarkMode] = useState<boolean>()
+    const [darkMode, setDarkMode] = useState<boolean>();
 
     function toggleTheme() {
         if (document.documentElement.classList.contains("dark")) {
-            setDarkMode(false)
-            localStorage.theme = "light"
-            document.documentElement.classList.remove("dark")
+            setDarkMode(false);
+            localStorage.theme = "light";
+            document.documentElement.classList.remove("dark");
         } else {
-            setDarkMode(true)
-            localStorage.theme = "dark"
-            document.documentElement.classList.add("dark")
+            setDarkMode(true);
+            localStorage.theme = "dark";
+            document.documentElement.classList.add("dark");
         }
     }
 
     function setInitialTheme() {
         if (document.documentElement.classList.contains("dark")) {
-            setDarkMode(true)
+            setDarkMode(true);
         } else {
-            setDarkMode(false)
+            setDarkMode(false);
         }
     }
 
     function toggleText() {
         if (darkMode != null) {
-            return (darkMode ? "Light Mode" : "Dark Mode")
+            return (darkMode ? "Light Mode" : "Dark Mode");
         } else {
-            return ("")
+            return ("");
         }
     }
 
     function toggleIcon() {
         if (darkMode != null) {
-            return (darkMode ? <SunIcon /> : <MoonIcon />)
+            return (darkMode ? <SunIcon /> : <MoonIcon />);
         } else {
-            return (<></>)
+            return (<></>);
         }
     }
 
     useEffect(() => {
-        setInitialTheme()
-      }, [])
+        setInitialTheme();
+      }, []);
 
     return (
         <SectionLayout isBgColorPrimary={true} largeBottomPadding={false}>
@@ -75,5 +75,5 @@ export default function FooterSection() {
                 </button>
             </div>
         </SectionLayout>
-    )
+    );
 }

@@ -26,7 +26,7 @@ export default function TechnologiesSection() {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 
     return (
@@ -44,7 +44,7 @@ export default function TechnologiesSection() {
                                     <div key={technologyIcon.name + index}>
                                         {slideIcon(technologyIcon)}
                                     </div>
-                                )
+                                );
                             })
                         }
                     </div>
@@ -58,7 +58,7 @@ export default function TechnologiesSection() {
                                     <div key={technologyIcon.name + index}>
                                         {slideIcon(technologyIcon)}
                                     </div>
-                                )
+                                );
                             })
                         }
                     </div>
@@ -72,7 +72,7 @@ export default function TechnologiesSection() {
                                     <div key={technologyIcon.name + index}>
                                         {slideIcon(technologyIcon)}
                                     </div>
-                                )
+                                );
                             })
                         }
                     </div>
@@ -82,5 +82,5 @@ export default function TechnologiesSection() {
                 <div className="absolute top-0 right-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-l from-white via-white dark:from-black to-transparent"></div>
             </div>
         </SectionLayout>
-    )
+    );
 }
