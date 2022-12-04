@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
-        {/* <meta httpEquiv="refresh" content="10;url='https://www.jameswatt.io" /> */}
+        {/* <meta httpEquiv="refresh" content="10;url='https://www.jameswatt.io'" /> */}
         <meta name="keywords" content="james watt, software engineer, software developer, james watt developer, james watt software developer, james watt programmer, james watt coder, james watt dev, james watt tech" />
         <link rel="canonical" href="https://www.jameswatt.io" />
         <link href="https://www.jameswatt.io" rel="author" />
@@ -43,10 +43,10 @@ export default function Home() {
       <Script id="themeLoader">
         {`
           // On page load or when changing themes, best to add inline in head to avoid FOUC
-          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
+          if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark")
           } else {
-            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.remove("dark")
           }
         `}
       </Script>

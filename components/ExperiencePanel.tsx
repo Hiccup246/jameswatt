@@ -16,7 +16,7 @@ export default function ExperiencePanel({ job, activated }: { job:Job, activated
           job.jobHighlights.map((highlight: string, index:number) => {
             return (
               <li className={`
-                    relative mt-4 pl-8 pb-2.5 before:content-['→']
+                    relative mt-4 pl-8 pb-2.5 before:content-["→"]
                     before:absolute before:left-0 before:text-black
                   `}
                   key={index}

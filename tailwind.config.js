@@ -24,7 +24,7 @@ module.exports = {
         "project-showcase": "0 1em 1em rgb(0 0 0 / 10%)"
       },
       backgroundImage: {
-        'tech-icon-gradient': "linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE)",
+        "tech-icon-gradient": "linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE)",
       },
       screens: {
         "small": "550px",
