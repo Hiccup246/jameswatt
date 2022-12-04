@@ -50,8 +50,8 @@ function LandingSection() {
     setSprings([...waveTank.springs]);
 
     const offset = 500;
-    const saw = (timestamp + offset) / 2000 -
-      Math.floor((timestamp + offset) / 2000);
+    const saw =
+      (timestamp + offset) / 2000 - Math.floor((timestamp + offset) / 2000);
     if (saw < 0.01) {
       drop();
     }
@@ -64,7 +64,7 @@ function LandingSection() {
 
   function drop() {
     const dropPosition = Math.round(
-      ((widthRef.current / 2 + waveDropOffset) / widthRef.current) * 100,
+      ((widthRef.current / 2 + waveDropOffset) / widthRef.current) * 100
     );
     waveTank.springs[dropPosition].p = -60;
   }
@@ -95,49 +95,61 @@ function LandingSection() {
   }
 
   return (
-    <div className="w-full h-full bg-brown flex flex-col">
-      <div className={`
-             w-full grid grid-cols-1 md:grid-cols-2
-             h-fit md:mb-10 lg:mt-12
-      `}>
-        <div className={`
-               relative w-full h-auto flex flex-col
+    <div className="flex h-full w-full flex-col bg-brown">
+      <div
+        className={`
+             grid h-fit w-full grid-cols-1
+             md:mb-10 md:grid-cols-2 lg:mt-12
+      `}
+      >
+        <div
+          className={`
+               relative flex h-auto w-full flex-col
                justify-start md:justify-start md:pr-10 lg:pr-28
-        `}>
-          <Image src={Human} 
-                    priority
-                    height="80"
-                    className="object-scale-down place-self-center md:place-self-end"
-                    alt="Human Text" />
-        </div>
-
-        <div className={`
-               relative w-full h-auto flex flex-col
-               justify-start md:justify-start md:pl-10 lg:pl-28
-        `}>
-          <Image src={Developer} 
+        `}
+        >
+          <Image
+            src={Human}
             priority
             height="80"
-            className="object-scale-down place-self-center md:place-self-start"
-            alt="Developer Text" />
-        </div>
-      </div>
-      
-      <div className="w-[310px] h-[376px] relative mx-auto mb-20 md:mb-28 lg:mb-16 xl:mb-36 bg-brown bg-brown">
-        <div className="w-full h-full text-brown absolute top-0 left-0 z-20">
-            <CircleDripIcon />
+            className="place-self-center object-scale-down md:place-self-end"
+            alt="Human Text"
+          />
         </div>
 
-        <div className="w-full h-full text-brown absolute top-0 left-0 z-10">
-          <Image src={JamesWattImage} 
-                 fill
-                 priority
-                 placeholder="blur"
-                 alt="James Watt"
-                 onLoad={()=>startAnimation()}
-                 onError={()=>startAnimation()}
-                 sizes="310px"
-                 className="object-scale-down" />
+        <div
+          className={`
+               relative flex h-auto w-full flex-col
+               justify-start md:justify-start md:pl-10 lg:pl-28
+        `}
+        >
+          <Image
+            src={Developer}
+            priority
+            height="80"
+            className="place-self-center object-scale-down md:place-self-start"
+            alt="Developer Text"
+          />
+        </div>
+      </div>
+
+      <div className="relative mx-auto mb-20 h-[376px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36">
+        <div className="absolute top-0 left-0 z-20 h-full w-full text-brown">
+          <CircleDripIcon />
+        </div>
+
+        <div className="absolute top-0 left-0 z-10 h-full w-full text-brown">
+          <Image
+            src={JamesWattImage}
+            fill
+            priority
+            placeholder="blur"
+            alt="James Watt"
+            onLoad={() => startAnimation()}
+            onError={() => startAnimation()}
+            sizes="310px"
+            className="object-scale-down"
+          />
         </div>
 
         <svg
@@ -150,10 +162,15 @@ function LandingSection() {
           <circle cx="24" cy={dropy} r="6" className="fill-white"></circle>
         </svg>
 
-        <svg className="absolute left-[232.5px] top-[230px] z-20"
-             viewBox="0 0 100 100"
-             aria-label="Growing Drop">
-          <path d={`M0,50 a1,${1 + ((counter+1)*0.2)} 0 0,0 20,0`} className="fill-white" />
+        <svg
+          className="absolute left-[232.5px] top-[230px] z-20"
+          viewBox="0 0 100 100"
+          aria-label="Growing Drop"
+        >
+          <path
+            d={`M0,50 a1,${1 + (counter + 1) * 0.2} 0 0,0 20,0`}
+            className="fill-white"
+          />
         </svg>
       </div>
 
@@ -170,8 +187,7 @@ function LandingSection() {
           className="fill-white"
           stroke="white"
           transform="translate(0, 50)"
-        >
-        </polygon>
+        ></polygon>
       </svg>
     </div>
   );

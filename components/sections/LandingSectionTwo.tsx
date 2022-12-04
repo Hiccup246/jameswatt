@@ -52,8 +52,8 @@ function LandingSectionTwo() {
     setSprings([...waveTank.springs]);
 
     const offset = 500;
-    const saw = (timestamp + offset) / 2000 -
-      Math.floor((timestamp + offset) / 2000);
+    const saw =
+      (timestamp + offset) / 2000 - Math.floor((timestamp + offset) / 2000);
     if (saw < 0.01) {
       drop();
     }
@@ -66,7 +66,7 @@ function LandingSectionTwo() {
 
   function drop() {
     const dropPosition = Math.round(
-      ((widthRef.current / 2 - 30) / widthRef.current) * 100,
+      ((widthRef.current / 2 - 30) / widthRef.current) * 100
     );
     waveTank.springs[dropPosition].p = -60;
   }
@@ -95,45 +95,53 @@ function LandingSectionTwo() {
 
   return (
     <div className="w-full">
-      <div className="w-9/12 mx-auto flex flex-col relative mb-40">
-        <div className="w-60 h-72 relative self-center mt-24 z-0">
-
-          <div className="w-[600px] h-[666px] absolute top-0 z-10">
-              {/* <PantheonOneIcon /> */}
-              <Image src="/kisspng-acropolis-of-athens-icon-vector-material-pattern-outbound-travel-5a9aa18180b0b2.8193643415200833295271.png" fill alt="James Watt" objectFit="contain" />
+      <div className="relative mx-auto mb-40 flex w-9/12 flex-col">
+        <div className="relative z-0 mt-24 h-72 w-60 self-center">
+          <div className="absolute top-0 z-10 h-[666px] w-[600px]">
+            {/* <PantheonOneIcon /> */}
+            <Image
+              src="/kisspng-acropolis-of-athens-icon-vector-material-pattern-outbound-travel-5a9aa18180b0b2.8193643415200833295271.png"
+              fill
+              alt="James Watt"
+              objectFit="contain"
+            />
           </div>
 
-          <div className="w-[300px] h-[366px] z-20 absolute top-0">
-            <Image src="/final-1-portrait.png" fill alt="James Watt" objectFit="contain" />
+          <div className="absolute top-0 z-20 h-[366px] w-[300px]">
+            <Image
+              src="/final-1-portrait.png"
+              fill
+              alt="James Watt"
+              objectFit="contain"
+            />
           </div>
         </div>
-        
+
         <svg
-            width="100"
-            height="300"
-            viewBox="0 0 100 300"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute left-[calc(50%-50px)] top-[94%] z-50"
-            role="img"
-            aria-label="Fresh logo"
+          width="100"
+          height="300"
+          viewBox="0 0 100 300"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute left-[calc(50%-50px)] top-[94%] z-50"
+          role="img"
+          aria-label="Fresh logo"
         >
-            <circle cx="52.5" cy={dropy} r="6" fill="white"></circle>        
+          <circle cx="52.5" cy={dropy} r="6" fill="white"></circle>
         </svg>
       </div>
       <svg
-          width="100%"
-          height="100px"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          className="-mt-5"
+        width="100%"
+        height="100px"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        className="-mt-5"
       >
-          <polygon
-              points={springsPath}
-              fill="white"
-              transform="translate(0, 50)"
-          >
-          </polygon>
+        <polygon
+          points={springsPath}
+          fill="white"
+          transform="translate(0, 50)"
+        ></polygon>
       </svg>
     </div>
   );

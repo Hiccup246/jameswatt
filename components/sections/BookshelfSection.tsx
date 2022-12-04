@@ -4,46 +4,52 @@ import SectionLayout from "../layouts/SectionLayout";
 import BookshelfCells from "../BookshelfCells";
 
 export default function BookshelfSection() {
-    const showLessBooks = 4;
-    const [showAllBooks, setshowAllBooks] = useState(false);
-    
-    return (
-        <SectionLayout>
-            <h1 className="text-center text-2xl sm:text-3xl font-bold mb-16">
-                Books I&apos;m Involved With
-            </h1>
+  const showLessBooks = 4;
+  const [showAllBooks, setshowAllBooks] = useState(false);
 
-            <div className="bg-white p-3.5 rounded-xl">
-                <table className="w-full">
-                    <thead>
-                        <tr>
-                            <th className="text-sm pb-2.5 text-left text-black">Book</th>
-                            <th className="text-sm pb-2.5 text-left text-black w-24 max-smaller:hidden">Genre</th>
-                            <th className="text-sm pb-2.5 text-center text-black">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            (showAllBooks ? BOOKS : BOOKS.slice(0, showLessBooks))
-                                .map((book:Book) => {
-                                    return (
-                                        <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
-                                            <BookshelfCells book={book} />
-                                        </tr>
-                                    );
-                                })
-                        }
-                    </tbody>
-                </table>
+  return (
+    <SectionLayout>
+      <h1 className="mb-16 text-center text-2xl font-bold sm:text-3xl">
+        Books I&apos;m Involved With
+      </h1>
 
-                <button
-                    aria-label="Show More/Less Books"
-                    className="border rounded-md px-2 py-1 mx-auto w-fit block hover:opacity-50 mt-8"
-                    onClick={() => showAllBooks ? setshowAllBooks(false) : setshowAllBooks(true)}
-                >
-                    {showAllBooks ? "Show Less": "Show More"}
-                </button>
-            </div>
-        </SectionLayout>
-    );
+      <div className="rounded-xl bg-white p-3.5">
+        <table className="w-full">
+          <thead>
+            <tr>
+              <th className="pb-2.5 text-left text-sm text-black">Book</th>
+              <th className="w-24 pb-2.5 text-left text-sm text-black max-smaller:hidden">
+                Genre
+              </th>
+              <th className="pb-2.5 text-center text-sm text-black">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {(showAllBooks ? BOOKS : BOOKS.slice(0, showLessBooks)).map(
+              (book: Book) => {
+                return (
+                  <tr
+                    key={book.name}
+                    className="[&>td]:pt-10 [&>td]:first:pt-0"
+                  >
+                    <BookshelfCells book={book} />
+                  </tr>
+                );
+              }
+            )}
+          </tbody>
+        </table>
+
+        <button
+          aria-label="Show More/Less Books"
+          className="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"
+          onClick={() =>
+            showAllBooks ? setshowAllBooks(false) : setshowAllBooks(true)
+          }
+        >
+          {showAllBooks ? "Show Less" : "Show More"}
+        </button>
+      </div>
+    </SectionLayout>
+  );
 }
