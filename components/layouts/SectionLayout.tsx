@@ -6,9 +6,9 @@ export default function SectionLayout(props: SectionLayoutProps) {
     <div
       className={`flex w-full flex-row justify-center pt-12 ${largeBottom} ${bgColor}`}
     >
-      <div className="mx-auto flex w-9/12 flex-col justify-start">
+      <section className="mx-auto flex w-9/12 flex-col justify-start">
         {props.children}
-      </div>
+      </section>
     </div>
   );
 }
