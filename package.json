@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --check .",
     "format": "next lint --fix",
-    "prettier-lint": "prettier --check .",
-    "prettier-format": "prettier --write .",
+    "fix": "prettier --write .",
     "lint-config": "eslint --print-config .eslintrc"
   },
   "dependencies": {

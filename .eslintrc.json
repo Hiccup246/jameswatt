@@ -1,12 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "next",
-    "prettier",
-    "plugin:prettier/recommended",
-    "plugin:tailwindcss/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "next"],
   "rules": {
     "quotes": ["error", "double"],
     "semi": "error",
