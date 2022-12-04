@@ -11,12 +11,10 @@
 - SEO Optimisation https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance
 - Think about tooltip implementation and perhaps use or base
 custom solution off https://floating-ui.com/
-- Review all next image "sizes" attributes
 - Consider animating theme toggle to be link link where it slides into the text then out of it
 - Consider alternative primary color (not blue based)
 
 ### Work Experience Section
-- Clean up tab selection javascript
 - Clean up and carefully check tailwind css classes
 - Think about possible alternative component splits
 
