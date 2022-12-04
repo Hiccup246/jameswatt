@@ -20,7 +20,7 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
         {/* <meta httpEquiv="refresh" content="10;url='https://www.jameswatt.io" /> */}
-        <meta name="keywords" content="james watt, software engineer, software developer, james watt tech, james watt software developer, james watt programmer" />
+        <meta name="keywords" content="james watt, software engineer, software developer, james watt developer, james watt software developer, james watt programmer, james watt coder, james watt dev, james watt tech" />
         <link rel="canonical" href="https://www.jameswatt.io" />
         <link href="https://www.jameswatt.io" rel="author" />
 
@@ -32,7 +32,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
 
         {/* Non-Essential, But Recommended */}
-        <meta property="og:description" content="Portfolio of Software Developer James Watt" />
+        <meta property="og:description" content="Portfolio of Software Engineer James Watt" />
         <meta property="og:site_name" content="James Watt Portfolio" />
         <meta name="twitter:image:alt" content="xxx" />
 
