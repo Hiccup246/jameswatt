@@ -51,6 +51,9 @@ export default function Home() {
         `}
       </Script>
 
+      {/* Umami Analytics Script */}
+      {/* <Script async defer data-website-id="7b7e7f80-5c5e-4bcd-bed6-dc9a2b67399c" src="https://analytics.jameswatt.io/umami.js"/> */}
+
       <LandingSection />
       <WorkExperienceSection />
       <ProjectShowcaseSection />
