@@ -1,27 +1,25 @@
 import React from "react";
 import Image from "next/image";
+import AnimatedBook from "../../public/animated-book.gif";
+import ReadBook from "../../public/book.webp";
 
 export default function BookshelfRow({ book }: { book: Book }) {
   const completedBookIcon = (
     <div className="h-5 w-5 mx-auto">
-      <Image src="/book.png"
+      <Image src={ReadBook}
              width={20}
              height={20}
-             sizes="(min-width: 640px) 20px,
-                    (min-width: 785px) 20px,
-                    20px"
+             sizes="20px"
             alt="Completed Book Icon" />
     </div>
   )
 
   const currentlyReadingIcon = (
     <div className="h-5 w-5 mx-auto">
-      <Image src="/animated-book.gif"
+      <Image src={AnimatedBook}
               width={20}
               height={20}
-              sizes="(min-width: 640px) 20px,
-                    (min-width: 785px) 20px,
-                    20px"
+              sizes="20px"
               alt="Currently Reading Icon" />
     </div>
   )
