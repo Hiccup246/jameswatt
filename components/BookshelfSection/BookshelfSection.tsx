@@ -4,7 +4,7 @@ import SectionLayout from "../SectionLayout";
 import BookshelfRow from "./BookshelfRow";
 
 export default function BookshelfSection() {
-    const previewBooks = 4;
+    const showLessBooks = 4;
     const [showAllBooks, setshowAllBooks] = useState(false);
     
     return (
@@ -24,7 +24,7 @@ export default function BookshelfSection() {
                     </thead>
                     <tbody>
                         {
-                            (showAllBooks ? BOOKS : BOOKS.slice(0, previewBooks))
+                            (showAllBooks ? BOOKS : BOOKS.slice(0, showLessBooks))
                                 .map((book: Book) => {
                                     return (
                                         <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
