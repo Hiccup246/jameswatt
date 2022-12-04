@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import LandingSection from "../components/sections/LandingSection";
+import IntroSection from "../components/sections/IntroSection";
 import AboutMeSection from "../components/sections/AboutMeSection";
 import WorkExperienceSection from "../components/sections/WorkExperienceSection";
 import ProjectShowcaseSection from "../components/sections/ProjectShowcaseSection";
@@ -63,7 +63,7 @@ export default function Home() {
       {/* Umami Analytics Script */}
       {/* <Script async defer data-website-id="7b7e7f80-5c5e-4bcd-bed6-dc9a2b67399c" src="https://analytics.jameswatt.io/umami.js"/> */}
 
-      <LandingSection />
+      <IntroSection />
       <WorkExperienceSection />
       <ProjectShowcaseSection />
       <TechnologiesSection />

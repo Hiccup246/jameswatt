@@ -16,15 +16,18 @@ function easeInCirc(x: number) {
 
 const waveTank = new WaveTank();
 
-export default function LandingSection() {
+export default function IntroSection() {
   const SVG_WIDTH = 100;
-  const waveDropOffset = 100;
+  const DROP_OFFSET = 100;
+  
   const [counter, setCounter] = useState(0);
   const [dropy, setDropy] = useState(10);
   const [width, setWidth] = useState(SVG_WIDTH);
-  const widthRef = useRef(width);
   const [springs, setSprings] = useState<Spring[]>(waveTank.springs);
+
+  const widthRef = useRef(width);
   const requestIdRef = useRef<number>();
+
   const grid = SVG_WIDTH / waveTank.waveLength;
   const points = [
     [0, 100],
@@ -68,7 +71,7 @@ export default function LandingSection() {
 
   function drop() {
     const dropPosition = Math.round(
-      ((widthRef.current / 2 + waveDropOffset) / widthRef.current) * 100
+      ((widthRef.current / 2 + DROP_OFFSET) / widthRef.current) * 100
     );
     waveTank.springs[dropPosition].p = -60;
   }
