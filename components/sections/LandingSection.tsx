@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { Spring, WaveTank } from "./WaveTank";
+import { Spring, WaveTank } from "../WaveTank";
 import Image from "next/image";
-import CircleDripIcon from "./Icons/CircleDripIcon";
-import JamesWattImage from "../public/panthy-tiny.webp";
-import Human from "../public/human.webp";
-import Developer from "../public/developer.webp";
+import CircleDripIcon from "../Icons/CircleDripIcon";
+import JamesWattImage from "../../public/panthy-tiny.webp";
+import Human from "../../public/human.webp";
+import Developer from "../../public/developer.webp";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));

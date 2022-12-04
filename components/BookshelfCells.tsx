@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AnimatedBook from "../../public/animated-book.gif";
-import ReadBook from "../../public/book.webp";
+import AnimatedBook from "../public/animated-book.gif";
+import ReadBook from "../public/book.webp";
 
-export default function BookshelfRowCells({ book }: { book: Book }) {
+export default function BookshelfCells({ book }: { book: Book }) {
   const completedBookIcon = (
     <div className="h-5 w-5 mx-auto">
       <Image src={ReadBook}

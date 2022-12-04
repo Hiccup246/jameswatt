@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { Spring, WaveTank } from "./WaveTank";
+import { Spring, WaveTank } from "../WaveTank";
 import Image from "next/image";
-import CircleDripIcon from "./Icons/CircleDripIcon";
-import PantheonOneIcon from "./PantheonOneIcon";
+import CircleDripIcon from "../Icons/CircleDripIcon";
+// import PantheonOneIcon from "../Icons/PantheonOneIcon";
 
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));

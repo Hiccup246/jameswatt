@@ -1,5 +1,5 @@
-import SectionLayout from "./SectionLayout";
-import { GROUP1, GROUP2, GROUP3 } from "../constants/TechnologyIcons";
+import SectionLayout from "../layouts/SectionLayout";
+import { GROUP1, GROUP2, GROUP3 } from "../../constants/TechnologyIcons";
  
 export default function TechnologiesSection() {
     function slideIcon(technologyIcon:TechnologyIcon) {

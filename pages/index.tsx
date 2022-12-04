@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Script from "next/script";
-import LandingSection from "../components/LandingSection";
-import AboutMeSection from "../components/AboutMeSection";
-import WorkExperienceSection from "../components/WorkExperienceSection/WorkExperienceSection";
-import ProjectShowcaseSection from "../components/ProjectShowcaseSection";
-import BookshelfSection from "../components/BookshelfSection/BookshelfSection";
-import CreditsSection from "../components/CreditsSection";
-import FooterSection from "../components/FooterSection";
-import TechnologiesSection from "../components/TechnologiesSection";
+import LandingSection from "../components/sections/LandingSection";
+import AboutMeSection from "../components/sections/AboutMeSection";
+import WorkExperienceSection from "../components/sections/WorkExperienceSection";
+import ProjectShowcaseSection from "../components/sections/ProjectShowcaseSection";
+import BookshelfSection from "../components/sections/BookshelfSection";
+import CreditsSection from "../components/sections/CreditsSection";
+import FooterSection from "../components/sections/FooterSection";
+import TechnologiesSection from "../components/sections/TechnologiesSection";
 
 export default function Home() {
   return (
@@ -51,16 +51,13 @@ export default function Home() {
         `}
       </Script>
 
-      <div>
-        <LandingSection />
-        <WorkExperienceSection />
-        <ProjectShowcaseSection />
-        <TechnologiesSection />
-        <AboutMeSection />
-        <BookshelfSection />
-        <CreditsSection />
-      </div>
-      
+      <LandingSection />
+      <WorkExperienceSection />
+      <ProjectShowcaseSection />
+      <TechnologiesSection />
+      <AboutMeSection />
+      <BookshelfSection />
+      <CreditsSection />
       <FooterSection />
     </div>
   );

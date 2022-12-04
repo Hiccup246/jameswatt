@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 
 import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences";
-import TabButton from "./TabButton";
-import ExperiencePanel from "./ExperiencePanel";
-import SectionLayout from "../SectionLayout";
+import TabButton from "../TabButton";
+import ExperiencePanel from "../ExperiencePanel";
+import SectionLayout from "../layouts/SectionLayout";
 
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../tailwind.config';

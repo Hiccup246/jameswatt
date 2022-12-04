@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import MoonIcon from "./Icons/MoonIcon";
-import NextJsIcon from "./Icons/NextJsIcon";
-import SectionLayout from "./SectionLayout";
-import SunIcon from "./Icons/SunIcon";
+import MoonIcon from "../Icons/MoonIcon";
+import NextJsIcon from "../Icons/NextJsIcon";
+import SectionLayout from "../layouts/SectionLayout";
+import SunIcon from "../Icons/SunIcon";
 
 export default function FooterSection() {
     const [darkMode, setDarkMode] = useState<boolean>()

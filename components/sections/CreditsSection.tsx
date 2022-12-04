@@ -1,10 +1,10 @@
-import BrittanyChiangIcon from "./Icons/BrittanyChiangIcon";
-import FontAwesomeIcon from "./Icons/FontAwesomeIcon";
-import Icons8Icon from "./Icons/Icons8Icon";
-import SectionLayout from "./SectionLayout";
+import BrittanyChiangIcon from "../Icons/BrittanyChiangIcon";
+import FontAwesomeIcon from "../Icons/FontAwesomeIcon";
+import Icons8Icon from "../Icons/Icons8Icon";
+import SectionLayout from "../layouts/SectionLayout";
 import Image from "next/image";
-import FreshIcon from "./Icons/FreshIcon";
-import NuxtIcon from "./Icons/NuxtIcon";
+import FreshIcon from "../Icons/FreshIcon";
+import NuxtIcon from "../Icons/NuxtIcon";
 
 export default function CreditsSection() {
     return (

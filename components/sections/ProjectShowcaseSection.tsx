@@ -1,6 +1,6 @@
-import SectionLayout from "./SectionLayout";
-import ShowcaseProject from "./ShowcaseProject";
-import { PROJECTS } from "../constants/Projects";
+import SectionLayout from "../layouts/SectionLayout";
+import ShowcaseProject from "../ShowcaseProject";
+import { PROJECTS } from "../../constants/Projects";
 
 const orderedByPublishDate = PROJECTS.sort((a, b) => b.firstPublished.getTime() - a.firstPublished.getTime());
 const mostRecentProject = orderedByPublishDate[0];
