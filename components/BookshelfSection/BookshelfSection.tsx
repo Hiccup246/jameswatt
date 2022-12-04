@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BOOKS } from "../../constants/Books";
 import SectionLayout from "../SectionLayout";
-import BookshelfRow from "./BookshelfRow";
+import BookshelfRowCells from "./BookshelfRowCells";
 
 export default function BookshelfSection() {
     const showLessBooks = 4;
@@ -28,7 +28,7 @@ export default function BookshelfSection() {
                                 .map((book: Book) => {
                                     return (
                                         <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
-                                            <BookshelfRow book={book} />
+                                            <BookshelfRowCells book={book} />
                                         </tr>
                                     )
                                 })
