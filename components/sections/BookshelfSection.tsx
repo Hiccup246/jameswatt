@@ -25,7 +25,7 @@ export default function BookshelfSection() {
                     <tbody>
                         {
                             (showAllBooks ? BOOKS : BOOKS.slice(0, showLessBooks))
-                                .map((book: Book) => {
+                                .map((book:Book) => {
                                     return (
                                         <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
                                             <BookshelfCells book={book} />
