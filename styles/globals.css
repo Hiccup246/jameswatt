@@ -9,22 +9,25 @@
     --tab-width: 120px;
     --slider-items: 7;
     --slider-item-sets: 2;
-    --all-slider-items: calc(var(--slider-items)*var(--slider-item-sets));
+    --all-slider-items: calc(var(--slider-items) * var(--slider-item-sets));
     --slider-item-width: 200px;
   }
 
   html,
-  body { 
+  body {
     padding: 0;
     margin: 0;
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
     @apply bg-brown;
   }
 
   @property --gradient-angle {
-    syntax:"<angle>";
-    inherits:false;
-    initial-value:1turn;
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 1turn;
   }
 }
 
@@ -34,6 +37,6 @@
   }
 
   .animation-play {
-    animation-play-state:running;
+    animation-play-state: running;
   }
 }
