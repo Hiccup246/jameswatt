@@ -87,7 +87,7 @@ export default function ExperienceSection() {
             className={`
               selected-tab-item
               visible absolute top-0 left-0 z-10 w-[85px]
-              h-[var(--tab-height)] my-2.5 bg-darkbrown
+              h-[var(--tab-height)] my-2.5 bg-brown
               transition-[transform width] duration-200 delay-100
               ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
               max-small:top-auto max-small:bottom-0 max-small:w-[var(--tab-width)]
