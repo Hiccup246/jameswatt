@@ -30,7 +30,7 @@ export default function TechnologiesSection() {
     }
 
     return (
-        <SectionLayout isBgColorPrimary={false}>
+        <SectionLayout>
             <h1 className="text-center text-2xl sm:text-3xl font-bold mb-16">
                 Technologies I Dabble With
             </h1>
@@ -78,8 +78,8 @@ export default function TechnologiesSection() {
                     </div>
                 </div>
 
-                <div className="absolute top-0 left-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-r from-brown via-brown dark:from-black to-transparent"></div>
-                <div className="absolute top-0 right-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-l from-brown via-brown dark:from-black to-transparent"></div>
+                <div className="absolute top-0 left-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-r from-white via-white dark:from-black to-transparent"></div>
+                <div className="absolute top-0 right-0 h-full w-5 sm:w-[50px] md:w-[100px] lg:w-[100px] bg-gradient-to-l from-white via-white dark:from-black to-transparent"></div>
             </div>
         </SectionLayout>
     )

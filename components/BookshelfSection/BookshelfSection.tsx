@@ -8,7 +8,7 @@ export default function BookshelfSection() {
     const [showAllBooks, setshowAllBooks] = useState(false);
     
     return (
-        <SectionLayout isBgColorPrimary={true}>
+        <SectionLayout>
             <h1 className="text-center text-2xl sm:text-3xl font-bold mb-16">
                 Books I&apos;m Involved With
             </h1>

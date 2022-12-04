@@ -53,10 +53,10 @@ export default function Home() {
 
       <div>
         <LandingSection />
-        <AboutMeSection />
         <WorkExperienceSection />
         <ProjectShowcaseSection />
         <TechnologiesSection />
+        <AboutMeSection />
         <BookshelfSection />
         <CreditsSection />
       </div>
