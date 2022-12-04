@@ -6,6 +6,10 @@ import JamesWattImage from "../../public/panthy-tiny.webp";
 import Human from "../../public/human.webp";
 import Developer from "../../public/developer.webp";
 
+// Source code for the functions easeInCirc, updateJuice, update, resize, drop, useEffect and the
+// related SVG code is courtesy of the Fresh framework website. The code source can
+// be found here https://github.com/denoland/fresh/tree/main/www
+
 function easeInCirc(x: number) {
   return 1 - Math.sqrt(1 - Math.pow(x, 2));
 }
