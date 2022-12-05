@@ -10,7 +10,7 @@ import JoshComeau from "../../public/josh-comeau.webp";
 
 export default function CreditsSection() {
   return (
-    <SectionLayout>
+    <SectionLayout bgSecondary>
       <h1 className="text-center text-2xl font-bold sm:text-3xl">
         The Work Which Inspired This Site
       </h1>

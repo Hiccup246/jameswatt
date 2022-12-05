@@ -10,7 +10,7 @@ type ShowcaseProject = {
 
 type SectionLayoutProps = {
   children: ReactElement;
-  isBgColorPrimary?: boolean;
+  bgSecondary?: boolean;
   largeBottomPadding?: boolean;
 };
 

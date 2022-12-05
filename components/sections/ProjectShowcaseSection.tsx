@@ -10,7 +10,7 @@ const olderProjects = orderedByPublishDate.slice(1);
 
 export default function ProjectShowcaseSection() {
   return (
-    <SectionLayout>
+    <SectionLayout bgSecondary>
       <h1 className="mb-16 text-center text-2xl font-bold sm:text-3xl">
         Project Showcase
       </h1>

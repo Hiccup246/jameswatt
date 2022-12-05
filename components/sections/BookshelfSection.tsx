@@ -8,12 +8,12 @@ export default function BookshelfSection() {
   const [showAllBooks, setshowAllBooks] = useState(false);
 
   return (
-    <SectionLayout>
+    <SectionLayout bgSecondary>
       <h1 className="mb-16 text-center text-2xl font-bold sm:text-3xl">
         Books I&apos;m Involved With
       </h1>
 
-      <div className="rounded-xl bg-white p-3.5">
+      <div className="rounded-xl p-3.5">
         <table className="w-full">
           <thead>
             <tr>

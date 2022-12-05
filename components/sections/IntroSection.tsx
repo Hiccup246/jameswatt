@@ -19,7 +19,7 @@ const waveTank = new WaveTank();
 export default function IntroSection() {
   const SVG_WIDTH = 100;
   const DROP_OFFSET = 100;
-  
+
   const [counter, setCounter] = useState(0);
   const [dropy, setDropy] = useState(10);
   const [width, setWidth] = useState(SVG_WIDTH);
