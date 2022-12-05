@@ -44,9 +44,7 @@ export default function BookshelfSection() {
         <button
           aria-label="Show More/Less Books"
           className="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"
-          onClick={() =>
-            showAllBooks ? setshowAllBooks(false) : setshowAllBooks(true)
-          }
+          onClick={() => setshowAllBooks(!showAllBooks)}
         >
           {showAllBooks ? "Show Less" : "Show More"}
         </button>

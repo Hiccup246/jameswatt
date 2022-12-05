@@ -17,7 +17,7 @@ function easeInCirc(x: number) {
 const waveTank = new WaveTank();
 
 const SVG_WIDTH = 100;
-const DROP_OFFSET = 100;
+const DROP_OFFSET = 82;
 
 export default function IntroSection() {
   const [counter, setCounter] = useState(0);
