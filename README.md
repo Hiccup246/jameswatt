@@ -14,6 +14,10 @@
   custom solution off https://floating-ui.com/
 - Consider animating theme toggle to be link link where it slides into the text then out of it
 - Consider alternative primary color (not blue based)
+- Add playwright e2e tests
+- Add some more granular unit tests for components
+- Look into react internal mechanics more. Where to put functions and constants, maybe
+look at some other projects
 
 ### Work Experience Section
 
