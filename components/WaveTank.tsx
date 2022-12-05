@@ -2,7 +2,7 @@
 // be found here https://github.com/denoland/fresh/tree/main/www
 
 export class WaveTank {
-  springs = [] as Spring[];
+  springs: Spring[] = [];
   waveLength = 100;
   k = 0.02;
   damping = 0.02;
