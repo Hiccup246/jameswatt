@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Spring, WaveTank } from "../WaveTank";
+import { WaveTank } from "../WaveTank";
 import Image from "next/image";
 import CircleDripIcon from "../Icons/CircleDripIcon";
 // import PantheonOneIcon from "../Icons/PantheonOneIcon";
