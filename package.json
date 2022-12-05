@@ -12,7 +12,7 @@
     "fix": "prettier --write .",
     "lint-config": "eslint --print-config .eslintrc",
     "type-check": "tsc",
-    "unit:test": "jest"
+    "test:unit": "jest"
   },
   "dependencies": {
     "@next/font": "^13.0.4",
