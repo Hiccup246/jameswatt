@@ -11,7 +11,7 @@ type ShowcaseProject = {
 type SectionLayoutProps = {
   children: ReactElement;
   bgSecondary?: boolean;
-  largeBottomPadding?: boolean;
+  noBottomPadding?: boolean;
 };
 
 type Job = {

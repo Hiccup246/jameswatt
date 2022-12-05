@@ -6,7 +6,7 @@ import SectionLayout from "../layouts/SectionLayout";
 
 export default function AboutMeSection() {
   return (
-    <SectionLayout isBgColorPrimary={false}>
+    <SectionLayout>
       <h1 className="mb-16 text-center text-2xl font-bold sm:text-3xl">
         Who am I?
       </h1>

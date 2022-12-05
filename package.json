@@ -10,7 +10,8 @@
     "prettier": "prettier --check .",
     "format": "next lint --fix",
     "fix": "prettier --write .",
-    "lint-config": "eslint --print-config .eslintrc"
+    "lint-config": "eslint --print-config .eslintrc",
+    "type-check": "tsc"
   },
   "dependencies": {
     "@next/font": "^13.0.4",

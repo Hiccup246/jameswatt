@@ -35,7 +35,7 @@ export default function TechnologiesSection() {
   }
 
   return (
-    <SectionLayout isBgColorPrimary={false}>
+    <SectionLayout>
       <h1 className="mb-16 text-center text-2xl font-bold sm:text-3xl">
         Technologies I Dabble With
       </h1>
