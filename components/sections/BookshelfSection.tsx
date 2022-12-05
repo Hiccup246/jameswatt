@@ -3,8 +3,9 @@ import { BOOKS } from "../../constants/Books";
 import SectionLayout from "../layouts/SectionLayout";
 import BookshelfCells from "../BookshelfCells";
 
+const showLessBooks = 4;
+
 export default function BookshelfSection() {
-  const showLessBooks = 4;
   const [showAllBooks, setshowAllBooks] = useState(false);
 
   return (
