@@ -12,7 +12,7 @@ export default function ExperiencePanel({
   }`;
 
   return (
-    <div className={`tab-panel ${tabPanelClasses}`}>
+    <div className={tabPanelClasses}>
       <h2 className="m-0">
         <span className="text-xl font-bold text-black">{job.role}</span>
         <span className="text-xl font-bold text-black"> @ {job.company}</span>

@@ -8,67 +8,84 @@ import SectionLayout from "../layouts/SectionLayout";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config";
 
+const tailwindScreenBreakpoints = resolveConfig(tailwindConfig)?.theme
+  ?.screens as { small: string };
+const mobileViewWidth: string =
+  (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
+
+function largestExperiencePanelHeight(elem: HTMLDivElement): number {
+  // The largest panel is not know till after rendering. As a result to ensure content
+  // does not spill over the section and to not dynamically resize (which moves/pushes other components around)
+  // we need to manually determine the max height and set it
+  const experiencePanels: NodeListOf<HTMLElement> | undefined =
+    elem?.querySelectorAll(".experience-panel");
+
+  if (!experiencePanels) return 1000;
+
+  let largestPanelHeight: number = 0;
+
+  experiencePanels.forEach((panel) => {
+    if (panel.clientHeight > largestPanelHeight)
+      largestPanelHeight = panel.clientHeight;
+  });
+
+  return largestPanelHeight;
+}
+
+function calcTabButtonTranslation(index: number) {
+  const isMobile = window.matchMedia(`(max-width: ${mobileViewWidth})`).matches;
+
+  if (isMobile) {
+    // If the device is a mobile the tabs are horizontal
+    const selectedButtonXPosition = `${index} * var(--tab-width)`;
+    return `translateX(calc(${selectedButtonXPosition}))`;
+  } else {
+    // If the device is a tablet or dekstop then the tabs are vertical
+    const selectedButtonYPosition = `(${index} * var(--tab-height)) + (${index} * var(--tab-margin-top))`;
+    return `translateY(calc(${selectedButtonYPosition})`;
+  }
+}
+
 export default function WorkExperienceSection() {
-  const contentPanelsWrapper = useRef<HTMLDivElement>(null);
+  const experiencePanelsWrapper = useRef<HTMLDivElement>(null);
 
-  const tailwindScreenBreakpoints = resolveConfig(tailwindConfig)?.theme
-    ?.screens as { small: string };
-  const mobileViewWidth: string =
-    (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
-
+  const [width, setWidth] = useState<number>();
   const [currentTabIndex, setCurrentTabIndex] = useState<number>(0);
-  const [sliderStyle, setSliderStyle] = useState<{
-    width: string;
-    transform: string;
-  }>({ width: "", transform: "" });
+  const [sliderStyle, setSliderStyle] = useState<
+    | {
+        width: string;
+        transform: string;
+      }
+    | {}
+  >({});
 
   function clickOnTabButton(index: number, button: HTMLButtonElement): void {
-    let sliderTransform: string;
-
-    const isMobile = window.matchMedia(
-      `(max-width: ${mobileViewWidth})`
-    ).matches;
-
-    if (isMobile) {
-      // If the device is a mobile the tabs are horizontal
-      const selectedButtonXPosition = `${index} * var(--tab-width)`;
-      sliderTransform = `translateX(calc(${selectedButtonXPosition}))`;
-    } else {
-      // If the device is a tablet or dekstop then the tabs are vertical
-      const selectedButtonYPosition = `(${index} * var(--tab-height)) + (${index} * var(--tab-margin-top))`;
-      sliderTransform = `translateY(calc(${selectedButtonYPosition})`;
-    }
-
     setCurrentTabIndex(index);
     setSliderStyle({
       width: button.offsetWidth.toString() + "px",
-      transform: sliderTransform,
+      transform: calcTabButtonTranslation(index),
     });
   }
 
-  function largestContentPanelHeight(): number {
-    // The largest panel is not know till after rendering. As a result to ensure content
-    // does not spill over the section and to not dynamically resize (which moves/pushes other components around)
-    // we need to manually determine the max height and set it
-    const contentPanels: NodeListOf<HTMLElement> | undefined =
-      contentPanelsWrapper.current?.querySelectorAll(".tab-panel");
-
-    if (!contentPanels) return 1000;
-
-    let largestPanelHeight: number = 0;
-
-    contentPanels.forEach((panel) => {
-      if (panel.clientHeight > largestPanelHeight)
-        largestPanelHeight = panel.clientHeight;
-    });
-
-    return largestPanelHeight;
+  function resize() {
+    setWidth(document.body.clientWidth);
   }
 
   useEffect(() => {
-    if (contentPanelsWrapper.current) {
-      contentPanelsWrapper.current.style.height = `${largestContentPanelHeight()}px`;
+    if (experiencePanelsWrapper.current) {
+      experiencePanelsWrapper.current.style.height = `${largestExperiencePanelHeight(
+        experiencePanelsWrapper.current
+      )}px`;
     }
+  }, [width]);
+
+  useEffect(() => {
+    globalThis.addEventListener("resize", resize);
+    resize();
+
+    return () => {
+      globalThis.removeEventListener("resize", resize);
+    };
   }, []);
 
   return (
@@ -97,7 +114,7 @@ export default function WorkExperienceSection() {
             );
           })}
           <div
-            style={sliderStyle.width.length > 0 ? sliderStyle : {}}
+            style={sliderStyle}
             className={`
               transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
               max-small:translate-x-[calc(0 * var(--tab-width))]
@@ -119,15 +136,16 @@ export default function WorkExperienceSection() {
 
         <div
           className="relative ml-5 w-full max-small:ml-0"
-          ref={contentPanelsWrapper}
+          ref={experiencePanelsWrapper}
         >
           {PROGRAMMING_EXPERIENCES.map((job: Job, index: number) => {
             return (
-              <ExperiencePanel
-                key={index + job.dateRange}
-                job={job}
-                activated={index === currentTabIndex}
-              />
+              <div className="experience-panel" key={index + job.dateRange}>
+                <ExperiencePanel
+                  job={job}
+                  activated={index === currentTabIndex}
+                />
+              </div>
             );
           })}
         </div>
