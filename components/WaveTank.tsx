@@ -1,11 +1,6 @@
 // Source code courtesy of the Fresh framework website. The code source can
 // be found here https://github.com/denoland/fresh/tree/main/www
 
-export interface Spring {
-  p: number;
-  v: number;
-}
-
 export class WaveTank {
   springs = [] as Spring[];
   waveLength = 100;

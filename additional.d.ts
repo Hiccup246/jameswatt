@@ -36,3 +36,8 @@ type TechnologyIcon = {
   link: string;
   name: string;
 };
+
+interface Spring {
+  p: number;
+  v: number;
+}
