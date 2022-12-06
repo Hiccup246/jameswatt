@@ -67,12 +67,12 @@ test("renders the BookshelfSection correctly", () => {
 test("renders the BookshelfSection title and table header rows", () => {
   render(<BookshelfSection books={dummyBooks} />);
 
-  const title = screen.getByText("Books I'm Involved With");
+  const header = screen.getByText("Books I'm Involved With");
   const bookHeader = screen.getByText("Book");
   const genreHeader = screen.getByText("Genre");
   const statusHeader = screen.getByText("Status");
 
-  expect(title).toBeInTheDocument();
+  expect(header).toBeInTheDocument();
   expect(bookHeader).toBeInTheDocument();
   expect(genreHeader).toBeInTheDocument();
   expect(statusHeader).toBeInTheDocument();
