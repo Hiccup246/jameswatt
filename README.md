@@ -17,7 +17,7 @@
 - Add playwright e2e tests
 - Add some more granular unit tests for components
 - Look into react internal mechanics more. Where to put functions and constants, maybe
-look at some other projects
+  look at some other projects
 - Update mailto email icon to either be a popup/tooltip or to have new design with copy icon
 
 ### Work Experience Section
