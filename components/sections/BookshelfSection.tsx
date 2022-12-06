@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { BOOKS } from "../../constants/Books";
 import SectionLayout from "../layouts/SectionLayout";
 import BookshelfCells from "../BookshelfCells";
 
 const showLessBooks = 4;
 
-export default function BookshelfSection() {
+export default function BookshelfSection({ books }: { books: Book[] }) {
   const [showAllBooks, setshowAllBooks] = useState(false);
 
   return (
@@ -26,7 +25,7 @@ export default function BookshelfSection() {
             </tr>
           </thead>
           <tbody>
-            {(showAllBooks ? BOOKS : BOOKS.slice(0, showLessBooks)).map(
+            {(showAllBooks ? books : books.slice(0, showLessBooks)).map(
               (book: Book) => {
                 return (
                   <tr

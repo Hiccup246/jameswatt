@@ -8,6 +8,7 @@ import BookshelfSection from "../components/sections/BookshelfSection";
 import CreditsSection from "../components/sections/CreditsSection";
 import FooterSection from "../components/sections/FooterSection";
 import TechnologiesSection from "../components/sections/TechnologiesSection";
+import { BOOKS } from "../constants/Books";
 
 export default function Home() {
   return (
@@ -68,7 +69,7 @@ export default function Home() {
       <ProjectShowcaseSection />
       <TechnologiesSection />
       <AboutMeSection />
-      <BookshelfSection />
+      <BookshelfSection books={BOOKS} />
       <CreditsSection />
       <FooterSection />
     </div>
