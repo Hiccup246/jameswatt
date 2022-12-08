@@ -1,5 +1,5 @@
 import { expect, test, jest, describe } from "@jest/globals";
-import WorkExperienceSection, { calcTabButtonTranslation } from "./WorkExperienceSection";
+import WorkExperienceSection, { calcTabButtonTranslation, largestChildHeight } from "./WorkExperienceSection";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -43,6 +43,8 @@ test("renders the first job and all the correct tab buttons", () => {
 
 test("when the second tab button is clicked it renders the second job", async () => {
   Object.defineProperty(window, "matchMedia", {
+    configurable: true,
+    writable: true,
     value: jest.fn().mockImplementation((query) => ({
       matches: false,
     })),
@@ -58,8 +60,10 @@ test("when the second tab button is clicked it renders the second job", async ()
 });
 
 describe("calcTabButtonTranslation on a large device", () => {
-  beforeEach(() => {
+  beforeAll(() => {
     Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
       value: jest.fn().mockImplementation((query) => ({
         matches: false,
       })),
@@ -79,24 +83,68 @@ describe("calcTabButtonTranslation on a large device", () => {
   })
 })
 
-describe("calcTabButtonTranslation on a large device", () => {
-  beforeEach(() => {
+describe("calcTabButtonTranslation on a small device", () => {
+  beforeAll(() => {
     Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
       value: jest.fn().mockImplementation((query) => ({
         matches: true,
       })),
     });
   })
-
+  
   test("calcTabButtonTranslation called with -1", () => {
-    expect(calcTabButtonTranslation(-1)).toBe("translateX(calc((-1 * var(--tab-width)))")
+    expect(calcTabButtonTranslation(-1)).toBe("translateX(calc(-1 * var(--tab-width)))")
   })
   
   test("calcTabButtonTranslation called with 0", () => {
-    expect(calcTabButtonTranslation(0)).toBe("translateX(calc((0 * var(--tab-width)))")
+    expect(calcTabButtonTranslation(0)).toBe("translateX(calc(0 * var(--tab-width)))")
   })
   
   test("calcTabButtonTranslation called with 1", () => {
-    expect(calcTabButtonTranslation(1)).toBe("translateX(calc((1 * var(--tab-width)))")
+    expect(calcTabButtonTranslation(1)).toBe("translateX(calc(1 * var(--tab-width)))")
   })
+})
+
+test("largestChildHeight called with empty div", () => {
+  const mockElement:HTMLDivElement = document.createElement("div")
+  expect(largestChildHeight(mockElement)).toBe(1000)
+})
+
+test("largestChildHeight called with div that has one experience panel", () => {
+  const mockElement:HTMLDivElement = document.createElement("div")
+  const mockChild:HTMLDivElement = document.createElement("div")
+  jest.spyOn(mockChild, 'clientHeight', 'get').mockImplementation(() => 100);
+  mockElement.appendChild(mockChild)
+
+  expect(largestChildHeight(mockElement)).toBe(100)
+})
+
+test("largestChildHeight called with div that has two experience panels", () => {
+  const mockElement:HTMLDivElement = document.createElement("div")
+  const mockChildOne:HTMLDivElement = document.createElement("div")
+  const mockChildTwo:HTMLDivElement = document.createElement("div")
+
+  jest.spyOn(mockChildOne, 'clientHeight', 'get').mockImplementation(() => 100);
+  mockElement.appendChild(mockChildOne)
+
+  jest.spyOn(mockChildTwo, 'clientHeight', 'get').mockImplementation(() => 200);
+  mockElement.appendChild(mockChildTwo)
+
+  expect(largestChildHeight(mockElement)).toBe(200)
+})
+
+test("largestChildHeight called with div that has two experience panels with the same heights", () => {
+  const mockElement:HTMLDivElement = document.createElement("div")
+  const mockChildOne:HTMLDivElement = document.createElement("div")
+  const mockChildTwo:HTMLDivElement = document.createElement("div")
+
+  jest.spyOn(mockChildOne, 'clientHeight', 'get').mockImplementation(() => 10);
+  mockElement.appendChild(mockChildOne)
+
+  jest.spyOn(mockChildTwo, 'clientHeight', 'get').mockImplementation(() => 10);
+  mockElement.appendChild(mockChildOne)
+
+  expect(largestChildHeight(mockElement)).toBe(10)
 })

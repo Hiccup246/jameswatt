@@ -12,23 +12,19 @@ const tailwindScreenBreakpoints = resolveConfig(tailwindConfig)?.theme
 const mobileViewWidth: string =
   (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
 
-export function largestExperiencePanelHeight(elem: HTMLDivElement): number {
-  // The largest panel is not know till after rendering. As a result to ensure content
-  // does not spill over the section and to not dynamically resize (which moves/pushes other components around)
-  // we need to manually determine the max height and set it
-  const experiencePanels: NodeListOf<HTMLElement> | undefined =
-    elem?.querySelectorAll(".experience-panel");
+export function largestChildHeight(elem: HTMLDivElement): number {
+  const elementChildren:Element[] = Array.from(elem.children)
 
-  if (!experiencePanels) return 1000;
+  if (elementChildren.length == 0) return 1000;
 
-  let largestPanelHeight: number = 0;
+  let largestChildHeight: number = 0;
 
-  experiencePanels.forEach((panel) => {
-    if (panel.clientHeight > largestPanelHeight)
-      largestPanelHeight = panel.clientHeight;
+  elementChildren.forEach((child) => {
+    if (child.clientHeight > largestChildHeight)
+    largestChildHeight = child.clientHeight;
   });
 
-  return largestPanelHeight;
+  return largestChildHeight;
 }
 
 export function calcTabButtonTranslation(index: number) {
@@ -71,8 +67,11 @@ export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
   }
 
   useEffect(() => {
+    // The largest panel is not know till after rendering. As a result to ensure content
+    // does not spill over the section and to not dynamically resize (which moves/pushes other components around)
+    // we need to manually determine the max height and set it
     if (experiencePanelsWrapper.current) {
-      experiencePanelsWrapper.current.style.height = `${largestExperiencePanelHeight(
+      experiencePanelsWrapper.current.style.height = `${largestChildHeight(
         experiencePanelsWrapper.current
       )}px`;
     }
