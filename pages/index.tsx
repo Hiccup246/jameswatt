@@ -51,19 +51,22 @@ export default function Home() {
         <meta name="twitter:site" content="@jameswattnz" />
       </Head>
 
-      <Script id="themeLoader">
-        {`
-          // On page load or when changing themes, best to add inline in head to avoid FOUC
-          if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            document.documentElement.classList.add("dark")
-          } else {
-            document.documentElement.classList.remove("dark")
-          }
-        `}
-      </Script>
+      <Script
+        id="themeLoader"
+        strategy="beforeInteractive"
+        async
+        src="./themeLoader.js"
+      />
 
       {/* Umami Analytics Script */}
-      <Script async defer data-website-id={process.env.UMAMI_WEBSITE_ID} src={process.env.UMAMI_WEBSITE_URL}/>
+      <Script
+        id="analytics"
+        strategy="beforeInteractive"
+        async
+        defer
+        data-website-id={process.env.UMAMI_WEBSITE_ID}
+        src={process.env.UMAMI_WEBSITE_URL}
+      />
 
       <IntroSection />
       <WorkExperienceSection jobs={PROGRAMMING_EXPERIENCES} />
