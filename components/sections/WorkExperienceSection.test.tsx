@@ -1,5 +1,5 @@
-import { expect, test, jest } from "@jest/globals";
-import WorkExperienceSection from "./WorkExperienceSection";
+import { expect, test, jest, describe } from "@jest/globals";
+import WorkExperienceSection, { calcTabButtonTranslation } from "./WorkExperienceSection";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -56,3 +56,47 @@ test("when the second tab button is clicked it renders the second job", async ()
 
   expect(job).toBeInTheDocument();
 });
+
+describe("calcTabButtonTranslation on a large device", () => {
+  beforeEach(() => {
+    Object.defineProperty(window, "matchMedia", {
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+      })),
+    });
+  })
+
+  test("calcTabButtonTranslation called with -1", () => {
+    expect(calcTabButtonTranslation(-1)).toBe("translateY(calc((-1 * var(--tab-height)) + (-1 * var(--tab-margin-top)))")
+  })
+  
+  test("calcTabButtonTranslation called with 0", () => {
+    expect(calcTabButtonTranslation(0)).toBe("translateY(calc((0 * var(--tab-height)) + (0 * var(--tab-margin-top)))")
+  })
+  
+  test("calcTabButtonTranslation called with 1", () => {
+    expect(calcTabButtonTranslation(1)).toBe("translateY(calc((1 * var(--tab-height)) + (1 * var(--tab-margin-top)))")
+  })
+})
+
+describe("calcTabButtonTranslation on a large device", () => {
+  beforeEach(() => {
+    Object.defineProperty(window, "matchMedia", {
+      value: jest.fn().mockImplementation((query) => ({
+        matches: true,
+      })),
+    });
+  })
+
+  test("calcTabButtonTranslation called with -1", () => {
+    expect(calcTabButtonTranslation(-1)).toBe("translateX(calc((-1 * var(--tab-width)))")
+  })
+  
+  test("calcTabButtonTranslation called with 0", () => {
+    expect(calcTabButtonTranslation(0)).toBe("translateX(calc((0 * var(--tab-width)))")
+  })
+  
+  test("calcTabButtonTranslation called with 1", () => {
+    expect(calcTabButtonTranslation(1)).toBe("translateX(calc((1 * var(--tab-width)))")
+  })
+})

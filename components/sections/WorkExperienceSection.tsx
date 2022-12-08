@@ -12,7 +12,7 @@ const tailwindScreenBreakpoints = resolveConfig(tailwindConfig)?.theme
 const mobileViewWidth: string =
   (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
 
-function largestExperiencePanelHeight(elem: HTMLDivElement): number {
+export function largestExperiencePanelHeight(elem: HTMLDivElement): number {
   // The largest panel is not know till after rendering. As a result to ensure content
   // does not spill over the section and to not dynamically resize (which moves/pushes other components around)
   // we need to manually determine the max height and set it
@@ -31,7 +31,7 @@ function largestExperiencePanelHeight(elem: HTMLDivElement): number {
   return largestPanelHeight;
 }
 
-function calcTabButtonTranslation(index: number) {
+export function calcTabButtonTranslation(index: number) {
   const isMobile = window.matchMedia(`(max-width: ${mobileViewWidth})`).matches;
 
   if (isMobile) {
