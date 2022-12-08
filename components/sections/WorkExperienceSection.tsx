@@ -138,7 +138,7 @@ export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
         >
           {jobs.map((job: Job, index: number) => {
             return (
-              <div className="experience-panel" key={index + job.dateRange}>
+              <div key={index + job.dateRange}>
                 <ExperiencePanel
                   job={job}
                   activated={index === currentTabIndex}

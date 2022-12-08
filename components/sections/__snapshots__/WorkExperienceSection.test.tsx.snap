@@ -78,9 +78,7 @@ exports[`renders the WorkExperienceSection correctly 1`] = `
       <div
         className="relative ml-5 w-full max-small:ml-0"
       >
-        <div
-          className="experience-panel"
-        >
+        <div>
           <div
             className="absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 pt-2.5 visible relative opacity-100 activated"
           >
@@ -137,9 +135,7 @@ exports[`renders the WorkExperienceSection correctly 1`] = `
             </ul>
           </div>
         </div>
-        <div
-          className="experience-panel"
-        >
+        <div>
           <div
             className="absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 opacity-0 invisible"
           >
