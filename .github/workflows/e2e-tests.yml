@@ -6,7 +6,7 @@ on:
 
 jobs:
   e2e_tests:
-    timeout-minutes: "60"
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -31,4 +31,4 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
-          retention-days: "30"
+          retention-days: 30
