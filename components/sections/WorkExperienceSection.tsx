@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 
-import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences";
 import TabButton from "../TabButton";
 import ExperiencePanel from "../ExperiencePanel";
 import SectionLayout from "../layouts/SectionLayout";
@@ -46,7 +45,7 @@ function calcTabButtonTranslation(index: number) {
   }
 }
 
-export default function WorkExperienceSection() {
+export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
   const experiencePanelsWrapper = useRef<HTMLDivElement>(null);
 
   const [width, setWidth] = useState<number>();
@@ -101,7 +100,7 @@ export default function WorkExperienceSection() {
                max-small:flex max-small:w-full max-small:overflow-y-hidden max-small:overflow-x-scroll
         `}
         >
-          {PROGRAMMING_EXPERIENCES.map((job: Job, index: number) => {
+          {jobs.map((job: Job, index: number) => {
             return (
               <TabButton
                 key={index + job.company}
@@ -138,7 +137,7 @@ export default function WorkExperienceSection() {
           className="relative ml-5 w-full max-small:ml-0"
           ref={experiencePanelsWrapper}
         >
-          {PROGRAMMING_EXPERIENCES.map((job: Job, index: number) => {
+          {jobs.map((job: Job, index: number) => {
             return (
               <div className="experience-panel" key={index + job.dateRange}>
                 <ExperiencePanel
