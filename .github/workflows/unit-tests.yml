@@ -1,9 +1,11 @@
 name: Unit Tests
 
-on: [push]
+on:
+  push:
+    branches: [main]
 
 jobs:
-  test:
+  unit_tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -11,34 +13,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - run: npm install -g pnpm
-      - run: pnpm install
-      - run: pnpm run test:unit
 
-      - name: Tests ✅
-        if: ${{ success() }}
-        run: |
-          curl --request POST \
-          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' \
-          --data '{
-            "context": "tests",
-            "state": "success",
-            "description": "Tests passed",
-            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          }'
+      - name: Install pnpm
+        run: npm install -g pnpm
 
-      - name: Tests 🚨
-        if: ${{ failure() }}
-        run: |
-          curl --request POST \
-          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' \
-          --data '{
-            "context": "tests",
-            "state": "failure",
-            "description": "Tests failed",
-            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          }'
+      - name: Install Dependancies
+        run: pnpm install
+
+      - name: Run Jest Unit Tests
+        run: pnpm run test:unit

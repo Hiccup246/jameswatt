@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("Index page displays all sections", async ({ page }) => {
-  await page.goto("http://localhost:3000/");
+  await page.goto("/");
   await expect(
     page.getByRole("heading", { name: "My Experience" })
   ).not.toBeNull();
@@ -21,9 +21,11 @@ test("Index page displays all sections", async ({ page }) => {
 });
 
 test("Correctly renders the work experience section", async ({ page }) => {
-  await page.goto("http://localhost:3000/");
+  await page.goto("/");
 
   await page.getByRole("heading", { name: "My Experience" }).click();
+  await page.waitForLoadState("networkidle");
+
   await expect(
     await page
       .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
@@ -113,8 +115,10 @@ test("Correctly renders the work experience section", async ({ page }) => {
 });
 
 test("Correctly renders the book sheld section", async ({ page }) => {
-  await page.goto("http://localhost:3000/");
+  await page.goto("/");
   await page.getByRole("heading", { name: "Books I'm Involved With" }).click();
+  await page.waitForLoadState("networkidle");
+
   await expect(
     await page
       .getByRole("heading", {
@@ -146,13 +150,12 @@ test("Correctly renders the book sheld section", async ({ page }) => {
 });
 
 test("Hovering on a technology icon pauses movement", async ({ page }) => {
-  await page.goto("http://localhost:3000/");
-  await page.getByRole("heading", { name: "Technologies I Dabble With" });
-
+  await page.goto("/");
   const iconBeforeHover = await page
     .getByRole("link", { name: "MDN CSS Homepage" })
     .first();
   await iconBeforeHover.hover();
+  await page.waitForLoadState("networkidle");
   const iconAfterHover = await page
     .getByRole("link", { name: "MDN CSS Homepage" })
     .first();
