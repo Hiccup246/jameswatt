@@ -13,6 +13,7 @@ jobs:
           node-version: "18"
       - run: npm install -g pnpm
       - run: pnpm install
+      - run: pnpm install -g playwright
       - run: pnpm run test:e2e
 
       - name: Tests ✅
