@@ -78,119 +78,115 @@ exports[`renders the WorkExperienceSection correctly 1`] = `
       <div
         className="relative ml-5 w-full max-small:ml-0"
       >
-        <div>
-          <div
-            className="absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 pt-2.5 visible relative opacity-100 activated"
+        <div
+          className="absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 pt-2.5 visible relative opacity-100 activated"
+        >
+          <h2
+            className="m-0"
           >
-            <h2
-              className="m-0"
+            <span
+              className="text-xl font-bold text-black"
             >
-              <span
-                className="text-xl font-bold text-black"
-              >
-                Head Mouser
-              </span>
-              <span
-                className="text-xl font-bold text-black"
-              >
-                 @ 
-                Dummy 1
-              </span>
-            </h2>
-            <p
-              className="mt-1 mb-4 text-black"
+              Head Mouser
+            </span>
+            <span
+              className="text-xl font-bold text-black"
             >
-              2020/09 - 2022/10
-            </p>
-            <div
-              className="pb-4"
-            >
-              My first dummy job
-            </div>
-            <ul
-              className="m-0 list-none p-0"
-            >
-              <li
-                className="
-                    relative mt-4 pl-8 pb-2.5 before:absolute
-                    before:left-0 before:text-black before:content-["→"]
-                  "
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "highlight 1",
-                  }
-                }
-              />
-              <li
-                className="
-                    relative mt-4 pl-8 pb-2.5 before:absolute
-                    before:left-0 before:text-black before:content-["→"]
-                  "
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "highlight 2",
-                  }
-                }
-              />
-            </ul>
+               @ 
+              Dummy 1
+            </span>
+          </h2>
+          <p
+            className="mt-1 mb-4 text-black"
+          >
+            2020/09 - 2022/10
+          </p>
+          <div
+            className="pb-4"
+          >
+            My first dummy job
           </div>
+          <ul
+            className="m-0 list-none p-0"
+          >
+            <li
+              className="
+                    relative mt-4 pl-8 pb-2.5 before:absolute
+                    before:left-0 before:text-black before:content-["→"]
+                  "
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "highlight 1",
+                }
+              }
+            />
+            <li
+              className="
+                    relative mt-4 pl-8 pb-2.5 before:absolute
+                    before:left-0 before:text-black before:content-["→"]
+                  "
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "highlight 2",
+                }
+              }
+            />
+          </ul>
         </div>
-        <div>
-          <div
-            className="absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 opacity-0 invisible"
+        <div
+          className="absolute m-0 p-0 w-full transition-opacity duration-700 ease-in-out top-0 opacity-0 invisible"
+        >
+          <h2
+            className="m-0"
           >
-            <h2
-              className="m-0"
+            <span
+              className="text-xl font-bold text-black"
             >
-              <span
-                className="text-xl font-bold text-black"
-              >
-                Head Mocker
-              </span>
-              <span
-                className="text-xl font-bold text-black"
-              >
-                 @ 
-                Dummy 2
-              </span>
-            </h2>
-            <p
-              className="mt-1 mb-4 text-black"
+              Head Mocker
+            </span>
+            <span
+              className="text-xl font-bold text-black"
             >
-              2020/01 - 2022/02
-            </p>
-            <div
-              className="pb-4"
-            >
-              My second dummy job
-            </div>
-            <ul
-              className="m-0 list-none p-0"
-            >
-              <li
-                className="
-                    relative mt-4 pl-8 pb-2.5 before:absolute
-                    before:left-0 before:text-black before:content-["→"]
-                  "
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "highlight 1",
-                  }
-                }
-              />
-              <li
-                className="
-                    relative mt-4 pl-8 pb-2.5 before:absolute
-                    before:left-0 before:text-black before:content-["→"]
-                  "
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "highlight 2",
-                  }
-                }
-              />
-            </ul>
+               @ 
+              Dummy 2
+            </span>
+          </h2>
+          <p
+            className="mt-1 mb-4 text-black"
+          >
+            2020/01 - 2022/02
+          </p>
+          <div
+            className="pb-4"
+          >
+            My second dummy job
           </div>
+          <ul
+            className="m-0 list-none p-0"
+          >
+            <li
+              className="
+                    relative mt-4 pl-8 pb-2.5 before:absolute
+                    before:left-0 before:text-black before:content-["→"]
+                  "
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "highlight 1",
+                }
+              }
+            />
+            <li
+              className="
+                    relative mt-4 pl-8 pb-2.5 before:absolute
+                    before:left-0 before:text-black before:content-["→"]
+                  "
+              dangerouslySetInnerHTML={
+                {
+                  "__html": "highlight 2",
+                }
+              }
+            />
+          </ul>
         </div>
       </div>
     </div>
