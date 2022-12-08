@@ -10,7 +10,7 @@ jobs:
       - name: Test using Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18.11.9"
+          node-version: "18"
       - run: npm install -g pnpm
       - run: pnpm install
       - run: pnpm run test:unit
