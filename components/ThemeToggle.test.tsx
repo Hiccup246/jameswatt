@@ -9,27 +9,27 @@ test("renders the ThemeToggle correctly", () => {
 });
 
 test("setDOMTheme(true) correctly sets localstorage and document body classes", () => {
-  Object.create(localStorage)
-  Object.defineProperty(document, 'documentElement', {
+  Object.create(localStorage);
+  Object.defineProperty(document, "documentElement", {
     configurable: true,
-    value: document.createElement('document')
+    value: document.createElement("document"),
   });
- 
-  setDOMTheme(true)
-  
-  expect(localStorage.theme).toBe("light")
-  expect(document.documentElement.classList).not.toContain("dark")
-})
+
+  setDOMTheme(true);
+
+  expect(localStorage.theme).toBe("light");
+  expect(document.documentElement.classList).not.toContain("dark");
+});
 
 test("setDOMTheme(false) correctly sets localstorage and document body classes", () => {
-  Object.create(localStorage)
-  Object.defineProperty(document, 'documentElement', {
+  Object.create(localStorage);
+  Object.defineProperty(document, "documentElement", {
     configurable: true,
-    value: document.createElement('document')
+    value: document.createElement("document"),
   });
- 
-  setDOMTheme(false)
-  
-  expect(localStorage.theme).toBe("dark")
-  expect(document.documentElement.classList).toContain("dark")
-})
+
+  setDOMTheme(false);
+
+  expect(localStorage.theme).toBe("dark");
+  expect(document.documentElement.classList).toContain("dark");
+});

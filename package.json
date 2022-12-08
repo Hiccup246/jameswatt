@@ -13,7 +13,8 @@
     "lint-config": "eslint --print-config .eslintrc",
     "type-check": "tsc",
     "test:unit": "jest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "codegen": "playwright codegen"
   },
   "dependencies": {
     "@next/font": "^13.0.4",

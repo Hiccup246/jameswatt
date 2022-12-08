@@ -13,7 +13,7 @@ const mobileViewWidth: string =
   (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
 
 export function largestChildHeight(elem: HTMLDivElement): number {
-  const elementChildren:Element[] = Array.from(elem.children)
+  const elementChildren: Element[] = Array.from(elem.children);
 
   if (elementChildren.length == 0) return 1000;
 
@@ -21,7 +21,7 @@ export function largestChildHeight(elem: HTMLDivElement): number {
 
   elementChildren.forEach((child) => {
     if (child.clientHeight > largestChildHeight)
-    largestChildHeight = child.clientHeight;
+      largestChildHeight = child.clientHeight;
   });
 
   return largestChildHeight;

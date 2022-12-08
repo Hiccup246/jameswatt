@@ -1,20 +1,178 @@
 import { test, expect } from "@playwright/test";
 
-test("Index page displays all sections and footer", async ({ page }) => {
-  await page.goto("./");
+test("Index page displays all sections", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await expect(
+    page.getByRole("heading", { name: "My Experience" })
+  ).not.toBeNull();
+  await expect(
+    page.getByRole("heading", { name: "Project Showcase" })
+  ).not.toBeNull();
+  await expect(
+    page.getByRole("heading", { name: "Technologies I Dabble With" })
+  ).not.toBeNull();
+  await expect(page.getByRole("heading", { name: "Who am I?" })).not.toBeNull();
+  await expect(
+    page.getByRole("heading", { name: "Books I'm Involved With" })
+  ).not.toBeNull();
+  await expect(
+    page.getByRole("heading", { name: "The Work Which Inspired This Site" })
+  ).not.toBeNull();
+});
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+test("Correctly renders the work experience section", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
 
-  // create a locator
-  const getStarted = page.getByRole("link", { name: "Get started" });
+  await page.getByRole("heading", { name: "My Experience" }).click();
+  await expect(
+    await page
+      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
+      .isVisible()
+  ).toBeTruthy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
+      .isVisible()
+  ).toBeFalsy();
 
-  // Expect an attribute "to be strictly equal" to the value.
-  await expect(getStarted).toHaveAttribute("href", "/docs/intro");
+  await page.getByRole("button", { name: "AplyiD" }).nth(1).click();
+  await expect(
+    await page
+      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
+      .isVisible()
+  ).toBeTruthy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
+      .isVisible()
+  ).toBeFalsy();
 
-  // Click the get started link.
-  await getStarted.click();
+  await page.getByRole("button", { name: "Hypebeat" }).click();
+  await expect(
+    await page
+      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
+      .isVisible()
+  ).toBeTruthy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
+      .isVisible()
+  ).toBeFalsy();
 
-  // Expects the URL to contain intro.
-  await expect(page).toHaveURL(/.*intro/);
+  await page.getByRole("button", { name: "Halter" }).click();
+  await expect(
+    await page
+      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
+      .isVisible()
+  ).toBeFalsy();
+  await expect(
+    await page
+      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
+      .isVisible()
+  ).toBeTruthy();
+});
+
+test("Correctly renders the book sheld section", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.getByRole("heading", { name: "Books I'm Involved With" }).click();
+  await expect(
+    await page
+      .getByRole("heading", {
+        name: "The Black Swan: The Impact of the Highly Improbable",
+      })
+      .isVisible()
+  ).toBeTruthy();
+  await expect(
+    await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
+  ).toBeFalsy();
+
+  await page.getByRole("button", { name: "Show More/Less Books" }).click();
+  await expect(
+    await page
+      .getByRole("heading", {
+        name: "The Black Swan: The Impact of the Highly Improbable",
+      })
+      .isVisible()
+  ).toBeTruthy();
+  await page.getByRole("heading", { name: "The Power of Now" }).click();
+  await expect(
+    await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
+  ).toBeTruthy();
+
+  await page.getByRole("button", { name: "Show More/Less Books" }).click();
+  await expect(
+    await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
+  ).toBeFalsy();
+});
+
+test("Hovering on a technology icon pauses movement", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
+  await page.getByRole("heading", { name: "Technologies I Dabble With" });
+
+  const iconBeforeHover = await page
+    .getByRole("link", { name: "MDN CSS Homepage" })
+    .first();
+  await iconBeforeHover.hover();
+  const iconAfterHover = await page
+    .getByRole("link", { name: "MDN CSS Homepage" })
+    .first();
+
+  const boundingOne = await iconBeforeHover.boundingBox();
+  const boundingTwo = await iconAfterHover.boundingBox();
+  expect(boundingOne).toBeDefined();
+  expect(boundingTwo).toBeDefined();
+
+  expect(boundingOne?.x).toBe(boundingTwo?.x);
+
+  await page
+    .getByRole("heading", { name: "Technologies I Dabble With" })
+    .click({ delay: 3000 });
+  const iconAfterClick = await page
+    .getByRole("link", { name: "MDN CSS Homepage" })
+    .first();
+
+  const boundingThree = await iconAfterClick.boundingBox();
+  expect(boundingThree).toBeDefined();
+
+  expect(boundingOne?.x).toBeGreaterThan(boundingThree?.x as number);
 });
