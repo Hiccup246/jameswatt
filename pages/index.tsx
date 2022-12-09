@@ -30,7 +30,7 @@ export default function Home() {
         {/* Essential META Tags */}
         <meta property="og:title" content="James Watt Portfolio" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="xxx" />
+        <meta property="og:image" content="/site-screenshot.webp" />
         <meta property="og:url" content="http://www.jameswatt.io" />
         <meta name="twitter:card" content="summary_large_image" />
 
@@ -40,7 +40,7 @@ export default function Home() {
           content="Portfolio of Software Engineer James Watt"
         />
         <meta property="og:site_name" content="James Watt Portfolio" />
-        <meta name="twitter:image:alt" content="xxx" />
+        <meta name="twitter:image:alt" content="/site-screenshot.webp" />
 
         {/* Non-Essential, But Required for Analytics */}
         <meta name="twitter:site" content="@jameswattnz" />
