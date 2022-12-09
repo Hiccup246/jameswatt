@@ -13,7 +13,11 @@ export default function BookshelfSectionTwo() {
       </h1>
 
       <div className="rounded-xl p-3.5">
-        <BookShelfTable books={BOOKS} shortViewBooks={4} shortView={showAllBooks} />
+        <BookShelfTable
+          books={BOOKS}
+          shortViewBooks={4}
+          shortView={showAllBooks}
+        />
 
         <button
           aria-label="Show More/Less Books"

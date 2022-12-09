@@ -52,16 +52,16 @@ module.exports = {
           },
         },
         "scroll-v2": {
-          "0%": {transform: "translate(0)" },
-          to: { transform: "translate(-50%)" }
-        }
+          "0%": { transform: "translate(0)" },
+          to: { transform: "translate(-50%)" },
+        },
       },
       animation: {
         scroll: "scroll 30s linear 3s infinite",
         "scroll-reverse": "scroll 30s linear 3s infinite reverse",
         rotate: "gradient-rotate 5s linear 0s infinite reverse",
         "scroll-v2": "scroll-v2 30s linear 3s infinite",
-        "scroll-v2-reverse": "scroll-v2 30s linear 3s infinite reverse"
+        "scroll-v2-reverse": "scroll-v2 30s linear 3s infinite reverse",
       },
     },
   },
