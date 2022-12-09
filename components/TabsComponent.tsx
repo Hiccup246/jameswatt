@@ -28,10 +28,10 @@ export function calcTabButtonTranslation(x: number, y: number) {
 
   if (isMobile) {
     // If the device is a mobile the tabs are horizontal
-    return `translateX(calc(${x}px))`;
+    return `translateX(${x}px)`;
   } else {
     // If the device is a tablet or dekstop then the tabs are vertical
-    return `translateY(calc(${y}px)`;
+    return `translateY(${y}px)`;
   }
 }
 

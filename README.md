@@ -19,7 +19,6 @@
 - Look into react internal mechanics more. Where to put functions and constants, maybe
   look at some other projects
 - Update mailto email icon to either be a popup/tooltip or to have new design with copy icon
-- See if Kanit font looks good for all section headers
 
 ### Work Experience Section
 
