@@ -90,7 +90,9 @@ export default function TabsComponent({
     ).matches;
 
     if (isMobile) {
-      setSliderStyle({ ...sliderStyle, transform: "", height: "2px" });
+      setSliderStyle((state) => {
+        return { ...state, transform: "", height: "2px" };
+      });
     }
 
     return () => {
