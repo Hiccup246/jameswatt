@@ -9,6 +9,7 @@ import CreditsSection from "../components/sections/CreditsSection";
 import FooterSection from "../components/sections/FooterSection";
 import TechnologiesSection from "../components/sections/TechnologiesSection";
 import { BOOKS } from "../constants/Books";
+import TechnologySectionTwo from "../components/sections/TechnologySectionTwo";
 
 export default function Home() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
       <WorkExperienceSection />
       <ProjectShowcaseSection />
       <TechnologiesSection />
+      {/* <TechnologySectionTwo /> */}
       <AboutMeSection />
       <BookshelfSection books={BOOKS} />
       <CreditsSection />
