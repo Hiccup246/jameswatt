@@ -10,10 +10,10 @@ import userEvent from "@testing-library/user-event";
 test("renders the TabsComponent correctly", () => {
   const tree = renderer
     .create(
-        <TabsComponent>
-            <div aria-label="Panel 1">First Panel</div>
-            <div aria-label="Panel 2">Second Panel</div>
-        </TabsComponent>
+      <TabsComponent>
+        <div aria-label="Panel 1">First Panel</div>
+        <div aria-label="Panel 2">Second Panel</div>
+      </TabsComponent>
     )
     .toJSON();
 
@@ -21,12 +21,12 @@ test("renders the TabsComponent correctly", () => {
 });
 
 test("renders the first panel and all the correct tab buttons", () => {
-    render(
-        <TabsComponent>
-            <div aria-label="Panel 1">First Panel</div>
-            <div aria-label="Panel 2">Second Panel</div>
-        </TabsComponent>
-    );
+  render(
+    <TabsComponent>
+      <div aria-label="Panel 1">First Panel</div>
+      <div aria-label="Panel 2">Second Panel</div>
+    </TabsComponent>
+  );
 
   const panelOneText = screen.getByText("First Panel");
   const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
@@ -46,12 +46,12 @@ test("when the second tab button is clicked it renders the second job", async ()
     })),
   });
 
-    render(
-        <TabsComponent>
-            <div aria-label="Panel 1">First Panel</div>
-            <div aria-label="Panel 2">Second Panel</div>
-        </TabsComponent>
-    );
+  render(
+    <TabsComponent>
+      <div aria-label="Panel 1">First Panel</div>
+      <div aria-label="Panel 2">Second Panel</div>
+    </TabsComponent>
+  );
 
   await userEvent.click(screen.getByRole("button", { name: "Panel 2" }));
 
@@ -72,15 +72,11 @@ describe("calcTabButtonTranslation on a large device", () => {
   });
 
   test("calcTabButtonTranslation called with 5 and 8", () => {
-    expect(calcTabButtonTranslation(5, 8)).toBe(
-      "translateY(8px)"
-    );
+    expect(calcTabButtonTranslation(5, 8)).toBe("translateY(8px)");
   });
 
   test("calcTabButtonTranslation called with 0 and 0", () => {
-    expect(calcTabButtonTranslation(0, 0)).toBe(
-      "translateY(0px)"
-    );
+    expect(calcTabButtonTranslation(0, 0)).toBe("translateY(0px)");
   });
 });
 
@@ -96,15 +92,11 @@ describe("calcTabButtonTranslation on a small device", () => {
   });
 
   test("calcTabButtonTranslation called with 10 and 3", () => {
-    expect(calcTabButtonTranslation(10, 3)).toBe(
-      "translateX(10px)"
-    );
+    expect(calcTabButtonTranslation(10, 3)).toBe("translateX(10px)");
   });
 
   test("calcTabButtonTranslation called with 0 and 0", () => {
-    expect(calcTabButtonTranslation(0, 0)).toBe(
-      "translateX(0px)"
-    );
+    expect(calcTabButtonTranslation(0, 0)).toBe("translateX(0px)");
   });
 });
 
