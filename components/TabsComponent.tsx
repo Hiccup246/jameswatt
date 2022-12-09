@@ -1,11 +1,7 @@
-import { useEffect, useState, useRef } from "react";
-
-import TabButton from "../TabButton";
-import ExperiencePanel from "../ExperiencePanel";
-import SectionLayout from "../layouts/SectionLayout";
+import { useEffect, useState, useRef, ReactElement } from "react";
 
 import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config";
+import tailwindConfig from "../tailwind.config";
 
 const tailwindScreenBreakpoints = resolveConfig(tailwindConfig)?.theme
   ?.screens as { small: string };
@@ -39,7 +35,11 @@ export function calcTabButtonTranslation(x: number, y: number) {
   }
 }
 
-export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
+export default function TabsComponent({
+  children,
+}: {
+  children: ReactElement[];
+}) {
   const experiencePanelsWrapper = useRef<HTMLDivElement>(null);
 
   const [width, setWidth] = useState<number>();
@@ -90,34 +90,48 @@ export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
     };
   }, []);
 
-  return (
-    <SectionLayout>
-      <h1 className="my-16 text-center text-2xl font-bold sm:text-3xl">
-        My Experience
-      </h1>
+  const activatedClasses = " pt-2.5 visible relative opacity-100";
+  const deactivatedClasses = "opacity-0 invisible";
 
-      <div className="flex w-full max-small:block">
-        <div
-          className={`
-               relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
-               max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
+  const activatedTabClasses = "text-black";
+
+  return (
+    <div className="flex w-full max-small:block">
+      <div
+        className={`
+            relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
+            max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
         `}
-        >
-          {jobs.map((job: Job, index: number) => {
-            return (
-              <TabButton
-                key={index + job.company}
-                companyName={job.company}
-                activated={index === currentTabIndex}
-                clickHandler={(button: HTMLButtonElement) =>
-                  clickOnTabButton(index, button)
-                }
-              />
-            );
-          })}
-          <div
-            style={sliderStyle}
-            className={`
+      >
+        {children.map((child: ReactElement, index: number) => {
+          return (
+            <button
+              key={index + Math.random()}
+              aria-label={child.props["aria-label"]}
+              className={`
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0 max-small:max-w-[var(--tab-width)]
+                        max-small:shrink-0 max-small:grow-0 max-small:basis-[var(--tab-width)]
+                        max-small:justify-center ${
+                          index == currentTabIndex ? activatedTabClasses : ""
+                        }
+                    `}
+              onClick={(element) =>
+                clickOnTabButton(index, element.currentTarget)
+              }
+            >
+              {child.props["aria-label"]}
+            </button>
+          );
+        })}
+
+        <div
+          style={sliderStyle}
+          className={`
               transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
               visible absolute top-0 left-0
               z-10 h-[40px]
@@ -125,31 +139,35 @@ export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
               delay-100 duration-200 max-small:top-auto max-small:bottom-0
               max-small:z-20
             `}
-          ></div>
-          <div
-            className={`
+        ></div>
+        <div
+          className={`
             visible absolute top-0 left-0 ml-1 h-full
             w-0.5 rounded-sm
             bg-black max-small:hidden
           `}
-          />
-        </div>
-
-        <div
-          className="relative ml-5 w-full max-small:ml-0"
-          ref={experiencePanelsWrapper}
-        >
-          {jobs.map((job: Job, index: number) => {
-            return (
-              <ExperiencePanel
-                key={index + job.dateRange}
-                job={job}
-                activated={index === currentTabIndex}
-              />
-            );
-          })}
-        </div>
+        />
       </div>
-    </SectionLayout>
+
+      <div
+        className="relative ml-5 w-full max-small:ml-0"
+        ref={experiencePanelsWrapper}
+      >
+        {children.map((child: ReactElement, index: number) => {
+          return (
+            <div
+              key={index + Math.random()}
+              className={`absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
+                index === currentTabIndex
+                  ? activatedClasses
+                  : deactivatedClasses
+              }`}
+            >
+              {child}
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }

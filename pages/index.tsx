@@ -10,6 +10,7 @@ import FooterSection from "../components/sections/FooterSection";
 import TechnologiesSection from "../components/sections/TechnologiesSection";
 import { BOOKS } from "../constants/Books";
 import { PROGRAMMING_EXPERIENCES } from "../constants/WorkExperiences";
+import WorkExperienceTabs from "../components/WorkExperienceTabs";
 
 export default function Home() {
   return (
@@ -69,7 +70,7 @@ export default function Home() {
       />
 
       <IntroSection />
-      <WorkExperienceSection jobs={PROGRAMMING_EXPERIENCES} />
+      <WorkExperienceTabs />
       <ProjectShowcaseSection />
       <TechnologiesSection />
       <AboutMeSection />

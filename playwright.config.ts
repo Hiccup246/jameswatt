@@ -10,7 +10,7 @@ const baseURL = `http://localhost:${PORT}`;
 // Reference: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {
   // Timeout per test
-  timeout: 240 * 1000,
+  timeout: 30 * 1000,
   // Test directory
   testDir: path.join(__dirname, "e2e"),
   // If a test fails, retry it additional 2 times
@@ -70,7 +70,7 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: "Mobile Safari",
-      use: devices["iPhone 12"],
+      use: { ...devices["iPhone 12"] },
     },
   ],
 };
