@@ -21,16 +21,10 @@ export default function Home() {
           name="description"
           content="`The personal portfolio for London based software engineer James Watt."
         />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta charSet="UTF-8" />
-        {/* <meta httpEquiv="refresh" content="10;url='https://www.jameswatt.io'" /> */}
         <meta
           name="keywords"
           content="james watt, software engineer, software developer, james watt developer, james watt software developer, james watt programmer, james watt coder, james watt dev, james watt tech"
         />
-        <link rel="canonical" href="https://www.jameswatt.io" />
         <link href="https://www.jameswatt.io" rel="author" />
 
         {/* Essential META Tags */}
