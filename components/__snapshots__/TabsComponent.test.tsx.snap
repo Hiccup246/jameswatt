@@ -18,8 +18,8 @@ exports[`renders the TabsComponent correctly 1`] = `
                         w-fit cursor-pointer
                         whitespace-nowrap px-5 py-2
                         text-black focus-visible:border-none
-                        max-small:mb-0 max-small:max-w-[var(--tab-width)]
-                        max-small:shrink-0 max-small:grow-0 max-small:basis-[var(--tab-width)]
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
                         max-small:justify-center text-black
                     "
       onClick={[Function]}
@@ -34,8 +34,8 @@ exports[`renders the TabsComponent correctly 1`] = `
                         w-fit cursor-pointer
                         whitespace-nowrap px-5 py-2
                         text-black focus-visible:border-none
-                        max-small:mb-0 max-small:max-w-[var(--tab-width)]
-                        max-small:shrink-0 max-small:grow-0 max-small:basis-[var(--tab-width)]
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
                         max-small:justify-center 
                     "
       onClick={[Function]}

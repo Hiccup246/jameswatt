@@ -21,6 +21,14 @@ test("renders the TabsComponent correctly", () => {
 });
 
 test("renders the first panel and all the correct tab buttons", () => {
+  Object.defineProperty(window, "matchMedia", {
+    configurable: true,
+    writable: true,
+    value: jest.fn().mockImplementation((query) => ({
+      matches: false,
+    })),
+  });
+  
   render(
     <TabsComponent>
       <div aria-label="Panel 1">First Panel</div>

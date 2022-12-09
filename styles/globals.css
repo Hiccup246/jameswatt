@@ -4,9 +4,6 @@
 
 @layer base {
   :root {
-    --tab-height: 42px;
-    --tab-margin-top: 31.25px;
-    --tab-width: 120px;
     --slider-items: 7;
     --slider-item-sets: 2;
     --all-slider-items: calc(var(--slider-items) * var(--slider-item-sets));
