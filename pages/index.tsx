@@ -52,23 +52,6 @@ export default function Home() {
         <meta name="twitter:site" content="@jameswattnz" />
       </Head>
 
-      <Script
-        id="themeLoader"
-        strategy="beforeInteractive"
-        async
-        src="./themeLoader.js"
-      />
-
-      {/* Umami Analytics Script */}
-      <Script
-        id="analytics"
-        strategy="beforeInteractive"
-        async
-        defer
-        data-website-id={process.env.UMAMI_WEBSITE_ID}
-        src={process.env.UMAMI_WEBSITE_URL}
-      />
-
       <IntroSection />
       <WorkExperienceSection />
       <ProjectShowcaseSection />
