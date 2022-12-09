@@ -28,7 +28,7 @@ test("renders the first panel and all the correct tab buttons", () => {
       matches: false,
     })),
   });
-  
+
   render(
     <TabsComponent>
       <div aria-label="Panel 1">First Panel</div>
