@@ -100,11 +100,6 @@ export default function TabsComponent({
     };
   }, []);
 
-  const activatedClasses = " pt-2.5 visible relative opacity-100";
-  const deactivatedClasses = "opacity-0 invisible";
-
-  const activatedTabClasses = "text-black";
-
   return (
     <div className="flex w-full max-small:block">
       <div
@@ -127,7 +122,7 @@ export default function TabsComponent({
                         max-small:mb-0
                         max-small:shrink-0 max-small:grow-0
                         max-small:justify-center ${
-                          index == currentTabIndex ? activatedTabClasses : ""
+                          index == currentTabIndex ? "text-black" : ""
                         }
                     `}
               onClick={(element) =>
@@ -169,8 +164,8 @@ export default function TabsComponent({
               key={index + Math.random()}
               className={`absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
                 index === currentTabIndex
-                  ? activatedClasses
-                  : deactivatedClasses
+                  ? "visible relative pt-2.5 opacity-100"
+                  : "invisible opacity-0"
               }`}
             >
               {child}
