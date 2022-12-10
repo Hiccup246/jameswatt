@@ -1,4 +1,3 @@
-import { expect, test, jest, describe } from "@jest/globals";
 import TabsComponent, {
   calcTabButtonTranslation,
   largestChildHeight,

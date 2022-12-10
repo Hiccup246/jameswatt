@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import BookshelfTable from "./BookshelfTable";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";

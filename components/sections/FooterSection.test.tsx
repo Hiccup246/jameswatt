@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import FooterSection from "./FooterSection";
 import renderer from "react-test-renderer";
 

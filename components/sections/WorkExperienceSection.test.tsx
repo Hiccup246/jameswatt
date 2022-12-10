@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import WorkExperienceSection from "./WorkExperienceSection";
 import renderer from "react-test-renderer";
 

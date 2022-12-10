@@ -1,4 +1,3 @@
-import { expect, it } from "@jest/globals";
 import IntroSection from "./IntroSection";
 import renderer from "react-test-renderer";
 

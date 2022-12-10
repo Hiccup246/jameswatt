@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import SliderComponent from "./SliderComponent";
 import renderer from "react-test-renderer";
 

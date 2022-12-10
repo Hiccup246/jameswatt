@@ -1,4 +1,3 @@
-import { expect, it } from "@jest/globals";
 import TechnologiesSection from "./TechnologiesSection";
 import renderer from "react-test-renderer";
 

@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import ThemeToggle, { setDOMTheme } from "./ThemeToggle";
 import renderer from "react-test-renderer";
 

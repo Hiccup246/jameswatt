@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import ExperiencePanel from "./ExperiencePanel";
 import renderer from "react-test-renderer";
 

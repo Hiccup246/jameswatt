@@ -1,4 +1,3 @@
-import { expect, it } from "@jest/globals";
 import ProjectShowcaseSection from "./ProjectShowcaseSection";
 import renderer from "react-test-renderer";
 

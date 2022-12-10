@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import TechnologyIcon from "./TechnologyIcon";
 import renderer from "react-test-renderer";
 
