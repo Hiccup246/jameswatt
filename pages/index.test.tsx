@@ -1,4 +1,3 @@
-import { expect, test } from "@jest/globals";
 import Home from "./index";
 import renderer from "react-test-renderer";
 
