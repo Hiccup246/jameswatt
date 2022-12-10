@@ -23,7 +23,7 @@ test("Index page displays all sections", async ({ page }) => {
 test("Correctly renders the work experience section", async ({ page }) => {
   await page.goto("/");
 
-  await page.getByRole("heading", { name: "My Experience" }).click();
+  await page.getByText("My Experience");
   await page.waitForLoadState("networkidle");
 
   await expect(
