@@ -28,7 +28,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
 
   await expect(
     await page
-      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
+      .getByRole("heading", { name: /UK Team Lead @ AplyiD/ })
       .isVisible()
   ).toBeTruthy();
   await expect(
@@ -116,7 +116,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
 
 test("Correctly renders the book sheld section", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("heading", { name: "Books I'm Involved With" }).click();
+  await page.getByText("Books I'm Involved With").click();
   await page.waitForLoadState("networkidle");
 
   await expect(
