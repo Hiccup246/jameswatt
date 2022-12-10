@@ -11,8 +11,12 @@ test("renders the TabsComponent correctly", () => {
   const tree = renderer
     .create(
       <TabsComponent>
-        <div aria-label="Panel 1">First Panel</div>
-        <div aria-label="Panel 2">Second Panel</div>
+        <div aria-label="Panel 1" key="Panel 1">
+          First Panel
+        </div>
+        <div aria-label="Panel 2" key="Panel 2">
+          Second Panel
+        </div>
       </TabsComponent>
     )
     .toJSON();
@@ -31,8 +35,12 @@ test("renders the first panel and all the correct tab buttons", () => {
 
   render(
     <TabsComponent>
-      <div aria-label="Panel 1">First Panel</div>
-      <div aria-label="Panel 2">Second Panel</div>
+      <div aria-label="Panel 1" key="Panel 1">
+        First Panel
+      </div>
+      <div aria-label="Panel 2" key="Panel 2">
+        Second Panel
+      </div>
     </TabsComponent>
   );
 
@@ -56,8 +64,12 @@ test("when the second tab button is clicked it renders the second job", async ()
 
   render(
     <TabsComponent>
-      <div aria-label="Panel 1">First Panel</div>
-      <div aria-label="Panel 2">Second Panel</div>
+      <div aria-label="Panel 1" key="Panel 1">
+        First Panel
+      </div>
+      <div aria-label="Panel 2" key="Panel 2">
+        Second Panel
+      </div>
     </TabsComponent>
   );
 

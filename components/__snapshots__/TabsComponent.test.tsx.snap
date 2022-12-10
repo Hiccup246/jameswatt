@@ -69,7 +69,7 @@ exports[`renders the TabsComponent correctly 1`] = `
     className="relative ml-5 w-full max-small:ml-0"
   >
     <div
-      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out pt-2.5 visible relative opacity-100"
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
     >
       <div
         aria-label="Panel 1"
@@ -78,7 +78,7 @@ exports[`renders the TabsComponent correctly 1`] = `
       </div>
     </div>
     <div
-      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out opacity-0 invisible"
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
     >
       <div
         aria-label="Panel 2"

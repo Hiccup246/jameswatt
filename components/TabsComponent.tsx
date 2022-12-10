@@ -111,7 +111,7 @@ export default function TabsComponent({
         {children.map((child: ReactElement, index: number) => {
           return (
             <button
-              key={index + Math.random()}
+              key={`tab-button-${child.key}`}
               aria-label={child.props["aria-label"]}
               className={`
                         bg-transparent relative z-20
@@ -161,7 +161,7 @@ export default function TabsComponent({
         {children.map((child: ReactElement, index: number) => {
           return (
             <div
-              key={index + Math.random()}
+              key={child.key}
               className={`absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
                 index === currentTabIndex
                   ? "visible relative pt-2.5 opacity-100"
