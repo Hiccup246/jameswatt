@@ -59,7 +59,10 @@ export default function AboutMeSection() {
             <EmailIcon />
           </div>
 
-          <div className="absolute top-[60px] -left-[115px] h-fit w-[270px] rounded-lg bg-brown opacity-0 delay-700 group-hover:opacity-100">
+          <div
+            role="tooltip"
+            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-700 group-hover:opacity-100"
+          >
             <div className="my-3 flex w-full justify-center">
               <a
                 className="mr-2 p-1 hover:underline"
@@ -71,6 +74,7 @@ export default function AboutMeSection() {
               >
                 Open in email
               </a>
+
               <button
                 onClick={() => copyToClipboard("james@jameswatt.io")}
                 className="ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"

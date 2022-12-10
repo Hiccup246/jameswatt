@@ -4047,7 +4047,7 @@ exports[`renders the Home component correctly 1`] = `
           </a>
         </div>
         <div
-          className="group hover my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5"
+          className="hover group my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5"
         >
           <div
             className="duration-150 ease-in hover:text-grey"
@@ -4063,14 +4063,15 @@ exports[`renders the Home component correctly 1`] = `
             </svg>
           </div>
           <div
-            className="opacity-0 group-hover:opacity-100 delay-700 h-fit w-[270px] bg-brown absolute rounded-lg top-[60px] -left-[115px]"
+            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-700 group-hover:opacity-100"
+            role="tooltip"
           >
             <div
-              className="my-3 w-full flex justify-center"
+              className="my-3 flex w-full justify-center"
             >
               <a
                 aria-label="Email Address"
-                className="hover:underline p-1 mr-2"
+                className="mr-2 p-1 hover:underline"
                 href="mailto:james@jameswatt.io"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -4079,7 +4080,7 @@ exports[`renders the Home component correctly 1`] = `
                 Open in email
               </a>
               <button
-                className="ml-2 bg-darkbrown rounded p-1 px-2 w-fit h-fit hover:opacity-70 active:scale-105"
+                className="ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
                 onClick={[Function]}
               >
                 Copy email
