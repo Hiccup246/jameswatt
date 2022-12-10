@@ -19,6 +19,8 @@
 - Look into react internal mechanics more. Where to put functions and constants, maybe
   look at some other projects
 - Update mailto email icon to either be a popup/tooltip or to have new design with copy icon
+- Check how many times the workexperience/tab items are being rendered on tab change
+- Swap out another size component into the slider and ensure everything still works
 
 ### Work Experience Section
 
