@@ -5,12 +5,11 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.jameswatt.io" />
         <link href="https://www.jameswatt.io/" rel="publisher" />
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -28,8 +27,8 @@ export default function Document() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        {/* <meta httpEquiv="refresh" content="10;url='https://www.jameswatt.io'" /> */}
       </Head>
+
       <body>
         <Main />
         <NextScript />
