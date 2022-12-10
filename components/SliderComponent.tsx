@@ -7,14 +7,15 @@ export default function SliderComponent({
   children: ReactElement[];
   slideRight?: boolean;
 }) {
-  const slideAnimation =
-    slideRight == true ? "animate-scroll-v2-reverse" : "animate-scroll-v2";
+  const slideAnimation = !!slideRight
+    ? "animate-scroll-v2-reverse"
+    : "animate-scroll-v2";
 
   return (
     <div className="container relative w-full overflow-hidden">
       <div className="relative m-auto h-fit w-full">
         <div
-          className={`slide-track hover:animation-pause flex w-fit animate-scroll-v2 ${slideAnimation}`}
+          className={`slide-track hover:animation-pause flex w-fit ${slideAnimation}`}
         >
           {children}
         </div>

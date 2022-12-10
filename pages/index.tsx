@@ -9,7 +9,6 @@ import CreditsSection from "../components/sections/CreditsSection";
 import FooterSection from "../components/sections/FooterSection";
 import TechnologiesSection from "../components/sections/TechnologiesSection";
 import { BOOKS } from "../constants/Books";
-import TechnologySectionTwo from "../components/sections/TechnologySectionTwo";
 import BookshelfSectionTwo from "../components/sections/BookshelfSectionTwo";
 
 export default function Home() {
@@ -50,7 +49,6 @@ export default function Home() {
       <WorkExperienceSection />
       <ProjectShowcaseSection />
       <TechnologiesSection />
-      {/* <TechnologySectionTwo /> */}
       <AboutMeSection />
       <BookshelfSection books={BOOKS} />
       {/* <BookshelfSectionTwo /> */}
