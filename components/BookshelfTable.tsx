@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AnimatedBook from "../public/animated-book.gif";
+import AnimatedBookBrown from "../public/animated-book-brown.gif";
 import ReadBook from "../public/book.webp";
 
 export default function BookShelfTable({
@@ -26,7 +26,7 @@ export default function BookShelfTable({
   const currentlyReadingIcon = (
     <div className="mx-auto h-5 w-5">
       <Image
-        src={AnimatedBook}
+        src={AnimatedBookBrown}
         width={20}
         height={20}
         sizes="20px"
