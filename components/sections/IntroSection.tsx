@@ -86,6 +86,7 @@ export default function IntroSection() {
       return;
     }
 
+    startAnimation();
     globalThis.addEventListener("resize", resize);
     resize();
 
@@ -152,8 +153,6 @@ export default function IntroSection() {
             priority
             placeholder="blur"
             alt="James Watt"
-            onLoad={() => startAnimation()}
-            onError={() => startAnimation()}
             sizes="310px"
             className="object-scale-down"
           />
@@ -170,12 +169,12 @@ export default function IntroSection() {
         </svg>
 
         <svg
-          className="absolute left-[232.5px] top-[230px] z-20"
-          viewBox="0 0 100 100"
+          className="absolute left-[232px] top-[215px] z-20"
+          width="16.5"
           aria-label="Growing Drop"
         >
           <path
-            d={`M0,50 a1,${1 + (counter + 1) * 0.2} 0 0,0 20,0`}
+            d={`M0,50 a1,${1 + (counter + 1) * 0.2} 0 0,0 16.5,0`}
             className="fill-white"
           />
         </svg>
