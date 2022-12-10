@@ -5,6 +5,10 @@ import ResumeIcon from "../Icons/ResumeIcon";
 import SectionLayout from "../layouts/SectionLayout";
 
 export default function AboutMeSection() {
+  function copyToClipboard(text: string): void {
+    navigator.clipboard.writeText(text);
+  }
+
   return (
     <SectionLayout>
       <h1 className="mb-16 text-center text-2xl font-bold sm:text-3xl">
@@ -50,17 +54,31 @@ export default function AboutMeSection() {
           </a>
         </div>
 
-        <div className="my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5">
-          <a
-            className="duration-150 ease-in hover:text-grey"
-            href="mailto:james@jameswatt.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Email Address"
-            title="James Watt Email"
-          >
+        <div className="hover group my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5">
+          <div className="duration-150 ease-in hover:text-grey">
             <EmailIcon />
-          </a>
+          </div>
+
+          <div className="absolute top-[60px] -left-[115px] h-fit w-[270px] rounded-lg bg-brown opacity-0 delay-700 group-hover:opacity-100">
+            <div className="my-3 flex w-full justify-center">
+              <a
+                className="mr-2 p-1 hover:underline"
+                href="mailto:james@jameswatt.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email Address"
+                title="James Watt Email"
+              >
+                Open in email
+              </a>
+              <button
+                onClick={() => copyToClipboard("james@jameswatt.io")}
+                className="ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
+              >
+                Copy email
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="my-auto w-10 duration-150 ease-in hover:-translate-y-0.5">

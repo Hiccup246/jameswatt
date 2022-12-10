@@ -66,15 +66,10 @@ exports[`renders the AboutMeSection correctly 1`] = `
         </a>
       </div>
       <div
-        className="my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5"
+        className="group hover my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5"
       >
-        <a
-          aria-label="Email Address"
+        <div
           className="duration-150 ease-in hover:text-grey"
-          href="mailto:james@jameswatt.io"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="James Watt Email"
         >
           <svg
             viewBox="0 0 512 512"
@@ -85,7 +80,31 @@ exports[`renders the AboutMeSection correctly 1`] = `
               fill="currentColor"
             />
           </svg>
-        </a>
+        </div>
+        <div
+          className="opacity-0 group-hover:opacity-100 delay-700 h-fit w-[270px] bg-brown absolute rounded-lg top-[60px] -left-[115px]"
+        >
+          <div
+            className="my-3 w-full flex justify-center"
+          >
+            <a
+              aria-label="Email Address"
+              className="hover:underline p-1 mr-2"
+              href="mailto:james@jameswatt.io"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="James Watt Email"
+            >
+              Open in email
+            </a>
+            <button
+              className="ml-2 bg-darkbrown rounded p-1 px-2 w-fit h-fit hover:opacity-70 active:scale-105"
+              onClick={[Function]}
+            >
+              Copy email
+            </button>
+          </div>
+        </div>
       </div>
       <div
         className="my-auto w-10 duration-150 ease-in hover:-translate-y-0.5"
