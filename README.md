@@ -21,6 +21,11 @@
 - Update mailto email icon to either be a popup/tooltip or to have new design with copy icon
 - Check how many times the workexperience/tab items are being rendered on tab change
 - Swap out another size component into the slider and ensure everything still works
+- Add tests for about me email tooltip
+- Add MDN tooltip reccomendations for accessability
+- Potentially refactor tooltip code, i.e. generic width and height values
+- Re-usability for generic tooltip component
+- Lool into removing safari mobile tests for e2e or find out why they fail
 
 ### Work Experience Section
 
