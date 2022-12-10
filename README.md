@@ -26,6 +26,7 @@
 - Potentially refactor tooltip code, i.e. generic width and height values
 - Re-usability for generic tooltip component
 - Lool into removing safari mobile tests for e2e or find out why they fail
+- Refactor all tests and look at react unit tests for unit test inspiration
 
 ### Work Experience Section
 
