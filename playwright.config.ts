@@ -66,10 +66,16 @@ const config: PlaywrightTestConfig = {
       name: "Mobile Firefox",
       ...devices["Pixel 5"],
     },
-    {
-      name: "Mobile Safari",
-      use: { ...devices["iPhone 12"] },
-    },
+    // Mobile safari is bugged in github actions. The bug seems to be that
+    // clicks are intercepted by parents without pointer-events: none
+    ...(!process.env.CI
+      ? [
+          {
+            name: "Mobile Safari",
+            use: { ...devices["iPhone 12"] },
+          },
+        ]
+      : []),
   ],
 };
 export default config;
