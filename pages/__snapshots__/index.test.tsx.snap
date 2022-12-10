@@ -1215,24 +1215,29 @@ exports[`renders the Home component correctly 1`] = `
         Technologies I Dabble With
       </h1>
       <div
-        className="container relative w-full overflow-hidden"
+        className="relative"
       >
         <div
-          className="relative m-auto h-24 w-full"
+          className="container relative w-full overflow-hidden"
         >
           <div
-            className="slide-track hover:animation-pause flex w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll"
+            className="relative m-auto h-fit w-full"
           >
-            <div>
+            <div
+              className="slide-track hover:animation-pause flex w-fit animate-scroll-v2"
+            >
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="MDN HTML Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                     title="MDN HTML Homepage"
                   >
@@ -1269,27 +1274,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Angular Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://angular.io/"
                     title="Angular Framework Homepage"
                   >
@@ -1353,27 +1359,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Bulma Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://bulma.io/"
                     title="Bulma Homepage"
                   >
@@ -1396,27 +1403,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="MDN CSS Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                     title="MDN CSS Homepage"
                   >
@@ -1453,27 +1461,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Deno Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://deno.land/"
                     title="Deno Homepage"
                   >
@@ -1533,27 +1542,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Ruby On Rails Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://rubyonrails.org/"
                     title="Ruby On Rails Homepage"
                   >
@@ -1577,27 +1587,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Tailwind Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://tailwindcss.com/"
                     title="Tailwind Homepage"
                   >
@@ -1621,27 +1632,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="MDN HTML Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                     title="MDN HTML Homepage"
                   >
@@ -1678,27 +1690,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Angular Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://angular.io/"
                     title="Angular Framework Homepage"
                   >
@@ -1762,27 +1775,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Bulma Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://bulma.io/"
                     title="Bulma Homepage"
                   >
@@ -1805,27 +1819,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="MDN CSS Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                     title="MDN CSS Homepage"
                   >
@@ -1862,27 +1877,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Deno Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://deno.land/"
                     title="Deno Homepage"
                   >
@@ -1942,27 +1958,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Ruby On Rails Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://rubyonrails.org/"
                     title="Ruby On Rails Homepage"
                   >
@@ -1986,27 +2003,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Tailwind Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://tailwindcss.com/"
                     title="Tailwind Homepage"
                   >
@@ -2030,13 +2048,13 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
@@ -2044,21 +2062,26 @@ exports[`renders the Home component correctly 1`] = `
           </div>
         </div>
         <div
-          className="relative m-auto h-24 w-full"
+          className="container relative w-full overflow-hidden"
         >
           <div
-            className="slide-track hover:animation-pause flex w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll-reverse"
+            className="relative m-auto h-fit w-full"
           >
-            <div>
+            <div
+              className="slide-track hover:animation-pause flex w-fit animate-scroll-v2-reverse"
+            >
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Vue Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://vuejs.org/"
                     title="Vue Framework Homepage"
                   >
@@ -2085,27 +2108,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Solidity Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.solidity.io/"
                     title="Solidity Homepage"
                   >
@@ -2258,27 +2282,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Javascript Language Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.javascript.com/"
                     title="Javascript Language Homepage"
                   >
@@ -2307,27 +2332,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Gatsby Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.gatsbyjs.com/"
                     title="Gatsby Framework Homepage"
                   >
@@ -2356,27 +2382,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Fresh Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://fresh.deno.dev/"
                     title="Fresh Framework Homepage"
                   >
@@ -2415,27 +2442,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Figma Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.figma.com/"
                     title="Figma Homepage"
                   >
@@ -2490,27 +2518,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Go Language Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://go.dev/"
                     title="Go Language Homepage"
                   >
@@ -2554,27 +2583,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Vue Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://vuejs.org/"
                     title="Vue Framework Homepage"
                   >
@@ -2601,27 +2631,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Solidity Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.solidity.io/"
                     title="Solidity Homepage"
                   >
@@ -2774,27 +2805,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Javascript Language Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.javascript.com/"
                     title="Javascript Language Homepage"
                   >
@@ -2823,27 +2855,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Gatsby Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.gatsbyjs.com/"
                     title="Gatsby Framework Homepage"
                   >
@@ -2872,27 +2905,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Fresh Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://fresh.deno.dev/"
                     title="Fresh Framework Homepage"
                   >
@@ -2931,27 +2965,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Figma Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.figma.com/"
                     title="Figma Homepage"
                   >
@@ -3006,27 +3041,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Go Language Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://go.dev/"
                     title="Go Language Homepage"
                   >
@@ -3070,13 +3106,13 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
@@ -3084,21 +3120,26 @@ exports[`renders the Home component correctly 1`] = `
           </div>
         </div>
         <div
-          className="relative m-auto h-24 w-full"
+          className="container relative w-full overflow-hidden"
         >
           <div
-            className="slide-track hover:animation-pause flex w-[calc(var(--slider-item-width)*var(--all-slider-items))] animate-scroll"
+            className="relative m-auto h-fit w-full"
           >
-            <div>
+            <div
+              className="slide-track hover:animation-pause flex w-fit animate-scroll-v2"
+            >
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Svelte Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://svelte.dev/"
                     title="Svelte Framework Homepage"
                   >
@@ -3128,27 +3169,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Ruby Language Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.ruby-lang.org/en/"
                     title="Ruby Language Homepage"
                   >
@@ -3190,27 +3232,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="React Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://reactjs.org/"
                     title="React Framework Homepage"
                   >
@@ -3258,27 +3301,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Nuxt Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://nuxt.com/"
                     title="Nuxt Framework Homepage"
                   >
@@ -3302,27 +3346,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Node.JS Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://nodejs.org/en/"
                     title="Node.JS Homepage"
                   >
@@ -3363,27 +3408,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Next.JS Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://nextjs.org/"
                     title="Next.JS Homepage"
                   >
@@ -3435,27 +3481,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="PostgreSQL Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.postgresql.org/"
                     title="PostgreSQL Homepage"
                   >
@@ -3492,27 +3539,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Svelte Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://svelte.dev/"
                     title="Svelte Framework Homepage"
                   >
@@ -3542,27 +3590,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Ruby Language Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.ruby-lang.org/en/"
                     title="Ruby Language Homepage"
                   >
@@ -3604,27 +3653,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="React Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://reactjs.org/"
                     title="React Framework Homepage"
                   >
@@ -3672,27 +3722,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Nuxt Framework Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://nuxt.com/"
                     title="Nuxt Framework Homepage"
                   >
@@ -3716,27 +3767,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Node.JS Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://nodejs.org/en/"
                     title="Node.JS Homepage"
                   >
@@ -3777,27 +3829,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="Next.JS Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://nextjs.org/"
                     title="Next.JS Homepage"
                   >
@@ -3849,27 +3902,28 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
-            </div>
-            <div>
               <div
-                className="slide relative h-[100px] w-[var(--slider-item-width)]"
+                className="slide relative h-[100px] w-[200px]"
               >
                 <div
                   className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
                 >
                   <a
                     aria-label="PostgreSQL Homepage"
-                    className="relative z-20 mt-1 flex h-full w-full items-center justify-center rounded-md border border-lightgrey bg-white group-hover:border-0"
+                    className="
+                        relative z-20 mt-1 flex h-full w-full items-center justify-center
+                        rounded-md border border-lightgrey bg-white group-hover:border-0
+                "
                     href="https://www.postgresql.org/"
                     title="PostgreSQL Homepage"
                   >
@@ -3906,13 +3960,13 @@ exports[`renders the Home component correctly 1`] = `
                   </a>
                   <div
                     className="
-                          group-hover:animation-play absolute
-                          top-0 left-0
-                          z-10 h-[calc(100%+2px)]
-                          w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                          opacity-0 transition-all duration-300 ease-linear
-                          group-hover:animate-rotate group-hover:opacity-100
-                       "
+                    group-hover:animation-play absolute
+                    top-0 left-0
+                    z-10 h-[calc(100%+2px)]
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
+                    opacity-0 transition-all duration-300 ease-linear
+                    group-hover:animate-rotate group-hover:opacity-100
+                "
                   />
                 </div>
               </div>
@@ -3920,10 +3974,10 @@ exports[`renders the Home component correctly 1`] = `
           </div>
         </div>
         <div
-          className="to-transparent absolute top-0 left-0 h-full w-5 bg-gradient-to-r from-white via-white dark:from-black sm:w-[50px] md:w-[100px] lg:w-[100px]"
+          className="to-transparent absolute top-0 left-0 h-full h-full w-5 bg-gradient-to-r from-white via-white dark:from-black sm:w-[50px] md:w-[100px] lg:w-[100px]"
         />
         <div
-          className="to-transparent absolute top-0 right-0 h-full w-5 bg-gradient-to-l from-white via-white dark:from-black sm:w-[50px] md:w-[100px] lg:w-[100px]"
+          className="to-transparent absolute top-0 right-0 h-full h-full w-5 bg-gradient-to-l from-white via-white dark:from-black sm:w-[50px] md:w-[100px] lg:w-[100px]"
         />
       </div>
     </section>

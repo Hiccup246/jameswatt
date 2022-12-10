@@ -35,6 +35,8 @@ export default function BookShelfTable({
     </div>
   );
 
+  shortViewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
+
   return (
     <table className="w-full">
       <thead>
@@ -47,7 +49,7 @@ export default function BookShelfTable({
         </tr>
       </thead>
       <tbody>
-        {(shortView ? books : books.slice(0, shortViewBooks)).map(
+        {(shortView ? books.slice(0, shortViewBooks) : books).map(
           (book: Book) => {
             return (
               <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">

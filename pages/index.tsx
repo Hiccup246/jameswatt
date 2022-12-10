@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import IntroSection from "../components/sections/IntroSection";
 import AboutMeSection from "../components/sections/AboutMeSection";
 import WorkExperienceSection from "../components/sections/WorkExperienceSection";
@@ -8,8 +7,6 @@ import BookshelfSection from "../components/sections/BookshelfSection";
 import CreditsSection from "../components/sections/CreditsSection";
 import FooterSection from "../components/sections/FooterSection";
 import TechnologiesSection from "../components/sections/TechnologiesSection";
-import { BOOKS } from "../constants/Books";
-import BookshelfSectionTwo from "../components/sections/BookshelfSectionTwo";
 
 export default function Home() {
   return (
@@ -50,8 +47,7 @@ export default function Home() {
       <ProjectShowcaseSection />
       <TechnologiesSection />
       <AboutMeSection />
-      <BookshelfSection books={BOOKS} />
-      {/* <BookshelfSectionTwo /> */}
+      <BookshelfSection />
       <CreditsSection />
       <FooterSection />
     </div>
