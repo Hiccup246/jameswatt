@@ -148,34 +148,3 @@ test("Correctly renders the book sheld section", async ({ page }) => {
     await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
   ).toBeFalsy();
 });
-
-test("Hovering on a technology icon pauses movement", async ({ page }) => {
-  await page.goto("/");
-  const iconBeforeHover = await page
-    .getByRole("link", { name: "MDN CSS Homepage" })
-    .first();
-  await iconBeforeHover.hover();
-  await page.waitForLoadState("networkidle");
-  const iconAfterHover = await page
-    .getByRole("link", { name: "MDN CSS Homepage" })
-    .first();
-
-  const boundingOne = await iconBeforeHover.boundingBox();
-  const boundingTwo = await iconAfterHover.boundingBox();
-  expect(boundingOne).toBeDefined();
-  expect(boundingTwo).toBeDefined();
-
-  expect(boundingOne?.x).toBe(boundingTwo?.x);
-
-  await page
-    .getByRole("heading", { name: "Technologies I Dabble With" })
-    .click({ delay: 3000 });
-  const iconAfterClick = await page
-    .getByRole("link", { name: "MDN CSS Homepage" })
-    .first();
-
-  const boundingThree = await iconAfterClick.boundingBox();
-  expect(boundingThree).toBeDefined();
-
-  expect(boundingOne?.x).toBeGreaterThan(boundingThree?.x as number);
-});
