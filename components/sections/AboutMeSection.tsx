@@ -54,14 +54,14 @@ export default function AboutMeSection() {
           </a>
         </div>
 
-        <div className="hover group my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5">
-          <div className="duration-150 ease-in hover:text-grey">
+        <div className="relative group my-auto mr-8 w-10">
+          <div className="duration-200 ease-in group-hover:text-grey group-hover:-translate-y-0.5">
             <EmailIcon />
           </div>
 
           <div
             role="tooltip"
-            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
+            className="absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
           >
             <div className="my-3 flex w-full justify-center">
               <a
