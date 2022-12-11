@@ -1,7 +1,9 @@
 import TechnologiesSection from "./TechnologiesSection";
 import renderer from "react-test-renderer";
 
-it("renders the TechnologiesSection correctly", () => {
-  const tree = renderer.create(<TechnologiesSection />).toJSON();
-  expect(tree).toMatchSnapshot();
+describe("TechnologiesSection", () => {
+  it("renders correctly", () => {
+    const tree = renderer.create(<TechnologiesSection />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
