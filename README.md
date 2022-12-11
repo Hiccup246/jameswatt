@@ -24,6 +24,7 @@
 - Deplay and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations
 - Write a beautiful readme with badges for github workflows and maybe code analysis
+- Follow next documentation for how to load test env in jest (https://nextjs.org/docs/basic-features/environment-variables) and playwright
 
 ### Work Experience Section
 
