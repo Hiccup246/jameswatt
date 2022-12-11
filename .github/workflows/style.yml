@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependancies
         run: pnpm install
 
-      - name: Run Type Check
+      - name: Build Project (includes type check + eslint)
         run: pnpm run build
 
       - name: Run Prettier
