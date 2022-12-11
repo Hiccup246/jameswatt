@@ -90,42 +90,8 @@ test.describe("Work experience component", () => {
   });
 });
 
-test("Correctly renders the book sheld section", async ({ page }) => {
-  await page.getByRole("heading", { name: "Books I'm Involved With" }).click();
-  await page.waitForLoadState("networkidle");
-
-  await expect(
-    await page
-      .getByRole("heading", {
-        name: "The Black Swan: The Impact of the Highly Improbable",
-      })
-      .isVisible()
-  ).toBeTruthy();
-  await expect(
-    await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
-  ).toBeFalsy();
-
-  await page.getByRole("button", { name: "Show More/Less Books" }).click();
-  await expect(
-    await page
-      .getByRole("heading", {
-        name: "The Black Swan: The Impact of the Highly Improbable",
-      })
-      .isVisible()
-  ).toBeTruthy();
-  await page.getByRole("heading", { name: "The Power of Now" }).click();
-  await expect(
-    await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
-  ).toBeTruthy();
-
-  await page.getByRole("button", { name: "Show More/Less Books" }).click();
-  await expect(
-    await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
-  ).toBeFalsy();
-});
-
 test.describe("Bookshelf component", () => {
-  test("Displays the first 4 books", async ({ page }) => {
+  test("Displays 4 books", async ({ page }) => {
     const bookTitleOne = page.getByRole("cell", {
       name: "The Black Swan: The Impact of the Highly Improbable",
     });
@@ -141,5 +107,51 @@ test.describe("Bookshelf component", () => {
     await expect(bookTitleTwo).toBeVisible();
     await expect(bookTitleThree).toBeVisible();
     await expect(bookTitleFour).toBeVisible();
+  });
+
+  test("Does not display more than 4 books ", async ({ page }) => {
+    const bookTitleFive = page.getByRole("cell", {
+      name: "Brave New World",
+    });
+    const bookTitleLast = page.getByRole("cell", {
+      name: "The Power of Now",
+    });
+
+    await expect(bookTitleFive).toBeHidden();
+    await expect(bookTitleLast).toBeHidden();
+  });
+
+  test("Should allow all books to be displayed", async ({ page }) => {
+    await test.step("Should allow the 'Show More' to be clicked", async () => {
+      await page.getByRole("button", { name: "Show More Books" }).click();
+    });
+
+    const bookTitleFive = page.getByRole("cell", {
+      name: "Brave New World",
+    });
+    const lastBook = page.getByRole("cell", { name: "The Power of Now" });
+
+    await expect(bookTitleFive).toBeVisible();
+    await expect(lastBook).toBeVisible();
+  });
+
+  test("Should allow less books to be displayed if all are shown", async ({
+    page,
+  }) => {
+    await test.step("Should allow the 'Show More' button to be clicked", async () => {
+      await page.getByRole("button", { name: "Show More Books" }).click();
+    });
+
+    await test.step("Should allow the 'Show Less' button to be clicked", async () => {
+      await page.getByRole("button", { name: "Show Less Books" }).click();
+    });
+
+    const bookTitleFive = page.getByRole("cell", {
+      name: "Brave New World",
+    });
+    const lastBook = page.getByRole("cell", { name: "The Power of Now" });
+
+    await expect(bookTitleFive).toBeHidden();
+    await expect(lastBook).toBeHidden();
   });
 });

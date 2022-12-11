@@ -237,7 +237,7 @@ exports[`renders the BookshelfSection correctly 1`] = `
         </tbody>
       </table>
       <button
-        aria-label="Show More/Less Books"
+        aria-label="Show More Books"
         className="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"
         onClick={[Function]}
       >
