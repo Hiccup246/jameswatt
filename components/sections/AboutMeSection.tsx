@@ -61,7 +61,7 @@ export default function AboutMeSection() {
 
           <div
             role="tooltip"
-            className="absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
+            className="invisible absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 duration-200 group-hover:visible group-hover:opacity-100"
           >
             <div className="relative">
               <div className="absolute right-[90px] -top-[20px] z-10 h-4 w-4 rotate-45 bg-brown" />

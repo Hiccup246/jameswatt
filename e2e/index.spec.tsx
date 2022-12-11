@@ -155,3 +155,32 @@ test.describe("Bookshelf component", () => {
     await expect(lastBook).toBeHidden();
   });
 });
+
+test.describe("About me component", () => {
+  test("Email tooltip should not be displayed", async ({ page }) => {
+    const emailTooltip = page.getByRole("tooltip", {
+      name: "Email Address Copy email",
+    });
+
+    await expect(emailTooltip).toBeHidden();
+  });
+
+  test("Email tooltip should display when the email icon is hovered over", async ({
+    page,
+  }) => {
+    const emailIcon = page
+      .locator("section")
+      .filter({
+        hasText:
+          "Who am I?I'm a software engineer based out of London, England and an xpat of New",
+      })
+      .locator("svg")
+      .nth(2);
+    await emailIcon.hover();
+
+    const emailTooltip = page.getByRole("tooltip", {
+      name: "Email Address Copy email",
+    });
+    await expect(emailTooltip).toBeVisible();
+  });
+});
