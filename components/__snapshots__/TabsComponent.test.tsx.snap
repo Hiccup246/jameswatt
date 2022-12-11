@@ -1,5 +1,276 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TabsComponent When on a large device renders correctly when given multiple children 1`] = `
+<div
+  className="flex w-full max-small:block"
+>
+  <div
+    className="
+            relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
+            max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
+        "
+  >
+    <button
+      aria-label="Panel 1"
+      className="
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
+                        max-small:justify-center text-black
+                    "
+      onClick={[Function]}
+    >
+      Panel 1
+    </button>
+    <button
+      aria-label="Panel 2"
+      className="
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
+                        max-small:justify-center 
+                    "
+      onClick={[Function]}
+    >
+      Panel 2
+    </button>
+    <div
+      className="
+              transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
+              visible absolute top-0 left-0
+              z-10 h-[40px]
+              w-[85px] rounded bg-brown
+              delay-100 duration-200 max-small:top-auto max-small:bottom-0
+              max-small:z-20
+            "
+      style={
+        {
+          "transform": "translateY(calc(10px)",
+        }
+      }
+    />
+    <div
+      className="
+            visible absolute top-0 left-0 ml-1 h-full
+            w-0.5 rounded-sm
+            bg-black max-small:hidden
+          "
+    />
+  </div>
+  <div
+    className="relative ml-5 w-full max-small:ml-0"
+  >
+    <div
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
+    >
+      <div
+        aria-label="Panel 1"
+      >
+        First Panel
+      </div>
+    </div>
+    <div
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+    >
+      <div
+        aria-label="Panel 2"
+      >
+        Second Panel
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TabsComponent When on a small device renders correctly when given multiple children 1`] = `
+<div
+  className="flex w-full max-small:block"
+>
+  <div
+    className="
+            relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
+            max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
+        "
+  >
+    <button
+      aria-label="Panel 1"
+      className="
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
+                        max-small:justify-center text-black
+                    "
+      onClick={[Function]}
+    >
+      Panel 1
+    </button>
+    <button
+      aria-label="Panel 2"
+      className="
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
+                        max-small:justify-center 
+                    "
+      onClick={[Function]}
+    >
+      Panel 2
+    </button>
+    <div
+      className="
+              transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
+              visible absolute top-0 left-0
+              z-10 h-[40px]
+              w-[85px] rounded bg-brown
+              delay-100 duration-200 max-small:top-auto max-small:bottom-0
+              max-small:z-20
+            "
+      style={
+        {
+          "height": "2px",
+          "transform": "",
+        }
+      }
+    />
+    <div
+      className="
+            visible absolute top-0 left-0 ml-1 h-full
+            w-0.5 rounded-sm
+            bg-black max-small:hidden
+          "
+    />
+  </div>
+  <div
+    className="relative ml-5 w-full max-small:ml-0"
+  >
+    <div
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
+    >
+      <div
+        aria-label="Panel 1"
+      >
+        First Panel
+      </div>
+    </div>
+    <div
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+    >
+      <div
+        aria-label="Panel 2"
+      >
+        Second Panel
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TabsComponent renders correctly when given multiple children 1`] = `
+<div
+  className="flex w-full max-small:block"
+>
+  <div
+    className="
+            relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
+            max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
+        "
+  >
+    <button
+      aria-label="Panel 1"
+      className="
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
+                        max-small:justify-center text-black
+                    "
+      onClick={[Function]}
+    >
+      Panel 1
+    </button>
+    <button
+      aria-label="Panel 2"
+      className="
+                        bg-transparent relative z-20
+                        flex
+                        w-fit cursor-pointer
+                        whitespace-nowrap px-5 py-2
+                        text-black focus-visible:border-none
+                        max-small:mb-0
+                        max-small:shrink-0 max-small:grow-0
+                        max-small:justify-center 
+                    "
+      onClick={[Function]}
+    >
+      Panel 2
+    </button>
+    <div
+      className="
+              transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
+              visible absolute top-0 left-0
+              z-10 h-[40px]
+              w-[85px] rounded bg-brown
+              delay-100 duration-200 max-small:top-auto max-small:bottom-0
+              max-small:z-20
+            "
+      style={
+        {
+          "transform": "translateY(calc(10px)",
+        }
+      }
+    />
+    <div
+      className="
+            visible absolute top-0 left-0 ml-1 h-full
+            w-0.5 rounded-sm
+            bg-black max-small:hidden
+          "
+    />
+  </div>
+  <div
+    className="relative ml-5 w-full max-small:ml-0"
+  >
+    <div
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
+    >
+      <div
+        aria-label="Panel 1"
+      >
+        First Panel
+      </div>
+    </div>
+    <div
+      className="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+    >
+      <div
+        aria-label="Panel 2"
+      >
+        Second Panel
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`renders the TabsComponent correctly 1`] = `
 <div
   className="flex w-full max-small:block"

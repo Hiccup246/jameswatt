@@ -4,159 +4,247 @@ import TabsComponent, {
 } from "./TabsComponent";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 
-test("renders the TabsComponent correctly", () => {
-  const tree = renderer
-    .create(
-      <TabsComponent>
-        <div aria-label="Panel 1" key="Panel 1">
-          First Panel
-        </div>
-        <div aria-label="Panel 2" key="Panel 2">
-          Second Panel
-        </div>
-      </TabsComponent>
-    )
-    .toJSON();
+describe("TabsComponent", () => {
+  describe("When on a large device", () => {
+    beforeAll(() => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: false,
+        })),
+      });
+    });
 
-  expect(tree).toMatchSnapshot();
-});
+    it("renders correctly when given multiple children", () => {
+      const tree = renderer
+        .create(
+          <TabsComponent>
+            <div aria-label="Panel 1" key="Panel 1">
+              First Panel
+            </div>
+            <div aria-label="Panel 2" key="Panel 2">
+              Second Panel
+            </div>
+          </TabsComponent>
+        )
+        .toJSON();
 
-test("renders the first panel and all the correct tab buttons", () => {
-  Object.defineProperty(window, "matchMedia", {
-    configurable: true,
-    writable: true,
-    value: jest.fn().mockImplementation((query) => ({
-      matches: false,
-    })),
-  });
+      expect(tree).toMatchSnapshot();
+    });
 
-  render(
-    <TabsComponent>
-      <div aria-label="Panel 1" key="Panel 1">
-        First Panel
-      </div>
-      <div aria-label="Panel 2" key="Panel 2">
-        Second Panel
-      </div>
-    </TabsComponent>
-  );
+    it("renders the correct tab buttons", () => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: false,
+        })),
+      });
 
-  const panelOneText = screen.getByText("First Panel");
-  const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
-  const tabButtonTwo = screen.getByRole("button", { name: "Panel 2" });
+      render(
+        <TabsComponent>
+          <div aria-label="Panel 1" key="Panel 1">
+            First Panel
+          </div>
+          <div aria-label="Panel 2" key="Panel 2">
+            Second Panel
+          </div>
+        </TabsComponent>
+      );
 
-  expect(panelOneText).toBeInTheDocument();
-  expect(tabButtonOne).toBeInTheDocument();
-  expect(tabButtonTwo).toBeInTheDocument();
-});
+      const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
+      const tabButtonTwo = screen.getByRole("button", { name: "Panel 2" });
 
-test("when the second tab button is clicked it renders the second job", async () => {
-  Object.defineProperty(window, "matchMedia", {
-    configurable: true,
-    writable: true,
-    value: jest.fn().mockImplementation((query) => ({
-      matches: false,
-    })),
-  });
+      expect(tabButtonOne).toBeInTheDocument();
+      expect(tabButtonTwo).toBeInTheDocument();
+    });
 
-  render(
-    <TabsComponent>
-      <div aria-label="Panel 1" key="Panel 1">
-        First Panel
-      </div>
-      <div aria-label="Panel 2" key="Panel 2">
-        Second Panel
-      </div>
-    </TabsComponent>
-  );
+    it("renders the correct tab panels", () => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: false,
+        })),
+      });
 
-  await userEvent.click(screen.getByRole("button", { name: "Panel 2" }));
+      render(
+        <TabsComponent>
+          <div aria-label="Panel 1" key="Panel 1">
+            First Panel
+          </div>
+          <div aria-label="Panel 2" key="Panel 2">
+            Second Panel
+          </div>
+        </TabsComponent>
+      );
 
-  const job = screen.getByText("Panel 2");
+      const panelOneText = screen.getByText("First Panel");
+      const panelTwoText = screen.getByText("Second Panel");
 
-  expect(job).toBeInTheDocument();
-});
-
-describe("calcTabButtonTranslation on a large device", () => {
-  beforeAll(() => {
-    Object.defineProperty(window, "matchMedia", {
-      configurable: true,
-      writable: true,
-      value: jest.fn().mockImplementation((query) => ({
-        matches: false,
-      })),
+      expect(panelOneText).toBeInTheDocument();
+      expect(panelTwoText).toBeInTheDocument();
     });
   });
 
-  test("calcTabButtonTranslation called with 5 and 8", () => {
-    expect(calcTabButtonTranslation(5, 8)).toBe("translateY(8px)");
-  });
+  describe("When on a small device", () => {
+    beforeAll(() => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: true,
+        })),
+      });
+    });
 
-  test("calcTabButtonTranslation called with 0 and 0", () => {
-    expect(calcTabButtonTranslation(0, 0)).toBe("translateY(0px)");
+    it("renders correctly when given multiple children", () => {
+      const tree = renderer
+        .create(
+          <TabsComponent>
+            <div aria-label="Panel 1" key="Panel 1">
+              First Panel
+            </div>
+            <div aria-label="Panel 2" key="Panel 2">
+              Second Panel
+            </div>
+          </TabsComponent>
+        )
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    it("renders the correct tab buttons", () => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: false,
+        })),
+      });
+
+      render(
+        <TabsComponent>
+          <div aria-label="Panel 1" key="Panel 1">
+            First Panel
+          </div>
+          <div aria-label="Panel 2" key="Panel 2">
+            Second Panel
+          </div>
+        </TabsComponent>
+      );
+
+      const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
+      const tabButtonTwo = screen.getByRole("button", { name: "Panel 2" });
+
+      expect(tabButtonOne).toBeInTheDocument();
+      expect(tabButtonTwo).toBeInTheDocument();
+    });
+
+    it("renders the correct tab panels", () => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: false,
+        })),
+      });
+
+      render(
+        <TabsComponent>
+          <div aria-label="Panel 1" key="Panel 1">
+            First Panel
+          </div>
+          <div aria-label="Panel 2" key="Panel 2">
+            Second Panel
+          </div>
+        </TabsComponent>
+      );
+
+      const panelOneText = screen.getByText("First Panel");
+      const panelTwoText = screen.getByText("Second Panel");
+
+      expect(panelOneText).toBeInTheDocument();
+      expect(panelTwoText).toBeInTheDocument();
+    });
   });
 });
 
-describe("calcTabButtonTranslation on a small device", () => {
-  beforeAll(() => {
-    Object.defineProperty(window, "matchMedia", {
-      configurable: true,
-      writable: true,
-      value: jest.fn().mockImplementation((query) => ({
-        matches: true,
-      })),
+describe("calcTabButtonTranslation", () => {
+  describe("When on a large device", () => {
+    beforeAll(() => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: false,
+        })),
+      });
+    });
+
+    it("returns the correct Y translation when called with 5 and 8", () => {
+      expect(calcTabButtonTranslation(5, 8)).toBe("translateY(8px)");
+    });
+
+    it("returns the correct Y translation when called with 0 and 0", () => {
+      expect(calcTabButtonTranslation(0, 0)).toBe("translateY(0px)");
     });
   });
 
-  test("calcTabButtonTranslation called with 10 and 3", () => {
-    expect(calcTabButtonTranslation(10, 3)).toBe("translateX(10px)");
+  describe("When on a small device", () => {
+    beforeAll(() => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true,
+        writable: true,
+        value: jest.fn().mockImplementation((query) => ({
+          matches: true,
+        })),
+      });
+    });
+
+    it("returns the correct X translation when called with 10 and 3", () => {
+      expect(calcTabButtonTranslation(10, 3)).toBe("translateX(10px)");
+    });
+
+    it("returns the correct X translation when called with 0 and 0", () => {
+      expect(calcTabButtonTranslation(0, 0)).toBe("translateX(0px)");
+    });
+  });
+});
+
+describe("largestChildHeight", () => {
+  it("returns its default value when passed an empty element", () => {
+    const mockElement: HTMLDivElement = document.createElement("div");
+    expect(largestChildHeight(mockElement)).toBe(1000);
   });
 
-  test("calcTabButtonTranslation called with 0 and 0", () => {
-    expect(calcTabButtonTranslation(0, 0)).toBe("translateX(0px)");
+  it("returns the height of the child element when given an element with one inner child", () => {
+    const mockElement: HTMLDivElement = document.createElement("div");
+    const mockChild: HTMLDivElement = document.createElement("div");
+    jest.spyOn(mockChild, "clientHeight", "get").mockImplementation(() => 100);
+    mockElement.appendChild(mockChild);
+
+    expect(largestChildHeight(mockElement)).toBe(100);
   });
-});
 
-test("largestChildHeight called with empty div", () => {
-  const mockElement: HTMLDivElement = document.createElement("div");
-  expect(largestChildHeight(mockElement)).toBe(1000);
-});
+  it("returns the height of the largest child when given an element with multiple inner children", () => {
+    const mockElement: HTMLDivElement = document.createElement("div");
+    const mockChildOne: HTMLDivElement = document.createElement("div");
+    const mockChildTwo: HTMLDivElement = document.createElement("div");
 
-test("largestChildHeight called with div that has one experience panel", () => {
-  const mockElement: HTMLDivElement = document.createElement("div");
-  const mockChild: HTMLDivElement = document.createElement("div");
-  jest.spyOn(mockChild, "clientHeight", "get").mockImplementation(() => 100);
-  mockElement.appendChild(mockChild);
+    jest
+      .spyOn(mockChildOne, "clientHeight", "get")
+      .mockImplementation(() => 100);
+    mockElement.appendChild(mockChildOne);
 
-  expect(largestChildHeight(mockElement)).toBe(100);
-});
+    jest
+      .spyOn(mockChildTwo, "clientHeight", "get")
+      .mockImplementation(() => 200);
+    mockElement.appendChild(mockChildTwo);
 
-test("largestChildHeight called with div that has two experience panels", () => {
-  const mockElement: HTMLDivElement = document.createElement("div");
-  const mockChildOne: HTMLDivElement = document.createElement("div");
-  const mockChildTwo: HTMLDivElement = document.createElement("div");
-
-  jest.spyOn(mockChildOne, "clientHeight", "get").mockImplementation(() => 100);
-  mockElement.appendChild(mockChildOne);
-
-  jest.spyOn(mockChildTwo, "clientHeight", "get").mockImplementation(() => 200);
-  mockElement.appendChild(mockChildTwo);
-
-  expect(largestChildHeight(mockElement)).toBe(200);
-});
-
-test("largestChildHeight called with div that has two experience panels with the same heights", () => {
-  const mockElement: HTMLDivElement = document.createElement("div");
-  const mockChildOne: HTMLDivElement = document.createElement("div");
-  const mockChildTwo: HTMLDivElement = document.createElement("div");
-
-  jest.spyOn(mockChildOne, "clientHeight", "get").mockImplementation(() => 10);
-  mockElement.appendChild(mockChildOne);
-
-  jest.spyOn(mockChildTwo, "clientHeight", "get").mockImplementation(() => 10);
-  mockElement.appendChild(mockChildOne);
-
-  expect(largestChildHeight(mockElement)).toBe(10);
+    expect(largestChildHeight(mockElement)).toBe(200);
+  });
 });
