@@ -103,7 +103,7 @@ export default function IntroSection() {
   }
 
   return (
-    <div className="flex h-full w-full flex-col bg-brown">
+    <section className="flex h-full w-full flex-col bg-brown">
       <div
         className={`
              grid h-fit w-full grid-cols-1
@@ -195,6 +195,6 @@ export default function IntroSection() {
           transform="translate(0, 50)"
         ></polygon>
       </svg>
-    </div>
+    </section>
   );
 }

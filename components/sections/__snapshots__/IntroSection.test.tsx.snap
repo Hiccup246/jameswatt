@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the IntroSection correctly 1`] = `
-<div
+<section
   className="flex h-full w-full flex-col bg-brown"
 >
   <div
@@ -158,5 +158,5 @@ exports[`renders the IntroSection correctly 1`] = `
       transform="translate(0, 50)"
     />
   </svg>
-</div>
+</section>
 `;
