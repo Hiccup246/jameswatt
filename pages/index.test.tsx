@@ -1,4 +1,4 @@
-import Home from "./index";
+import Home from "./index.page";
 import renderer from "react-test-renderer";
 
 test("renders the Home component correctly", () => {
