@@ -64,7 +64,7 @@ export default function AboutMeSection() {
             className="absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
           >
             <div className="relative">
-              <div className="absolute right-[90px] -top-[22px] bottom-2 z-10 h-4 w-4 rotate-45 bg-brown" />
+              <div className="absolute right-[90px] -top-[20px] z-10 h-4 w-4 rotate-45 bg-brown" />
 
               <div className="z-20 my-3 flex w-full justify-center">
                 <a
