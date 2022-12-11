@@ -61,7 +61,7 @@ export default function AboutMeSection() {
 
           <div
             role="tooltip"
-            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-700 group-hover:opacity-100"
+            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
           >
             <div className="my-3 flex w-full justify-center">
               <a

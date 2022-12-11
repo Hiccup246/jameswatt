@@ -82,7 +82,7 @@ exports[`renders the AboutMeSection correctly 1`] = `
           </svg>
         </div>
         <div
-          className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-700 group-hover:opacity-100"
+          className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
           role="tooltip"
         >
           <div

@@ -4063,7 +4063,7 @@ exports[`renders the Home component correctly 1`] = `
             </svg>
           </div>
           <div
-            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-700 group-hover:opacity-100"
+            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
             role="tooltip"
           >
             <div
@@ -4349,7 +4349,7 @@ exports[`renders the Home component correctly 1`] = `
           </tbody>
         </table>
         <button
-          aria-label="Show More/Less Books"
+          aria-label="Show More Books"
           className="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"
           onClick={[Function]}
         >
