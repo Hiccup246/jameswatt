@@ -123,3 +123,23 @@ test("Correctly renders the book sheld section", async ({ page }) => {
     await page.getByRole("heading", { name: "The Power of Now" }).isVisible()
   ).toBeFalsy();
 });
+
+test.describe("Bookshelf component", () => {
+  test("Displays the first 4 books", async ({ page }) => {
+    const bookTitleOne = page.getByRole("cell", {
+      name: "The Black Swan: The Impact of the Highly Improbable",
+    });
+    const bookTitleTwo = page.getByRole("cell", {
+      name: "The Pragmatic Programmer: From Journeyman to Master",
+    });
+    const bookTitleThree = page.getByRole("cell", {
+      name: "Wordslut: A Feminist Guide to Taking Back the English Language",
+    });
+    const bookTitleFour = page.getByRole("cell", { name: "Steve Jobs" });
+
+    await expect(bookTitleOne).toBeVisible();
+    await expect(bookTitleTwo).toBeVisible();
+    await expect(bookTitleThree).toBeVisible();
+    await expect(bookTitleFour).toBeVisible();
+  });
+});
