@@ -20,12 +20,8 @@ jobs:
         run: pnpm install
 
       - name: Run Type Check
-        run: pnpm run type-check
+        run: pnpm run build
 
       - name: Run Prettier
         if: ${{ success() }}
         run: pnpm run prettier
-
-      - name: Run Eslint
-        if: ${{ success() }}
-        run: pnpm run lint
