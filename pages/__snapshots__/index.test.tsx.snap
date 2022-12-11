@@ -4047,10 +4047,10 @@ exports[`renders the Home component correctly 1`] = `
           </a>
         </div>
         <div
-          className="hover group my-auto mr-8 w-10 duration-200 ease-in hover:-translate-y-0.5"
+          className="group relative my-auto mr-8 w-10"
         >
           <div
-            className="duration-150 ease-in hover:text-grey"
+            className="duration-200 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
           >
             <svg
               viewBox="0 0 512 512"
@@ -4063,28 +4063,35 @@ exports[`renders the Home component correctly 1`] = `
             </svg>
           </div>
           <div
-            className="absolute top-[60px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
+            className="absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
             role="tooltip"
           >
             <div
-              className="my-3 flex w-full justify-center"
+              className="relative"
             >
-              <a
-                aria-label="Email Address"
-                className="mr-2 p-1 hover:underline"
-                href="mailto:james@jameswatt.io"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="James Watt Email"
+              <div
+                className="absolute right-[90px] -top-[22px] bottom-2 z-10 h-4 w-4 rotate-45 bg-brown"
+              />
+              <div
+                className="z-20 my-3 flex w-full justify-center"
               >
-                Open in email
-              </a>
-              <button
-                className="ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
-                onClick={[Function]}
-              >
-                Copy email
-              </button>
+                <a
+                  aria-label="Email Address"
+                  className="mr-2 p-1 hover:underline"
+                  href="mailto:james@jameswatt.io"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="James Watt Email"
+                >
+                  Open in email
+                </a>
+                <button
+                  className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
+                  onClick={[Function]}
+                >
+                  Copy email
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -54,8 +54,8 @@ export default function AboutMeSection() {
           </a>
         </div>
 
-        <div className="relative group my-auto mr-8 w-10">
-          <div className="duration-200 ease-in group-hover:text-grey group-hover:-translate-y-0.5">
+        <div className="group relative my-auto mr-8 w-10">
+          <div className="duration-200 ease-in group-hover:-translate-y-0.5 group-hover:text-grey">
             <EmailIcon />
           </div>
 
@@ -63,24 +63,28 @@ export default function AboutMeSection() {
             role="tooltip"
             className="absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 group-hover:opacity-100"
           >
-            <div className="my-3 flex w-full justify-center">
-              <a
-                className="mr-2 p-1 hover:underline"
-                href="mailto:james@jameswatt.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Email Address"
-                title="James Watt Email"
-              >
-                Open in email
-              </a>
+            <div className="relative">
+              <div className="absolute right-[90px] -top-[22px] bottom-2 z-10 h-4 w-4 rotate-45 bg-brown" />
 
-              <button
-                onClick={() => copyToClipboard("james@jameswatt.io")}
-                className="ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
-              >
-                Copy email
-              </button>
+              <div className="z-20 my-3 flex w-full justify-center">
+                <a
+                  className="mr-2 p-1 hover:underline"
+                  href="mailto:james@jameswatt.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Email Address"
+                  title="James Watt Email"
+                >
+                  Open in email
+                </a>
+
+                <button
+                  onClick={() => copyToClipboard("james@jameswatt.io")}
+                  className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
+                >
+                  Copy email
+                </button>
+              </div>
             </div>
           </div>
         </div>
