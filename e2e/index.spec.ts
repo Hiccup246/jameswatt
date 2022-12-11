@@ -1,28 +1,36 @@
 import { test, expect } from "@playwright/test";
 
-test("Index page displays all sections", async ({ page }) => {
+test.beforeEach(async ({ page }) => {
   await page.goto("/");
-  await expect(
-    page.getByRole("heading", { name: "My Experience" })
-  ).not.toBeNull();
-  await expect(
-    page.getByRole("heading", { name: "Project Showcase" })
-  ).not.toBeNull();
-  await expect(
-    page.getByRole("heading", { name: "Technologies I Dabble With" })
-  ).not.toBeNull();
-  await expect(page.getByRole("heading", { name: "Who am I?" })).not.toBeNull();
-  await expect(
-    page.getByRole("heading", { name: "Books I'm Involved With" })
-  ).not.toBeNull();
-  await expect(
-    page.getByRole("heading", { name: "The Work Which Inspired This Site" })
-  ).not.toBeNull();
+});
+
+test("Home page displays the correct headers", async ({ page }) => {
+  const workExperienceHeader = page.getByRole("heading", {
+    name: "My Experience",
+  });
+  const projectShowcaseHeader = page.getByRole("heading", {
+    name: "Project Showcase",
+  });
+  const technologiesHeader = page.getByRole("heading", {
+    name: "Technologies I Dabble With",
+  });
+  const aboutMeHeader = page.getByRole("heading", { name: "Who am I?" });
+  const bookshelfHeader = page.getByRole("heading", {
+    name: "Books I'm Involved With",
+  });
+  const creditsHeader = page.getByRole("heading", {
+    name: "The Work Which Inspired This Site",
+  });
+
+  await expect(workExperienceHeader).toBeVisible();
+  await expect(projectShowcaseHeader).toBeVisible();
+  await expect(technologiesHeader).toBeVisible();
+  await expect(aboutMeHeader).toBeVisible();
+  await expect(bookshelfHeader).toBeVisible();
+  await expect(creditsHeader).toBeVisible();
 });
 
 test("Correctly renders the work experience section", async ({ page }) => {
-  await page.goto("/");
-
   await page.getByRole("heading", { name: "My Experience" }).click();
   await page.waitForLoadState("networkidle");
 
@@ -118,7 +126,6 @@ test("Correctly renders the work experience section", async ({ page }) => {
 });
 
 test("Correctly renders the book sheld section", async ({ page }) => {
-  await page.goto("/");
   await page.getByRole("heading", { name: "Books I'm Involved With" }).click();
   await page.waitForLoadState("networkidle");
 
