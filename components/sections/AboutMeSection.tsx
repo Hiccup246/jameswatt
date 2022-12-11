@@ -5,7 +5,9 @@ import ResumeIcon from "../Icons/ResumeIcon";
 import SectionLayout from "../layouts/SectionLayout";
 
 export default function AboutMeSection() {
-  function copyToClipboard(text: string): void {
+  function copyToClipboard(text: string | undefined): void {
+    if (text == undefined) return;
+
     navigator.clipboard.writeText(text);
   }
 
@@ -69,7 +71,7 @@ export default function AboutMeSection() {
               <div className="z-20 my-3 flex w-full justify-center">
                 <a
                   className="mr-2 p-1 hover:underline"
-                  href="mailto:james@jameswatt.io"
+                  href={`mailto:${process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Email Address"
@@ -79,7 +81,11 @@ export default function AboutMeSection() {
                 </a>
 
                 <button
-                  onClick={() => copyToClipboard("james@jameswatt.io")}
+                  onClick={() =>
+                    copyToClipboard(
+                      process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL
+                    )
+                  }
                   className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:scale-105"
                 >
                   Copy email
