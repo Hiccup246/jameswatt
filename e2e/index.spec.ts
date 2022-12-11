@@ -30,99 +30,64 @@ test("Home page displays the correct headers", async ({ page }) => {
   await expect(creditsHeader).toBeVisible();
 });
 
-test("Correctly renders the work experience section", async ({ page }) => {
-  await page.getByRole("heading", { name: "My Experience" }).click();
-  await page.waitForLoadState("networkidle");
+test.describe("Work experience component", () => {
+  test("Correctly displays all tab buttons", async ({ page }) => {
+    const tabButtonOne = page.getByRole("button", { name: "AplyiD" }).first();
+    const tabButtonTwo = page.getByRole("button", { name: "AplyiD" }).nth(1);
+    const tabButtonThree = page.getByRole("button", { name: "Hypebeat" });
+    const tabButtonFour = page.getByRole("button", { name: "Halter" });
+    const tabButtonFive = page.getByRole("button", { name: "BNZ" });
+    const tabButtonSix = page.getByRole("button", { name: "VUW" });
 
-  await expect(
-    await page
-      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
-      .isVisible()
-  ).toBeTruthy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
-      .isVisible()
-  ).toBeFalsy();
+    await expect(tabButtonOne).toBeVisible();
+    await expect(tabButtonTwo).toBeVisible();
+    await expect(tabButtonThree).toBeVisible();
+    await expect(tabButtonFour).toBeVisible();
+    await expect(tabButtonFive).toBeVisible();
+    await expect(tabButtonSix).toBeVisible();
+  });
 
-  await page.getByRole("button", { name: "AplyiD" }).nth(1).click();
-  await page.waitForLoadState("networkidle");
-  await expect(
-    await page
-      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
-      .isVisible()
-  ).toBeTruthy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
-      .isVisible()
-  ).toBeFalsy();
+  test("Displays default selected work experience", async ({ page }) => {
+    const firstWorkExperienceHeader = page.getByRole("heading", {
+      name: "UK Team Lead @ AplyiD",
+    });
 
-  await page.getByRole("button", { name: "Hypebeat" }).click();
-  await page.waitForLoadState("networkidle");
-  await expect(
-    await page
-      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
-      .isVisible()
-  ).toBeTruthy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
-      .isVisible()
-  ).toBeFalsy();
+    await expect(firstWorkExperienceHeader).toBeDefined();
+    await expect(firstWorkExperienceHeader).toBeVisible();
+  });
 
-  await page.getByRole("button", { name: "Halter" }).click();
-  await page.waitForLoadState("networkidle");
-  await expect(
-    await page
-      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ AplyiD" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Software Engineer @ Hypebeat" })
-      .isVisible()
-  ).toBeFalsy();
-  await expect(
-    await page
-      .getByRole("heading", { name: "Intern Software Developer @ Halter" })
-      .isVisible()
-  ).toBeTruthy();
+  test("Hides non selected work experiences", async ({ page }) => {
+    const secondWorkExperience = page.getByRole("heading", {
+      name: "Software Engineer @ AplyiD",
+    });
+    const thirdWorkExperience = page.getByRole("heading", {
+      name: "Software Engineer @ Hypebeat",
+    });
+
+    await expect(secondWorkExperience).toBeHidden();
+    await expect(thirdWorkExperience).toBeHidden();
+  });
+
+  test("Should allow other work experiences to be selected", async ({
+    page,
+  }) => {
+    const firstWorkExperienceHeader = page.getByRole("heading", {
+      name: "UK Team Lead @ AplyiD",
+    });
+    const thirdWorkExperience = page.getByRole("heading", {
+      name: "Software Engineer @ Hypebeat",
+    });
+
+    await test.step("Should allow the third work experience to the selected", async () => {
+      await page.getByRole("button", { name: "Hypebeat" }).click();
+    });
+
+    await test.step("Hides the previously selected work experience", async () => {
+      await expect(firstWorkExperienceHeader).toBeHidden();
+    });
+
+    await expect(thirdWorkExperience).toBeVisible();
+  });
 });
 
 test("Correctly renders the book sheld section", async ({ page }) => {
