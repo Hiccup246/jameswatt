@@ -8,8 +8,8 @@ export default function SliderComponent({
   slideRight?: boolean;
 }) {
   const slideAnimation = !!slideRight
-    ? "animate-scroll-v2-reverse"
-    : "animate-scroll-v2";
+    ? "animate-scroll-reverse"
+    : "animate-scroll";
 
   return (
     <div className="container relative w-full overflow-hidden">

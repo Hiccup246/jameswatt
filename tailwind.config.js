@@ -36,13 +36,6 @@ module.exports = {
           "transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s",
       },
       keyframes: {
-        scroll: {
-          "0%": { transform: "translate(0)" },
-          to: {
-            transform:
-              "translate(calc(var(--slider-item-width)*-1*var(--slider-items)))",
-          },
-        },
         "gradient-rotate": {
           "0%": {
             "--gradient-angle": "360deg",
@@ -51,17 +44,15 @@ module.exports = {
             "--gradient-angle": "0deg",
           },
         },
-        "scroll-v2": {
+        scroll: {
           "0%": { transform: "translate(0)" },
           to: { transform: "translate(-50%)" },
         },
       },
       animation: {
+        rotate: "gradient-rotate 5s linear 0s infinite reverse",
         scroll: "scroll 30s linear 3s infinite",
         "scroll-reverse": "scroll 30s linear 3s infinite reverse",
-        rotate: "gradient-rotate 5s linear 0s infinite reverse",
-        "scroll-v2": "scroll-v2 30s linear 3s infinite",
-        "scroll-v2-reverse": "scroll-v2 30s linear 3s infinite reverse",
       },
     },
   },

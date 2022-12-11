@@ -1224,7 +1224,7 @@ exports[`renders the Home component correctly 1`] = `
             className="relative m-auto h-fit w-full"
           >
             <div
-              className="slide-track hover:animation-pause flex w-fit animate-scroll-v2"
+              className="slide-track hover:animation-pause flex w-fit animate-scroll"
             >
               <div
                 className="slide relative h-[100px] w-[200px]"
@@ -2068,7 +2068,7 @@ exports[`renders the Home component correctly 1`] = `
             className="relative m-auto h-fit w-full"
           >
             <div
-              className="slide-track hover:animation-pause flex w-fit animate-scroll-v2-reverse"
+              className="slide-track hover:animation-pause flex w-fit animate-scroll-reverse"
             >
               <div
                 className="slide relative h-[100px] w-[200px]"
@@ -3126,7 +3126,7 @@ exports[`renders the Home component correctly 1`] = `
             className="relative m-auto h-fit w-full"
           >
             <div
-              className="slide-track hover:animation-pause flex w-fit animate-scroll-v2"
+              className="slide-track hover:animation-pause flex w-fit animate-scroll"
             >
               <div
                 className="slide relative h-[100px] w-[200px]"
