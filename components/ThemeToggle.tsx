@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MoonIcon from "./Icons/MoonIcon";
 import SunIcon from "./Icons/SunIcon";
 
-export function setDOMTheme(darkMode: boolean | undefined) {
+export function setDOMTheme({ darkMode }: { darkMode: boolean | undefined }) {
   if (!localStorage || !document) return;
 
   if (darkMode) {
@@ -40,10 +40,10 @@ export default function ThemeToggle() {
   function toggleTheme() {
     if (darkMode) {
       setDarkMode(false);
-      setDOMTheme(darkMode);
+      setDOMTheme({ darkMode });
     } else {
       setDarkMode(true);
-      setDOMTheme(darkMode);
+      setDOMTheme({ darkMode });
     }
   }
 

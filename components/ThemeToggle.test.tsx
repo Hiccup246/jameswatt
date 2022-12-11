@@ -1,34 +1,38 @@
 import ThemeToggle, { setDOMTheme } from "./ThemeToggle";
 import renderer from "react-test-renderer";
 
-test("renders the ThemeToggle correctly", () => {
-  const tree = renderer.create(<ThemeToggle />).toJSON();
+describe("ThemeToggle", () => {
+  it("renders the ThemeToggle correctly", () => {
+    const tree = renderer.create(<ThemeToggle />).toJSON();
 
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });
 
-test("setDOMTheme(true) correctly sets localstorage and document body classes", () => {
-  Object.create(localStorage);
-  Object.defineProperty(document, "documentElement", {
-    configurable: true,
-    value: document.createElement("document"),
+describe("setDOMTheme", () => {
+  it("correctly sets localstorage and document body classes when darkMode is true", () => {
+    Object.create(localStorage);
+    Object.defineProperty(document, "documentElement", {
+      configurable: true,
+      value: document.createElement("document"),
+    });
+
+    setDOMTheme({ darkMode: true });
+
+    expect(localStorage.theme).toBe("light");
+    expect(document.documentElement.classList).not.toContain("dark");
   });
 
-  setDOMTheme(true);
+  it("correctly sets localstorage and document body classes when darkMode is false", () => {
+    Object.create(localStorage);
+    Object.defineProperty(document, "documentElement", {
+      configurable: true,
+      value: document.createElement("document"),
+    });
 
-  expect(localStorage.theme).toBe("light");
-  expect(document.documentElement.classList).not.toContain("dark");
-});
+    setDOMTheme({ darkMode: false });
 
-test("setDOMTheme(false) correctly sets localstorage and document body classes", () => {
-  Object.create(localStorage);
-  Object.defineProperty(document, "documentElement", {
-    configurable: true,
-    value: document.createElement("document"),
+    expect(localStorage.theme).toBe("dark");
+    expect(document.documentElement.classList).toContain("dark");
   });
-
-  setDOMTheme(false);
-
-  expect(localStorage.theme).toBe("dark");
-  expect(document.documentElement.classList).toContain("dark");
 });
