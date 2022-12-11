@@ -23,7 +23,7 @@ test("Index page displays all sections", async ({ page }) => {
 test("Correctly renders the work experience section", async ({ page }) => {
   await page.goto("/");
 
-  await page.getByText("My Experience");
+  await page.getByRole("heading", { name: "My Experience" }).click();
   await page.waitForLoadState("networkidle");
 
   await expect(
@@ -119,7 +119,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
 
 test("Correctly renders the book sheld section", async ({ page }) => {
   await page.goto("/");
-  await page.getByText("Books I'm Involved With").click();
+  await page.getByRole("heading", { name: "Books I'm Involved With" }).click();
   await page.waitForLoadState("networkidle");
 
   await expect(
