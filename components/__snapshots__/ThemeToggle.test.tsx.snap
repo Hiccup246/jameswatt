@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ThemeToggle renders correctly 1`] = `
+<button
+  className="hover group flex justify-center"
+  onClick={[Function]}
+>
+  <div
+    className="mr-2 h-4 w-4"
+  />
+  <span
+    className="group-hover:underline"
+  />
+</button>
+`;
+
 exports[`ThemeToggle renders the ThemeToggle correctly 1`] = `
 <button
   className="hover group flex justify-center"

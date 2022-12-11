@@ -7,10 +7,12 @@ const mockTechnologyIcon: TechnologyIcon = {
   icon: <svg></svg>,
 };
 
-test("renders the TechnologyIcon correctly", () => {
-  const tree = renderer
-    .create(<TechnologyIcon icon={mockTechnologyIcon} />)
-    .toJSON();
+describe("TechnologyIcon", () => {
+  it("renders correctly", () => {
+    const tree = renderer
+      .create(<TechnologyIcon icon={mockTechnologyIcon} />)
+      .toJSON();
 
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });

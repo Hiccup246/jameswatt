@@ -2,7 +2,7 @@ import ThemeToggle, { setDOMTheme } from "./ThemeToggle";
 import renderer from "react-test-renderer";
 
 describe("ThemeToggle", () => {
-  it("renders the ThemeToggle correctly", () => {
+  it("renders correctly", () => {
     const tree = renderer.create(<ThemeToggle />).toJSON();
 
     expect(tree).toMatchSnapshot();
