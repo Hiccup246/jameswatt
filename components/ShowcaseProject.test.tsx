@@ -6,13 +6,15 @@ const dummyShowCaseProject: ShowcaseProject = {
   githubRepoUrl: "https://www.github.com",
   projectName: "Project One",
   projectImageSrc: "https://www.github.com/image.png",
-  firstPublished: new Date("2022-12-12"),
+  firstPublished: new Date("2022-02-12"),
 };
 
-test("renders the ShowcaseProject correctly", () => {
-  const tree = renderer
-    .create(<ShowcaseProject {...dummyShowCaseProject} />)
-    .toJSON();
+describe("ShowcaseProject", () => {
+  it("renders correctly", () => {
+    const tree = renderer
+      .create(<ShowcaseProject {...dummyShowCaseProject} />)
+      .toJSON();
 
-  expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
+  });
 });
