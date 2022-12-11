@@ -28,7 +28,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
 
   await expect(
     await page
-      .getByRole("heading", { name: /UK Team Lead @ AplyiD/ })
+      .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
       .isVisible()
   ).toBeTruthy();
   await expect(
@@ -48,6 +48,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
   ).toBeFalsy();
 
   await page.getByRole("button", { name: "AplyiD" }).nth(1).click();
+  await page.waitForLoadState("networkidle");
   await expect(
     await page
       .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
@@ -70,6 +71,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
   ).toBeFalsy();
 
   await page.getByRole("button", { name: "Hypebeat" }).click();
+  await page.waitForLoadState("networkidle");
   await expect(
     await page
       .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
@@ -92,6 +94,7 @@ test("Correctly renders the work experience section", async ({ page }) => {
   ).toBeFalsy();
 
   await page.getByRole("button", { name: "Halter" }).click();
+  await page.waitForLoadState("networkidle");
   await expect(
     await page
       .getByRole("heading", { name: "UK Team Lead @ AplyiD" })
