@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the Home component correctly 1`] = `
+exports[`Home renders correctly 1`] = `
 <div>
   <section
     className="flex h-full w-full flex-col bg-brown"
