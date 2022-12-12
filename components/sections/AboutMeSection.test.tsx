@@ -3,6 +3,12 @@ import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
 describe("AboutMeSection", () => {
+  const env = process.env;
+
+  afterEach(() => {
+    process.env = { ...env };
+  });
+
   it("renders correctly", () => {
     const tree = renderer.create(<AboutMeSection />).toJSON();
     expect(tree).toMatchSnapshot();
