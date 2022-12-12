@@ -32,7 +32,7 @@ export default function IntroSection() {
   const points = [
     [0, 100],
     [0, 0],
-    ...springs.map((x, i) => [i * grid, x.p]),
+    ...springs.map((x, i) => [i * grid, x.position]),
     [width, 0],
     [width, 100],
   ];
@@ -73,7 +73,7 @@ export default function IntroSection() {
     const dropPosition = Math.round(
       ((widthRef.current / 2 + DROP_OFFSET) / widthRef.current) * 100
     );
-    waveTank.springs[dropPosition].p = -60;
+    waveTank.springs[dropPosition].position = -60;
   }
 
   useEffect(() => {

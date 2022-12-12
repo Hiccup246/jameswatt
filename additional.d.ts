@@ -38,6 +38,6 @@ type TechnologyIcon = {
 };
 
 interface Spring {
-  p: number;
-  v: number;
+  position: number;
+  vibration: number;
 }
