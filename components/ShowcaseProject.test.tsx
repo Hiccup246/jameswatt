@@ -1,7 +1,7 @@
 import ShowcaseProject from "./ShowcaseProject";
 import renderer from "react-test-renderer";
 
-const dummyShowCaseProject: ShowcaseProject = {
+const mockShowCaseProject: ShowcaseProject = {
   websiteUrl: "https://wwww.site.com",
   githubRepoUrl: "https://www.github.com",
   projectName: "Project One",
@@ -12,7 +12,7 @@ const dummyShowCaseProject: ShowcaseProject = {
 describe("ShowcaseProject", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<ShowcaseProject {...dummyShowCaseProject} />)
+      .create(<ShowcaseProject {...mockShowCaseProject} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
 const headerRows = 1;
-const dummyBooks: Book[] = [
+const mockBooks: Book[] = [
   {
     name: "The Black Swan: The Impact of the Highly Improbable",
     author: "Nassim Nicholas Taleb",
@@ -56,14 +56,14 @@ const dummyBooks: Book[] = [
 
 test("renders the BookshelfSection correctly", () => {
   const tree = renderer
-    .create(<BookshelfTable books={dummyBooks} shortViewBooks={4} shortView />)
+    .create(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
 
 test("renders the BookshelfTable header rows", () => {
-  render(<BookshelfTable books={dummyBooks} shortViewBooks={4} shortView />);
+  render(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />);
 
   const bookHeader = screen.getByText("Book");
   const genreHeader = screen.getByText("Genre");
@@ -75,23 +75,21 @@ test("renders the BookshelfTable header rows", () => {
 });
 
 test("renders the shortViewBooks when shortView is true", () => {
-  render(<BookshelfTable books={dummyBooks} shortViewBooks={4} shortView />);
+  render(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />);
 
   expect(screen.getAllByRole("row").length - headerRows).toBe(4);
 });
 
 test("renders all books when shortView prop is false", () => {
   render(
-    <BookshelfTable books={dummyBooks} shortViewBooks={4} shortView={false} />
+    <BookshelfTable books={mockBooks} shortViewBooks={4} shortView={false} />
   );
 
-  expect(screen.getAllByRole("row").length - headerRows).toBe(
-    dummyBooks.length
-  );
+  expect(screen.getAllByRole("row").length - headerRows).toBe(mockBooks.length);
 });
 
 test("renders no books when the shortView prop is true and shortViewBooks is -1", () => {
-  render(<BookshelfTable books={dummyBooks} shortViewBooks={-1} shortView />);
+  render(<BookshelfTable books={mockBooks} shortViewBooks={-1} shortView />);
 
   expect(screen.getAllByRole("row").length - headerRows).toBe(0);
 });
