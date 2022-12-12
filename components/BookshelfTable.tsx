@@ -3,13 +3,13 @@ import AnimatedBookBrown from "../public/animated-book-brown.gif";
 import ReadBook from "../public/book.webp";
 
 export default function BookShelfTable({
-  books,
-  shortViewBooks,
-  shortView,
+  books = [],
+  shortViewBooks = 0,
+  shortView = false,
 }: {
-  books: Book[];
-  shortViewBooks: number;
-  shortView: boolean;
+  books?: Book[];
+  shortViewBooks?: number;
+  shortView?: boolean;
 }) {
   const completedBookIcon = (
     <div className="mx-auto h-5 w-5">
@@ -35,7 +35,7 @@ export default function BookShelfTable({
     </div>
   );
 
-  shortViewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
+  const previewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
 
   return (
     <table className="w-full">
@@ -49,7 +49,7 @@ export default function BookShelfTable({
         </tr>
       </thead>
       <tbody>
-        {(shortView ? books.slice(0, shortViewBooks) : books).map(
+        {(!!shortView ? books.slice(0, previewBooks) : books).map(
           (book: Book) => {
             return (
               <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">

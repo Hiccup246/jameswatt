@@ -54,42 +54,48 @@ const mockBooks: Book[] = [
   },
 ];
 
-test("renders the BookshelfSection correctly", () => {
-  const tree = renderer
-    .create(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />)
-    .toJSON();
+describe("BookshelfSection", () => {
+  it("correctly renders all books", () => {
+    const tree = renderer.create(<BookshelfTable books={mockBooks} />).toJSON();
 
-  expect(tree).toMatchSnapshot();
-});
+    expect(tree).toMatchSnapshot();
+  });
 
-test("renders the BookshelfTable header rows", () => {
-  render(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />);
+  it("renders the correct table headers", () => {
+    render(<BookshelfTable />);
 
-  const bookHeader = screen.getByText("Book");
-  const genreHeader = screen.getByText("Genre");
-  const statusHeader = screen.getByText("Status");
+    const bookHeader = screen.getByText("Book");
+    const genreHeader = screen.getByText("Genre");
+    const statusHeader = screen.getByText("Status");
 
-  expect(bookHeader).toBeInTheDocument();
-  expect(genreHeader).toBeInTheDocument();
-  expect(statusHeader).toBeInTheDocument();
-});
+    expect(bookHeader).toBeInTheDocument();
+    expect(genreHeader).toBeInTheDocument();
+    expect(statusHeader).toBeInTheDocument();
+  });
 
-test("renders the shortViewBooks when shortView is true", () => {
-  render(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />);
+  it("renders no books when none are given", () => {
+    render(<BookshelfTable />);
 
-  expect(screen.getAllByRole("row").length - headerRows).toBe(4);
-});
+    expect(screen.getAllByRole("row").length - headerRows).toBe(0);
+  });
 
-test("renders all books when shortView prop is false", () => {
-  render(
-    <BookshelfTable books={mockBooks} shortViewBooks={4} shortView={false} />
-  );
+  it("renders shortViewBooks when shortView is true", () => {
+    render(<BookshelfTable books={mockBooks} shortViewBooks={4} shortView />);
 
-  expect(screen.getAllByRole("row").length - headerRows).toBe(mockBooks.length);
-});
+    expect(screen.getAllByRole("row").length - headerRows).toBe(4);
+  });
 
-test("renders no books when the shortView prop is true and shortViewBooks is -1", () => {
-  render(<BookshelfTable books={mockBooks} shortViewBooks={-1} shortView />);
+  it("renders all books when shortViewBooks is set but shortView is false", () => {
+    render(<BookshelfTable books={mockBooks} shortViewBooks={4} />);
 
-  expect(screen.getAllByRole("row").length - headerRows).toBe(0);
+    expect(screen.getAllByRole("row").length - headerRows).toBe(
+      mockBooks.length
+    );
+  });
+
+  it("renders no books when shortViewBooks is negative and shortView is true", () => {
+    render(<BookshelfTable books={mockBooks} shortViewBooks={-1} shortView />);
+
+    expect(screen.getAllByRole("row").length - headerRows).toBe(0);
+  });
 });
