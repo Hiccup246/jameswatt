@@ -14,10 +14,12 @@ export default function TechnologiesSection() {
         <SliderComponent>
           {[...GROUP1, ...GROUP1].map((technologyIcon, index) => {
             return (
-              <TechnologyIcon
+              <div
+                className="h-[110px] w-[200px]"
                 key={technologyIcon.name + index}
-                icon={technologyIcon}
-              />
+              >
+                <TechnologyIcon icon={technologyIcon} />
+              </div>
             );
           })}
         </SliderComponent>
@@ -25,10 +27,12 @@ export default function TechnologiesSection() {
         <SliderComponent slideRight>
           {[...GROUP2, ...GROUP2].map((technologyIcon, index) => {
             return (
-              <TechnologyIcon
+              <div
+                className="h-[110px] w-[200px]"
                 key={technologyIcon.name + index}
-                icon={technologyIcon}
-              />
+              >
+                <TechnologyIcon icon={technologyIcon} />
+              </div>
             );
           })}
         </SliderComponent>
@@ -36,10 +40,12 @@ export default function TechnologiesSection() {
         <SliderComponent>
           {[...GROUP3, ...GROUP3].map((technologyIcon, index) => {
             return (
-              <TechnologyIcon
+              <div
+                className="h-[110px] w-[200px]"
                 key={technologyIcon.name + index}
-                icon={technologyIcon}
-              />
+              >
+                <TechnologyIcon icon={technologyIcon} />
+              </div>
             );
           })}
         </SliderComponent>

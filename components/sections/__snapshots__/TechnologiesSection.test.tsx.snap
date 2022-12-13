@@ -16,16 +16,16 @@ exports[`TechnologiesSection renders correctly 1`] = `
       className="relative"
     >
       <div
-        className="container relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden"
       >
         <div
-          className="relative m-auto h-fit w-full"
+          className="relative m-auto w-full"
         >
           <div
             className="slide-track hover:animation-pause flex w-fit animate-scroll"
           >
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -83,7 +83,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -168,7 +168,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -212,7 +212,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -270,7 +270,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -351,7 +351,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -396,7 +396,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -441,7 +441,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -499,7 +499,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -584,7 +584,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -628,7 +628,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -686,7 +686,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -767,7 +767,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -812,7 +812,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -860,16 +860,16 @@ exports[`TechnologiesSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="container relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden"
       >
         <div
-          className="relative m-auto h-fit w-full"
+          className="relative m-auto w-full"
         >
           <div
             className="slide-track hover:animation-pause flex w-fit animate-scroll-reverse"
           >
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -917,7 +917,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1091,7 +1091,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1141,7 +1141,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1191,7 +1191,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1251,7 +1251,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1327,7 +1327,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1392,7 +1392,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1440,7 +1440,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1614,7 +1614,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1664,7 +1664,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1714,7 +1714,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1774,7 +1774,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1850,7 +1850,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1918,16 +1918,16 @@ exports[`TechnologiesSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="container relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden"
       >
         <div
-          className="relative m-auto h-fit w-full"
+          className="relative m-auto w-full"
         >
           <div
             className="slide-track hover:animation-pause flex w-fit animate-scroll"
           >
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -1978,7 +1978,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2041,7 +2041,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2110,7 +2110,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2155,7 +2155,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2217,7 +2217,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2290,7 +2290,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2348,7 +2348,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2399,7 +2399,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2462,7 +2462,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2531,7 +2531,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2576,7 +2576,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2638,7 +2638,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
@@ -2711,7 +2711,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               </div>
             </div>
             <div
-              className="slide relative h-[100px] w-[200px]"
+              className="h-[110px] w-[200px]"
             >
               <div
                 className="hover group relative h-[86px] w-[86px] duration-150 hover:-translate-y-0.5 hover:shadow-md"
