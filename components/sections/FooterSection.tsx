@@ -18,7 +18,12 @@ export default function FooterSection() {
           </a>
         </div>
 
-        <h1 className="mb-6 md:mb-0">Designed & Built by James Watt</h1>
+        <a
+          href="https://github.com/Hiccup246/james-watt-fresh"
+          className=" mb-6 hover:underline md:mb-0"
+        >
+          Designed & Built by James Watt
+        </a>
 
         <ThemeToggle />
       </div>

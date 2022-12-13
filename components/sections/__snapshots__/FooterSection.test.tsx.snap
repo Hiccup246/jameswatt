@@ -63,11 +63,12 @@ exports[`FooterSection renders correctly 1`] = `
           </svg>
         </a>
       </div>
-      <h1
-        className="mb-6 md:mb-0"
+      <a
+        className=" mb-6 hover:underline md:mb-0"
+        href="https://github.com/Hiccup246/james-watt-fresh"
       >
         Designed & Built by James Watt
-      </h1>
+      </a>
       <button
         className="hover group flex justify-center"
         onClick={[Function]}
