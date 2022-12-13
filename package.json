@@ -1,6 +1,21 @@
 {
-  "name": "james-watt-fresh",
+  "name": "james-watt",
+  "description": "The personal portfolio for London based software engineer James Watt.",
   "version": "0.1.0",
+  "author": "James Watt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hiccup246/james-watt-fresh"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@7.18.1",
+  "keywords": [
+    "nextjs",
+    "tailwind",
+    "jest",
+    "playwright",
+    "typescript"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
