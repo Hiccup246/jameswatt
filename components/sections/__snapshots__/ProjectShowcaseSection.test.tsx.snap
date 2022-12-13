@@ -51,7 +51,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <a
               aria-label="Custom Sound Board Url"
-              className="group-hover:underline hover:cursor-pointer"
+              className="hover:cursor-pointer group-hover:underline"
               href="https://www.custom-sound-board.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -63,7 +63,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Custom Sound Board Github Project"
-                className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
                 href="https://github.com/Hiccup246/custom-sound-board"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -122,7 +122,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <a
               aria-label="James Watt Calling Card Url"
-              className="group-hover:underline hover:cursor-pointer"
+              className="hover:cursor-pointer group-hover:underline"
               href="https://www.npmjs.com/package/james-watt-calling-card"
               rel="noopener noreferrer"
               target="_blank"
@@ -134,7 +134,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="James Watt Calling Card Github Project"
-                className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
                 href="https://github.com/Hiccup246/james-watt-calling-card"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -189,7 +189,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <a
               aria-label="Gun Control Policies Url"
-              className="group-hover:underline hover:cursor-pointer"
+              className="hover:cursor-pointer group-hover:underline"
               href="https://www.guncontrolpolicies.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -201,7 +201,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Gun Control Policies Github Project"
-                className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
                 href="https://github.com/Hiccup246/gun-control-policies"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -256,7 +256,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <a
               aria-label="Norm MacDonald Quotes Url"
-              className="group-hover:underline hover:cursor-pointer"
+              className="hover:cursor-pointer group-hover:underline"
               href="https://www.normmacdonaldquotes.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -268,7 +268,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Norm MacDonald Quotes Github Project"
-                className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
                 href="https://github.com/Hiccup246/norm-macdonald-quotes"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -323,7 +323,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <a
               aria-label="Free Online Text Edit Url"
-              className="group-hover:underline hover:cursor-pointer"
+              className="hover:cursor-pointer group-hover:underline"
               href="https://www.freeonlinetextedit.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -335,7 +335,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Free Online Text Edit Github Project"
-                className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
                 href="https://github.com/Hiccup246/free-online-text-edit"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -390,7 +390,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <a
               aria-label="Old Portfolio Site Url"
-              className="group-hover:underline hover:cursor-pointer"
+              className="hover:cursor-pointer group-hover:underline"
               href="https://www.old.jameswatt.io"
               rel="noopener noreferrer"
               target="_blank"
@@ -402,7 +402,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Old Portfolio Site Github Project"
-                className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
                 href="https://github.com/Hiccup246/old-jameswatt-portfolio"
                 rel="noopener noreferrer"
                 target="_blank"

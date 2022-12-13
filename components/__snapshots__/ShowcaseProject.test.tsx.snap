@@ -37,7 +37,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
     >
       <a
         aria-label="Project One Url"
-        className="group-hover:underline hover:cursor-pointer"
+        className="hover:cursor-pointer group-hover:underline"
         href="https://wwww.site.com"
         rel="noopener noreferrer"
         target="_blank"
@@ -49,7 +49,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
       >
         <a
           aria-label="Project One Github Project"
-          className="text-grey duration-200 ease-in hover:text-black hover:cursor-pointer"
+          className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
           href="https://www.github.com"
           rel="noopener noreferrer"
           target="_blank"
