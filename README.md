@@ -2,7 +2,7 @@
   jameswatt.io - v2
 </h1>
 <p align="center">
-  The second iteration of <a href="https://jameswatt.io" target="_blank">jameswatt.io</a> built with <a href="https://nextjs.org/" target="_blank">NextJS</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  The second iteration of <a href="https://jameswatt.io" target="_blank">jameswatt.io</a> built with <a href="https://nextjs.org/" target="_blank">NextJS</a>, styled using <a href="https://tailwindcss.com/" target="_blank">Tailwind</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 <p align="center">
   Previous iterations:
