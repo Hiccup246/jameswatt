@@ -2,7 +2,7 @@
 
 exports[`TechnologiesSection renders correctly 1`] = `
 <div
-  className="flex w-full flex-row justify-center pt-12 pb-36 bg-white"
+  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white"
 >
   <section
     className="mx-auto flex w-9/12 flex-col justify-start"

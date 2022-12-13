@@ -1,6 +1,6 @@
 export default function SectionLayout(props: SectionLayoutProps) {
   const bgColor = props.bgSecondary == true ? "bg-brown" : "bg-white";
-  const largeBottom = props.noBottomPadding == true ? "pb-12" : "pb-36";
+  const largeBottom = props.noBottomPadding == true ? "pb-12" : "pb-20 pt-20";
 
   return (
     <div

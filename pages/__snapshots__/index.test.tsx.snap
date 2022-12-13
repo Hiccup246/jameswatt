@@ -161,7 +161,7 @@ exports[`Home renders correctly 1`] = `
     </svg>
   </section>
   <div
-    className="flex w-full flex-row justify-center pt-12 pb-36 bg-white"
+    className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white"
   >
     <section
       className="mx-auto flex w-9/12 flex-col justify-start"
@@ -787,7 +787,7 @@ exports[`Home renders correctly 1`] = `
     </section>
   </div>
   <div
-    className="flex w-full flex-row justify-center pt-12 pb-36 bg-brown"
+    className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown"
   >
     <section
       className="mx-auto flex w-9/12 flex-col justify-start"
@@ -1210,7 +1210,7 @@ exports[`Home renders correctly 1`] = `
     </section>
   </div>
   <div
-    className="flex w-full flex-row justify-center pt-12 pb-36 bg-white"
+    className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white"
   >
     <section
       className="mx-auto flex w-9/12 flex-col justify-start"
@@ -3989,7 +3989,7 @@ exports[`Home renders correctly 1`] = `
     </section>
   </div>
   <div
-    className="flex w-full flex-row justify-center pt-12 pb-36 bg-white"
+    className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white"
   >
     <section
       className="mx-auto flex w-9/12 flex-col justify-start"
@@ -4127,7 +4127,7 @@ exports[`Home renders correctly 1`] = `
     </section>
   </div>
   <div
-    className="flex w-full flex-row justify-center pt-12 pb-36 bg-brown"
+    className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown"
   >
     <section
       className="mx-auto flex w-9/12 flex-col justify-start"
@@ -4378,7 +4378,7 @@ exports[`Home renders correctly 1`] = `
     </section>
   </div>
   <div
-    className="flex w-full flex-row justify-center pt-12 pb-36 bg-brown"
+    className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown"
   >
     <section
       className="mx-auto flex w-9/12 flex-col justify-start"
