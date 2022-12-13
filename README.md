@@ -10,21 +10,23 @@
 </p>
 <div align="center">
 
-  ![](https://img.shields.io/github/license/Hiccup246/james-watt-fresh)
-  ![](https://img.shields.io/github/languages/code-size/Hiccup246/james-watt-fresh)
+![](https://img.shields.io/github/license/Hiccup246/james-watt-fresh)
+![](https://img.shields.io/github/languages/code-size/Hiccup246/james-watt-fresh)
+
 </div>
 <div align="center">
 
-  ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=james-watt)
-  ![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/e2e-tests)
-  ![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/unit-tests)
-  ![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/style-check)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=james-watt)
+![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/e2e-tests)
+![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/unit-tests)
+![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/style-check)
 
 </div>
 
 ![site-screenshot](https://raw.githubusercontent.com/hiccup246/james-watt-fresh/public/site-screenshot.webp)
 
 ## 🍽️ Fair use and forking
+
 Feel free to fork this repository or utilise any code snippets. That being said, please give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io) much like I have done for the people who inspired this site.
 
 Cheers!
@@ -32,56 +34,62 @@ Cheers!
 <br>
 
 ## 🧱 Installation and development setup
+
 1. Install [pnpm](https://pnpm.io/)
-     ```sh
-     npm install -g pnpm
-     ```
+   ```sh
+   npm install -g pnpm
+   ```
 2. Install the correct [node version](https://nextjs.org/docs/getting-started) using [NVM](https://github.com/nvm-sh/nvm)
-     ```sh
-     nvm install
-     ```
+   ```sh
+   nvm install
+   ```
 3. Install dependancies
-    ```sh
-    pnpm install
-    ```
+   ```sh
+   pnpm install
+   ```
 4. Run the development server
-    ```sh
-    pnpm run dev
-    ```
+   ```sh
+   pnpm run dev
+   ```
+
 ## 🏁 Production setup
+
 1. Create an optimized production build
-     ```sh
-     pnpm run build
-     ```
+   ```sh
+   pnpm run build
+   ```
 2. Start the application in production mode
-     ```sh
-     pnpm run start
-     ```
+   ```sh
+   pnpm run start
+   ```
+
 ## ✅ Running the project tests/checks
+
 1. Run the jest unit tests
-    ```sh
-    pnpm run test:unit
-    ```
+   ```sh
+   pnpm run test:unit
+   ```
 2. Run the playwright e2e tests
-    ```sh
-    pnpm run test:e2e
-    ```
+   ```sh
+   pnpm run test:e2e
+   ```
 3. Run Prettier
-    ```sh
-    pnpm run fix
-    ```
+   ```sh
+   pnpm run fix
+   ```
 4. Run Eslint
-    ```sh
-    pnpm run format
-    ```
+   ```sh
+   pnpm run format
+   ```
 5. Check all types
-    ```sh
-      pnpm run type-check
-    ```
+   ```sh
+     pnpm run type-check
+   ```
 
 <br>
 
 ## 🧠 Understanding the project
+
 A great starting place for understanding this project is the `pages/index.page.tsx` file. This represents the single page of this single page application (SPA) and allows for easy exploration of all the sites components.
 
 This file contains some site metadata and lists out all of the sites 'sections'. These sections are located within `components/sections` and compose components from `components/` to create the functionality of the site. In visual terms the `index.page.tsx` can be represented by:
@@ -91,7 +99,9 @@ This file contains some site metadata and lists out all of the sites 'sections'.
 <br>
 
 ## ⛰️ Environment Variables
+
 This project has three environment variables
+
 1. UMAMI_WEBSITE_ID
 2. UMAMI_WEBSITE_URL
 3. NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL
