@@ -26,11 +26,11 @@ exports[`AboutMeSection renders correctly 1`] = `
       className="mt-16 flex flex-row justify-center"
     >
       <div
-        className="my-auto mr-8 w-8 group"
+        className="group my-auto mr-8 w-8"
       >
         <a
           aria-label="Github Profile"
-          className="duration-150 ease-in group-hover:text-grey group-hover:text-grey block group-hover:-translate-y-0.5"
+          className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
           href="https://github.com/Hiccup246"
           title="Github Profile"
         >
@@ -46,11 +46,11 @@ exports[`AboutMeSection renders correctly 1`] = `
         </a>
       </div>
       <div
-        className="my-auto mr-8 w-8 group"
+        className="group my-auto mr-8 w-8"
       >
         <a
           aria-label="LinkedIn Profile"
-          className="duration-150 ease-in group-hover:text-grey group-hover:text-grey block group-hover:-translate-y-0.5"
+          className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
           href="https://www.linkedin.com/in/jameswattpro"
           title="LinkedIn Profile"
         >
@@ -115,11 +115,11 @@ exports[`AboutMeSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="my-auto w-10 group"
+        className="group my-auto w-10"
       >
         <a
           aria-label="PDF Resume"
-          className="duration-150 ease-in group-hover:text-grey block group-hover:-translate-y-0.5"
+          className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
           href="/jameswatt-resume.pdf"
           rel="noreferrer"
           target="_blank"

@@ -121,5 +121,5 @@ The final environment variable is used to store the email address which is linke
 - Refactor codebase to be easier to modify styles as groups i.e. change font for entire section
 - Update all styles to be mobile first then apply larger styles at bigger breakpoints as per tailwind docs. Make sure to read tailwind docs on responsive design first as this site is desktop first.
 - SEO Optimisation https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance
-- Deplay and do real world testing on both desktop and mobile devices
+- Deploy and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations

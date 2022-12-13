@@ -26,17 +26,17 @@ exports[`BookshelfSection renders correctly 1`] = `
           >
             <tr>
               <th
-                className="pb-2.5 text-left text-sm text-black"
+                className="pb-2.5 text-left text-sm"
               >
                 Book
               </th>
               <th
-                className="w-24 pb-2.5 text-left text-sm text-black max-smaller:hidden"
+                className="w-24 pb-2.5 text-left text-sm max-smaller:hidden"
               >
                 Genre
               </th>
               <th
-                className="pb-2.5 text-center text-sm text-black"
+                className="pb-2.5 text-center text-sm"
               >
                 Status
               </th>

@@ -118,11 +118,11 @@ export default function TabsComponent({
                         flex
                         w-fit cursor-pointer
                         whitespace-nowrap px-5 py-2
-                        text-black focus-visible:border-none
+                        focus-visible:border-none
                         max-small:mb-0
                         max-small:shrink-0 max-small:grow-0
                         max-small:justify-center ${
-                          index == currentTabIndex ? "text-black" : ""
+                          index == currentTabIndex ? "" : ""
                         }
                     `}
               onClick={(element) =>

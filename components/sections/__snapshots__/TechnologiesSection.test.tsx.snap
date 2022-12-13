@@ -31,7 +31,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="MDN HTML Homepage"
@@ -93,7 +93,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Angular Framework Homepage"
@@ -182,7 +182,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Bulma Homepage"
@@ -230,7 +230,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="MDN CSS Homepage"
@@ -292,7 +292,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Deno Homepage"
@@ -377,7 +377,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Ruby On Rails Homepage"
@@ -426,7 +426,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Tailwind Homepage"
@@ -475,7 +475,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="MDN HTML Homepage"
@@ -537,7 +537,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Angular Framework Homepage"
@@ -626,7 +626,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Bulma Homepage"
@@ -674,7 +674,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="MDN CSS Homepage"
@@ -736,7 +736,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Deno Homepage"
@@ -821,7 +821,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Ruby On Rails Homepage"
@@ -870,7 +870,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Tailwind Homepage"
@@ -931,7 +931,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Vue Framework Homepage"
@@ -983,7 +983,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Solidity Homepage"
@@ -1161,7 +1161,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Javascript Language Homepage"
@@ -1215,7 +1215,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Gatsby Framework Homepage"
@@ -1269,7 +1269,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Fresh Framework Homepage"
@@ -1333,7 +1333,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Figma Homepage"
@@ -1413,7 +1413,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Go Language Homepage"
@@ -1482,7 +1482,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Vue Framework Homepage"
@@ -1534,7 +1534,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Solidity Homepage"
@@ -1712,7 +1712,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Javascript Language Homepage"
@@ -1766,7 +1766,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Gatsby Framework Homepage"
@@ -1820,7 +1820,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Fresh Framework Homepage"
@@ -1884,7 +1884,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Figma Homepage"
@@ -1964,7 +1964,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Go Language Homepage"
@@ -2045,7 +2045,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Svelte Framework Homepage"
@@ -2100,7 +2100,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Ruby Language Homepage"
@@ -2167,7 +2167,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="React Framework Homepage"
@@ -2240,7 +2240,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Nuxt Framework Homepage"
@@ -2289,7 +2289,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Node.JS Homepage"
@@ -2355,7 +2355,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Next.JS Homepage"
@@ -2432,7 +2432,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="PostgreSQL Homepage"
@@ -2494,7 +2494,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Svelte Framework Homepage"
@@ -2549,7 +2549,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Ruby Language Homepage"
@@ -2616,7 +2616,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="React Framework Homepage"
@@ -2689,7 +2689,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Nuxt Framework Homepage"
@@ -2738,7 +2738,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Node.JS Homepage"
@@ -2804,7 +2804,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="Next.JS Homepage"
@@ -2881,7 +2881,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                 className="hover group relative h-[86px] w-[86px]"
               >
                 <div
-                  className="duration-150 w-full h-full group-hover:-translate-y-0.5"
+                  className="h-full w-full duration-150 group-hover:-translate-y-0.5"
                 >
                   <a
                     aria-label="PostgreSQL Homepage"

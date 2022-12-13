@@ -41,11 +41,11 @@ export default function BookShelfTable({
     <table className="w-full">
       <thead className="sticky top-0 bg-brown">
         <tr>
-          <th className="pb-2.5 text-left text-sm text-black">Book</th>
-          <th className="w-24 pb-2.5 text-left text-sm text-black max-smaller:hidden">
+          <th className="pb-2.5 text-left text-sm">Book</th>
+          <th className="w-24 pb-2.5 text-left text-sm max-smaller:hidden">
             Genre
           </th>
-          <th className="pb-2.5 text-center text-sm text-black">Status</th>
+          <th className="pb-2.5 text-center text-sm">Status</th>
         </tr>
       </thead>
       <tbody>
