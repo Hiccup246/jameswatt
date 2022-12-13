@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ShowcaseProject(props: ShowcaseProject) {
   return (
-    <div className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5">
+    <div className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2">
       <div>
         <a
           href={props.websiteUrl}
@@ -15,7 +15,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           <Image
             src={props.projectImageSrc}
             width={600}
-            className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+            className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
             height={337}
             sizes="(min-width: 768px) 480px,
                                180px"

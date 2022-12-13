@@ -2,7 +2,7 @@
 
 exports[`ShowcaseProject renders correctly 1`] = `
 <div
-  className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+  className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
 >
   <div>
     <a
@@ -14,7 +14,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
     >
       <img
         alt="Project One Website Screenshot"
-        className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+        className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
         data-nimg="1"
         decoding="async"
         height={337}

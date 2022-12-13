@@ -16,7 +16,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
       className="mb-10 self-center md:w-1/2"
     >
       <div
-        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
       >
         <div>
           <a
@@ -28,7 +28,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Custom Sound Board Website Screenshot"
-              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -87,7 +87,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
       className="grid grid-cols-1 items-start gap-8 gap-y-14 pt-8 md:grid-cols-3"
     >
       <div
-        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
       >
         <div>
           <a
@@ -99,7 +99,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="James Watt Calling Card Website Screenshot"
-              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -154,7 +154,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
       >
         <div>
           <a
@@ -166,7 +166,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Gun Control Policies Website Screenshot"
-              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -221,7 +221,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
       >
         <div>
           <a
@@ -233,7 +233,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Norm MacDonald Quotes Website Screenshot"
-              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -288,7 +288,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
       >
         <div>
           <a
@@ -300,7 +300,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Free Online Text Edit Website Screenshot"
-              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -355,7 +355,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-0.5"
+        className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
       >
         <div>
           <a
@@ -367,7 +367,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Old Portfolio Site Website Screenshot"
-              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:opacity-70 group-hover:shadow-md"
+              className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
               height={337}
