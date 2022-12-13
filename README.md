@@ -36,9 +36,9 @@ Cheers!
      ```sh
      npm install -g pnpm
      ```
-2. Install the correct [node version](https://nextjs.org/docs/getting-started)
+2. Install the correct [node version](https://nextjs.org/docs/getting-started) using [NVM](https://github.com/nvm-sh/nvm)
      ```sh
-     pnpm install -g node
+     nvm install
      ```
 3. Install dependancies
     ```sh
