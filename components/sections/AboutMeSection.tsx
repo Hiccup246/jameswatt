@@ -34,9 +34,9 @@ export default function AboutMeSection() {
       </p>
 
       <div className="mt-16 flex flex-row justify-center">
-        <div className="my-auto mr-8 w-8 duration-150 ease-in hover:-translate-y-0.5">
+        <div className="group my-auto mr-8 w-8">
           <a
-            className="duration-150 ease-in hover:text-grey"
+            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
             href="https://github.com/Hiccup246"
             aria-label="Github Profile"
             title="Github Profile"
@@ -45,9 +45,9 @@ export default function AboutMeSection() {
           </a>
         </div>
 
-        <div className="my-auto mr-8 w-8 duration-150 ease-in hover:-translate-y-0.5">
+        <div className="group my-auto mr-8 w-8">
           <a
-            className="duration-150 ease-in hover:text-grey"
+            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
             href="https://www.linkedin.com/in/jameswattpro"
             aria-label="LinkedIn Profile"
             title="LinkedIn Profile"
@@ -95,9 +95,9 @@ export default function AboutMeSection() {
           </div>
         </div>
 
-        <div className="my-auto w-10 duration-150 ease-in hover:-translate-y-0.5">
+        <div className="group my-auto w-10">
           <a
-            className="duration-150 ease-in hover:text-grey"
+            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
             href="/jameswatt-resume.pdf"
             target="_blank"
             rel="noreferrer"

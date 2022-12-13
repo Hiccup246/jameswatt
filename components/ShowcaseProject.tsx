@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ShowcaseProject(props: ShowcaseProject) {
   return (
     <div className="hover group mx-auto w-full">
-      <div className="transition-transform duration-150 hover:-translate-y-2">
+      <div className="transition-transform duration-150 group-hover:-translate-y-2">
         <a
           href={props.websiteUrl}
           target="_blank"

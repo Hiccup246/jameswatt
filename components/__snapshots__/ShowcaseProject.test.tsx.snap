@@ -2,9 +2,11 @@
 
 exports[`ShowcaseProject renders correctly 1`] = `
 <div
-  className="hover group mx-auto w-full transition-transform duration-150 hover:-translate-y-2"
+  className="hover group mx-auto w-full"
 >
-  <div>
+  <div
+    className="transition-transform duration-150 group-hover:-translate-y-2"
+  >
     <a
       aria-label="Free online text edit url"
       className="hover:cursor-pointer"
