@@ -116,6 +116,7 @@ The final environment variable is used to store the email address which is linke
 - Deplay and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations
 - Write a beautiful readme with badges for github workflows and maybe code analysis
+- Add husky with pre-commit hook to run all tests and linting
 
 ### Work Experience Section
 
