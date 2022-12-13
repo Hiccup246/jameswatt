@@ -30,7 +30,13 @@
 
 ## 🍽️ Fair use and forking
 
-Feel free to fork this repository or utilise any code snippets. That being said, please give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io) much like I have done for the people who inspired this site.
+_*Plagarism*_ is **not good**
+
+_*Claiming*_ others work as your own is **not good**
+
+Fair usage of others work with proper attribution is **awesome!**
+
+So feel free to fork this repository or utilise any code snippets but please make an effort to give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io). If you need some ideas on how to do so this check out the credits section of this website :)
 
 Cheers!
 
@@ -64,29 +70,6 @@ Cheers!
 2. Start the application in production mode
    ```sh
    pnpm run start
-   ```
-
-## ✅ Running the project tests/checks
-
-1. Run the jest unit tests
-   ```sh
-   pnpm run test:unit
-   ```
-2. Run the playwright e2e tests
-   ```sh
-   pnpm run test:e2e
-   ```
-3. Run Prettier
-   ```sh
-   pnpm run fix
-   ```
-4. Run Eslint
-   ```sh
-   pnpm run format
-   ```
-5. Check all types
-   ```sh
-     pnpm run type-check
    ```
 
 <br>

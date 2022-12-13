@@ -18,6 +18,7 @@ module.exports = {
       grey: "#808080",
       lightgrey: "#CCCCCC",
       blue: "rgb(0, 95, 204)",
+      softwhite: "#d7dce2",
     },
     extend: {
       boxShadow: {
