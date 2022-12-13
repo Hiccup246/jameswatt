@@ -15,227 +15,233 @@ exports[`BookshelfSection renders correctly 1`] = `
     <div
       className="rounded-xl p-3.5"
     >
-      <table
-        className="w-full"
+      <div
+        className="max-h-[600px] overflow-y-scroll pr-2"
       >
-        <thead>
-          <tr>
-            <th
-              className="pb-2.5 text-left text-sm text-black"
-            >
-              Book
-            </th>
-            <th
-              className="w-24 pb-2.5 text-left text-sm text-black max-smaller:hidden"
-            >
-              Genre
-            </th>
-            <th
-              className="pb-2.5 text-center text-sm text-black"
-            >
-              Status
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            className="[&>td]:pt-10 [&>td]:first:pt-0"
+        <table
+          className="w-full"
+        >
+          <thead
+            className="sticky top-0 bg-brown"
           >
-            <td
-              className="flex flex-col justify-start break-keep pr-2.5 align-top"
-            >
-              <h2
-                className="my-0 max-w-lg font-bold"
+            <tr>
+              <th
+                className="pb-2.5 text-left text-sm text-black"
               >
-                The Black Swan: The Impact of the Highly Improbable
-              </h2>
-              <div
-                className="text-sm"
+                Book
+              </th>
+              <th
+                className="w-24 pb-2.5 text-left text-sm text-black max-smaller:hidden"
               >
-                Nassim Nicholas Taleb
-              </div>
-            </td>
-            <td
-              className="align-top text-sm max-smaller:inline"
-            >
-              Nonfiction
-            </td>
-            <td
-              className="align-top"
-            >
-              <div
-                className="mx-auto h-5 w-5"
+                Genre
+              </th>
+              <th
+                className="pb-2.5 text-center text-sm text-black"
               >
-                <img
-                  alt="Currently Reading Icon"
-                  data-nimg="1"
-                  decoding="async"
-                  height={20}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  sizes="20px"
-                  src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                  srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                  style={
-                    {
-                      "color": "transparent",
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
+                  The Black Swan: The Impact of the Highly Improbable
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  Nassim Nicholas Taleb
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Nonfiction
+              </td>
+              <td
+                className="align-top"
+              >
+                <div
+                  className="mx-auto h-5 w-5"
+                >
+                  <img
+                    alt="Currently Reading Icon"
+                    data-nimg="1"
+                    decoding="async"
+                    height={20}
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    sizes="20px"
+                    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                    srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                    style={
+                      {
+                        "color": "transparent",
+                      }
                     }
-                  }
-                  width={20}
-                />
-              </div>
-            </td>
-          </tr>
-          <tr
-            className="[&>td]:pt-10 [&>td]:first:pt-0"
-          >
-            <td
-              className="flex flex-col justify-start break-keep pr-2.5 align-top"
+                    width={20}
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
             >
-              <h2
-                className="my-0 max-w-lg font-bold"
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
               >
-                The Pragmatic Programmer: From Journeyman to Master
-              </h2>
-              <div
-                className="text-sm"
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
+                  The Pragmatic Programmer: From Journeyman to Master
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  Andy Hunt, Dave Thomas
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
               >
-                Andy Hunt, Dave Thomas
-              </div>
-            </td>
-            <td
-              className="align-top text-sm max-smaller:inline"
-            >
-              Programming
-            </td>
-            <td
-              className="align-top"
-            >
-              <div
-                className="mx-auto h-5 w-5"
+                Programming
+              </td>
+              <td
+                className="align-top"
               >
-                <img
-                  alt="Currently Reading Icon"
-                  data-nimg="1"
-                  decoding="async"
-                  height={20}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  sizes="20px"
-                  src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                  srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                  style={
-                    {
-                      "color": "transparent",
+                <div
+                  className="mx-auto h-5 w-5"
+                >
+                  <img
+                    alt="Currently Reading Icon"
+                    data-nimg="1"
+                    decoding="async"
+                    height={20}
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    sizes="20px"
+                    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                    srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                    style={
+                      {
+                        "color": "transparent",
+                      }
                     }
-                  }
-                  width={20}
-                />
-              </div>
-            </td>
-          </tr>
-          <tr
-            className="[&>td]:pt-10 [&>td]:first:pt-0"
-          >
-            <td
-              className="flex flex-col justify-start break-keep pr-2.5 align-top"
+                    width={20}
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
             >
-              <h2
-                className="my-0 max-w-lg font-bold"
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
               >
-                Wordslut: A Feminist Guide to Taking Back the English Language
-              </h2>
-              <div
-                className="text-sm"
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
+                  Wordslut: A Feminist Guide to Taking Back the English Language
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  Amanda Montell
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
               >
-                Amanda Montell
-              </div>
-            </td>
-            <td
-              className="align-top text-sm max-smaller:inline"
-            >
-              Nonfiction
-            </td>
-            <td
-              className="align-top"
-            >
-              <div
-                className="mx-auto h-5 w-5"
+                Nonfiction
+              </td>
+              <td
+                className="align-top"
               >
-                <img
-                  alt="Completed Book Icon"
-                  data-nimg="1"
-                  decoding="async"
-                  height={20}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  sizes="20px"
-                  src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                  srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                  style={
-                    {
-                      "color": "transparent",
+                <div
+                  className="mx-auto h-5 w-5"
+                >
+                  <img
+                    alt="Completed Book Icon"
+                    data-nimg="1"
+                    decoding="async"
+                    height={20}
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    sizes="20px"
+                    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                    srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                    style={
+                      {
+                        "color": "transparent",
+                      }
                     }
-                  }
-                  width={20}
-                />
-              </div>
-            </td>
-          </tr>
-          <tr
-            className="[&>td]:pt-10 [&>td]:first:pt-0"
-          >
-            <td
-              className="flex flex-col justify-start break-keep pr-2.5 align-top"
+                    width={20}
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
             >
-              <h2
-                className="my-0 max-w-lg font-bold"
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
               >
-                Steve Jobs
-              </h2>
-              <div
-                className="text-sm"
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
+                  Steve Jobs
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  Walter Isaacson
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
               >
-                Walter Isaacson
-              </div>
-            </td>
-            <td
-              className="align-top text-sm max-smaller:inline"
-            >
-              Biography
-            </td>
-            <td
-              className="align-top"
-            >
-              <div
-                className="mx-auto h-5 w-5"
+                Biography
+              </td>
+              <td
+                className="align-top"
               >
-                <img
-                  alt="Completed Book Icon"
-                  data-nimg="1"
-                  decoding="async"
-                  height={20}
-                  loading="lazy"
-                  onError={[Function]}
-                  onLoad={[Function]}
-                  sizes="20px"
-                  src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                  srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                  style={
-                    {
-                      "color": "transparent",
+                <div
+                  className="mx-auto h-5 w-5"
+                >
+                  <img
+                    alt="Completed Book Icon"
+                    data-nimg="1"
+                    decoding="async"
+                    height={20}
+                    loading="lazy"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    sizes="20px"
+                    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                    srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                    style={
+                      {
+                        "color": "transparent",
+                      }
                     }
-                  }
-                  width={20}
-                />
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                    width={20}
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <button
         aria-label="Show More Books"
         className="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"

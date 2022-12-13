@@ -13,11 +13,13 @@ export default function BookshelfSectionTwo() {
       </h1>
 
       <div className="rounded-xl p-3.5">
-        <BookShelfTable
-          books={BOOKS}
-          shortViewBooks={4}
-          shortView={!showAllBooks}
-        />
+        <div className="max-h-[600px] overflow-y-scroll pr-2">
+          <BookShelfTable
+            books={BOOKS}
+            shortViewBooks={4}
+            shortView={!showAllBooks}
+          />
+        </div>
 
         <button
           aria-label={showAllBooks ? "Show Less Books" : "Show More Books"}
