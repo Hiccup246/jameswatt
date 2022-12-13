@@ -10,6 +10,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Free online text edit url"
+          className="hover:cursor-pointer"
         >
           <Image
             src={props.projectImageSrc}
@@ -24,7 +25,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
 
         <div className="mt-4 flex flex-row justify-between">
           <a
-            className="group-hover:underline"
+            className="hover:cursor-pointer group-hover:underline"
             href={props.websiteUrl}
             target="_blank"
             rel="noopener noreferrer"
