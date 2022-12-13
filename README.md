@@ -110,3 +110,6 @@ The final environment variable is used to store the email address which is linke
 - Update old portfolio netlify deployment config and domains
 - Update old portfolio github names
 - Update existing github name to be v2 portfolio site
+- Implement dark theme using
+  - 2C3639 as brown
+  - 292929 as white
