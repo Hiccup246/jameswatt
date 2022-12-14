@@ -15,7 +15,7 @@ export default function TechnologiesSection() {
           {[...GROUP1, ...GROUP1].map((technologyIcon, index) => {
             return (
               <div
-                className="h-[110px] w-[200px]"
+                className="h-[110px] w-[200px] text-black"
                 key={technologyIcon.name + index}
               >
                 <TechnologyIcon icon={technologyIcon} />
@@ -28,7 +28,7 @@ export default function TechnologiesSection() {
           {[...GROUP2, ...GROUP2].map((technologyIcon, index) => {
             return (
               <div
-                className="h-[110px] w-[200px]"
+                className="h-[110px] w-[200px] text-black"
                 key={technologyIcon.name + index}
               >
                 <TechnologyIcon icon={technologyIcon} />
@@ -41,7 +41,7 @@ export default function TechnologiesSection() {
           {[...GROUP3, ...GROUP3].map((technologyIcon, index) => {
             return (
               <div
-                className="h-[110px] w-[200px]"
+                className="h-[110px] w-[200px] text-black"
                 key={technologyIcon.name + index}
               >
                 <TechnologyIcon icon={technologyIcon} />
