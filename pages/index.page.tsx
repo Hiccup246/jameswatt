@@ -24,27 +24,31 @@ export default function Home() {
         />
         <link href="https://www.jameswatt.io" rel="author" />
 
-        {/* Essential META Tags */}
+        {/* Open Graph META Tags */}
         <meta property="og:title" content="James Watt" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/site-screenshot.webp" />
-        <meta property="og:url" content="http://www.jameswatt.io" />
-        <meta name="twitter:card" content="summary_large_image" />
-
-        {/* Non-Essential, But Recommended */}
         <meta
           property="og:description"
           content="Portfolio of Software Engineer James Watt"
         />
         <meta property="og:site_name" content="James Watt Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/site-screenshot.webp" />
+        <meta property="og:url" content="http://www.jameswatt.io" />
+
+        {/* Twitter META Tags */}
+        <meta name="twitter:title" content="James Watt" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:description"
+          content="Portfolio of Software Engineer James Watt"
+        />
+        <meta name="twitter:creator" content="@jameswattnz" />
+        <meta name="twitter:site" content="@jameswattnz" />
+        <meta name="twitter:image" content="/site-screenshot.webp" />
         <meta
           name="twitter:image:alt"
           content="Screenshot of www.jameswatt.io"
         />
-        <meta name="twitter:image" content="/site-screenshot.webp" />
-
-        {/* Non-Essential, But Required for Analytics */}
-        <meta name="twitter:creator" content="@jameswattnz" />
       </Head>
 
       <IntroSection />
