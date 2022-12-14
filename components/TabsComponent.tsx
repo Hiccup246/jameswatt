@@ -149,7 +149,7 @@ export default function TabsComponent({
           className={`
             visible absolute top-0 left-0 ml-1 h-full
             w-0.5 rounded-sm
-            bg-black max-small:hidden
+            bg-black dark:bg-softwhite max-small:hidden
           `}
         />
       </div>
