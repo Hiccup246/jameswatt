@@ -100,8 +100,6 @@ The final environment variable is used to store the email address which is linke
 
 ## 🌄 Future Improvements
 
-- Decide on a dark mode theme and implement it
-- Refactor codebase to be easier to modify styles as groups i.e. change font for entire section
 - Update all styles to be mobile first then apply larger styles at bigger breakpoints as per tailwind docs. Make sure to read tailwind docs on responsive design first as this site is desktop first.
 - SEO Optimisation https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance
 - Deploy and do real world testing on both desktop and mobile devices
@@ -110,6 +108,4 @@ The final environment variable is used to store the email address which is linke
 - Update old portfolio netlify deployment config and domains
 - Update old portfolio github names
 - Update existing github name to be v2 portfolio site
-- Implement dark theme using
-  - 2C3639 as brown
-  - 292929 as white
+- Experement with different dark mode colors and choose a final one
