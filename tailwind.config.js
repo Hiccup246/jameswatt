@@ -28,6 +28,8 @@ module.exports = {
       backgroundImage: {
         "tech-icon-gradient":
           "linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE)",
+        "dark-tech-icon-gradient":
+          "linear-gradient(var(--gradient-angle),#2C3639,#fff,silver,#2C3639)",
       },
       screens: {
         small: "550px",

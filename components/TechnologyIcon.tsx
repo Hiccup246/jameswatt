@@ -22,9 +22,9 @@ export default function TechnologyIcon({ icon }: { icon: TechnologyIcon }) {
                     group-hover:animation-play absolute
                     top-0 left-0
                     z-10 h-[calc(100%+2px)]
-                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient
-                    opacity-0 transition-all duration-300 ease-linear
-                    group-hover:animate-rotate group-hover:opacity-100
+                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient opacity-0
+                    transition-all duration-300 ease-linear group-hover:animate-rotate
+                    group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 `}
         />
       </div>
