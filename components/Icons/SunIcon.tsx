@@ -1,24 +1,14 @@
 export default function SunIcon() {
   return (
-    <svg width="20" height="20" viewBox="-1 0 20 20">
+    <svg width="20" height="20" viewBox="-1 0 20 20" fill="currentColor">
       <circle cx="9" cy="9" r="5"></circle>
       <g>
-        <circle cx="17" cy="9" r="1.5" fill="var(--color-text)"></circle>
-        <circle cx="13" cy="15.928203230275509" r="1.5" fill="black"></circle>
-        <circle
-          cx="5.000000000000002"
-          cy="15.92820323027551"
-          r="1.5"
-          fill="black"
-        ></circle>
-        <circle cx="1" cy="9.000000000000002" r="1.5" fill="black"></circle>
-        <circle
-          cx="4.9999999999999964"
-          cy="2.071796769724492"
-          r="1.5"
-          fill="black"
-        ></circle>
-        <circle cx="13" cy="2.0717967697244912" r="1.5" fill="black"></circle>
+        <circle cx="17" cy="9" r="1.5"></circle>
+        <circle cx="13" cy="15.928203230275509" r="1.5"></circle>
+        <circle cx="5.000000000000002" cy="15.92820323027551" r="1.5"></circle>
+        <circle cx="1" cy="9.000000000000002" r="1.5"></circle>
+        <circle cx="4.9999999999999964" cy="2.071796769724492" r="1.5"></circle>
+        <circle cx="13" cy="2.0717967697244912" r="1.5"></circle>
       </g>
     </svg>
 

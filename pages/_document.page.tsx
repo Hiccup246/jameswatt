@@ -29,7 +29,7 @@ export default function Document() {
         />
       </Head>
 
-      <body>
+      <body className="bg-brown dark:bg-darkgrey">
         <Main />
         <NextScript />
         <Script
