@@ -33,6 +33,12 @@ export default function Home() {
         <meta property="og:site_name" content="James Watt Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/site-screenshot.webp" />
+        <meta property="og:image:width" content="2880" />
+        <meta property="og:image:height" content="1572" />
+        <meta
+          property="og:image:alt"
+          content="Screenshot of www.jameswatt.io"
+        />
         <meta property="og:url" content="http://www.jameswatt.io" />
 
         {/* Twitter META Tags */}
