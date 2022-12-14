@@ -142,7 +142,7 @@ export default function IntroSection() {
       </div>
 
       <div className="relative mx-auto mb-20 h-[376px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36">
-        <div className="absolute top-0 left-0 z-20 h-full w-full text-brown dark:stroke-redgrey dark:text-darkgrey">
+        <div className="absolute top-0 left-0 z-20 h-full w-full stroke-white text-brown dark:stroke-redgrey dark:text-darkgrey">
           <CircleDripIcon />
         </div>
 
@@ -179,7 +179,7 @@ export default function IntroSection() {
           aria-label="Growing Drop"
         >
           <path
-            d={`M0,50 a1,${1 + (counter + 1) * 0.2} 0 0,0 16.5,0`}
+            d={`M0,48 a1,${1.3 + (counter + 1) * 0.2} 0 0,0 16.5,0`}
             className="fill-white dark:fill-redgrey"
           />
         </svg>
