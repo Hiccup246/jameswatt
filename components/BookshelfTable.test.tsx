@@ -55,6 +55,11 @@ const mockBooks: Book[] = [
 ];
 
 describe("BookshelfSection", () => {
+  Object.defineProperty(document, "documentElement", {
+    configurable: true,
+    value: document.createElement("document"),
+  });
+
   it("correctly renders all books", () => {
     const tree = renderer.create(<BookshelfTable books={mockBooks} />).toJSON();
 

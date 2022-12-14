@@ -1,6 +1,9 @@
 import Image from "next/image";
 import AnimatedBookBrown from "../public/animated-book-brown.gif";
-import ReadBook from "../public/book.webp";
+import ClipboardCheckedBlack from "../public/clipboard-checked-black.webp";
+import ClipboardCheckedWhite from "../public/clipboard-checked-white.webp";
+import { useEffect, useState } from "react";
+import { isDarkMode } from "./ThemeToggle";
 
 export default function BookShelfTable({
   books = [],
@@ -11,10 +14,15 @@ export default function BookShelfTable({
   shortViewBooks?: number;
   shortView?: boolean;
 }) {
-  const completedBookIcon = (
+  const [clipboardCheckedIcon, setClipboardCheckedIcon] =
+    useState<JSX.Element>();
+  const [animatedBook, setAnimatedBook] = useState<JSX.Element>();
+  const previewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
+
+  const whiteClipboardChecked = (
     <div className="mx-auto h-5 w-5">
       <Image
-        src={ReadBook}
+        src={ClipboardCheckedWhite}
         width={20}
         height={20}
         sizes="20px"
@@ -23,7 +31,19 @@ export default function BookShelfTable({
     </div>
   );
 
-  const currentlyReadingIcon = (
+  const blackClipboardChecked = (
+    <div className="mx-auto h-5 w-5">
+      <Image
+        src={ClipboardCheckedBlack}
+        width={20}
+        height={20}
+        sizes="20px"
+        alt="Completed Book Icon"
+      />
+    </div>
+  );
+
+  const whiteAnimatedBook = (
     <div className="mx-auto h-5 w-5">
       <Image
         src={AnimatedBookBrown}
@@ -35,7 +55,35 @@ export default function BookShelfTable({
     </div>
   );
 
-  const previewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
+  const blackBrownAnimatedBook = (
+    <div className="mx-auto h-5 w-5">
+      <Image
+        src={AnimatedBookBrown}
+        width={20}
+        height={20}
+        sizes="20px"
+        alt="Currently Reading Icon"
+      />
+    </div>
+  );
+
+  function setIcons() {
+    if (isDarkMode()) {
+      setAnimatedBook(blackBrownAnimatedBook);
+      setClipboardCheckedIcon(whiteClipboardChecked);
+    } else {
+      setAnimatedBook(blackBrownAnimatedBook);
+      setClipboardCheckedIcon(blackClipboardChecked);
+    }
+  }
+  useEffect(() => {
+    setIcons();
+    document.addEventListener("theme-change", setIcons, false);
+
+    return () => {
+      document.removeEventListener("theme-change", setIcons, false);
+    };
+  }, []);
 
   return (
     <table className="w-full">
@@ -63,9 +111,7 @@ export default function BookShelfTable({
                 </td>
 
                 <td className="align-top">
-                  {book.status == "Read"
-                    ? completedBookIcon
-                    : currentlyReadingIcon}
+                  {book.status == "Read" ? clipboardCheckedIcon : animatedBook}
                 </td>
               </tr>
             );

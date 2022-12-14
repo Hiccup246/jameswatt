@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import MoonIcon from "./Icons/MoonIcon";
 import SunIcon from "./Icons/SunIcon";
 
+export function isDarkMode() {
+  return document.documentElement.classList.contains("dark");
+}
+
 export function setDOMTheme({ darkMode }: { darkMode: boolean | undefined }) {
   if (!localStorage || !document) return;
 
@@ -35,6 +39,7 @@ function themeIcon(darkMode: boolean | undefined) {
 }
 
 export default function ThemeToggle() {
+  const event = new Event("theme-change");
   const [darkMode, setDarkMode] = useState<boolean>();
 
   function toggleTheme() {
@@ -45,10 +50,11 @@ export default function ThemeToggle() {
       setDarkMode(true);
       setDOMTheme({ darkMode });
     }
+    document.dispatchEvent(event);
   }
 
   useEffect(() => {
-    if (document.documentElement.classList.contains("dark")) {
+    if (isDarkMode()) {
       setDarkMode(true);
     } else {
       setDarkMode(false);
