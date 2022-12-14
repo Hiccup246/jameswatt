@@ -1,9 +1,58 @@
 import Image from "next/image";
-import AnimatedBookBrown from "../public/animated-book-brown.gif";
+import AnimatedBookBlack from "../public/animated-book-black.gif";
+import AnimatedBookWhite from "../public/animated-book-white.gif";
 import ClipboardCheckedBlack from "../public/clipboard-checked-black.webp";
 import ClipboardCheckedWhite from "../public/clipboard-checked-white.webp";
 import { useEffect, useState } from "react";
 import { isDarkMode } from "./ThemeToggle";
+
+const whiteClipboardChecked = (
+  <div className="mx-auto h-5 w-5">
+    <Image
+      src={ClipboardCheckedWhite}
+      width={20}
+      height={20}
+      sizes="20px"
+      alt="Completed Book Icon"
+    />
+  </div>
+);
+
+const blackClipboardChecked = (
+  <div className="mx-auto h-5 w-5">
+    <Image
+      src={ClipboardCheckedBlack}
+      width={20}
+      height={20}
+      sizes="20px"
+      alt="Completed Book Icon"
+    />
+  </div>
+);
+
+const whiteAnimatedBook = (
+  <div className="mx-auto h-5 w-5">
+    <Image
+      src={AnimatedBookWhite}
+      width={20}
+      height={20}
+      sizes="20px"
+      alt="Currently Reading Icon"
+    />
+  </div>
+);
+
+const blackAnimatedBook = (
+  <div className="mx-auto h-5 w-5">
+    <Image
+      src={AnimatedBookBlack}
+      width={20}
+      height={20}
+      sizes="20px"
+      alt="Currently Reading Icon"
+    />
+  </div>
+);
 
 export default function BookShelfTable({
   books = [],
@@ -19,63 +68,16 @@ export default function BookShelfTable({
   const [animatedBook, setAnimatedBook] = useState<JSX.Element>();
   const previewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
 
-  const whiteClipboardChecked = (
-    <div className="mx-auto h-5 w-5">
-      <Image
-        src={ClipboardCheckedWhite}
-        width={20}
-        height={20}
-        sizes="20px"
-        alt="Completed Book Icon"
-      />
-    </div>
-  );
-
-  const blackClipboardChecked = (
-    <div className="mx-auto h-5 w-5">
-      <Image
-        src={ClipboardCheckedBlack}
-        width={20}
-        height={20}
-        sizes="20px"
-        alt="Completed Book Icon"
-      />
-    </div>
-  );
-
-  const whiteAnimatedBook = (
-    <div className="mx-auto h-5 w-5">
-      <Image
-        src={AnimatedBookBrown}
-        width={20}
-        height={20}
-        sizes="20px"
-        alt="Currently Reading Icon"
-      />
-    </div>
-  );
-
-  const blackBrownAnimatedBook = (
-    <div className="mx-auto h-5 w-5">
-      <Image
-        src={AnimatedBookBrown}
-        width={20}
-        height={20}
-        sizes="20px"
-        alt="Currently Reading Icon"
-      />
-    </div>
-  );
-
   function setIcons() {
     if (isDarkMode()) {
-      setAnimatedBook(blackBrownAnimatedBook);
+      setAnimatedBook(whiteAnimatedBook);
       setClipboardCheckedIcon(whiteClipboardChecked);
     } else {
-      setAnimatedBook(blackBrownAnimatedBook);
+      setAnimatedBook(blackAnimatedBook);
       setClipboardCheckedIcon(blackClipboardChecked);
     }
   }
+
   useEffect(() => {
     setIcons();
     document.addEventListener("theme-change", setIcons, false);
