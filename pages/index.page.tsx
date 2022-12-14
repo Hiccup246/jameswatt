@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="`The personal portfolio for London based software engineer James Watt."
+          content="The personal portfolio for London based software engineer James Watt."
         />
         <meta
           name="keywords"

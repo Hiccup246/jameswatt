@@ -5,7 +5,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta charSet="UTF-8" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.jameswatt.io" />
         <link href="https://www.jameswatt.io/" rel="publisher" />
