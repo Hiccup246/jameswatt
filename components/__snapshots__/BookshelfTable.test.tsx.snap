@@ -5,7 +5,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
   className="w-full"
 >
   <thead
-    className="sticky top-0 bg-brown"
+    className="sticky top-0 bg-brown dark:bg-darkgrey"
   >
     <tr>
       <th

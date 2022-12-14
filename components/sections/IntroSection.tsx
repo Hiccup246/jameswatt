@@ -103,7 +103,7 @@ export default function IntroSection() {
   }
 
   return (
-    <section className="flex h-full w-full flex-col bg-brown">
+    <section className="flex h-full w-full flex-col bg-brown dark:bg-darkgrey">
       <div
         className={`
              grid h-fit w-full grid-cols-1
@@ -165,7 +165,12 @@ export default function IntroSection() {
           className="absolute left-[216.5px] top-[184px] z-20"
           aria-label="Water Drop"
         >
-          <circle cx="24" cy={dropy} r="6" className="fill-white"></circle>
+          <circle
+            cx="24"
+            cy={dropy}
+            r="6"
+            className="fill-white dark:fill-redgrey"
+          ></circle>
         </svg>
 
         <svg
@@ -190,7 +195,7 @@ export default function IntroSection() {
       >
         <polygon
           points={springsPath}
-          className="fill-white"
+          className="fill-white dark:fill-redgrey dark:stroke-redgrey"
           stroke="white"
           transform="translate(0, 50)"
         ></polygon>

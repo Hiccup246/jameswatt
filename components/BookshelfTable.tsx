@@ -39,7 +39,7 @@ export default function BookShelfTable({
 
   return (
     <table className="w-full">
-      <thead className="sticky top-0 bg-brown">
+      <thead className="sticky top-0 bg-brown dark:bg-darkgrey">
         <tr>
           <th className="pb-2.5 text-left text-sm">Book</th>
           <th className="w-24 pb-2.5 text-left text-sm max-smaller:hidden">

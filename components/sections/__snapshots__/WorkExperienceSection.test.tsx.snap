@@ -2,7 +2,7 @@
 
 exports[`WorkExperienceSection renders correctly 1`] = `
 <div
-  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white"
+  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-redgrey dark:text-softwhite"
 >
   <section
     className="mx-auto flex w-9/12 flex-col justify-start"
@@ -122,7 +122,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
               visible absolute top-0 left-0
               z-10 h-[40px]
-              w-[85px] rounded bg-brown
+              w-[85px] rounded bg-brown dark:bg-darkgrey
               delay-100 duration-200 max-small:top-auto max-small:bottom-0
               max-small:z-20
             "

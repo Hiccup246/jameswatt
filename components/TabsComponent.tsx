@@ -140,8 +140,8 @@ export default function TabsComponent({
               transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
               visible absolute top-0 left-0
               z-10 h-[40px]
-              w-[85px] rounded bg-brown
-              delay-100 duration-200 max-small:top-auto max-small:bottom-0
+              w-[85px] rounded bg-brown delay-100
+              duration-200 dark:bg-darkgrey max-small:top-auto max-small:bottom-0
               max-small:z-20
             `}
         ></div>
