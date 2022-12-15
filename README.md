@@ -8,7 +8,7 @@
 
 <p align="center">
   Previous iterations:
-  <a href="https://github.com/Hiccup246/jameswatt" target="_blank">v1</a>
+  <a href="https://github.com/Hiccup246/jameswatt-v1" target="_blank">v1</a>
 </p>
 
 <div align="center">
