@@ -102,7 +102,6 @@ Cheers!
 
 ## 🌄 Future Improvements
 
-- Experement with SEO Optimisation (https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance)
 - Deploy and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations
 - Update old portfolio site to have new names and update SEO to be completely different
