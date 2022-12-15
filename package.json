@@ -1,8 +1,9 @@
 {
-  "name": "james-watt",
-  "description": "The personal portfolio for London based software engineer James Watt.",
+  "name": "jameswatt.io",
+  "description": "The personal portfolio for London based software engineer James Watt",
   "version": "0.1.0",
   "author": "James Watt",
+  "homepage": "https://jameswatt.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/Hiccup246/james-watt-fresh"
