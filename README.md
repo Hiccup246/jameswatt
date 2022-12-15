@@ -20,9 +20,9 @@
 <div align="center">
 
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=jameswatt)
-![](https://img.shields.io/github/workflow/status/Hiccup246/jameswatt/E2E%20Tests)
-![](https://img.shields.io/github/workflow/status/Hiccup246/jameswatt/Unit%20Tests)
-![](https://img.shields.io/github/workflow/status/Hiccup246/jameswatt/Style%20Check)
+![](https://img.shields.io/github/workflow/status/hiccup246/jameswatt/Unit%20Tests?label=Unit%20Tests)
+![](https://img.shields.io/github/workflow/status/hiccup246/jameswatt/E2E%20Tests?label=E2E%20Tests)
+![](https://img.shields.io/github/workflow/status/hiccup246/jameswatt/Style%20Check?label=Style%20Check)
 
 </div>
 
