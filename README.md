@@ -109,4 +109,3 @@ Cheers!
 - Update old portfolio netlify deployment config and domains
 - Update old portfolio github names
 - Update existing github name to be v2 portfolio site
-- Experement with different dark mode colors and choose a final one
