@@ -154,7 +154,6 @@ export default function IntroSection() {
             placeholder="blur"
             alt="James Watt"
             sizes="310px"
-            className="object-scale-down"
           />
         </div>
 

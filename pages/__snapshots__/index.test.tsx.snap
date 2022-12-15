@@ -91,7 +91,6 @@ exports[`Home renders correctly 1`] = `
       >
         <img
           alt="James Watt"
-          className="object-scale-down"
           data-nimg="fill"
           decoding="async"
           onError={[Function]}
