@@ -19,7 +19,7 @@ export default function FooterSection() {
         </div>
 
         <a
-          href="https://github.com/Hiccup246/james-watt-fresh"
+          href="https://github.com/Hiccup246/jameswatt"
           className=" mb-6 hover:underline md:mb-0"
         >
           Designed & Built by James Watt

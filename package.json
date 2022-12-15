@@ -6,7 +6,7 @@
   "homepage": "https://jameswatt.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hiccup246/james-watt-fresh"
+    "url": "https://github.com/Hiccup246/jameswatt"
   },
   "license": "MIT",
   "packageManager": "pnpm@7.18.1",

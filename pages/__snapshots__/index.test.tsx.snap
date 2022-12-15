@@ -4794,7 +4794,7 @@ exports[`Home renders correctly 1`] = `
         </div>
         <a
           className=" mb-6 hover:underline md:mb-0"
-          href="https://github.com/Hiccup246/james-watt-fresh"
+          href="https://github.com/Hiccup246/jameswatt"
         >
           Designed & Built by James Watt
         </a>

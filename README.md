@@ -13,20 +13,20 @@
 
 <div align="center">
 
-![](https://img.shields.io/github/license/Hiccup246/james-watt-fresh)
-![](https://img.shields.io/github/languages/code-size/Hiccup246/james-watt-fresh)
+![](https://img.shields.io/github/license/Hiccup246/jameswatt)
+![](https://img.shields.io/github/languages/code-size/Hiccup246/jameswatt)
 
 </div>
 <div align="center">
 
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=james-watt)
-![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/e2e-tests)
-![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/unit-tests)
-![](https://img.shields.io/github/workflow/status/Hiccup246/james-watt-fresh/style-check)
+![](https://img.shields.io/github/workflow/status/Hiccup246/jameswatt/e2e-tests)
+![](https://img.shields.io/github/workflow/status/Hiccup246/jameswatt/unit-tests)
+![](https://img.shields.io/github/workflow/status/Hiccup246/jameswatt/style-check)
 
 </div>
 
-![site-screenshot](https://raw.githubusercontent.com/hiccup246/james-watt-fresh/public/site-screenshot.webp)
+![site-screenshot](https://raw.githubusercontent.com/hiccup246/jameswatt/public/site-screenshot.webp)
 
 <br>
 
@@ -68,7 +68,7 @@ A great starting place for understanding this project is the `pages/index.page.t
 
 This file contains some site metadata and lists out all of the sites 'sections'. These sections are located within `components/sections` and compose components from `components/` to create the functionality of the site. In visual terms the `index.page.tsx` can be represented by:
 
-![project-structure-diagram](https://raw.githubusercontent.com/hiccup246/james-watt-fresh/public/project-structure-diagram.webp)
+![project-structure-diagram](https://raw.githubusercontent.com/hiccup246/jameswatt/public/project-structure-diagram.webp)
 
 <br>
 
