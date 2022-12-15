@@ -3,8 +3,8 @@ import AnimatedBookBlack from "../public/animated-book-black.gif";
 import AnimatedBookWhite from "../public/animated-book-white.gif";
 import ClipboardCheckedBlack from "../public/clipboard-checked-black.webp";
 import ClipboardCheckedWhite from "../public/clipboard-checked-white.webp";
-import { useEffect, useState } from "react";
-import { isDarkMode } from "./ThemeToggle";
+import React, { useEffect, useState } from "react";
+import { ThemeContext } from "./ThemeProvider";
 
 const whiteClipboardChecked = (
   <div className="mx-auto h-5 w-5">
@@ -67,25 +67,17 @@ export default function BookShelfTable({
     useState<JSX.Element>();
   const [animatedBook, setAnimatedBook] = useState<JSX.Element>();
   const previewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
+  const { siteTheme } = React.useContext(ThemeContext);
 
-  function setIcons() {
-    if (isDarkMode()) {
+  useEffect(() => {
+    if (siteTheme == "dark") {
       setAnimatedBook(whiteAnimatedBook);
       setClipboardCheckedIcon(whiteClipboardChecked);
     } else {
       setAnimatedBook(blackAnimatedBook);
       setClipboardCheckedIcon(blackClipboardChecked);
     }
-  }
-
-  useEffect(() => {
-    setIcons();
-    document.addEventListener("theme-change", setIcons, false);
-
-    return () => {
-      document.removeEventListener("theme-change", setIcons, false);
-    };
-  }, []);
+  }, [siteTheme]);
 
   return (
     <table className="w-full">

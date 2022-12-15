@@ -66,17 +66,6 @@ exports[`FooterSection renders correctly 1`] = `
       >
         Designed & Built by James Watt
       </a>
-      <button
-        className="hover group flex justify-center"
-        onClick={[Function]}
-      >
-        <div
-          className="mr-2 h-4 w-4"
-        />
-        <span
-          className="group-hover:underline"
-        />
-      </button>
     </div>
   </section>
 </div>

@@ -1,37 +1,22 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import MoonIcon from "./Icons/MoonIcon";
 import SunIcon from "./Icons/SunIcon";
+import { ThemeContext } from "./ThemeProvider";
 
-export function isDarkMode() {
-  return document.documentElement.classList.contains("dark");
-}
+function themeLabel(theme: string | undefined) {
+  if (theme == undefined) return <></>;
 
-export function setDOMTheme({ darkMode }: { darkMode: boolean | undefined }) {
-  if (!localStorage || !document) return;
-
-  if (darkMode) {
-    localStorage.theme = "light";
-    document.documentElement.classList.remove("dark");
-  } else {
-    localStorage.theme = "dark";
-    document.documentElement.classList.add("dark");
-  }
-}
-
-function themeLabel(darkMode: boolean | undefined) {
-  if (darkMode == undefined) return <></>;
-
-  if (darkMode) {
+  if (theme == "dark") {
     return "Light Mode";
   } else {
     return "Dark Mode";
   }
 }
 
-function themeIcon(darkMode: boolean | undefined) {
-  if (darkMode == undefined) return <></>;
+function themeIcon(theme: string | undefined) {
+  if (theme == undefined) return <></>;
 
-  if (darkMode) {
+  if (theme == "dark") {
     return <SunIcon />;
   } else {
     return <MoonIcon />;
@@ -39,33 +24,20 @@ function themeIcon(darkMode: boolean | undefined) {
 }
 
 export default function ThemeToggle() {
-  const event = new Event("theme-change");
-  const [darkMode, setDarkMode] = useState<boolean>();
+  const { siteTheme, flipTheme } = React.useContext(ThemeContext);
 
-  function toggleTheme() {
-    if (darkMode) {
-      setDarkMode(false);
-      setDOMTheme({ darkMode });
-    } else {
-      setDarkMode(true);
-      setDOMTheme({ darkMode });
-    }
-    document.dispatchEvent(event);
+  if (!siteTheme) {
+    return <></>;
   }
 
-  useEffect(() => {
-    if (isDarkMode()) {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-  }, []);
-
   return (
-    <button className="hover group flex justify-center" onClick={toggleTheme}>
-      <div className="mr-2 h-4 w-4">{themeIcon(darkMode)}</div>
+    <button
+      className="hover group flex justify-center"
+      onClick={() => flipTheme()}
+    >
+      <div className="mr-2 h-4 w-4">{themeIcon(siteTheme)}</div>
 
-      <span className="group-hover:underline">{themeLabel(darkMode)}</span>
+      <span className="group-hover:underline">{themeLabel(siteTheme)}</span>
     </button>
   );
 }

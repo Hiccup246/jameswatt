@@ -1,38 +1,25 @@
-import ThemeToggle, { setDOMTheme } from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 import renderer from "react-test-renderer";
+import { ThemeContext } from "./ThemeProvider";
 
 describe("ThemeToggle", () => {
-  it("renders correctly", () => {
+  it("renders correctly when no ThemeContext is set", () => {
     const tree = renderer.create(<ThemeToggle />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
-});
 
-describe("setDOMTheme", () => {
-  it("correctly sets localstorage and document body classes when darkMode is true", () => {
-    Object.create(localStorage);
-    Object.defineProperty(document, "documentElement", {
-      configurable: true,
-      value: document.createElement("document"),
-    });
+  it("renders correctly when a ThemeContext is set", () => {
+    const tree = renderer
+      .create(
+        <ThemeContext.Provider
+          value={{ siteTheme: "light", flipTheme: () => {} }}
+        >
+          <ThemeToggle />
+        </ThemeContext.Provider>
+      )
+      .toJSON();
 
-    setDOMTheme({ darkMode: true });
-
-    expect(localStorage.theme).toBe("light");
-    expect(document.documentElement.classList).not.toContain("dark");
-  });
-
-  it("correctly sets localstorage and document body classes when darkMode is false", () => {
-    Object.create(localStorage);
-    Object.defineProperty(document, "documentElement", {
-      configurable: true,
-      value: document.createElement("document"),
-    });
-
-    setDOMTheme({ darkMode: false });
-
-    expect(localStorage.theme).toBe("dark");
-    expect(document.documentElement.classList).toContain("dark");
+    expect(tree).toMatchSnapshot();
   });
 });

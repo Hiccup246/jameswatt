@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/reset.css";
 import type { AppProps } from "next/app";
 import { Roboto, Open_Sans } from "@next/font/google";
+import ThemeProvider from "../components/ThemeProvider";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -20,7 +21,9 @@ const openSans = Open_Sans({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${roboto.variable} ${openSans.variable}`}>
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </main>
   );
 }
