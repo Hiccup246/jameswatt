@@ -28,18 +28,6 @@
 
 ![site-screenshot](https://raw.githubusercontent.com/hiccup246/james-watt-fresh/public/site-screenshot.webp)
 
-## 🍽️ Fair use and forking
-
-_*Plagarism*_ is **not good**
-
-_*Claiming*_ others work as your own is **not good**
-
-Fair usage of others work with proper attribution is **awesome!**
-
-So feel free to fork this repository or utilise any code snippets but please make an effort to give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io). If you need some ideas on how to do so this check out the credits section of this website :)
-
-Cheers!
-
 <br>
 
 ## 🧱 Installation and development setup
@@ -98,10 +86,23 @@ The final environment variable is used to store the email address which is linke
 
 <br>
 
+## 🍽️ Fair use and forking
+
+_*Plagarism*_ is **not good**
+
+_*Claiming*_ others work as your own is **not good**
+
+Fair usage of others work with proper attribution is **awesome!**
+
+So feel free to fork this repository or utilise any code snippets but please make an effort to give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io). If you need some ideas on how to do so this check out the credits section of this website :)
+
+Cheers!
+
+<br>
+
 ## 🌄 Future Improvements
 
-- Update all styles to be mobile first then apply larger styles at bigger breakpoints as per tailwind docs. Make sure to read tailwind docs on responsive design first as this site is desktop first.
-- SEO Optimisation https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance
+- Experement with SEO Optimisation (https://nystudio107.com/blog/modern-seo-snake-oil-vs-substance)
 - Deploy and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations
 - Update old portfolio site to have new names and update SEO to be completely different
