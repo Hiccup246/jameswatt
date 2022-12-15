@@ -844,7 +844,7 @@ exports[`Home renders correctly 1`] = `
               >
                 <a
                   aria-label="Custom Sound Board Github Project"
-                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                   href="https://github.com/Hiccup246/custom-sound-board"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -917,7 +917,7 @@ exports[`Home renders correctly 1`] = `
               >
                 <a
                   aria-label="James Watt Calling Card Github Project"
-                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                   href="https://github.com/Hiccup246/james-watt-calling-card"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -986,7 +986,7 @@ exports[`Home renders correctly 1`] = `
               >
                 <a
                   aria-label="Gun Control Policies Github Project"
-                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                   href="https://github.com/Hiccup246/gun-control-policies"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1055,7 +1055,7 @@ exports[`Home renders correctly 1`] = `
               >
                 <a
                   aria-label="Norm MacDonald Quotes Github Project"
-                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                   href="https://github.com/Hiccup246/norm-macdonald-quotes"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1124,7 +1124,7 @@ exports[`Home renders correctly 1`] = `
               >
                 <a
                   aria-label="Free Online Text Edit Github Project"
-                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                   href="https://github.com/Hiccup246/free-online-text-edit"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1193,7 +1193,7 @@ exports[`Home renders correctly 1`] = `
               >
                 <a
                   aria-label="Old Portfolio Site Github Project"
-                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+                  className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                   href="https://github.com/Hiccup246/old-jameswatt-portfolio"
                   rel="noopener noreferrer"
                   target="_blank"

@@ -51,7 +51,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
       >
         <a
           aria-label="Project One Github Project"
-          className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+          className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
           href="https://www.github.com"
           rel="noopener noreferrer"
           target="_blank"

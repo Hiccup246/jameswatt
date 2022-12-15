@@ -36,7 +36,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
 
           <div className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]">
             <a
-              className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black"
+              className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
               href={props.githubRepoUrl}
               target="_blank"
               rel="noopener noreferrer"
