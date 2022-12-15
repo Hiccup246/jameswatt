@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="The personal portfolio for London based software engineer James Watt."
+          content="The personal portfolio of London based software engineer James Watt"
         />
         <meta
           name="keywords"
@@ -30,7 +30,7 @@ export default function Home() {
           property="og:description"
           content="Portfolio of Software Engineer James Watt"
         />
-        <meta property="og:site_name" content="James Watt Portfolio" />
+        <meta property="og:site_name" content="James Watt" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/site-screenshot.webp" />
         <meta property="og:image:width" content="2880" />
