@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --slider-items: 7;
-    --slider-item-sets: 2;
-    --all-slider-items: calc(var(--slider-items) * var(--slider-item-sets));
-    --slider-item-width: 200px;
-  }
-
   html,
   body {
     padding: 0;
