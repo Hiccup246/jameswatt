@@ -102,5 +102,12 @@ Cheers!
 
 ## 🌄 Future Improvements
 
-- Deploy and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations
+  - One warning of too many elements (927), which occurs at over 800 elements
+    - This is mainly caused by the large amount of technology icons and
+      could be fixed by refactoring them to use less html or to dynamically inject
+      them after the initial render
+  - One warning about main image on mobile being one pixel off the correct aspect ratio
+- Fix flash of light to dark theme when dark theme is the preference
+- Look at placement of intro section water tank and maybe position higher
+  on mobile devices
