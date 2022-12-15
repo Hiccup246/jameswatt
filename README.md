@@ -104,7 +104,3 @@ Cheers!
 
 - Deploy and do real world testing on both desktop and mobile devices
 - Deploy and check lighthouse score and implement possible optimisations
-- Update old portfolio site to have new names and update SEO to be completely different
-- Update old portfolio netlify deployment config and domains
-- Update old portfolio github names
-- Update existing github name to be v2 portfolio site
