@@ -30,11 +30,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN HTML Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 title="MDN HTML Homepage"
               >
@@ -70,12 +70,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -87,11 +87,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Angular Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://angular.io/"
                 title="Angular Framework Homepage"
               >
@@ -154,12 +154,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -171,11 +171,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Bulma Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://bulma.io/"
                 title="Bulma Homepage"
               >
@@ -197,12 +197,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -214,11 +214,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN CSS Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                 title="MDN CSS Homepage"
               >
@@ -254,12 +254,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -271,11 +271,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Deno Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://deno.land/"
                 title="Deno Homepage"
               >
@@ -334,12 +334,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -351,11 +351,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby On Rails Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://rubyonrails.org/"
                 title="Ruby On Rails Homepage"
               >
@@ -378,12 +378,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -395,11 +395,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Tailwind Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://tailwindcss.com/"
                 title="Tailwind Homepage"
               >
@@ -422,12 +422,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -439,11 +439,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN HTML Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 title="MDN HTML Homepage"
               >
@@ -479,12 +479,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -496,11 +496,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Angular Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://angular.io/"
                 title="Angular Framework Homepage"
               >
@@ -563,12 +563,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -580,11 +580,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Bulma Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://bulma.io/"
                 title="Bulma Homepage"
               >
@@ -606,12 +606,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -623,11 +623,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN CSS Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                 title="MDN CSS Homepage"
               >
@@ -663,12 +663,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -680,11 +680,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Deno Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://deno.land/"
                 title="Deno Homepage"
               >
@@ -743,12 +743,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -760,11 +760,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby On Rails Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://rubyonrails.org/"
                 title="Ruby On Rails Homepage"
               >
@@ -787,12 +787,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -804,11 +804,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Tailwind Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://tailwindcss.com/"
                 title="Tailwind Homepage"
               >
@@ -831,12 +831,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -860,11 +860,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Vue Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://vuejs.org/"
                 title="Vue Framework Homepage"
               >
@@ -890,12 +890,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -907,11 +907,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Solidity Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.solidity.io/"
                 title="Solidity Homepage"
               >
@@ -1063,12 +1063,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1080,11 +1080,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Javascript Language Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.javascript.com/"
                 title="Javascript Language Homepage"
               >
@@ -1112,12 +1112,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1129,11 +1129,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Gatsby Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.gatsbyjs.com/"
                 title="Gatsby Framework Homepage"
               >
@@ -1161,12 +1161,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1178,11 +1178,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Fresh Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://fresh.deno.dev/"
                 title="Fresh Framework Homepage"
               >
@@ -1220,12 +1220,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1237,11 +1237,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Figma Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.figma.com/"
                 title="Figma Homepage"
               >
@@ -1295,12 +1295,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1312,11 +1312,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Go Language Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://go.dev/"
                 title="Go Language Homepage"
               >
@@ -1359,12 +1359,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1376,11 +1376,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Vue Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://vuejs.org/"
                 title="Vue Framework Homepage"
               >
@@ -1406,12 +1406,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1423,11 +1423,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Solidity Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.solidity.io/"
                 title="Solidity Homepage"
               >
@@ -1579,12 +1579,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1596,11 +1596,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Javascript Language Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.javascript.com/"
                 title="Javascript Language Homepage"
               >
@@ -1628,12 +1628,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1645,11 +1645,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Gatsby Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.gatsbyjs.com/"
                 title="Gatsby Framework Homepage"
               >
@@ -1677,12 +1677,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1694,11 +1694,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Fresh Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://fresh.deno.dev/"
                 title="Fresh Framework Homepage"
               >
@@ -1736,12 +1736,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1753,11 +1753,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Figma Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.figma.com/"
                 title="Figma Homepage"
               >
@@ -1811,12 +1811,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1828,11 +1828,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Go Language Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://go.dev/"
                 title="Go Language Homepage"
               >
@@ -1875,12 +1875,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1904,11 +1904,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Svelte Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://svelte.dev/"
                 title="Svelte Framework Homepage"
               >
@@ -1937,12 +1937,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -1954,11 +1954,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby Language Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.ruby-lang.org/en/"
                 title="Ruby Language Homepage"
               >
@@ -1999,12 +1999,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2016,11 +2016,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="React Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://reactjs.org/"
                 title="React Framework Homepage"
               >
@@ -2067,12 +2067,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2084,11 +2084,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Nuxt Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://nuxt.com/"
                 title="Nuxt Framework Homepage"
               >
@@ -2111,12 +2111,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2128,11 +2128,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Node.JS Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://nodejs.org/en/"
                 title="Node.JS Homepage"
               >
@@ -2172,12 +2172,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2189,11 +2189,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Next.JS Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://nextjs.org/"
                 title="Next.JS Homepage"
               >
@@ -2241,12 +2241,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2258,11 +2258,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="PostgreSQL Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.postgresql.org/"
                 title="PostgreSQL Homepage"
               >
@@ -2298,12 +2298,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2315,11 +2315,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Svelte Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://svelte.dev/"
                 title="Svelte Framework Homepage"
               >
@@ -2348,12 +2348,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2365,11 +2365,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby Language Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.ruby-lang.org/en/"
                 title="Ruby Language Homepage"
               >
@@ -2410,12 +2410,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2427,11 +2427,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="React Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://reactjs.org/"
                 title="React Framework Homepage"
               >
@@ -2478,12 +2478,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2495,11 +2495,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Nuxt Framework Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://nuxt.com/"
                 title="Nuxt Framework Homepage"
               >
@@ -2522,12 +2522,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2539,11 +2539,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Node.JS Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://nodejs.org/en/"
                 title="Node.JS Homepage"
               >
@@ -2583,12 +2583,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2600,11 +2600,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Next.JS Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://nextjs.org/"
                 title="Next.JS Homepage"
               >
@@ -2652,12 +2652,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
@@ -2669,11 +2669,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="PostgreSQL Homepage"
                 className="
-        hover group relative relative mt-1
-                        flex
-                        h-[86px] w-[86px] items-center justify-center rounded-md border
-                        border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
-                "
+        group relative relative mt-1
+        flex
+        h-[86px] w-[86px] items-center justify-center rounded-md border
+        border-lightgrey bg-white duration-300
+      "
                 href="https://www.postgresql.org/"
                 title="PostgreSQL Homepage"
               >
@@ -2709,12 +2709,12 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     group-hover:animation-play
                     absolute
                     -left-0.5
-                    top-0
+                    -top-0.5
                     -z-10 h-full
                     h-[calc(100%+4px)]
                     w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-                    duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
+                    duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
                 />
