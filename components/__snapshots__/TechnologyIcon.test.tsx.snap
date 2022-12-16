@@ -4,37 +4,32 @@ exports[`TechnologyIcon renders correctly 1`] = `
 <div
   className="hover group relative h-[86px] w-[86px]"
 >
-  <div
-    className="h-full w-full duration-150 group-hover:-translate-y-0.5"
-  >
-    <a
-      aria-label="example icon"
-      className="
+  <a
+    aria-label="example icon"
+    className="
+                        duration-300 group-hover:-translate-y-0.5
                         relative z-20 mt-1 flex h-full w-full items-center justify-center
                         rounded-md border border-lightgrey bg-white group-hover:border-0
                 "
-      href="www.example.com"
-      title="example icon"
-    >
-      <div
-        className="flex h-12 w-12 justify-center"
-      >
-        <title>
-          example icon
-        </title>
-        <svg />
-      </div>
-    </a>
+    href="www.example.com"
+    title="example icon"
+  >
     <div
-      className="
+      className="flex h-12 w-12 justify-center"
+    >
+      <svg />
+    </div>
+  </a>
+  <div
+    className="
+                    group-hover:-translate-y-0.5
                     group-hover:animation-play absolute
-                    top-0 left-0
+                    -top-px -left-px
                     z-10 h-[calc(100%+2px)]
-                    w-[calc(100%+2px)] -translate-x-px -translate-y-px rounded-lg bg-tech-icon-gradient opacity-0
+                    w-[calc(100%+2px)] rounded-lg bg-tech-icon-gradient opacity-0
                     transition-all duration-300 ease-linear group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
                 "
-    />
-  </div>
+  />
 </div>
 `;
