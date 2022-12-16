@@ -4,9 +4,9 @@ exports[`TechnologyIcon renders correctly 1`] = `
 <a
   aria-label="example icon"
   className="
-        hover group relative h-[86px] w-[86px]
-                        relative
-                        mt-1 flex items-center justify-center rounded-md border
+        hover group relative relative mt-1
+                        flex
+                        h-[86px] w-[86px] items-center justify-center rounded-md border
                         border-lightgrey bg-white duration-300 group-hover:-translate-y-0.5 group-hover:border-0
                 "
   href="www.example.com"
@@ -21,11 +21,11 @@ exports[`TechnologyIcon renders correctly 1`] = `
     className="
                     group-hover:animation-play
                     absolute
-                    h-full
-                    w-full
-                    -left-0.5 -z-10
+                    -left-0.5
                     top-0
-                    h-[calc(100%+4px)] w-[calc(100%+4px)]
+                    -z-10 h-full
+                    h-[calc(100%+4px)]
+                    w-full w-[calc(100%+4px)]
                     rounded-lg bg-tech-icon-gradient opacity-0 transition-all
                     duration-300 ease-linear group-hover:-translate-y-0.5 group-hover:animate-rotate
                     group-hover:opacity-100 dark:bg-dark-tech-icon-gradient

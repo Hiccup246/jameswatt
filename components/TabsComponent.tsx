@@ -106,6 +106,7 @@ export default function TabsComponent({
         className={`
             relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
             max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
+            max-small:pb-2
         `}
       >
         {children.map((child: ReactElement, index: number) => {
@@ -141,7 +142,7 @@ export default function TabsComponent({
               visible absolute top-0 left-0
               z-10 h-[40px]
               w-[85px] rounded bg-brown delay-100
-              duration-200 dark:bg-darkgrey max-small:top-auto max-small:bottom-0
+              duration-200 dark:bg-darkgrey max-small:top-auto max-small:bottom-2.5
               max-small:z-20
             `}
         ></div>

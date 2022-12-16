@@ -102,4 +102,5 @@ Cheers!
 
 ## 🌄 Future Improvements
 
-- Update mobile work experience view to have slider above scroll bar
+- Think about approaches to reduce main thread work
+- Think about useEffect usage and if my usage is appropriate
