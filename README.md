@@ -102,5 +102,4 @@ Cheers!
 
 ## 🌄 Future Improvements
 
-- Look at placement of intro section water tank and maybe position higher
-  on mobile devices
+- Update mobile work experience view to have slider above scroll bar
