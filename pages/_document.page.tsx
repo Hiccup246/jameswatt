@@ -30,6 +30,7 @@ export default function Document() {
 
       <body className="bg-brown dark:bg-darkgrey">
         <Script
+          defer={false}
           id="themeLoader"
           strategy="beforeInteractive"
           src="./themeLoader.js"
