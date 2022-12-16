@@ -108,6 +108,5 @@ Cheers!
       could be fixed by refactoring them to use less html or to dynamically inject
       them after the initial render
   - One warning about main image on mobile being one pixel off the correct aspect ratio
-- Fix flash of light to dark theme when dark theme is the preference
 - Look at placement of intro section water tank and maybe position higher
   on mobile devices
