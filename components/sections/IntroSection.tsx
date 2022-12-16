@@ -141,8 +141,8 @@ export default function IntroSection() {
         </div>
       </div>
 
-      <div className="relative mx-auto mb-20 h-[376px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36">
-        <div className="absolute -top-px -left-px z-20 h-[377px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-redgrey dark:text-darkgrey">
+      <div className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36">
+        <div className="absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-redgrey dark:text-darkgrey">
           <CircleDripIcon />
         </div>
 
