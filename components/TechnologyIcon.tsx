@@ -1,4 +1,4 @@
-export default function TechnologyIcon({ icon }: { icon: TechnologyIcon }) {
+export default function TechnologyIcon({ icon }: { icon: LinkedIcon }) {
   return (
     <div className="hover group relative h-[86px] w-[86px]">
       <div className="h-full w-full duration-150 group-hover:-translate-y-0.5">

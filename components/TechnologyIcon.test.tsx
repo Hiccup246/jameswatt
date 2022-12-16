@@ -1,7 +1,7 @@
 import TechnologyIcon from "./TechnologyIcon";
 import renderer from "react-test-renderer";
 
-const mockTechnologyIcon: TechnologyIcon = {
+const mockTechnologyIcon: LinkedIcon = {
   link: "www.example.com",
   name: "example icon",
   icon: <svg></svg>,

@@ -31,7 +31,7 @@ type Book = {
   dateCompleted: string;
 };
 
-type TechnologyIcon = {
+type LinkedIcon = {
   icon: JSX.Element;
   link: string;
   name: string;

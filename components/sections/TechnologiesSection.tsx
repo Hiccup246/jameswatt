@@ -12,42 +12,48 @@ export default function TechnologiesSection() {
 
       <div className="relative">
         <SliderComponent>
-          {[...GROUP1, ...GROUP1].map((technologyIcon, index) => {
-            return (
-              <div
-                className="h-[110px] w-[200px] text-black"
-                key={technologyIcon.name + index}
-              >
-                <TechnologyIcon icon={technologyIcon} />
-              </div>
-            );
-          })}
+          {[...GROUP1, ...GROUP1].map(
+            (technologyIcon: LinkedIcon, index: number) => {
+              return (
+                <div
+                  className="h-[110px] w-[200px] text-black"
+                  key={technologyIcon.name + index}
+                >
+                  <TechnologyIcon icon={technologyIcon} />
+                </div>
+              );
+            }
+          )}
         </SliderComponent>
 
         <SliderComponent slideRight>
-          {[...GROUP2, ...GROUP2].map((technologyIcon, index) => {
-            return (
-              <div
-                className="h-[110px] w-[200px] text-black"
-                key={technologyIcon.name + index}
-              >
-                <TechnologyIcon icon={technologyIcon} />
-              </div>
-            );
-          })}
+          {[...GROUP2, ...GROUP2].map(
+            (technologyIcon: LinkedIcon, index: number) => {
+              return (
+                <div
+                  className="h-[110px] w-[200px] text-black"
+                  key={technologyIcon.name + index}
+                >
+                  <TechnologyIcon icon={technologyIcon} />
+                </div>
+              );
+            }
+          )}
         </SliderComponent>
 
         <SliderComponent>
-          {[...GROUP3, ...GROUP3].map((technologyIcon, index) => {
-            return (
-              <div
-                className="h-[110px] w-[200px] text-black"
-                key={technologyIcon.name + index}
-              >
-                <TechnologyIcon icon={technologyIcon} />
-              </div>
-            );
-          })}
+          {[...GROUP3, ...GROUP3].map(
+            (technologyIcon: LinkedIcon, index: number) => {
+              return (
+                <div
+                  className="h-[110px] w-[200px] text-black"
+                  key={technologyIcon.name + index}
+                >
+                  <TechnologyIcon icon={technologyIcon} />
+                </div>
+              );
+            }
+          )}
         </SliderComponent>
 
         <div className="to-transparent absolute top-0 left-0 h-full h-full w-5 bg-gradient-to-r from-white via-white dark:from-redgrey sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>

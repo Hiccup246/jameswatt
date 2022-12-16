@@ -20,7 +20,7 @@ import SvelteIcon from "../components/Icons/SvelteIcon";
 import TailwindIcon from "../components/Icons/TailwindIcon";
 import VueIcon from "../components/Icons/VueIcon";
 
-export const GROUP1: TechnologyIcon[] = [
+export const GROUP1: LinkedIcon[] = [
   {
     icon: HtmlIcon(),
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
@@ -50,7 +50,7 @@ export const GROUP1: TechnologyIcon[] = [
   },
 ];
 
-export const GROUP2: TechnologyIcon[] = [
+export const GROUP2: LinkedIcon[] = [
   {
     icon: VueIcon(),
     link: "https://vuejs.org/",
@@ -80,7 +80,7 @@ export const GROUP2: TechnologyIcon[] = [
   { icon: GoIcon(), link: "https://go.dev/", name: "Go Language Homepage" },
 ];
 
-export const GROUP3: TechnologyIcon[] = [
+export const GROUP3: LinkedIcon[] = [
   {
     icon: SvelteIcon(),
     link: "https://svelte.dev/",
