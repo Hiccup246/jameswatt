@@ -29,13 +29,13 @@ export default function Document() {
       </Head>
 
       <body className="bg-brown dark:bg-darkgrey">
-        <Main />
-        <NextScript />
         <Script
           id="themeLoader"
           strategy="beforeInteractive"
           src="./themeLoader.js"
         />
+        <Main />
+        <NextScript />
         <Script
           id="umami-analytics-script"
           strategy="beforeInteractive"
