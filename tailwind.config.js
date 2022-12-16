@@ -22,9 +22,6 @@ module.exports = {
       redgrey: "#3F4E4F",
     },
     extend: {
-      boxShadow: {
-        "project-showcase": "0 1em 1em rgb(0 0 0 / 10%)",
-      },
       backgroundImage: {
         "tech-icon-gradient":
           "linear-gradient(var(--gradient-angle),#F2DFCE,#fff,silver,#F2DFCE)",
@@ -34,10 +31,6 @@ module.exports = {
       screens: {
         small: "550px",
         smaller: "400px",
-      },
-      transitionTimingFunction: {
-        slider:
-          "transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s",
       },
       keyframes: {
         "gradient-rotate": {

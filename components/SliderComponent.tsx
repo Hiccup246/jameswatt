@@ -14,9 +14,7 @@ export default function SliderComponent({
   return (
     <div className="relative w-full overflow-hidden">
       <div className="relative m-auto w-full">
-        <div
-          className={`slide-track hover:animation-pause flex w-fit ${slideAnimation}`}
-        >
+        <div className={`hover:animation-pause flex w-fit ${slideAnimation}`}>
           {children}
         </div>
       </div>

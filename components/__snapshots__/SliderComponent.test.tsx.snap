@@ -8,7 +8,7 @@ exports[`SliderComponent renders correctly 1`] = `
     className="relative m-auto w-full"
   >
     <div
-      className="slide-track hover:animation-pause flex w-fit animate-scroll"
+      className="hover:animation-pause flex w-fit animate-scroll"
     >
       <div>
         Div 1

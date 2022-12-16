@@ -1236,7 +1236,7 @@ exports[`Home renders correctly 1`] = `
             className="relative m-auto w-full"
           >
             <div
-              className="slide-track hover:animation-pause flex w-fit animate-scroll"
+              className="hover:animation-pause flex w-fit animate-scroll"
             >
               <div
                 className="h-[110px] w-[200px] text-black"
@@ -2066,7 +2066,7 @@ exports[`Home renders correctly 1`] = `
             className="relative m-auto w-full"
           >
             <div
-              className="slide-track hover:animation-pause flex w-fit animate-scroll-reverse"
+              className="hover:animation-pause flex w-fit animate-scroll-reverse"
             >
               <div
                 className="h-[110px] w-[200px] text-black"
@@ -3110,7 +3110,7 @@ exports[`Home renders correctly 1`] = `
             className="relative m-auto w-full"
           >
             <div
-              className="slide-track hover:animation-pause flex w-fit animate-scroll"
+              className="hover:animation-pause flex w-fit animate-scroll"
             >
               <div
                 className="h-[110px] w-[200px] text-black"
