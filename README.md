@@ -94,7 +94,7 @@ _*Claiming*_ others work as your own is **not good**
 
 Fair usage of others work with proper attribution is **awesome!**
 
-So feel free to fork this repository or utilise any code snippets but please make an effort to give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io). If you need some ideas on how to do so this check out the credits section of this website :)
+So feel free to fork this repository or utilise any code snippets but please make an effort to give me proper credit by linking back to [jameswatt.io](https://www.jameswatt.io). If you need some ideas on how to do this check out the credits section of this website :)
 
 Cheers!
 
