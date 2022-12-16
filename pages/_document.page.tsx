@@ -34,7 +34,6 @@ export default function Document() {
         <Script
           id="themeLoader"
           strategy="beforeInteractive"
-          async
           src="./themeLoader.js"
         />
         <Script
