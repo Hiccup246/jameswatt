@@ -6,10 +6,9 @@ export default function TechnologyIcon({ icon }: { icon: LinkedIcon }) {
       aria-label={icon.name}
       title={icon.name}
       className={`
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       `}
     >
       <div className="flex h-12 w-12 justify-center">{icon.icon}</div>

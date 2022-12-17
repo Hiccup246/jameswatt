@@ -4,10 +4,9 @@ exports[`TechnologyIcon renders correctly 1`] = `
 <a
   aria-label="example icon"
   className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
   href="www.example.com"
   tabIndex={-1}

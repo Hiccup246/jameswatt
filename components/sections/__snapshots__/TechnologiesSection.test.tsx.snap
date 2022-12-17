@@ -31,10 +31,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN HTML Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 tabIndex={-1}
@@ -82,10 +81,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Angular Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://angular.io/"
                 tabIndex={-1}
@@ -160,10 +158,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Bulma Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://bulma.io/"
                 tabIndex={-1}
@@ -197,10 +194,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN CSS Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                 tabIndex={-1}
@@ -248,10 +244,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Deno Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://deno.land/"
                 tabIndex={-1}
@@ -322,10 +317,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby On Rails Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://rubyonrails.org/"
                 tabIndex={-1}
@@ -360,10 +354,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Tailwind Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://tailwindcss.com/"
                 tabIndex={-1}
@@ -398,10 +391,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN HTML Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 tabIndex={-1}
@@ -449,10 +441,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Angular Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://angular.io/"
                 tabIndex={-1}
@@ -527,10 +518,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Bulma Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://bulma.io/"
                 tabIndex={-1}
@@ -564,10 +554,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="MDN CSS Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                 tabIndex={-1}
@@ -615,10 +604,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Deno Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://deno.land/"
                 tabIndex={-1}
@@ -689,10 +677,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby On Rails Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://rubyonrails.org/"
                 tabIndex={-1}
@@ -727,10 +714,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Tailwind Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://tailwindcss.com/"
                 tabIndex={-1}
@@ -777,10 +763,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Vue Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://vuejs.org/"
                 tabIndex={-1}
@@ -818,10 +803,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Solidity Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.solidity.io/"
                 tabIndex={-1}
@@ -985,10 +969,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Javascript Language Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.javascript.com/"
                 tabIndex={-1}
@@ -1028,10 +1011,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Gatsby Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.gatsbyjs.com/"
                 tabIndex={-1}
@@ -1071,10 +1053,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Fresh Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://fresh.deno.dev/"
                 tabIndex={-1}
@@ -1124,10 +1105,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Figma Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.figma.com/"
                 tabIndex={-1}
@@ -1193,10 +1173,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Go Language Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://go.dev/"
                 tabIndex={-1}
@@ -1251,10 +1230,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Vue Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://vuejs.org/"
                 tabIndex={-1}
@@ -1292,10 +1270,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Solidity Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.solidity.io/"
                 tabIndex={-1}
@@ -1459,10 +1436,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Javascript Language Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.javascript.com/"
                 tabIndex={-1}
@@ -1502,10 +1478,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Gatsby Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.gatsbyjs.com/"
                 tabIndex={-1}
@@ -1545,10 +1520,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Fresh Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://fresh.deno.dev/"
                 tabIndex={-1}
@@ -1598,10 +1572,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Figma Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.figma.com/"
                 tabIndex={-1}
@@ -1667,10 +1640,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Go Language Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://go.dev/"
                 tabIndex={-1}
@@ -1737,10 +1709,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Svelte Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://svelte.dev/"
                 tabIndex={-1}
@@ -1781,10 +1752,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby Language Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.ruby-lang.org/en/"
                 tabIndex={-1}
@@ -1837,10 +1807,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="React Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://reactjs.org/"
                 tabIndex={-1}
@@ -1899,10 +1868,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Nuxt Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://nuxt.com/"
                 tabIndex={-1}
@@ -1937,10 +1905,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Node.JS Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://nodejs.org/en/"
                 tabIndex={-1}
@@ -1992,10 +1959,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Next.JS Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://nextjs.org/"
                 tabIndex={-1}
@@ -2055,10 +2021,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="PostgreSQL Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.postgresql.org/"
                 tabIndex={-1}
@@ -2106,10 +2071,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Svelte Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://svelte.dev/"
                 tabIndex={-1}
@@ -2150,10 +2114,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Ruby Language Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.ruby-lang.org/en/"
                 tabIndex={-1}
@@ -2206,10 +2169,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="React Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://reactjs.org/"
                 tabIndex={-1}
@@ -2268,10 +2230,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Nuxt Framework Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://nuxt.com/"
                 tabIndex={-1}
@@ -2306,10 +2267,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Node.JS Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://nodejs.org/en/"
                 tabIndex={-1}
@@ -2361,10 +2321,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="Next.JS Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://nextjs.org/"
                 tabIndex={-1}
@@ -2424,10 +2383,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
               <a
                 aria-label="PostgreSQL Homepage"
                 className="
-        group relative relative mt-1
-        flex
+        group relative relative mt-1 flex
         h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300
+        border-lightgrey bg-white duration-300 dark:bg-softwhite
       "
                 href="https://www.postgresql.org/"
                 tabIndex={-1}
