@@ -102,5 +102,6 @@ Cheers!
 
 ## 🌄 Future Improvements
 
-- Think about approaches to reduce main thread work
+- Implement lazy loading where appropriate with https://nextjs.org/docs/advanced-features/dynamic-import
+- Implement keyboard focus for about me email icon
 - Think about useEffect usage and if my usage is appropriate
