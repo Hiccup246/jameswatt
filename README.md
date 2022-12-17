@@ -102,5 +102,6 @@ Cheers!
 
 ## 🌄 Future Improvements
 
-- Implement lazy loading where appropriate with https://nextjs.org/docs/advanced-features/dynamic-import
-- Think about useEffect usage and if my usage is appropriate
+- Attempt to improve mobile performance perhaps by web worker usage or
+  by refactoring components to be more efficient
+  - Think about useEffect usage and if my usage is appropriate
