@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-export default function SliderComponent({
+export default function ConveyorBelt({
   children,
   slideRight,
 }: {

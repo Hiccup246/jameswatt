@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SliderComponent renders correctly 1`] = `
+exports[`ConveyorBelt renders correctly 1`] = `
 <div
   className="relative w-full overflow-hidden"
 >

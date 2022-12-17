@@ -1,14 +1,14 @@
-import SliderComponent from "./SliderComponent";
+import ConveyorBelt from "./ConveyorBelt";
 import renderer from "react-test-renderer";
 
-describe("SliderComponent", () => {
+describe("ConveyorBelt", () => {
   it("renders correctly", () => {
     const tree = renderer
       .create(
-        <SliderComponent>
+        <ConveyorBelt>
           <div>Div 1</div>
           <div>Div 2</div>
-        </SliderComponent>
+        </ConveyorBelt>
       )
       .toJSON();
 

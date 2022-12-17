@@ -1,5 +1,5 @@
 import SectionLayout from "../layouts/SectionLayout";
-import SliderComponent from "../SliderComponent";
+import ConveyorBelt from "../ConveyorBelt";
 import { GROUP1, GROUP2, GROUP3 } from "../../constants/TechnologyIcons";
 import TechnologyIcon from "../TechnologyIcon";
 
@@ -11,7 +11,7 @@ export default function TechnologiesSection() {
       </h1>
 
       <div className="relative" tabIndex={0}>
-        <SliderComponent>
+        <ConveyorBelt>
           {[...GROUP1, ...GROUP1].map(
             (technologyIcon: LinkedIcon, index: number) => {
               return (
@@ -24,9 +24,9 @@ export default function TechnologiesSection() {
               );
             }
           )}
-        </SliderComponent>
+        </ConveyorBelt>
 
-        <SliderComponent slideRight>
+        <ConveyorBelt slideRight>
           {[...GROUP2, ...GROUP2].map(
             (technologyIcon: LinkedIcon, index: number) => {
               return (
@@ -39,9 +39,9 @@ export default function TechnologiesSection() {
               );
             }
           )}
-        </SliderComponent>
+        </ConveyorBelt>
 
-        <SliderComponent>
+        <ConveyorBelt>
           {[...GROUP3, ...GROUP3].map(
             (technologyIcon: LinkedIcon, index: number) => {
               return (
@@ -54,7 +54,7 @@ export default function TechnologiesSection() {
               );
             }
           )}
-        </SliderComponent>
+        </ConveyorBelt>
 
         <div className="to-transparent absolute top-0 left-0 h-full h-full w-5 bg-gradient-to-r from-white via-white dark:from-redgrey sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>
         <div className="to-transparent absolute top-0 right-0 h-full h-full w-5 bg-gradient-to-l from-white via-white dark:from-redgrey sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>
