@@ -104,18 +104,8 @@ export default function IntroSection() {
 
   return (
     <section className="flex h-full w-full flex-col bg-brown dark:bg-darkgrey">
-      <div
-        className={`
-             grid h-fit w-full grid-cols-1
-             md:mb-10 md:grid-cols-2 lg:mt-12
-      `}
-      >
-        <div
-          className={`
-               relative flex h-auto w-full flex-col
-               justify-start md:justify-start md:pr-10 lg:pr-28
-        `}
-        >
+      <div className="grid h-fit w-full grid-cols-1 md:mb-10 md:grid-cols-2 lg:mt-12">
+        <div className="relative flex h-auto w-full flex-col justify-start md:justify-start md:pr-10 lg:pr-28">
           <Image
             src={Human}
             priority
