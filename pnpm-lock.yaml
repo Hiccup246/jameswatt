@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   "@jest/globals": ^29.3.1
   "@next/font": ^13.0.4
-  "@playwright/test": ^1.28.1
+  "@playwright/test": ^1.29.0
   "@testing-library/dom": ^8.19.0
   "@testing-library/jest-dom": ^5.16.5
   "@testing-library/react": ^13.4.0
@@ -50,7 +50,7 @@ dependencies:
 
 devDependencies:
   "@jest/globals": 29.3.1
-  "@playwright/test": 1.28.1
+  "@playwright/test": 1.29.0
   "@types/react-test-renderer": 18.0.0
   autoprefixer: 10.4.13_postcss@8.4.19
   husky: 8.0.2
@@ -1141,16 +1141,16 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@playwright/test/1.28.1:
+  /@playwright/test/1.29.0:
     resolution:
       {
-        integrity: sha512-xN6spdqrNlwSn9KabIhqfZR7IWjPpFK1835tFNgjrlysaSezuX8PYUwaz38V/yI8TJLG9PkAMEXoHRXYXlpTPQ==,
+        integrity: sha512-gp5PVBenxTJsm2bATWDNc2CCnrL5OaA/MXQdJwwkGQtqTjmY+ZOqAdLqo49O9MLTDh2vYh+tHWDnmFsILnWaeA==,
       }
     engines: { node: ">=14" }
     hasBin: true
     dependencies:
       "@types/node": 18.11.9
-      playwright-core: 1.28.1
+      playwright-core: 1.29.0
     dev: true
 
   /@rushstack/eslint-patch/1.2.0:
@@ -5451,10 +5451,10 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /playwright-core/1.28.1:
+  /playwright-core/1.29.0:
     resolution:
       {
-        integrity: sha512-3PixLnGPno0E8rSBJjtwqTwJe3Yw72QwBBBxNoukIj3lEeBNXwbNiKrNuB1oyQgTBw5QHUhNO3SteEtHaMK6ag==,
+        integrity: sha512-pboOm1m0RD6z1GtwAbEH60PYRfF87vKdzOSRw2RyO0Y0a7utrMyWN2Au1ojGvQr4umuBMODkKTv607YIRypDSQ==,
       }
     engines: { node: ">=14" }
     hasBin: true
