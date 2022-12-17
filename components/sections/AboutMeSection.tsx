@@ -56,14 +56,14 @@ export default function AboutMeSection() {
           </a>
         </div>
 
-        <div className="group relative my-auto mr-8 w-10">
+        <div className="group relative my-auto mr-8 w-10" tabIndex={0}>
           <div className="duration-200 ease-in group-hover:-translate-y-0.5 group-hover:text-grey">
             <EmailIcon />
           </div>
 
           <div
             role="tooltip"
-            className="invisible absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 duration-200 group-hover:visible group-hover:opacity-100 dark:bg-darkgrey"
+            className="invisible absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 dark:bg-darkgrey"
           >
             <div className="relative">
               <div className="absolute right-[90px] -top-[20px] z-10 h-4 w-4 rotate-45 bg-brown dark:bg-darkgrey" />
