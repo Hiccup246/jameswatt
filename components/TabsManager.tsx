@@ -153,12 +153,12 @@ export default function TabsManager({
           return (
             <div
               key={child.key}
-              className={
-                `absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
-                index === currentTabIndex
-                  ? "visible relative pt-2.5 opacity-100"
-                  : "invisible opacity-0"
-              }`}
+              className={`
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
+                  index === currentTabIndex
+                    ? "visible relative pt-2.5 opacity-100"
+                    : "invisible opacity-0"
+                }`}
             >
               {child}
             </div>
