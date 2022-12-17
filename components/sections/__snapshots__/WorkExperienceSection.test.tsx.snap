@@ -179,10 +179,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               className="m-0 list-none p-0"
             >
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -194,10 +191,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -211,10 +205,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -263,10 +254,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               className="m-0 list-none p-0"
             >
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -279,10 +267,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -295,10 +280,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -348,10 +330,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               className="m-0 list-none p-0"
             >
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -363,10 +342,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "Participated in key strategic meetings regarding business strategy and product design",
@@ -411,10 +387,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               className="m-0 list-none p-0"
             >
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "Worked in two high performing agile teams which developed the minimal viable product of the company under tight product deadlines",
@@ -422,10 +395,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -437,10 +407,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -488,10 +455,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               className="m-0 list-none p-0"
             >
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -503,10 +467,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -517,10 +478,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "Partially worked in an agile team to test the banks internal help and support system via automated unit tests and test plans using XMind and Postman",
@@ -565,10 +523,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
               className="m-0 list-none p-0"
             >
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "Graduated with a Bachelor of Engineering in Software Engineering with first class honours",
@@ -576,10 +531,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -590,10 +542,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
@@ -605,10 +554,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 }
               />
               <li
-                className="
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        "
+                className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                 dangerouslySetInnerHTML={
                   {
                     "__html": "Worked as a computer science tutor helping students to understand algorithms and data structures",

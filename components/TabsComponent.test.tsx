@@ -1,11 +1,11 @@
-import TabsComponent, {
+import TabsManager, {
   calcTabButtonTranslation,
   largestChildHeight,
-} from "./TabsComponent";
+} from "./TabsManager";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
-describe("TabsComponent", () => {
+describe("TabsManager", () => {
   describe("When on a large device", () => {
     beforeAll(() => {
       Object.defineProperty(window, "matchMedia", {
@@ -20,14 +20,14 @@ describe("TabsComponent", () => {
     it("renders correctly when given multiple children", () => {
       const tree = renderer
         .create(
-          <TabsComponent>
+          <TabsManager>
             <div aria-label="Panel 1" key="Panel 1">
               First Panel
             </div>
             <div aria-label="Panel 2" key="Panel 2">
               Second Panel
             </div>
-          </TabsComponent>
+          </TabsManager>
         )
         .toJSON();
 
@@ -44,14 +44,14 @@ describe("TabsComponent", () => {
       });
 
       render(
-        <TabsComponent>
+        <TabsManager>
           <div aria-label="Panel 1" key="Panel 1">
             First Panel
           </div>
           <div aria-label="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsComponent>
+        </TabsManager>
       );
 
       const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
@@ -71,14 +71,14 @@ describe("TabsComponent", () => {
       });
 
       render(
-        <TabsComponent>
+        <TabsManager>
           <div aria-label="Panel 1" key="Panel 1">
             First Panel
           </div>
           <div aria-label="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsComponent>
+        </TabsManager>
       );
 
       const panelOneText = screen.getByText("First Panel");
@@ -103,14 +103,14 @@ describe("TabsComponent", () => {
     it("renders correctly when given multiple children", () => {
       const tree = renderer
         .create(
-          <TabsComponent>
+          <TabsManager>
             <div aria-label="Panel 1" key="Panel 1">
               First Panel
             </div>
             <div aria-label="Panel 2" key="Panel 2">
               Second Panel
             </div>
-          </TabsComponent>
+          </TabsManager>
         )
         .toJSON();
 
@@ -127,14 +127,14 @@ describe("TabsComponent", () => {
       });
 
       render(
-        <TabsComponent>
+        <TabsManager>
           <div aria-label="Panel 1" key="Panel 1">
             First Panel
           </div>
           <div aria-label="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsComponent>
+        </TabsManager>
       );
 
       const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
@@ -154,14 +154,14 @@ describe("TabsComponent", () => {
       });
 
       render(
-        <TabsComponent>
+        <TabsManager>
           <div aria-label="Panel 1" key="Panel 1">
             First Panel
           </div>
           <div aria-label="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsComponent>
+        </TabsManager>
       );
 
       const panelOneText = screen.getByText("First Panel");

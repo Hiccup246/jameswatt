@@ -35,7 +35,7 @@ export function calcTabButtonTranslation(x: number, y: number) {
   }
 }
 
-export default function TabsComponent({
+export default function TabsManager({
   children,
 }: {
   children: ReactElement[];

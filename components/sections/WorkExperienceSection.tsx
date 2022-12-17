@@ -1,6 +1,6 @@
 import { PROGRAMMING_EXPERIENCES } from "../../constants/WorkExperiences";
 import SectionLayout from "../layouts/SectionLayout";
-import TabsComponent from "../TabsComponent";
+import TabsManager from "../TabsManager";
 
 export default function WorkExperienceSection() {
   return (
@@ -9,7 +9,7 @@ export default function WorkExperienceSection() {
         My Experience
       </h1>
 
-      <TabsComponent>
+      <TabsManager>
         {PROGRAMMING_EXPERIENCES.map((job: Job) => {
           return (
             <div
@@ -26,10 +26,7 @@ export default function WorkExperienceSection() {
                 {job.jobHighlights.map((highlight: string) => {
                   return (
                     <li
-                      className={`
-                                            relative mt-4 pl-8 pb-2.5 before:absolute
-                                            before:left-0 before:content-["→"]
-                                        `}
+                      className="relative mt-4 pl-8 pb-2.5 before:absolute before:left-0 before:content-['→']"
                       key={"job-highlight" + Math.random()}
                       dangerouslySetInnerHTML={{ __html: highlight }}
                     ></li>
@@ -39,7 +36,7 @@ export default function WorkExperienceSection() {
             </div>
           );
         })}
-      </TabsComponent>
+      </TabsManager>
     </SectionLayout>
   );
 }

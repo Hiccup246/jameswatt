@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TabsComponent When on a large device renders correctly when given multiple children 1`] = `
+exports[`TabsManager When on a large device renders correctly when given multiple children 1`] = `
 <div
   className="flex w-full max-small:block"
 >
@@ -91,7 +91,7 @@ exports[`TabsComponent When on a large device renders correctly when given multi
 </div>
 `;
 
-exports[`TabsComponent When on a small device renders correctly when given multiple children 1`] = `
+exports[`TabsManager When on a small device renders correctly when given multiple children 1`] = `
 <div
   className="flex w-full max-small:block"
 >
