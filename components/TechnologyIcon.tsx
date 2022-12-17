@@ -2,6 +2,7 @@ export default function TechnologyIcon({ icon }: { icon: LinkedIcon }) {
   return (
     <a
       href={icon.link}
+      tabIndex={-1}
       aria-label={icon.name}
       title={icon.name}
       className={`

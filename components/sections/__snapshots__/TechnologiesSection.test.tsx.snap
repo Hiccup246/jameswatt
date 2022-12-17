@@ -14,6 +14,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
     </h1>
     <div
       className="relative"
+      tabIndex={0}
     >
       <div
         className="relative w-full overflow-hidden"
@@ -36,6 +37,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                tabIndex={-1}
                 title="MDN HTML Homepage"
               >
                 <div
@@ -93,6 +95,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://angular.io/"
+                tabIndex={-1}
                 title="Angular Framework Homepage"
               >
                 <div
@@ -177,6 +180,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://bulma.io/"
+                tabIndex={-1}
                 title="Bulma Homepage"
               >
                 <div
@@ -220,6 +224,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                tabIndex={-1}
                 title="MDN CSS Homepage"
               >
                 <div
@@ -277,6 +282,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://deno.land/"
+                tabIndex={-1}
                 title="Deno Homepage"
               >
                 <div
@@ -357,6 +363,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://rubyonrails.org/"
+                tabIndex={-1}
                 title="Ruby On Rails Homepage"
               >
                 <div
@@ -401,6 +408,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://tailwindcss.com/"
+                tabIndex={-1}
                 title="Tailwind Homepage"
               >
                 <div
@@ -445,6 +453,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                tabIndex={-1}
                 title="MDN HTML Homepage"
               >
                 <div
@@ -502,6 +511,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://angular.io/"
+                tabIndex={-1}
                 title="Angular Framework Homepage"
               >
                 <div
@@ -586,6 +596,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://bulma.io/"
+                tabIndex={-1}
                 title="Bulma Homepage"
               >
                 <div
@@ -629,6 +640,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                tabIndex={-1}
                 title="MDN CSS Homepage"
               >
                 <div
@@ -686,6 +698,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://deno.land/"
+                tabIndex={-1}
                 title="Deno Homepage"
               >
                 <div
@@ -766,6 +779,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://rubyonrails.org/"
+                tabIndex={-1}
                 title="Ruby On Rails Homepage"
               >
                 <div
@@ -810,6 +824,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://tailwindcss.com/"
+                tabIndex={-1}
                 title="Tailwind Homepage"
               >
                 <div
@@ -866,6 +881,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://vuejs.org/"
+                tabIndex={-1}
                 title="Vue Framework Homepage"
               >
                 <div
@@ -913,6 +929,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.solidity.io/"
+                tabIndex={-1}
                 title="Solidity Homepage"
               >
                 <div
@@ -1086,6 +1103,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.javascript.com/"
+                tabIndex={-1}
                 title="Javascript Language Homepage"
               >
                 <div
@@ -1135,6 +1153,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.gatsbyjs.com/"
+                tabIndex={-1}
                 title="Gatsby Framework Homepage"
               >
                 <div
@@ -1184,6 +1203,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://fresh.deno.dev/"
+                tabIndex={-1}
                 title="Fresh Framework Homepage"
               >
                 <div
@@ -1243,6 +1263,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.figma.com/"
+                tabIndex={-1}
                 title="Figma Homepage"
               >
                 <div
@@ -1318,6 +1339,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://go.dev/"
+                tabIndex={-1}
                 title="Go Language Homepage"
               >
                 <div
@@ -1382,6 +1404,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://vuejs.org/"
+                tabIndex={-1}
                 title="Vue Framework Homepage"
               >
                 <div
@@ -1429,6 +1452,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.solidity.io/"
+                tabIndex={-1}
                 title="Solidity Homepage"
               >
                 <div
@@ -1602,6 +1626,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.javascript.com/"
+                tabIndex={-1}
                 title="Javascript Language Homepage"
               >
                 <div
@@ -1651,6 +1676,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.gatsbyjs.com/"
+                tabIndex={-1}
                 title="Gatsby Framework Homepage"
               >
                 <div
@@ -1700,6 +1726,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://fresh.deno.dev/"
+                tabIndex={-1}
                 title="Fresh Framework Homepage"
               >
                 <div
@@ -1759,6 +1786,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.figma.com/"
+                tabIndex={-1}
                 title="Figma Homepage"
               >
                 <div
@@ -1834,6 +1862,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://go.dev/"
+                tabIndex={-1}
                 title="Go Language Homepage"
               >
                 <div
@@ -1910,6 +1939,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://svelte.dev/"
+                tabIndex={-1}
                 title="Svelte Framework Homepage"
               >
                 <div
@@ -1960,6 +1990,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.ruby-lang.org/en/"
+                tabIndex={-1}
                 title="Ruby Language Homepage"
               >
                 <div
@@ -2022,6 +2053,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://reactjs.org/"
+                tabIndex={-1}
                 title="React Framework Homepage"
               >
                 <div
@@ -2090,6 +2122,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://nuxt.com/"
+                tabIndex={-1}
                 title="Nuxt Framework Homepage"
               >
                 <div
@@ -2134,6 +2167,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://nodejs.org/en/"
+                tabIndex={-1}
                 title="Node.JS Homepage"
               >
                 <div
@@ -2195,6 +2229,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://nextjs.org/"
+                tabIndex={-1}
                 title="Next.JS Homepage"
               >
                 <div
@@ -2264,6 +2299,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.postgresql.org/"
+                tabIndex={-1}
                 title="PostgreSQL Homepage"
               >
                 <div
@@ -2321,6 +2357,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://svelte.dev/"
+                tabIndex={-1}
                 title="Svelte Framework Homepage"
               >
                 <div
@@ -2371,6 +2408,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.ruby-lang.org/en/"
+                tabIndex={-1}
                 title="Ruby Language Homepage"
               >
                 <div
@@ -2433,6 +2471,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://reactjs.org/"
+                tabIndex={-1}
                 title="React Framework Homepage"
               >
                 <div
@@ -2501,6 +2540,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://nuxt.com/"
+                tabIndex={-1}
                 title="Nuxt Framework Homepage"
               >
                 <div
@@ -2545,6 +2585,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://nodejs.org/en/"
+                tabIndex={-1}
                 title="Node.JS Homepage"
               >
                 <div
@@ -2606,6 +2647,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://nextjs.org/"
+                tabIndex={-1}
                 title="Next.JS Homepage"
               >
                 <div
@@ -2675,6 +2717,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
                 href="https://www.postgresql.org/"
+                tabIndex={-1}
                 title="PostgreSQL Homepage"
               >
                 <div

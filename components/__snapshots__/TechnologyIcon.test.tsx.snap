@@ -10,6 +10,7 @@ exports[`TechnologyIcon renders correctly 1`] = `
         border-lightgrey bg-white duration-300
       "
   href="www.example.com"
+  tabIndex={-1}
   title="example icon"
 >
   <div

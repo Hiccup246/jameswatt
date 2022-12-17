@@ -10,7 +10,7 @@ export default function TechnologiesSection() {
         Technologies I Dabble With
       </h1>
 
-      <div className="relative">
+      <div className="relative" tabIndex={0}>
         <SliderComponent>
           {[...GROUP1, ...GROUP1].map(
             (technologyIcon: LinkedIcon, index: number) => {
