@@ -1,12 +1,30 @@
 import Head from "next/head";
-import IntroSection from "../components/sections/IntroSection";
-import AboutMeSection from "../components/sections/AboutMeSection";
-import WorkExperienceSection from "../components/sections/WorkExperienceSection";
-import ProjectShowcaseSection from "../components/sections/ProjectShowcaseSection";
-import BookshelfSection from "../components/sections/BookshelfSection";
-import CreditsSection from "../components/sections/CreditsSection";
-import FooterSection from "../components/sections/FooterSection";
-import TechnologiesSection from "../components/sections/TechnologiesSection";
+import dynamic from "next/dynamic";
+
+const IntroSection = dynamic(
+  () => import("../components/sections/IntroSection")
+);
+const WorkExperienceSection = dynamic(
+  () => import("../components/sections/WorkExperienceSection")
+);
+const ProjectShowcaseSection = dynamic(
+  () => import("../components/sections/ProjectShowcaseSection")
+);
+const TechnologiesSection = dynamic(
+  () => import("../components/sections/TechnologiesSection")
+);
+const AboutMeSection = dynamic(
+  () => import("../components/sections/AboutMeSection")
+);
+const BookshelfSection = dynamic(
+  () => import("../components/sections/BookshelfSection")
+);
+const CreditsSection = dynamic(
+  () => import("../components/sections/CreditsSection")
+);
+const FooterSection = dynamic(
+  () => import("../components/sections/FooterSection")
+);
 
 export default function Home() {
   return (
