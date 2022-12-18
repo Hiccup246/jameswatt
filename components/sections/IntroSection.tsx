@@ -180,13 +180,12 @@ export default function IntroSection() {
         height="100px"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="-mt-5"
+        className="-mt-5 bg-gradient-to-t from-white via-brown to-brown dark:from-redgrey dark:via-darkgrey dark:to-darkgrey"
         aria-label="Wave Tank"
       >
         <polygon
           points={springsPath}
-          className="fill-white dark:fill-redgrey dark:stroke-redgrey"
-          stroke="white"
+          className="fill-white stroke-white dark:fill-redgrey dark:stroke-redgrey"
           transform="translate(0, 50)"
         ></polygon>
       </svg>
