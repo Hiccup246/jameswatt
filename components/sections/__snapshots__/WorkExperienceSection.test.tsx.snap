@@ -136,7 +136,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
             <p
               className="mt-1 mb-4"
             >
-              2022/02 - Present
+              2022/02 - 2022/11
             </p>
             <div
               className="pb-4"

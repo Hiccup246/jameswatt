@@ -2,7 +2,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
   {
     role: "UK Team Lead",
     company: "AplyiD",
-    dateRange: "2022/02 - Present",
+    dateRange: "2022/02 - 2022/11",
     description:
       "APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience",
     jobHighlights: [
