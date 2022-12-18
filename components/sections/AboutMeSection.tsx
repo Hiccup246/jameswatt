@@ -86,7 +86,7 @@ export default function AboutMeSection() {
                       process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL
                     )
                   }
-                  className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:-translate-y-0.5 dark:bg-redgrey"
+                  className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:-translate-y-0.5 dark:bg-darkteal"
                 >
                   Copy email
                 </button>

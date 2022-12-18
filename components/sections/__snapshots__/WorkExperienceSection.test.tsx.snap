@@ -2,7 +2,7 @@
 
 exports[`WorkExperienceSection renders correctly 1`] = `
 <div
-  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-redgrey dark:text-softwhite"
+  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-darkteal dark:text-softwhite"
 >
   <section
     className="mx-auto flex w-9/12 flex-col justify-start"

@@ -2,7 +2,7 @@
 
 exports[`TechnologiesSection renders correctly 1`] = `
 <div
-  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-redgrey dark:text-softwhite"
+  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-darkteal dark:text-softwhite"
 >
   <section
     className="mx-auto flex w-9/12 flex-col justify-start"
@@ -2431,10 +2431,10 @@ exports[`TechnologiesSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="to-transparent absolute top-0 left-0 h-full h-full w-5 bg-gradient-to-r from-white via-white dark:from-redgrey sm:w-[50px] md:w-[100px] lg:w-[100px]"
+        className="to-transparent absolute top-0 left-0 h-full h-full w-5 bg-gradient-to-r from-white via-white dark:from-darkteal sm:w-[50px] md:w-[100px] lg:w-[100px]"
       />
       <div
-        className="to-transparent absolute top-0 right-0 h-full h-full w-5 bg-gradient-to-l from-white via-white dark:from-redgrey sm:w-[50px] md:w-[100px] lg:w-[100px]"
+        className="to-transparent absolute top-0 right-0 h-full h-full w-5 bg-gradient-to-l from-white via-white dark:from-darkteal sm:w-[50px] md:w-[100px] lg:w-[100px]"
       />
     </div>
   </section>

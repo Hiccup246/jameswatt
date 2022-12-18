@@ -132,7 +132,7 @@ export default function IntroSection() {
       </div>
 
       <div className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36">
-        <div className="absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-redgrey dark:text-darkgrey">
+        <div className="absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey">
           <CircleDripIcon />
         </div>
 
@@ -159,7 +159,7 @@ export default function IntroSection() {
             cx="24"
             cy={dropy}
             r="6"
-            className="fill-white dark:fill-redgrey"
+            className="fill-white dark:fill-darkteal"
           ></circle>
         </svg>
 
@@ -170,7 +170,7 @@ export default function IntroSection() {
         >
           <path
             d={`M0,48 a1,${1.3 + (counter + 1) * 0.2} 0 0,0 16.5,0`}
-            className="fill-white dark:fill-redgrey"
+            className="fill-white dark:fill-darkteal"
           />
         </svg>
       </div>
@@ -180,12 +180,12 @@ export default function IntroSection() {
         height="100px"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="-mt-5 bg-gradient-to-t from-white via-brown to-brown dark:from-redgrey dark:via-darkgrey dark:to-darkgrey"
+        className="-mt-5 bg-gradient-to-t from-white via-brown to-brown dark:from-darkteal dark:via-darkgrey dark:to-darkgrey"
         aria-label="Wave Tank"
       >
         <polygon
           points={springsPath}
-          className="fill-white stroke-white dark:fill-redgrey dark:stroke-redgrey"
+          className="fill-white stroke-white dark:fill-darkteal dark:stroke-darkteal"
           transform="translate(0, 50)"
         ></polygon>
       </svg>
