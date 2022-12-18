@@ -109,7 +109,7 @@ export default function IntroSection() {
           <Image
             src={Human}
             priority
-            height="80"
+            height={80}
             className="place-self-center object-scale-down md:place-self-end"
             alt="Human Text"
           />
@@ -124,7 +124,7 @@ export default function IntroSection() {
           <Image
             src={Developer}
             priority
-            height="80"
+            height={80}
             className="place-self-center object-scale-down md:place-self-start"
             alt="Developer Text"
           />
@@ -139,7 +139,8 @@ export default function IntroSection() {
         <div className="absolute top-0 left-0 z-10 h-full w-full text-brown">
           <Image
             src={JamesWattImage}
-            fill
+            height={372.5}
+            width={310}
             priority
             placeholder="blur"
             alt="James Watt"
