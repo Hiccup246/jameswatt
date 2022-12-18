@@ -133,7 +133,7 @@ export default function TabsManager({
           className={`
             transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
             visible absolute top-0 left-0 z-10 h-[40px] w-[85px] rounded bg-brown delay-100
-            duration-200 dark:bg-darkgrey max-small:top-auto max-small:bottom-2.5 max-small:z-20
+            duration-200 dark:bg-darkgrey max-small:top-auto max-small:bottom-2.5
           `}
         ></div>
         <div
