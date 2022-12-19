@@ -151,8 +151,8 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
-        Currently leading all software development initiatives for the UK office
-        which involves managing and participating in product/feature development
+        I lead all software development initiatives for the UK office
+        which involved managing and participating in product/feature development
         from conception and planning to production deployment.
       </p>",
                   }
@@ -227,7 +227,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
                 dangerouslySetInnerHTML={
                   {
                     "__html": "<p>
-        Currently performing full stack development utilising <b>Vue.JS</b>,
+        I performed full stack development utilising <b>Vue.JS</b>,
         Angular.JS and <b>Ruby on Rails</b> to create KYC/AML and financial
         onboarding products from inception and design to deployment and
         maintenance

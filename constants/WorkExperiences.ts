@@ -7,8 +7,8 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
       "APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience",
     jobHighlights: [
       `<p>
-        Currently leading all software development initiatives for the UK office
-        which involves managing and participating in product/feature development
+        I lead all software development initiatives for the UK office
+        which involved managing and participating in product/feature development
         from conception and planning to production deployment.
       </p>`,
       `<p>
@@ -33,7 +33,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
       "APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience",
     jobHighlights: [
       `<p>
-        Currently performing full stack development utilising <b>Vue.JS</b>,
+        I performed full stack development utilising <b>Vue.JS</b>,
         Angular.JS and <b>Ruby on Rails</b> to create KYC/AML and financial
         onboarding products from inception and design to deployment and
         maintenance
