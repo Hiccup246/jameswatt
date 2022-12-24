@@ -37,7 +37,7 @@ export const BOOKS: Book[] = [
     genre: "Fiction",
     status: "Read",
     dateStarted: "",
-    dateCompleted: "",
+    dateCompleted: "2022",
   },
   {
     name: "Modern Conspiracies in America: Separating Fact from Fiction",
@@ -53,7 +53,7 @@ export const BOOKS: Book[] = [
     genre: "Nonfiction",
     status: "Read",
     dateStarted: "",
-    dateCompleted: "",
+    dateCompleted: "2022",
   },
   {
     name: "How to Lie with Statistics",
@@ -61,7 +61,7 @@ export const BOOKS: Book[] = [
     genre: "Mathmatics",
     status: "Read",
     dateStarted: "",
-    dateCompleted: "",
+    dateCompleted: "2022",
   },
   {
     name: "The Alchemist",
@@ -69,7 +69,7 @@ export const BOOKS: Book[] = [
     genre: "Philosophy",
     status: "Read",
     dateStarted: "",
-    dateCompleted: "",
+    dateCompleted: "2022",
   },
   {
     name: "A Promised Land",
@@ -77,7 +77,7 @@ export const BOOKS: Book[] = [
     genre: "Politics",
     status: "Read",
     dateStarted: "",
-    dateCompleted: "",
+    dateCompleted: "2022",
   },
   {
     name: "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
@@ -85,7 +85,7 @@ export const BOOKS: Book[] = [
     genre: "Self Help",
     status: "Read",
     dateStarted: "",
-    dateCompleted: "",
+    dateCompleted: "2022",
   },
   {
     name: "Peril",
