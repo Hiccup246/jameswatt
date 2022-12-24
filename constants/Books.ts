@@ -1,19 +1,19 @@
 export const BOOKS: Book[] = [
   {
-    name: "The Black Swan: The Impact of the Highly Improbable",
-    author: "Nassim Nicholas Taleb",
-    genre: "Nonfiction",
-    status: "Reading",
-    dateStarted: "26/09/2022",
-    dateCompleted: "",
-  },
-  {
     name: "The Pragmatic Programmer: From Journeyman to Master",
     author: "Andy Hunt, Dave Thomas",
     genre: "Programming",
     status: "Reading",
     dateStarted: "",
     dateCompleted: "",
+  },
+  {
+    name: "The Black Swan: The Impact of the Highly Improbable",
+    author: "Nassim Nicholas Taleb",
+    genre: "Nonfiction",
+    status: "Read",
+    dateStarted: "26/09/2022",
+    dateCompleted: "24/12/2022",
   },
   {
     name: "Wordslut: A Feminist Guide to Taking Back the English Language",

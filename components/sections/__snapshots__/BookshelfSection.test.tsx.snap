@@ -52,18 +52,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Black Swan: The Impact of the Highly Improbable
+                  The Pragmatic Programmer: From Journeyman to Master
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Nassim Nicholas Taleb
+                  Andy Hunt, Dave Thomas
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Nonfiction
+                Programming
               </td>
               <td
                 className="align-top"
@@ -78,18 +78,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Pragmatic Programmer: From Journeyman to Master
+                  The Black Swan: The Impact of the Highly Improbable
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Andy Hunt, Dave Thomas
+                  Nassim Nicholas Taleb
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Programming
+                Nonfiction
               </td>
               <td
                 className="align-top"
