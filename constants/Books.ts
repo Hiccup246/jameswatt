@@ -1,10 +1,18 @@
 export const BOOKS: Book[] = [
   {
+    name: "The Final Empire",
+    author: "Brandon Sanderson",
+    genre: "Fantasy",
+    status: "Reading",
+    dateStarted: "26/12/2022",
+    dateCompleted: "01/01/2023",
+  },
+  {
     name: "The Pragmatic Programmer: From Journeyman to Master",
     author: "Andy Hunt, Dave Thomas",
     genre: "Programming",
     status: "Reading",
-    dateStarted: "",
+    dateStarted: "05/09/2020",
     dateCompleted: "",
   },
   {

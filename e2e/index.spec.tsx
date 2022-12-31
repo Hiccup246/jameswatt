@@ -92,16 +92,16 @@ test.describe("Work experience component", () => {
 
 test.describe("Bookshelf component", () => {
   test("Displays 4 books", async ({ page }) => {
-    const bookTitleOne = page.getByRole("cell", {
+    const bookTitleOne = page.getByRole("cell", { name: "The Final Empire" });
+    const bookTitleTwo = page.getByRole("cell", {
       name: "The Black Swan: The Impact of the Highly Improbable",
     });
-    const bookTitleTwo = page.getByRole("cell", {
+    const bookTitleThree = page.getByRole("cell", {
       name: "The Pragmatic Programmer: From Journeyman to Master",
     });
-    const bookTitleThree = page.getByRole("cell", {
+    const bookTitleFour = page.getByRole("cell", {
       name: "Wordslut: A Feminist Guide to Taking Back the English Language",
     });
-    const bookTitleFour = page.getByRole("cell", { name: "Steve Jobs" });
 
     await expect(bookTitleOne).toBeVisible();
     await expect(bookTitleTwo).toBeVisible();
