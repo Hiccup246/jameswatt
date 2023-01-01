@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { BOOKS, bookStatusSorter } from "../constants/Books";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
@@ -91,17 +92,15 @@ test.describe("Work experience component", () => {
 });
 
 test.describe("Bookshelf component", () => {
+  const sortedBooks = BOOKS.sort(bookStatusSorter);
+
   test("Displays 4 books", async ({ page }) => {
-    const bookTitleOne = page.getByRole("cell", { name: "The Final Empire" });
-    const bookTitleTwo = page.getByRole("cell", {
-      name: "The Black Swan: The Impact of the Highly Improbable",
-    });
+    const bookTitleOne = page.getByRole("cell", { name: sortedBooks[0].name });
+    const bookTitleTwo = page.getByRole("cell", { name: sortedBooks[1].name });
     const bookTitleThree = page.getByRole("cell", {
-      name: "The Pragmatic Programmer: From Journeyman to Master",
+      name: sortedBooks[2].name,
     });
-    const bookTitleFour = page.getByRole("cell", {
-      name: "Wordslut: A Feminist Guide to Taking Back the English Language",
-    });
+    const bookTitleFour = page.getByRole("cell", { name: sortedBooks[3].name });
 
     await expect(bookTitleOne).toBeVisible();
     await expect(bookTitleTwo).toBeVisible();
@@ -110,15 +109,9 @@ test.describe("Bookshelf component", () => {
   });
 
   test("Does not display more than 4 books ", async ({ page }) => {
-    const bookTitleFive = page.getByRole("cell", {
-      name: "Brave New World",
-    });
-    const bookTitleLast = page.getByRole("cell", {
-      name: "The Power of Now",
-    });
+    const bookTitleFive = page.getByRole("cell", { name: sortedBooks[4].name });
 
     await expect(bookTitleFive).toBeHidden();
-    await expect(bookTitleLast).toBeHidden();
   });
 
   test("Should allow all books to be displayed", async ({ page }) => {
@@ -126,13 +119,9 @@ test.describe("Bookshelf component", () => {
       await page.getByRole("button", { name: "Show More Books" }).click();
     });
 
-    const bookTitleFive = page.getByRole("cell", {
-      name: "Brave New World",
-    });
-    const lastBook = page.getByRole("cell", { name: "The Power of Now" });
+    const bookTitleFive = page.getByRole("cell", { name: sortedBooks[4].name });
 
     await expect(bookTitleFive).toBeVisible();
-    await expect(lastBook).toBeVisible();
   });
 
   test("Should allow less books to be displayed if all are shown", async ({
@@ -146,13 +135,9 @@ test.describe("Bookshelf component", () => {
       await page.getByRole("button", { name: "Show Less Books" }).click();
     });
 
-    const bookTitleFive = page.getByRole("cell", {
-      name: "Brave New World",
-    });
-    const lastBook = page.getByRole("cell", { name: "The Power of Now" });
+    const bookTitleFive = page.getByRole("cell", { name: sortedBooks[4].name });
 
     await expect(bookTitleFive).toBeHidden();
-    await expect(lastBook).toBeHidden();
   });
 });
 

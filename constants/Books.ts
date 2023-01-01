@@ -1,9 +1,17 @@
 export const BOOKS: Book[] = [
   {
+    name: "Stolen Focus",
+    author: "Johann Hari",
+    genre: "Nonfiction",
+    status: "Reading",
+    dateStarted: "01/01/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Final Empire",
     author: "Brandon Sanderson",
     genre: "Fantasy",
-    status: "Reading",
+    status: "Read",
     dateStarted: "26/12/2022",
     dateCompleted: "01/01/2023",
   },
@@ -240,3 +248,10 @@ export const BOOKS: Book[] = [
     dateCompleted: "2021",
   },
 ];
+
+export function bookStatusSorter(a: Book, b: Book): number {
+  if (a.status == "Reading" && b.status != "Reading") return -1;
+  if (a.status != "Reading" && b.status == "Reading") return 0;
+
+  return 0;
+}

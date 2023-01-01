@@ -52,6 +52,32 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  Stolen Focus
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  Johann Hari
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Nonfiction
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   The Final Empire
                 </h2>
                 <div
@@ -110,32 +136,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                   className="text-sm"
                 >
                   Nassim Nicholas Taleb
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Nonfiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  Wordslut: A Feminist Guide to Taking Back the English Language
-                </h2>
-                <div
-                  className="text-sm"
-                >
-                  Amanda Montell
                 </div>
               </td>
               <td
