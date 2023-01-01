@@ -5,6 +5,7 @@ import SectionLayout from "../layouts/SectionLayout";
 
 export default function BookshelfSectionTwo() {
   const [showAllBooks, setshowAllBooks] = useState(false);
+  const sortedBooks = BOOKS.slice().sort(bookStatusSorter);
 
   return (
     <SectionLayout bgSecondary>
@@ -15,7 +16,7 @@ export default function BookshelfSectionTwo() {
       <div className="rounded-xl p-3.5">
         <div className="max-h-[600px] overflow-y-scroll pr-2">
           <BookShelfTable
-            books={BOOKS.sort(bookStatusSorter)}
+            books={sortedBooks}
             shortViewBooks={4}
             shortView={!showAllBooks}
           />

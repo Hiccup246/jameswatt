@@ -92,7 +92,7 @@ test.describe("Work experience component", () => {
 });
 
 test.describe("Bookshelf component", () => {
-  const sortedBooks = BOOKS.sort(bookStatusSorter);
+  const sortedBooks = BOOKS.slice().sort(bookStatusSorter);
 
   test("Displays 4 books", async ({ page }) => {
     const bookTitleOne = page.getByRole("cell", { name: sortedBooks[0].name });
