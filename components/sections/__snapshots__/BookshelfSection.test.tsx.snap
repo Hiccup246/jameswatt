@@ -78,18 +78,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Final Empire
+                  The Pragmatic Programmer: From Journeyman to Master
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Brandon Sanderson
+                  Andy Hunt, Dave Thomas
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Fantasy
+                Programming
               </td>
               <td
                 className="align-top"
@@ -104,18 +104,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Pragmatic Programmer: From Journeyman to Master
+                  The Final Empire
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Andy Hunt, Dave Thomas
+                  Brandon Sanderson
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Programming
+                Fantasy
               </td>
               <td
                 className="align-top"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BOOKS } from "../../constants/Books";
+import { BOOKS, bookStatusSorter } from "../../constants/Books";
 import BookShelfTable from "../BookshelfTable";
 import SectionLayout from "../layouts/SectionLayout";
 
@@ -15,7 +15,7 @@ export default function BookshelfSectionTwo() {
       <div className="rounded-xl p-3.5">
         <div className="max-h-[600px] overflow-y-scroll pr-2">
           <BookShelfTable
-            books={BOOKS}
+            books={BOOKS.sort(bookStatusSorter)}
             shortViewBooks={4}
             shortView={!showAllBooks}
           />
