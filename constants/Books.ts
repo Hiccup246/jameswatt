@@ -248,10 +248,3 @@ export const BOOKS: Book[] = [
     dateCompleted: "2021",
   },
 ];
-
-export function bookStatusSorter(a: Book, b: Book): number {
-  if (a.status == "Reading" && b.status != "Reading") return -1;
-  if (a.status != "Reading" && b.status == "Reading") return 0;
-
-  return 0;
-}

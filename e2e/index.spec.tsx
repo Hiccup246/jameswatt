@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { BOOKS, bookStatusSorter } from "../constants/Books";
+import { BOOKS } from "../constants/Books";
+import { bookStatusSorter } from "../components/sections/BookshelfSection";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");

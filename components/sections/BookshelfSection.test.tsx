@@ -1,4 +1,4 @@
-import BookshelfSection from "./BookshelfSection";
+import BookshelfSection, { bookStatusSorter } from "./BookshelfSection";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -49,5 +49,41 @@ describe("BookshelfSection", () => {
 
       expect(screen.getAllByRole("row").length - headerRows()).toBe(4);
     });
+  });
+});
+
+describe("bookStatusSorter", () => {
+  const readingBook: Book = {
+    name: "Book 1",
+    author: "John",
+    genre: "Fiction",
+    status: "Reading",
+    dateStarted: "",
+    dateCompleted: "",
+  };
+
+  const readBook: Book = {
+    name: "Book 2",
+    author: "Alice",
+    genre: "NonFiction",
+    status: "read",
+    dateStarted: "",
+    dateCompleted: "",
+  };
+
+  it("returns -1 when the first book is being read and the second is not", () => {
+    expect(bookStatusSorter(readingBook, readBook)).toBe(-1);
+  });
+
+  it("returns 0 when both books are being read", () => {
+    expect(bookStatusSorter(readingBook, readingBook)).toBe(0);
+  });
+
+  it("returns 0 when both books are not being read", () => {
+    expect(bookStatusSorter(readBook, readBook)).toBe(0);
+  });
+
+  it("returns 1 when the first book is completed and the second is being read", () => {
+    expect(bookStatusSorter(readingBook, readingBook)).toBe(0);
   });
 });

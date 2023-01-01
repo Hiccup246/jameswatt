@@ -1,7 +1,14 @@
 import { useState } from "react";
-import { BOOKS, bookStatusSorter } from "../../constants/Books";
+import { BOOKS } from "../../constants/Books";
 import BookShelfTable from "../BookshelfTable";
 import SectionLayout from "../layouts/SectionLayout";
+
+export function bookStatusSorter(a: Book, b: Book): number {
+  if (a.status == "Reading" && b.status != "Reading") return -1;
+  if (a.status != "Reading" && b.status == "Reading") return 0;
+
+  return 0;
+}
 
 export default function BookshelfSectionTwo() {
   const [showAllBooks, setshowAllBooks] = useState(false);
