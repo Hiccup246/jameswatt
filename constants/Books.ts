@@ -1,11 +1,19 @@
 export const BOOKS: Book[] = [
   {
+    name: "The Well of Ascension",
+    author: "Brandon Sanderson",
+    genre: "Fantasy",
+    status: "Reading",
+    dateStarted: "05/01/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Stolen Focus",
     author: "Johann Hari",
     genre: "Nonfiction",
-    status: "Reading",
+    status: "Read",
     dateStarted: "01/01/2023",
-    dateCompleted: "",
+    dateCompleted: "03/01/2023",
   },
   {
     name: "The Final Empire",
