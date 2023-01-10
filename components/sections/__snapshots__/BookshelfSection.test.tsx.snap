@@ -52,7 +52,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Well of Ascension
+                  The Hero of Ages
                 </h2>
                 <div
                   className="text-sm"
@@ -104,18 +104,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  Stolen Focus
+                  The Well of Ascension
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Johann Hari
+                  Brandon Sanderson
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Nonfiction
+                Fantasy
               </td>
               <td
                 className="align-top"
@@ -130,18 +130,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Final Empire
+                  Stolen Focus
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Brandon Sanderson
+                  Johann Hari
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Fantasy
+                Nonfiction
               </td>
               <td
                 className="align-top"
