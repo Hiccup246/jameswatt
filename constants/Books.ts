@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "The Hero of Ages",
     author: "Brandon Sanderson",
     genre: "Fantasy",
-    status: "Reading",
+    status: "Read",
     dateStarted: "09/01/2023",
-    dateCompleted: "",
+    dateCompleted: "12/01/2023",
   },
   {
     name: "The Well of Ascension",
