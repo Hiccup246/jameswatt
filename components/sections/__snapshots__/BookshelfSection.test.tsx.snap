@@ -52,6 +52,32 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  The Dawn of Everything
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  David Greaber and David Wengrow
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Fantasy
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   The Pragmatic Programmer: From Journeyman to Master
                 </h2>
                 <div
@@ -116,32 +142,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                 className="align-top text-sm max-smaller:inline"
               >
                 Fantasy
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  Stolen Focus
-                </h2>
-                <div
-                  className="text-sm"
-                >
-                  Johann Hari
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Nonfiction
               </td>
               <td
                 className="align-top"

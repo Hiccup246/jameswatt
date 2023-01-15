@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "The Dawn of Everything",
+    author: "David Greaber and David Wengrow",
+    genre: "Fantasy",
+    status: "Reading",
+    dateStarted: "13/01/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Hero of Ages",
     author: "Brandon Sanderson",
     genre: "Fantasy",
