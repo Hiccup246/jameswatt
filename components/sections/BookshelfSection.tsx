@@ -5,14 +5,15 @@ import SectionLayout from "../layouts/SectionLayout";
 
 export function bookStatusSorter(a: Book, b: Book): number {
   if (a.status == "Reading" && b.status != "Reading") return -1;
-  if (a.status != "Reading" && b.status == "Reading") return 0;
+  if (a.status != "Reading" && b.status == "Reading") return 1;
 
   return 0;
 }
 
+const sortedBooks = BOOKS.slice().sort(bookStatusSorter);
+
 export default function BookshelfSectionTwo() {
   const [showAllBooks, setshowAllBooks] = useState(false);
-  const sortedBooks = BOOKS.slice().sort(bookStatusSorter);
 
   return (
     <SectionLayout bgSecondary>
