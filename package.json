@@ -9,7 +9,7 @@
     "url": "https://github.com/Hiccup246/jameswatt"
   },
   "license": "MIT",
-  "packageManager": "pnpm@7.25.0",
+  "packageManager": "pnpm@7.25.1",
   "keywords": [
     "nextjs",
     "tailwind",
