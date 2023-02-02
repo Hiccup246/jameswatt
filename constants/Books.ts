@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "The Dawn of Everything",
     author: "David Greaber and David Wengrow",
     genre: "Fantasy",
-    status: "Reading",
+    status: "Read",
     dateStarted: "13/01/2023",
-    dateCompleted: "",
+    dateCompleted: "02/02/2023",
   },
   {
     name: "The Hero of Ages",
