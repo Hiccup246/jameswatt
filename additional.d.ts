@@ -6,6 +6,7 @@ type ShowcaseProject = {
   projectName: string;
   projectImageSrc: string;
   firstPublished: Date;
+  highlightProject?: boolean;
 };
 
 type SectionLayoutProps = {
