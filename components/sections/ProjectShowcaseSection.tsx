@@ -5,8 +5,16 @@ import { PROJECTS } from "../../constants/Projects";
 const orderedByPublishDate = PROJECTS.sort(
   (a, b) => b.firstPublished.getTime() - a.firstPublished.getTime()
 );
-const mostRecentProject = orderedByPublishDate[0];
-const olderProjects = orderedByPublishDate.slice(1);
+const highlightedProject = orderedByPublishDate.filter(
+  (project: ShowcaseProject) => {
+    return project.highlightProject;
+  }
+)[0] || orderedByPublishDate[0];
+
+orderedByPublishDate.splice(
+  orderedByPublishDate.indexOf(highlightedProject),
+  1
+);
 
 export default function ProjectShowcaseSection() {
   return (
@@ -17,16 +25,16 @@ export default function ProjectShowcaseSection() {
 
       <div className="mb-10 self-center md:w-1/2">
         <ShowcaseProject
-          websiteUrl={mostRecentProject.websiteUrl}
-          githubRepoUrl={mostRecentProject.githubRepoUrl}
-          projectName={mostRecentProject.projectName}
-          projectImageSrc={mostRecentProject.projectImageSrc}
-          firstPublished={mostRecentProject.firstPublished}
+          websiteUrl={highlightedProject.websiteUrl}
+          githubRepoUrl={highlightedProject.githubRepoUrl}
+          projectName={highlightedProject.projectName}
+          projectImageSrc={highlightedProject.projectImageSrc}
+          firstPublished={highlightedProject.firstPublished}
         />
       </div>
 
       <div className="grid grid-cols-1 items-start gap-8 gap-y-14 pt-8 md:grid-cols-3">
-        {olderProjects.map((project: ShowcaseProject) => {
+        {orderedByPublishDate.map((project: ShowcaseProject) => {
           return (
             <ShowcaseProject
               key={project.projectName}
