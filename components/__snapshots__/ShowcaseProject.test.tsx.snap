@@ -16,7 +16,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
     >
       <img
         alt="Project One Website Screenshot"
-        className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+        className="rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg aspect-video"
         data-nimg="1"
         decoding="async"
         height={337}
