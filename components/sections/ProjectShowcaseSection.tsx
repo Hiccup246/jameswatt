@@ -5,11 +5,10 @@ import { PROJECTS } from "../../constants/Projects";
 const orderedByPublishDate = PROJECTS.sort(
   (a, b) => b.firstPublished.getTime() - a.firstPublished.getTime()
 );
-const highlightedProject = orderedByPublishDate.filter(
-  (project: ShowcaseProject) => {
+const highlightedProject =
+  orderedByPublishDate.filter((project: ShowcaseProject) => {
     return project.highlightProject;
-  }
-)[0] || orderedByPublishDate[0];
+  })[0] || orderedByPublishDate[0];
 
 orderedByPublishDate.splice(
   orderedByPublishDate.indexOf(highlightedProject),

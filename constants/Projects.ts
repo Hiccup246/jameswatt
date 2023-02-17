@@ -1,8 +1,16 @@
 export const PROJECTS: ShowcaseProject[] = [
   {
+    websiteUrl: "https://github.com/Hiccup246/development-env",
+    githubRepoUrl: "https://github.com/Hiccup246/development-env",
+    projectName: "MacOS development setup",
+    projectImageSrc: "/development-setup-screenshot.webp",
+    firstPublished: new Date(2023, 1, 17), // "17/02/2022"
+  },
+  {
     websiteUrl: "https://www.custom-sound-board.com/",
     githubRepoUrl: "https://github.com/Hiccup246/custom-sound-board",
     projectName: "Custom Sound Board",
+    highlightProject: true,
     projectImageSrc: "/custom-sound-board.webp",
     firstPublished: new Date(2022, 10, 5), // "5/11/2022"
   },
