@@ -43,9 +43,9 @@ export const BOOKS: Book[] = [
     name: "The Pragmatic Programmer: From Journeyman to Master",
     author: "Andy Hunt, Dave Thomas",
     genre: "Programming",
-    status: "Reading",
+    status: "Read",
     dateStarted: "05/09/2020",
-    dateCompleted: "",
+    dateCompleted: "19/02/2023",
   },
   {
     name: "The Black Swan: The Impact of the Highly Improbable",
