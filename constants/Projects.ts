@@ -2,7 +2,7 @@ export const PROJECTS: ShowcaseProject[] = [
   {
     websiteUrl: "https://github.com/Hiccup246/development-env",
     githubRepoUrl: "https://github.com/Hiccup246/development-env",
-    projectName: "MacOS development setup",
+    projectName: "MacOS Development Setup",
     projectImageSrc: "/development-setup-screenshot.webp",
     firstPublished: new Date(2023, 1, 17), // "17/02/2022"
   },

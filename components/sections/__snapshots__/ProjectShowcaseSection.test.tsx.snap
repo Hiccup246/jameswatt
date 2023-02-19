@@ -102,7 +102,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             target="_blank"
           >
             <img
-              alt="MacOS development setup Website Screenshot"
+              alt="MacOS Development Setup Website Screenshot"
               className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
               data-nimg="1"
               decoding="async"
@@ -125,19 +125,19 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             className="mt-4 flex flex-row justify-between"
           >
             <a
-              aria-label="MacOS development setup Url"
+              aria-label="MacOS Development Setup Url"
               className="hover:cursor-pointer group-hover:underline"
               href="https://github.com/Hiccup246/development-env"
               rel="noopener noreferrer"
               target="_blank"
             >
-              MacOS development setup
+              MacOS Development Setup
             </a>
             <div
               className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
             >
               <a
-                aria-label="MacOS development setup Github Project"
+                aria-label="MacOS Development Setup Github Project"
                 className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
                 href="https://github.com/Hiccup246/development-env"
                 rel="noopener noreferrer"
