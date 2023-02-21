@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "Thinking in Systems: A Primer",
+    author: "Donella H. Meadows and Diana Wright",
+    genre: "Nonfiction",
+    status: "Reading",
+    dateStarted: "20/02/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Dawn of Everything",
     author: "David Greaber and David Wengrow",
     genre: "Fantasy",
