@@ -89,7 +89,7 @@ exports[`BookshelfSection renders correctly 1`] = `
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Fantasy
+                Nonfiction
               </td>
               <td
                 className="align-top"
