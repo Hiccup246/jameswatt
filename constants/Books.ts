@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "Thinking in Systems: A Primer",
     author: "Donella H. Meadows and Diana Wright",
     genre: "Nonfiction",
-    status: "Reading",
+    status: "Read",
     dateStarted: "20/02/2023",
-    dateCompleted: "",
+    dateCompleted: "23/02/2023",
   },
   {
     name: "The Dawn of Everything",
