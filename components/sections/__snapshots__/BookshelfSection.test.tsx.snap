@@ -52,6 +52,32 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  Built to Last: Successful Habits of Visionary Companies
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  James C. Collins, Jerry I. Porras
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Business
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   Thinking in Systems: A Primer
                 </h2>
                 <div
@@ -105,32 +131,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                   className="my-0 max-w-lg font-bold"
                 >
                   The Hero of Ages
-                </h2>
-                <div
-                  className="text-sm"
-                >
-                  Brandon Sanderson
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Fantasy
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  The Well of Ascension
                 </h2>
                 <div
                   className="text-sm"

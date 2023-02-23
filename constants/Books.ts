@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "Built to Last: Successful Habits of Visionary Companies",
+    author: "James C. Collins, Jerry I. Porras",
+    genre: "Business",
+    status: "Reading",
+    dateStarted: "23/02/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Thinking in Systems: A Primer",
     author: "Donella H. Meadows and Diana Wright",
     genre: "Nonfiction",
