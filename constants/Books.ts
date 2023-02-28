@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "Built to Last: Successful Habits of Visionary Companies",
     author: "James C. Collins, Jerry I. Porras",
     genre: "Business",
-    status: "Reading",
+    status: "Read",
     dateStarted: "23/02/2023",
-    dateCompleted: "",
+    dateCompleted: "28/02/2023",
   },
   {
     name: "Thinking in Systems: A Primer",
