@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "It's OK to be Angry About Capitalism",
+    author: "Bernie Sanders",
+    genre: "Politics",
+    status: "Reading",
+    dateStarted: "01/03/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Built to Last: Successful Habits of Visionary Companies",
     author: "James C. Collins, Jerry I. Porras",
     genre: "Business",
