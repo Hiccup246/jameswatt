@@ -22,7 +22,7 @@ export const PROJECTS: ShowcaseProject[] = [
     firstPublished: new Date(2021, 10, 30), // "30/11/2021"
   },
   {
-    websiteUrl: "https://www.old.jameswatt.io",
+    websiteUrl: "https://jameswatt-v1.netlify.app/",
     githubRepoUrl: "https://github.com/Hiccup246/old-jameswatt-portfolio",
     projectName: "Old Portfolio Site",
     projectImageSrc: "/old-jameswatt.webp",
