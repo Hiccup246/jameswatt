@@ -19,7 +19,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
         knowledge sharing.
       </p>`,
       `<p>
-        Communicated closley with existing and potential clients to provide
+        Communicated closely with existing and potential clients to provide
         technical support for key API intgerations and with partners to explore
         possible business opportunities.
       </p>`,
@@ -45,7 +45,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
         organisation of over 50 spanning across 3 timezones.
       </p>`,
       `<p>
-        Collaborated closley with the founders of the company, key sales staff,
+        Collaborated closely with the founders of the company, key sales staff,
         developers, designers, third party vendors and customer support to
         navigate complex AML regulation and data policies to produce slick
         onboarding products.
@@ -60,7 +60,7 @@ export const PROGRAMMING_EXPERIENCES: Job[] = [
       "A social music application to aid artists in optimising their reach and influence using artifical intelligence",
     jobHighlights: [
       `<p>
-        Worked closley with the founders of the company in an agile team to
+        Worked closely with the founders of the company in an agile team to
         develop and expand the back-end of the main product using <b>Koa.JS</b>
         which included Javascript, Typescript, HTML and CSS
       </p>`,
