@@ -105,3 +105,7 @@ Cheers!
 - Attempt to improve mobile performance perhaps by web worker usage or
   by refactoring components to be more efficient
   - Think about useEffect usage and if my usage is appropriate
+- Integrate reading statistics into the bookshelf component. These could include:
+  - Reading challenge data
+  - Dates when books were read
+  - Books completed in each year/month
