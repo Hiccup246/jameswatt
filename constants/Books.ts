@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "Fahrenheit 451",
+    author: "Ray Bradbury",
+    genre: "Science Fiction",
+    status: "Reading",
+    dateStarted: "07/03/2023",
+    dateCompleted: "",
+  },
+  {
     name: "It's OK to be Angry About Capitalism",
     author: "Bernie Sanders",
     genre: "Politics",
