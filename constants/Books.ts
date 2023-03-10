@@ -1,11 +1,27 @@
 export const BOOKS: Book[] = [
   {
+    name: "God Is Not Great: How Religion Poisons Everything",
+    author: "Christopher Hitchens",
+    genre: "Nonfiction",
+    status: "Reading",
+    dateStarted: "10/03/2023",
+    dateCompleted: "",
+  },
+  {
+    name: "Fahrenheit 451",
+    author: "Ray Bradbury",
+    genre: "Science Fiction",
+    status: "Read",
+    dateStarted: "07/03/2023",
+    dateCompleted: "10/03/2023",
+  },
+  {
     name: "Fahrenheit 451",
     author: "Ray Bradbury",
     genre: "Science Fiction",
     status: "Reading",
     dateStarted: "07/03/2023",
-    dateCompleted: "",
+    dateCompleted: "10/03/2023",
   },
   {
     name: "It's OK to be Angry About Capitalism",
