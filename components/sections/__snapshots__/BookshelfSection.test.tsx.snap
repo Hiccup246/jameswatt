@@ -104,18 +104,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  Fahrenheit 451
+                  It's OK to be Angry About Capitalism
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Ray Bradbury
+                  Bernie Sanders
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Science Fiction
+                Politics
               </td>
               <td
                 className="align-top"
@@ -130,18 +130,18 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  It's OK to be Angry About Capitalism
+                  Built to Last: Successful Habits of Visionary Companies
                 </h2>
                 <div
                   className="text-sm"
                 >
-                  Bernie Sanders
+                  James C. Collins, Jerry I. Porras
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Politics
+                Business
               </td>
               <td
                 className="align-top"

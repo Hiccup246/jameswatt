@@ -16,14 +16,6 @@ export const BOOKS: Book[] = [
     dateCompleted: "10/03/2023",
   },
   {
-    name: "Fahrenheit 451",
-    author: "Ray Bradbury",
-    genre: "Science Fiction",
-    status: "Reading",
-    dateStarted: "07/03/2023",
-    dateCompleted: "10/03/2023",
-  },
-  {
     name: "It's OK to be Angry About Capitalism",
     author: "Bernie Sanders",
     genre: "Politics",
