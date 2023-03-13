@@ -1,11 +1,19 @@
 export const BOOKS: Book[] = [
   {
+    name: "The God Delusion",
+    author: "Richard Dawkins",
+    genre: "Nonfiction",
+    status: "Reading",
+    dateStarted: "13/03/2023",
+    dateCompleted: "",
+  },
+  {
     name: "God Is Not Great: How Religion Poisons Everything",
     author: "Christopher Hitchens",
     genre: "Nonfiction",
-    status: "Reading",
+    status: "Read",
     dateStarted: "10/03/2023",
-    dateCompleted: "",
+    dateCompleted: "13/03/2023",
   },
   {
     name: "Fahrenheit 451",
