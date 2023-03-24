@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "The God Delusion",
     author: "Richard Dawkins",
     genre: "Nonfiction",
-    status: "Reading",
+    status: "Read",
     dateStarted: "13/03/2023",
-    dateCompleted: "",
+    dateCompleted: "24/03/2023",
   },
   {
     name: "God Is Not Great: How Religion Poisons Everything",
