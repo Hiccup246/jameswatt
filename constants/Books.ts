@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "The End of Faith: Religion, Terror, and the Future of Reason",
+    author: "Sam Harris",
+    genre: "Nonfiction",
+    status: "Reading",
+    dateStarted: "24/03/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The God Delusion",
     author: "Richard Dawkins",
     genre: "Nonfiction",
