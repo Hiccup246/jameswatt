@@ -1,11 +1,19 @@
 export const BOOKS: Book[] = [
   {
+    name: "Project Hail Mary",
+    author: "Andy Weir",
+    genre: "Science Fiction",
+    status: "Reading",
+    dateStarted: "04/04/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The End of Faith: Religion, Terror, and the Future of Reason",
     author: "Sam Harris",
     genre: "Nonfiction",
-    status: "Reading",
+    status: "Read",
     dateStarted: "24/03/2023",
-    dateCompleted: "",
+    dateCompleted: "04/04/2023",
   },
   {
     name: "The God Delusion",

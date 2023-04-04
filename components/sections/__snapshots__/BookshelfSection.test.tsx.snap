@@ -52,6 +52,32 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  Project Hail Mary
+                </h2>
+                <div
+                  className="text-sm"
+                >
+                  Andy Weir
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Science Fiction
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   The End of Faith: Religion, Terror, and the Future of Reason
                 </h2>
                 <div
@@ -116,32 +142,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                 className="align-top text-sm max-smaller:inline"
               >
                 Nonfiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  Fahrenheit 451
-                </h2>
-                <div
-                  className="text-sm"
-                >
-                  Ray Bradbury
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Science Fiction
               </td>
               <td
                 className="align-top"
