@@ -11,10 +11,10 @@ import JavascriptIcon from "../components/Icons/JavascriptIcon";
 import NextJsIcon from "../components/Icons/NextJsIcon";
 import NodeIcon from "../components/Icons/NodeIcon";
 import NuxtIcon from "../components/Icons/NuxtIcon";
-import PostgresIcon from "../components/Icons/PostgresIcon";
 import ReactIcon from "../components/Icons/ReactIcon";
 import RubyIcon from "../components/Icons/RubyIcon";
 import RubyOnRailsIcon from "../components/Icons/RubyOnRailsIcon";
+import RustIcon from "../components/Icons/RustIcon";
 import SolidityIcon from "../components/Icons/SolidityIcon";
 import SvelteIcon from "../components/Icons/SvelteIcon";
 import TailwindIcon from "../components/Icons/TailwindIcon";
@@ -108,8 +108,8 @@ export const GROUP3: LinkedIcon[] = [
   },
   { icon: NextJsIcon(), link: "https://nextjs.org/", name: "Next.JS Homepage" },
   {
-    icon: PostgresIcon(),
-    link: "https://www.postgresql.org/",
-    name: "PostgreSQL Homepage",
+    icon: RustIcon(),
+    link: "https://www.rust-lang.org/",
+    name: "Rust Language Homepage",
   },
 ];
