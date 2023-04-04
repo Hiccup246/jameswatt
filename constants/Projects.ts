@@ -1,5 +1,13 @@
 export const PROJECTS: ShowcaseProject[] = [
   {
+    websiteUrl: "https://www.npm-expansions.com/",
+    githubRepoUrl: "https://github.com/Hiccup246/npm-expansions",
+    projectName: "Npm Expansions",
+    highlightProject: true,
+    projectImageSrc: "/npm-expansions.webp",
+    firstPublished: new Date(2023, 3, 4), // "04/04/2023"
+  },
+  {
     websiteUrl: "https://github.com/Hiccup246/development-env",
     githubRepoUrl: "https://github.com/Hiccup246/development-env",
     projectName: "MacOS Development Setup",
@@ -10,7 +18,6 @@ export const PROJECTS: ShowcaseProject[] = [
     websiteUrl: "https://www.custom-sound-board.com/",
     githubRepoUrl: "https://github.com/Hiccup246/custom-sound-board",
     projectName: "Custom Sound Board",
-    highlightProject: true,
     projectImageSrc: "/custom-sound-board.webp",
     firstPublished: new Date(2022, 10, 5), // "5/11/2022"
   },
