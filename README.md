@@ -107,5 +107,4 @@ Cheers!
   - Think about useEffect usage and if my usage is appropriate
 - Integrate reading statistics into the bookshelf component. These could include:
   - Reading challenge data
-  - Dates when books were read
   - Books completed in each year/month
