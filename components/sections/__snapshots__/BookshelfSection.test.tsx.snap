@@ -55,9 +55,19 @@ exports[`BookshelfSection renders correctly 1`] = `
                   Project Hail Mary
                 </h2>
                 <div
-                  className="text-sm"
+                  className="flex flex-col"
                 >
-                  Andy Weir
+                  <div
+                    className="text-sm"
+                  >
+                    Andy Weir
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Started"
+                  >
+                    04/04/2023
+                  </div>
                 </div>
               </td>
               <td
@@ -81,9 +91,19 @@ exports[`BookshelfSection renders correctly 1`] = `
                   The End of Faith: Religion, Terror, and the Future of Reason
                 </h2>
                 <div
-                  className="text-sm"
+                  className="flex flex-col"
                 >
-                  Sam Harris
+                  <div
+                    className="text-sm"
+                  >
+                    Sam Harris
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Completed"
+                  >
+                    04/04/2023
+                  </div>
                 </div>
               </td>
               <td
@@ -107,9 +127,19 @@ exports[`BookshelfSection renders correctly 1`] = `
                   The God Delusion
                 </h2>
                 <div
-                  className="text-sm"
+                  className="flex flex-col"
                 >
-                  Richard Dawkins
+                  <div
+                    className="text-sm"
+                  >
+                    Richard Dawkins
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Completed"
+                  >
+                    24/03/2023
+                  </div>
                 </div>
               </td>
               <td
@@ -133,9 +163,19 @@ exports[`BookshelfSection renders correctly 1`] = `
                   God Is Not Great: How Religion Poisons Everything
                 </h2>
                 <div
-                  className="text-sm"
+                  className="flex flex-col"
                 >
-                  Christopher Hitchens
+                  <div
+                    className="text-sm"
+                  >
+                    Christopher Hitchens
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Completed"
+                  >
+                    13/03/2023
+                  </div>
                 </div>
               </td>
               <td

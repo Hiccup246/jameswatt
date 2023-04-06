@@ -38,9 +38,19 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           The Black Swan: The Impact of the Highly Improbable
         </h2>
         <div
-          className="text-sm"
+          className="flex flex-col"
         >
-          Nassim Nicholas Taleb
+          <div
+            className="text-sm"
+          >
+            Nassim Nicholas Taleb
+          </div>
+          <div
+            className="order-last text-sm max-smaller:order-first"
+            title="Date Started"
+          >
+            26/09/2022
+          </div>
         </div>
       </td>
       <td
@@ -64,9 +74,17 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           The Pragmatic Programmer: From Journeyman to Master
         </h2>
         <div
-          className="text-sm"
+          className="flex flex-col"
         >
-          Andy Hunt, Dave Thomas
+          <div
+            className="text-sm"
+          >
+            Andy Hunt, Dave Thomas
+          </div>
+          <div
+            className="order-last text-sm max-smaller:order-first"
+            title="Date Started"
+          />
         </div>
       </td>
       <td
@@ -90,9 +108,19 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           Wordslut: A Feminist Guide to Taking Back the English Language
         </h2>
         <div
-          className="text-sm"
+          className="flex flex-col"
         >
-          Amanda Montell
+          <div
+            className="text-sm"
+          >
+            Amanda Montell
+          </div>
+          <div
+            className="order-last text-sm max-smaller:order-first"
+            title="Date Completed"
+          >
+            25/09/2022
+          </div>
         </div>
       </td>
       <td
@@ -116,9 +144,19 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           Steve Jobs
         </h2>
         <div
-          className="text-sm"
+          className="flex flex-col"
         >
-          Walter Isaacson
+          <div
+            className="text-sm"
+          >
+            Walter Isaacson
+          </div>
+          <div
+            className="order-last text-sm max-smaller:order-first"
+            title="Date Completed"
+          >
+            11/09/2022
+          </div>
         </div>
       </td>
       <td
@@ -142,9 +180,17 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           Brave New World
         </h2>
         <div
-          className="text-sm"
+          className="flex flex-col"
         >
-          Aldous Huxley
+          <div
+            className="text-sm"
+          >
+            Aldous Huxley
+          </div>
+          <div
+            className="order-last text-sm max-smaller:order-first"
+            title="Date Completed"
+          />
         </div>
       </td>
       <td
@@ -168,9 +214,19 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           Modern Conspiracies in America: Separating Fact from Fiction
         </h2>
         <div
-          className="text-sm"
+          className="flex flex-col"
         >
-          Michael D. Gambone
+          <div
+            className="text-sm"
+          >
+            Michael D. Gambone
+          </div>
+          <div
+            className="order-last text-sm max-smaller:order-first"
+            title="Date Completed"
+          >
+            26/06/2022
+          </div>
         </div>
       </td>
       <td

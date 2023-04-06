@@ -97,7 +97,19 @@ export default function BookShelfTable({
               <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
                 <td className="flex flex-col justify-start break-keep pr-2.5 align-top">
                   <h2 className="my-0 max-w-lg font-bold">{book.name}</h2>
-                  <div className="text-sm">{book.author}</div>
+                  <div className="flex flex-col">
+                    <div className="text-sm">{book.author}</div>
+                    <div
+                      title={
+                        book.status == "Read"
+                          ? "Date Completed"
+                          : "Date Started"
+                      }
+                      className="order-last text-sm max-smaller:order-first"
+                    >
+                      {book.dateCompleted || book.dateStarted}
+                    </div>
+                  </div>
                 </td>
 
                 <td className="align-top text-sm max-smaller:inline">
