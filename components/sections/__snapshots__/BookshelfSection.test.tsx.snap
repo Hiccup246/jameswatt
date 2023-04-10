@@ -52,6 +52,42 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  A Clockwork Orange
+                </h2>
+                <div
+                  className="flex flex-col"
+                >
+                  <div
+                    className="text-sm"
+                  >
+                    Anthony Burgess
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Started"
+                  >
+                    10/04/2023
+                  </div>
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Fiction
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   The Hitchiker's Guide to the Galaxy
                 </h2>
                 <div
@@ -139,42 +175,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                     title="Date Completed"
                   >
                     04/04/2023
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Nonfiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  The God Delusion
-                </h2>
-                <div
-                  className="flex flex-col"
-                >
-                  <div
-                    className="text-sm"
-                  >
-                    Richard Dawkins
-                  </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    24/03/2023
                   </div>
                 </div>
               </td>

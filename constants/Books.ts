@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "A Clockwork Orange",
+    author: "Anthony Burgess",
+    genre: "Fiction",
+    status: "Reading",
+    dateStarted: "10/04/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Hitchiker's Guide to the Galaxy",
     author: "Douglas Adams",
     genre: "Science Fiction",
