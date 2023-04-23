@@ -68,7 +68,10 @@ export default function Home() {
         />
         <meta name="twitter:creator" content="@jameswattnz" />
         <meta name="twitter:site" content="@jameswattnz" />
-        <meta name="twitter:image" content="/site-screenshot.webp" />
+        <meta
+          name="twitter:image"
+          content="https://www.jameswatt.io/site-screenshot.webp"
+        />
         <meta
           name="twitter:image:alt"
           content="Screenshot of www.jameswatt.io"
