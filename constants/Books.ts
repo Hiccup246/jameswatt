@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "In Search Of Excellence",
     author: "Thomas J. Peters, Robert H. Waterman Jr.",
     genre: "Business",
-    status: "Reading",
+    status: "Read",
     dateStarted: "17/04/2023",
-    dateCompleted: "",
+    dateCompleted: "21/05/2023",
   },
   {
     name: "A Clockwork Orange",
