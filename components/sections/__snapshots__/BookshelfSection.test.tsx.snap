@@ -52,6 +52,42 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  Murder on the Orient Express
+                </h2>
+                <div
+                  className="flex flex-col"
+                >
+                  <div
+                    className="text-sm"
+                  >
+                    Agatha Christie
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Started"
+                  >
+                    28/05/2023
+                  </div>
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Mystery
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   In Search Of Excellence
                 </h2>
                 <div
@@ -139,42 +175,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                     title="Date Completed"
                   >
                     09/04/2023
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Science Fiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  Project Hail Mary
-                </h2>
-                <div
-                  className="flex flex-col"
-                >
-                  <div
-                    className="text-sm"
-                  >
-                    Andy Weir
-                  </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    08/04/2023
                   </div>
                 </div>
               </td>

@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "Murder on the Orient Express",
+    author: "Agatha Christie",
+    genre: "Mystery",
+    status: "Reading",
+    dateStarted: "28/05/2023",
+    dateCompleted: "",
+  },
+  {
     name: "In Search Of Excellence",
     author: "Thomas J. Peters, Robert H. Waterman Jr.",
     genre: "Business",
