@@ -104,7 +104,13 @@ Cheers!
 
 - Attempt to improve mobile performance perhaps by web worker usage or
   by refactoring components to be more efficient
+  - Use chrome plugn to evaluate performance in more detail
   - Think about useEffect usage and if my usage is appropriate
 - Integrate reading statistics into the bookshelf component. These could include:
   - Reading challenge data
   - Books completed in each year/month
+- Design and implement a book review system with the ability to write reviews in a text editor
+  - The reviews should be stored in a database
+  - The reviews should be created in a rich text editor available at a URL
+  - No need for advanced functionality like draft posts
+  - The reviews should then be accessable via a API so this website can use them
