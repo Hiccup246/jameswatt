@@ -3,9 +3,9 @@ export const BOOKS: Book[] = [
     name: "Murder on the Orient Express",
     author: "Agatha Christie",
     genre: "Mystery",
-    status: "Reading",
+    status: "Read",
     dateStarted: "28/05/2023",
-    dateCompleted: "",
+    dateCompleted: "08/06/2023",
   },
   {
     name: "In Search Of Excellence",
