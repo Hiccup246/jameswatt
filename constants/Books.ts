@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "The Trial",
+    author: "Franz Kafka, Max Brod, Willa Muir, Edwin Muir",
+    genre: "Fiction",
+    status: "Reading",
+    dateStarted: "08/06/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Murder on the Orient Express",
     author: "Agatha Christie",
     genre: "Mystery",
