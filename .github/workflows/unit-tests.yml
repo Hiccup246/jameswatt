@@ -14,7 +14,7 @@ jobs:
           node-version: "18"
 
       - name: Install pnpm
-        run: npm install -g pnpm@7.25.1
+        run: npm install -g pnpm@8.6.1
 
       - name: Install Dependancies
         run: pnpm install
