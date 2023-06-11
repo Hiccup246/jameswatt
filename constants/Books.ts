@@ -1,5 +1,13 @@
 export const BOOKS: Book[] = [
   {
+    name: "Outgrowing God: A Beginner's Guide to Atheism",
+    author: "Richard Dawkins",
+    genre: "Nonfiction",
+    status: "Reading",
+    dateStarted: "11/06/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Trial",
     author: "Franz Kafka, Max Brod, Willa Muir, Edwin Muir",
     genre: "Fiction",
