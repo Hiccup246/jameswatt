@@ -5,6 +5,7 @@ import ClipboardCheckedBlack from "../public/clipboard-checked-black.webp";
 import ClipboardCheckedWhite from "../public/clipboard-checked-white.webp";
 import React, { useEffect, useState } from "react";
 import { ThemeContext } from "./ThemeProvider";
+import { BookStatus } from "../constants/Books";
 
 const whiteClipboardChecked = (
   <div className="mx-auto h-5 w-5">
@@ -101,7 +102,7 @@ export default function BookShelfTable({
                     <div className="text-sm">{book.author}</div>
                     <div
                       title={
-                        book.status == "Read"
+                        book.status == BookStatus.Read
                           ? "Date Completed"
                           : "Date Started"
                       }
@@ -117,7 +118,9 @@ export default function BookShelfTable({
                 </td>
 
                 <td className="align-top">
-                  {book.status == "Read" ? clipboardCheckedIcon : animatedBook}
+                  {book.status == BookStatus.Read
+                    ? clipboardCheckedIcon
+                    : animatedBook}
                 </td>
               </tr>
             );

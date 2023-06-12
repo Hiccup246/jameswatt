@@ -27,7 +27,7 @@ type Book = {
   name: string;
   author: string;
   genre: string;
-  status: string;
+  status: BookStatus;
   dateStarted: string;
   dateCompleted: string;
 };
