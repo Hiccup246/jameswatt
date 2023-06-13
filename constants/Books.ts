@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Outgrowing God: A Beginner's Guide to Atheism",
     author: "Richard Dawkins",
     genre: "Nonfiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "11/06/2023",
-    dateCompleted: "",
+    dateCompleted: "13/06/2023",
   },
   {
     name: "The Trial",
