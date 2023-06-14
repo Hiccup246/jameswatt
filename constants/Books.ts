@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Down and Out in Paris and London",
+    author: "George Orwell",
+    genre: "Nonfiction",
+    status: BookStatus.Reading,
+    dateStarted: "14/06/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Outgrowing God: A Beginner's Guide to Atheism",
     author: "Richard Dawkins",
     genre: "Nonfiction",
