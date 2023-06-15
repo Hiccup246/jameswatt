@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Down and Out in Paris and London",
     author: "George Orwell",
     genre: "Nonfiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "14/06/2023",
-    dateCompleted: "",
+    dateCompleted: "15/06/2023",
   },
   {
     name: "Outgrowing God: A Beginner's Guide to Atheism",
