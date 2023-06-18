@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Slaughterhouse-Five",
+    author: "Kurt Vonnegut Jr",
+    genre: "Fiction",
+    status: BookStatus.Read,
+    dateStarted: "16/06/2023",
+    dateCompleted: "18/06/2023",
+  },
+  {
     name: "Down and Out in Paris and London",
     author: "George Orwell",
     genre: "Nonfiction",
