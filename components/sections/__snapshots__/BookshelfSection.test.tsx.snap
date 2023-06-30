@@ -52,7 +52,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
-                  The Castle
+                  The Courage to Be Disliked
                 </h2>
                 <div
                   className="flex flex-col"
@@ -60,20 +60,20 @@ exports[`BookshelfSection renders correctly 1`] = `
                   <div
                     className="text-sm"
                   >
-                    Franz Kafka, Mark Harman
+                    Ichiro Kishimi, Fumitake Koga
                   </div>
                   <div
                     className="order-last text-sm max-smaller:order-first"
-                    title="Date Started"
+                    title="Date Completed"
                   >
-                    18/06/2023
+                    28/06/2023
                   </div>
                 </div>
               </td>
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Fiction
+                Nonfiction
               </td>
               <td
                 className="align-top"
