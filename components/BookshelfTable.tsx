@@ -93,9 +93,12 @@ export default function BookShelfTable({
       </thead>
       <tbody>
         {(!!shortView ? books.slice(0, previewBooks) : books).map(
-          (book: Book) => {
+          (book: Book, index: number) => {
             return (
-              <tr key={book.name} className="[&>td]:pt-10 [&>td]:first:pt-0">
+              <tr
+                key={book.name + index}
+                className="[&>td]:pt-10 [&>td]:first:pt-0"
+              >
                 <td className="flex flex-col justify-start break-keep pr-2.5 align-top">
                   <h2 className="my-0 max-w-lg font-bold">{book.name}</h2>
                   <div className="flex flex-col">
