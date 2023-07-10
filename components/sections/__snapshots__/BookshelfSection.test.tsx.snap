@@ -52,6 +52,42 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  The Adventures of Tom Sawyer
+                </h2>
+                <div
+                  className="flex flex-col"
+                >
+                  <div
+                    className="text-sm"
+                  >
+                    Mark Twain
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Started"
+                  >
+                    06/07/2023
+                  </div>
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Fiction
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   The Power of Now
                 </h2>
                 <div
@@ -73,7 +109,7 @@ exports[`BookshelfSection renders correctly 1`] = `
               <td
                 className="align-top text-sm max-smaller:inline"
               >
-                Nonfiction
+                Psychology
               </td>
               <td
                 className="align-top"
@@ -146,42 +182,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                 className="align-top text-sm max-smaller:inline"
               >
                 Fiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  Down and Out in Paris and London
-                </h2>
-                <div
-                  className="flex flex-col"
-                >
-                  <div
-                    className="text-sm"
-                  >
-                    George Orwell
-                  </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    15/06/2023
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Nonfiction
               </td>
               <td
                 className="align-top"

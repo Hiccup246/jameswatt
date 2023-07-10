@@ -5,9 +5,17 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "The Adventures of Tom Sawyer",
+    author: "Mark Twain",
+    genre: "Fiction",
+    status: BookStatus.Reading,
+    dateStarted: "06/07/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Power of Now",
     author: "Eckhart Tolle",
-    genre: "Nonfiction",
+    genre: "Psychology",
     status: BookStatus.Reading,
     dateStarted: "02/07/2023",
     dateCompleted: "",
