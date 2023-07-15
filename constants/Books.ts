@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The Power of Now",
     author: "Eckhart Tolle",
     genre: "Psychology",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "02/07/2023",
-    dateCompleted: "",
+    dateCompleted: "15/07/2023",
   },
   {
     name: "The Adventures of Tom Sawyer",
