@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The Martian",
     author: "Andy Weir",
     genre: "Science Fiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "15/07/2023",
-    dateCompleted: "",
+    dateCompleted: "21/07/2023",
   },
   {
     name: "The Power of Now",
