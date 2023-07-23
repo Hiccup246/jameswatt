@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The Undiscovered Self",
     author: "C.G. Jung",
     genre: "Psychology",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "22/07/2023",
-    dateCompleted: "",
+    dateCompleted: "23/07/2023",
   },
   {
     name: "The Martian",
