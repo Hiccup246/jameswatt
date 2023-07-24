@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Beyond Good and Evil",
+    author: "Friedrich Nietzsche",
+    genre: "Philosophy",
+    status: BookStatus.Reading,
+    dateStarted: "23/07/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Undiscovered Self",
     author: "C.G. Jung",
     genre: "Psychology",
