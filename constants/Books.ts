@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Diddly Squat: Til The Cows Come Home",
     author: "Jeremy Clarkson",
     genre: "Nonfiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "28/07/2023",
-    dateCompleted: "",
+    dateCompleted: "29/07/2023",
   },
   {
     name: "Beyond Good and Evil",
