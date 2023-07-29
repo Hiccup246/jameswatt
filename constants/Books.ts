@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Beyond Good and Evil",
     author: "Friedrich Nietzsche",
     genre: "Philosophy",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "23/07/2023",
-    dateCompleted: "",
+    dateCompleted: "28/07/2023",
   },
   {
     name: "The Undiscovered Self",
