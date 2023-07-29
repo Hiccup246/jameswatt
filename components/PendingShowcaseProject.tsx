@@ -2,7 +2,9 @@ import ShowcaseProject from "./ShowcaseProject";
 
 export default function PendingShowcaseProject(props: ShowcaseProject) {
   // Import Image
-  // Import construction animation
+  // Import construction animation ⚒️ 👷
+  // Create construction tape div rectangle
+  //   - Make div have horizontal black bars and animate infinite scroll
 
   return (
     <div>
