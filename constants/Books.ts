@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Diddly Squat: Til The Cows Come Home",
+    author: "Jeremy Clarkson",
+    genre: "Nonfiction",
+    status: BookStatus.Reading,
+    dateStarted: "28/07/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Beyond Good and Evil",
     author: "Friedrich Nietzsche",
     genre: "Philosophy",
