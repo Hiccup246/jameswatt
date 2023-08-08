@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "And Then There Were None",
+    author: "Agatha Christie",
+    genre: "Mystery",
+    status: BookStatus.Read,
+    dateStarted: "05/08/2023",
+    dateCompleted: "07/08/2023",
+  },
+  {
     name: "Five Dialogues: Euthyphro, Apology, Crito, Meno, Phaedo",
     author: "Plato",
     genre: "Philosophy",
