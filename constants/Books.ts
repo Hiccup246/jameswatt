@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Five Dialogues: Euthyphro, Apology, Crito, Meno, Phaedo",
     author: "Plato",
     genre: "Philosophy",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "01/08/2023",
-    dateCompleted: "",
+    dateCompleted: "04/08/2023",
   },
   {
     name: "Diddly Squat: a year on the farm",
