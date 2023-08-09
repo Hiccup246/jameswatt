@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "How to Win Friends and Influence People",
+    author: "Dale Carnegie",
+    genre: "Nonfiction",
+    status: BookStatus.Reading,
+    dateStarted: "09/08/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Design Patterns: Elements of Reusable Object-Oriented Software",
     author:
       "Erich Gamma, Grady Booch, Richard Helm, Ralph Johnson, John Vlissides",
