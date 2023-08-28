@@ -1,5 +1,20 @@
 export const PROGRAMMING_EXPERIENCES: Job[] = [
   {
+    role: "Software Engineer",
+    company: "TripAdvisor",
+    dateRange: "2022/08 - Present",
+    description:
+      "Tripadvisor is the world's largest travel platform helping 463 million travelers each month and operates the leading travel experience site Viator",
+    jobHighlights: [
+      `<p>
+        Working in a high performing agile team to develop features at scale for the main Viator site that serves millions of users all over the world
+      </p>`,
+      `<p>
+        Performing full stack development using Java and Spring Boot on the server side and React on the client side
+      </p>`,
+    ],
+  },
+  {
     role: "UK Team Lead",
     company: "AplyiD",
     dateRange: "2022/02 - 2022/11",

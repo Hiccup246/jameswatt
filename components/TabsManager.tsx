@@ -128,11 +128,15 @@ export default function TabsManager({
           );
         })}
 
+        {/*
+          We manually set the inital width of the tab slider on desktop to eliminate the
+          need for a one off dynamic calculation
+        */}
         <div
           style={sliderStyle}
           className={`
             transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
-            visible absolute top-0 left-0 z-10 h-[40px] w-[85px] rounded bg-brown delay-100
+            visible absolute top-0 left-0 z-10 h-[40px] w-[122px] rounded bg-brown delay-100
             duration-200 dark:bg-darkgrey max-small:top-auto max-small:bottom-2.5
           `}
         ></div>
