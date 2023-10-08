@@ -22,7 +22,7 @@ export default function ProjectShowcaseSection() {
         Project Showcase
       </h1>
 
-      <div className="mb-10 self-center md:w-1/2">
+      <div className="mb-10 self-center w-full sm:w-1/2">
         <ShowcaseProject
           websiteUrl={highlightedProject.websiteUrl}
           githubRepoUrl={highlightedProject.githubRepoUrl}

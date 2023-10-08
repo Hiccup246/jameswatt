@@ -13,7 +13,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
       Project Showcase
     </h1>
     <div
-      className="mb-10 self-center md:w-1/2"
+      className="mb-10 self-center w-full sm:w-1/2"
     >
       <div
         className="hover group mx-auto w-full"
@@ -30,7 +30,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Npm Expansions Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -103,7 +103,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="MacOS Development Setup Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -172,7 +172,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Custom Sound Board Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -241,7 +241,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="James Watt Calling Card Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -310,7 +310,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Gun Control Policies Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -379,7 +379,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Norm MacDonald Quotes Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -448,7 +448,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Free Online Text Edit Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
@@ -517,7 +517,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           >
             <img
               alt="Old Portfolio Site Website Screenshot"
-              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              className="aspect-video rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg w-full"
               data-nimg="1"
               decoding="async"
               height={337}
