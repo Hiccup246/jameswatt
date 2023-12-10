@@ -29,15 +29,6 @@ export const BOOKS: Book[] = [
     dateCompleted: "20/08/2023",
   },
   {
-    name: "Design Patterns: Elements of Reusable Object-Oriented Software",
-    author:
-      "Erich Gamma, Grady Booch, Richard Helm, Ralph Johnson, John Vlissides",
-    genre: "Programming",
-    status: BookStatus.Reading,
-    dateStarted: "08/08/2023",
-    dateCompleted: "",
-  },
-  {
     name: "And Then There Were None",
     author: "Agatha Christie",
     genre: "Mystery",
