@@ -5,14 +5,6 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
-    name: "Pride and Prejudice",
-    author: "Jane Austen",
-    genre: "Fiction",
-    status: BookStatus.Reading,
-    dateStarted: "27/08/2023",
-    dateCompleted: "",
-  },
-  {
     name: "The Restaurant at the End of the Universe",
     author: "Douglas Adams",
     genre: "Science Fiction",
