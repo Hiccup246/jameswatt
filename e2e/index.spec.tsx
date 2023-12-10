@@ -34,12 +34,13 @@ test("Home page displays the correct headers", async ({ page }) => {
 
 test.describe("Work experience component", () => {
   test("Correctly displays all tab buttons", async ({ page }) => {
-    const tabButtonOne = page.getByRole("button", { name: "AplyiD" }).first();
-    const tabButtonTwo = page.getByRole("button", { name: "AplyiD" }).nth(1);
-    const tabButtonThree = page.getByRole("button", { name: "Hypebeat" });
-    const tabButtonFour = page.getByRole("button", { name: "Halter" });
-    const tabButtonFive = page.getByRole("button", { name: "BNZ" });
-    const tabButtonSix = page.getByRole("button", { name: "VUW" });
+    const tabButtonOne = page.getByRole("button", { name: "Tripadvisor" });
+    const tabButtonTwo = page.getByRole("button", { name: "AplyiD" }).first();
+    const tabButtonThree = page.getByRole("button", { name: "AplyiD" }).nth(1);
+    const tabButtonFour = page.getByRole("button", { name: "Hypebeat" });
+    const tabButtonFive = page.getByRole("button", { name: "Halter" });
+    const tabButtonSix = page.getByRole("button", { name: "BNZ" });
+    const tabButtonSeven = page.getByRole("button", { name: "VUW" });
 
     await expect(tabButtonOne).toBeVisible();
     await expect(tabButtonTwo).toBeVisible();
@@ -47,11 +48,12 @@ test.describe("Work experience component", () => {
     await expect(tabButtonFour).toBeVisible();
     await expect(tabButtonFive).toBeVisible();
     await expect(tabButtonSix).toBeVisible();
+    await expect(tabButtonSeven).toBeVisible();
   });
 
   test("Displays default selected work experience", async ({ page }) => {
     const firstWorkExperienceHeader = page.getByRole("heading", {
-      name: "UK Team Lead @ AplyiD",
+      name: "Software Engineer @ Tripadvisor",
     });
 
     await expect(firstWorkExperienceHeader).toBeDefined();
@@ -60,10 +62,10 @@ test.describe("Work experience component", () => {
 
   test("Hides non selected work experiences", async ({ page }) => {
     const secondWorkExperience = page.getByRole("heading", {
-      name: "Software Engineer @ AplyiD",
+      name: "UK Team Lead @ AplyiD",
     });
     const thirdWorkExperience = page.getByRole("heading", {
-      name: "Software Engineer @ Hypebeat",
+      name: "Software Engineer @ AplyiD",
     });
 
     await expect(secondWorkExperience).toBeHidden();
@@ -74,13 +76,13 @@ test.describe("Work experience component", () => {
     page,
   }) => {
     const firstWorkExperienceHeader = page.getByRole("heading", {
-      name: "UK Team Lead @ AplyiD",
+      name: "Software Engineer @ Tripadvisor",
     });
-    const thirdWorkExperience = page.getByRole("heading", {
+    const fourthWorkExperience = page.getByRole("heading", {
       name: "Software Engineer @ Hypebeat",
     });
 
-    await test.step("Should allow the third work experience to the selected", async () => {
+    await test.step("Should allow the fourth work experience to the selected", async () => {
       await page.getByRole("button", { name: "Hypebeat" }).click();
     });
 
@@ -88,7 +90,7 @@ test.describe("Work experience component", () => {
       await expect(firstWorkExperienceHeader).toBeHidden();
     });
 
-    await expect(thirdWorkExperience).toBeVisible();
+    await expect(fourthWorkExperience).toBeVisible();
   });
 });
 
