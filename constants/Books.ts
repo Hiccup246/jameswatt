@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "The Old Man and the Sea",
+    author: "Ernest Hemingway",
+    genre: "Fiction",
+    status: BookStatus.Reading,
+    dateStarted: "10/12/2023",
+    dateCompleted: "",
+  },
+  {
     name: "Creativity: A Short and Cheerful Guide",
     author: "John Cleese",
     genre: "Nonfiction",
