@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "The Crisis of Democratic Capitalism",
+    author: "Martin Wolf",
+    genre: "Economics",
+    status: BookStatus.Reading,
+    dateStarted: "26/12/2023",
+    dateCompleted: "",
+  },
+  {
     name: "The Old Man and the Sea",
     author: "Ernest Hemingway",
     genre: "Fiction",

@@ -52,6 +52,42 @@ exports[`BookshelfSection renders correctly 1`] = `
                 <h2
                   className="my-0 max-w-lg font-bold"
                 >
+                  The Crisis of Democratic Capitalism
+                </h2>
+                <div
+                  className="flex flex-col"
+                >
+                  <div
+                    className="text-sm"
+                  >
+                    Martin Wolf
+                  </div>
+                  <div
+                    className="order-last text-sm max-smaller:order-first"
+                    title="Date Started"
+                  >
+                    26/12/2023
+                  </div>
+                </div>
+              </td>
+              <td
+                className="align-top text-sm max-smaller:inline"
+              >
+                Economics
+              </td>
+              <td
+                className="align-top"
+              />
+            </tr>
+            <tr
+              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            >
+              <td
+                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              >
+                <h2
+                  className="my-0 max-w-lg font-bold"
+                >
                   The Old Man and the Sea
                 </h2>
                 <div
@@ -64,7 +100,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                   </div>
                   <div
                     className="order-last text-sm max-smaller:order-first"
-                    title="Date Started"
+                    title="Date Completed"
                   >
                     25/12/2023
                   </div>
@@ -146,42 +182,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                 className="align-top text-sm max-smaller:inline"
               >
                 Science Fiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  How to Win Friends and Influence People
-                </h2>
-                <div
-                  className="flex flex-col"
-                >
-                  <div
-                    className="text-sm"
-                  >
-                    Dale Carnegie
-                  </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    20/08/2023
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Nonfiction
               </td>
               <td
                 className="align-top"
