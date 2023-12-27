@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The Old Man and the Sea",
     author: "Ernest Hemingway",
     genre: "Fiction",
-    status: BookStatus.Reading,
-    dateStarted: "10/12/2023",
-    dateCompleted: "",
+    status: BookStatus.Read,
+    dateStarted: "25/12/2023",
+    dateCompleted: "25/12/2023",
   },
   {
     name: "Creativity: A Short and Cheerful Guide",
