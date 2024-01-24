@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The Crisis of Democratic Capitalism",
     author: "Martin Wolf",
     genre: "Economics",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "26/12/2023",
-    dateCompleted: "",
+    dateCompleted: "06/01/2024",
   },
   {
     name: "The Old Man and the Sea",

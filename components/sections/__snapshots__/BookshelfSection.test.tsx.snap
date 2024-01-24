@@ -64,9 +64,9 @@ exports[`BookshelfSection renders correctly 1`] = `
                   </div>
                   <div
                     className="order-last text-sm max-smaller:order-first"
-                    title="Date Started"
+                    title="Date Completed"
                   >
-                    26/12/2023
+                    06/01/2024
                   </div>
                 </div>
               </td>
