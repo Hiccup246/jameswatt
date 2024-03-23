@@ -105,9 +105,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
         >
-          <div
-            aria-labelledby="Tripadvisor"
-          >
+          <div>
             <h2
               className="m-0"
             >
@@ -163,9 +161,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
         >
-          <div
-            aria-labelledby="AplyiD"
-          >
+          <div>
             <h2
               className="m-0"
             >
@@ -239,9 +235,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
         >
-          <div
-            aria-labelledby="AplyiD"
-          >
+          <div>
             <h2
               className="m-0"
             >
@@ -316,9 +310,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
         >
-          <div
-            aria-labelledby="Hypebeat"
-          >
+          <div>
             <h2
               className="m-0"
             >
@@ -374,9 +366,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
         >
-          <div
-            aria-labelledby="Halter"
-          >
+          <div>
             <h2
               className="m-0"
             >
@@ -443,9 +433,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
         >
-          <div
-            aria-labelledby="BNZ"
-          >
+          <div>
             <h2
               className="m-0"
             >
@@ -512,9 +500,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           className="
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
         >
-          <div
-            aria-labelledby="VUW"
-          >
+          <div>
             <h2
               className="m-0"
             >
