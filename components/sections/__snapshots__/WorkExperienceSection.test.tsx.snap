@@ -107,7 +107,7 @@ exports[`WorkExperienceSection renders correctly 1`] = `
           "
           style={
             {
-              "transform": "translateY(calc(10px)",
+              "transform": "translateY(10px)",
             }
           }
         />

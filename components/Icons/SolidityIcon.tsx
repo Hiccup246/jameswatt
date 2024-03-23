@@ -29,7 +29,7 @@ export default function SolidityIcon() {
           y2="44.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#8160E5" />
+          <stop offset="0" stopColor="#8160E5" />
           <stop offset="1" stopColor="#D0C5FC" />
         </linearGradient>
         <linearGradient
@@ -40,7 +40,7 @@ export default function SolidityIcon() {
           y2="30.3382"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2B2040" />
+          <stop offset="0" stopColor="#2B2040" />
           <stop offset="0.11" stopColor="#302449" />
           <stop offset="0.28" stopColor="#402F62" />
           <stop offset="0.5" stopColor="#5B418C" />
@@ -55,7 +55,7 @@ export default function SolidityIcon() {
           y2="58.6465"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2B2040" />
+          <stop offset="0" stopColor="#2B2040" />
           <stop offset="0.11" stopColor="#302449" />
           <stop offset="0.28" stopColor="#402F62" />
           <stop offset="0.5" stopColor="#5B418C" />
@@ -70,7 +70,7 @@ export default function SolidityIcon() {
           y2="44.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#2B2040" />
+          <stop offset="0" stopColor="#2B2040" />
           <stop offset="0.11" stopColor="#302449" />
           <stop offset="0.28" stopColor="#402F62" />
           <stop offset="0.5" stopColor="#5B418C" />

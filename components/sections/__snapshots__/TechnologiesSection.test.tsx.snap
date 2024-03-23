@@ -107,36 +107,28 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     <g
                       fill="none"
                       fillRule="evenodd"
-                      id="Page-1"
                       stroke="none"
                       strokeWidth="1"
                     >
-                      <g
-                        id="shield-large"
-                      >
+                      <g>
                         <g
-                          id="Imported-Layers"
                           transform="translate(8.000000, 11.000000)"
                         >
                           <path
                             d="M83.2,1.03249275 L83.2,1.02860145 L0.3068,30.4481594 L12.8986,139.673181 L82.9998,178.450029 L154.0981,139.150449 L167.9587,29.9267246 L83.2,1.03249275"
                             fill="#E23237"
-                            id="Fill-1"
                           />
                           <path
                             d="M167.8378,29.9267246 L82.9712,1.03249275 L82.9712,178.450029 L154.0838,139.150449 L167.8378,29.9267246 L167.8378,29.9267246 Z"
                             fill="#B52E31"
-                            id="Fill-2"
                           />
                           <path
                             d="M0.1924,30.4481594 L12.8414,139.673181 L82.9712,178.450029 L82.9712,1.02860145 L0.1924,30.4481594 L0.1924,30.4481594 Z"
                             fill="#E23237"
-                            id="Fill-3"
                           />
                           <path
                             d="M100.6837,94.2266377 L82.9712,57.7054493 L67.7261,94.2266377 L100.6837,94.2266377 L100.6837,94.2266377 Z M107.367,109.583022 L60.905,109.583022 L50.5115,135.523754 L31.1779,135.879159 L82.9712,20.8106957 L136.6664,135.879159 L118.7459,135.879159 L107.367,109.583022 L107.367,109.583022 Z"
                             fill="#FFFFFF"
-                            id="Fill-4"
                           />
                         </g>
                       </g>
@@ -467,36 +459,28 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     <g
                       fill="none"
                       fillRule="evenodd"
-                      id="Page-1"
                       stroke="none"
                       strokeWidth="1"
                     >
-                      <g
-                        id="shield-large"
-                      >
+                      <g>
                         <g
-                          id="Imported-Layers"
                           transform="translate(8.000000, 11.000000)"
                         >
                           <path
                             d="M83.2,1.03249275 L83.2,1.02860145 L0.3068,30.4481594 L12.8986,139.673181 L82.9998,178.450029 L154.0981,139.150449 L167.9587,29.9267246 L83.2,1.03249275"
                             fill="#E23237"
-                            id="Fill-1"
                           />
                           <path
                             d="M167.8378,29.9267246 L82.9712,1.03249275 L82.9712,178.450029 L154.0838,139.150449 L167.8378,29.9267246 L167.8378,29.9267246 Z"
                             fill="#B52E31"
-                            id="Fill-2"
                           />
                           <path
                             d="M0.1924,30.4481594 L12.8414,139.673181 L82.9712,178.450029 L82.9712,1.02860145 L0.1924,30.4481594 L0.1924,30.4481594 Z"
                             fill="#E23237"
-                            id="Fill-3"
                           />
                           <path
                             d="M100.6837,94.2266377 L82.9712,57.7054493 L67.7261,94.2266377 L100.6837,94.2266377 L100.6837,94.2266377 Z M107.367,109.583022 L60.905,109.583022 L50.5115,135.523754 L31.1779,135.879159 L82.9712,20.8106957 L136.6664,135.879159 L118.7459,135.879159 L107.367,109.583022 L107.367,109.583022 Z"
                             fill="#FFFFFF"
-                            id="Fill-4"
                           />
                         </g>
                       </g>
@@ -848,6 +832,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="44.5"
                       >
                         <stop
+                          offset="0"
                           stopColor="#8160E5"
                         />
                         <stop
@@ -864,6 +849,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="30.3382"
                       >
                         <stop
+                          offset="0"
                           stopColor="#2B2040"
                         />
                         <stop
@@ -896,6 +882,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="58.6465"
                       >
                         <stop
+                          offset="0"
                           stopColor="#2B2040"
                         />
                         <stop
@@ -928,6 +915,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="44.5"
                       >
                         <stop
+                          offset="0"
                           stopColor="#2B2040"
                         />
                         <stop
@@ -1315,6 +1303,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="44.5"
                       >
                         <stop
+                          offset="0"
                           stopColor="#8160E5"
                         />
                         <stop
@@ -1331,6 +1320,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="30.3382"
                       >
                         <stop
+                          offset="0"
                           stopColor="#2B2040"
                         />
                         <stop
@@ -1363,6 +1353,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="58.6465"
                       >
                         <stop
+                          offset="0"
                           stopColor="#2B2040"
                         />
                         <stop
@@ -1395,6 +1386,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         y2="44.5"
                       >
                         <stop
+                          offset="0"
                           stopColor="#2B2040"
                         />
                         <stop

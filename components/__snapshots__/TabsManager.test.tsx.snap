@@ -41,7 +41,7 @@ exports[`TabsManager When on a large device renders correctly when given multipl
           "
       style={
         {
-          "transform": "translateY(calc(10px)",
+          "transform": "translateY(10px)",
         }
       }
     />
