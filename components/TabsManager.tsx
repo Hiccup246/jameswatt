@@ -51,7 +51,7 @@ export default function TabsManager({
         height: string;
       }
     | {}
-  >({ transform: "translateY(calc(10px)" });
+  >({ transform: "translateY(10px)" });
 
   function clickOnTabButton(index: number, button: HTMLButtonElement): void {
     const isMobile = window.matchMedia(
