@@ -4,12 +4,7 @@ export default function AngularIcon() {
       <title>shield-large</title>
       <desc>Created with Sketch.</desc>
       <defs />
-      <g
-        stroke="none"
-        strokeWidth="1"
-        fill="none"
-        fillRule="evenodd"
-      >
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g>
           <g transform="translate(8.000000, 11.000000)">
             <path
