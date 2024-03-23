@@ -139,7 +139,7 @@ export default function IntroSection() {
         <div className="absolute top-0 left-0 z-10 h-full w-full text-brown">
           <Image
             src={JamesWattImage}
-            height={372.5}
+            height={372}
             width={310}
             priority
             placeholder="blur"
