@@ -1,3 +1,5 @@
+const withSvgr = require('next-plugin-svgr');
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -9,4 +11,4 @@ const nextConfig = {
   pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
 };
 
-module.exports = nextConfig;
+module.exports = withSvgr(nextConfig);
