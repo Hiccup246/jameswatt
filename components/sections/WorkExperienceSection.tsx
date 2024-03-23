@@ -13,7 +13,7 @@ export default function WorkExperienceSection() {
         {PROGRAMMING_EXPERIENCES.map((job: Job) => {
           return (
             <div
-              aria-label={job.company}
+              aria-labelledby={job.company}
               key={`${job.company}-${Math.random().toFixed(3)}`}
             >
               <h2 className="m-0">
