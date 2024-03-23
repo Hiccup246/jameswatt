@@ -12,7 +12,10 @@ export default function WorkExperienceSection() {
       <TabsManager>
         {PROGRAMMING_EXPERIENCES.map((job: Job) => {
           return (
-            <div key={`${job.company}-${Math.random().toFixed(3)}`}>
+            <div
+              title={job.company}
+              key={`${job.company}-${Math.random().toFixed(3)}`}
+            >
               <h2 className="m-0">
                 <span className="text-xl font-bold">{job.role}</span>
                 <span className="text-xl font-bold"> @ {job.company}</span>

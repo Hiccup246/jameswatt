@@ -21,10 +21,10 @@ describe("TabsManager", () => {
       const tree = renderer
         .create(
           <TabsManager>
-            <div aria-label="Panel 1" key="Panel 1">
+            <div title="Panel 1" key="Panel 1">
               First Panel
             </div>
-            <div aria-label="Panel 2" key="Panel 2">
+            <div title="Panel 2" key="Panel 2">
               Second Panel
             </div>
           </TabsManager>
@@ -45,10 +45,10 @@ describe("TabsManager", () => {
 
       render(
         <TabsManager>
-          <div aria-label="Panel 1" key="Panel 1">
+          <div title="Panel 1" key="Panel 1">
             First Panel
           </div>
-          <div aria-label="Panel 2" key="Panel 2">
+          <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
         </TabsManager>
@@ -72,10 +72,10 @@ describe("TabsManager", () => {
 
       render(
         <TabsManager>
-          <div aria-label="Panel 1" key="Panel 1">
+          <div title="Panel 1" key="Panel 1">
             First Panel
           </div>
-          <div aria-label="Panel 2" key="Panel 2">
+          <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
         </TabsManager>
@@ -104,10 +104,10 @@ describe("TabsManager", () => {
       const tree = renderer
         .create(
           <TabsManager>
-            <div aria-label="Panel 1" key="Panel 1">
+            <div title="Panel 1" key="Panel 1">
               First Panel
             </div>
-            <div aria-label="Panel 2" key="Panel 2">
+            <div title="Panel 2" key="Panel 2">
               Second Panel
             </div>
           </TabsManager>
@@ -128,10 +128,10 @@ describe("TabsManager", () => {
 
       render(
         <TabsManager>
-          <div aria-label="Panel 1" key="Panel 1">
+          <div title="Panel 1" key="Panel 1">
             First Panel
           </div>
-          <div aria-label="Panel 2" key="Panel 2">
+          <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
         </TabsManager>
@@ -155,10 +155,10 @@ describe("TabsManager", () => {
 
       render(
         <TabsManager>
-          <div aria-label="Panel 1" key="Panel 1">
+          <div title="Panel 1" key="Panel 1">
             First Panel
           </div>
-          <div aria-label="Panel 2" key="Panel 2">
+          <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
         </TabsManager>

@@ -113,7 +113,7 @@ export default function TabsManager({
           return (
             <button
               key={`tab-button-${child.key}`}
-              aria-label={child.props["aria-label"]}
+              aria-label={child.props["title"]}
               className={`
                 bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
@@ -123,7 +123,7 @@ export default function TabsManager({
                 clickOnTabButton(index, element.currentTarget)
               }
             >
-              {child.props["aria-label"]}
+              {child.props["title"]}
             </button>
           );
         })}

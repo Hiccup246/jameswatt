@@ -61,7 +61,7 @@ exports[`TabsManager When on a large device renders correctly when given multipl
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
     >
       <div
-        aria-label="Panel 1"
+        title="Panel 1"
       >
         First Panel
       </div>
@@ -71,7 +71,7 @@ exports[`TabsManager When on a large device renders correctly when given multipl
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
     >
       <div
-        aria-label="Panel 2"
+        title="Panel 2"
       >
         Second Panel
       </div>
@@ -142,7 +142,7 @@ exports[`TabsManager When on a small device renders correctly when given multipl
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
     >
       <div
-        aria-label="Panel 1"
+        title="Panel 1"
       >
         First Panel
       </div>
@@ -152,7 +152,7 @@ exports[`TabsManager When on a small device renders correctly when given multipl
                 absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
     >
       <div
-        aria-label="Panel 2"
+        title="Panel 2"
       >
         Second Panel
       </div>
