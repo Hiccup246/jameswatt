@@ -511,7 +511,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           <a
             aria-label="Free online text edit url"
             className="hover:cursor-pointer"
-            href="https://jameswatt-v1.netlify.app/"
+            href="https://jameswatt-v1.vercel.app/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -541,7 +541,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             <a
               aria-label="Old Portfolio Site Url"
               className="hover:cursor-pointer group-hover:underline"
-              href="https://jameswatt-v1.netlify.app/"
+              href="https://jameswatt-v1.vercel.app/"
               rel="noopener noreferrer"
               target="_blank"
             >
