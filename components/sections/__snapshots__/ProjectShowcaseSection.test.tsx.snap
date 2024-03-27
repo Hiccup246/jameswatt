@@ -553,7 +553,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               <a
                 aria-label="Old Portfolio Site Github Project"
                 className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/old-jameswatt-portfolio"
+                href="https://github.com/Hiccup246/jameswatt-v1"
                 rel="noopener noreferrer"
                 target="_blank"
               >
