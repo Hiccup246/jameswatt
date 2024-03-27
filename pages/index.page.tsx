@@ -50,7 +50,10 @@ export default function Home() {
         />
         <meta property="og:site_name" content="James Watt" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/site-screenshot.webp" />
+        <meta
+          property="og:image"
+          content="http://www.jameswatt.io/site-screenshot.webp"
+        />
         <meta property="og:image:width" content="2880" />
         <meta property="og:image:height" content="1572" />
         <meta
