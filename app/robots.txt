@@ -28,5 +28,6 @@
 #
 User-agent: *
 Allow: /
+Disallow: /jameswatt-resume.pdf
 Sitemap: https://jameswatt.io/sitemap.xml
 Host: https://jameswatt.io
