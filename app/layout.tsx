@@ -5,18 +5,22 @@ import { Roboto, Open_Sans } from "next/font/google";
 import ThemeProvider from "../components/ThemeProvider";
 import Script from "next/script";
 
-const roboto = Roboto({
+const _roboto = Roboto({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-roboto",
+  preload: true,
+  adjustFontFallback: false,
 });
 
-const openSans = Open_Sans({
+const _openSans = Open_Sans({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-open-sans",
+  preload: true,
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
