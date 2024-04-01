@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState, useRef, ReactElement } from "react";
 
 import resolveConfig from "tailwindcss/resolveConfig";

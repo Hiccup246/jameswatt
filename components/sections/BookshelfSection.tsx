@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { BOOKS } from "../../constants/Books";
 import BookShelfTable from "../BookshelfTable";

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { WaveTank } from "../WaveTank";
 import Image from "next/image";

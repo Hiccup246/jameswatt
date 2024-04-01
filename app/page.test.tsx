@@ -1,4 +1,4 @@
-import Home from "./index.page";
+import Home from "./page";
 import renderer from "react-test-renderer";
 
 describe("Home", () => {

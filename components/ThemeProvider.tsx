@@ -1,4 +1,6 @@
-import React, { ReactElement } from "react";
+"use client";
+
+import React from "react";
 
 export const ThemeContext = React.createContext<{
   siteTheme: string | undefined;
@@ -24,7 +26,7 @@ export function setDOMTheme({ darkMode }: { darkMode: boolean }) {
 export default function ThemeProvider({
   children,
 }: {
-  children: ReactElement;
+  children: React.ReactNode;
 }) {
   const [siteTheme, setSiteTheme] = React.useState<string | undefined>();
 
