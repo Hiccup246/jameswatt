@@ -57,15 +57,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    // Theme loader forces <html class="dark"> class to be different depending on user settings so we have
+    // to suppress hydration warnings.
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          id="themeLoader"
+          async={false}
+          defer={false}
+          src="./themeLoader.js"
+        />
+      </head>
       <body className="bg-brown dark:bg-darkgrey">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
-      {/* <Script
-        id="themeLoader"
-        strategy="beforeInteractive"
-        src="./themeLoader.js"
-      /> */}
       <Script
         id="umami-analytics-script"
         strategy="lazyOnload"
