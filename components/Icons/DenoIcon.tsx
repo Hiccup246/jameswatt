@@ -10,7 +10,7 @@ export default function DenoIcon() {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Deno Logo"
     >
-      <g clip-path={`url(#${id})`}>
+      <g clipPath={`url(#${id})`}>
         <path
           d="M15 0C23.2843 0 30 6.71572 30 15C30 23.2843 23.2843 30 15 30C6.71572 30 0 23.2843 0 15C0 6.71572 6.71572 0 15 0Z"
           fill="black"
