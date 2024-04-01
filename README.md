@@ -102,6 +102,7 @@ Cheers!
 
 ## 🌄 Future Improvements
 
+- Update Jest to inject mock environment variables
 - Attempt to improve mobile performance perhaps by web worker usage or
   by refactoring components to be more efficient
   - Use chrome plugn to evaluate performance in more detail
