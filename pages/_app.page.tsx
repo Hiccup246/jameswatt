@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import "../styles/reset.css";
-import type { AppProps } from "next/app";
+import AppProps from "next/app";
 import { Roboto, Open_Sans } from "next/font/google";
 import ThemeProvider from "../components/ThemeProvider";
 
