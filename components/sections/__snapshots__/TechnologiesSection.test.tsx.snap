@@ -254,7 +254,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      clip-path="url(#:r0:)"
+                      clipPath="url(#:r0:)"
                     >
                       <path
                         d="M15 0C23.2843 0 30 6.71572 30 15C30 23.2843 23.2843 30 15 30C6.71572 30 0 23.2843 0 15C0 6.71572 6.71572 0 15 0Z"
@@ -606,7 +606,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      clip-path="url(#:r1:)"
+                      clipPath="url(#:r1:)"
                     >
                       <path
                         d="M15 0C23.2843 0 30 6.71572 30 15C30 23.2843 23.2843 30 15 30C6.71572 30 0 23.2843 0 15C0 6.71572 6.71572 0 15 0Z"
@@ -806,9 +806,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     <path
                       d="M3 60.7684V28.2316C3 25.2024 4.61451 22.4039 7.2439 20.897L35.4138 4.62859C38.0278 3.12169 41.2722 3.12169 43.8863 4.62859L72.0561 20.897C74.6701 22.4039 76.3 25.2024 76.3 28.2316V60.7684C76.3 63.7976 74.6855 66.5961 72.0561 68.103L43.8863 84.3714C41.2722 85.8783 38.0278 85.8783 35.4138 84.3714L7.2439 68.103C4.62988 66.5961 3 63.7976 3 60.7684Z"
                       stroke="url(#:r2:)"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="5"
                     />
                     <path
                       d="M49.6217 43.7005L57.9865 35.3202L39.6423 16.976L31.2775 25.3562L39.6423 33.7211L49.6217 43.7005Z"
@@ -833,11 +833,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#8160E5"
+                          stopColor="#8160E5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#D0C5FC"
+                          stopColor="#D0C5FC"
                         />
                       </linearGradient>
                       <linearGradient
@@ -850,27 +850,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#2B2040"
+                          stopColor="#2B2040"
                         />
                         <stop
                           offset="0.11"
-                          stop-color="#302449"
+                          stopColor="#302449"
                         />
                         <stop
                           offset="0.28"
-                          stop-color="#402F62"
+                          stopColor="#402F62"
                         />
                         <stop
                           offset="0.5"
-                          stop-color="#5B418C"
+                          stopColor="#5B418C"
                         />
                         <stop
                           offset="0.76"
-                          stop-color="#7E59C5"
+                          stopColor="#7E59C5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#A373FF"
+                          stopColor="#A373FF"
                         />
                       </linearGradient>
                       <linearGradient
@@ -883,27 +883,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#2B2040"
+                          stopColor="#2B2040"
                         />
                         <stop
                           offset="0.11"
-                          stop-color="#302449"
+                          stopColor="#302449"
                         />
                         <stop
                           offset="0.28"
-                          stop-color="#402F62"
+                          stopColor="#402F62"
                         />
                         <stop
                           offset="0.5"
-                          stop-color="#5B418C"
+                          stopColor="#5B418C"
                         />
                         <stop
                           offset="0.76"
-                          stop-color="#7E59C5"
+                          stopColor="#7E59C5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#A373FF"
+                          stopColor="#A373FF"
                         />
                       </linearGradient>
                       <linearGradient
@@ -916,27 +916,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#2B2040"
+                          stopColor="#2B2040"
                         />
                         <stop
                           offset="0.11"
-                          stop-color="#302449"
+                          stopColor="#302449"
                         />
                         <stop
                           offset="0.28"
-                          stop-color="#402F62"
+                          stopColor="#402F62"
                         />
                         <stop
                           offset="0.5"
-                          stop-color="#5B418C"
+                          stopColor="#5B418C"
                         />
                         <stop
                           offset="0.76"
-                          stop-color="#7E59C5"
+                          stopColor="#7E59C5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#A373FF"
+                          stopColor="#A373FF"
                         />
                       </linearGradient>
                     </defs>
@@ -1110,7 +1110,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      clip-path="url(#:r6:)"
+                      clipPath="url(#:r6:)"
                     >
                       <path
                         d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z"
@@ -1277,9 +1277,9 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     <path
                       d="M3 60.7684V28.2316C3 25.2024 4.61451 22.4039 7.2439 20.897L35.4138 4.62859C38.0278 3.12169 41.2722 3.12169 43.8863 4.62859L72.0561 20.897C74.6701 22.4039 76.3 25.2024 76.3 28.2316V60.7684C76.3 63.7976 74.6855 66.5961 72.0561 68.103L43.8863 84.3714C41.2722 85.8783 38.0278 85.8783 35.4138 84.3714L7.2439 68.103C4.62988 66.5961 3 63.7976 3 60.7684Z"
                       stroke="url(#:r7:)"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="5"
                     />
                     <path
                       d="M49.6217 43.7005L57.9865 35.3202L39.6423 16.976L31.2775 25.3562L39.6423 33.7211L49.6217 43.7005Z"
@@ -1304,11 +1304,11 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#8160E5"
+                          stopColor="#8160E5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#D0C5FC"
+                          stopColor="#D0C5FC"
                         />
                       </linearGradient>
                       <linearGradient
@@ -1321,27 +1321,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#2B2040"
+                          stopColor="#2B2040"
                         />
                         <stop
                           offset="0.11"
-                          stop-color="#302449"
+                          stopColor="#302449"
                         />
                         <stop
                           offset="0.28"
-                          stop-color="#402F62"
+                          stopColor="#402F62"
                         />
                         <stop
                           offset="0.5"
-                          stop-color="#5B418C"
+                          stopColor="#5B418C"
                         />
                         <stop
                           offset="0.76"
-                          stop-color="#7E59C5"
+                          stopColor="#7E59C5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#A373FF"
+                          stopColor="#A373FF"
                         />
                       </linearGradient>
                       <linearGradient
@@ -1354,27 +1354,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#2B2040"
+                          stopColor="#2B2040"
                         />
                         <stop
                           offset="0.11"
-                          stop-color="#302449"
+                          stopColor="#302449"
                         />
                         <stop
                           offset="0.28"
-                          stop-color="#402F62"
+                          stopColor="#402F62"
                         />
                         <stop
                           offset="0.5"
-                          stop-color="#5B418C"
+                          stopColor="#5B418C"
                         />
                         <stop
                           offset="0.76"
-                          stop-color="#7E59C5"
+                          stopColor="#7E59C5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#A373FF"
+                          stopColor="#A373FF"
                         />
                       </linearGradient>
                       <linearGradient
@@ -1387,27 +1387,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       >
                         <stop
                           offset="0"
-                          stop-color="#2B2040"
+                          stopColor="#2B2040"
                         />
                         <stop
                           offset="0.11"
-                          stop-color="#302449"
+                          stopColor="#302449"
                         />
                         <stop
                           offset="0.28"
-                          stop-color="#402F62"
+                          stopColor="#402F62"
                         />
                         <stop
                           offset="0.5"
-                          stop-color="#5B418C"
+                          stopColor="#5B418C"
                         />
                         <stop
                           offset="0.76"
-                          stop-color="#7E59C5"
+                          stopColor="#7E59C5"
                         />
                         <stop
                           offset="1"
-                          stop-color="#A373FF"
+                          stopColor="#A373FF"
                         />
                       </linearGradient>
                     </defs>
@@ -1581,7 +1581,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      clip-path="url(#:rb:)"
+                      clipPath="url(#:rb:)"
                     >
                       <path
                         d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z"
