@@ -98,7 +98,7 @@ exports[`AboutMeSection renders correctly 1`] = `
               <a
                 aria-label="Email Address"
                 className="mr-2 p-1 hover:underline"
-                href="mailto:james@jameswatt.io"
+                href="mailto:undefined"
                 rel="noopener noreferrer"
                 target="_blank"
                 title="James Watt Email"
