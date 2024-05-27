@@ -1,9 +1,16 @@
 export const PROJECTS: ShowcaseProject[] = [
   {
+    websiteUrl: "https://www.orcachase.com",
+    githubRepoUrl: "https://github.com/Hiccup246/orca-chase",
+    projectName: "Orca Chase",
+    highlightProject: true,
+    projectImageSrc: "/orca-chase.webp",
+    firstPublished: new Date(2024, 27, 5), // "27/05/2024"
+  },
+  {
     websiteUrl: "https://www.npm-expansions.com/",
     githubRepoUrl: "https://github.com/Hiccup246/npm-expansions",
     projectName: "Npm Expansions",
-    highlightProject: true,
     projectImageSrc: "/npm-expansions.webp",
     firstPublished: new Date(2023, 3, 4), // "04/04/2023"
   },
