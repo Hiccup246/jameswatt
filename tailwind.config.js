@@ -29,7 +29,7 @@ module.exports = {
           "linear-gradient(var(--gradient-angle),#2C3639,#fff,silver,#2C3639)",
       },
       screens: {
-        sm: "550px",
+        small: "550px",
         smaller: "400px",
       },
       keyframes: {
