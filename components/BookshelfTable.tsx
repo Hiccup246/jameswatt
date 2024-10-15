@@ -34,6 +34,7 @@ const blackClipboardChecked = (
 const whiteAnimatedBook = (
   <div className="mx-auto h-5 w-5">
     <Image
+      unoptimized
       src={AnimatedBookWhite}
       width={20}
       height={20}
@@ -46,6 +47,7 @@ const whiteAnimatedBook = (
 const blackAnimatedBook = (
   <div className="mx-auto h-5 w-5">
     <Image
+      unoptimized
       src={AnimatedBookBlack}
       width={20}
       height={20}
