@@ -1,7 +1,32 @@
+import AppleIcon from "./Icons/AppleIcon";
 import GithubIcon from "./Icons/GithubIcon";
 import Image from "next/image";
 
 export default function ShowcaseProject(props: ShowcaseProject) {
+  const GithubLink = (props: { projectName: string; url: string }) => (
+    <a
+      className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+      href={props.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${props.projectName} Github Project`}
+    >
+      <GithubIcon />
+    </a>
+  );
+
+  const AppStoreLink = (props: { projectName: string; url: string }) => (
+    <a
+      className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+      href={props.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${props.projectName} App Store Link`}
+    >
+      <AppleIcon />
+    </a>
+  );
+
   return (
     <div className="hover group mx-auto w-full">
       <div className="transition-transform duration-150 group-hover:-translate-y-2">
@@ -35,15 +60,18 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           </a>
 
           <div className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]">
-            <a
-              className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-              href={props.githubRepoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${props.projectName} Github Project`}
-            >
-              <GithubIcon />
-            </a>
+            {props.githubRepoUrl && (
+              <GithubLink
+                projectName={props.projectName}
+                url={props.githubRepoUrl}
+              />
+            )}
+            {props.appStoreUrl && (
+              <AppStoreLink
+                projectName={props.projectName}
+                url={props.appStoreUrl}
+              />
+            )}
           </div>
         </div>
       </div>
