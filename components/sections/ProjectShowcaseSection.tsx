@@ -26,6 +26,7 @@ export default function ProjectShowcaseSection() {
         <ShowcaseProject
           websiteUrl={highlightedProject.websiteUrl}
           githubRepoUrl={highlightedProject.githubRepoUrl}
+          appStoreUrl={highlightedProject.appStoreUrl}
           projectName={highlightedProject.projectName}
           projectImageSrc={highlightedProject.projectImageSrc}
           firstPublished={highlightedProject.firstPublished}
@@ -38,6 +39,7 @@ export default function ProjectShowcaseSection() {
             <ShowcaseProject
               key={project.projectName}
               websiteUrl={project.websiteUrl}
+              appStoreUrl={project.appStoreUrl}
               githubRepoUrl={project.githubRepoUrl}
               projectName={project.projectName}
               projectImageSrc={project.projectImageSrc}

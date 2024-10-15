@@ -24,6 +24,79 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           <a
             aria-label="Free online text edit url"
             className="hover:cursor-pointer"
+            href="https://www.gaffbingo.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Gaff Bingo Website Screenshot"
+              className="aspect-video w-full rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+              data-nimg="1"
+              decoding="async"
+              height={337}
+              loading="lazy"
+              onError={[Function]}
+              onLoad={[Function]}
+              sizes="(min-width: 768px) 480px, 180px"
+              src="/_next/image?url=%2Fgaff-bingo.webp&w=3840&q=75"
+              srcSet="/_next/image?url=%2Fgaff-bingo.webp&w=16&q=75 16w, /_next/image?url=%2Fgaff-bingo.webp&w=32&q=75 32w, /_next/image?url=%2Fgaff-bingo.webp&w=48&q=75 48w, /_next/image?url=%2Fgaff-bingo.webp&w=64&q=75 64w, /_next/image?url=%2Fgaff-bingo.webp&w=96&q=75 96w, /_next/image?url=%2Fgaff-bingo.webp&w=128&q=75 128w, /_next/image?url=%2Fgaff-bingo.webp&w=256&q=75 256w, /_next/image?url=%2Fgaff-bingo.webp&w=384&q=75 384w, /_next/image?url=%2Fgaff-bingo.webp&w=640&q=75 640w, /_next/image?url=%2Fgaff-bingo.webp&w=750&q=75 750w, /_next/image?url=%2Fgaff-bingo.webp&w=828&q=75 828w, /_next/image?url=%2Fgaff-bingo.webp&w=1080&q=75 1080w, /_next/image?url=%2Fgaff-bingo.webp&w=1200&q=75 1200w, /_next/image?url=%2Fgaff-bingo.webp&w=1920&q=75 1920w, /_next/image?url=%2Fgaff-bingo.webp&w=2048&q=75 2048w, /_next/image?url=%2Fgaff-bingo.webp&w=3840&q=75 3840w"
+              style={
+                {
+                  "color": "transparent",
+                }
+              }
+              width={600}
+            />
+          </a>
+          <div
+            className="mt-4 flex flex-row justify-between"
+          >
+            <a
+              aria-label="Gaff Bingo Url"
+              className="hover:cursor-pointer group-hover:underline"
+              href="https://www.gaffbingo.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Gaff Bingo
+            </a>
+            <div
+              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+            >
+              <a
+                aria-label="Gaff Bingo App Store Link"
+                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                href="https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  viewBox="0 0 50 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-1 items-start gap-8 gap-y-14 pt-8 md:grid-cols-3"
+    >
+      <div
+        className="hover group mx-auto w-full"
+      >
+        <div
+          className="transition-transform duration-150 group-hover:-translate-y-2"
+        >
+          <a
+            aria-label="Free online text edit url"
+            className="hover:cursor-pointer"
             href="https://www.orcachase.com"
             rel="noopener noreferrer"
             target="_blank"
@@ -84,10 +157,6 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="grid grid-cols-1 items-start gap-8 gap-y-14 pt-8 md:grid-cols-3"
-    >
       <div
         className="hover group mx-auto w-full"
       >
