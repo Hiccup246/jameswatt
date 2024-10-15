@@ -2,7 +2,8 @@ declare module "*.pdf";
 
 type ShowcaseProject = {
   websiteUrl: string;
-  githubRepoUrl: string;
+  githubRepoUrl?: string;
+  appStoreUrl?: string;
   projectName: string;
   projectImageSrc: string;
   firstPublished: Date;
