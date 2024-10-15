@@ -1,5 +1,12 @@
-import dynamic from "next/dynamic";
 import { Metadata } from "next";
+import IntroSection from "../components/sections/IntroSection";
+import WorkExperienceSection from "../components/sections/WorkExperienceSection";
+import ProjectShowcaseSection from "../components/sections/ProjectShowcaseSection";
+import TechnologiesSection from "../components/sections/TechnologiesSection";
+import AboutMeSection from "../components/sections/AboutMeSection";
+import FooterSection from "../components/sections/FooterSection";
+import CreditsSection from "../components/sections/CreditsSection";
+import BookshelfSection from "../components/sections/BookshelfSection";
 
 export const metadata: Metadata = {
   title: "James Watt",
@@ -45,32 +52,34 @@ export const metadata: Metadata = {
   },
 };
 
-const IntroSection = dynamic(
-  () => import("../components/sections/IntroSection")
-);
-const WorkExperienceSection = dynamic(
-  () => import("../components/sections/WorkExperienceSection")
-);
-const ProjectShowcaseSection = dynamic(
-  () => import("../components/sections/ProjectShowcaseSection")
-);
-const TechnologiesSection = dynamic(
-  () => import("../components/sections/TechnologiesSection")
-);
-const AboutMeSection = dynamic(
-  () => import("../components/sections/AboutMeSection")
-);
-const BookshelfSection = dynamic(
-  () => import("../components/sections/BookshelfSection")
-);
-const CreditsSection = dynamic(
-  () => import("../components/sections/CreditsSection")
-);
-const FooterSection = dynamic(
-  () => import("../components/sections/FooterSection")
-);
+// ToDo: Uncomment when ready to lazy load
+// import dynamic from "next/dynamic";
+// const IntroSection = dynamic(
+//   () => import("../components/sections/IntroSection")
+// );
+// const WorkExperienceSection = dynamic(
+//   () => import("../components/sections/WorkExperienceSection")
+// );
+// const ProjectShowcaseSection = dynamic(
+//   () => import("../components/sections/ProjectShowcaseSection")
+// );
+// const TechnologiesSection = dynamic(
+//   () => import("../components/sections/TechnologiesSection")
+// );
+// const AboutMeSection = dynamic(
+//   () => import("../components/sections/AboutMeSection")
+// );
+// const BookshelfSection = dynamic(
+//   () => import("../components/sections/BookshelfSection")
+// );
+// const CreditsSection = dynamic(
+//   () => import("../components/sections/CreditsSection")
+// );
+// const FooterSection = dynamic(
+//   () => import("../components/sections/FooterSection")
+// );
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
       <IntroSection />

@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
-import Home from "./page";
+import HomePage from "./page";
+import { act } from "react";
 
 describe("Home", () => {
   it("renders correctly on mobile", () => {
@@ -11,7 +12,7 @@ describe("Home", () => {
       })),
     });
 
-    const { container } = render(<Home />);
+    const { container } = render(<HomePage />);
 
     expect(container).toMatchSnapshot();
   });
@@ -25,7 +26,7 @@ describe("Home", () => {
       })),
     });
 
-    const { container } = render(<Home />);
+    const { container } = render(<HomePage />);
 
     expect(container).toMatchSnapshot();
   });

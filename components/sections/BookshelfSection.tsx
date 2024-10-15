@@ -14,7 +14,7 @@ export function bookStatusSorter(a: Book, b: Book): number {
 
 const sortedBooks = BOOKS.slice().sort(bookStatusSorter);
 
-export default function BookshelfSectionTwo() {
+export default function BookshelfSection() {
   const [showAllBooks, setshowAllBooks] = useState(false);
 
   return (
