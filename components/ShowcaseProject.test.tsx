@@ -1,5 +1,5 @@
+import { render } from "@testing-library/react";
 import ShowcaseProject from "./ShowcaseProject";
-import renderer from "react-test-renderer";
 
 const mockShowCaseProject: ShowcaseProject = {
   websiteUrl: "https://wwww.site.com",
@@ -11,10 +11,8 @@ const mockShowCaseProject: ShowcaseProject = {
 
 describe("ShowcaseProject", () => {
   it("renders correctly", () => {
-    const tree = renderer
-      .create(<ShowcaseProject {...mockShowCaseProject} />)
-      .toJSON();
+    const { container } = render(<ShowcaseProject {...mockShowCaseProject} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

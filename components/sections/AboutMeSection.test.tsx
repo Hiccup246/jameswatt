@@ -1,5 +1,4 @@
 import AboutMeSection from "./AboutMeSection";
-import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
 describe("AboutMeSection", () => {
@@ -10,8 +9,8 @@ describe("AboutMeSection", () => {
   });
 
   it("renders correctly", () => {
-    const tree = renderer.create(<AboutMeSection />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<AboutMeSection />);
+    expect(container).toMatchSnapshot();
   });
 
   it("Copy email button copies AUTHOR_CONTACT_EMAIL env variable to clipboard", () => {

@@ -1,613 +1,1253 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WorkExperienceSection renders correctly 1`] = `
-<div
-  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-darkteal dark:text-softwhite"
->
-  <section
-    className="mx-auto flex w-9/12 flex-col justify-start"
+exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-darkteal dark:text-softwhite"
   >
-    <h1
-      className="my-16 text-center text-2xl font-bold sm:text-3xl"
+    <section
+      class="mx-auto flex w-9/12 flex-col justify-start"
     >
-      My Experience
-    </h1>
-    <div
-      className="max-small:block flex w-full"
-    >
+      <h1
+        class="my-16 text-center text-2xl font-bold sm:text-3xl"
+      >
+        My Experience
+      </h1>
       <div
-        className="
+        class="max-small:block flex w-full"
+      >
+        <div
+          class="
           max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2 relative z-10 m-0 flex
           h-fit w-max list-none flex-col gap-6
           py-2.5
         "
-      >
-        <button
-          aria-label="Tripadvisor"
-          className="
+        >
+          <button
+            aria-label="Tripadvisor"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          Tripadvisor
-        </button>
-        <button
-          aria-label="AplyiD"
-          className="
+          >
+            Tripadvisor
+          </button>
+          <button
+            aria-label="AplyiD"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          AplyiD
-        </button>
-        <button
-          aria-label="AplyiD"
-          className="
+          >
+            AplyiD
+          </button>
+          <button
+            aria-label="AplyiD"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          AplyiD
-        </button>
-        <button
-          aria-label="Hypebeat"
-          className="
+          >
+            AplyiD
+          </button>
+          <button
+            aria-label="Hypebeat"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          Hypebeat
-        </button>
-        <button
-          aria-label="Halter"
-          className="
+          >
+            Hypebeat
+          </button>
+          <button
+            aria-label="Halter"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          Halter
-        </button>
-        <button
-          aria-label="BNZ"
-          className="
+          >
+            Halter
+          </button>
+          <button
+            aria-label="BNZ"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          BNZ
-        </button>
-        <button
-          aria-label="VUW"
-          className="
+          >
+            BNZ
+          </button>
+          <button
+            aria-label="VUW"
+            class="
                 bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
                 cursor-pointer whitespace-nowrap px-5 py-2
                 focus-visible:border-none 
               "
-          onClick={[Function]}
-        >
-          VUW
-        </button>
-        <div
-          className="
+          >
+            VUW
+          </button>
+          <div
+            class="
             transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
             max-small:bottom-2.5 max-small:top-auto visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded
             bg-brown delay-100 duration-200 dark:bg-darkgrey
           "
-          style={
-            {
-              "transform": "translateY(10px)",
-            }
-          }
-        />
-        <div
-          className="
+            style="transform: translateY(10px);"
+          />
+          <div
+            class="
             max-small:hidden visible absolute left-0 top-0 ml-1
             h-full w-0.5
             rounded-sm bg-black dark:bg-softwhite
           "
-        />
-      </div>
-      <div
-        className="max-small:ml-0 relative ml-5 w-full"
-      >
-        <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
-        >
-          <div
-            title="Tripadvisor"
-          >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                Software Engineer
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                Tripadvisor
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2023/08 - Present
-            </p>
-            <div
-              className="pb-4"
-            >
-              Tripadvisor is the world's largest travel platform helping 463 million travelers each month and operates the leading travel experience site Viator
-            </div>
-            <ul
-              className="m-0 list-none p-0"
-            >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Working in a high performing agile team to develop features at scale for the main Viator site that serves millions of users all over the world
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Performing full stack development using Java and Spring Boot on the server side and React on the client side
-      </p>",
-                  }
-                }
-              />
-            </ul>
-          </div>
+          />
         </div>
         <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          class="max-small:ml-0 relative ml-5 w-full"
+          style="height: 0px;"
         >
           <div
-            title="AplyiD"
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
           >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                UK Team Lead
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                AplyiD
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2022/02 - 2022/11
-            </p>
             <div
-              className="pb-4"
+              title="Tripadvisor"
             >
-              APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Software Engineer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  Tripadvisor
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2023/08 - Present
+              </p>
+              <div
+                class="pb-4"
+              >
+                Tripadvisor is the world's largest travel platform helping 463 million travelers each month and operates the leading travel experience site Viator
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Working in a high performing agile team to develop features at scale for the main Viator site that serves millions of users all over the world
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Performing full stack development using Java and Spring Boot on the server side and React on the client side
+      
+                  </p>
+                </li>
+              </ul>
             </div>
-            <ul
-              className="m-0 list-none p-0"
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="AplyiD"
             >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  UK Team Lead
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  AplyiD
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2022/02 - 2022/11
+              </p>
+              <div
+                class="pb-4"
+              >
+                APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
         I lead all software development initiatives for the UK office
         which involved managing and participating in product/feature development
         from conception and planning to production deployment.
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Building desktop and mobile optimised web applications in <b>Vue.JS</b>
-        and <b>Ruby on Rails</b> with an emphasis on the development process to
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Building desktop and mobile optimised web applications in 
+                    <b>
+                      Vue.JS
+                    </b>
+                    
+        and 
+                    <b>
+                      Ruby on Rails
+                    </b>
+                     with an emphasis on the development process to
         produce high quality code. Key aspects of this development process
         involve supporting product managers, performing technical review and
         knowledge sharing.
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
         Communicated closely with existing and potential clients to provide
         technical support for key API intgerations and with partners to explore
         possible business opportunities.
-      </p>",
-                  }
-                }
-              />
-            </ul>
-          </div>
-        </div>
-        <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
-        >
-          <div
-            title="AplyiD"
-          >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                Software Engineer
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                AplyiD
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2020/01 - 2022/02
-            </p>
-            <div
-              className="pb-4"
-            >
-              APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience
+      
+                  </p>
+                </li>
+              </ul>
             </div>
-            <ul
-              className="m-0 list-none p-0"
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="AplyiD"
             >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        I performed full stack development utilising <b>Vue.JS</b>,
-        Angular.JS and <b>Ruby on Rails</b> to create KYC/AML and financial
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Software Engineer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  AplyiD
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2020/01 - 2022/02
+              </p>
+              <div
+                class="pb-4"
+              >
+                APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        I performed full stack development utilising 
+                    <b>
+                      Vue.JS
+                    </b>
+                    ,
+        Angular.JS and 
+                    <b>
+                      Ruby on Rails
+                    </b>
+                     to create KYC/AML and financial
         onboarding products from inception and design to deployment and
         maintenance
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Successfully <b>lead major development initiatives</b> to grow the
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Successfully 
+                    <b>
+                      lead major development initiatives
+                    </b>
+                     to grow the
         product and company. This resulted in our development team of 2 and
         organisation of 13 to become a strong development team of 7 and an
         organisation of over 50 spanning across 3 timezones.
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
         Collaborated closely with the founders of the company, key sales staff,
         developers, designers, third party vendors and customer support to
         navigate complex AML regulation and data policies to produce slick
         onboarding products.
-      </p>",
-                  }
-                }
-              />
-            </ul>
-          </div>
-        </div>
-        <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
-        >
-          <div
-            title="Hypebeat"
-          >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                Software Engineer
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                Hypebeat
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2019/04 - 2019/09
-            </p>
-            <div
-              className="pb-4"
-            >
-              A social music application to aid artists in optimising their reach and influence using artifical intelligence
+      
+                  </p>
+                </li>
+              </ul>
             </div>
-            <ul
-              className="m-0 list-none p-0"
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="Hypebeat"
             >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Software Engineer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  Hypebeat
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2019/04 - 2019/09
+              </p>
+              <div
+                class="pb-4"
+              >
+                A social music application to aid artists in optimising their reach and influence using artifical intelligence
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
         Worked closely with the founders of the company in an agile team to
-        develop and expand the back-end of the main product using <b>Koa.JS</b>
+        develop and expand the back-end of the main product using 
+                    <b>
+                      Koa.JS
+                    </b>
+                    
         which included Javascript, Typescript, HTML and CSS
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "Participated in key strategic meetings regarding business strategy and product design",
-                  }
-                }
-              />
-            </ul>
-          </div>
-        </div>
-        <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
-        >
-          <div
-            title="Halter"
-          >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                Intern Software Developer
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                Halter
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2018/11 - 2019/02
-            </p>
-            <div
-              className="pb-4"
-            >
-              Halter is a solar-powered GPS enabled smart collar, which guides cows around a farm using sound and vibrations, allowing farmers to automate herd movements and create virtual fences
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Participated in key strategic meetings regarding business strategy and product design
+                </li>
+              </ul>
             </div>
-            <ul
-              className="m-0 list-none p-0"
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="Halter"
             >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "Worked in two high performing agile teams which developed the minimal viable product of the company under tight product deadlines",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Developed and expanded the back-end and <b>cloud infrastructure</b> of
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Intern Software Developer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  Halter
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2018/11 - 2019/02
+              </p>
+              <div
+                class="pb-4"
+              >
+                Halter is a solar-powered GPS enabled smart collar, which guides cows around a farm using sound and vibrations, allowing farmers to automate herd movements and create virtual fences
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Worked in two high performing agile teams which developed the minimal viable product of the company under tight product deadlines
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Developed and expanded the back-end and 
+                    <b>
+                      cloud infrastructure
+                    </b>
+                     of
         the main product using Nest.JS (JavaScript + TypeScript), AWS, Swagger,
         OpenAPI and Docker
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
         Developed the front-end of the company by creating various internal
-        support tools using the <b>React.JS</b> framework
-      </p>",
-                  }
-                }
-              />
-            </ul>
-          </div>
-        </div>
-        <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
-        >
-          <div
-            title="BNZ"
-          >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                Intern Front End Developer
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                BNZ
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2017/11 - 2018/02
-            </p>
-            <div
-              className="pb-4"
-            >
-              Bank of New Zealand is one of New Zealand's big four banks
+        support tools using the 
+                    <b>
+                      React.JS
+                    </b>
+                     framework
+      
+                  </p>
+                </li>
+              </ul>
             </div>
-            <ul
-              className="m-0 list-none p-0"
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="BNZ"
             >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Developed front-end software using the <b>React.JS</b> framework
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Intern Front End Developer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  BNZ
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2017/11 - 2018/02
+              </p>
+              <div
+                class="pb-4"
+              >
+                Bank of New Zealand is one of New Zealand's big four banks
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Developed front-end software using the 
+                    <b>
+                      React.JS
+                    </b>
+                     framework
         alongside technologies such as JavaScript, HTML, CSS, JSS and Node.JS to
         create various visual frontend components
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Worked closely with experienced <b>product designers and owners</b> in a
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Worked closely with experienced 
+                    <b>
+                      product designers and owners
+                    </b>
+                     in a
         small agile team requiring tight communication
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "Partially worked in an agile team to test the banks internal help and support system via automated unit tests and test plans using XMind and Postman",
-                  }
-                }
-              />
-            </ul>
-          </div>
-        </div>
-        <div
-          className="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
-        >
-          <div
-            title="VUW"
-          >
-            <h2
-              className="m-0"
-            >
-              <span
-                className="text-xl font-bold"
-              >
-                Student & Tutor
-              </span>
-              <span
-                className="text-xl font-bold"
-              >
-                 @ 
-                VUW
-              </span>
-            </h2>
-            <p
-              className="mb-4 mt-1"
-            >
-              2016 - 2020
-            </p>
-            <div
-              className="pb-4"
-            >
-              Victoria University of Wellington is a university in Wellington, New Zealand. The university has a strong software engineering school and an impressive reputation regarding artifical intelligence research
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Partially worked in an agile team to test the banks internal help and support system via automated unit tests and test plans using XMind and Postman
+                </li>
+              </ul>
             </div>
-            <ul
-              className="m-0 list-none p-0"
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="VUW"
             >
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "Graduated with a Bachelor of Engineering in Software Engineering with first class honours",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
-        Key study interests included <b>artificial intelligence</b>, software
-        ethics and <b>organisational culture</b>
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "<p>
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Student & Tutor
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  VUW
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2016 - 2020
+              </p>
+              <div
+                class="pb-4"
+              >
+                Victoria University of Wellington is a university in Wellington, New Zealand. The university has a strong software engineering school and an impressive reputation regarding artifical intelligence research
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Graduated with a Bachelor of Engineering in Software Engineering with first class honours
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Key study interests included 
+                    <b>
+                      artificial intelligence
+                    </b>
+                    , software
+        ethics and 
+                    <b>
+                      organisational culture
+                    </b>
+                    
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
         Completed a year long thesis which involved developing a series of
-        <b>IoT</b> connected radios for the purpose of tracking birds within
+        
+                    <b>
+                      IoT
+                    </b>
+                     connected radios for the purpose of tracking birds within
         dense native bush
-      </p>",
-                  }
-                }
-              />
-              <li
-                className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                dangerouslySetInnerHTML={
-                  {
-                    "__html": "Worked as a computer science tutor helping students to understand algorithms and data structures",
-                  }
-                }
-              />
-            </ul>
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Worked as a computer science tutor helping students to understand algorithms and data structures
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`WorkExperienceSection renders correctly on mobile 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-white dark:bg-darkteal dark:text-softwhite"
+  >
+    <section
+      class="mx-auto flex w-9/12 flex-col justify-start"
+    >
+      <h1
+        class="my-16 text-center text-2xl font-bold sm:text-3xl"
+      >
+        My Experience
+      </h1>
+      <div
+        class="max-small:block flex w-full"
+      >
+        <div
+          class="
+          max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2 relative z-10 m-0 flex
+          h-fit w-max list-none flex-col gap-6
+          py-2.5
+        "
+        >
+          <button
+            aria-label="Tripadvisor"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            Tripadvisor
+          </button>
+          <button
+            aria-label="AplyiD"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            AplyiD
+          </button>
+          <button
+            aria-label="AplyiD"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            AplyiD
+          </button>
+          <button
+            aria-label="Hypebeat"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            Hypebeat
+          </button>
+          <button
+            aria-label="Halter"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            Halter
+          </button>
+          <button
+            aria-label="BNZ"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            BNZ
+          </button>
+          <button
+            aria-label="VUW"
+            class="
+                bg-transparent max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit
+                cursor-pointer whitespace-nowrap px-5 py-2
+                focus-visible:border-none 
+              "
+          >
+            VUW
+          </button>
+          <div
+            class="
+            transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
+            max-small:bottom-2.5 max-small:top-auto visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded
+            bg-brown delay-100 duration-200 dark:bg-darkgrey
+          "
+            style="height: 2px;"
+          />
+          <div
+            class="
+            max-small:hidden visible absolute left-0 top-0 ml-1
+            h-full w-0.5
+            rounded-sm bg-black dark:bg-softwhite
+          "
+          />
+        </div>
+        <div
+          class="max-small:ml-0 relative ml-5 w-full"
+          style="height: 0px;"
+        >
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
+          >
+            <div
+              title="Tripadvisor"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Software Engineer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  Tripadvisor
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2023/08 - Present
+              </p>
+              <div
+                class="pb-4"
+              >
+                Tripadvisor is the world's largest travel platform helping 463 million travelers each month and operates the leading travel experience site Viator
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Working in a high performing agile team to develop features at scale for the main Viator site that serves millions of users all over the world
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Performing full stack development using Java and Spring Boot on the server side and React on the client side
+      
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="AplyiD"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  UK Team Lead
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  AplyiD
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2022/02 - 2022/11
+              </p>
+              <div
+                class="pb-4"
+              >
+                APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        I lead all software development initiatives for the UK office
+        which involved managing and participating in product/feature development
+        from conception and planning to production deployment.
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Building desktop and mobile optimised web applications in 
+                    <b>
+                      Vue.JS
+                    </b>
+                    
+        and 
+                    <b>
+                      Ruby on Rails
+                    </b>
+                     with an emphasis on the development process to
+        produce high quality code. Key aspects of this development process
+        involve supporting product managers, performing technical review and
+        knowledge sharing.
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Communicated closely with existing and potential clients to provide
+        technical support for key API intgerations and with partners to explore
+        possible business opportunities.
+      
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="AplyiD"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Software Engineer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  AplyiD
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2020/01 - 2022/02
+              </p>
+              <div
+                class="pb-4"
+              >
+                APLYiD is a trusted & accredited digital ID solution (AML + KYC) designed to streamline your customer onboarding with a first-class user experience
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        I performed full stack development utilising 
+                    <b>
+                      Vue.JS
+                    </b>
+                    ,
+        Angular.JS and 
+                    <b>
+                      Ruby on Rails
+                    </b>
+                     to create KYC/AML and financial
+        onboarding products from inception and design to deployment and
+        maintenance
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Successfully 
+                    <b>
+                      lead major development initiatives
+                    </b>
+                     to grow the
+        product and company. This resulted in our development team of 2 and
+        organisation of 13 to become a strong development team of 7 and an
+        organisation of over 50 spanning across 3 timezones.
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Collaborated closely with the founders of the company, key sales staff,
+        developers, designers, third party vendors and customer support to
+        navigate complex AML regulation and data policies to produce slick
+        onboarding products.
+      
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="Hypebeat"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Software Engineer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  Hypebeat
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2019/04 - 2019/09
+              </p>
+              <div
+                class="pb-4"
+              >
+                A social music application to aid artists in optimising their reach and influence using artifical intelligence
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Worked closely with the founders of the company in an agile team to
+        develop and expand the back-end of the main product using 
+                    <b>
+                      Koa.JS
+                    </b>
+                    
+        which included Javascript, Typescript, HTML and CSS
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Participated in key strategic meetings regarding business strategy and product design
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="Halter"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Intern Software Developer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  Halter
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2018/11 - 2019/02
+              </p>
+              <div
+                class="pb-4"
+              >
+                Halter is a solar-powered GPS enabled smart collar, which guides cows around a farm using sound and vibrations, allowing farmers to automate herd movements and create virtual fences
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Worked in two high performing agile teams which developed the minimal viable product of the company under tight product deadlines
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Developed and expanded the back-end and 
+                    <b>
+                      cloud infrastructure
+                    </b>
+                     of
+        the main product using Nest.JS (JavaScript + TypeScript), AWS, Swagger,
+        OpenAPI and Docker
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Developed the front-end of the company by creating various internal
+        support tools using the 
+                    <b>
+                      React.JS
+                    </b>
+                     framework
+      
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="BNZ"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Intern Front End Developer
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  BNZ
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2017/11 - 2018/02
+              </p>
+              <div
+                class="pb-4"
+              >
+                Bank of New Zealand is one of New Zealand's big four banks
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Developed front-end software using the 
+                    <b>
+                      React.JS
+                    </b>
+                     framework
+        alongside technologies such as JavaScript, HTML, CSS, JSS and Node.JS to
+        create various visual frontend components
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Worked closely with experienced 
+                    <b>
+                      product designers and owners
+                    </b>
+                     in a
+        small agile team requiring tight communication
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Partially worked in an agile team to test the banks internal help and support system via automated unit tests and test plans using XMind and Postman
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="
+                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+          >
+            <div
+              title="VUW"
+            >
+              <h2
+                class="m-0"
+              >
+                <span
+                  class="text-xl font-bold"
+                >
+                  Student & Tutor
+                </span>
+                <span
+                  class="text-xl font-bold"
+                >
+                   @ 
+                  VUW
+                </span>
+              </h2>
+              <p
+                class="mb-4 mt-1"
+              >
+                2016 - 2020
+              </p>
+              <div
+                class="pb-4"
+              >
+                Victoria University of Wellington is a university in Wellington, New Zealand. The university has a strong software engineering school and an impressive reputation regarding artifical intelligence research
+              </div>
+              <ul
+                class="m-0 list-none p-0"
+              >
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Graduated with a Bachelor of Engineering in Software Engineering with first class honours
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Key study interests included 
+                    <b>
+                      artificial intelligence
+                    </b>
+                    , software
+        ethics and 
+                    <b>
+                      organisational culture
+                    </b>
+                    
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  <p>
+                    
+        Completed a year long thesis which involved developing a series of
+        
+                    <b>
+                      IoT
+                    </b>
+                     connected radios for the purpose of tracking birds within
+        dense native bush
+      
+                  </p>
+                </li>
+                <li
+                  class="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
+                >
+                  Worked as a computer science tutor helping students to understand algorithms and data structures
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
 `;

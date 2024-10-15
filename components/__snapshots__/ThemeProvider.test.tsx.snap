@@ -2,8 +2,10 @@
 
 exports[`ThemeProvider correctly renders its children 1`] = `
 <div>
-  <p>
-    Hello There
-  </p>
+  <div>
+    <p>
+      Hello There
+    </p>
+  </div>
 </div>
 `;

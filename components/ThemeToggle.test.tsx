@@ -1,25 +1,23 @@
 import ThemeToggle from "./ThemeToggle";
-import renderer from "react-test-renderer";
 import { ThemeContext } from "./ThemeProvider";
+import { render } from "@testing-library/react";
 
 describe("ThemeToggle", () => {
   it("renders correctly when no ThemeContext is set", () => {
-    const tree = renderer.create(<ThemeToggle />).toJSON();
+    const { container } = render(<ThemeToggle />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders correctly when a ThemeContext is set", () => {
-    const tree = renderer
-      .create(
-        <ThemeContext.Provider
-          value={{ siteTheme: "light", flipTheme: () => {} }}
-        >
-          <ThemeToggle />
-        </ThemeContext.Provider>
-      )
-      .toJSON();
+    const { container } = render(
+      <ThemeContext.Provider
+        value={{ siteTheme: "light", flipTheme: () => {} }}
+      >
+        <ThemeToggle />
+      </ThemeContext.Provider>
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
+import { render } from "@testing-library/react";
 import CreditsSection from "./CreditsSection";
-import renderer from "react-test-renderer";
 
 describe("CreditsSection", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<CreditsSection />).toJSON();
+    const { container } = render(<CreditsSection />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -2,7 +2,6 @@ import TabsManager, {
   calcTabButtonTranslation,
   largestChildHeight,
 } from "./TabsManager";
-import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
 describe("TabsManager", () => {
@@ -18,20 +17,18 @@ describe("TabsManager", () => {
     });
 
     it("renders correctly when given multiple children", () => {
-      const tree = renderer
-        .create(
-          <TabsManager>
-            <div title="Panel 1" key="Panel 1">
-              First Panel
-            </div>
-            <div title="Panel 2" key="Panel 2">
-              Second Panel
-            </div>
-          </TabsManager>
-        )
-        .toJSON();
+      const { container } = render(
+        <TabsManager>
+          <div title="Panel 1" key="Panel 1">
+            First Panel
+          </div>
+          <div title="Panel 2" key="Panel 2">
+            Second Panel
+          </div>
+        </TabsManager>
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders the correct tab buttons", () => {
@@ -101,20 +98,18 @@ describe("TabsManager", () => {
     });
 
     it("renders correctly when given multiple children", () => {
-      const tree = renderer
-        .create(
-          <TabsManager>
-            <div title="Panel 1" key="Panel 1">
-              First Panel
-            </div>
-            <div title="Panel 2" key="Panel 2">
-              Second Panel
-            </div>
-          </TabsManager>
-        )
-        .toJSON();
+      const { container } = render(
+        <TabsManager>
+          <div title="Panel 1" key="Panel 1">
+            First Panel
+          </div>
+          <div title="Panel 2" key="Panel 2">
+            Second Panel
+          </div>
+        </TabsManager>
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it("renders the correct tab buttons", () => {

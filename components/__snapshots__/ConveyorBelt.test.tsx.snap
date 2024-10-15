@@ -1,20 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ConveyorBelt renders correctly 1`] = `
-<div
-  className="relative w-full overflow-hidden"
->
+<div>
   <div
-    className="relative m-auto w-full"
+    class="relative w-full overflow-hidden"
   >
     <div
-      className="hover:animation-pause flex w-fit animate-scroll"
+      class="relative m-auto w-full"
     >
-      <div>
-        Div 1
-      </div>
-      <div>
-        Div 2
+      <div
+        class="hover:animation-pause flex w-fit animate-scroll"
+      >
+        <div>
+          Div 1
+        </div>
+        <div>
+          Div 2
+        </div>
       </div>
     </div>
   </div>

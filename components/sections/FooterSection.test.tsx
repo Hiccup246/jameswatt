@@ -1,10 +1,10 @@
+import { render } from "@testing-library/react";
 import FooterSection from "./FooterSection";
-import renderer from "react-test-renderer";
 
 describe("FooterSection", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<FooterSection />).toJSON();
+    const { container } = render(<FooterSection />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

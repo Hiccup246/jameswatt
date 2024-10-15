@@ -1,715 +1,657 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProjectShowcaseSection renders correctly 1`] = `
-<div
-  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown dark:bg-darkgrey text-black dark:text-softwhite"
->
-  <section
-    className="mx-auto flex w-9/12 flex-col justify-start"
+<div>
+  <div
+    class="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown dark:bg-darkgrey text-black dark:text-softwhite"
   >
-    <h1
-      className="mb-16 text-center text-2xl font-bold sm:text-3xl"
+    <section
+      class="mx-auto flex w-9/12 flex-col justify-start"
     >
-      Project Showcase
-    </h1>
-    <div
-      className="mb-10 w-full self-center sm:w-1/2"
-    >
+      <h1
+        class="mb-16 text-center text-2xl font-bold sm:text-3xl"
+      >
+        Project Showcase
+      </h1>
       <div
-        className="hover group mx-auto w-full"
+        class="mb-10 w-full self-center sm:w-1/2"
       >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.gaffbingo.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Gaff Bingo Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fgaff-bingo.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fgaff-bingo.webp&w=16&q=75 16w, /_next/image?url=%2Fgaff-bingo.webp&w=32&q=75 32w, /_next/image?url=%2Fgaff-bingo.webp&w=48&q=75 48w, /_next/image?url=%2Fgaff-bingo.webp&w=64&q=75 64w, /_next/image?url=%2Fgaff-bingo.webp&w=96&q=75 96w, /_next/image?url=%2Fgaff-bingo.webp&w=128&q=75 128w, /_next/image?url=%2Fgaff-bingo.webp&w=256&q=75 256w, /_next/image?url=%2Fgaff-bingo.webp&w=384&q=75 384w, /_next/image?url=%2Fgaff-bingo.webp&w=640&q=75 640w, /_next/image?url=%2Fgaff-bingo.webp&w=750&q=75 750w, /_next/image?url=%2Fgaff-bingo.webp&w=828&q=75 828w, /_next/image?url=%2Fgaff-bingo.webp&w=1080&q=75 1080w, /_next/image?url=%2Fgaff-bingo.webp&w=1200&q=75 1200w, /_next/image?url=%2Fgaff-bingo.webp&w=1920&q=75 1920w, /_next/image?url=%2Fgaff-bingo.webp&w=2048&q=75 2048w, /_next/image?url=%2Fgaff-bingo.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Gaff Bingo Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.gaffbingo.com"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Gaff Bingo
+              <img
+                alt="Gaff Bingo Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fgaff-bingo.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fgaff-bingo.webp&w=16&q=75 16w, /_next/image?url=%2Fgaff-bingo.webp&w=32&q=75 32w, /_next/image?url=%2Fgaff-bingo.webp&w=48&q=75 48w, /_next/image?url=%2Fgaff-bingo.webp&w=64&q=75 64w, /_next/image?url=%2Fgaff-bingo.webp&w=96&q=75 96w, /_next/image?url=%2Fgaff-bingo.webp&w=128&q=75 128w, /_next/image?url=%2Fgaff-bingo.webp&w=256&q=75 256w, /_next/image?url=%2Fgaff-bingo.webp&w=384&q=75 384w, /_next/image?url=%2Fgaff-bingo.webp&w=640&q=75 640w, /_next/image?url=%2Fgaff-bingo.webp&w=750&q=75 750w, /_next/image?url=%2Fgaff-bingo.webp&w=828&q=75 828w, /_next/image?url=%2Fgaff-bingo.webp&w=1080&q=75 1080w, /_next/image?url=%2Fgaff-bingo.webp&w=1200&q=75 1200w, /_next/image?url=%2Fgaff-bingo.webp&w=1920&q=75 1920w, /_next/image?url=%2Fgaff-bingo.webp&w=2048&q=75 2048w, /_next/image?url=%2Fgaff-bingo.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Gaff Bingo App Store Link"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400"
+                aria-label="Gaff Bingo Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.gaffbingo.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 50 50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Gaff Bingo
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Gaff Bingo App Store Link"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 50 50"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="grid grid-cols-1 items-start gap-8 gap-y-14 pt-8 md:grid-cols-3"
-    >
       <div
-        className="hover group mx-auto w-full"
+        class="grid grid-cols-1 items-start gap-8 gap-y-14 pt-8 md:grid-cols-3"
       >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.orcachase.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Orca Chase Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Forca-chase.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Forca-chase.webp&w=16&q=75 16w, /_next/image?url=%2Forca-chase.webp&w=32&q=75 32w, /_next/image?url=%2Forca-chase.webp&w=48&q=75 48w, /_next/image?url=%2Forca-chase.webp&w=64&q=75 64w, /_next/image?url=%2Forca-chase.webp&w=96&q=75 96w, /_next/image?url=%2Forca-chase.webp&w=128&q=75 128w, /_next/image?url=%2Forca-chase.webp&w=256&q=75 256w, /_next/image?url=%2Forca-chase.webp&w=384&q=75 384w, /_next/image?url=%2Forca-chase.webp&w=640&q=75 640w, /_next/image?url=%2Forca-chase.webp&w=750&q=75 750w, /_next/image?url=%2Forca-chase.webp&w=828&q=75 828w, /_next/image?url=%2Forca-chase.webp&w=1080&q=75 1080w, /_next/image?url=%2Forca-chase.webp&w=1200&q=75 1200w, /_next/image?url=%2Forca-chase.webp&w=1920&q=75 1920w, /_next/image?url=%2Forca-chase.webp&w=2048&q=75 2048w, /_next/image?url=%2Forca-chase.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Orca Chase Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.orcachase.com"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Orca Chase
+              <img
+                alt="Orca Chase Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Forca-chase.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Forca-chase.webp&w=16&q=75 16w, /_next/image?url=%2Forca-chase.webp&w=32&q=75 32w, /_next/image?url=%2Forca-chase.webp&w=48&q=75 48w, /_next/image?url=%2Forca-chase.webp&w=64&q=75 64w, /_next/image?url=%2Forca-chase.webp&w=96&q=75 96w, /_next/image?url=%2Forca-chase.webp&w=128&q=75 128w, /_next/image?url=%2Forca-chase.webp&w=256&q=75 256w, /_next/image?url=%2Forca-chase.webp&w=384&q=75 384w, /_next/image?url=%2Forca-chase.webp&w=640&q=75 640w, /_next/image?url=%2Forca-chase.webp&w=750&q=75 750w, /_next/image?url=%2Forca-chase.webp&w=828&q=75 828w, /_next/image?url=%2Forca-chase.webp&w=1080&q=75 1080w, /_next/image?url=%2Forca-chase.webp&w=1200&q=75 1200w, /_next/image?url=%2Forca-chase.webp&w=1920&q=75 1920w, /_next/image?url=%2Forca-chase.webp&w=2048&q=75 2048w, /_next/image?url=%2Forca-chase.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Orca Chase Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/orca-chase"
+                aria-label="Orca Chase Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.orcachase.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Orca Chase
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Orca Chase Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/orca-chase"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.npm-expansions.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Npm Expansions Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fnpm-expansions.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fnpm-expansions.webp&w=16&q=75 16w, /_next/image?url=%2Fnpm-expansions.webp&w=32&q=75 32w, /_next/image?url=%2Fnpm-expansions.webp&w=48&q=75 48w, /_next/image?url=%2Fnpm-expansions.webp&w=64&q=75 64w, /_next/image?url=%2Fnpm-expansions.webp&w=96&q=75 96w, /_next/image?url=%2Fnpm-expansions.webp&w=128&q=75 128w, /_next/image?url=%2Fnpm-expansions.webp&w=256&q=75 256w, /_next/image?url=%2Fnpm-expansions.webp&w=384&q=75 384w, /_next/image?url=%2Fnpm-expansions.webp&w=640&q=75 640w, /_next/image?url=%2Fnpm-expansions.webp&w=750&q=75 750w, /_next/image?url=%2Fnpm-expansions.webp&w=828&q=75 828w, /_next/image?url=%2Fnpm-expansions.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnpm-expansions.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnpm-expansions.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnpm-expansions.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnpm-expansions.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Npm Expansions Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.npm-expansions.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Npm Expansions
+              <img
+                alt="Npm Expansions Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fnpm-expansions.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fnpm-expansions.webp&w=16&q=75 16w, /_next/image?url=%2Fnpm-expansions.webp&w=32&q=75 32w, /_next/image?url=%2Fnpm-expansions.webp&w=48&q=75 48w, /_next/image?url=%2Fnpm-expansions.webp&w=64&q=75 64w, /_next/image?url=%2Fnpm-expansions.webp&w=96&q=75 96w, /_next/image?url=%2Fnpm-expansions.webp&w=128&q=75 128w, /_next/image?url=%2Fnpm-expansions.webp&w=256&q=75 256w, /_next/image?url=%2Fnpm-expansions.webp&w=384&q=75 384w, /_next/image?url=%2Fnpm-expansions.webp&w=640&q=75 640w, /_next/image?url=%2Fnpm-expansions.webp&w=750&q=75 750w, /_next/image?url=%2Fnpm-expansions.webp&w=828&q=75 828w, /_next/image?url=%2Fnpm-expansions.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnpm-expansions.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnpm-expansions.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnpm-expansions.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnpm-expansions.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Npm Expansions Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/npm-expansions"
+                aria-label="Npm Expansions Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.npm-expansions.com/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Npm Expansions
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Npm Expansions Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/npm-expansions"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://github.com/Hiccup246/development-env"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="MacOS Development Setup Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=16&q=75 16w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=32&q=75 32w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=48&q=75 48w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=64&q=75 64w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=96&q=75 96w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=128&q=75 128w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=256&q=75 256w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=384&q=75 384w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=640&q=75 640w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=750&q=75 750w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=828&q=75 828w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="MacOS Development Setup Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://github.com/Hiccup246/development-env"
               rel="noopener noreferrer"
               target="_blank"
             >
-              MacOS Development Setup
+              <img
+                alt="MacOS Development Setup Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=16&q=75 16w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=32&q=75 32w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=48&q=75 48w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=64&q=75 64w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=96&q=75 96w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=128&q=75 128w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=256&q=75 256w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=384&q=75 384w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=640&q=75 640w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=750&q=75 750w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=828&q=75 828w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=1080&q=75 1080w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=1200&q=75 1200w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=1920&q=75 1920w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=2048&q=75 2048w, /_next/image?url=%2Fdevelopment-setup-screenshot.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="MacOS Development Setup Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                aria-label="MacOS Development Setup Url"
+                class="hover:cursor-pointer group-hover:underline"
                 href="https://github.com/Hiccup246/development-env"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                MacOS Development Setup
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="MacOS Development Setup Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/development-env"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.custom-sound-board.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Custom Sound Board Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fcustom-sound-board.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fcustom-sound-board.webp&w=16&q=75 16w, /_next/image?url=%2Fcustom-sound-board.webp&w=32&q=75 32w, /_next/image?url=%2Fcustom-sound-board.webp&w=48&q=75 48w, /_next/image?url=%2Fcustom-sound-board.webp&w=64&q=75 64w, /_next/image?url=%2Fcustom-sound-board.webp&w=96&q=75 96w, /_next/image?url=%2Fcustom-sound-board.webp&w=128&q=75 128w, /_next/image?url=%2Fcustom-sound-board.webp&w=256&q=75 256w, /_next/image?url=%2Fcustom-sound-board.webp&w=384&q=75 384w, /_next/image?url=%2Fcustom-sound-board.webp&w=640&q=75 640w, /_next/image?url=%2Fcustom-sound-board.webp&w=750&q=75 750w, /_next/image?url=%2Fcustom-sound-board.webp&w=828&q=75 828w, /_next/image?url=%2Fcustom-sound-board.webp&w=1080&q=75 1080w, /_next/image?url=%2Fcustom-sound-board.webp&w=1200&q=75 1200w, /_next/image?url=%2Fcustom-sound-board.webp&w=1920&q=75 1920w, /_next/image?url=%2Fcustom-sound-board.webp&w=2048&q=75 2048w, /_next/image?url=%2Fcustom-sound-board.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Custom Sound Board Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.custom-sound-board.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Custom Sound Board
+              <img
+                alt="Custom Sound Board Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fcustom-sound-board.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fcustom-sound-board.webp&w=16&q=75 16w, /_next/image?url=%2Fcustom-sound-board.webp&w=32&q=75 32w, /_next/image?url=%2Fcustom-sound-board.webp&w=48&q=75 48w, /_next/image?url=%2Fcustom-sound-board.webp&w=64&q=75 64w, /_next/image?url=%2Fcustom-sound-board.webp&w=96&q=75 96w, /_next/image?url=%2Fcustom-sound-board.webp&w=128&q=75 128w, /_next/image?url=%2Fcustom-sound-board.webp&w=256&q=75 256w, /_next/image?url=%2Fcustom-sound-board.webp&w=384&q=75 384w, /_next/image?url=%2Fcustom-sound-board.webp&w=640&q=75 640w, /_next/image?url=%2Fcustom-sound-board.webp&w=750&q=75 750w, /_next/image?url=%2Fcustom-sound-board.webp&w=828&q=75 828w, /_next/image?url=%2Fcustom-sound-board.webp&w=1080&q=75 1080w, /_next/image?url=%2Fcustom-sound-board.webp&w=1200&q=75 1200w, /_next/image?url=%2Fcustom-sound-board.webp&w=1920&q=75 1920w, /_next/image?url=%2Fcustom-sound-board.webp&w=2048&q=75 2048w, /_next/image?url=%2Fcustom-sound-board.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Custom Sound Board Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/custom-sound-board"
+                aria-label="Custom Sound Board Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.custom-sound-board.com/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Custom Sound Board
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Custom Sound Board Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/custom-sound-board"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.npmjs.com/package/james-watt-calling-card"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="James Watt Calling Card Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fjames-watt-calling-card.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fjames-watt-calling-card.webp&w=16&q=75 16w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=32&q=75 32w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=48&q=75 48w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=64&q=75 64w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=96&q=75 96w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=128&q=75 128w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=256&q=75 256w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=384&q=75 384w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=640&q=75 640w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=750&q=75 750w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=828&q=75 828w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=1080&q=75 1080w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=1200&q=75 1200w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=1920&q=75 1920w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=2048&q=75 2048w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="James Watt Calling Card Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.npmjs.com/package/james-watt-calling-card"
               rel="noopener noreferrer"
               target="_blank"
             >
-              James Watt Calling Card
+              <img
+                alt="James Watt Calling Card Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fjames-watt-calling-card.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fjames-watt-calling-card.webp&w=16&q=75 16w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=32&q=75 32w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=48&q=75 48w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=64&q=75 64w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=96&q=75 96w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=128&q=75 128w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=256&q=75 256w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=384&q=75 384w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=640&q=75 640w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=750&q=75 750w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=828&q=75 828w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=1080&q=75 1080w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=1200&q=75 1200w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=1920&q=75 1920w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=2048&q=75 2048w, /_next/image?url=%2Fjames-watt-calling-card.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="James Watt Calling Card Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/james-watt-calling-card"
+                aria-label="James Watt Calling Card Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.npmjs.com/package/james-watt-calling-card"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                James Watt Calling Card
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="James Watt Calling Card Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/james-watt-calling-card"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.guncontrolpolicies.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Gun Control Policies Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fgun-control-policies.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fgun-control-policies.webp&w=16&q=75 16w, /_next/image?url=%2Fgun-control-policies.webp&w=32&q=75 32w, /_next/image?url=%2Fgun-control-policies.webp&w=48&q=75 48w, /_next/image?url=%2Fgun-control-policies.webp&w=64&q=75 64w, /_next/image?url=%2Fgun-control-policies.webp&w=96&q=75 96w, /_next/image?url=%2Fgun-control-policies.webp&w=128&q=75 128w, /_next/image?url=%2Fgun-control-policies.webp&w=256&q=75 256w, /_next/image?url=%2Fgun-control-policies.webp&w=384&q=75 384w, /_next/image?url=%2Fgun-control-policies.webp&w=640&q=75 640w, /_next/image?url=%2Fgun-control-policies.webp&w=750&q=75 750w, /_next/image?url=%2Fgun-control-policies.webp&w=828&q=75 828w, /_next/image?url=%2Fgun-control-policies.webp&w=1080&q=75 1080w, /_next/image?url=%2Fgun-control-policies.webp&w=1200&q=75 1200w, /_next/image?url=%2Fgun-control-policies.webp&w=1920&q=75 1920w, /_next/image?url=%2Fgun-control-policies.webp&w=2048&q=75 2048w, /_next/image?url=%2Fgun-control-policies.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Gun Control Policies Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.guncontrolpolicies.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Gun Control Policies
+              <img
+                alt="Gun Control Policies Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fgun-control-policies.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fgun-control-policies.webp&w=16&q=75 16w, /_next/image?url=%2Fgun-control-policies.webp&w=32&q=75 32w, /_next/image?url=%2Fgun-control-policies.webp&w=48&q=75 48w, /_next/image?url=%2Fgun-control-policies.webp&w=64&q=75 64w, /_next/image?url=%2Fgun-control-policies.webp&w=96&q=75 96w, /_next/image?url=%2Fgun-control-policies.webp&w=128&q=75 128w, /_next/image?url=%2Fgun-control-policies.webp&w=256&q=75 256w, /_next/image?url=%2Fgun-control-policies.webp&w=384&q=75 384w, /_next/image?url=%2Fgun-control-policies.webp&w=640&q=75 640w, /_next/image?url=%2Fgun-control-policies.webp&w=750&q=75 750w, /_next/image?url=%2Fgun-control-policies.webp&w=828&q=75 828w, /_next/image?url=%2Fgun-control-policies.webp&w=1080&q=75 1080w, /_next/image?url=%2Fgun-control-policies.webp&w=1200&q=75 1200w, /_next/image?url=%2Fgun-control-policies.webp&w=1920&q=75 1920w, /_next/image?url=%2Fgun-control-policies.webp&w=2048&q=75 2048w, /_next/image?url=%2Fgun-control-policies.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Gun Control Policies Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/gun-control-policies"
+                aria-label="Gun Control Policies Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.guncontrolpolicies.com/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Gun Control Policies
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Gun Control Policies Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/gun-control-policies"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.normmacdonaldquotes.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Norm MacDonald Quotes Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fnorm-macdonald-quotes.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fnorm-macdonald-quotes.webp&w=16&q=75 16w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=32&q=75 32w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=48&q=75 48w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=64&q=75 64w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=96&q=75 96w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=128&q=75 128w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=256&q=75 256w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=384&q=75 384w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=640&q=75 640w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=750&q=75 750w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=828&q=75 828w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Norm MacDonald Quotes Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.normmacdonaldquotes.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Norm MacDonald Quotes
+              <img
+                alt="Norm MacDonald Quotes Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fnorm-macdonald-quotes.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fnorm-macdonald-quotes.webp&w=16&q=75 16w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=32&q=75 32w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=48&q=75 48w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=64&q=75 64w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=96&q=75 96w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=128&q=75 128w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=256&q=75 256w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=384&q=75 384w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=640&q=75 640w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=750&q=75 750w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=828&q=75 828w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=1080&q=75 1080w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=1200&q=75 1200w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=1920&q=75 1920w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=2048&q=75 2048w, /_next/image?url=%2Fnorm-macdonald-quotes.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Norm MacDonald Quotes Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/norm-macdonald-quotes"
+                aria-label="Norm MacDonald Quotes Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.normmacdonaldquotes.com/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Norm MacDonald Quotes
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Norm MacDonald Quotes Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/norm-macdonald-quotes"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://www.freeonlinetextedit.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Free Online Text Edit Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Ffreeonlinetextedit.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Ffreeonlinetextedit.webp&w=16&q=75 16w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=32&q=75 32w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=48&q=75 48w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=64&q=75 64w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=96&q=75 96w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=128&q=75 128w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=256&q=75 256w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=384&q=75 384w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=640&q=75 640w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=750&q=75 750w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=828&q=75 828w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=1080&q=75 1080w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=1200&q=75 1200w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=1920&q=75 1920w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=2048&q=75 2048w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Free Online Text Edit Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://www.freeonlinetextedit.com/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Free Online Text Edit
+              <img
+                alt="Free Online Text Edit Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Ffreeonlinetextedit.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Ffreeonlinetextedit.webp&w=16&q=75 16w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=32&q=75 32w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=48&q=75 48w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=64&q=75 64w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=96&q=75 96w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=128&q=75 128w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=256&q=75 256w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=384&q=75 384w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=640&q=75 640w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=750&q=75 750w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=828&q=75 828w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=1080&q=75 1080w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=1200&q=75 1200w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=1920&q=75 1920w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=2048&q=75 2048w, /_next/image?url=%2Ffreeonlinetextedit.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Free Online Text Edit Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/free-online-text-edit"
+                aria-label="Free Online Text Edit Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://www.freeonlinetextedit.com/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Free Online Text Edit
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Free Online Text Edit Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/free-online-text-edit"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="hover group mx-auto w-full"
-      >
         <div
-          className="transition-transform duration-150 group-hover:-translate-y-2"
+          class="hover group mx-auto w-full"
         >
-          <a
-            aria-label="Free online text edit url"
-            className="hover:cursor-pointer"
-            href="https://jameswatt-v1.vercel.app/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Old Portfolio Site Website Screenshot"
-              className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
-              data-nimg="1"
-              decoding="async"
-              height={337}
-              loading="lazy"
-              onError={[Function]}
-              onLoad={[Function]}
-              sizes="(min-width: 768px) 480px, 180px"
-              src="/_next/image?url=%2Fold-jameswatt.webp&w=3840&q=75"
-              srcSet="/_next/image?url=%2Fold-jameswatt.webp&w=16&q=75 16w, /_next/image?url=%2Fold-jameswatt.webp&w=32&q=75 32w, /_next/image?url=%2Fold-jameswatt.webp&w=48&q=75 48w, /_next/image?url=%2Fold-jameswatt.webp&w=64&q=75 64w, /_next/image?url=%2Fold-jameswatt.webp&w=96&q=75 96w, /_next/image?url=%2Fold-jameswatt.webp&w=128&q=75 128w, /_next/image?url=%2Fold-jameswatt.webp&w=256&q=75 256w, /_next/image?url=%2Fold-jameswatt.webp&w=384&q=75 384w, /_next/image?url=%2Fold-jameswatt.webp&w=640&q=75 640w, /_next/image?url=%2Fold-jameswatt.webp&w=750&q=75 750w, /_next/image?url=%2Fold-jameswatt.webp&w=828&q=75 828w, /_next/image?url=%2Fold-jameswatt.webp&w=1080&q=75 1080w, /_next/image?url=%2Fold-jameswatt.webp&w=1200&q=75 1200w, /_next/image?url=%2Fold-jameswatt.webp&w=1920&q=75 1920w, /_next/image?url=%2Fold-jameswatt.webp&w=2048&q=75 2048w, /_next/image?url=%2Fold-jameswatt.webp&w=3840&q=75 3840w"
-              style={
-                {
-                  "color": "transparent",
-                }
-              }
-              width={600}
-            />
-          </a>
           <div
-            className="mt-4 flex flex-row justify-between"
+            class="transition-transform duration-150 group-hover:-translate-y-2"
           >
             <a
-              aria-label="Old Portfolio Site Url"
-              className="hover:cursor-pointer group-hover:underline"
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
               href="https://jameswatt-v1.vercel.app/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Old Portfolio Site
+              <img
+                alt="Old Portfolio Site Website Screenshot"
+                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fold-jameswatt.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fold-jameswatt.webp&w=16&q=75 16w, /_next/image?url=%2Fold-jameswatt.webp&w=32&q=75 32w, /_next/image?url=%2Fold-jameswatt.webp&w=48&q=75 48w, /_next/image?url=%2Fold-jameswatt.webp&w=64&q=75 64w, /_next/image?url=%2Fold-jameswatt.webp&w=96&q=75 96w, /_next/image?url=%2Fold-jameswatt.webp&w=128&q=75 128w, /_next/image?url=%2Fold-jameswatt.webp&w=256&q=75 256w, /_next/image?url=%2Fold-jameswatt.webp&w=384&q=75 384w, /_next/image?url=%2Fold-jameswatt.webp&w=640&q=75 640w, /_next/image?url=%2Fold-jameswatt.webp&w=750&q=75 750w, /_next/image?url=%2Fold-jameswatt.webp&w=828&q=75 828w, /_next/image?url=%2Fold-jameswatt.webp&w=1080&q=75 1080w, /_next/image?url=%2Fold-jameswatt.webp&w=1200&q=75 1200w, /_next/image?url=%2Fold-jameswatt.webp&w=1920&q=75 1920w, /_next/image?url=%2Fold-jameswatt.webp&w=2048&q=75 2048w, /_next/image?url=%2Fold-jameswatt.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
             </a>
             <div
-              className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="Old Portfolio Site Github Project"
-                className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
-                href="https://github.com/Hiccup246/jameswatt-v1"
+                aria-label="Old Portfolio Site Url"
+                class="hover:cursor-pointer group-hover:underline"
+                href="https://jameswatt-v1.vercel.app/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg
-                  viewBox="0 0 496 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    fill="currentColor"
-                  />
-                </svg>
+                Old Portfolio Site
               </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              >
+                <a
+                  aria-label="Old Portfolio Site Github Project"
+                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  href="https://github.com/Hiccup246/jameswatt-v1"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <svg
+                    viewBox="0 0 496 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 `;

@@ -1,10 +1,32 @@
+import { render } from "@testing-library/react";
 import WorkExperienceSection from "./WorkExperienceSection";
-import renderer from "react-test-renderer";
 
 describe("WorkExperienceSection", () => {
-  it("renders correctly", () => {
-    const tree = renderer.create(<WorkExperienceSection />).toJSON();
+  it("renders correctly on mobile", () => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: true,
+      })),
+    });
 
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<WorkExperienceSection />);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it("renders correctly on desktop/tablet", () => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+      })),
+    });
+
+    const { container } = render(<WorkExperienceSection />);
+
+    expect(container).toMatchSnapshot();
   });
 });

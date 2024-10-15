@@ -1,10 +1,32 @@
+import { render } from "@testing-library/react";
 import Home from "./page";
-import renderer from "react-test-renderer";
 
 describe("Home", () => {
-  it("renders correctly", () => {
-    const tree = renderer.create(<Home />).toJSON();
+  it("renders correctly on mobile", () => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: true,
+      })),
+    });
 
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<Home />);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it("renders correctly on desktop/tablet", () => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+      })),
+    });
+
+    const { container } = render(<Home />);
+
+    expect(container).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
+import { render } from "@testing-library/react";
 import ProjectShowcaseSection from "./ProjectShowcaseSection";
-import renderer from "react-test-renderer";
 
 describe("ProjectShowcaseSection", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<ProjectShowcaseSection />).toJSON();
+    const { container } = render(<ProjectShowcaseSection />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

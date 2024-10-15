@@ -1,203 +1,270 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BookshelfSection renders correctly 1`] = `
-<div
-  className="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown dark:bg-darkgrey text-black dark:text-softwhite"
->
-  <section
-    className="mx-auto flex w-9/12 flex-col justify-start"
+<div>
+  <div
+    class="flex w-full flex-row justify-center pt-12 pb-20 pt-20 bg-brown dark:bg-darkgrey text-black dark:text-softwhite"
   >
-    <h1
-      className="mb-16 text-center text-2xl font-bold sm:text-3xl"
+    <section
+      class="mx-auto flex w-9/12 flex-col justify-start"
     >
-      Books I'm Involved With
-    </h1>
-    <div
-      className="rounded-xl p-3.5"
-    >
+      <h1
+        class="mb-16 text-center text-2xl font-bold sm:text-3xl"
+      >
+        Books I'm Involved With
+      </h1>
       <div
-        className="max-h-[600px] overflow-y-scroll pr-2"
+        class="rounded-xl p-3.5"
       >
-        <table
-          className="w-full"
+        <div
+          class="max-h-[600px] overflow-y-scroll pr-2"
         >
-          <thead
-            className="sticky top-0 bg-brown dark:bg-darkgrey"
+          <table
+            class="w-full"
           >
-            <tr>
-              <th
-                className="pb-2.5 text-left text-sm"
-              >
-                Book
-              </th>
-              <th
-                className="w-24 pb-2.5 text-left text-sm max-smaller:hidden"
-              >
-                Genre
-              </th>
-              <th
-                className="pb-2.5 text-center text-sm"
-              >
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
+            <thead
+              class="sticky top-0 bg-brown dark:bg-darkgrey"
             >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
+              <tr>
+                <th
+                  class="pb-2.5 text-left text-sm"
+                >
+                  Book
+                </th>
+                <th
+                  class="w-24 pb-2.5 text-left text-sm max-smaller:hidden"
+                >
+                  Genre
+                </th>
+                <th
+                  class="pb-2.5 text-center text-sm"
+                >
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="[&>td]:pt-10 [&>td]:first:pt-0"
               >
-                <h2
-                  className="my-0 max-w-lg font-bold"
+                <td
+                  class="flex flex-col justify-start break-keep pr-2.5 align-top"
                 >
-                  Notes from Underground
-                </h2>
-                <div
-                  className="flex flex-col"
-                >
-                  <div
-                    className="text-sm"
+                  <h2
+                    class="my-0 max-w-lg font-bold"
                   >
-                    Fyodor Dostoevsky
-                  </div>
+                    Notes from Underground
+                  </h2>
                   <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Started"
+                    class="flex flex-col"
                   >
-                    06/01/2024
+                    <div
+                      class="text-sm"
+                    >
+                      Fyodor Dostoevsky
+                    </div>
+                    <div
+                      class="order-last text-sm max-smaller:order-first"
+                      title="Date Started"
+                    >
+                      06/01/2024
+                    </div>
                   </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Fiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
+                </td>
+                <td
+                  class="align-top text-sm max-smaller:inline"
                 >
-                  The Crisis of Democratic Capitalism
-                </h2>
-                <div
-                  className="flex flex-col"
-                >
-                  <div
-                    className="text-sm"
-                  >
-                    Martin Wolf
-                  </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    06/01/2024
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
-              >
-                Economics
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
-                >
-                  The Old Man and the Sea
-                </h2>
-                <div
-                  className="flex flex-col"
+                  Fiction
+                </td>
+                <td
+                  class="align-top"
                 >
                   <div
-                    className="text-sm"
+                    class="mx-auto h-5 w-5"
                   >
-                    Ernest Hemingway
+                    <img
+                      alt="Currently Reading Icon"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/img.jpg"
+                      style="color: transparent;"
+                      width="20"
+                    />
                   </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    25/12/2023
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
+                </td>
+              </tr>
+              <tr
+                class="[&>td]:pt-10 [&>td]:first:pt-0"
               >
-                Fiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-            <tr
-              className="[&>td]:pt-10 [&>td]:first:pt-0"
-            >
-              <td
-                className="flex flex-col justify-start break-keep pr-2.5 align-top"
-              >
-                <h2
-                  className="my-0 max-w-lg font-bold"
+                <td
+                  class="flex flex-col justify-start break-keep pr-2.5 align-top"
                 >
-                  Creativity: A Short and Cheerful Guide
-                </h2>
-                <div
-                  className="flex flex-col"
+                  <h2
+                    class="my-0 max-w-lg font-bold"
+                  >
+                    The Crisis of Democratic Capitalism
+                  </h2>
+                  <div
+                    class="flex flex-col"
+                  >
+                    <div
+                      class="text-sm"
+                    >
+                      Martin Wolf
+                    </div>
+                    <div
+                      class="order-last text-sm max-smaller:order-first"
+                      title="Date Completed"
+                    >
+                      06/01/2024
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="align-top text-sm max-smaller:inline"
+                >
+                  Economics
+                </td>
+                <td
+                  class="align-top"
                 >
                   <div
-                    className="text-sm"
+                    class="mx-auto h-5 w-5"
                   >
-                    John Cleese
+                    <img
+                      alt="Completed Book Icon"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      sizes="20px"
+                      src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                      style="color: transparent;"
+                      width="20"
+                    />
                   </div>
-                  <div
-                    className="order-last text-sm max-smaller:order-first"
-                    title="Date Completed"
-                  >
-                    09/12/2023
-                  </div>
-                </div>
-              </td>
-              <td
-                className="align-top text-sm max-smaller:inline"
+                </td>
+              </tr>
+              <tr
+                class="[&>td]:pt-10 [&>td]:first:pt-0"
               >
-                Nonfiction
-              </td>
-              <td
-                className="align-top"
-              />
-            </tr>
-          </tbody>
-        </table>
+                <td
+                  class="flex flex-col justify-start break-keep pr-2.5 align-top"
+                >
+                  <h2
+                    class="my-0 max-w-lg font-bold"
+                  >
+                    The Old Man and the Sea
+                  </h2>
+                  <div
+                    class="flex flex-col"
+                  >
+                    <div
+                      class="text-sm"
+                    >
+                      Ernest Hemingway
+                    </div>
+                    <div
+                      class="order-last text-sm max-smaller:order-first"
+                      title="Date Completed"
+                    >
+                      25/12/2023
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="align-top text-sm max-smaller:inline"
+                >
+                  Fiction
+                </td>
+                <td
+                  class="align-top"
+                >
+                  <div
+                    class="mx-auto h-5 w-5"
+                  >
+                    <img
+                      alt="Completed Book Icon"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      sizes="20px"
+                      src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="[&>td]:pt-10 [&>td]:first:pt-0"
+              >
+                <td
+                  class="flex flex-col justify-start break-keep pr-2.5 align-top"
+                >
+                  <h2
+                    class="my-0 max-w-lg font-bold"
+                  >
+                    Creativity: A Short and Cheerful Guide
+                  </h2>
+                  <div
+                    class="flex flex-col"
+                  >
+                    <div
+                      class="text-sm"
+                    >
+                      John Cleese
+                    </div>
+                    <div
+                      class="order-last text-sm max-smaller:order-first"
+                      title="Date Completed"
+                    >
+                      09/12/2023
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="align-top text-sm max-smaller:inline"
+                >
+                  Nonfiction
+                </td>
+                <td
+                  class="align-top"
+                >
+                  <div
+                    class="mx-auto h-5 w-5"
+                  >
+                    <img
+                      alt="Completed Book Icon"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      sizes="20px"
+                      src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button
+          aria-label="Show More Books"
+          class="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"
+        >
+          Show More
+        </button>
       </div>
-      <button
-        aria-label="Show More Books"
-        className="mx-auto mt-8 block w-fit rounded-md border px-2 py-1 hover:opacity-50"
-        onClick={[Function]}
-      >
-        Show More
-      </button>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 `;

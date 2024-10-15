@@ -1,5 +1,4 @@
 import BookshelfSection, { bookStatusSorter } from "./BookshelfSection";
-import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -9,9 +8,9 @@ function headerRows(): number {
 
 describe("BookshelfSection", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<BookshelfSection />).toJSON();
+    const { container } = render(<BookshelfSection />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the first 4 book rows by default", () => {

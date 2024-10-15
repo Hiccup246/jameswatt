@@ -1,5 +1,5 @@
+import { render } from "@testing-library/react";
 import TechnologyIcon from "./TechnologyIcon";
-import renderer from "react-test-renderer";
 
 const mockTechnologyIcon: LinkedIcon = {
   link: "www.example.com",
@@ -9,10 +9,8 @@ const mockTechnologyIcon: LinkedIcon = {
 
 describe("TechnologyIcon", () => {
   it("renders correctly", () => {
-    const tree = renderer
-      .create(<TechnologyIcon icon={mockTechnologyIcon} />)
-      .toJSON();
+    const { container } = render(<TechnologyIcon icon={mockTechnologyIcon} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

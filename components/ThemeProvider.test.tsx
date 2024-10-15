@@ -1,19 +1,17 @@
-import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 import ThemeProvider, { setDOMTheme } from "./ThemeProvider";
 
 describe("ThemeProvider", () => {
   it("correctly renders its children", () => {
-    const tree = renderer
-      .create(
-        <ThemeProvider>
-          <div>
-            <p>Hello There</p>
-          </div>
-        </ThemeProvider>
-      )
-      .toJSON();
+    const { container } = render(
+      <ThemeProvider>
+        <div>
+          <p>Hello There</p>
+        </div>
+      </ThemeProvider>
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
 

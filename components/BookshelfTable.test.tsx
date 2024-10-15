@@ -1,5 +1,4 @@
 import BookshelfTable from "./BookshelfTable";
-import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
 
 const headerRows = 1;
@@ -61,9 +60,9 @@ describe("BookshelfSection", () => {
   });
 
   it("correctly renders all books", () => {
-    const tree = renderer.create(<BookshelfTable books={mockBooks} />).toJSON();
+    const { container } = render(<BookshelfTable books={mockBooks} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it("renders the correct table headers", () => {

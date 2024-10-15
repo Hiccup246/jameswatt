@@ -1,10 +1,20 @@
+import { render } from "@testing-library/react";
 import IntroSection from "./IntroSection";
-import renderer from "react-test-renderer";
 
 describe("IntroSection", () => {
-  it("renders correctly", () => {
-    const tree = renderer.create(<IntroSection />).toJSON();
+  beforeAll(() => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+      })),
+    });
+  });
 
-    expect(tree).toMatchSnapshot();
+  it("renders correctly", () => {
+    const { container } = render(<IntroSection />);
+
+    expect(container).toMatchSnapshot();
   });
 });
