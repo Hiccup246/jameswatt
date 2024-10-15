@@ -71,7 +71,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               decoding="async"
               height="20"
               loading="lazy"
-              src="/img.jpg"
+              src="/animated-book-black.gif"
               style="color: transparent;"
               width="20"
             />
@@ -120,7 +120,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               decoding="async"
               height="20"
               loading="lazy"
-              src="/img.jpg"
+              src="/animated-book-black.gif"
               style="color: transparent;"
               width="20"
             />
@@ -172,8 +172,8 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               height="20"
               loading="lazy"
               sizes="20px"
-              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              src="/_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fclipboard-checked-black.webp&w=16&q=75 16w, /_next/image?url=%2Fclipboard-checked-black.webp&w=32&q=75 32w, /_next/image?url=%2Fclipboard-checked-black.webp&w=48&q=75 48w, /_next/image?url=%2Fclipboard-checked-black.webp&w=64&q=75 64w, /_next/image?url=%2Fclipboard-checked-black.webp&w=96&q=75 96w, /_next/image?url=%2Fclipboard-checked-black.webp&w=128&q=75 128w, /_next/image?url=%2Fclipboard-checked-black.webp&w=256&q=75 256w, /_next/image?url=%2Fclipboard-checked-black.webp&w=384&q=75 384w, /_next/image?url=%2Fclipboard-checked-black.webp&w=640&q=75 640w, /_next/image?url=%2Fclipboard-checked-black.webp&w=750&q=75 750w, /_next/image?url=%2Fclipboard-checked-black.webp&w=828&q=75 828w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1080&q=75 1080w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1200&q=75 1200w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1920&q=75 1920w, /_next/image?url=%2Fclipboard-checked-black.webp&w=2048&q=75 2048w, /_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75 3840w"
               style="color: transparent;"
               width="20"
             />
@@ -225,8 +225,8 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               height="20"
               loading="lazy"
               sizes="20px"
-              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              src="/_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fclipboard-checked-black.webp&w=16&q=75 16w, /_next/image?url=%2Fclipboard-checked-black.webp&w=32&q=75 32w, /_next/image?url=%2Fclipboard-checked-black.webp&w=48&q=75 48w, /_next/image?url=%2Fclipboard-checked-black.webp&w=64&q=75 64w, /_next/image?url=%2Fclipboard-checked-black.webp&w=96&q=75 96w, /_next/image?url=%2Fclipboard-checked-black.webp&w=128&q=75 128w, /_next/image?url=%2Fclipboard-checked-black.webp&w=256&q=75 256w, /_next/image?url=%2Fclipboard-checked-black.webp&w=384&q=75 384w, /_next/image?url=%2Fclipboard-checked-black.webp&w=640&q=75 640w, /_next/image?url=%2Fclipboard-checked-black.webp&w=750&q=75 750w, /_next/image?url=%2Fclipboard-checked-black.webp&w=828&q=75 828w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1080&q=75 1080w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1200&q=75 1200w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1920&q=75 1920w, /_next/image?url=%2Fclipboard-checked-black.webp&w=2048&q=75 2048w, /_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75 3840w"
               style="color: transparent;"
               width="20"
             />
@@ -276,8 +276,8 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               height="20"
               loading="lazy"
               sizes="20px"
-              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              src="/_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fclipboard-checked-black.webp&w=16&q=75 16w, /_next/image?url=%2Fclipboard-checked-black.webp&w=32&q=75 32w, /_next/image?url=%2Fclipboard-checked-black.webp&w=48&q=75 48w, /_next/image?url=%2Fclipboard-checked-black.webp&w=64&q=75 64w, /_next/image?url=%2Fclipboard-checked-black.webp&w=96&q=75 96w, /_next/image?url=%2Fclipboard-checked-black.webp&w=128&q=75 128w, /_next/image?url=%2Fclipboard-checked-black.webp&w=256&q=75 256w, /_next/image?url=%2Fclipboard-checked-black.webp&w=384&q=75 384w, /_next/image?url=%2Fclipboard-checked-black.webp&w=640&q=75 640w, /_next/image?url=%2Fclipboard-checked-black.webp&w=750&q=75 750w, /_next/image?url=%2Fclipboard-checked-black.webp&w=828&q=75 828w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1080&q=75 1080w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1200&q=75 1200w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1920&q=75 1920w, /_next/image?url=%2Fclipboard-checked-black.webp&w=2048&q=75 2048w, /_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75 3840w"
               style="color: transparent;"
               width="20"
             />
@@ -329,8 +329,8 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               height="20"
               loading="lazy"
               sizes="20px"
-              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              src="/_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75"
+              srcset="/_next/image?url=%2Fclipboard-checked-black.webp&w=16&q=75 16w, /_next/image?url=%2Fclipboard-checked-black.webp&w=32&q=75 32w, /_next/image?url=%2Fclipboard-checked-black.webp&w=48&q=75 48w, /_next/image?url=%2Fclipboard-checked-black.webp&w=64&q=75 64w, /_next/image?url=%2Fclipboard-checked-black.webp&w=96&q=75 96w, /_next/image?url=%2Fclipboard-checked-black.webp&w=128&q=75 128w, /_next/image?url=%2Fclipboard-checked-black.webp&w=256&q=75 256w, /_next/image?url=%2Fclipboard-checked-black.webp&w=384&q=75 384w, /_next/image?url=%2Fclipboard-checked-black.webp&w=640&q=75 640w, /_next/image?url=%2Fclipboard-checked-black.webp&w=750&q=75 750w, /_next/image?url=%2Fclipboard-checked-black.webp&w=828&q=75 828w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1080&q=75 1080w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1200&q=75 1200w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1920&q=75 1920w, /_next/image?url=%2Fclipboard-checked-black.webp&w=2048&q=75 2048w, /_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75 3840w"
               style="color: transparent;"
               width="20"
             />

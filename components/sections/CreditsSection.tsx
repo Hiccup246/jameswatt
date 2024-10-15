@@ -5,8 +5,6 @@ import SectionLayout from "../layouts/SectionLayout";
 import Image from "next/image";
 import FreshIcon from "../Icons/FreshIcon";
 import NuxtIcon from "../Icons/NuxtIcon";
-import Marguerite from "../../public/marguerite.webp";
-import JoshComeau from "../../public/josh-comeau.webp";
 
 export default function CreditsSection() {
   return (
@@ -90,7 +88,7 @@ export default function CreditsSection() {
               aria-label="Marguerite Roth Website"
             >
               <Image
-                src={Marguerite}
+                src={"/marguerite.webp"}
                 fill
                 sizes="24px"
                 alt="Marguerite Roth Icon"
@@ -131,7 +129,7 @@ export default function CreditsSection() {
               aria-label="Josh Comeau Website"
             >
               <Image
-                src={JoshComeau}
+                src={"/josh-comeau.webp"}
                 fill
                 sizes="24px"
                 alt="Josh Comeau Icon"

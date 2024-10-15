@@ -1,16 +1,12 @@
-import Image from "next/image";
-import AnimatedBookBlack from "../public/animated-book-black.gif";
-import AnimatedBookWhite from "../public/animated-book-white.gif";
-import ClipboardCheckedBlack from "../public/clipboard-checked-black.webp";
-import ClipboardCheckedWhite from "../public/clipboard-checked-white.webp";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { ThemeContext } from "./ThemeProvider";
 import { BookStatus } from "../constants/Books";
 
 const whiteClipboardChecked = (
   <div className="mx-auto h-5 w-5">
     <Image
-      src={ClipboardCheckedWhite}
+      src={"/clipboard-checked-white.webp"}
       width={20}
       height={20}
       sizes="20px"
@@ -22,7 +18,7 @@ const whiteClipboardChecked = (
 const blackClipboardChecked = (
   <div className="mx-auto h-5 w-5">
     <Image
-      src={ClipboardCheckedBlack}
+      src={"/clipboard-checked-black.webp"}
       width={20}
       height={20}
       sizes="20px"
@@ -35,7 +31,7 @@ const whiteAnimatedBook = (
   <div className="mx-auto h-5 w-5">
     <Image
       unoptimized
-      src={AnimatedBookWhite}
+      src={"/animated-book-white.gif"}
       width={20}
       height={20}
       sizes="20px"
@@ -48,7 +44,7 @@ const blackAnimatedBook = (
   <div className="mx-auto h-5 w-5">
     <Image
       unoptimized
-      src={AnimatedBookBlack}
+      src={"/animated-book-black.gif"}
       width={20}
       height={20}
       sizes="20px"

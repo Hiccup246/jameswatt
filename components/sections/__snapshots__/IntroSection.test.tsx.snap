@@ -18,10 +18,10 @@ exports[`IntroSection renders correctly 1`] = `
           decoding="async"
           fetchpriority="high"
           height="80"
-          src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+          src="/_next/image?url=%2Fhuman.webp&w=640&q=75"
+          srcset="/_next/image?url=%2Fhuman.webp&w=256&q=75 1x, /_next/image?url=%2Fhuman.webp&w=640&q=75 2x"
           style="color: transparent;"
-          width="80"
+          width="230"
         />
       </div>
       <div
@@ -37,10 +37,10 @@ exports[`IntroSection renders correctly 1`] = `
           decoding="async"
           fetchpriority="high"
           height="80"
-          src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=96&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+          src="/_next/image?url=%2Fdeveloper.webp&w=640&q=75"
+          srcset="/_next/image?url=%2Fdeveloper.webp&w=384&q=75 1x, /_next/image?url=%2Fdeveloper.webp&w=640&q=75 2x"
           style="color: transparent;"
-          width="80"
+          width="316"
         />
       </div>
     </div>

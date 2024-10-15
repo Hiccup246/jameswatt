@@ -5,8 +5,6 @@ import { WaveTank } from "../WaveTank";
 import Image from "next/image";
 import CircleDripIcon from "../Icons/CircleDripIcon";
 import JamesWattImage from "../../public/panthy-tiny.webp";
-import Human from "../../public/human.webp";
-import Developer from "../../public/developer.webp";
 
 // Source code for the functions easeInCirc, updateJuice, update, resize, drop, useEffect and the
 // related SVG code is courtesy of the Fresh framework website. The code source can
@@ -109,8 +107,9 @@ export default function IntroSection() {
       <div className="grid h-fit w-full grid-cols-1 md:mb-10 md:grid-cols-2 lg:mt-12">
         <div className="relative flex h-auto w-full flex-col justify-start md:justify-start md:pr-10 lg:pr-28">
           <Image
-            src={Human}
+            src={"/human.webp"}
             priority
+            width={230}
             height={80}
             className="place-self-center object-scale-down md:place-self-end"
             alt="Human Text"
@@ -124,8 +123,9 @@ export default function IntroSection() {
         `}
         >
           <Image
-            src={Developer}
+            src={"/developer.webp"}
             priority
+            width={316}
             height={80}
             className="place-self-center object-scale-down md:place-self-start"
             alt="Developer Text"
