@@ -1,9 +1,17 @@
 export const PROJECTS: ShowcaseProject[] = [
   {
+    websiteUrl: "https://www.gaffbingo.com",
+    appStoreUrl:
+      "https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400",
+    projectName: "Gaff Bingo",
+    highlightProject: true,
+    projectImageSrc: "/gaff-bingo.webp",
+    firstPublished: new Date(2024, 15, 10), // "27/05/2024"
+  },
+  {
     websiteUrl: "https://www.orcachase.com",
     githubRepoUrl: "https://github.com/Hiccup246/orca-chase",
     projectName: "Orca Chase",
-    highlightProject: true,
     projectImageSrc: "/orca-chase.webp",
     firstPublished: new Date(2024, 27, 5), // "27/05/2024"
   },
