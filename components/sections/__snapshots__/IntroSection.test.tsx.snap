@@ -56,10 +56,10 @@ exports[`IntroSection renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36"
+    className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown dark:bg-darkgrey md:mb-28 lg:mb-16 xl:mb-36"
   >
     <div
-      className="absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey"
+      className="absolute -left-px -top-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey"
     >
       <svg
         className=""
@@ -82,7 +82,7 @@ exports[`IntroSection renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="absolute top-0 left-0 z-10 h-full w-full text-brown"
+      className="absolute left-0 top-0 z-10 h-full w-full text-brown"
     >
       <img
         alt="James Watt"
@@ -97,14 +97,14 @@ exports[`IntroSection renders correctly 1`] = `
         srcSet="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
         style={
           {
-            "backgroundImage": "url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 372'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='none' style='filter: url(%23b);' href='data:image/png;base64,imagedata'/%3E%3C/svg%3E")",
+            "backgroundImage": "url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 308 372'%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='none' style='filter: url(%23b);' href='data:image/png;base64,imagedata'/%3E%3C/svg%3E")",
             "backgroundPosition": "50% 50%",
             "backgroundRepeat": "no-repeat",
             "backgroundSize": "cover",
             "color": "transparent",
           }
         }
-        width={310}
+        width={308}
       />
     </div>
     <svg

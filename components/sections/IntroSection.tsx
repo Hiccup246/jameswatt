@@ -133,16 +133,16 @@ export default function IntroSection() {
         </div>
       </div>
 
-      <div className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown md:mb-28 lg:mb-16 xl:mb-36">
-        <div className="absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey">
+      <div className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown dark:bg-darkgrey md:mb-28 lg:mb-16 xl:mb-36">
+        <div className="absolute -left-px -top-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey">
           <CircleDripIcon />
         </div>
 
-        <div className="absolute top-0 left-0 z-10 h-full w-full text-brown">
+        <div className="absolute left-0 top-0 z-10 h-full w-full text-brown">
           <Image
             src={JamesWattImage}
             height={372}
-            width={310}
+            width={308}
             priority
             placeholder="blur"
             alt="James Watt"

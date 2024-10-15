@@ -40,7 +40,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           <Image
             src={props.projectImageSrc}
             width={600}
-            className="aspect-video w-full rounded-lg border-2 border border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+            className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
             height={337}
             sizes="(min-width: 768px) 480px,
                                180px"
