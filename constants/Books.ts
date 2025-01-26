@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Based on a True Story: Not a Memoir",
+    author: "Norm Macdonald",
+    genre: "Fiction",
+    status: BookStatus.Read,
+    dateStarted: "20/01/2025",
+    dateCompleted: "25/01/2025",
+  },
+  {
     name: "Death on the Nile",
     author: "Agatha Christie",
     genre: "Fiction",
