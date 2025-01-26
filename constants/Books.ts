@@ -5,12 +5,12 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
-    name: "Notes from Underground",
-    author: "Fyodor Dostoevsky",
+    name: "Death on the Nile",
+    author: "Agatha Christie",
     genre: "Fiction",
-    status: BookStatus.Reading,
-    dateStarted: "06/01/2024",
-    dateCompleted: "",
+    status: BookStatus.Read,
+    dateStarted: "09/01/2025",
+    dateCompleted: "15/01/2025",
   },
   {
     name: "The Crisis of Democratic Capitalism",
