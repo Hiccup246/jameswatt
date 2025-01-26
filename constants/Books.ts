@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "The Adventures of Huckleberry Finn",
+    author: "Mark Twain",
+    genre: "Fiction",
+    status: BookStatus.Reading,
+    dateStarted: "25/01/2025",
+    dateCompleted: "",
+  },
+  {
     name: "Based on a True Story: Not a Memoir",
     author: "Norm Macdonald",
     genre: "Fiction",
