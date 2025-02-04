@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   creator: "James Watt",
   publisher: "James Watt",
   robots: {
-    index: false,
-    follow: true,
-    nocache: true,
+    index: true,
+    follow: false,
+    nocache: false,
     googleBot: {
       index: true,
       follow: false,
