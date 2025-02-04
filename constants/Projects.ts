@@ -1,10 +1,16 @@
 export const PROJECTS: ShowcaseProject[] = [
   {
+    websiteUrl: "https://www.worldleaderleaderboard.com",
+    projectName: "World leader leaderboard",
+    highlightProject: true,
+    projectImageSrc: "/worldleaderleaderboard.webp",
+    firstPublished: new Date(2025, 2, 2), // "27/05/2024"
+  },
+  {
     websiteUrl: "https://www.gaffbingo.com",
     appStoreUrl:
       "https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400",
     projectName: "Gaff Bingo",
-    highlightProject: true,
     projectImageSrc: "/gaff-bingo.webp",
     firstPublished: new Date(2024, 15, 10), // "27/05/2024"
   },
