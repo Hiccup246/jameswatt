@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The Adventures of Huckleberry Finn",
     author: "Mark Twain",
     genre: "Fiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "25/01/2025",
-    dateCompleted: "",
+    dateCompleted: "05/02/2025",
   },
   {
     name: "Based on a True Story: Not a Memoir",
