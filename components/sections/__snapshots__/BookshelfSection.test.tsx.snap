@@ -212,7 +212,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                   <h2
                     class="my-0 max-w-lg font-bold"
                   >
-                    The Crisis of Democratic Capitalism
+                    The Many Days: Selected Poems
                   </h2>
                   <div
                     class="flex flex-col"
@@ -220,20 +220,20 @@ exports[`BookshelfSection renders correctly 1`] = `
                     <div
                       class="text-sm"
                     >
-                      Martin Wolf
+                      Norman MacCaig
                     </div>
                     <div
                       class="order-last text-sm max-smaller:order-first"
                       title="Date Completed"
                     >
-                      06/01/2024
+                      10/11/2024
                     </div>
                   </div>
                 </td>
                 <td
                   class="align-top text-sm max-smaller:inline"
                 >
-                  Economics
+                  Poetry
                 </td>
                 <td
                   class="align-top"

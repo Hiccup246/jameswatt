@@ -29,6 +29,14 @@ export const BOOKS: Book[] = [
     dateCompleted: "15/01/2025",
   },
   {
+    name: "The Many Days: Selected Poems",
+    author: "Norman MacCaig",
+    genre: "Poetry",
+    status: BookStatus.Read,
+    dateStarted: "01/10/2024",
+    dateCompleted: "10/11/2024",
+  },
+  {
     name: "The Crisis of Democratic Capitalism",
     author: "Martin Wolf",
     genre: "Economics",
