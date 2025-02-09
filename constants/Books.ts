@@ -10,7 +10,7 @@ export const BOOKS: Book[] = [
     genre: "Fiction",
     status: BookStatus.Read,
     dateStarted: "25/01/2025",
-    dateCompleted: "06/02/2025",
+    dateCompleted: "09/02/2025",
   },
   {
     name: "Based on a True Story: Not a Memoir",
