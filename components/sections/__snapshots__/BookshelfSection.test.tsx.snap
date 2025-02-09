@@ -53,6 +53,57 @@ exports[`BookshelfSection renders correctly 1`] = `
                   <h2
                     class="my-0 max-w-lg font-bold"
                   >
+                    Rivers of London
+                  </h2>
+                  <div
+                    class="flex flex-col"
+                  >
+                    <div
+                      class="text-sm"
+                    >
+                      Ben Aaronovitch
+                    </div>
+                    <div
+                      class="order-last text-sm max-smaller:order-first"
+                      title="Date Started"
+                    >
+                      09/02/2025
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="align-top text-sm max-smaller:inline"
+                >
+                  Urban Fantasy
+                </td>
+                <td
+                  class="align-top"
+                >
+                  <div
+                    class="mx-auto h-5 w-5"
+                  >
+                    <img
+                      alt="Currently Reading Icon"
+                      data-nimg="1"
+                      decoding="async"
+                      height="20"
+                      loading="lazy"
+                      src="/animated-book-black.gif"
+                      style="color: transparent;"
+                      width="20"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="[&>td]:pt-10 [&>td]:first:pt-0"
+              >
+                <td
+                  class="flex flex-col justify-start break-keep pr-2.5 align-top"
+                >
+                  <h2
+                    class="my-0 max-w-lg font-bold"
+                  >
                     The Adventures of Huckleberry Finn
                   </h2>
                   <div
@@ -181,59 +232,6 @@ exports[`BookshelfSection renders correctly 1`] = `
                   class="align-top text-sm max-smaller:inline"
                 >
                   Fiction
-                </td>
-                <td
-                  class="align-top"
-                >
-                  <div
-                    class="mx-auto h-5 w-5"
-                  >
-                    <img
-                      alt="Completed Book Icon"
-                      data-nimg="1"
-                      decoding="async"
-                      height="20"
-                      loading="lazy"
-                      sizes="20px"
-                      src="/_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75"
-                      srcset="/_next/image?url=%2Fclipboard-checked-black.webp&w=16&q=75 16w, /_next/image?url=%2Fclipboard-checked-black.webp&w=32&q=75 32w, /_next/image?url=%2Fclipboard-checked-black.webp&w=48&q=75 48w, /_next/image?url=%2Fclipboard-checked-black.webp&w=64&q=75 64w, /_next/image?url=%2Fclipboard-checked-black.webp&w=96&q=75 96w, /_next/image?url=%2Fclipboard-checked-black.webp&w=128&q=75 128w, /_next/image?url=%2Fclipboard-checked-black.webp&w=256&q=75 256w, /_next/image?url=%2Fclipboard-checked-black.webp&w=384&q=75 384w, /_next/image?url=%2Fclipboard-checked-black.webp&w=640&q=75 640w, /_next/image?url=%2Fclipboard-checked-black.webp&w=750&q=75 750w, /_next/image?url=%2Fclipboard-checked-black.webp&w=828&q=75 828w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1080&q=75 1080w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1200&q=75 1200w, /_next/image?url=%2Fclipboard-checked-black.webp&w=1920&q=75 1920w, /_next/image?url=%2Fclipboard-checked-black.webp&w=2048&q=75 2048w, /_next/image?url=%2Fclipboard-checked-black.webp&w=3840&q=75 3840w"
-                      style="color: transparent;"
-                      width="20"
-                    />
-                  </div>
-                </td>
-              </tr>
-              <tr
-                class="[&>td]:pt-10 [&>td]:first:pt-0"
-              >
-                <td
-                  class="flex flex-col justify-start break-keep pr-2.5 align-top"
-                >
-                  <h2
-                    class="my-0 max-w-lg font-bold"
-                  >
-                    The Many Days: Selected Poems
-                  </h2>
-                  <div
-                    class="flex flex-col"
-                  >
-                    <div
-                      class="text-sm"
-                    >
-                      Norman MacCaig
-                    </div>
-                    <div
-                      class="order-last text-sm max-smaller:order-first"
-                      title="Date Completed"
-                    >
-                      10/11/2024
-                    </div>
-                  </div>
-                </td>
-                <td
-                  class="align-top text-sm max-smaller:inline"
-                >
-                  Poetry
                 </td>
                 <td
                   class="align-top"
