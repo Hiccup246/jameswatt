@@ -10,7 +10,7 @@ export const BOOKS: Book[] = [
     genre: "Urban Fantasy",
     status: BookStatus.Reading,
     dateStarted: "09/02/2025",
-    dateCompleted: "",
+    dateCompleted: "11/02/2025",
   },
   {
     name: "The Adventures of Huckleberry Finn",

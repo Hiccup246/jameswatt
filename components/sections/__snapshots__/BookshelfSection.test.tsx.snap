@@ -67,7 +67,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                       class="order-last text-sm max-smaller:order-first"
                       title="Date Started"
                     >
-                      09/02/2025
+                      11/02/2025
                     </div>
                   </div>
                 </td>
