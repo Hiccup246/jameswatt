@@ -8,7 +8,7 @@ export const BOOKS: Book[] = [
     name: "Rivers of London",
     author: "Ben Aaronovitch",
     genre: "Urban Fantasy",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "09/02/2025",
     dateCompleted: "11/02/2025",
   },
