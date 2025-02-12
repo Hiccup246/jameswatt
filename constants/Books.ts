@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Moon Over Soho",
+    author: "Ben Aaronovitch",
+    genre: "Urban Fantasy",
+    status: BookStatus.Reading,
+    dateStarted: "12/02/2025",
+    dateCompleted: "",
+  },
+  {
     name: "Rivers of London",
     author: "Ben Aaronovitch",
     genre: "Urban Fantasy",
