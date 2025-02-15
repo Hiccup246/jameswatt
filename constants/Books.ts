@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Moon Over Soho",
     author: "Ben Aaronovitch",
     genre: "Urban Fantasy",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "12/02/2025",
-    dateCompleted: "",
+    dateCompleted: "15/02/2025",
   },
   {
     name: "Rivers of London",
