@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "The Trading Game",
+    author: "Gary Stevenson",
+    genre: "Biography",
+    status: BookStatus.Reading,
+    dateStarted: "19/02/2025",
+    dateCompleted: "",
+  },
+  {
     name: "Whispers Under Ground",
     author: "Ben Aaronovitch",
     genre: "Urban Fantasy",
