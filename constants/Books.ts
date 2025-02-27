@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Cat's Cradle",
     author: "Kurt Vonnegut Jr.",
     genre: "Fiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "23/02/2025",
-    dateCompleted: "",
+    dateCompleted: "27/02/2025",
   },
   {
     name: "The Trading Game: A Confession",
