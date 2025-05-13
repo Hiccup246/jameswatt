@@ -7,6 +7,12 @@ export const PROJECTS: ShowcaseProject[] = [
     firstPublished: new Date(2025, 2, 2), // "2024/05/27"
   },
   {
+    websiteUrl: "https://www.boysgonewildpodcast.com",
+    projectName: "Satirical podcast fan site",
+    projectImageSrc: "/boysgonewildpodcast.webp",
+    firstPublished: new Date(2025, 5, 11),
+  },
+  {
     websiteUrl: "https://www.gaffbingo.com",
     appStoreUrl:
       "https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400",
