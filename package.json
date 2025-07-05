@@ -31,7 +31,7 @@
     "test:unit": "jest",
     "test:e2e": "playwright test",
     "codegen": "playwright codegen",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -55,7 +55,7 @@
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "autoprefixer": "^10.4.21",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "postcss": "^8.5.6",
