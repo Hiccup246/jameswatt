@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
 import { ThemeContext } from "./ThemeProvider";
 import { BookStatus } from "../constants/Books";
@@ -63,8 +63,8 @@ export default function BookShelfTable({
   shortView?: boolean;
 }) {
   const [clipboardCheckedIcon, setClipboardCheckedIcon] =
-    useState<JSX.Element>();
-  const [animatedBook, setAnimatedBook] = useState<JSX.Element>();
+    useState<ReactElement>();
+  const [animatedBook, setAnimatedBook] = useState<ReactElement>();
   const previewBooks = shortViewBooks < 0 ? 0 : shortViewBooks;
   const { siteTheme } = React.useContext(ThemeContext);
 

@@ -26,7 +26,7 @@ export default function IntroSection() {
   const [springs, setSprings] = useState<Spring[]>(waveTank.springs);
 
   const widthRef = useRef(width);
-  const requestIdRef = useRef<number>();
+  const requestIdRef = useRef<number>(0);
 
   const grid = SVG_WIDTH / waveTank.waveLength;
   const points = [
