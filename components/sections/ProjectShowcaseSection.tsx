@@ -3,7 +3,7 @@ import ShowcaseProject from "../ShowcaseProject";
 import { PROJECTS } from "../../constants/Projects";
 
 const orderedByPublishDate = PROJECTS.sort(
-  (a, b) => b.firstPublished.getTime() - a.firstPublished.getTime()
+  (a, b) => b.firstPublished.getTime() - a.firstPublished.getTime(),
 );
 const highlightedProject =
   orderedByPublishDate.filter((project: ShowcaseProject) => {
@@ -12,7 +12,7 @@ const highlightedProject =
 
 orderedByPublishDate.splice(
   orderedByPublishDate.indexOf(highlightedProject),
-  1
+  1,
 );
 
 export default function ProjectShowcaseSection() {

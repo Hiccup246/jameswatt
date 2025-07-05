@@ -35,7 +35,7 @@ describe("BookshelfSection", () => {
 
     it("renders more than 4 books", () => {
       expect(screen.getAllByRole("row").length - headerRows()).toBeGreaterThan(
-        4
+        4,
       );
     });
 

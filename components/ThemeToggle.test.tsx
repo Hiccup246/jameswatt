@@ -15,7 +15,7 @@ describe("ThemeToggle", () => {
         value={{ siteTheme: "light", flipTheme: () => {} }}
       >
         <ThemeToggle />
-      </ThemeContext.Provider>
+      </ThemeContext.Provider>,
     );
 
     expect(container).toMatchSnapshot();

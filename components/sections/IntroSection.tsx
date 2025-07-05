@@ -71,7 +71,7 @@ export default function IntroSection() {
 
   function drop() {
     const dropPosition = Math.round(
-      ((widthRef.current / 2 + DROP_OFFSET) / widthRef.current) * 100
+      ((widthRef.current / 2 + DROP_OFFSET) / widthRef.current) * 100,
     );
     waveTank.springs[dropPosition].position = -60;
   }
@@ -117,10 +117,9 @@ export default function IntroSection() {
         </div>
 
         <div
-          className={`
-               relative flex h-auto w-full flex-col
-               justify-start md:justify-start md:pl-10 lg:pl-28
-        `}
+          className={
+            "relative flex h-auto w-full flex-col justify-start md:justify-start md:pl-10 lg:pl-28"
+          }
         >
           <Image
             src={"/developer.webp"}

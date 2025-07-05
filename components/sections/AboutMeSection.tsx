@@ -38,7 +38,7 @@ export default function AboutMeSection() {
       <div className="mt-16 flex flex-row justify-center">
         <div className="group my-auto mr-8 w-8">
           <a
-            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
+            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
             href="https://github.com/Hiccup246"
             aria-label="Github Profile"
             title="Github Profile"
@@ -49,7 +49,7 @@ export default function AboutMeSection() {
 
         <div className="group my-auto mr-8 w-8">
           <a
-            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
+            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
             href="https://www.linkedin.com/in/jameswattpro"
             aria-label="LinkedIn Profile"
             title="LinkedIn Profile"
@@ -85,7 +85,7 @@ export default function AboutMeSection() {
                 <button
                   onClick={() =>
                     copyToClipboard(
-                      process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL
+                      process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL,
                     )
                   }
                   className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:-translate-y-0.5 dark:bg-darkteal"

@@ -93,7 +93,7 @@ describe("BookshelfSection", () => {
     render(<BookshelfTable books={mockBooks} shortViewBooks={4} />);
 
     expect(screen.getAllByRole("row").length - headerRows).toBe(
-      mockBooks.length
+      mockBooks.length,
     );
   });
 

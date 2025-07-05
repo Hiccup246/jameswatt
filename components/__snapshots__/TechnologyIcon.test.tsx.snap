@@ -1,14 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`TechnologyIcon renders correctly 1`] = `
 <div>
   <a
     aria-label="example icon"
-    class="
-        group relative relative mt-1 flex
-        h-[86px] w-[86px] items-center justify-center rounded-md border
-        border-lightgrey bg-white duration-300 dark:bg-softwhite
-      "
+    class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
     href="www.example.com"
     tabindex="-1"
     title="example icon"
@@ -19,11 +15,7 @@ exports[`TechnologyIcon renders correctly 1`] = `
       <svg />
     </div>
     <div
-      class="
-          group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)]
-          h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all
-          duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient
-        "
+      class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
     />
   </a>
 </div>

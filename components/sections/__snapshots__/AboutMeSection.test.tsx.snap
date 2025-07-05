@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AboutMeSection renders correctly 1`] = `
 <div>
@@ -31,7 +31,7 @@ exports[`AboutMeSection renders correctly 1`] = `
         >
           <a
             aria-label="Github Profile"
-            class="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
+            class="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
             href="https://github.com/Hiccup246"
             title="Github Profile"
           >
@@ -51,7 +51,7 @@ exports[`AboutMeSection renders correctly 1`] = `
         >
           <a
             aria-label="LinkedIn Profile"
-            class="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey group-hover:text-grey"
+            class="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
             href="https://www.linkedin.com/in/jameswattpro"
             title="LinkedIn Profile"
           >

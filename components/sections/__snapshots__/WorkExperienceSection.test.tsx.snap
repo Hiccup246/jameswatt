@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
 <div>
@@ -17,96 +17,56 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
         class="flex w-full max-small:block"
       >
         <div
-          class="
-          relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
-          max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
-          max-small:pb-2
-        "
+          class="relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2"
         >
           <button
             aria-label="Tripadvisor"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             Tripadvisor
           </button>
           <button
             aria-label="AplyiD"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             AplyiD
           </button>
           <button
             aria-label="AplyiD"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             AplyiD
           </button>
           <button
             aria-label="Hypebeat"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             Hypebeat
           </button>
           <button
             aria-label="Halter"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             Halter
           </button>
           <button
             aria-label="BNZ"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             BNZ
           </button>
           <button
             aria-label="VUW"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             VUW
           </button>
           <div
-            class="
-            transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
-            visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded bg-brown delay-100
-            duration-200 dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto
-          "
+            class="transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)] visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded bg-brown delay-100 duration-200 dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto"
             style="transform: translateY(10px);"
           />
           <div
-            class="
-            visible absolute left-0 top-0 ml-1 h-full
-            w-0.5 rounded-sm
-            bg-black dark:bg-softwhite max-small:hidden
-          "
+            class="visible absolute left-0 top-0 ml-1 h-full w-0.5 rounded-sm bg-black dark:bg-softwhite max-small:hidden"
           />
         </div>
         <div
@@ -114,8 +74,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
           style="height: 0px;"
         >
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
           >
             <div
               title="Tripadvisor"
@@ -170,8 +129,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="AplyiD"
@@ -251,8 +209,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="AplyiD"
@@ -337,8 +294,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="Hypebeat"
@@ -395,8 +351,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="Halter"
@@ -467,8 +422,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="BNZ"
@@ -539,8 +493,7 @@ exports[`WorkExperienceSection renders correctly on desktop/tablet 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="VUW"
@@ -643,96 +596,56 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
         class="flex w-full max-small:block"
       >
         <div
-          class="
-          relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full
-          max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0
-          max-small:pb-2
-        "
+          class="relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2"
         >
           <button
             aria-label="Tripadvisor"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             Tripadvisor
           </button>
           <button
             aria-label="AplyiD"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             AplyiD
           </button>
           <button
             aria-label="AplyiD"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             AplyiD
           </button>
           <button
             aria-label="Hypebeat"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             Hypebeat
           </button>
           <button
             aria-label="Halter"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             Halter
           </button>
           <button
             aria-label="BNZ"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             BNZ
           </button>
           <button
             aria-label="VUW"
-            class="
-                bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2
-                focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0
-                max-small:justify-center 
-              "
+            class="bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center  "
           >
             VUW
           </button>
           <div
-            class="
-            transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)]
-            visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded bg-brown delay-100
-            duration-200 dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto
-          "
+            class="transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)] visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded bg-brown delay-100 duration-200 dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto"
             style="height: 2px;"
           />
           <div
-            class="
-            visible absolute left-0 top-0 ml-1 h-full
-            w-0.5 rounded-sm
-            bg-black dark:bg-softwhite max-small:hidden
-          "
+            class="visible absolute left-0 top-0 ml-1 h-full w-0.5 rounded-sm bg-black dark:bg-softwhite max-small:hidden"
           />
         </div>
         <div
@@ -740,8 +653,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
           style="height: 0px;"
         >
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out visible relative pt-2.5 opacity-100"
           >
             <div
               title="Tripadvisor"
@@ -796,8 +708,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="AplyiD"
@@ -877,8 +788,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="AplyiD"
@@ -963,8 +873,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="Hypebeat"
@@ -1021,8 +930,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="Halter"
@@ -1093,8 +1001,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="BNZ"
@@ -1165,8 +1072,7 @@ exports[`WorkExperienceSection renders correctly on mobile 1`] = `
             </div>
           </div>
           <div
-            class="
-                absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
+            class="absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out invisible opacity-0"
           >
             <div
               title="VUW"

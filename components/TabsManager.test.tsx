@@ -25,7 +25,7 @@ describe("TabsManager", () => {
           <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsManager>
+        </TabsManager>,
       );
 
       expect(container).toMatchSnapshot();
@@ -48,7 +48,7 @@ describe("TabsManager", () => {
           <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsManager>
+        </TabsManager>,
       );
 
       const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
@@ -75,7 +75,7 @@ describe("TabsManager", () => {
           <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsManager>
+        </TabsManager>,
       );
 
       const panelOneText = screen.getByText("First Panel");
@@ -106,7 +106,7 @@ describe("TabsManager", () => {
           <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsManager>
+        </TabsManager>,
       );
 
       expect(container).toMatchSnapshot();
@@ -129,7 +129,7 @@ describe("TabsManager", () => {
           <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsManager>
+        </TabsManager>,
       );
 
       const tabButtonOne = screen.getByRole("button", { name: "Panel 1" });
@@ -156,7 +156,7 @@ describe("TabsManager", () => {
           <div title="Panel 2" key="Panel 2">
             Second Panel
           </div>
-        </TabsManager>
+        </TabsManager>,
       );
 
       const panelOneText = screen.getByText("First Panel");

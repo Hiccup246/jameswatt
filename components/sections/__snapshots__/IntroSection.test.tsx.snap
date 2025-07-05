@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`IntroSection renders correctly 1`] = `
 <div>
@@ -24,10 +24,7 @@ exports[`IntroSection renders correctly 1`] = `
         />
       </div>
       <div
-        class="
-               relative flex h-auto w-full flex-col
-               justify-start md:justify-start md:pl-10 lg:pl-28
-        "
+        class="relative flex h-auto w-full flex-col justify-start md:justify-start md:pl-10 lg:pl-28"
       >
         <img
           alt="Developer Text"

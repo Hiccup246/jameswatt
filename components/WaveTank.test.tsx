@@ -32,10 +32,10 @@ describe("WaveTank", () => {
 
       // The epicentre spring whoose position value is set should have the lowest position value and the highest vibration
       expect(Math.max(...waveTank.springs.map((item) => item.vibration))).toBe(
-        waveTank.springs[50].vibration
+        waveTank.springs[50].vibration,
       );
       expect(Math.min(...waveTank.springs.map((item) => item.position))).toBe(
-        waveTank.springs[50].position
+        waveTank.springs[50].position,
       );
 
       // The 8 springs previous to the 50th (epicentre) should have increasing position values to form the
@@ -46,13 +46,13 @@ describe("WaveTank", () => {
       // entering the water
       for (let i = 50; i >= 42; i--) {
         expect(waveTank.springs[i].position).toBeLessThan(
-          waveTank.springs[i - 1].position
+          waveTank.springs[i - 1].position,
         );
         if (i == 50) {
           continue;
         }
         expect(waveTank.springs[i].vibration).toBeLessThan(
-          waveTank.springs[i - 1].vibration
+          waveTank.springs[i - 1].vibration,
         );
       }
 
@@ -64,13 +64,13 @@ describe("WaveTank", () => {
       // entering the water
       for (let i = 50; i <= 58; i++) {
         expect(waveTank.springs[i].position).toBeLessThan(
-          waveTank.springs[i + 1].position
+          waveTank.springs[i + 1].position,
         );
         if (i == 50) {
           continue;
         }
         expect(waveTank.springs[i].vibration).toBeLessThan(
-          waveTank.springs[i + 1].vibration
+          waveTank.springs[i + 1].vibration,
         );
       }
     });
@@ -87,10 +87,10 @@ describe("WaveTank", () => {
 
       // The epicentre spring whoose position value is set should have the lowest position value and the highest vibration
       expect(Math.max(...waveTank.springs.map((item) => item.vibration))).toBe(
-        waveTank.springs[50].vibration
+        waveTank.springs[50].vibration,
       );
       expect(Math.min(...waveTank.springs.map((item) => item.position))).toBe(
-        waveTank.springs[50].position
+        waveTank.springs[50].position,
       );
 
       // The 16 previous springs should have have decreasing position values to form the
@@ -98,13 +98,13 @@ describe("WaveTank", () => {
       // as the waves vibration decreases as it looses energy
       for (let i = 50; i >= 34; i--) {
         expect(waveTank.springs[i].position).toBeLessThan(
-          waveTank.springs[i - 1].position
+          waveTank.springs[i - 1].position,
         );
         if (i == 50) {
           continue;
         }
         expect(waveTank.springs[i].vibration).toBeLessThan(
-          waveTank.springs[i - 1].vibration
+          waveTank.springs[i - 1].vibration,
         );
       }
 
@@ -113,13 +113,13 @@ describe("WaveTank", () => {
       // should be the highest.
       for (let i = 50; i <= 66; i++) {
         expect(waveTank.springs[i].position).toBeLessThan(
-          waveTank.springs[i + 1].position
+          waveTank.springs[i + 1].position,
         );
         if (i == 50) {
           continue;
         }
         expect(waveTank.springs[i].vibration).toBeLessThan(
-          waveTank.springs[i + 1].vibration
+          waveTank.springs[i + 1].vibration,
         );
       }
     });

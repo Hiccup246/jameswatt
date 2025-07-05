@@ -7,7 +7,7 @@ describe("ConveyorBelt", () => {
       <ConveyorBelt>
         <div>Div 1</div>
         <div>Div 2</div>
-      </ConveyorBelt>
+      </ConveyorBelt>,
     );
 
     expect(container).toMatchSnapshot();

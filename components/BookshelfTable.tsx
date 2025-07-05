@@ -125,7 +125,7 @@ export default function BookShelfTable({
                 </td>
               </tr>
             );
-          }
+          },
         )}
       </tbody>
     </table>

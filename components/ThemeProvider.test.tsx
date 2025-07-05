@@ -8,7 +8,7 @@ describe("ThemeProvider", () => {
         <div>
           <p>Hello There</p>
         </div>
-      </ThemeProvider>
+      </ThemeProvider>,
     );
 
     expect(container).toMatchSnapshot();
