@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import "../styles/reset.css";
 import { Metadata } from "next";
 import { Roboto, Open_Sans } from "next/font/google";
 import ThemeProvider from "../components/ThemeProvider";

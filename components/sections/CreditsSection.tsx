@@ -7,6 +7,11 @@ import FreshIcon from "../Icons/FreshIcon";
 import NuxtIcon from "../Icons/NuxtIcon";
 
 export default function CreditsSection() {
+  const iconAnimation =
+    "transition-all inline-block h-4 w-4 translate-x-[-8px] group-hover:translate-x-0 group-hover:-rotate-0 -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:opacity-70";
+  const iconAnimationLarge =
+    "transition-all relative inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:-rotate-0 group-hover:translate-x-0 group-hover:opacity-70";
+
   return (
     <SectionLayout bgSecondary>
       <h1 className="text-center text-2xl font-bold sm:text-3xl">
@@ -29,7 +34,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform mb-1 inline-block h-4 w-4 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimation} mb-1`}
               href="https://icons8.com/"
               aria-label="Icons8 Homepage"
             >
@@ -47,7 +52,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform mb-1 inline-block h-4 w-4 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimation} mb-1`}
               href="https://fontawesome.com/"
               aria-label="Font Awesome Homepage"
             >
@@ -65,7 +70,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform mb-2 inline-block h-4 w-4 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimation} mb-2`}
               href="https://brittanychiang.com/"
               aria-label="Brittany Chiang Website"
             >
@@ -83,7 +88,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform relative mb-1 inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimationLarge} mb-1`}
               href="https://marguerite.io/"
               aria-label="Marguerite Roth Website"
             >
@@ -106,7 +111,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform mb-1 inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimationLarge} mb-1`}
               href="https://fresh.deno.dev/"
               aria-label="Fresh Framework Homepage"
             >
@@ -124,7 +129,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform relative mb-1 inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimationLarge} mb-1`}
               href="https://www.joshwcomeau.com/"
               aria-label="Josh Comeau Website"
             >
@@ -147,7 +152,7 @@ export default function CreditsSection() {
             </a>
 
             <a
-              className="transition-opacity-transform inline-block h-6 w-6 translate-x-[-8px] -rotate-45 pt-1 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              className={`${iconAnimationLarge} pt-1`}
               href="https://nuxt.com/"
               aria-label="Nuxt Framework Homepage"
             >

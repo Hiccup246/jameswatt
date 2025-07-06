@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ShowcaseProject(props: ShowcaseProject) {
   const GithubLink = (props: { projectName: string; url: string }) => (
     <a
-      className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+      className="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
       href={props.url}
       target="_blank"
       rel="noopener noreferrer"
@@ -17,7 +17,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
 
   const AppStoreLink = (props: { projectName: string; url: string }) => (
     <a
-      className="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+      className="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
       href={props.url}
       target="_blank"
       rel="noopener noreferrer"
@@ -40,7 +40,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           <Image
             src={props.projectImageSrc}
             width={600}
-            className="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+            className="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
             height={337}
             sizes="(min-width: 768px) 480px,
                                180px"
@@ -50,7 +50,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
 
         <div className="mt-4 flex flex-row justify-between">
           <a
-            className="hover:cursor-pointer group-hover:underline"
+            className="group-hover:underline hover:cursor-pointer"
             href={props.websiteUrl}
             target="_blank"
             rel="noopener noreferrer"

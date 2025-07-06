@@ -31,7 +31,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="MDN HTML Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   tabindex="-1"
                   title="MDN HTML Homepage"
@@ -64,7 +64,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -73,7 +73,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Angular Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://angular.io/"
                   tabindex="-1"
                   title="Angular Framework Homepage"
@@ -125,7 +125,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -134,7 +134,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Bulma Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://bulma.io/"
                   tabindex="-1"
                   title="Bulma Homepage"
@@ -153,7 +153,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -162,7 +162,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="MDN CSS Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                   tabindex="-1"
                   title="MDN CSS Homepage"
@@ -195,7 +195,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -204,7 +204,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Deno Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://deno.land/"
                   tabindex="-1"
                   title="Deno Homepage"
@@ -260,7 +260,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -269,7 +269,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Ruby On Rails Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://rubyonrails.org/"
                   tabindex="-1"
                   title="Ruby On Rails Homepage"
@@ -289,7 +289,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -298,7 +298,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Tailwind Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://tailwindcss.com/"
                   tabindex="-1"
                   title="Tailwind Homepage"
@@ -318,7 +318,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -327,7 +327,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="MDN HTML Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   tabindex="-1"
                   title="MDN HTML Homepage"
@@ -360,7 +360,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -369,7 +369,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Angular Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://angular.io/"
                   tabindex="-1"
                   title="Angular Framework Homepage"
@@ -421,7 +421,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -430,7 +430,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Bulma Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://bulma.io/"
                   tabindex="-1"
                   title="Bulma Homepage"
@@ -449,7 +449,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -458,7 +458,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="MDN CSS Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                   tabindex="-1"
                   title="MDN CSS Homepage"
@@ -491,7 +491,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -500,7 +500,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Deno Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://deno.land/"
                   tabindex="-1"
                   title="Deno Homepage"
@@ -556,7 +556,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -565,7 +565,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Ruby On Rails Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://rubyonrails.org/"
                   tabindex="-1"
                   title="Ruby On Rails Homepage"
@@ -585,7 +585,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -594,7 +594,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Tailwind Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://tailwindcss.com/"
                   tabindex="-1"
                   title="Tailwind Homepage"
@@ -614,7 +614,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -635,7 +635,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Vue Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://vuejs.org/"
                   tabindex="-1"
                   title="Vue Framework Homepage"
@@ -658,7 +658,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -667,7 +667,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Solidity Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.solidity.io/"
                   tabindex="-1"
                   title="Solidity Homepage"
@@ -820,7 +820,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -829,7 +829,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Javascript Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.javascript.com/"
                   tabindex="-1"
                   title="Javascript Language Homepage"
@@ -854,7 +854,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -863,7 +863,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Gatsby Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.gatsbyjs.com/"
                   tabindex="-1"
                   title="Gatsby Framework Homepage"
@@ -888,7 +888,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -897,7 +897,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Fresh Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://fresh.deno.dev/"
                   tabindex="-1"
                   title="Fresh Framework Homepage"
@@ -932,7 +932,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -941,7 +941,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Figma Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.figma.com/"
                   tabindex="-1"
                   title="Figma Homepage"
@@ -992,7 +992,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1001,7 +1001,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Go Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://go.dev/"
                   tabindex="-1"
                   title="Go Language Homepage"
@@ -1041,7 +1041,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1050,7 +1050,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Vue Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://vuejs.org/"
                   tabindex="-1"
                   title="Vue Framework Homepage"
@@ -1073,7 +1073,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1082,7 +1082,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Solidity Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.solidity.io/"
                   tabindex="-1"
                   title="Solidity Homepage"
@@ -1235,7 +1235,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1244,7 +1244,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Javascript Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.javascript.com/"
                   tabindex="-1"
                   title="Javascript Language Homepage"
@@ -1269,7 +1269,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1278,7 +1278,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Gatsby Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.gatsbyjs.com/"
                   tabindex="-1"
                   title="Gatsby Framework Homepage"
@@ -1303,7 +1303,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1312,7 +1312,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Fresh Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://fresh.deno.dev/"
                   tabindex="-1"
                   title="Fresh Framework Homepage"
@@ -1347,7 +1347,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1356,7 +1356,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Figma Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.figma.com/"
                   tabindex="-1"
                   title="Figma Homepage"
@@ -1407,7 +1407,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1416,7 +1416,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Go Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://go.dev/"
                   tabindex="-1"
                   title="Go Language Homepage"
@@ -1456,7 +1456,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1477,7 +1477,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Svelte Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://svelte.dev/"
                   tabindex="-1"
                   title="Svelte Framework Homepage"
@@ -1503,7 +1503,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1512,7 +1512,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Ruby Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.ruby-lang.org/en/"
                   tabindex="-1"
                   title="Ruby Language Homepage"
@@ -1550,7 +1550,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1559,7 +1559,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="React Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://reactjs.org/"
                   tabindex="-1"
                   title="React Framework Homepage"
@@ -1603,7 +1603,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1612,7 +1612,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Nuxt Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://nuxt.com/"
                   tabindex="-1"
                   title="Nuxt Framework Homepage"
@@ -1632,7 +1632,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1641,7 +1641,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Node.JS Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://nodejs.org/en/"
                   tabindex="-1"
                   title="Node.JS Homepage"
@@ -1678,7 +1678,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1687,7 +1687,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Next.JS Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://nextjs.org/"
                   tabindex="-1"
                   title="Next.JS Homepage"
@@ -1732,7 +1732,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1741,7 +1741,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Rust Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.rust-lang.org/"
                   tabindex="-1"
                   title="Rust Language Homepage"
@@ -1772,7 +1772,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1781,7 +1781,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Svelte Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://svelte.dev/"
                   tabindex="-1"
                   title="Svelte Framework Homepage"
@@ -1807,7 +1807,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1816,7 +1816,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Ruby Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.ruby-lang.org/en/"
                   tabindex="-1"
                   title="Ruby Language Homepage"
@@ -1854,7 +1854,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1863,7 +1863,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="React Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://reactjs.org/"
                   tabindex="-1"
                   title="React Framework Homepage"
@@ -1907,7 +1907,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1916,7 +1916,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Nuxt Framework Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://nuxt.com/"
                   tabindex="-1"
                   title="Nuxt Framework Homepage"
@@ -1936,7 +1936,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1945,7 +1945,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Node.JS Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://nodejs.org/en/"
                   tabindex="-1"
                   title="Node.JS Homepage"
@@ -1982,7 +1982,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1991,7 +1991,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Next.JS Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://nextjs.org/"
                   tabindex="-1"
                   title="Next.JS Homepage"
@@ -2036,7 +2036,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -2045,7 +2045,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Rust Language Homepage"
-                  class="group relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border border-lightgrey bg-white duration-300 dark:bg-softwhite"
+                  class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
                   href="https://www.rust-lang.org/"
                   tabindex="-1"
                   title="Rust Language Homepage"
@@ -2076,7 +2076,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play absolute -left-0.5 -top-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg bg-tech-icon-gradient opacity-0 transition-all duration-300 ease-linear group-hover:animate-rotate group-hover:opacity-100 dark:bg-dark-tech-icon-gradient"
+                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -2084,10 +2084,10 @@ exports[`TechnologiesSection renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="to-transparent absolute left-0 top-0 h-full w-5 bg-gradient-to-r from-white via-white dark:from-darkteal sm:w-[50px] md:w-[100px] lg:w-[100px]"
+          class="dark:from-darkteal absolute top-0 left-0 h-full w-5 bg-linear-to-r from-white sm:w-[50px] md:w-[100px] lg:w-[100px]"
         />
         <div
-          class="to-transparent absolute right-0 top-0 h-full w-5 bg-gradient-to-l from-white via-white dark:from-darkteal sm:w-[50px] md:w-[100px] lg:w-[100px]"
+          class="dark:from-darkteal absolute top-0 right-0 h-full w-5 bg-linear-to-l from-white sm:w-[50px] md:w-[100px] lg:w-[100px]"
         />
       </div>
     </section>

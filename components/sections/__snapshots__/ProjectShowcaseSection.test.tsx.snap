@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ProjectShowcaseSection renders correctly 1`] = `
 <div>
@@ -31,7 +31,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="World leader leaderboard Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -48,7 +48,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="World leader leaderboard Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.worldleaderleaderboard.com"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -80,7 +80,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Satirical podcast fan site Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -97,7 +97,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Satirical podcast fan site Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.boysgonewildpodcast.com"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -125,7 +125,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Gaff Bingo Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -142,7 +142,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Gaff Bingo Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.gaffbingo.com"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -154,7 +154,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Gaff Bingo App Store Link"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://apps.apple.com/us/app/gaff-bingo/id6563151400?itscg=30200&itsct=apps_box_link&mttnsubad=6563151400"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -188,7 +188,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Orca Chase Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -205,7 +205,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Orca Chase Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.orcachase.com"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -217,7 +217,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Orca Chase Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/orca-chase"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -251,7 +251,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Npm Expansions Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -268,7 +268,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Npm Expansions Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.npm-expansions.com/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -280,7 +280,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Npm Expansions Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/npm-expansions"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -314,7 +314,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="MacOS Development Setup Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -331,7 +331,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="MacOS Development Setup Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://github.com/Hiccup246/development-env"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -343,7 +343,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="MacOS Development Setup Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/development-env"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -377,7 +377,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Custom Sound Board Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -394,7 +394,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Custom Sound Board Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.custom-sound-board.com/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -406,7 +406,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Custom Sound Board Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/custom-sound-board"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -440,7 +440,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="James Watt Calling Card Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -457,7 +457,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="James Watt Calling Card Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.npmjs.com/package/james-watt-calling-card"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -469,7 +469,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="James Watt Calling Card Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/james-watt-calling-card"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -503,7 +503,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Gun Control Policies Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -520,7 +520,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Gun Control Policies Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.guncontrolpolicies.com/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -532,7 +532,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Gun Control Policies Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/gun-control-policies"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -566,7 +566,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Norm MacDonald Quotes Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -583,7 +583,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Norm MacDonald Quotes Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.normmacdonaldquotes.com/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -595,7 +595,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Norm MacDonald Quotes Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/norm-macdonald-quotes"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -629,7 +629,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Free Online Text Edit Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -646,7 +646,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Free Online Text Edit Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://www.freeonlinetextedit.com/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -658,7 +658,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Free Online Text Edit Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/free-online-text-edit"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -692,7 +692,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Old Portfolio Site Website Screenshot"
-                class="aspect-video w-full rounded-lg border border-2 border-lightgrey transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -709,7 +709,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <a
                 aria-label="Old Portfolio Site Url"
-                class="hover:cursor-pointer group-hover:underline"
+                class="group-hover:underline hover:cursor-pointer"
                 href="https://jameswatt-v1.vercel.app/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -721,7 +721,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               >
                 <a
                   aria-label="Old Portfolio Site Github Project"
-                  class="text-grey duration-200 ease-in hover:cursor-pointer hover:text-black hover:dark:text-softwhite"
+                  class="text-grey hover:dark:text-softwhite duration-200 ease-in hover:cursor-pointer hover:text-black"
                   href="https://github.com/Hiccup246/jameswatt-v1"
                   rel="noopener noreferrer"
                   target="_blank"

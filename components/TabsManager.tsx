@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef, ReactElement } from "react";
 
+// This value is defined within the tailwind config of this project
 const mobileViewWidth: string = "550px";
 
 export function largestChildHeight(elem: HTMLDivElement): number {
@@ -97,10 +98,10 @@ export default function TabsManager({
   }, []);
 
   return (
-    <div className="flex w-full max-small:block">
+    <div className="max-small:block flex w-full">
       <div
         className={
-          "relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5 max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2"
+          "max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2 relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5"
         }
       >
         {children.map(
@@ -109,7 +110,7 @@ export default function TabsManager({
               <button
                 key={`tab-button-${child.key}`}
                 aria-label={child.props["title"]}
-                className={`bg-transparent relative z-20 flex w-fit cursor-pointer whitespace-nowrap px-5 py-2 focus-visible:border-none max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center ${index == currentTabIndex ? "" : ""} `}
+                className={`max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit cursor-pointer bg-transparent px-5 py-2 whitespace-nowrap focus-visible:border-none ${index == currentTabIndex ? "" : ""} `}
                 onClick={(element) =>
                   clickOnTabButton(index, element.currentTarget)
                 }
@@ -127,25 +128,25 @@ export default function TabsManager({
         <div
           style={sliderStyle}
           className={
-            "transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)] visible absolute left-0 top-0 z-10 h-[40px] w-[122px] rounded bg-brown delay-100 duration-200 dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto"
+            "transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)] bg-brown dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto visible absolute top-0 left-0 z-10 h-[40px] w-[122px] rounded delay-100 duration-200"
           }
         ></div>
         <div
           className={
-            "visible absolute left-0 top-0 ml-1 h-full w-0.5 rounded-sm bg-black dark:bg-softwhite max-small:hidden"
+            "dark:bg-softwhite max-small:hidden visible absolute top-0 left-0 ml-1 h-full w-0.5 rounded-sm bg-black"
           }
         />
       </div>
 
       <div
-        className="relative ml-5 w-full max-small:ml-0"
+        className="max-small:ml-0 relative ml-5 w-full"
         ref={experiencePanelsWrapper}
       >
         {children.map((child: ReactElement, index: number) => {
           return (
             <div
               key={child.key}
-              className={`absolute left-0 top-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
+              className={`absolute top-0 left-0 m-0 w-full p-0 transition-opacity duration-700 ease-in-out ${
                 index === currentTabIndex
                   ? "visible relative pt-2.5 opacity-100"
                   : "invisible opacity-0"

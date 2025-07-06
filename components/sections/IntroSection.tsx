@@ -103,7 +103,7 @@ export default function IntroSection() {
   }
 
   return (
-    <div className="flex h-full w-full flex-col bg-brown dark:bg-darkgrey">
+    <div className="bg-brown dark:bg-darkgrey flex h-full w-full flex-col">
       <div className="grid h-fit w-full grid-cols-1 md:mb-10 md:grid-cols-2 lg:mt-12">
         <div className="relative flex h-auto w-full flex-col justify-start md:justify-start md:pr-10 lg:pr-28">
           <Image
@@ -132,12 +132,12 @@ export default function IntroSection() {
         </div>
       </div>
 
-      <div className="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown dark:bg-darkgrey md:mb-28 lg:mb-16 xl:mb-36">
-        <div className="absolute -left-px -top-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey">
+      <div className="bg-brown dark:bg-darkgrey relative mx-auto mb-20 h-[372.5px] w-[310px] md:mb-28 lg:mb-16 xl:mb-36">
+        <div className="text-brown dark:stroke-darkteal dark:text-darkgrey absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white">
           <CircleDripIcon />
         </div>
 
-        <div className="absolute left-0 top-0 z-10 h-full w-full text-brown">
+        <div className="text-brown absolute top-0 left-0 z-10 h-full w-full">
           <Image
             src={JamesWattImage}
             height={372}
@@ -153,25 +153,25 @@ export default function IntroSection() {
           width="100"
           height="350"
           viewBox="0 0 100 200"
-          className="absolute left-[216.5px] top-[184px] z-20"
+          className="absolute top-[184px] left-[216.5px] z-20"
           aria-label="Water Drop"
         >
           <circle
             cx="24"
             cy={dropy}
             r="6"
-            className="fill-white dark:fill-darkteal"
+            className="dark:fill-darkteal fill-white"
           ></circle>
         </svg>
 
         <svg
-          className="absolute left-[232px] top-[215px] z-20"
+          className="absolute top-[215px] left-[232px] z-20"
           width="16.5"
           aria-label="Growing Drop"
         >
           <path
             d={`M0,48 a1,${1.3 + (counter + 1) * 0.2} 0 0,0 16.5,0`}
-            className="fill-white dark:fill-darkteal"
+            className="dark:fill-darkteal fill-white"
           />
         </svg>
       </div>
@@ -181,12 +181,12 @@ export default function IntroSection() {
         height="100px"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="-mt-5 bg-gradient-to-t from-white via-brown to-brown dark:from-darkteal dark:via-darkgrey dark:to-darkgrey"
+        className="via-brown to-brown dark:from-darkteal dark:via-darkgrey dark:to-darkgrey -mt-5 bg-gradient-to-t from-white"
         aria-label="Wave Tank"
       >
         <polygon
           points={springsPath}
-          className="fill-white stroke-white dark:fill-darkteal dark:stroke-darkteal"
+          className="dark:fill-darkteal dark:stroke-darkteal fill-white stroke-white"
           transform="translate(0, 50)"
         ></polygon>
       </svg>

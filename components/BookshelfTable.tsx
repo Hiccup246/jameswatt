@@ -80,24 +80,21 @@ export default function BookShelfTable({
 
   return (
     <table className="w-full">
-      <thead className="sticky top-0 bg-brown dark:bg-darkgrey">
+      <thead className="bg-brown dark:bg-darkgrey sticky top-0">
         <tr>
           <th className="pb-2.5 text-left text-sm">Book</th>
-          <th className="w-24 pb-2.5 text-left text-sm max-smaller:hidden">
+          <th className="max-smaller:hidden w-24 pb-2.5 text-left text-sm">
             Genre
           </th>
           <th className="pb-2.5 text-center text-sm">Status</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="tr-gap">
         {(!!shortView ? books.slice(0, previewBooks) : books).map(
           (book: Book, index: number) => {
             return (
-              <tr
-                key={book.name + index}
-                className="[&>td]:pt-10 [&>td]:first:pt-0"
-              >
-                <td className="flex flex-col justify-start break-keep pr-2.5 align-top">
+              <tr key={book.name + index}>
+                <td className="flex flex-col justify-start pr-2.5 align-top break-keep">
                   <h2 className="my-0 max-w-lg font-bold">{book.name}</h2>
                   <div className="flex flex-col">
                     <div className="text-sm">{book.author}</div>
@@ -107,14 +104,14 @@ export default function BookShelfTable({
                           ? "Date Completed"
                           : "Date Started"
                       }
-                      className="order-last text-sm max-smaller:order-first"
+                      className="max-smaller:order-first order-last text-sm"
                     >
                       {book.dateCompleted || book.dateStarted}
                     </div>
                   </div>
                 </td>
 
-                <td className="align-top text-sm max-smaller:inline">
+                <td className="max-smaller:inline align-top text-sm">
                   {book.genre}
                 </td>
 

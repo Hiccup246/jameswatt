@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`BookshelfSection correctly renders all books 1`] = `
 <div>
@@ -6,7 +6,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
     class="w-full"
   >
     <thead
-      class="sticky top-0 bg-brown dark:bg-darkgrey"
+      class="bg-brown dark:bg-darkgrey sticky top-0"
     >
       <tr>
         <th
@@ -15,7 +15,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           Book
         </th>
         <th
-          class="w-24 pb-2.5 text-left text-sm max-smaller:hidden"
+          class="max-smaller:hidden w-24 pb-2.5 text-left text-sm"
         >
           Genre
         </th>
@@ -26,12 +26,12 @@ exports[`BookshelfSection correctly renders all books 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody>
-      <tr
-        class="[&>td]:pt-10 [&>td]:first:pt-0"
-      >
+    <tbody
+      class="tr-gap"
+    >
+      <tr>
         <td
-          class="flex flex-col justify-start break-keep pr-2.5 align-top"
+          class="flex flex-col justify-start pr-2.5 align-top break-keep"
         >
           <h2
             class="my-0 max-w-lg font-bold"
@@ -47,7 +47,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               Nassim Nicholas Taleb
             </div>
             <div
-              class="order-last text-sm max-smaller:order-first"
+              class="max-smaller:order-first order-last text-sm"
               title="Date Started"
             >
               26/09/2022
@@ -55,7 +55,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
         <td
-          class="align-top text-sm max-smaller:inline"
+          class="max-smaller:inline align-top text-sm"
         >
           Nonfiction
         </td>
@@ -78,11 +78,9 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
       </tr>
-      <tr
-        class="[&>td]:pt-10 [&>td]:first:pt-0"
-      >
+      <tr>
         <td
-          class="flex flex-col justify-start break-keep pr-2.5 align-top"
+          class="flex flex-col justify-start pr-2.5 align-top break-keep"
         >
           <h2
             class="my-0 max-w-lg font-bold"
@@ -98,13 +96,13 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               Andy Hunt, Dave Thomas
             </div>
             <div
-              class="order-last text-sm max-smaller:order-first"
+              class="max-smaller:order-first order-last text-sm"
               title="Date Started"
             />
           </div>
         </td>
         <td
-          class="align-top text-sm max-smaller:inline"
+          class="max-smaller:inline align-top text-sm"
         >
           Programming
         </td>
@@ -127,11 +125,9 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
       </tr>
-      <tr
-        class="[&>td]:pt-10 [&>td]:first:pt-0"
-      >
+      <tr>
         <td
-          class="flex flex-col justify-start break-keep pr-2.5 align-top"
+          class="flex flex-col justify-start pr-2.5 align-top break-keep"
         >
           <h2
             class="my-0 max-w-lg font-bold"
@@ -147,7 +143,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               Amanda Montell
             </div>
             <div
-              class="order-last text-sm max-smaller:order-first"
+              class="max-smaller:order-first order-last text-sm"
               title="Date Completed"
             >
               25/09/2022
@@ -155,7 +151,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
         <td
-          class="align-top text-sm max-smaller:inline"
+          class="max-smaller:inline align-top text-sm"
         >
           Nonfiction
         </td>
@@ -180,11 +176,9 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
       </tr>
-      <tr
-        class="[&>td]:pt-10 [&>td]:first:pt-0"
-      >
+      <tr>
         <td
-          class="flex flex-col justify-start break-keep pr-2.5 align-top"
+          class="flex flex-col justify-start pr-2.5 align-top break-keep"
         >
           <h2
             class="my-0 max-w-lg font-bold"
@@ -200,7 +194,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               Walter Isaacson
             </div>
             <div
-              class="order-last text-sm max-smaller:order-first"
+              class="max-smaller:order-first order-last text-sm"
               title="Date Completed"
             >
               11/09/2022
@@ -208,7 +202,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
         <td
-          class="align-top text-sm max-smaller:inline"
+          class="max-smaller:inline align-top text-sm"
         >
           Biography
         </td>
@@ -233,11 +227,9 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
       </tr>
-      <tr
-        class="[&>td]:pt-10 [&>td]:first:pt-0"
-      >
+      <tr>
         <td
-          class="flex flex-col justify-start break-keep pr-2.5 align-top"
+          class="flex flex-col justify-start pr-2.5 align-top break-keep"
         >
           <h2
             class="my-0 max-w-lg font-bold"
@@ -253,13 +245,13 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               Aldous Huxley
             </div>
             <div
-              class="order-last text-sm max-smaller:order-first"
+              class="max-smaller:order-first order-last text-sm"
               title="Date Completed"
             />
           </div>
         </td>
         <td
-          class="align-top text-sm max-smaller:inline"
+          class="max-smaller:inline align-top text-sm"
         >
           Fiction
         </td>
@@ -284,11 +276,9 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
       </tr>
-      <tr
-        class="[&>td]:pt-10 [&>td]:first:pt-0"
-      >
+      <tr>
         <td
-          class="flex flex-col justify-start break-keep pr-2.5 align-top"
+          class="flex flex-col justify-start pr-2.5 align-top break-keep"
         >
           <h2
             class="my-0 max-w-lg font-bold"
@@ -304,7 +294,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
               Michael D. Gambone
             </div>
             <div
-              class="order-last text-sm max-smaller:order-first"
+              class="max-smaller:order-first order-last text-sm"
               title="Date Completed"
             >
               26/06/2022
@@ -312,7 +302,7 @@ exports[`BookshelfSection correctly renders all books 1`] = `
           </div>
         </td>
         <td
-          class="align-top text-sm max-smaller:inline"
+          class="max-smaller:inline align-top text-sm"
         >
           Nonfiction
         </td>

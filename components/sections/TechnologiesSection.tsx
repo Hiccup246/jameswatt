@@ -56,8 +56,8 @@ export default function TechnologiesSection() {
           )}
         </ConveyorBelt>
 
-        <div className="to-transparent absolute left-0 top-0 h-full w-5 bg-gradient-to-r from-white via-white dark:from-darkteal sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>
-        <div className="to-transparent absolute right-0 top-0 h-full w-5 bg-gradient-to-l from-white via-white dark:from-darkteal sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>
+        <div className="dark:from-darkteal absolute top-0 left-0 h-full w-5 bg-linear-to-r from-white sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>
+        <div className="dark:from-darkteal absolute top-0 right-0 h-full w-5 bg-linear-to-l from-white sm:w-[50px] md:w-[100px] lg:w-[100px]"></div>
       </div>
     </SectionLayout>
   );

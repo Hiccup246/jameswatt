@@ -3,7 +3,7 @@
 exports[`IntroSection renders correctly 1`] = `
 <div>
   <div
-    class="flex h-full w-full flex-col bg-brown dark:bg-darkgrey"
+    class="bg-brown dark:bg-darkgrey flex h-full w-full flex-col"
   >
     <div
       class="grid h-fit w-full grid-cols-1 md:mb-10 md:grid-cols-2 lg:mt-12"
@@ -40,10 +40,10 @@ exports[`IntroSection renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="relative mx-auto mb-20 h-[372.5px] w-[310px] bg-brown dark:bg-darkgrey md:mb-28 lg:mb-16 xl:mb-36"
+      class="bg-brown dark:bg-darkgrey relative mx-auto mb-20 h-[372.5px] w-[310px] md:mb-28 lg:mb-16 xl:mb-36"
     >
       <div
-        class="absolute -left-px -top-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white text-brown dark:stroke-darkteal dark:text-darkgrey"
+        class="text-brown dark:stroke-darkteal dark:text-darkgrey absolute -top-px -left-px z-20 h-[373.5px] h-full w-[311px] w-full stroke-white"
       >
         <svg
           class=""
@@ -66,7 +66,7 @@ exports[`IntroSection renders correctly 1`] = `
         </svg>
       </div>
       <div
-        class="absolute left-0 top-0 z-10 h-full w-full text-brown"
+        class="text-brown absolute top-0 left-0 z-10 h-full w-full"
       >
         <img
           alt="James Watt"
@@ -82,13 +82,13 @@ exports[`IntroSection renders correctly 1`] = `
       </div>
       <svg
         aria-label="Water Drop"
-        class="absolute left-[216.5px] top-[184px] z-20"
+        class="absolute top-[184px] left-[216.5px] z-20"
         height="350"
         viewBox="0 0 100 200"
         width="100"
       >
         <circle
-          class="fill-white dark:fill-darkteal"
+          class="dark:fill-darkteal fill-white"
           cx="24"
           cy="10"
           r="6"
@@ -96,25 +96,25 @@ exports[`IntroSection renders correctly 1`] = `
       </svg>
       <svg
         aria-label="Growing Drop"
-        class="absolute left-[232px] top-[215px] z-20"
+        class="absolute top-[215px] left-[232px] z-20"
         width="16.5"
       >
         <path
-          class="fill-white dark:fill-darkteal"
+          class="dark:fill-darkteal fill-white"
           d="M0,48 a1,1.5 0 0,0 16.5,0"
         />
       </svg>
     </div>
     <svg
       aria-label="Wave Tank"
-      class="-mt-5 bg-gradient-to-t from-white via-brown to-brown dark:from-darkteal dark:via-darkgrey dark:to-darkgrey"
+      class="via-brown to-brown dark:from-darkteal dark:via-darkgrey dark:to-darkgrey -mt-5 bg-gradient-to-t from-white"
       height="100px"
       preserveAspectRatio="none"
       viewBox="0 0 100 100"
       width="100%"
     >
       <polygon
-        class="fill-white stroke-white dark:fill-darkteal dark:stroke-darkteal"
+        class="dark:fill-darkteal dark:stroke-darkteal fill-white stroke-white"
         points="0,100 0,0 0,0 1,0 2,0 3,0 4,0 5,0 6,0 7,0 8,0 9,0 10,0 11,0 12,0 13,0 14,0 15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0 33,0 34,0 35,0 36,0 37,0 38,0 39,0 40,0 41,0 42,0 43,0 44,0 45,0 46,0 47,0 48,0 49,0 50,0 51,0 52,0 53,0 54,0 55,0 56,0 57,0 58,0 59,0 60,0 61,0 62,0 63,0 64,0 65,0 66,0 67,0 68,0 69,0 70,0 71,0 72,0 73,0 74,0 75,0 76,0 77,0 78,0 79,0 80,0 81,0 82,0 83,0 84,0 85,0 86,0 87,0 88,0 89,0 90,0 91,0 92,0 93,0 94,0 95,0 96,0 97,0 98,0 99,0 0,0 0,100"
         transform="translate(0, 50)"
       />

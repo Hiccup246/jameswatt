@@ -38,7 +38,7 @@ export default function AboutMeSection() {
       <div className="mt-16 flex flex-row justify-center">
         <div className="group my-auto mr-8 w-8">
           <a
-            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
+            className="group-hover:text-grey block duration-150 ease-in group-hover:-translate-y-0.5"
             href="https://github.com/Hiccup246"
             aria-label="Github Profile"
             title="Github Profile"
@@ -49,7 +49,7 @@ export default function AboutMeSection() {
 
         <div className="group my-auto mr-8 w-8">
           <a
-            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
+            className="group-hover:text-grey block duration-150 ease-in group-hover:-translate-y-0.5"
             href="https://www.linkedin.com/in/jameswattpro"
             aria-label="LinkedIn Profile"
             title="LinkedIn Profile"
@@ -59,16 +59,16 @@ export default function AboutMeSection() {
         </div>
 
         <div className="group relative my-auto mr-8 w-10" tabIndex={0}>
-          <div className="duration-200 ease-in group-hover:-translate-y-0.5 group-hover:text-grey">
+          <div className="group-hover:text-grey duration-200 ease-in group-hover:-translate-y-0.5">
             <EmailIcon />
           </div>
 
           <div
             role="tooltip"
-            className="invisible absolute -left-[128px] top-[50px] h-fit w-[246px] rounded-lg bg-brown opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 dark:bg-darkgrey"
+            className="bg-brown dark:bg-darkgrey invisible absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
           >
             <div className="relative">
-              <div className="absolute -top-[20px] right-[90px] z-10 h-4 w-4 rotate-45 bg-brown dark:bg-darkgrey" />
+              <div className="bg-brown dark:bg-darkgrey absolute -top-[20px] right-[90px] z-10 h-4 w-4 rotate-45" />
 
               <div className="z-20 my-3 flex w-full justify-center">
                 <a
@@ -88,7 +88,7 @@ export default function AboutMeSection() {
                       process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL,
                     )
                   }
-                  className="z-20 ml-2 h-fit w-fit rounded bg-darkbrown p-1 px-2 hover:opacity-70 active:-translate-y-0.5 dark:bg-darkteal"
+                  className="bg-darkbrown dark:bg-darkteal z-20 ml-2 h-fit w-fit rounded p-1 px-2 hover:opacity-70 active:-translate-y-0.5"
                 >
                   Copy email
                 </button>
@@ -99,7 +99,7 @@ export default function AboutMeSection() {
 
         <div className="group my-auto w-10">
           <a
-            className="block duration-150 ease-in group-hover:-translate-y-0.5 group-hover:text-grey"
+            className="group-hover:text-grey block duration-150 ease-in group-hover:-translate-y-0.5"
             href="/jameswatt-resume.pdf"
             target="_blank"
             rel="noreferrer"

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`CreditsSection renders correctly 1`] = `
 <div>
@@ -34,7 +34,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Icons8 Homepage"
-              class="transition-opacity-transform mb-1 inline-block h-4 w-4 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all inline-block h-4 w-4 translate-x-[-8px] group-hover:translate-x-0 group-hover:-rotate-0 -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:opacity-70 mb-1"
               href="https://icons8.com/"
             >
               <svg
@@ -62,7 +62,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Font Awesome Homepage"
-              class="transition-opacity-transform mb-1 inline-block h-4 w-4 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all inline-block h-4 w-4 translate-x-[-8px] group-hover:translate-x-0 group-hover:-rotate-0 -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:opacity-70 mb-1"
               href="https://fontawesome.com/"
             >
               <svg
@@ -88,7 +88,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Brittany Chiang Website"
-              class="transition-opacity-transform mb-2 inline-block h-4 w-4 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all inline-block h-4 w-4 translate-x-[-8px] group-hover:translate-x-0 group-hover:-rotate-0 -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:opacity-70 mb-2"
               href="https://brittanychiang.com/"
             >
               <svg
@@ -137,7 +137,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Marguerite Roth Website"
-              class="transition-opacity-transform relative mb-1 inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all relative inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:-rotate-0 group-hover:translate-x-0 group-hover:opacity-70 mb-1"
               href="https://marguerite.io/"
             >
               <img
@@ -164,7 +164,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Fresh Framework Homepage"
-              class="transition-opacity-transform mb-1 inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all relative inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:-rotate-0 group-hover:translate-x-0 group-hover:opacity-70 mb-1"
               href="https://fresh.deno.dev/"
             >
               <svg
@@ -206,7 +206,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Josh Comeau Website"
-              class="transition-opacity-transform relative mb-1 inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all relative inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:-rotate-0 group-hover:translate-x-0 group-hover:opacity-70 mb-1"
               href="https://www.joshwcomeau.com/"
             >
               <img
@@ -233,7 +233,7 @@ exports[`CreditsSection renders correctly 1`] = `
             </a>
             <a
               aria-label="Nuxt Framework Homepage"
-              class="transition-opacity-transform inline-block h-6 w-6 translate-x-[-8px] -rotate-45 pt-1 align-middle opacity-0 duration-500 ease-in-out group-hover:transform-none group-hover:opacity-70"
+              class="transition-all relative inline-block h-6 w-6 translate-x-[-8px] -rotate-45 align-middle opacity-0 duration-500 ease-in-out group-hover:-rotate-0 group-hover:translate-x-0 group-hover:opacity-70 pt-1"
               href="https://nuxt.com/"
             >
               <svg

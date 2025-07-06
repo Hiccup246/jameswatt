@@ -1,6 +1,10 @@
-@import 'tailwindcss';
-
+@import "tailwindcss";
 @config "../tailwind.config.js";
+
+@theme {
+  --font-sans: var(--font-roboto);
+  --font-serif: var(--font-open-sans);
+}
 
 @layer base {
   html,
@@ -22,6 +26,8 @@
       "Segoe UI Emoji",
       "Segoe UI Symbol",
       "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   @property --gradient-angle {
@@ -31,12 +37,16 @@
   }
 }
 
-@layer utilities {
-  .animation-pause {
-    animation-play-state: paused;
-  }
+@utility animation-pause {
+  animation-play-state: paused;
+}
 
-  .animation-play {
-    animation-play-state: running;
+@utility animation-play {
+  animation-play-state: running;
+}
+
+@layer utilities {
+  .tr-gap > tr + tr > td {
+    @apply pt-10;
   }
 }

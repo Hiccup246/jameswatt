@@ -6,10 +6,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      sans: ["var(--font-roboto)"],
-      serif: ["var(--font-open-sans)"],
-    },
+    // fontFamily: {
+    //   sans: ["var(--font-roboto)"],
+    //   serif: ["var(--font-open-sans)"],
+    // },
     colors: {
       brown: "#FFF1E4",
       darkbrown: "#F2DFCE",

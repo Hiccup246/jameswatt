@@ -20,7 +20,7 @@ export default function WorkExperienceSection() {
                 <span className="text-xl font-bold">{job.role}</span>
                 <span className="text-xl font-bold"> @ {job.company}</span>
               </h2>
-              <p className="mb-4 mt-1">{job.dateRange}</p>
+              <p className="mt-1 mb-4">{job.dateRange}</p>
               <div className="pb-4">{job.description}</div>
               <ul className="m-0 list-none p-0">
                 {job.jobHighlights.map((highlight: string) => {
