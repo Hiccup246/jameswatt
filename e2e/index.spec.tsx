@@ -165,6 +165,8 @@ test.describe("About me component", () => {
       .locator("svg")
       .nth(2);
     await emailIcon.hover();
+    // Hover is not possible on mobile so we trigger a click instead. This does not affect desktop behaviour
+    await emailIcon.click();
 
     const emailTooltip = page.getByRole("tooltip", {
       name: "Email Address Copy email",
