@@ -7,9 +7,7 @@ export default function ConveyorBelt({
   children: ReactElement[];
   slideRight?: boolean;
 }) {
-  const slideAnimation = !!slideRight
-    ? "animate-scroll-reverse"
-    : "animate-scroll";
+  const slideAnimation = !!slideRight ? "scroll-reverse" : "scroll";
 
   return (
     <div className="relative w-full overflow-hidden">

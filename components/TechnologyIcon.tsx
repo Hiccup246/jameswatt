@@ -12,7 +12,7 @@ export default function TechnologyIcon({ icon }: { icon: LinkedIcon }) {
       <div className="flex h-12 w-12 justify-center">{icon.icon}</div>
       <div
         className={
-          "group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+          "group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
         }
       />
     </a>

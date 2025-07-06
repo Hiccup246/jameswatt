@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@config "../tailwind.config.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -18,6 +17,24 @@
 
   --breakpoint-small: 550px;
   --breakpoint-smaller: 400px;
+
+  @keyframes gradient-rotate {
+    0% {
+      --gradient-angle: 360deg;
+    }
+    to {
+      --gradient-angle: 0deg;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translate(0);
+    }
+    to {
+      transform: translate(-50%);
+    }
+  }
 }
 
 @layer base {
@@ -63,4 +80,36 @@
   .tr-gap > tr + tr > td {
     @apply pt-10;
   }
+}
+
+@utility tech-icon-gradient {
+  background-image: linear-gradient(
+    var(--gradient-angle),
+    #f2dfce,
+    #fff,
+    silver,
+    #f2dfce
+  );
+}
+
+@utility dark-tech-icon-gradient {
+  background-image: linear-gradient(
+    var(--gradient-angle),
+    #2c3639,
+    #fff,
+    silver,
+    #2c3639
+  );
+}
+
+@utility rotate {
+  animation: gradient-rotate 5s linear 0s infinite reverse;
+}
+
+@utility scroll {
+  animation: scroll 30s linear 3s infinite;
+}
+
+@utility scroll-reverse {
+  animation: scroll 30s linear 3s infinite reverse;
 }

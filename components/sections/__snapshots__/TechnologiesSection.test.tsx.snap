@@ -24,7 +24,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
             class="relative m-auto w-full"
           >
             <div
-              class="hover:animation-pause flex w-fit animate-scroll"
+              class="hover:animation-pause flex w-fit scroll"
             >
               <div
                 class="h-[110px] w-[200px] text-black"
@@ -64,7 +64,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -125,7 +125,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -153,7 +153,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -195,7 +195,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -260,7 +260,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -289,7 +289,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -318,7 +318,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -360,7 +360,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -421,7 +421,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -449,7 +449,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -491,7 +491,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -556,7 +556,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -585,7 +585,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -614,7 +614,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -628,7 +628,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
             class="relative m-auto w-full"
           >
             <div
-              class="hover:animation-pause flex w-fit animate-scroll-reverse"
+              class="hover:animation-pause flex w-fit scroll-reverse"
             >
               <div
                 class="h-[110px] w-[200px] text-black"
@@ -658,7 +658,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -820,7 +820,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -854,7 +854,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -888,7 +888,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -932,7 +932,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -992,7 +992,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1041,7 +1041,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1073,7 +1073,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1235,7 +1235,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1269,7 +1269,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1303,7 +1303,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1347,7 +1347,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1407,7 +1407,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1456,7 +1456,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1470,7 +1470,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
             class="relative m-auto w-full"
           >
             <div
-              class="hover:animation-pause flex w-fit animate-scroll"
+              class="hover:animation-pause flex w-fit scroll"
             >
               <div
                 class="h-[110px] w-[200px] text-black"
@@ -1503,7 +1503,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1550,7 +1550,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1603,7 +1603,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1632,7 +1632,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1678,7 +1678,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1732,7 +1732,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1772,7 +1772,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1807,7 +1807,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1854,7 +1854,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1907,7 +1907,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1936,7 +1936,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -1982,7 +1982,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -2036,7 +2036,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
@@ -2076,7 +2076,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     </svg>
                   </div>
                   <div
-                    class="group-hover:animation-play bg-tech-icon-gradient group-hover:animate-rotate dark:bg-dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] h-full w-[calc(100%+4px)] w-full rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+                    class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
                   />
                 </a>
               </div>
