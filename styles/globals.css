@@ -1,9 +1,23 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: var(--font-roboto);
   --font-serif: var(--font-open-sans);
+
+  --color-brown: #fff1e4;
+  --color-darkbrown: #f2dfce;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey: #808080;
+  --color-lightgrey: #cccccc;
+  --color-softwhite: #d7dce2;
+  --color-darkgrey: #2c3639;
+  --color-darkteal: #3f4e4f;
+
+  --breakpoint-small: 550px;
+  --breakpoint-smaller: 400px;
 }
 
 @layer base {
