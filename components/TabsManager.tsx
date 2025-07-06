@@ -2,13 +2,7 @@
 
 import { useEffect, useState, useRef, ReactElement } from "react";
 
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../tailwind.config";
-
-const tailwindScreenBreakpoints = resolveConfig(tailwindConfig)?.theme
-  ?.screens as unknown as { small: string };
-const mobileViewWidth: string =
-  (tailwindScreenBreakpoints && tailwindScreenBreakpoints.small) || "550px";
+const mobileViewWidth: string = "550px";
 
 export function largestChildHeight(elem: HTMLDivElement): number {
   const elementChildren: Element[] = Array.from(elem.children);
