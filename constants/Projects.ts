@@ -8,6 +8,7 @@ export const PROJECTS: ShowcaseProject[] = [
   },
   {
     websiteUrl: "https://www.boysgonewildpodcast.com",
+    githubRepoUrl: "https://github.com/Hiccup246/boysgonewildpodcast",
     projectName: "Satirical podcast fan site",
     projectImageSrc: "/boysgonewildpodcast.webp",
     firstPublished: new Date(2025, 5, 11),
