@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, ReactElement } from "react";
+import { useEffect, useState, useRef, ReactElement, Children } from "react";
 
 // This value is defined within the tailwind config of this project
 const mobileViewWidth: string = "550px";
@@ -104,7 +104,7 @@ export default function TabsManager({
           "max-small:flex max-small:w-full max-small:flex-row max-small:gap-0 max-small:overflow-y-hidden max-small:overflow-x-scroll max-small:py-0 max-small:pb-2 relative z-10 m-0 flex h-fit w-max list-none flex-col gap-6 py-2.5"
         }
       >
-        {children.map(
+        {(Children.toArray(children) as ReactElement<{ title: string }>[]).map(
           (child: ReactElement<{ title: string }>, index: number) => {
             return (
               <button
