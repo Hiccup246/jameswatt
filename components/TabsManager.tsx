@@ -109,13 +109,13 @@ export default function TabsManager({
             return (
               <button
                 key={`tab-button-${child.key}`}
-                aria-label={child.props["title"]}
+                aria-label={child.props.title}
                 className={`max-small:mb-0 max-small:shrink-0 max-small:grow-0 max-small:justify-center relative z-20 flex w-fit cursor-pointer bg-transparent px-5 py-2 whitespace-nowrap focus-visible:border-none ${index == currentTabIndex ? "" : ""} `}
                 onClick={(element) =>
                   clickOnTabButton(index, element.currentTarget)
                 }
               >
-                {child.props["title"]}
+                {child.props.title}
               </button>
             );
           },
