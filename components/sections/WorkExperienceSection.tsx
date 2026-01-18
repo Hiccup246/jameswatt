@@ -14,7 +14,7 @@ export default function WorkExperienceSection() {
           return (
             <div
               title={job.company}
-              key={`${job.company}-${Math.random().toFixed(3)}`}
+              key={`${job.company}-${job.dateRange}`}
             >
               <h2 className="m-0">
                 <span className="text-xl font-bold">{job.role}</span>
@@ -27,7 +27,7 @@ export default function WorkExperienceSection() {
                   return (
                     <li
                       className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                      key={"job-highlight" + Math.random().toFixed(3)}
+                      key={highlight}
                       dangerouslySetInnerHTML={{ __html: highlight }}
                     ></li>
                   );

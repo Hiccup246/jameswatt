@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, ReactElement, Children } from "react";
+import { useEffect, useState, useRef, ReactElement, Children, isValidElement } from "react";
 
 // This value is defined within the tailwind config of this project
 const mobileViewWidth: string = "550px";
@@ -142,7 +142,9 @@ export default function TabsManager({
         className="max-small:ml-0 relative ml-5 w-full"
         ref={experiencePanelsWrapper}
       >
-        {children.map((child: ReactElement, index: number) => {
+        {Children.toArray(children).map((child, index: number) => {
+          if (!isValidElement(child)) return null;
+
           const childKey = child.key;
 
           if (!childKey) {
