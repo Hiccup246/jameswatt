@@ -12,10 +12,7 @@ export default function WorkExperienceSection() {
       <TabsManager>
         {PROGRAMMING_EXPERIENCES.map((job: Job) => {
           return (
-            <div
-              title={job.company}
-              key={`${job.company}-${job.dateRange}`}
-            >
+            <div title={job.company} key={`${job.company}-${job.dateRange}`}>
               <h2 className="m-0">
                 <span className="text-xl font-bold">{job.role}</span>
                 <span className="text-xl font-bold"> @ {job.company}</span>

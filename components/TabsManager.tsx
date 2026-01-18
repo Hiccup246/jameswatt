@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useState, useRef, ReactElement, Children, isValidElement } from "react";
+import {
+  useEffect,
+  useState,
+  useRef,
+  ReactElement,
+  Children,
+  isValidElement,
+} from "react";
 
 // This value is defined within the tailwind config of this project
 const mobileViewWidth: string = "550px";
