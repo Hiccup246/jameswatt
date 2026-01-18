@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "Ready Player One",
+    author: "Ernest Cline",
+    genre: "Science Fiction",
+    status: BookStatus.Reading,
+    dateStarted: "18/01/2026",
+    dateCompleted: "",
+  },
+  {
     name: "The War of the Worlds",
     author: "H.G. Wells",
     genre: "Science Fiction",
