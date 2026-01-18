@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "The War of the Worlds",
     author: "H.G. Wells",
     genre: "Science Fiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "01/03/2025",
-    dateCompleted: "",
+    dateCompleted: "17/01/2026",
   },
   {
     name: "Cat's Cradle",
