@@ -27,7 +27,7 @@ export default function WorkExperienceSection() {
                   return (
                     <li
                       className="relative mt-4 pb-2.5 pl-8 before:absolute before:left-0 before:content-['→']"
-                      key={"job-highlight" + Math.random()}
+                      key={"job-highlight" + Math.random().toFixed(3)}
                       dangerouslySetInnerHTML={{ __html: highlight }}
                     ></li>
                   );

@@ -143,6 +143,13 @@ export default function TabsManager({
         ref={experiencePanelsWrapper}
       >
         {children.map((child: ReactElement, index: number) => {
+          const childKey = child.key;
+
+          if (!childKey) {
+            console.warn("No child key present for tab! Rendering null");
+            return null;
+          }
+
           return (
             <div
               key={child.key}
