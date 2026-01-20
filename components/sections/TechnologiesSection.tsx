@@ -1,6 +1,10 @@
 import SectionLayout from "../layouts/SectionLayout";
 import ConveyorBelt from "../ConveyorBelt";
-import { GROUP1, GROUP2, GROUP3 } from "../../constants/TechnologyIcons";
+import {
+  generateGroup1,
+  generateGroup2,
+  GROUP3,
+} from "../../constants/TechnologyIcons";
 import TechnologyIcon from "../TechnologyIcon";
 
 export default function TechnologiesSection() {
@@ -12,7 +16,7 @@ export default function TechnologiesSection() {
 
       <div className="relative" tabIndex={0}>
         <ConveyorBelt>
-          {[...GROUP1, ...GROUP1].map(
+          {[...generateGroup1(), ...generateGroup1("group1duplicate")].map(
             (technologyIcon: LinkedIcon, index: number) => {
               return (
                 <div
@@ -27,7 +31,7 @@ export default function TechnologiesSection() {
         </ConveyorBelt>
 
         <ConveyorBelt slideRight>
-          {[...GROUP2, ...GROUP2].map(
+          {[...generateGroup2(), ...generateGroup2("group2duplicate")].map(
             (technologyIcon: LinkedIcon, index: number) => {
               return (
                 <div

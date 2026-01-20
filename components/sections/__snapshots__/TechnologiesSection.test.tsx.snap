@@ -219,7 +219,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        clip-path="url(#test-uuid)"
+                        clip-path="url(#«r0»group1)"
                       >
                         <path
                           d="M15 0C23.2843 0 30 6.71572 30 15C30 23.2843 23.2843 30 15 30C6.71572 30 0 23.2843 0 15C0 6.71572 6.71572 0 15 0Z"
@@ -248,7 +248,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       </g>
                       <defs>
                         <clippath
-                          id="test-uuid"
+                          id="«r0»group1"
                         >
                           <rect
                             fill="white"
@@ -515,7 +515,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        clip-path="url(#test-uuid)"
+                        clip-path="url(#«r1»group1duplicate)"
                       >
                         <path
                           d="M15 0C23.2843 0 30 6.71572 30 15C30 23.2843 23.2843 30 15 30C6.71572 30 0 23.2843 0 15C0 6.71572 6.71572 0 15 0Z"
@@ -544,7 +544,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       </g>
                       <defs>
                         <clippath
-                          id="test-uuid"
+                          id="«r1»group1duplicate"
                         >
                           <rect
                             fill="white"
@@ -682,27 +682,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     >
                       <path
                         d="M3 60.7684V28.2316C3 25.2024 4.61451 22.4039 7.2439 20.897L35.4138 4.62859C38.0278 3.12169 41.2722 3.12169 43.8863 4.62859L72.0561 20.897C74.6701 22.4039 76.3 25.2024 76.3 28.2316V60.7684C76.3 63.7976 74.6855 66.5961 72.0561 68.103L43.8863 84.3714C41.2722 85.8783 38.0278 85.8783 35.4138 84.3714L7.2439 68.103C4.62988 66.5961 3 63.7976 3 60.7684Z"
-                        stroke="url(#test-uuid)"
+                        stroke="url(#«r2»group2)"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="5"
                       />
                       <path
                         d="M49.6217 43.7005L57.9865 35.3202L39.6423 16.976L31.2775 25.3562L39.6423 33.7211L49.6217 43.7005Z"
-                        fill="url(#test-uuidid2)"
+                        fill="url(#«r2»group2id2)"
                       />
                       <path
                         d="M29.6783 45.2996L21.2981 53.6645L39.6423 72.0087L48.0226 63.6438L39.6423 55.2636L29.6783 45.2996Z"
-                        fill="url(#test-uuidid3)"
+                        fill="url(#«r2»group2id3)"
                       />
                       <path
                         d="M29.6785 26.9554L22.0978 34.5206L39.6424 52.0653L49.6218 62.0447L57.1871 54.464L39.6424 36.9194L29.6785 26.9554Z"
-                        fill="url(#test-uuidid4)"
+                        fill="url(#«r2»group2id4)"
                       />
                       <defs>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuid"
+                          id="«r2»group2"
                           x1="78.6065"
                           x2="0.693519"
                           y1="44.5"
@@ -719,7 +719,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         </lineargradient>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuidid2"
+                          id="«r2»group2id2"
                           x1="31.2775"
                           x2="57.9865"
                           y1="30.3382"
@@ -752,7 +752,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         </lineargradient>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuidid3"
+                          id="«r2»group2id3"
                           x1="21.2981"
                           x2="48.0226"
                           y1="58.6465"
@@ -785,7 +785,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         </lineargradient>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuidid4"
+                          id="«r2»group2id4"
                           x1="22.0978"
                           x2="57.1871"
                           y1="44.5"
@@ -955,7 +955,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        clip-path="url(#«r0»)"
+                        clip-path="url(#«r3»)"
                       >
                         <path
                           d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z"
@@ -980,7 +980,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       </g>
                       <defs>
                         <clippath
-                          id="«r0»"
+                          id="«r3»"
                         >
                           <rect
                             fill="white"
@@ -1097,27 +1097,27 @@ exports[`TechnologiesSection renders correctly 1`] = `
                     >
                       <path
                         d="M3 60.7684V28.2316C3 25.2024 4.61451 22.4039 7.2439 20.897L35.4138 4.62859C38.0278 3.12169 41.2722 3.12169 43.8863 4.62859L72.0561 20.897C74.6701 22.4039 76.3 25.2024 76.3 28.2316V60.7684C76.3 63.7976 74.6855 66.5961 72.0561 68.103L43.8863 84.3714C41.2722 85.8783 38.0278 85.8783 35.4138 84.3714L7.2439 68.103C4.62988 66.5961 3 63.7976 3 60.7684Z"
-                        stroke="url(#test-uuid)"
+                        stroke="url(#«r4»group2duplicate)"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="5"
                       />
                       <path
                         d="M49.6217 43.7005L57.9865 35.3202L39.6423 16.976L31.2775 25.3562L39.6423 33.7211L49.6217 43.7005Z"
-                        fill="url(#test-uuidid2)"
+                        fill="url(#«r4»group2duplicateid2)"
                       />
                       <path
                         d="M29.6783 45.2996L21.2981 53.6645L39.6423 72.0087L48.0226 63.6438L39.6423 55.2636L29.6783 45.2996Z"
-                        fill="url(#test-uuidid3)"
+                        fill="url(#«r4»group2duplicateid3)"
                       />
                       <path
                         d="M29.6785 26.9554L22.0978 34.5206L39.6424 52.0653L49.6218 62.0447L57.1871 54.464L39.6424 36.9194L29.6785 26.9554Z"
-                        fill="url(#test-uuidid4)"
+                        fill="url(#«r4»group2duplicateid4)"
                       />
                       <defs>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuid"
+                          id="«r4»group2duplicate"
                           x1="78.6065"
                           x2="0.693519"
                           y1="44.5"
@@ -1134,7 +1134,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         </lineargradient>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuidid2"
+                          id="«r4»group2duplicateid2"
                           x1="31.2775"
                           x2="57.9865"
                           y1="30.3382"
@@ -1167,7 +1167,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         </lineargradient>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuidid3"
+                          id="«r4»group2duplicateid3"
                           x1="21.2981"
                           x2="48.0226"
                           y1="58.6465"
@@ -1200,7 +1200,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                         </lineargradient>
                         <lineargradient
                           gradientUnits="userSpaceOnUse"
-                          id="test-uuidid4"
+                          id="«r4»group2duplicateid4"
                           x1="22.0978"
                           x2="57.1871"
                           y1="44.5"
@@ -1370,7 +1370,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        clip-path="url(#«r1»)"
+                        clip-path="url(#«r5»)"
                       >
                         <path
                           d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z"
@@ -1395,7 +1395,7 @@ exports[`TechnologiesSection renders correctly 1`] = `
                       </g>
                       <defs>
                         <clippath
-                          id="«r1»"
+                          id="«r5»"
                         >
                           <rect
                             fill="white"
