@@ -2,9 +2,9 @@ import { useId } from "react";
 
 export default function SolidityIcon() {
   const id1 = useId();
-  const id2 = useId();
-  const id3 = useId();
-  const id4 = useId();
+  const id2 = id1 + "id2";
+  const id3 = id1 + "id3";
+  const id4 = id1 + "id4";
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 89" fill="none">
