@@ -1,7 +1,5 @@
-import { useId } from "react";
-
 export default function SolidityIcon() {
-  const id1 = useId();
+  const id1 = crypto.randomUUID(); // can't use useId here as the solidity icon is duplicated and part of the same react root
   const id2 = id1 + "id2";
   const id3 = id1 + "id3";
   const id4 = id1 + "id4";

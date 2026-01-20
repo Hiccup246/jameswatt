@@ -1,7 +1,5 @@
-import { useId } from "react";
-
 export default function DenoIcon() {
-  const id = useId();
+  const id = crypto.randomUUID(); // can't use useId here as the solidity icon is duplicated and part of the same react root
 
   return (
     <svg
