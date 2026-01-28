@@ -8,9 +8,9 @@ export const BOOKS: Book[] = [
     name: "Ready Player One",
     author: "Ernest Cline",
     genre: "Science Fiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "18/01/2026",
-    dateCompleted: "",
+    dateCompleted: "26/01/2026",
   },
   {
     name: "The War of the Worlds",
