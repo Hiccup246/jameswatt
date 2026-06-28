@@ -5,6 +5,14 @@ export enum BookStatus {
 
 export const BOOKS: Book[] = [
   {
+    name: "The Vegetarian",
+    author: "Han Kang, Deborah Smith (Translator)",
+    genre: "Fiction",
+    status: BookStatus.Reading,
+    dateStarted: "28/06/2026",
+    dateCompleted: "",
+  },
+  {
     name: "Abundance",
     author: "Ezra Klein, Derek Thompson",
     genre: "Politics",
