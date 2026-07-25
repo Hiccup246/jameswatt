@@ -25,20 +25,20 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             <a
               aria-label="Free online text edit url"
               class="hover:cursor-pointer"
-              href="https://www.worldleaderleaderboard.com"
+              href="https://www.savvydiction.com"
               rel="noopener noreferrer"
               target="_blank"
             >
               <img
-                alt="World leader leaderboard Website Screenshot"
+                alt="SavvyDiction Website Screenshot"
                 class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
                 loading="lazy"
                 sizes="(min-width: 768px) 480px, 180px"
-                src="/_next/image?url=%2Fworldleaderleaderboard.webp&w=3840&q=75"
-                srcset="/_next/image?url=%2Fworldleaderleaderboard.webp&w=32&q=75 32w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=48&q=75 48w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=64&q=75 64w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=96&q=75 96w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=128&q=75 128w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=256&q=75 256w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=384&q=75 384w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=640&q=75 640w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=750&q=75 750w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=828&q=75 828w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=1080&q=75 1080w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=1200&q=75 1200w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=1920&q=75 1920w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=2048&q=75 2048w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=3840&q=75 3840w"
+                src="/_next/image?url=%2Fsavvy-diction.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fsavvy-diction.webp&w=32&q=75 32w, /_next/image?url=%2Fsavvy-diction.webp&w=48&q=75 48w, /_next/image?url=%2Fsavvy-diction.webp&w=64&q=75 64w, /_next/image?url=%2Fsavvy-diction.webp&w=96&q=75 96w, /_next/image?url=%2Fsavvy-diction.webp&w=128&q=75 128w, /_next/image?url=%2Fsavvy-diction.webp&w=256&q=75 256w, /_next/image?url=%2Fsavvy-diction.webp&w=384&q=75 384w, /_next/image?url=%2Fsavvy-diction.webp&w=640&q=75 640w, /_next/image?url=%2Fsavvy-diction.webp&w=750&q=75 750w, /_next/image?url=%2Fsavvy-diction.webp&w=828&q=75 828w, /_next/image?url=%2Fsavvy-diction.webp&w=1080&q=75 1080w, /_next/image?url=%2Fsavvy-diction.webp&w=1200&q=75 1200w, /_next/image?url=%2Fsavvy-diction.webp&w=1920&q=75 1920w, /_next/image?url=%2Fsavvy-diction.webp&w=2048&q=75 2048w, /_next/image?url=%2Fsavvy-diction.webp&w=3840&q=75 3840w"
                 style="color: transparent;"
                 width="600"
               />
@@ -47,13 +47,13 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
               class="mt-4 flex flex-row justify-between"
             >
               <a
-                aria-label="World leader leaderboard Url"
+                aria-label="SavvyDiction Url"
                 class="group-hover:underline hover:cursor-pointer"
-                href="https://www.worldleaderleaderboard.com"
+                href="https://www.savvydiction.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                World leader leaderboard
+                SavvyDiction
               </a>
               <div
                 class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
@@ -125,6 +125,51 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                   </svg>
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hover group mx-auto w-full"
+        >
+          <div
+            class="transition-transform duration-150 group-hover:-translate-y-2"
+          >
+            <a
+              aria-label="Free online text edit url"
+              class="hover:cursor-pointer"
+              href="https://www.worldleaderleaderboard.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="World leader leaderboard Website Screenshot"
+                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                data-nimg="1"
+                decoding="async"
+                height="337"
+                loading="lazy"
+                sizes="(min-width: 768px) 480px, 180px"
+                src="/_next/image?url=%2Fworldleaderleaderboard.webp&w=3840&q=75"
+                srcset="/_next/image?url=%2Fworldleaderleaderboard.webp&w=32&q=75 32w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=48&q=75 48w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=64&q=75 64w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=96&q=75 96w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=128&q=75 128w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=256&q=75 256w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=384&q=75 384w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=640&q=75 640w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=750&q=75 750w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=828&q=75 828w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=1080&q=75 1080w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=1200&q=75 1200w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=1920&q=75 1920w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=2048&q=75 2048w, /_next/image?url=%2Fworldleaderleaderboard.webp&w=3840&q=75 3840w"
+                style="color: transparent;"
+                width="600"
+              />
+            </a>
+            <div
+              class="mt-4 flex flex-row justify-between"
+            >
+              <a
+                aria-label="World leader leaderboard Url"
+                class="group-hover:underline hover:cursor-pointer"
+                href="https://www.worldleaderleaderboard.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                World leader leaderboard
+              </a>
+              <div
+                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+              />
             </div>
           </div>
         </div>

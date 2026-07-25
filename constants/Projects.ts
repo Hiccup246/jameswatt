@@ -1,8 +1,14 @@
 export const PROJECTS: ShowcaseProject[] = [
   {
+    websiteUrl: "https://www.savvydiction.com",
+    projectName: "SavvyDiction",
+    highlightProject: true,
+    projectImageSrc: "/savvy-diction.webp",
+    firstPublished: new Date(2026, 6, 25),
+  },
+  {
     websiteUrl: "https://www.worldleaderleaderboard.com",
     projectName: "World leader leaderboard",
-    highlightProject: true,
     projectImageSrc: "/worldleaderleaderboard.webp",
     firstPublished: new Date(2025, 2, 2), // "2024/05/27"
   },
