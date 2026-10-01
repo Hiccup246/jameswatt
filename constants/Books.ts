@@ -13,6 +13,14 @@ export const BOOKS: Book[] = [
     dateCompleted: "",
   },
   {
+    name: "Off The Rails: The Inside Story of HS2",
+    author: "Sally Gimson",
+    genre: "Politics",
+    status: BookStatus.Read,
+    dateStarted: "27/09/2026",
+    dateCompleted: "01/10/2026",
+  },
+  {
     name: "Abundance",
     author: "Ezra Klein, Derek Thompson",
     genre: "Politics",
