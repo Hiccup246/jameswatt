@@ -13,6 +13,14 @@ export const BOOKS: Book[] = [
     dateCompleted: "",
   },
   {
+    name: "Politics On the Edge: A Memoir From Within",
+    author: "Rory Stewart",
+    genre: "Politics",
+    status: BookStatus.Read,
+    dateStarted: "01/10/2026",
+    dateCompleted: "03/10/2026",
+  },
+  {
     name: "Off The Rails: The Inside Story of HS2",
     author: "Sally Gimson",
     genre: "Politics",
