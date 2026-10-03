@@ -13,6 +13,14 @@ export const BOOKS: Book[] = [
     dateCompleted: "",
   },
   {
+    name: "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection",
+    author: "John Green",
+    genre: "Nonfiction",
+    status: BookStatus.Reading,
+    dateStarted: "03/10/2026",
+    dateCompleted: "",
+  },
+  {
     name: "Politics On the Edge: A Memoir From Within",
     author: "Rory Stewart",
     genre: "Politics",
