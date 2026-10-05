@@ -4,7 +4,13 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import JamesWattImage from "../../public/panthy-tiny.webp";
-import { PoolEngine, roll, tableConfig, type Vec3 } from "./engine";
+import {
+  PoolEngine,
+  roll,
+  tableConfig,
+  type PotEvent,
+  type Vec3,
+} from "./engine";
 import { cushionSegments } from "./geometry";
 import {
   BALL_COLORS,
@@ -14,6 +20,7 @@ import {
   GUIDE_SHADOW,
   IVORY,
   HOLE_OVERLAY_SHADOW,
+  SCRATCH_RING,
   ballBackground,
   paletteFor,
 } from "./theme";
@@ -94,6 +101,9 @@ export default function PoolGame({
   const holeEls = useRef<(HTMLDivElement | null)[]>([]);
   const wellEls = useRef<(HTMLDivElement | null)[]>([]);
   const ringEls = useRef<(HTMLDivElement | null)[]>([]);
+  // Falling copies of potted balls, living inside each pocket's well.
+  const clones = useRef(new Map<number, HTMLDivElement>());
+  const reducedRef = useRef(reduced);
 
   // Controller state: lives in refs, never triggers renders.
   const aim = useRef(0);
@@ -109,6 +119,20 @@ export default function PoolGame({
     horiz ? [u, v] : [v, u];
 
   useEffect(() => {
+    reducedRef.current = reduced;
+  }, [reduced]);
+
+  const removeClone = (n: number) => {
+    const el = clones.current.get(n);
+    if (!el) return;
+    el.remove();
+    clones.current.delete(n);
+  };
+  const clearClones = () => {
+    for (const n of [...clones.current.keys()]) removeClone(n);
+  };
+
+  useEffect(() => {
     onReady();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -118,6 +142,7 @@ export default function PoolGame({
     openRef.current = open;
     if (!open) return;
     engine.rack();
+    clearClones();
     aim.current = 0;
     pull.current = null;
     pullAmt.current = 0;
@@ -215,11 +240,58 @@ export default function PoolGame({
       }
     };
 
+    // A copy of the ball goes into the pocket's well so only the part inside
+    // the hole shows. It lines up with the on-felt ball, which slips under the
+    // hole layer as it rolls in.
+    const startSink = (ev: PotEvent) => {
+      const src = ballEls.current[ev.n];
+      const well = wellEls.current[ev.pocket];
+      if (!src || !well) return;
+      removeClone(ev.n);
+      const copy = src.cloneNode(true) as HTMLDivElement;
+      copy.style.transition = "none";
+      copy.style.opacity = "1";
+      copy.style.visibility = "visible";
+      well.appendChild(copy);
+      clones.current.set(ev.n, copy);
+    };
+
+    const pocketFx = (ev: PotEvent) => {
+      const hole = holeEls.current[ev.pocket];
+      const ring = ringEls.current[ev.pocket];
+      if (hole?.animate) {
+        hole.animate(
+          [
+            { transform: "scale(1)" },
+            { transform: "scale(1.14)", offset: 0.35 },
+            { transform: "scale(1)" },
+          ],
+          { duration: 320, delay: 160, easing: "ease-out" },
+        );
+      }
+      if (ring?.animate) {
+        const colour = ev.scratch ? { borderColor: SCRATCH_RING } : {};
+        ring.animate(
+          [
+            { transform: "scale(.9)", opacity: 0, ...colour },
+            { transform: "scale(1)", opacity: 0.95, offset: 0.25, ...colour },
+            { transform: "scale(1.9)", opacity: 0, ...colour },
+          ],
+          { duration: 650, delay: 180, easing: "cubic-bezier(.2,.7,.3,1)" },
+        );
+      }
+    };
+
     const frame = () => {
       raf = requestAnimationFrame(frame);
       const cb = engine.cue;
 
       if (engine.moving && engine.step()) bump();
+      for (const ev of engine.potEvents.splice(0)) {
+        if (reducedRef.current) continue;
+        startSink(ev);
+        pocketFx(ev);
+      }
       engine.tickSinks();
 
       if (strike.current) {
@@ -280,14 +352,41 @@ export default function PoolGame({
         const el = ballEls.current[b.n];
         if (!el) continue;
         if (b.sink) {
-          const k = b.sink.t;
+          // Roll to the pocket centre (t 0 to .45), then only the copy in the
+          // hole is visible while it falls.
+          const sk = b.sink;
+          const t = sk.t;
+          const m = Math.min(1, t / 0.45);
+          const k = 1 - Math.pow(1 - m, 2);
           const [x, y] = map(
-            b.sink.u0 + (b.sink.pu - b.sink.u0) * k,
-            b.sink.v0 + (b.sink.pv - b.sink.v0) * k,
+            sk.u0 + (sk.pu - sk.u0) * k,
+            sk.v0 + (sk.pv - sk.v0) * k,
           );
-          el.style.transform = `translate(${x - r}px,${y - r}px) scale(${1 - k * 0.5})`;
-          el.style.visibility = "visible";
+          const [pcx, pcy] = map(sk.pu, sk.pv);
+          const rolling = t < 0.45 && !reducedRef.current;
+          const prev = prevPos.current[b.n];
+          if (rolling && prev) roll(b, x - prev.x, y - prev.y, r, Math.random);
+          prevPos.current[b.n] = { x, y };
+          el.style.transform = `translate(${x - r}px,${y - r}px)`;
+          el.style.visibility = rolling ? "visible" : "hidden";
+
+          const copy = clones.current.get(b.n);
+          if (copy) {
+            const fall = Math.max(0, (t - 0.2) / 0.8);
+            const f2 = fall * fall;
+            // Drift away from the table centre to suggest depth.
+            const [ox, oy] = map(
+              sk.pu > L / 2 ? 1 : sk.pu < L / 2 ? -1 : 0,
+              sk.pv > Wd / 2 ? 1 : -1,
+            );
+            const lx = x - pcx + sk.R - r + ox * f2 * r * 0.35;
+            const ly = y - pcy + sk.R - r + oy * f2 * r * 0.35;
+            copy.style.transform = `translate(${lx}px,${ly}px) scale(${1 - f2 * 0.6})`;
+            copy.style.filter = `brightness(${1 - fall * 0.85})`;
+            copy.style.opacity = String(1 - Math.max(0, (t - 0.8) / 0.2));
+          }
         } else if (b.on) {
+          removeClone(b.n);
           const [x, y] = map(b.u, b.v);
           const prev = prevPos.current[b.n];
           if (prev) roll(b, x - prev.x, y - prev.y, r, Math.random);
@@ -295,6 +394,7 @@ export default function PoolGame({
           el.style.transform = `translate(${x - r}px,${y - r}px)`;
           el.style.visibility = "visible";
         } else {
+          removeClone(b.n);
           el.style.visibility = "hidden";
           prevPos.current[b.n] = null;
         }
@@ -472,6 +572,7 @@ export default function PoolGame({
             type="button"
             onClick={() => {
               engine.rack();
+              clearClones();
               aim.current = 0;
               aiPlan.current = null;
               strike.current = null;
