@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import JamesWattImage from "../../public/panthy-tiny.webp";
 import { PoolEngine, roll, tableConfig, type Vec3 } from "./engine";
@@ -12,6 +13,7 @@ import {
   GUIDE_SHADOW,
   IVORY,
   POCKET_SHADOW,
+  ballBackground,
   paletteFor,
 } from "./theme";
 
@@ -20,6 +22,8 @@ interface Props {
   mobile: boolean;
   dark: boolean;
   reduced: boolean;
+  /** Element below the table that the status panel is portalled into. */
+  statusHost: HTMLElement | null;
   onClose: () => void;
   /** Called once the (closed) board has mounted, so the open transition can run. */
   onReady: () => void;
@@ -33,6 +37,13 @@ interface Strike {
 
 type Point = { u: number; v: number };
 
+interface AiPlan {
+  from: number;
+  to: number;
+  power: number;
+  t0: number;
+}
+
 const setAttrs = (el: SVGElement | null, attrs: Record<string, number>) => {
   if (!el) return;
   for (const k in attrs) el.setAttribute(k, String(attrs[k]));
@@ -44,6 +55,7 @@ export default function PoolGame({
   mobile,
   dark,
   reduced,
+  statusHost,
   onClose,
   onReady,
 }: Props) {
@@ -85,6 +97,7 @@ export default function PoolGame({
   const pull = useRef<Point | null>(null);
   const pullAmt = useRef(0);
   const strike = useRef<Strike | null>(null);
+  const aiPlan = useRef<AiPlan | null>(null);
   const prevPos = useRef<({ x: number; y: number } | null)[]>([]);
   const openRef = useRef(open);
 
@@ -105,6 +118,7 @@ export default function PoolGame({
     pull.current = null;
     pullAmt.current = 0;
     strike.current = null;
+    aiPlan.current = null;
     prevPos.current = [];
     bump();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -226,6 +240,35 @@ export default function PoolGame({
             ) /
               (L * 0.28),
           );
+        }
+      } else if (
+        !engine.moving &&
+        !engine.winner &&
+        engine.turn === "james" &&
+        cb.on
+      ) {
+        // James: idle sway, ease the aim round, draw the cue back, strike.
+        if (!aiPlan.current) {
+          const plan = engine.planAi(aim.current);
+          aiPlan.current = {
+            from: aim.current,
+            to: plan.ang,
+            power: plan.power,
+            t0: performance.now(),
+          };
+        }
+        const a = aiPlan.current;
+        const el = performance.now() - a.t0;
+        const k = Math.max(0, Math.min(1, (el - 1400) / 1700));
+        const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+        const sway = el < 1400 ? Math.sin(el / 260) * 0.06 * (el / 1400) : 0;
+        aim.current = a.from + (a.to - a.from) * e + sway;
+        if (el > 3300) {
+          pullAmt.current = Math.min(a.power, ((el - 3300) / 1400) * a.power);
+        }
+        if (el > 4850) {
+          strike.current = { ang: a.to, power: a.power, pull: a.power };
+          aiPlan.current = null;
         }
       }
 
@@ -356,212 +399,304 @@ export default function PoolGame({
       ? "opacity .35s ease .6s"
       : "opacity .15s ease";
 
-  return (
-    <div
-      className={`absolute inset-0 ${open ? "" : "pointer-events-none"}`}
-      style={{
-        boxSizing: "border-box",
-        borderRadius: railR,
-        background: pal.railBg,
-        boxShadow: pal.railShadow,
-        clipPath: clip,
-        opacity: open ? 1 : 0,
-        transition: boardTransition,
-      }}
-    >
-      {diamonds.map((d, i) => (
-        <div
-          key={i}
-          className="absolute h-[6px] w-[6px] rounded-full"
-          style={{
-            left: d.x,
-            top: d.y,
-            margin: "-3px 0 0 -3px",
-            background: pal.diamondBg,
-          }}
+  const chips = (who: "you" | "james") => {
+    const g = engine.groups[who];
+    return g ? engine.left(g).map((b) => b.n) : [];
+  };
+  const player = (who: "you" | "james") => {
+    const active = engine.turn === who && !engine.winner;
+    const group = engine.groups[who];
+    const isYou = who === "you";
+    const label = (
+      <>
+        <span
+          className="h-2 w-2 rounded-full"
+          style={{ background: pal.ink, opacity: active ? 1 : 0 }}
         />
-      ))}
+      </>
+    );
+    return (
       <div
-        className="absolute"
-        style={{
-          left: rail - 8,
-          top: rail - 8,
-          width: SW + 16,
-          height: SH + 16,
-          borderRadius: 6,
-          background: pal.cushionBg,
-        }}
-      />
+        className={`flex flex-col gap-1.5 ${isYou ? "items-end" : "items-start"}`}
+      >
+        <span
+          className="flex items-center gap-1.5"
+          style={{ fontWeight: engine.turn === who ? 700 : 400 }}
+        >
+          {isYou ? (
+            <>
+              <span className="font-normal opacity-60">{group ?? ""}</span>
+              You
+              {label}
+            </>
+          ) : (
+            <>
+              {label}
+              James
+              <span className="font-normal opacity-60">{group ?? ""}</span>
+            </>
+          )}
+        </span>
+        <div className={`flex flex-wrap gap-1 ${isYou ? "justify-end" : ""}`}>
+          {chips(who).map((n) => (
+            <span
+              key={n}
+              className="h-3.5 w-3.5 rounded-full"
+              style={{
+                background: ballBackground(n, horiz),
+                boxShadow: "inset 0 -1px 2px rgba(0,0,0,.3)",
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const status = (
+    <div
+      className="flex flex-col gap-3 text-[13px] tracking-[.04em]"
+      style={{ width: "100%", maxWidth: TW, color: pal.ink }}
+    >
+      <div className="flex min-h-[34px] items-center justify-center gap-4 text-center text-pretty">
+        <span aria-live="polite" className="text-sm font-semibold">
+          {engine.message}
+        </span>
+        {engine.winner && (
+          <button
+            type="button"
+            onClick={() => {
+              engine.rack();
+              aim.current = 0;
+              aiPlan.current = null;
+              strike.current = null;
+              pullAmt.current = 0;
+              prevPos.current = [];
+              bump();
+            }}
+            className="cursor-pointer rounded-full border-none px-4 py-2 font-semibold tracking-[.04em] hover:opacity-85"
+            style={{ background: pal.btnBg, color: pal.btnInk }}
+          >
+            Play again
+          </button>
+        )}
+      </div>
+      <div className="flex items-start justify-between gap-4">
+        {player("james")}
+        {player("you")}
+      </div>
+    </div>
+  );
+
+  return (
+    <>
+      {open && statusHost && createPortal(status, statusHost)}
       <div
-        ref={surfRef}
-        onPointerDown={onSurfaceDown}
-        className="absolute cursor-crosshair overflow-hidden"
+        className={`absolute inset-0 ${open ? "" : "pointer-events-none"}`}
         style={{
-          left: rail,
-          top: rail,
-          width: SW,
-          height: SH,
-          background: pal.feltBg,
-          touchAction: "none",
+          boxSizing: "border-box",
+          borderRadius: railR,
+          background: pal.railBg,
+          boxShadow: pal.railShadow,
+          clipPath: clip,
+          opacity: open ? 1 : 0,
+          transition: boardTransition,
         }}
       >
+        {diamonds.map((d, i) => (
+          <div
+            key={i}
+            className="absolute h-[6px] w-[6px] rounded-full"
+            style={{
+              left: d.x,
+              top: d.y,
+              margin: "-3px 0 0 -3px",
+              background: pal.diamondBg,
+            }}
+          />
+        ))}
         <div
           className="absolute"
           style={{
-            left: horiz ? hx - 1 : 0,
-            top: horiz ? 0 : hy - 1,
-            width: horiz ? 2 : SW,
-            height: horiz ? SH : 2,
-            background: pal.lineInk,
+            left: rail - 8,
+            top: rail - 8,
+            width: SW + 16,
+            height: SH + 16,
+            borderRadius: 6,
+            background: pal.cushionBg,
           }}
         />
         <div
-          className="absolute rounded-full"
+          ref={surfRef}
+          onPointerDown={onSurfaceDown}
+          className="absolute cursor-crosshair overflow-hidden"
           style={{
-            left: fx,
-            top: fy,
-            width: 6,
-            height: 6,
-            margin: "-3px 0 0 -3px",
-            background: pal.lineInk,
-          }}
-        />
-        <button
-          type="button"
-          aria-label="Close pool game"
-          tabIndex={open ? 0 : -1}
-          onClick={onClose}
-          className="absolute box-border cursor-pointer overflow-hidden rounded-full p-0"
-          style={{
-            left: SW / 2 - D / 2,
-            top: SH / 2 - D / 2,
-            width: D,
-            height: D,
-            border: pal.photoBorder,
-            boxShadow: pal.photoShadow,
-            background: pal.railBg,
-            opacity: open ? 1 : 0,
+            left: rail,
+            top: rail,
+            width: SW,
+            height: SH,
+            background: pal.feltBg,
+            touchAction: "none",
           }}
         >
-          <Image
-            src={JamesWattImage}
-            alt="James Watt"
-            fill
-            sizes="180px"
-            className="pointer-events-none object-cover object-[50%_22%]"
+          <div
+            className="absolute"
+            style={{
+              left: horiz ? hx - 1 : 0,
+              top: horiz ? 0 : hy - 1,
+              width: horiz ? 2 : SW,
+              height: horiz ? SH : 2,
+              background: pal.lineInk,
+            }}
           />
-        </button>
-        {Array.from({ length: 16 }, (_, n) => {
-          const stripe = n > 8;
-          return (
-            <div
-              key={n}
-              ref={(el) => {
-                ballEls.current[n] = el;
-              }}
-              className="pointer-events-none absolute top-0 left-0 overflow-hidden rounded-full"
-              style={{
-                width: r * 2,
-                height: r * 2,
-                background: n === 0 ? IVORY : BALL_COLORS[stripe ? n - 8 : n],
-                boxShadow: BALL_SHADOW,
-                transform: "translate(-999px,-999px)",
-                opacity: open ? 1 : 0,
-                transition: piecesTransition,
-              }}
-            >
-              {stripe &&
-                [capAEls, capBEls].map((refs, i) => (
-                  <div
-                    key={i}
-                    ref={(el) => {
-                      refs.current[n] = el;
-                    }}
-                    className="absolute top-0 left-0 rounded-full"
-                    style={{ width: r * 2, height: r * 2, background: IVORY }}
-                  />
-                ))}
-              {n > 0 && (
-                <div
-                  ref={(el) => {
-                    discEls.current[n] = el;
-                  }}
-                  className="absolute flex items-center justify-center rounded-full leading-none font-bold"
-                  style={{
-                    left: r / 2,
-                    top: r / 2,
-                    width: r,
-                    height: r,
-                    background: IVORY,
-                    color: "#1d2426",
-                    fontSize: Math.round(r * 0.72),
-                  }}
-                >
-                  {n}
-                </div>
-              )}
+          <div
+            className="absolute rounded-full"
+            style={{
+              left: fx,
+              top: fy,
+              width: 6,
+              height: 6,
+              margin: "-3px 0 0 -3px",
+              background: pal.lineInk,
+            }}
+          />
+          <button
+            type="button"
+            aria-label="Close pool game"
+            tabIndex={open ? 0 : -1}
+            onClick={onClose}
+            className="absolute box-border cursor-pointer overflow-hidden rounded-full p-0"
+            style={{
+              left: SW / 2 - D / 2,
+              top: SH / 2 - D / 2,
+              width: D,
+              height: D,
+              border: pal.photoBorder,
+              boxShadow: pal.photoShadow,
+              background: pal.railBg,
+              opacity: open ? 1 : 0,
+            }}
+          >
+            <Image
+              src={JamesWattImage}
+              alt="James Watt"
+              fill
+              sizes="180px"
+              className="pointer-events-none object-cover object-[50%_22%]"
+            />
+          </button>
+          {Array.from({ length: 16 }, (_, n) => {
+            const stripe = n > 8;
+            return (
               <div
-                className="absolute inset-0 rounded-full"
-                style={{ background: BALL_HIGHLIGHT }}
-              />
-            </div>
-          );
-        })}
-        <svg
-          width={SW}
-          height={SH}
-          className="pointer-events-none absolute top-0 left-0 overflow-visible"
-        >
-          <g ref={guideRef} style={{ opacity: 0, filter: GUIDE_SHADOW }}>
-            {[g1Ref, g2Ref, g3Ref].map((ref, i) => (
-              <line
-                key={i}
-                ref={ref}
+                key={n}
+                ref={(el) => {
+                  ballEls.current[n] = el;
+                }}
+                className="pointer-events-none absolute top-0 left-0 overflow-hidden rounded-full"
+                style={{
+                  width: r * 2,
+                  height: r * 2,
+                  background: n === 0 ? IVORY : BALL_COLORS[stripe ? n - 8 : n],
+                  boxShadow: BALL_SHADOW,
+                  transform: "translate(-999px,-999px)",
+                  opacity: open ? 1 : 0,
+                  transition: piecesTransition,
+                }}
+              >
+                {stripe &&
+                  [capAEls, capBEls].map((refs, i) => (
+                    <div
+                      key={i}
+                      ref={(el) => {
+                        refs.current[n] = el;
+                      }}
+                      className="absolute top-0 left-0 rounded-full"
+                      style={{ width: r * 2, height: r * 2, background: IVORY }}
+                    />
+                  ))}
+                {n > 0 && (
+                  <div
+                    ref={(el) => {
+                      discEls.current[n] = el;
+                    }}
+                    className="absolute flex items-center justify-center rounded-full leading-none font-bold"
+                    style={{
+                      left: r / 2,
+                      top: r / 2,
+                      width: r,
+                      height: r,
+                      background: IVORY,
+                      color: "#1d2426",
+                      fontSize: Math.round(r * 0.72),
+                    }}
+                  >
+                    {n}
+                  </div>
+                )}
+                <div
+                  className="absolute inset-0 rounded-full"
+                  style={{ background: BALL_HIGHLIGHT }}
+                />
+              </div>
+            );
+          })}
+          <svg
+            width={SW}
+            height={SH}
+            className="pointer-events-none absolute top-0 left-0 overflow-visible"
+          >
+            <g ref={guideRef} style={{ opacity: 0, filter: GUIDE_SHADOW }}>
+              {[g1Ref, g2Ref, g3Ref].map((ref, i) => (
+                <line
+                  key={i}
+                  ref={ref}
+                  stroke={pal.guideInk}
+                  strokeWidth={3}
+                  strokeLinecap="round"
+                />
+              ))}
+              <circle
+                ref={ghostRef}
+                r={r}
+                fill="none"
                 stroke={pal.guideInk}
                 strokeWidth={3}
-                strokeLinecap="round"
               />
-            ))}
-            <circle
-              ref={ghostRef}
-              r={r}
-              fill="none"
-              stroke={pal.guideInk}
-              strokeWidth={3}
-            />
-          </g>
-        </svg>
-      </div>
-      {pockets.map((p, i) => (
+            </g>
+          </svg>
+        </div>
+        {pockets.map((p, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: p.x,
+              top: p.y,
+              width: p.d,
+              height: p.d,
+              margin: -p.d / 2,
+              background: pal.pocketBg,
+              boxShadow: POCKET_SHADOW,
+            }}
+          />
+        ))}
         <div
-          key={i}
-          className="absolute rounded-full"
+          ref={cueRef}
+          className="pointer-events-none absolute"
           style={{
-            left: p.x,
-            top: p.y,
-            width: p.d,
-            height: p.d,
-            margin: -p.d / 2,
-            background: pal.pocketBg,
-            boxShadow: POCKET_SHADOW,
+            left: rail,
+            top: rail,
+            width: Math.round(L * 0.5),
+            height: cueH,
+            borderRadius: cueH,
+            background: pal.cueBg,
+            boxShadow: CUE_SHADOW,
+            transformOrigin: "0 50%",
+            opacity: 0,
           }}
         />
-      ))}
-      <div
-        ref={cueRef}
-        className="pointer-events-none absolute"
-        style={{
-          left: rail,
-          top: rail,
-          width: Math.round(L * 0.5),
-          height: cueH,
-          borderRadius: cueH,
-          background: pal.cueBg,
-          boxShadow: CUE_SHADOW,
-          transformOrigin: "0 50%",
-          opacity: 0,
-        }}
-      />
-    </div>
+      </div>
+    </>
   );
 }
