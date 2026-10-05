@@ -37,6 +37,8 @@ export interface Palette {
   noseInk: string;
   ringInk: string;
   diamondBg: string;
+  /** Shading over the kitchen (behind the head string) on the break. */
+  kitchenBg: string;
   lineInk: string;
   guideInk: string;
   photoBorder: string;
@@ -70,6 +72,7 @@ export const LIGHT: Palette = {
   noseInk: "rgba(255,255,255,.35)",
   ringInk: "#ffffff",
   diamondBg: "rgba(44,54,57,.45)",
+  kitchenBg: "rgba(255,255,255,.18)",
   lineInk: "rgba(255,255,255,.35)",
   guideInk: "rgba(255,255,255,.95)",
   photoBorder: "4px solid #ffffff",
@@ -97,6 +100,7 @@ export const DARK: Palette = {
   noseInk: "rgba(255,255,255,.12)",
   ringInk: "#d7dce2",
   diamondBg: "rgba(215,220,226,.6)",
+  kitchenBg: "rgba(215,220,226,.08)",
   lineInk: "rgba(215,220,226,.22)",
   guideInk: "rgba(255,255,255,.85)",
   photoBorder: "4px solid #3f4e4f",

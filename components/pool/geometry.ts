@@ -4,7 +4,7 @@
  * Everything here is pure so it can be unit tested without a DOM.
  */
 
-import type { RayResult, TableConfig } from "./engine";
+import { HEAD_STRING, type RayResult, type TableConfig } from "./engine";
 
 /** Fixed pixel sizes of the table furniture, which differ by orientation. */
 export interface TableLayout {
@@ -179,4 +179,56 @@ export function cushionSegments(
     segV(cm, Wd - cm, 0, -cb),
     segV(cm, Wd - cm, L, L + cb),
   ];
+}
+
+/** Table-space distance one W/A/S/D press moves the cue ball, and with Shift held. */
+export const PLACE_KEY_STEP = 3;
+export const PLACE_KEY_STEP_FAST = 12;
+
+// Screen directions for each key: [x, y] with y pointing down.
+const PLACE_KEYS: Record<string, [number, number]> = {
+  a: [-1, 0],
+  d: [1, 0],
+  w: [0, -1],
+  s: [0, 1],
+};
+
+/**
+ * Table-space movement for a ball in hand key press, or null for any other
+ * key. W A S D move the cue ball up, left, down and right on screen, so on the
+ * portrait table (where u runs down the page) the axes swap.
+ */
+export function placementKeyDelta(
+  key: string,
+  shift: boolean,
+  horiz: boolean,
+): { du: number; dv: number } | null {
+  const dir = PLACE_KEYS[key.toLowerCase()];
+  if (!dir) return null;
+  const step = shift ? PLACE_KEY_STEP_FAST : PLACE_KEY_STEP;
+  const [sx, sy] = dir;
+  return horiz
+    ? { du: sx * step, dv: sy * step }
+    : { du: sy * step, dv: sx * step };
+}
+
+/** Sizes, in screen px, of the ball in hand indicators. */
+export interface PlacementOverlay {
+  /** The kitchen (behind the head string) on the felt. */
+  kitchenW: number;
+  kitchenH: number;
+  /** Diameter of the dashed ring drawn around the cue ball. */
+  ringDiameter: number;
+}
+
+export function placementOverlay(
+  { L, Wd, r }: TableConfig,
+  horiz: boolean,
+): PlacementOverlay {
+  const kitchen = L * HEAD_STRING;
+  return {
+    kitchenW: horiz ? kitchen : Wd,
+    kitchenH: horiz ? Wd : kitchen,
+    ringDiameter: r * 3.4,
+  };
 }

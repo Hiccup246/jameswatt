@@ -1,5 +1,11 @@
 import { tableConfig, type RayResult } from "./engine";
-import { cushionSegments, guideLines, tableLayout } from "./geometry";
+import {
+  cushionSegments,
+  guideLines,
+  placementKeyDelta,
+  placementOverlay,
+  tableLayout,
+} from "./geometry";
 
 const parse = (s: string) =>
   s.split(" ").map((p) => p.split(",").map(Number) as [number, number]);
@@ -71,5 +77,49 @@ describe("guideLines", () => {
   it("deflects the cue ball on a cut shot", () => {
     const g = guideLines(cue, { t: 170, hit: ball, gu: 270, gv: 110 }, 0, 960);
     expect(g.deflect).not.toBeNull();
+  });
+});
+
+describe("placementKeyDelta", () => {
+  it("moves along the screen axes on the landscape table", () => {
+    expect(placementKeyDelta("d", false, true)).toEqual({ du: 3, dv: 0 });
+    expect(placementKeyDelta("a", false, true)).toEqual({ du: -3, dv: 0 });
+    expect(placementKeyDelta("s", false, true)).toEqual({ du: 0, dv: 3 });
+    expect(placementKeyDelta("w", false, true)).toEqual({ du: 0, dv: -3 });
+  });
+
+  it("swaps the axes on the portrait table", () => {
+    // Screen right is across the table (v); screen down is along it (u).
+    expect(placementKeyDelta("d", false, false)).toEqual({ du: 0, dv: 3 });
+    expect(placementKeyDelta("s", false, false)).toEqual({ du: 3, dv: 0 });
+  });
+
+  it("takes bigger steps with Shift and ignores case", () => {
+    expect(placementKeyDelta("D", true, true)).toEqual({ du: 12, dv: 0 });
+  });
+
+  it("returns null for other keys", () => {
+    expect(placementKeyDelta("ArrowLeft", false, true)).toBeNull();
+    expect(placementKeyDelta(" ", false, true)).toBeNull();
+  });
+});
+
+describe("placementOverlay", () => {
+  it("sizes the kitchen to a quarter of the table and the ring to 3.4r", () => {
+    const cfg = tableConfig(false);
+    expect(placementOverlay(cfg, true)).toEqual({
+      kitchenW: 240,
+      kitchenH: 480,
+      ringDiameter: 12 * 3.4,
+    });
+  });
+
+  it("turns the kitchen on its side for the portrait table", () => {
+    const cfg = tableConfig(true);
+    expect(placementOverlay(cfg, false)).toEqual({
+      kitchenW: 300,
+      kitchenH: 145,
+      ringDiameter: 9 * 3.4,
+    });
   });
 });

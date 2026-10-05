@@ -33,6 +33,8 @@ import { capTransform, discTransform } from "./ballPaint";
 import {
   cushionSegments,
   guideLines,
+  placementKeyDelta,
+  placementOverlay,
   tableLayout,
   type Line,
 } from "./geometry";
@@ -79,6 +81,8 @@ interface AiTurn {
   to: number;
   power: number;
   t0: number;
+  /** Ball in hand: where the cue ball slides from and to at the start of the turn. */
+  place: { from: Point; to: Point } | null;
 }
 
 // James takes about five seconds per turn. Times are ms since his turn began.
@@ -87,6 +91,8 @@ const AI_AIM_END = 3100;
 const AI_PULL_START = 3300;
 const AI_PULL_END = 4700;
 const AI_STRIKE = 4850;
+/** With ball in hand, James slides the cue ball into place over this long. */
+const AI_PLACE_END = 1200;
 /** Idle sway amplitude in radians while James "thinks". */
 const AI_SWAY = 0.06;
 
@@ -109,6 +115,9 @@ const setAttrs = (el: SVGElement | null, attrs: Record<string, number>) => {
   if (!el) return;
   for (const k in attrs) el.setAttribute(k, String(attrs[k]));
 };
+
+/** Pressing within this many ball radii of the cue ball grabs it (ball in hand). */
+const GRAB_RADIUS = 2.4;
 
 /** Keys that hold to charge power and release to shoot. */
 const CHARGE_KEYS = [" ", "Enter"];
@@ -137,6 +146,7 @@ export default function PoolGame({
   const TW = SW + rail * 2;
   const TH = SH + rail * 2;
   const pal = paletteFor(dark);
+  const { kitchenW, kitchenH, ringDiameter } = placementOverlay(cfg, horiz);
 
   const engineRef = useRef<PoolEngine | null>(null);
   if (!engineRef.current) engineRef.current = new PoolEngine(cfg);
@@ -176,6 +186,10 @@ export default function PoolGame({
   /** Power from 0 to 1, drawn as how far the cue is pulled back. */
   const pullAmt = useRef(0);
   const strike = useRef<Strike | null>(null);
+  /** Whether the player is dragging the cue ball (ball in hand). */
+  const dragCue = useRef(false);
+  const kitchenRef = useRef<HTMLDivElement>(null);
+  const handRef = useRef<HTMLDivElement>(null);
   const aiTurn = useRef<AiTurn | null>(null);
   const prevPos = useRef<({ x: number; y: number } | null)[]>([]);
 
@@ -209,6 +223,8 @@ export default function PoolGame({
 
   /** Drops any drag, aim, pull, strike or AI plan that is in flight. */
   const cancelInteraction = () => {
+    dragCue.current = false;
+    document.body.style.cursor = "";
     pull.current = null;
     keyCharge.current = false;
     pullAmt.current = 0;
@@ -225,6 +241,14 @@ export default function PoolGame({
     prevPos.current = [];
     bump();
   };
+
+  // Never leave the page stuck with a grabbing cursor.
+  useEffect(
+    () => () => {
+      document.body.style.cursor = "";
+    },
+    [],
+  );
 
   useEffect(() => {
     onReady();
@@ -248,6 +272,13 @@ export default function PoolGame({
   useEffect(() => {
     const onMove = (e: PointerEvent) => {
       ptr.current = toTable(e);
+      // Move the white straight away so a quick flick still lands, rather
+      // than waiting for the next frame.
+      if (dragCue.current && ptr.current) {
+        if (engine.placeCue(ptr.current.u, ptr.current.v)) {
+          prevPos.current[0] = null;
+        }
+      }
     };
     const release = (shoot: boolean) => {
       if (!pull.current) return;
@@ -259,8 +290,17 @@ export default function PoolGame({
         pullAmt.current = 0;
       }
     };
-    const onUp = () => release(true);
-    const onCancel = () => release(false);
+    const onUp = () => {
+      if (dragCue.current) {
+        dragCue.current = false;
+        return;
+      }
+      release(true);
+    };
+    const onCancel = () => {
+      dragCue.current = false;
+      release(false);
+    };
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
     window.addEventListener("pointercancel", onCancel);
@@ -277,6 +317,14 @@ export default function PoolGame({
     ptr.current = toTable(e);
     if (!ptr.current || !engine.canAim() || strike.current) return;
     const cb = engine.cue;
+    // Ball in hand: pressing on the white picks it up instead of aiming.
+    if (
+      engine.place &&
+      Math.hypot(ptr.current.u - cb.u, ptr.current.v - cb.v) < r * GRAB_RADIUS
+    ) {
+      dragCue.current = true;
+      return;
+    }
     aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
     pull.current = { ...ptr.current };
     pullAmt.current = 0;
@@ -287,6 +335,18 @@ export default function PoolGame({
   // anticlockwise on screen, which flips sign on the portrait table.
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (!engine.canAim() || strike.current) return;
+    // Ball in hand: W A S D nudge the white (arrows still aim).
+    const nudge = engine.place
+      ? placementKeyDelta(e.key, e.shiftKey, horiz)
+      : null;
+    if (nudge) {
+      e.preventDefault();
+      const cb = engine.cue;
+      if (engine.placeCue(cb.u + nudge.du, cb.v + nudge.dv)) {
+        prevPos.current[0] = null;
+      }
+      return;
+    }
     const turn = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[
       e.key
     ];
@@ -404,12 +464,20 @@ export default function PoolGame({
         strike.current = null;
         engine.shoot(s.ang, s.power);
         pullAmt.current = 0;
+        // Ball in hand ends with the shot, which changes the table's label.
+        bump();
       }
     };
 
     /** Aim and power from the pointer or keyboard on the player's turn. */
     const stepPlayerInput = () => {
       const cb = engine.cue;
+      if (dragCue.current) {
+        if (ptr.current && engine.placeCue(ptr.current.u, ptr.current.v)) {
+          prevPos.current[0] = null;
+        }
+        return;
+      }
       if (ptr.current && !pull.current && !keyCharge.current) {
         aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
       }
@@ -431,16 +499,33 @@ export default function PoolGame({
     /** James: idle sway, ease the aim round, draw the cue back, strike. */
     const stepAi = () => {
       if (!aiTurn.current) {
-        const plan = engine.planAi(aim.current);
+        const cb = engine.cue;
+        // With ball in hand, choose the best spot and plan the shot from it.
+        const spot = engine.place ? engine.pickPlacement() : null;
+        const plan = engine.planAi(aim.current, spot ?? cb);
         aiTurn.current = {
           from: aim.current,
           to: plan.ang,
           power: plan.power,
           t0: performance.now(),
+          place: spot ? { from: { u: cb.u, v: cb.v }, to: spot } : null,
         };
       }
       const a = aiTurn.current;
       const el = performance.now() - a.t0;
+      if (a.place) {
+        // Ease-in-out slide of the white to its new spot.
+        const q = Math.min(1, el / AI_PLACE_END);
+        const e2 = q < 0.5 ? 2 * q * q : 1 - Math.pow(-2 * q + 2, 2) / 2;
+        const cb = engine.cue;
+        cb.u = a.place.from.u + (a.place.to.u - a.place.from.u) * e2;
+        cb.v = a.place.from.v + (a.place.to.v - a.place.from.v) * e2;
+        prevPos.current[0] = null;
+        if (q >= 1) {
+          a.place = null;
+          engine.place = null;
+        }
+      }
       // Ease-in-out between the starting aim and the chosen angle.
       const k = Math.max(
         0,
@@ -563,6 +648,57 @@ export default function PoolGame({
       setAttrs(ghostRef.current, { cx: gx, cy: gy });
     };
 
+    /** Shades the kitchen, rings the white and picks the cursor for ball in hand. */
+    const paintPlacement = () => {
+      const cb = engine.cue;
+      const placing =
+        !!engine.place && !engine.moving && !engine.winner && cb.on;
+
+      const kitchen = kitchenRef.current;
+      if (kitchen) {
+        kitchen.style.opacity =
+          placing && engine.place === "kitchen" ? "1" : "0";
+      }
+
+      const hand = handRef.current;
+      if (hand) {
+        // The ring pulses, except while dragging or with reduced motion.
+        const pulse = 0.55 + 0.45 * Math.sin(performance.now() / 260);
+        hand.style.opacity = placing
+          ? dragCue.current || reducedRef.current
+            ? "1"
+            : pulse.toFixed(3)
+          : "0";
+        if (placing) {
+          const [hx2, hy2] = map(cb.u, cb.v);
+          const half = ringDiameter / 2;
+          hand.style.transform = `translate(${hx2 - half}px,${hy2 - half}px)`;
+        }
+      }
+
+      const surf = surfRef.current;
+      if (surf) {
+        const near =
+          placing &&
+          engine.turn === "you" &&
+          !!ptr.current &&
+          Math.hypot(ptr.current.u - cb.u, ptr.current.v - cb.v) <
+            r * GRAB_RADIUS;
+        const cursor = dragCue.current
+          ? "grabbing"
+          : near
+            ? "grab"
+            : "crosshair";
+        if (surf.style.cursor !== cursor) surf.style.cursor = cursor;
+      }
+      // Keep the grabbing cursor when the pointer leaves the table mid-drag.
+      if (dragCue.current) {
+        document.body.style.cursor = "grabbing";
+      } else if (document.body.style.cursor === "grabbing") {
+        document.body.style.cursor = "";
+      }
+    };
+
     const frame = () => {
       raf = requestAnimationFrame(frame);
       stepPhysics();
@@ -581,7 +717,14 @@ export default function PoolGame({
       }
 
       paintBalls();
-      const showCue = engine.cue.on && !engine.moving && !engine.winner;
+      paintPlacement();
+      // The cue and guides are hidden while the white is being moved.
+      const showCue =
+        engine.cue.on &&
+        !engine.moving &&
+        !engine.winner &&
+        !dragCue.current &&
+        !aiTurn.current?.place;
       paintCue(showCue);
       paintGuides(showCue && engine.turn === "you" && !strike.current);
     };
@@ -705,7 +848,12 @@ export default function PoolGame({
           ref={surfRef}
           data-testid="pool-felt"
           role="application"
-          aria-label="Pool table. Use the arrow keys to aim, hold space to set power and release to shoot."
+          aria-label={
+            "Pool table. Use the arrow keys to aim, hold space to set power and release to shoot." +
+            (engine.place && engine.turn === "you" && !engine.winner
+              ? " The white is in hand: drag it, or use W A S D to move it."
+              : "")
+          }
           tabIndex={0}
           onPointerDown={onSurfaceDown}
           onKeyDown={onKeyDown}
@@ -820,6 +968,30 @@ export default function PoolGame({
               </div>
             );
           })}
+          <div
+            ref={kitchenRef}
+            aria-hidden
+            className="pointer-events-none absolute top-0 left-0"
+            style={{
+              width: kitchenW,
+              height: kitchenH,
+              background: pal.kitchenBg,
+              opacity: 0,
+              transition: reduced ? "none" : "opacity .3s ease",
+            }}
+          />
+          <div
+            ref={handRef}
+            aria-hidden
+            className="pointer-events-none absolute top-0 left-0 box-border rounded-full"
+            style={{
+              width: ringDiameter,
+              height: ringDiameter,
+              border: `2px dashed ${pal.guideInk}`,
+              filter: "drop-shadow(0 0 .6px rgba(0,0,0,.9))",
+              opacity: 0,
+            }}
+          />
           <svg
             width={SW}
             height={SH}
