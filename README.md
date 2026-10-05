@@ -126,7 +126,14 @@ A simplified version of 8-ball. You always break, and James plays the other side
 
 ### Theming
 
-Static colours use Tailwind `dark:` utilities. Colours set from JS (gradients, cue, pockets) come from `theme.ts`. `PoolHero` watches the `dark` class on `<html>` with a `MutationObserver` and passes `dark` down.
+Every pool colour is a token in `styles/globals.css`, with no hex values in the components:
+
+- Palette colours (`--color-sand`, `--color-ball-1`, `--color-felt-light` and so on) and shadows (`--shadow-coin`, `--shadow-ball`) live in a `@theme static` block, so Tailwind classes such as `bg-sand dark:bg-charcoal` and `shadow-coin` work, and the variables are always emitted even when only read through `var()`.
+- Light and dark choices are `--pool-*` variables (`--pool-rail`, `--pool-felt`, `--pool-ink` and so on) defined on `:root` and overridden under `.dark`, the same signal as Tailwind's `dark:` variant.
+- `components/pool/theme.ts` is a typed map of `var(--pool-*)` references for inline styles. Because the variables switch in CSS, the game has no theme state, prop or `MutationObserver`.
+- The only hardcoded colours left are the brand-logo fills in `components/Icons/`.
+
+To change a colour, edit the token in `globals.css`. The ESLint `better-tailwindcss` rules flag class names that can be written with a token instead of an arbitrary value.
 
 ### Accessibility
 

@@ -20,6 +20,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import JamesWattImage from "../public/panthy-tiny.webp";
 import { MAX_TILT, coinTilt } from "./coinTilt";
+import { GLINT_COLOR, GLINT_FADE } from "./pool/theme";
 
 // The game is only needed after the first click, so keep it out of the
 // initial bundle. Hovering the coin preloads it.
@@ -50,8 +51,6 @@ export default function PoolHero() {
   useEffect(() => {
     if (!open) setLayoutMobile(mobile);
   }, [open, mobile]);
-  // Mirrors the `dark` class on <html>, for colours that are set from JS.
-  const [dark, setDark] = useState(false);
   const [reduced, setReduced] = useState(false);
   // Portal target for the game's status panel. State, not a ref, so the game
   // re-renders once the element exists.
@@ -103,7 +102,7 @@ export default function PoolHero() {
       if (glint) {
         const m = Math.min(1, Math.hypot(t.x, t.y) / MAX_TILT);
         glint.style.opacity = (m * 0.9).toFixed(2);
-        glint.style.background = `radial-gradient(circle at ${50 + t.y * 1.6}% ${50 - t.x * 1.6}%, rgba(255,255,255,.45), rgba(255,255,255,0) 55%)`;
+        glint.style.background = `radial-gradient(circle at ${50 + t.y * 1.6}% ${50 - t.x * 1.6}%, ${GLINT_COLOR}, ${GLINT_FADE} 55%)`;
       }
 
       const settled =
@@ -150,23 +149,15 @@ export default function PoolHero() {
     };
   }, [startLoop]);
 
-  // Below md the table is portrait; theme colours set from JS follow html.dark.
+  // Below md the table is portrait.
   useEffect(() => {
     const wide = window.matchMedia("(min-width: 768px)");
     setMobile(!wide.matches);
     const onWide = (e: MediaQueryListEvent) => setMobile(!e.matches);
     wide.addEventListener?.("change", onWide);
 
-    const root = document.documentElement;
-    setDark(root.classList.contains("dark"));
-    const observer = new MutationObserver(() =>
-      setDark(root.classList.contains("dark")),
-    );
-    observer.observe(root, { attributes: true, attributeFilter: ["class"] });
-
     return () => {
       wide.removeEventListener?.("change", onWide);
-      observer.disconnect();
     };
   }, []);
 
@@ -254,7 +245,6 @@ export default function PoolHero() {
               key={layoutMobile ? "portrait" : "landscape"}
               open={open}
               mobile={layoutMobile}
-              dark={dark}
               reduced={reduced}
               statusHost={statusHost}
               onReady={handleReady}
@@ -290,14 +280,14 @@ export default function PoolHero() {
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <div
-                    className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
+                    className="bg-sand dark:bg-charcoal absolute inset-0 rounded-full"
                     style={{ transform: "translateZ(-9px)" }}
                   />
                   <div
-                    className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
+                    className="bg-sand dark:bg-charcoal absolute inset-0 rounded-full"
                     style={{ transform: "translateZ(-4.5px)" }}
                   />
-                  <div className="bg-darkbrown dark:bg-darkteal dark:border-darkteal absolute inset-0 overflow-hidden rounded-full border-4 border-white shadow-[0_0_0_2px_rgba(44,54,57,.28),0_26px_40px_-18px_rgba(120,80,40,.45)] dark:shadow-[0_0_0_2px_rgba(215,220,226,.55),0_26px_40px_-18px_rgba(0,0,0,.7)]">
+                  <div className="bg-darkbrown dark:bg-darkteal dark:border-darkteal shadow-coin dark:shadow-coin-dark absolute inset-0 overflow-hidden rounded-full border-4 border-white">
                     <Image
                       src={JamesWattImage}
                       alt="James Watt"

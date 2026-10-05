@@ -1,5 +1,5 @@
 import type { PoolEngine, Player } from "./engine";
-import { ballBackground, type Palette } from "./theme";
+import { CHIP_SHADOW, ballBackground, type Palette } from "./theme";
 
 interface Props {
   engine: PoolEngine;
@@ -71,7 +71,7 @@ function PlayerCard({ engine, who, pal, horizontal }: PlayerProps) {
             className="size-3.5 rounded-full"
             style={{
               background: ballBackground(b.n, horizontal),
-              boxShadow: "inset 0 -1px 2px rgba(0,0,0,.3)",
+              boxShadow: CHIP_SHADOW,
             }}
           />
         ))}

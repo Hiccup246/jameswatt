@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { PoolEngine, tableConfig } from "./engine";
 import StatusPanel from "./StatusPanel";
-import { LIGHT } from "./theme";
+import { PALETTE } from "./theme";
 
 const setup = () => {
   const engine = new PoolEngine(tableConfig(false));
@@ -11,7 +11,7 @@ const setup = () => {
     render(
       <StatusPanel
         engine={engine}
-        pal={LIGHT}
+        pal={PALETTE}
         horizontal
         maxWidth={1028}
         onPlayAgain={onPlayAgain}
@@ -37,7 +37,7 @@ describe("StatusPanel", () => {
     rerender(
       <StatusPanel
         engine={engine}
-        pal={LIGHT}
+        pal={PALETTE}
         horizontal
         maxWidth={1028}
         onPlayAgain={onPlayAgain}

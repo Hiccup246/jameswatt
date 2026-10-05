@@ -45,17 +45,17 @@ import {
   BALL_SHADOW,
   CUE_SHADOW,
   GUIDE_SHADOW,
+  HAND_SHADOW,
   HOLE_OVERLAY_SHADOW,
   IVORY,
   SCRATCH_RING,
-  paletteFor,
+  PALETTE,
 } from "./theme";
 
 interface Props {
   open: boolean;
   /** Portrait table when true, landscape when false. */
   mobile: boolean;
-  dark: boolean;
   reduced: boolean;
   /** Element below the table that the status panel is portalled into. */
   statusHost: HTMLElement | null;
@@ -125,7 +125,6 @@ const CHARGE_KEYS = [" ", "Enter"];
 export default function PoolGame({
   open,
   mobile,
-  dark,
   reduced,
   statusHost,
   onReady,
@@ -145,7 +144,7 @@ export default function PoolGame({
   const SH = horiz ? Wd : L;
   const TW = SW + rail * 2;
   const TH = SH + rail * 2;
-  const pal = paletteFor(dark);
+  const pal = PALETTE;
   const { kitchenW, kitchenH, ringDiameter } = placementOverlay(cfg, horiz);
 
   const engineRef = useRef<PoolEngine | null>(null);
@@ -968,7 +967,7 @@ export default function PoolGame({
                       width: r,
                       height: r,
                       background: IVORY,
-                      color: "#1d2426",
+                      color: "var(--color-charcoal)",
                       fontSize: Math.round(r * 0.72),
                     }}
                   >
@@ -1002,7 +1001,7 @@ export default function PoolGame({
               width: ringDiameter,
               height: ringDiameter,
               border: `2px dashed ${pal.guideInk}`,
-              filter: "drop-shadow(0 0 .6px rgba(0,0,0,.9))",
+              filter: HAND_SHADOW,
               opacity: 0,
             }}
           />
