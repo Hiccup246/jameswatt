@@ -38,8 +38,3 @@ type LinkedIcon = {
   link: string;
   name: string;
 };
-
-interface Spring {
-  position: number;
-  vibration: number;
-}
