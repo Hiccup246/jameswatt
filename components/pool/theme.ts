@@ -18,7 +18,9 @@ export const BALL_SHADOW =
   "inset -2px -3px 4px rgba(0,0,0,.28), 0 2px 3px rgba(0,0,0,.35)";
 export const BALL_HIGHLIGHT =
   "radial-gradient(circle at 34% 28%, rgba(255,255,255,.6), rgba(255,255,255,0) 42%)";
-export const POCKET_SHADOW = "inset 0 3px 6px rgba(0,0,0,.6)";
+export const HOLE_OVERLAY_SHADOW =
+  "inset 0 3px 6px rgba(0,0,0,.6), inset 0 0 0 1px rgba(0,0,0,.25)";
+export const SCRATCH_RING = "#d8342c";
 export const CUE_SHADOW = "0 4px 8px rgba(0,0,0,.3)";
 export const GUIDE_SHADOW =
   "drop-shadow(0 0 0.6px rgba(0,0,0,.9)) drop-shadow(0 0 0.6px rgba(0,0,0,.9))";
@@ -29,6 +31,11 @@ export interface Palette {
   feltBg: string;
   cushionBg: string;
   pocketBg: string;
+  holeBg: string;
+  plateBg: string;
+  plateShadow: string;
+  noseInk: string;
+  ringInk: string;
   diamondBg: string;
   lineInk: string;
   guideInk: string;
@@ -56,6 +63,12 @@ export const LIGHT: Palette = {
     "radial-gradient(ellipse at 50% 50%, oklch(0.74 0.075 192), oklch(0.66 0.075 196))",
   cushionBg: "oklch(0.6 0.07 196)",
   pocketBg: "#2c3639",
+  holeBg:
+    "radial-gradient(circle at 50% 42%, #000 0 48%, #111718 70%, #2c3639 100%)",
+  plateBg: "linear-gradient(145deg, #fffaf4, #d8bfa8 70%)",
+  plateShadow: "inset 0 1px 0 #ffffff, 0 1px 2px rgba(120,80,40,.35)",
+  noseInk: "rgba(255,255,255,.35)",
+  ringInk: "#ffffff",
   diamondBg: "rgba(44,54,57,.45)",
   lineInk: "rgba(255,255,255,.35)",
   guideInk: "rgba(255,255,255,.95)",
@@ -77,6 +90,12 @@ export const DARK: Palette = {
     "radial-gradient(ellipse at 50% 50%, oklch(0.47 0.06 200), oklch(0.39 0.055 205))",
   cushionBg: "oklch(0.34 0.05 205)",
   pocketBg: "#151b1c",
+  holeBg:
+    "radial-gradient(circle at 50% 42%, #000 0 48%, #0c1011 70%, #222b2d 100%)",
+  plateBg: "linear-gradient(145deg, #5d6e72, #2a3436 70%)",
+  plateShadow: "inset 0 1px 0 rgba(255,255,255,.18), 0 1px 2px rgba(0,0,0,.4)",
+  noseInk: "rgba(255,255,255,.12)",
+  ringInk: "#d7dce2",
   diamondBg: "rgba(215,220,226,.6)",
   lineInk: "rgba(215,220,226,.22)",
   guideInk: "rgba(255,255,255,.85)",

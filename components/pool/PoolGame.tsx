@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import JamesWattImage from "../../public/panthy-tiny.webp";
 import { PoolEngine, roll, tableConfig, type Vec3 } from "./engine";
+import { cushionSegments } from "./geometry";
 import {
   BALL_COLORS,
   BALL_HIGHLIGHT,
@@ -12,7 +13,7 @@ import {
   CUE_SHADOW,
   GUIDE_SHADOW,
   IVORY,
-  POCKET_SHADOW,
+  HOLE_OVERLAY_SHADOW,
   ballBackground,
   paletteFor,
 } from "./theme";
@@ -90,6 +91,9 @@ export default function PoolGame({
   const capAEls = useRef<(HTMLDivElement | null)[]>([]);
   const capBEls = useRef<(HTMLDivElement | null)[]>([]);
   const discEls = useRef<(HTMLDivElement | null)[]>([]);
+  const holeEls = useRef<(HTMLDivElement | null)[]>([]);
+  const wellEls = useRef<(HTMLDivElement | null)[]>([]);
+  const ringEls = useRef<(HTMLDivElement | null)[]>([]);
 
   // Controller state: lives in refs, never triggers renders.
   const aim = useRef(0);
@@ -368,6 +372,7 @@ export default function PoolGame({
     const [x, y] = map(p.u, p.v);
     return { x: rail + x, y: rail + y, d: p.R * 2 };
   });
+  const cushions = cushionSegments(cfg, horiz, rail);
 
   const diamonds: { x: number; y: number }[] = [];
   [1, 2, 3, 5, 6, 7].forEach((k) => {
@@ -515,17 +520,38 @@ export default function PoolGame({
             }}
           />
         ))}
-        <div
-          className="absolute"
-          style={{
-            left: rail - 8,
-            top: rail - 8,
-            width: SW + 16,
-            height: SH + 16,
-            borderRadius: 6,
-            background: pal.cushionBg,
-          }}
-        />
+        {pockets.map((p, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full"
+            style={{
+              left: p.x,
+              top: p.y,
+              width: p.d * 1.5,
+              height: p.d * 1.5,
+              margin: (-p.d * 1.5) / 2,
+              background: pal.plateBg,
+              boxShadow: pal.plateShadow,
+            }}
+          />
+        ))}
+        <svg
+          width={TW}
+          height={TH}
+          className="pointer-events-none absolute top-0 left-0"
+        >
+          {cushions.map((c, i) => (
+            <g key={i}>
+              <polygon points={c.pts} fill={pal.cushionBg} />
+              <polyline
+                points={c.nose}
+                fill="none"
+                stroke={pal.noseInk}
+                strokeWidth={1.5}
+              />
+            </g>
+          ))}
+        </svg>
         <div
           ref={surfRef}
           onPointerDown={onSurfaceDown}
@@ -669,6 +695,9 @@ export default function PoolGame({
         {pockets.map((p, i) => (
           <div
             key={i}
+            ref={(el) => {
+              holeEls.current[i] = el;
+            }}
             className="absolute rounded-full"
             style={{
               left: p.x,
@@ -676,10 +705,28 @@ export default function PoolGame({
               width: p.d,
               height: p.d,
               margin: -p.d / 2,
-              background: pal.pocketBg,
-              boxShadow: POCKET_SHADOW,
+              background: pal.holeBg,
+              boxShadow: `0 0 0 2px ${pal.pocketBg}`,
             }}
-          />
+          >
+            <div
+              ref={(el) => {
+                wellEls.current[i] = el;
+              }}
+              className="pointer-events-none absolute inset-0 overflow-hidden rounded-full"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 rounded-full"
+              style={{ boxShadow: HOLE_OVERLAY_SHADOW }}
+            />
+            <div
+              ref={(el) => {
+                ringEls.current[i] = el;
+              }}
+              className="pointer-events-none absolute -inset-[3px] rounded-full border-[3px] opacity-0"
+              style={{ borderColor: pal.ringInk }}
+            />
+          </div>
         ))}
         <div
           ref={cueRef}
