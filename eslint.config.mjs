@@ -35,7 +35,6 @@ export default defineConfig([
     "test-results/",
     "playwright-report/",
     "playwright/.cache/",
-    "design_handoff_*/",
   ]),
   {
     extends: compat.extends("next/core-web-vitals", "next"),
