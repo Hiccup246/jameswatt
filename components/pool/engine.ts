@@ -198,6 +198,8 @@ export class PoolEngine {
   winner: Player | null = null;
   moving = false;
   shot: Shot | null = null;
+  /** Shots taken since the last rack; 0 means the opening break is next. */
+  shots = 0;
   message = BREAK_MESSAGE;
   /** Ball in hand: where the player to shoot may place the cue ball. */
   place: Placement = "kitchen";
@@ -253,6 +255,7 @@ export class PoolEngine {
     this.winner = null;
     this.moving = false;
     this.shot = null;
+    this.shots = 0;
     this.message = BREAK_MESSAGE;
     this.place = "kitchen";
     this.potEvents = [];
@@ -277,6 +280,7 @@ export class PoolEngine {
   /** Strikes the cue ball at `ang` radians with `power` from 0 to 1. */
   shoot(ang: number, power: number) {
     const c = this.cue;
+    this.shots++;
     c.du = Math.cos(ang) * power * this.cfg.maxV;
     c.dv = Math.sin(ang) * power * this.cfg.maxV;
     const g = this.groups[this.turn];
@@ -296,6 +300,10 @@ export class PoolEngine {
     const { L, Wd, r } = this.cfg;
     if (u < r || u > L - r || v < r || v > Wd - r) return false;
     if (this.place === "kitchen" && u > L * HEAD_STRING) return false;
+    // Inside a pocket's capture circle the cue would be potted on the spot.
+    if (this.pockets.some((p) => Math.hypot(p.u - u, p.v - v) < p.R)) {
+      return false;
+    }
     return this.balls.every(
       (b) =>
         !b.on ||
@@ -718,7 +726,7 @@ export class PoolEngine {
     }
 
     const err = (this.rng() + this.rng() - 1) * 0.045;
-    const isBreak = this.balls.filter((b) => b.on).length === 16;
+    const isBreak = this.shots === 0;
     if (isBreak) {
       plan = {
         ang: Math.atan2(this.balls[1].v - origin.v, this.balls[1].u - origin.u),

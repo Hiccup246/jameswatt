@@ -367,6 +367,24 @@ describe("planOpponentShot", () => {
     expect(Math.abs(plan.ang)).toBeLessThan(0.2);
   });
 
+  it("does not re-break after a no-pot opening shot", () => {
+    const e = setup();
+    e.shoot(0, 0.5);
+    e.shots = 1;
+    e.cue.u = 200;
+    e.cue.v = 240;
+    const plan = e.planOpponentShot(0);
+    expect(plan.power).not.toBe(0.95);
+  });
+
+  it("rejects cue spots inside a pocket capture circle", () => {
+    const e = setup();
+    clearTable(e);
+    e.place = "anywhere";
+    expect(e.cueSpotOk(12, 12)).toBe(false);
+    expect(e.cueSpotOk(480, 240)).toBe(true);
+  });
+
   it("picks a pottable shot when one exists", () => {
     const e = setup();
     clearTable(e);
@@ -375,8 +393,8 @@ describe("planOpponentShot", () => {
     e.cue.v = 200;
     e.balls[1].u = 60;
     e.balls[1].v = 120;
-    // A ball off the table so this is not treated as the break.
-    e.balls[15].on = false;
+    // A shot already taken, so this is not treated as the break.
+    e.shots = 1;
     const plan = e.planOpponentShot(0);
     expect(plan.power).toBeGreaterThan(0.29);
     expect(plan.power).toBeLessThanOrEqual(0.92);

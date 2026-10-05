@@ -47,6 +47,12 @@ export default function PoolHero() {
   const [loaded, setLoaded] = useState(false);
   // Portrait table below Tailwind's `md` breakpoint.
   const [mobile, setMobile] = useState(false);
+  // The table layout only follows the viewport while the game is closed, so
+  // crossing the breakpoint mid-game can't remount and reset the match.
+  const [layoutMobile, setLayoutMobile] = useState(false);
+  useEffect(() => {
+    if (!open) setLayoutMobile(mobile);
+  }, [open, mobile]);
   // Mirrors the `dark` class on <html>, for colours that are set from JS.
   const [dark, setDark] = useState(false);
   const [reduced, setReduced] = useState(false);
@@ -245,14 +251,16 @@ export default function PoolHero() {
       >
         <div
           ref={boxRef}
-          className="relative h-[620px] w-[340px] origin-top-left md:h-[548px] md:w-[1028px]"
+          className={`relative origin-top-left ${
+            layoutMobile ? "h-[620px] w-[340px]" : "h-[548px] w-[1028px]"
+          }`}
           style={size ? { transform: `scale(${size.scale})` } : undefined}
         >
           {loaded && (
             <PoolGame
-              key={mobile ? "portrait" : "landscape"}
+              key={layoutMobile ? "portrait" : "landscape"}
               open={open}
-              mobile={mobile}
+              mobile={layoutMobile}
               dark={dark}
               reduced={reduced}
               statusHost={statusHost}

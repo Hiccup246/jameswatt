@@ -46,7 +46,7 @@ exports[`IntroSection renders correctly 1`] = `
         class="relative flex-none"
       >
         <div
-          class="relative h-[620px] w-[340px] origin-top-left md:h-[548px] md:w-[1028px]"
+          class="relative origin-top-left h-[620px] w-[340px]"
         >
           <div
             class="absolute inset-0 z-[2] m-auto h-[130px] w-[130px] md:h-[180px] md:w-[180px] "

@@ -188,6 +188,8 @@ export default function PoolGame({
   const strike = useRef<Strike | null>(null);
   /** Whether the player is dragging the cue ball (ball in hand). */
   const dragCue = useRef(false);
+  // The pointer that owns the current aim or cue drag; other touches are ignored.
+  const activeId = useRef<number | null>(null);
   const kitchenRef = useRef<HTMLDivElement>(null);
   const handRef = useRef<HTMLDivElement>(null);
   const opponentTurn = useRef<OpponentTurn | null>(null);
@@ -271,6 +273,7 @@ export default function PoolGame({
   // Pointer tracking is on window so aiming and releasing work off the table.
   useEffect(() => {
     const onMove = (e: PointerEvent) => {
+      if (activeId.current !== null && e.pointerId !== activeId.current) return;
       ptr.current = toTable(e);
       // Move the white straight away so a quick flick still lands, rather
       // than waiting for the next frame.
@@ -290,14 +293,18 @@ export default function PoolGame({
         pullAmt.current = 0;
       }
     };
-    const onUp = () => {
+    const onUp = (e: PointerEvent) => {
+      if (activeId.current !== null && e.pointerId !== activeId.current) return;
+      activeId.current = null;
       if (dragCue.current) {
         dragCue.current = false;
         return;
       }
       release(true);
     };
-    const onCancel = () => {
+    const onCancel = (e: PointerEvent) => {
+      if (activeId.current !== null && e.pointerId !== activeId.current) return;
+      activeId.current = null;
       dragCue.current = false;
       release(false);
     };
@@ -314,8 +321,10 @@ export default function PoolGame({
 
   /** Pressing the felt locks the aim and starts the power drag. */
   const onSurfaceDown = (e: React.PointerEvent) => {
+    if (activeId.current !== null) return;
     ptr.current = toTable(e);
     if (!ptr.current || !engine.canAim() || strike.current) return;
+    activeId.current = e.pointerId;
     const cb = engine.cue;
     // Ball in hand: pressing on the white picks it up instead of aiming.
     if (
