@@ -40,4 +40,4 @@ next-env.d.ts
 /playwright/.cache/
 
 # design handoff reference (not app code)
-/design_handoff_pool_hero/
+/design_handoff_*/
