@@ -135,7 +135,7 @@ export default function TabsManager({
         <div
           style={sliderStyle}
           className={
-            "transition-[transform width] ease-[cubic-bezier(0.645, 0.045, 0.355, 1)] bg-brown dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto visible absolute top-0 left-0 z-10 h-[40px] w-[122px] rounded delay-100 duration-200"
+            "bg-brown dark:bg-darkgrey max-small:bottom-2.5 max-small:top-auto visible absolute top-0 left-0 z-10 h-[40px] w-[122px] rounded transition-[transform,width] delay-100 duration-200 ease-[cubic-bezier(0.645,0.045,0.355,1)]"
           }
         ></div>
         <div
