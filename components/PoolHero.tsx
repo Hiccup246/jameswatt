@@ -2,7 +2,13 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import JamesWattImage from "../public/panthy-tiny.webp";
+
+// The game is only needed after the first click, so keep it out of the
+// initial bundle. Hovering the coin preloads it.
+const loadGame = () => import("./pool/PoolGame");
+const PoolGame = dynamic(loadGame, { ssr: false });
 
 const clamp = (n: number) => Math.max(-1, Math.min(1, n));
 
@@ -10,6 +16,11 @@ const COIN_SIZE = "h-[130px] w-[130px] md:h-[180px] md:w-[180px]";
 
 export default function PoolHero() {
   const [open, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const [dark, setDark] = useState(false);
+  const [reduced, setReduced] = useState(false);
+  const [statusHost, setStatusHost] = useState<HTMLDivElement | null>(null);
   const [size, setSize] = useState<{
     scale: number;
     w: number;
@@ -27,6 +38,7 @@ export default function PoolHero() {
   const tiltRef = useRef({ x: 0, y: 0, s: 1 });
   const rafRef = useRef(0);
   const reducedRef = useRef(false);
+  const wantOpenRef = useRef(false);
 
   useEffect(() => {
     openRef.current = open;
@@ -73,8 +85,10 @@ export default function PoolHero() {
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     reducedRef.current = motion.matches;
+    setReduced(motion.matches);
     const onMotion = (e: MediaQueryListEvent) => {
       reducedRef.current = e.matches;
+      setReduced(e.matches);
       startLoop();
     };
     motion.addEventListener?.("change", onMotion);
@@ -98,6 +112,26 @@ export default function PoolHero() {
     };
   }, [startLoop]);
 
+  // Below md the table is portrait; theme colours set from JS follow html.dark.
+  useEffect(() => {
+    const wide = window.matchMedia("(min-width: 768px)");
+    setMobile(!wide.matches);
+    const onWide = (e: MediaQueryListEvent) => setMobile(!e.matches);
+    wide.addEventListener?.("change", onWide);
+
+    const root = document.documentElement;
+    setDark(root.classList.contains("dark"));
+    const observer = new MutationObserver(() =>
+      setDark(root.classList.contains("dark")),
+    );
+    observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+
+    return () => {
+      wide.removeEventListener?.("change", onWide);
+      observer.disconnect();
+    };
+  }, []);
+
   // Scale the table down to fit narrow containers, keeping aspect ratio.
   useEffect(() => {
     const outer = outerRef.current;
@@ -118,17 +152,36 @@ export default function PoolHero() {
     return () => ro.disconnect();
   }, []);
 
+  // The game mounts closed so the open transition has something to animate
+  // from, then calls back here to flip it open.
+  const handleReady = useCallback(() => {
+    if (!wantOpenRef.current) return;
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        if (wantOpenRef.current) setOpen(true);
+      }),
+    );
+  }, []);
+
+  const close = useCallback(() => {
+    wantOpenRef.current = false;
+    setOpen(false);
+  }, []);
+
   const toggle = () => {
     if (open) {
-      setOpen(false);
+      close();
       return;
     }
+    wantOpenRef.current = true;
     pressedRef.current = true;
     startLoop();
     window.setTimeout(
       () => {
         pressedRef.current = false;
-        setOpen(true);
+        startLoop();
+        if (loaded) setOpen(true);
+        else setLoaded(true);
       },
       reducedRef.current ? 0 : 140,
     );
@@ -146,14 +199,34 @@ export default function PoolHero() {
           className="relative h-[620px] w-[340px] origin-top-left md:h-[548px] md:w-[1028px]"
           style={size ? { transform: `scale(${size.scale})` } : undefined}
         >
+          {loaded && (
+            <PoolGame
+              key={mobile ? "portrait" : "landscape"}
+              open={open}
+              mobile={mobile}
+              dark={dark}
+              reduced={reduced}
+              statusHost={statusHost}
+              onClose={close}
+              onReady={handleReady}
+            />
+          )}
           <div
             className={`absolute inset-0 z-[2] m-auto ${COIN_SIZE} ${open ? "pointer-events-none" : ""}`}
-            style={{ perspective: 700 }}
+            style={{
+              perspective: 700,
+              opacity: open ? 0 : 1,
+              transition: reduced || !open ? "none" : "opacity .2s ease .3s",
+            }}
+            aria-hidden={open}
           >
             <button
               type="button"
               aria-label={open ? "Close pool game" : "Open pool game"}
               onClick={toggle}
+              onPointerEnter={loadGame}
+              onFocus={loadGame}
+              tabIndex={open ? -1 : 0}
               className="absolute inset-0 cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <div
@@ -195,6 +268,11 @@ export default function PoolHero() {
           Click me to play
         </div>
       )}
+      <div
+        ref={setStatusHost}
+        className="flex w-full justify-center"
+        style={size ? { maxWidth: size.w } : undefined}
+      />
     </div>
   );
 }
