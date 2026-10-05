@@ -11,6 +11,16 @@ async function openTable(page: Page) {
   await expect(page.getByText(/Your break/)).toBeVisible();
   const felt = page.getByTestId("pool-felt");
   await expect(felt).toBeVisible();
+  // The board opens as a growing circular clip, which also clips pointer
+  // hit-testing. Wait for the reveal so presses reach the whole felt.
+  await expect
+    .poll(() =>
+      felt.evaluate((el) => {
+        const clip = getComputedStyle(el.parentElement!).clipPath;
+        return parseFloat(clip.match(/circle\(([\d.]+)px/)?.[1] ?? "0");
+      }),
+    )
+    .toBeGreaterThan(500);
   return felt;
 }
 
@@ -99,5 +109,51 @@ test.describe("Pool hero", () => {
 
     // Once the balls stop, the break prompt is replaced by the result.
     await expect(page.getByText(/Your break/)).toBeHidden({ timeout: 20_000 });
+  });
+  test("Starts with ball in hand behind the head string", async ({ page }) => {
+    const felt = await openTable(page);
+
+    await expect(
+      page.getByText(
+        "Your break. Drag the white to place it behind the line, then aim and drag to shoot.",
+      ),
+    ).toBeVisible();
+    // Keyboard players are told how to move the white.
+    await expect(felt).toHaveAttribute("aria-label", /W A S D/);
+  });
+
+  test("Missing every ball gives James ball in hand", async ({ page }) => {
+    test.setTimeout(60_000);
+    const felt = await openTable(page);
+    const box = await felt.boundingBox();
+    const viewport = page.viewportSize();
+    if (!box || !viewport) throw new Error("Missing felt box or viewport");
+    const portrait = viewport.width < MOBILE_BREAKPOINT;
+
+    // The white starts a quarter of the way along the long side, centred, and
+    // the rack is further along it. Aim the other way, towards the head
+    // cushion, with a soft stroke so it never reaches the rack.
+    const white = portrait
+      ? { x: box.x + box.width / 2, y: box.y + box.height * 0.25 }
+      : { x: box.x + box.width * 0.25, y: box.y + box.height / 2 };
+    const aimAt = portrait
+      ? { x: white.x, y: white.y - 70 }
+      : { x: white.x - 70, y: white.y };
+    await page.mouse.move(aimAt.x, aimAt.y);
+    await page.mouse.down();
+    // Drag sideways to set a gentle power without changing the locked aim.
+    await page.mouse.move(aimAt.x + 15, aimAt.y + 15, { steps: 5 });
+    await page.mouse.move(aimAt.x + 40, aimAt.y + 40, { steps: 5 });
+    await page.mouse.up();
+
+    await expect(
+      page.getByText("Foul: no ball hit. James has ball in hand."),
+    ).toBeVisible({ timeout: 20_000 });
+
+    // James slides the white into place, lines up and shoots, then the turn
+    // moves on and the message changes.
+    await expect(
+      page.getByText("Foul: no ball hit. James has ball in hand."),
+    ).toBeHidden({ timeout: 30_000 });
   });
 });
