@@ -6,8 +6,10 @@ describe("IntroSection", () => {
     Object.defineProperty(window, "matchMedia", {
       configurable: true,
       writable: true,
-      value: jest.fn().mockImplementation((query) => ({
+      value: jest.fn().mockImplementation(() => ({
         matches: false,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
       })),
     });
   });
