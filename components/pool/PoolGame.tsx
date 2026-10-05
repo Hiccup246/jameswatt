@@ -1,32 +1,55 @@
 "use client";
 
+/**
+ * @file The playable pool table.
+ *
+ * Rendering strategy: React renders the static table (rails, felt, pockets,
+ * balls) once. Per-frame positions are written straight to element styles from
+ * a requestAnimationFrame loop, so the game never re-renders at 60fps. React
+ * state is only bumped when a shot resolves, to refresh the status panel.
+ *
+ * Coordinates: the engine works in table space (u along the long side, v
+ * across it). `map` converts to screen space, swapping axes on the portrait
+ * (mobile) table. Pointer positions are converted back through the same map and
+ * the scale applied by PoolHero.
+ */
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import JamesWattImage from "../../public/panthy-tiny.webp";
 import {
   PoolEngine,
+  SINK_FADE_START,
+  SINK_FALL_START,
+  SINK_ROLL_END,
   roll,
   tableConfig,
   type PotEvent,
-  type Vec3,
 } from "./engine";
-import { cushionSegments } from "./geometry";
+import { capTransform, discTransform } from "./ballPaint";
+import {
+  cushionSegments,
+  guideLines,
+  tableLayout,
+  type Line,
+} from "./geometry";
+import StatusPanel from "./StatusPanel";
 import {
   BALL_COLORS,
   BALL_HIGHLIGHT,
   BALL_SHADOW,
   CUE_SHADOW,
   GUIDE_SHADOW,
-  IVORY,
   HOLE_OVERLAY_SHADOW,
+  IVORY,
   SCRATCH_RING,
-  ballBackground,
   paletteFor,
 } from "./theme";
 
 interface Props {
   open: boolean;
+  /** Portrait table when true, landscape when false. */
   mobile: boolean;
   dark: boolean;
   reduced: boolean;
@@ -36,26 +59,55 @@ interface Props {
   onReady: () => void;
 }
 
+/** The cue striking forward: `pull` runs from the drawn-back power down past zero. */
 interface Strike {
   ang: number;
   power: number;
   pull: number;
 }
 
+/** A position in table space. */
 type Point = { u: number; v: number };
 
-interface AiPlan {
+/** James's turn, timed from `t0`. */
+interface AiTurn {
   from: number;
   to: number;
   power: number;
   t0: number;
 }
 
+// James takes about five seconds per turn. Times are ms since his turn began.
+const AI_SWAY_END = 1400;
+const AI_AIM_END = 3100;
+const AI_PULL_START = 3300;
+const AI_PULL_END = 4700;
+const AI_STRIKE = 4850;
+/** Idle sway amplitude in radians while James "thinks". */
+const AI_SWAY = 0.06;
+
+/** Drag distance for full power, as a fraction of the table length. */
+const FULL_POWER_DRAG = 0.28;
+/** How far the cue draws back at full power, as a fraction of the table length. */
+const MAX_PULL_BACK = 0.12;
+/** Releasing with less power than this cancels the shot. */
+const MIN_POWER = 0.03;
+/** Keyboard aim step per key press (radians), and with Shift held. */
+const KEY_AIM_STEP = 0.03;
+const KEY_AIM_STEP_FAST = 0.12;
+/** Power gained per frame while the keyboard charge key is held. */
+const KEY_CHARGE_RATE = 0.012;
+
+const ZERO_LINE: Line = { u1: 0, v1: 0, u2: 0, v2: 0 };
+
+/** Writes numeric attributes onto an SVG element. */
 const setAttrs = (el: SVGElement | null, attrs: Record<string, number>) => {
   if (!el) return;
   for (const k in attrs) el.setAttribute(k, String(attrs[k]));
 };
-const ZERO_LINE = { x1: 0, y1: 0, x2: 0, y2: 0 };
+
+/** Keys that hold to charge power and release to shoot. */
+const CHARGE_KEYS = [" ", "Enter"];
 
 export default function PoolGame({
   open,
@@ -68,13 +120,17 @@ export default function PoolGame({
   const cfg = useMemo(() => tableConfig(mobile), [mobile]);
   const { L, Wd, r } = cfg;
   const horiz = !mobile;
-  const rail = mobile ? 20 : 34;
-  const D = mobile ? 130 : 180;
+  const {
+    rail,
+    railRadius,
+    coinDiameter: D,
+    cueThickness: cueH,
+  } = tableLayout(mobile);
+  // Felt size on screen, and the whole board including rails.
   const SW = horiz ? L : Wd;
   const SH = horiz ? Wd : L;
   const TW = SW + rail * 2;
   const TH = SH + rail * 2;
-  const cueH = mobile ? 7 : 9;
   const pal = paletteFor(dark);
 
   const engineRef = useRef<PoolEngine | null>(null);
@@ -85,6 +141,7 @@ export default function PoolGame({
   const [, setVersion] = useState(0);
   const bump = () => setVersion((v) => v + 1);
 
+  // DOM handles that the frame loop writes to directly.
   const surfRef = useRef<HTMLDivElement>(null);
   const cueRef = useRef<HTMLDivElement>(null);
   const guideRef = useRef<SVGGElement>(null);
@@ -105,16 +162,31 @@ export default function PoolGame({
 
   // Controller state: lives in refs, never triggers renders.
   const aim = useRef(0);
+  /** Last known pointer position, null until the pointer moves over the page. */
   const ptr = useRef<Point | null>(null);
+  /** Where the press that started a power drag landed. */
   const pull = useRef<Point | null>(null);
+  /** Whether the keyboard charge key is held. */
+  const keyCharge = useRef(false);
+  /** Power from 0 to 1, drawn as how far the cue is pulled back. */
   const pullAmt = useRef(0);
   const strike = useRef<Strike | null>(null);
-  const aiPlan = useRef<AiPlan | null>(null);
+  const aiTurn = useRef<AiTurn | null>(null);
   const prevPos = useRef<({ x: number; y: number } | null)[]>([]);
-  const openRef = useRef(open);
 
+  /** Table space to screen space. */
   const map = (u: number, v: number): [number, number] =>
     horiz ? [u, v] : [v, u];
+
+  /** Client coordinates to table space, undoing the board scale. */
+  const toTable = (e: { clientX: number; clientY: number }): Point | null => {
+    const s = surfRef.current;
+    if (!s) return null;
+    const rect = s.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) * SW) / rect.width;
+    const y = ((e.clientY - rect.top) * SH) / rect.height;
+    return horiz ? { u: x, v: y } : { u: y, v: x };
+  };
 
   useEffect(() => {
     reducedRef.current = reduced;
@@ -130,111 +202,129 @@ export default function PoolGame({
     for (const n of [...clones.current.keys()]) removeClone(n);
   };
 
-  useEffect(() => {
-    onReady();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Re-rack whenever the table is opened.
-  useEffect(() => {
-    openRef.current = open;
-    if (!open) return;
+  /** Re-racks and clears every in-flight interaction. */
+  const newGame = () => {
     engine.rack();
     clearClones();
     aim.current = 0;
     pull.current = null;
+    keyCharge.current = false;
     pullAmt.current = 0;
     strike.current = null;
-    aiPlan.current = null;
+    aiTurn.current = null;
     prevPos.current = [];
     bump();
+  };
+
+  useEffect(() => {
+    onReady();
+    // Only on mount: PoolHero remounts this component when the orientation changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Re-rack whenever the table is opened, and hand keyboard focus to the felt.
+  useEffect(() => {
+    if (!open) return;
+    newGame();
+    surfRef.current?.focus({ preventScroll: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
+  // Pointer tracking is on window so aiming and releasing work off the table.
   useEffect(() => {
-    const setPtr = (e: PointerEvent | React.PointerEvent) => {
-      const s = surfRef.current;
-      if (!s) return;
-      const rect = s.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) * SW) / rect.width;
-      const y = ((e.clientY - rect.top) * SH) / rect.height;
-      ptr.current = horiz ? { u: x, v: y } : { u: y, v: x };
+    const onMove = (e: PointerEvent) => {
+      ptr.current = toTable(e);
     };
-    const onMove = (e: PointerEvent) => setPtr(e);
-    const onUp = () => {
+    const release = (shoot: boolean) => {
       if (!pull.current) return;
       const p = pullAmt.current;
       pull.current = null;
-      if (p > 0.03) strike.current = { ang: aim.current, power: p, pull: p };
-      else pullAmt.current = 0;
+      if (shoot && p > MIN_POWER) {
+        strike.current = { ang: aim.current, power: p, pull: p };
+      } else {
+        pullAmt.current = 0;
+      }
     };
+    const onUp = () => release(true);
+    const onCancel = () => release(false);
     window.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onCancel);
     return () => {
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onCancel);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [SW, SH, horiz]);
 
+  /** Pressing the felt locks the aim and starts the power drag. */
   const onSurfaceDown = (e: React.PointerEvent) => {
-    const s = surfRef.current;
-    if (!s) return;
-    const rect = s.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) * SW) / rect.width;
-    const y = ((e.clientY - rect.top) * SH) / rect.height;
-    ptr.current = horiz ? { u: x, v: y } : { u: y, v: x };
-    if (!engine.canAim() || strike.current) return;
+    ptr.current = toTable(e);
+    if (!ptr.current || !engine.canAim() || strike.current) return;
     const cb = engine.cue;
     aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
-    pull.current = { u: ptr.current.u, v: ptr.current.v };
+    pull.current = { ...ptr.current };
     pullAmt.current = 0;
   };
 
+  // Keyboard alternative to the pointer: arrows aim, hold Space or Enter to
+  // charge power, release to shoot. Left and right turn the cue clockwise or
+  // anticlockwise on screen, which flips sign on the portrait table.
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (!engine.canAim() || strike.current) return;
+    const turn = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[
+      e.key
+    ];
+    if (turn) {
+      e.preventDefault();
+      const step = e.shiftKey ? KEY_AIM_STEP_FAST : KEY_AIM_STEP;
+      aim.current += turn * step * (horiz ? 1 : -1);
+      // Stop the idle pointer from snapping the aim back.
+      ptr.current = null;
+    } else if (CHARGE_KEYS.includes(e.key)) {
+      e.preventDefault();
+      if (!e.repeat && !pull.current) {
+        keyCharge.current = true;
+        pullAmt.current = 0;
+      }
+    }
+  };
+
+  const releaseKeyCharge = (shoot: boolean) => {
+    if (!keyCharge.current) return;
+    keyCharge.current = false;
+    const p = pullAmt.current;
+    if (shoot && p > MIN_POWER) {
+      strike.current = { ang: aim.current, power: p, pull: p };
+    } else {
+      pullAmt.current = 0;
+    }
+  };
+  const onKeyUp = (e: React.KeyboardEvent) => {
+    if (CHARGE_KEYS.includes(e.key)) releaseKeyCharge(true);
+  };
+
+  // The frame loop. Runs only while the table is open.
   useEffect(() => {
     if (!open) return;
     let raf = 0;
 
-    const paintBall = (n: number, o: { n: Vec3; a: Vec3; t1: Vec3 }) => {
-      const cap = (el: HTMLDivElement | null, p: Vec3) => {
+    /** Applies the rolled orientation of ball `n` to its number and stripes. */
+    const paintBall = (n: number, o: PoolEngine["balls"][number]["o"]) => {
+      const setCap = (el: HTMLDivElement | null, pole: typeof o.a) => {
         if (!el) return;
-        const ca = 0.643;
-        const sa = 0.766;
-        const s = Math.hypot(p[0], p[1]);
-        const pz = p[2];
-        const z1 = pz * ca + s * sa;
-        let r1 = s * ca - pz * sa;
-        const z2 = pz * ca - s * sa;
-        let r2 = s * ca + pz * sa;
-        if (z1 < 0 && z2 < 0) {
-          el.style.opacity = "0";
-          return;
-        }
-        if (z1 < 0) r1 = 1.1;
-        if (z2 < 0) r2 = 1.1;
-        const lo = Math.min(r1, r2);
-        const hi = Math.max(r1, r2);
-        const mid = (lo + hi) / 2;
-        const ph = Math.atan2(p[1], p[0]);
-        el.style.opacity = "1";
-        el.style.transform = `translate(${mid * Math.cos(ph) * r}px,${mid * Math.sin(ph) * r}px) rotate(${ph}rad) scale(${(hi - lo) / 2},${sa})`;
+        const t = capTransform(pole, r);
+        el.style.opacity = t ? "1" : "0";
+        if (t) el.style.transform = t;
       };
-      cap(capAEls.current[n], o.a);
-      cap(capBEls.current[n], [-o.a[0], -o.a[1], -o.a[2]]);
-      const dEl = discEls.current[n];
-      if (dEl) {
-        const nn = o.n;
-        const t1 = o.t1;
-        const t2 = [
-          nn[1] * t1[2] - nn[2] * t1[1],
-          nn[2] * t1[0] - nn[0] * t1[2],
-          nn[0] * t1[1] - nn[1] * t1[0],
-        ];
-        if (nn[2] < 0) {
-          dEl.style.opacity = "0";
-          return;
-        }
-        dEl.style.opacity = "1";
-        dEl.style.transform = `matrix(${t1[0]},${t1[1]},${t2[0]},${t2[1]},${nn[0] * r * 0.866},${nn[1] * r * 0.866})`;
+      setCap(capAEls.current[n], o.a);
+      setCap(capBEls.current[n], [-o.a[0], -o.a[1], -o.a[2]]);
+      const disc = discEls.current[n];
+      if (disc) {
+        const t = discTransform(o, r);
+        disc.style.opacity = t ? "1" : "0";
+        if (t) disc.style.transform = t;
       }
     };
 
@@ -254,6 +344,7 @@ export default function PoolGame({
       clones.current.set(ev.n, copy);
     };
 
+    // The pocket pulses and a ring ripples out; the ring is red for a scratch.
     const pocketFx = (ev: PotEvent) => {
       const hole = holeEls.current[ev.pocket];
       const ring = ringEls.current[ev.pocket];
@@ -280,10 +371,8 @@ export default function PoolGame({
       }
     };
 
-    const frame = () => {
-      raf = requestAnimationFrame(frame);
-      const cb = engine.cue;
-
+    /** Advances physics and spawns sink effects for balls potted this frame. */
+    const stepPhysics = () => {
       if (engine.moving && engine.step()) bump();
       for (const ev of engine.potEvents.splice(0)) {
         if (reducedRef.current) continue;
@@ -291,77 +380,94 @@ export default function PoolGame({
         pocketFx(ev);
       }
       engine.tickSinks();
+    };
 
-      if (strike.current) {
-        const s = strike.current;
-        s.pull -= 0.22;
-        pullAmt.current = Math.max(0, s.pull);
-        if (s.pull <= -0.05) {
-          strike.current = null;
-          engine.shoot(s.ang, s.power);
-          pullAmt.current = 0;
-        }
-      } else if (engine.canAim()) {
-        if (ptr.current && !pull.current) {
-          aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
-        }
-        if (pull.current && ptr.current) {
-          pullAmt.current = Math.min(
-            1,
-            Math.hypot(
-              ptr.current.u - pull.current.u,
-              ptr.current.v - pull.current.v,
-            ) /
-              (L * 0.28),
-          );
-        }
-      } else if (
-        !engine.moving &&
-        !engine.winner &&
-        engine.turn === "james" &&
-        cb.on
-      ) {
-        // James: idle sway, ease the aim round, draw the cue back, strike.
-        if (!aiPlan.current) {
-          const plan = engine.planAi(aim.current);
-          aiPlan.current = {
-            from: aim.current,
-            to: plan.ang,
-            power: plan.power,
-            t0: performance.now(),
-          };
-        }
-        const a = aiPlan.current;
-        const el = performance.now() - a.t0;
-        const k = Math.max(0, Math.min(1, (el - 1400) / 1700));
-        const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-        const sway = el < 1400 ? Math.sin(el / 260) * 0.06 * (el / 1400) : 0;
-        aim.current = a.from + (a.to - a.from) * e + sway;
-        if (el > 3300) {
-          pullAmt.current = Math.min(a.power, ((el - 3300) / 1400) * a.power);
-        }
-        if (el > 4850) {
-          strike.current = { ang: a.to, power: a.power, pull: a.power };
-          aiPlan.current = null;
-        }
+    /** Plays the cue's forward strike, then fires the shot. */
+    const stepStrike = (s: Strike) => {
+      s.pull -= 0.22;
+      pullAmt.current = Math.max(0, s.pull);
+      if (s.pull <= -0.05) {
+        strike.current = null;
+        engine.shoot(s.ang, s.power);
+        pullAmt.current = 0;
       }
+    };
 
+    /** Aim and power from the pointer or keyboard on the player's turn. */
+    const stepPlayerInput = () => {
+      const cb = engine.cue;
+      if (ptr.current && !pull.current && !keyCharge.current) {
+        aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
+      }
+      if (pull.current && ptr.current) {
+        pullAmt.current = Math.min(
+          1,
+          Math.hypot(
+            ptr.current.u - pull.current.u,
+            ptr.current.v - pull.current.v,
+          ) /
+            (L * FULL_POWER_DRAG),
+        );
+      }
+      if (keyCharge.current) {
+        pullAmt.current = Math.min(1, pullAmt.current + KEY_CHARGE_RATE);
+      }
+    };
+
+    /** James: idle sway, ease the aim round, draw the cue back, strike. */
+    const stepAi = () => {
+      if (!aiTurn.current) {
+        const plan = engine.planAi(aim.current);
+        aiTurn.current = {
+          from: aim.current,
+          to: plan.ang,
+          power: plan.power,
+          t0: performance.now(),
+        };
+      }
+      const a = aiTurn.current;
+      const el = performance.now() - a.t0;
+      // Ease-in-out between the starting aim and the chosen angle.
+      const k = Math.max(
+        0,
+        Math.min(1, (el - AI_SWAY_END) / (AI_AIM_END - AI_SWAY_END)),
+      );
+      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      const sway =
+        el < AI_SWAY_END
+          ? Math.sin(el / 260) * AI_SWAY * (el / AI_SWAY_END)
+          : 0;
+      aim.current = a.from + (a.to - a.from) * e + sway;
+      if (el > AI_PULL_START) {
+        pullAmt.current = Math.min(
+          a.power,
+          ((el - AI_PULL_START) / (AI_PULL_END - AI_PULL_START)) * a.power,
+        );
+      }
+      if (el > AI_STRIKE) {
+        strike.current = { ang: a.to, power: a.power, pull: a.power };
+        aiTurn.current = null;
+      }
+    };
+
+    /** Positions every ball, its falling copy if potted, and its markings. */
+    const paintBalls = () => {
       for (const b of engine.balls) {
         const el = ballEls.current[b.n];
         if (!el) continue;
         if (b.sink) {
-          // Roll to the pocket centre (t 0 to .45), then only the copy in the
-          // hole is visible while it falls.
+          // Roll to the pocket centre, then only the copy in the hole shows
+          // while it falls.
           const sk = b.sink;
           const t = sk.t;
-          const m = Math.min(1, t / 0.45);
+          const m = Math.min(1, t / SINK_ROLL_END);
           const k = 1 - Math.pow(1 - m, 2);
           const [x, y] = map(
             sk.u0 + (sk.pu - sk.u0) * k,
             sk.v0 + (sk.pv - sk.v0) * k,
           );
           const [pcx, pcy] = map(sk.pu, sk.pv);
-          const rolling = t < 0.45 && !reducedRef.current;
+          const rolling = t < SINK_ROLL_END && !reducedRef.current;
           const prev = prevPos.current[b.n];
           if (rolling && prev) roll(b, x - prev.x, y - prev.y, r, Math.random);
           prevPos.current[b.n] = { x, y };
@@ -370,7 +476,10 @@ export default function PoolGame({
 
           const copy = clones.current.get(b.n);
           if (copy) {
-            const fall = Math.max(0, (t - 0.2) / 0.8);
+            const fall = Math.max(
+              0,
+              (t - SINK_FALL_START) / (1 - SINK_FALL_START),
+            );
             const f2 = fall * fall;
             // Drift away from the table centre to suggest depth.
             const [ox, oy] = map(
@@ -381,7 +490,9 @@ export default function PoolGame({
             const ly = y - pcy + sk.R - r + oy * f2 * r * 0.35;
             copy.style.transform = `translate(${lx}px,${ly}px) scale(${1 - f2 * 0.6})`;
             copy.style.filter = `brightness(${1 - fall * 0.85})`;
-            copy.style.opacity = String(1 - Math.max(0, (t - 0.8) / 0.2));
+            copy.style.opacity = String(
+              1 - Math.max(0, (t - SINK_FADE_START) / (1 - SINK_FADE_START)),
+            );
           }
         } else if (b.on) {
           removeClone(b.n);
@@ -398,71 +509,72 @@ export default function PoolGame({
         }
         paintBall(b.n, b.o);
       }
+    };
 
-      const showCue = cb.on && !engine.moving && !engine.winner;
+    /** Positions the cue behind the cue ball, drawn back by the current power. */
+    const paintCue = (visible: boolean) => {
       const cue = cueRef.current;
-      if (cue) {
-        cue.style.opacity = showCue ? "1" : "0";
-        if (showCue) {
-          const [cx, cy] = map(cb.u, cb.v);
-          const [dx, dy] = map(Math.cos(aim.current), Math.sin(aim.current));
-          const back = r + 4 + pullAmt.current * L * 0.12;
-          const px = cx - dx * back;
-          const py = cy - dy * back;
-          const a = Math.atan2(-dy, -dx);
-          cue.style.transform = `translate(${px}px,${py - cueH / 2}px) rotate(${a}rad)`;
-        }
+      if (!cue) return;
+      cue.style.opacity = visible ? "1" : "0";
+      if (!visible) return;
+      const cb = engine.cue;
+      const [cx, cy] = map(cb.u, cb.v);
+      const [dx, dy] = map(Math.cos(aim.current), Math.sin(aim.current));
+      const back = r + 4 + pullAmt.current * L * MAX_PULL_BACK;
+      const px = cx - dx * back;
+      const py = cy - dy * back;
+      const a = Math.atan2(-dy, -dx);
+      cue.style.transform = `translate(${px}px,${py - cueH / 2}px) rotate(${a}rad)`;
+    };
+
+    /** Draws the aim line, ghost ball and the two deflection lines. */
+    const paintGuides = (visible: boolean) => {
+      const guide = guideRef.current;
+      if (!guide) return;
+      guide.style.opacity = visible ? "1" : "0";
+      if (!visible) return;
+      const cb = engine.cue;
+      const hit = engine.ray(cb, aim.current);
+      const lines = guideLines(cb, hit, aim.current, L);
+      const place = (el: SVGLineElement | null, line: Line | null) => {
+        const l = line ?? ZERO_LINE;
+        const [x1, y1] = map(l.u1, l.v1);
+        const [x2, y2] = map(l.u2, l.v2);
+        setAttrs(el, { x1, y1, x2, y2 });
+      };
+      place(g1Ref.current, lines.aim);
+      place(g2Ref.current, lines.object);
+      place(g3Ref.current, lines.deflect);
+      const [gx, gy] = map(hit.gu, hit.gv);
+      setAttrs(ghostRef.current, { cx: gx, cy: gy });
+    };
+
+    const frame = () => {
+      raf = requestAnimationFrame(frame);
+      stepPhysics();
+
+      if (strike.current) {
+        stepStrike(strike.current);
+      } else if (engine.canAim()) {
+        stepPlayerInput();
+      } else if (
+        !engine.moving &&
+        !engine.winner &&
+        engine.turn === "james" &&
+        engine.cue.on
+      ) {
+        stepAi();
       }
 
-      const guide = guideRef.current;
-      if (guide) {
-        const show = showCue && engine.turn === "you" && !strike.current;
-        guide.style.opacity = show ? "1" : "0";
-        if (show) {
-          const hit = engine.ray(cb, aim.current);
-          const [x1, y1] = map(cb.u, cb.v);
-          const [gx, gy] = map(hit.gu, hit.gv);
-          setAttrs(g1Ref.current, { x1, y1, x2: gx, y2: gy });
-          setAttrs(ghostRef.current, { cx: gx, cy: gy });
-          if (hit.hit) {
-            const ou = hit.hit.u - hit.gu;
-            const ov = hit.hit.v - hit.gv;
-            const ol = Math.hypot(ou, ov) || 1;
-            const len = L * 0.08;
-            const [bx, by] = map(hit.hit.u, hit.hit.v);
-            const [ex, ey] = map(
-              hit.hit.u + (ou / ol) * len,
-              hit.hit.v + (ov / ol) * len,
-            );
-            setAttrs(g2Ref.current, { x1: bx, y1: by, x2: ex, y2: ey });
-            const nu = ou / ol;
-            const nv = ov / ol;
-            const du = Math.cos(aim.current);
-            const dv = Math.sin(aim.current);
-            const dn = du * nu + dv * nv;
-            const tu = du - dn * nu;
-            const tv = dv - dn * nv;
-            const tl = Math.hypot(tu, tv);
-            if (tl > 0.02) {
-              const cl = len * 1.4 * tl;
-              const [cx2, cy2] = map(
-                hit.gu + (tu / tl) * cl,
-                hit.gv + (tv / tl) * cl,
-              );
-              setAttrs(g3Ref.current, { x1: gx, y1: gy, x2: cx2, y2: cy2 });
-            } else {
-              setAttrs(g3Ref.current, ZERO_LINE);
-            }
-          } else {
-            setAttrs(g2Ref.current, ZERO_LINE);
-            setAttrs(g3Ref.current, ZERO_LINE);
-          }
-        }
-      }
+      paintBalls();
+      const showCue = engine.cue.on && !engine.moving && !engine.winner;
+      paintCue(showCue);
+      paintGuides(showCue && engine.turn === "you" && !strike.current);
     };
 
     raf = requestAnimationFrame(frame);
     return () => cancelAnimationFrame(raf);
+    // The loop reads everything else through refs and the engine.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
@@ -486,9 +598,10 @@ export default function PoolGame({
     }
   });
 
+  // Head string at a quarter of the table, foot spot at the rack apex.
   const [hx, hy] = map(L * 0.25, 0);
   const [fx, fy] = map(L * 0.73, Wd / 2);
-  const railR = mobile ? 22 : 30;
+  // The clip circle grows past the corners so the cue is never clipped.
   const clipOpen = Math.hypot(TW, TH) / 2 + L * 0.65;
   const clip = `circle(${open ? clipOpen : D / 2 - 1}px at 50% 50%)`;
   const boardTransition = reduced
@@ -502,104 +615,26 @@ export default function PoolGame({
       ? "opacity .35s ease .6s"
       : "opacity .15s ease";
 
-  const chips = (who: "you" | "james") => {
-    const g = engine.groups[who];
-    return g ? engine.left(g).map((b) => b.n) : [];
-  };
-  const player = (who: "you" | "james") => {
-    const active = engine.turn === who && !engine.winner;
-    const group = engine.groups[who];
-    const isYou = who === "you";
-    const label = (
-      <>
-        <span
-          className="h-2 w-2 rounded-full"
-          style={{ background: pal.ink, opacity: active ? 1 : 0 }}
-        />
-      </>
-    );
-    return (
-      <div
-        className={`flex flex-col gap-1.5 ${isYou ? "items-end" : "items-start"}`}
-      >
-        <span
-          className="flex items-center gap-1.5"
-          style={{ fontWeight: engine.turn === who ? 700 : 400 }}
-        >
-          {isYou ? (
-            <>
-              <span className="font-normal opacity-60">{group ?? ""}</span>
-              You
-              {label}
-            </>
-          ) : (
-            <>
-              {label}
-              James
-              <span className="font-normal opacity-60">{group ?? ""}</span>
-            </>
-          )}
-        </span>
-        <div className={`flex flex-wrap gap-1 ${isYou ? "justify-end" : ""}`}>
-          {chips(who).map((n) => (
-            <span
-              key={n}
-              className="h-3.5 w-3.5 rounded-full"
-              style={{
-                background: ballBackground(n, horiz),
-                boxShadow: "inset 0 -1px 2px rgba(0,0,0,.3)",
-              }}
-            />
-          ))}
-        </div>
-      </div>
-    );
-  };
-
-  const status = (
-    <div
-      className="flex flex-col gap-3 text-[13px] tracking-[.04em]"
-      style={{ width: "100%", maxWidth: TW, color: pal.ink }}
-    >
-      <div className="flex min-h-[34px] items-center justify-center gap-4 text-center text-pretty">
-        <span aria-live="polite" className="text-sm font-semibold">
-          {engine.message}
-        </span>
-        {engine.winner && (
-          <button
-            type="button"
-            onClick={() => {
-              engine.rack();
-              clearClones();
-              aim.current = 0;
-              aiPlan.current = null;
-              strike.current = null;
-              pullAmt.current = 0;
-              prevPos.current = [];
-              bump();
-            }}
-            className="cursor-pointer rounded-full border-none px-4 py-2 font-semibold tracking-[.04em] hover:opacity-85"
-            style={{ background: pal.btnBg, color: pal.btnInk }}
-          >
-            Play again
-          </button>
-        )}
-      </div>
-      <div className="flex items-start justify-between gap-4">
-        {player("james")}
-        {player("you")}
-      </div>
-    </div>
-  );
-
   return (
     <>
-      {open && statusHost && createPortal(status, statusHost)}
+      {open &&
+        statusHost &&
+        createPortal(
+          <StatusPanel
+            engine={engine}
+            pal={pal}
+            horizontal={horiz}
+            maxWidth={TW}
+            onPlayAgain={newGame}
+          />,
+          statusHost,
+        )}
       <div
+        inert={!open}
         className={`absolute inset-0 ${open ? "" : "pointer-events-none"}`}
         style={{
           boxSizing: "border-box",
-          borderRadius: railR,
+          borderRadius: railRadius,
           background: pal.railBg,
           boxShadow: pal.railShadow,
           clipPath: clip,
@@ -654,8 +689,14 @@ export default function PoolGame({
         <div
           ref={surfRef}
           data-testid="pool-felt"
+          role="application"
+          aria-label="Pool table. Use the arrow keys to aim, hold space to set power and release to shoot."
+          tabIndex={0}
           onPointerDown={onSurfaceDown}
-          className="absolute cursor-crosshair overflow-hidden"
+          onKeyDown={onKeyDown}
+          onKeyUp={onKeyUp}
+          onBlur={() => releaseKeyCharge(false)}
+          className="absolute cursor-crosshair overflow-hidden focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white"
           style={{
             left: rail,
             top: rail,
@@ -701,7 +742,7 @@ export default function PoolGame({
           >
             <Image
               src={JamesWattImage}
-              alt="James Watt"
+              alt=""
               fill
               sizes="180px"
               className="pointer-events-none object-cover object-[50%_22%]"
@@ -715,6 +756,7 @@ export default function PoolGame({
                 ref={(el) => {
                   ballEls.current[n] = el;
                 }}
+                aria-hidden
                 className="pointer-events-none absolute top-0 left-0 overflow-hidden rounded-full"
                 style={{
                   width: r * 2,
@@ -826,6 +868,7 @@ export default function PoolGame({
         ))}
         <div
           ref={cueRef}
+          aria-hidden
           className="pointer-events-none absolute"
           style={{
             left: rail,

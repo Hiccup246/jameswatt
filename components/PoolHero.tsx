@@ -1,6 +1,21 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+/**
+ * @file The intro section's hero: a photo "coin" that tilts towards the cursor
+ * and opens into a playable 8-ball pool table.
+ *
+ * This component owns the closed state (the coin), the open/close transition
+ * state, and the responsive and theme plumbing. The game itself lives in
+ * `pool/PoolGame` and is lazy-loaded on first hover, focus or click.
+ */
+
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import JamesWattImage from "../public/panthy-tiny.webp";
@@ -12,15 +27,34 @@ const PoolGame = dynamic(loadGame, { ssr: false });
 
 const clamp = (n: number) => Math.max(-1, Math.min(1, n));
 
+/** Maximum coin tilt in degrees. */
+const MAX_TILT = 30;
+/** The cursor must be this many coin-widths away to reach the maximum tilt. */
+const TILT_RANGE = 2.2;
+
+// Keep in sync with `coinDiameter` in pool/geometry.ts, which the photo
+// sticker on the felt must match. Literal classes so Tailwind can see them.
 const COIN_SIZE = "h-[130px] w-[130px] md:h-[180px] md:w-[180px]";
 
+/**
+ * Photo coin that opens into a pool table. Click, Enter or Space on the coin
+ * opens the table; the status panel is rendered below it.
+ */
 export default function PoolHero() {
+  // `loaded` mounts the (closed) game; `open` then flips it open so the
+  // clip-path transition has a closed state to animate from.
   const [open, setOpen] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  // Portrait table below Tailwind's `md` breakpoint.
   const [mobile, setMobile] = useState(false);
+  // Mirrors the `dark` class on <html>, for colours that are set from JS.
   const [dark, setDark] = useState(false);
   const [reduced, setReduced] = useState(false);
+  // Portal target for the game's status panel. State, not a ref, so the game
+  // re-renders once the element exists.
   const [statusHost, setStatusHost] = useState<HTMLDivElement | null>(null);
+  // Scale applied to the table so it fits narrow containers, plus the scaled
+  // size so the surrounding layout can reserve the right space.
   const [size, setSize] = useState<{
     scale: number;
     w: number;
@@ -40,14 +74,9 @@ export default function PoolHero() {
   const reducedRef = useRef(false);
   const wantOpenRef = useRef(false);
 
-  useEffect(() => {
-    openRef.current = open;
-    startLoop();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open]);
-
-  // Eases the coin toward the cursor. Writes styles directly so React never
-  // re-renders per frame, and sleeps once everything has settled.
+  // Eases the coin toward the cursor and its press scale toward its target.
+  // Writes styles directly so React never re-renders per frame, and sleeps
+  // once everything has settled.
   const startLoop = useCallback(() => {
     if (rafRef.current) return;
     const tick = () => {
@@ -68,7 +97,7 @@ export default function PoolHero() {
       }
       const glint = glintRef.current;
       if (glint) {
-        const m = Math.min(1, Math.hypot(t.x, t.y) / 30);
+        const m = Math.min(1, Math.hypot(t.x, t.y) / MAX_TILT);
         glint.style.opacity = (m * 0.9).toFixed(2);
         glint.style.background = `radial-gradient(circle at ${50 + t.y * 1.6}% ${50 - t.x * 1.6}%, rgba(255,255,255,.45), rgba(255,255,255,0) 55%)`;
       }
@@ -81,6 +110,11 @@ export default function PoolHero() {
     };
     rafRef.current = requestAnimationFrame(tick);
   }, []);
+
+  useEffect(() => {
+    openRef.current = open;
+    startLoop();
+  }, [open, startLoop]);
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -97,9 +131,13 @@ export default function PoolHero() {
       const coin = coinRef.current?.parentElement;
       if (!coin) return;
       const r = coin.getBoundingClientRect();
-      const dx = clamp((e.clientX - (r.left + r.width / 2)) / (r.width * 2.2));
-      const dy = clamp((e.clientY - (r.top + r.height / 2)) / (r.height * 2.2));
-      mouseRef.current = { x: -dy * 30, y: dx * 30 };
+      const dx = clamp(
+        (e.clientX - (r.left + r.width / 2)) / (r.width * TILT_RANGE),
+      );
+      const dy = clamp(
+        (e.clientY - (r.top + r.height / 2)) / (r.height * TILT_RANGE),
+      );
+      mouseRef.current = { x: -dy * MAX_TILT, y: dx * MAX_TILT };
       startLoop();
     };
     window.addEventListener("pointermove", onPointerMove);
@@ -132,8 +170,9 @@ export default function PoolHero() {
     };
   }, []);
 
-  // Scale the table down to fit narrow containers, keeping aspect ratio.
-  useEffect(() => {
+  // Scale the table down to fit narrow containers, keeping aspect ratio. A
+  // layout effect so the first paint is already scaled.
+  useLayoutEffect(() => {
     const outer = outerRef.current;
     const box = boxRef.current;
     if (!outer || !box || typeof ResizeObserver === "undefined") return;
@@ -149,6 +188,8 @@ export default function PoolHero() {
     measure();
     const ro = new ResizeObserver(measure);
     if (outer.parentElement) ro.observe(outer.parentElement);
+    // The box changes size when the portrait/landscape breakpoint is crossed.
+    ro.observe(box);
     return () => ro.disconnect();
   }, []);
 
@@ -204,13 +245,13 @@ export default function PoolHero() {
             />
           )}
           <div
+            inert={open}
             className={`absolute inset-0 z-[2] m-auto ${COIN_SIZE} ${open ? "pointer-events-none" : ""}`}
             style={{
               perspective: 700,
               opacity: open ? 0 : 1,
               transition: reduced || !open ? "none" : "opacity .2s ease .3s",
             }}
-            aria-hidden={open}
           >
             <button
               type="button"
@@ -218,7 +259,6 @@ export default function PoolHero() {
               onClick={openTable}
               onPointerEnter={loadGame}
               onFocus={loadGame}
-              tabIndex={open ? -1 : 0}
               className="absolute inset-0 cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               <div

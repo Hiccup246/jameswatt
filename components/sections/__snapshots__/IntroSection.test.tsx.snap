@@ -49,14 +49,12 @@ exports[`IntroSection renders correctly 1`] = `
           class="relative h-[620px] w-[340px] origin-top-left md:h-[548px] md:w-[1028px]"
         >
           <div
-            aria-hidden="false"
             class="absolute inset-0 z-[2] m-auto h-[130px] w-[130px] md:h-[180px] md:w-[180px] "
             style="perspective: 700px; opacity: 1; transition: none;"
           >
             <button
               aria-label="Open pool game"
               class="absolute inset-0 cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
-              tabindex="0"
               type="button"
             >
               <div

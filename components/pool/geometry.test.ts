@@ -1,5 +1,5 @@
-import { tableConfig } from "./engine";
-import { cushionSegments } from "./geometry";
+import { tableConfig, type RayResult } from "./engine";
+import { cushionSegments, guideLines, tableLayout } from "./geometry";
 
 const parse = (s: string) =>
   s.split(" ").map((p) => p.split(",").map(Number) as [number, number]);
@@ -40,5 +40,36 @@ describe("cushionSegments", () => {
     // u runs down the page on mobile, so the nose y starts at 1.6r.
     expect(a[0]).toBeCloseTo(20, 1);
     expect(a[1]).toBeCloseTo(20 + cfg.r * 1.6, 1);
+  });
+});
+
+describe("tableLayout", () => {
+  it("uses smaller furniture on the portrait table", () => {
+    expect(tableLayout(true).coinDiameter).toBeLessThan(
+      tableLayout(false).coinDiameter,
+    );
+  });
+});
+
+describe("guideLines", () => {
+  const cue = { u: 100, v: 100 };
+  const ball = { u: 300, v: 100 } as RayResult["hit"];
+
+  it("returns only the aim line when no ball is hit", () => {
+    const g = guideLines(cue, { t: 50, hit: null, gu: 150, gv: 100 }, 0, 960);
+    expect(g.object).toBeNull();
+    expect(g.deflect).toBeNull();
+  });
+
+  it("sends the object ball straight on and stops the cue ball dead", () => {
+    const g = guideLines(cue, { t: 176, hit: ball, gu: 276, gv: 100 }, 0, 960);
+    expect(g.object?.u2).toBeGreaterThan(300);
+    expect(g.object?.v2).toBeCloseTo(100);
+    expect(g.deflect).toBeNull();
+  });
+
+  it("deflects the cue ball on a cut shot", () => {
+    const g = guideLines(cue, { t: 170, hit: ball, gu: 270, gv: 110 }, 0, 960);
+    expect(g.deflect).not.toBeNull();
   });
 });

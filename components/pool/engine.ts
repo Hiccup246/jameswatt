@@ -1,25 +1,42 @@
-// Pure 8-ball pool engine. No DOM, no React. Positions are in table space:
-// u runs along the long side (0..L), v across it (0..Wd). The renderer maps
-// (u, v) to screen coordinates, which lets one engine serve both the
-// landscape (desktop) and portrait (mobile) tables.
+/**
+ * @file Pure 8-ball pool engine. No DOM, no React.
+ *
+ * Positions are in table space: u runs along the long side (0..L), v across
+ * it (0..Wd). The renderer maps (u, v) to screen coordinates, which lets one
+ * engine serve both the landscape (desktop) and portrait (mobile) tables.
+ *
+ * The engine owns physics, the simplified 8-ball rules and the AI opponent.
+ * The renderer drives it once per animation frame: `step()` then
+ * `tickSinks()`, and reads `balls`, `turn`, `message` and `winner` back.
+ */
 
 export type Player = "you" | "james";
 export type Group = "solids" | "stripes";
 export type Vec3 = [number, number, number];
 
+/** Table dimensions in px. */
 export interface TableConfig {
+  /** Length of the felt along the long side (u). */
   L: number;
+  /** Width of the felt across the table (v). */
   Wd: number;
+  /** Ball radius. */
   r: number;
+  /** Maximum shot speed in px per frame. */
   maxV: number;
 }
 
+/** Where a ball's markings point, as unit vectors in screen space (z towards the viewer). */
 export interface Orientation {
+  /** Pole carrying the number disc. */
   n: Vec3;
+  /** Axis through the two stripe caps. */
   a: Vec3;
+  /** Tangent that fixes the number's rotation about `n`. */
   t1: Vec3;
 }
 
+/** A potted ball rolling into its pocket. */
 export interface Sink {
   /** 0 to 1 over about half a second. */
   t: number;
@@ -27,59 +44,84 @@ export interface Sink {
   pocket: number;
   /** Radius of that pocket. */
   R: number;
+  /** Where the ball was when potted. */
   u0: number;
   v0: number;
+  /** Pocket centre. */
   pu: number;
   pv: number;
 }
 
 export interface Ball {
+  /** Ball number: 0 is the cue ball, 1-7 solids, 8 the black, 9-15 stripes. */
   n: number;
   u: number;
   v: number;
+  /** Velocity in px per frame. */
   du: number;
   dv: number;
+  /** True while the ball is on the felt. */
   on: boolean;
+  /** Set while a potted ball is animating into its pocket. */
   sink: Sink | null;
   o: Orientation;
 }
 
+/** Emitted once when a ball is potted so the renderer can add effects. */
 export interface PotEvent {
   n: number;
   pocket: number;
   scratch: boolean;
 }
 
+/** A pocket centre and capture radius, in table space. */
 export interface Pocket {
   u: number;
   v: number;
   R: number;
 }
 
+/** Bookkeeping for the shot in flight, used to judge fouls when it stops. */
 export interface Shot {
   shooter: Player;
+  /** Number of the first ball the cue ball touched. */
   firstHit: number | null;
   potted: number[];
   scratch: boolean;
+  /** Whether the shooter had already cleared their group before this shot. */
   clearedBefore: boolean;
 }
 
+/** First contact of the cue ball along a ray. */
 export interface RayResult {
+  /** Distance travelled before contact. */
   t: number;
+  /** Object ball struck, or null when a cushion comes first. */
   hit: Ball | null;
+  /** Cue ball centre at contact (the "ghost ball"). */
   gu: number;
   gv: number;
 }
 
+/** A shot chosen for James. */
 export interface AiPlan {
+  /** Aim angle in radians. */
   ang: number;
+  /** Power from 0 to 1. */
   power: number;
 }
 
+/** Rack order from the apex, so the 8 sits in the middle and the back corners differ. */
 export const RACK_ORDER = [1, 9, 2, 10, 8, 3, 11, 7, 14, 4, 5, 13, 15, 6, 12];
 export const SUBSTEPS = 8;
 /** Sink progress per frame (t runs 0 to 1, about half a second at 60fps). */
 export const SINK_RATE = 0.032;
+/** Sink progress at which the ball reaches the pocket centre and stops rolling. */
+export const SINK_ROLL_END = 0.45;
+/** Sink progress at which the ball starts to shrink and darken inside the hole. */
+export const SINK_FALL_START = 0.2;
+/** Sink progress at which the falling ball starts to fade out. */
+export const SINK_FADE_START = 0.8;
 export const BREAK_MESSAGE =
   "Your break. Aim with the cursor, then press and drag to set power.";
 
@@ -96,12 +138,14 @@ const cross = (a: Vec3, b: Vec3): Vec3 => [
   a[0] * b[1] - a[1] * b[0],
 ];
 
+/** Dimensions for the portrait (mobile) or landscape (desktop) table. */
 export function tableConfig(mobile: boolean): TableConfig {
   return mobile
     ? { L: 580, Wd: 300, r: 9, maxV: 17 }
     : { L: 960, Wd: 480, r: 12, maxV: 26 };
 }
 
+/** Six pockets: four corners and the middle of each long rail. */
 export function pocketsFor({ L, Wd, r }: TableConfig): Pocket[] {
   const corner = r * 2.1;
   const side = r * 1.9;
@@ -115,10 +159,12 @@ export function pocketsFor({ L, Wd, r }: TableConfig): Pocket[] {
   ];
 }
 
+/** Whether ball `n` belongs to `group` (the 8 and cue ball belong to neither). */
 export function isOwn(group: Group, n: number): boolean {
   return group === "solids" ? n > 0 && n < 8 : n > 8;
 }
 
+/** Game state, physics, rules and AI for one 8-ball match against James. */
 export class PoolEngine {
   readonly cfg: TableConfig;
   readonly pockets: Pocket[];
@@ -162,6 +208,7 @@ export class PoolEngine {
     };
   }
 
+  /** Resets to a fresh break with the cue ball on the head string. */
   rack() {
     const { L, Wd, r } = this.cfg;
     const balls: Ball[] = [this.makeBall(0, L * 0.25, Wd / 2)];
@@ -197,10 +244,12 @@ export class PoolEngine {
     );
   }
 
+  /** Whether the player may currently line up a shot. */
   canAim(): boolean {
     return !this.moving && !this.winner && this.turn === "you" && this.cue.on;
   }
 
+  /** Strikes the cue ball at `ang` radians with `power` from 0 to 1. */
   shoot(ang: number, power: number) {
     const c = this.cue;
     c.du = Math.cos(ang) * power * this.cfg.maxV;
@@ -358,6 +407,7 @@ export class PoolEngine {
     return false;
   }
 
+  /** Applies the rules to the finished shot: fouls, groups, turn and win. */
   resolve() {
     this.moving = false;
     const sh = this.shot;
@@ -420,6 +470,7 @@ export class PoolEngine {
         : next);
   }
 
+  /** Puts the cue ball back on the head string, nudged clear of other balls. */
   private respotCue() {
     const { L, Wd, r } = this.cfg;
     const c = this.cue;
@@ -565,7 +616,12 @@ export class PoolEngine {
   }
 }
 
-/** Rotate a ball's orientation vectors for a rolled distance (dx, dy) in px. */
+/**
+ * Rotates a ball's orientation for a rolled distance (dx, dy) in px, using
+ * Rodrigues' formula about the axis perpendicular to the movement.
+ *
+ * @param rng Occasionally triggers a re-normalise to cancel numeric drift.
+ */
 export function roll(b: Ball, dx: number, dy: number, r: number, rng: Rng) {
   const d = Math.hypot(dx, dy);
   if (d < 1e-3) return;
