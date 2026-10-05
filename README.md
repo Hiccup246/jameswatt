@@ -72,6 +72,55 @@ This file contains some site metadata and lists out all of the sites 'sections'.
 
 <br>
 
+## 🎱 The pool hero
+
+The top of the page is a photo "coin" that tilts towards the cursor. Clicking it expands an 8-ball pool table out of the photo, and the visitor plays against an AI called James. Reset with "Play again" after a win; there is no close button.
+
+### File map
+
+| File                              | Responsibility                                                                                                                  |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `components/PoolHero.tsx`         | Closed coin, tilt, open state, theme and breakpoint detection, scale-to-fit. Lazy-loads the game.                               |
+| `components/pool/PoolGame.tsx`    | The table: rendering, pointer and keyboard input, the `requestAnimationFrame` loop, AI turn timing, sink and pocket animations. |
+| `components/pool/engine.ts`       | Pure game logic: physics, rules, AI shot choice. No DOM or React.                                                               |
+| `components/pool/geometry.ts`     | Pure helpers: table furniture sizes, cushion polygons, aiming guide lines.                                                      |
+| `components/pool/ballPaint.ts`    | Pure maths turning a ball's 3D orientation into CSS transforms for its number and stripes.                                      |
+| `components/pool/StatusPanel.tsx` | Message, scoreboard and "Play again" button, portalled below the table.                                                         |
+| `components/pool/theme.ts`        | Palettes for colours set from JS (light and dark) and ball colours.                                                             |
+
+### How it works
+
+- **Engine is separate from rendering.** `PoolEngine` works in table space (`u` along the long side, `v` across it). `PoolGame` maps this to screen space with `map()`, swapping axes on the portrait table, so one engine serves both orientations. Engine tests live next to it and run with `pnpm test:unit`.
+- **No per-frame React state.** A `requestAnimationFrame` loop steps the engine and writes `transform`, `opacity` and SVG attributes directly to elements held in refs. React state is only bumped when a shot resolves, to refresh the status panel.
+- **Lazy loading.** `PoolHero` loads `PoolGame` with `next/dynamic` on first hover, focus or click of the coin, so the game stays out of the initial bundle. The game mounts closed, calls `onReady`, and `PoolHero` then flips `open` so the clip-path transition has something to animate from.
+- **Opening animation.** The table layer animates `clip-path: circle()` from the coin's radius out past the corners. The coin fades while an identical photo "sticker" sits on the felt.
+- **Ball sinking.** A potted ball rolls to the pocket centre under the hole layer while a clone inside the pocket "well" shrinks, darkens and fades. Sink timings are the `SINK_*` constants in `engine.ts`.
+- **James.** `engine.planAi` picks the best legal ball and pocket with a small aim error. `PoolGame` plays that out over about five seconds (see the `AI_*` constants).
+
+### Responsive behaviour
+
+- Below Tailwind's `md` breakpoint (768px) the table is portrait (300 by 580 felt); at `md` and up it is landscape (960 by 480). Changing orientation remounts the game, which restarts the match.
+- The table is scaled down with a CSS transform to fit narrow containers. Pointer coordinates are converted back through `getBoundingClientRect`, so aiming stays accurate at any scale.
+- Touch input uses pointer events with `touch-action: none` on the felt, so dragging to set power does not scroll the page.
+
+### Theming
+
+Static colours use Tailwind `dark:` utilities. Colours set from JS (gradients, cue, pockets) come from `theme.ts`. `PoolHero` watches the `dark` class on `<html>` with a `MutationObserver` and passes `dark` down.
+
+### Accessibility
+
+- The coin is a real `<button aria-label="Open pool game">` with a visible focus ring. Once the table is open the coin is `inert`.
+- On opening, focus moves to the felt. Keyboard play: arrow keys aim (hold Shift for bigger steps), hold Space or Enter to charge power, release to shoot.
+- The status message is a `role="status"` live region, so turn changes, fouls and wins are announced. Balls, cue and chips are decorative and hidden from assistive tech.
+- `prefers-reduced-motion` disables the coin tilt, the open and close transition, and the pocket effects.
+
+### Changing the game
+
+- Tune physics, table sizes and the rack in `engine.ts`; table furniture sizes in `geometry.ts`; colours in `theme.ts`.
+- If you change the coin diameter, update both `COIN_SIZE` in `PoolHero.tsx` and `coinDiameter` in `geometry.ts`.
+
+<br>
+
 ## ⛰️ Environment Variables
 
 This project has three environment variables
