@@ -1,5 +1,7 @@
 import {
   BREAK_MESSAGE,
+  FOOT_SPOT,
+  HEAD_STRING,
   PoolEngine,
   RACK_ORDER,
   SINK_RATE,
@@ -7,6 +9,7 @@ import {
   pocketsFor,
   roll,
   tableConfig,
+  type Shot,
 } from "./engine";
 
 // Deterministic rng so racks and AI error are repeatable.
@@ -394,5 +397,208 @@ describe("roll", () => {
     const len = Math.hypot(...b.o.n);
     expect(len).toBeGreaterThan(0.99);
     expect(len).toBeLessThan(1.01);
+  });
+});
+
+describe("regulation rack", () => {
+  it("puts the front ball on the foot spot at 0.75L", () => {
+    const e = setup();
+    expect(FOOT_SPOT).toBe(0.75);
+    expect(e.balls[1].u).toBeCloseTo(960 * 0.75, 5);
+    expect(e.balls[1].v).toBeCloseTo(240, 5);
+  });
+
+  it("racks each row tight against the one in front", () => {
+    const e = setup();
+    const r = 12;
+    // Second row: balls 9 and 2 sit r*2*0.8661 behind the apex, 2r + 0.02 apart.
+    expect(e.balls[9].u - e.balls[1].u).toBeCloseTo(r * 2 * 0.8661, 5);
+    expect(Math.abs(e.balls[9].v - e.balls[2].v)).toBeCloseTo(2 * r + 0.02, 5);
+  });
+
+  it("keeps the cue ball on the head string", () => {
+    const e = setup();
+    expect(HEAD_STRING).toBe(0.25);
+    expect(e.cue.u).toBe(960 * HEAD_STRING);
+  });
+
+  it("starts with ball in hand in the kitchen", () => {
+    expect(setup().place).toBe("kitchen");
+  });
+});
+
+describe("cueSpotOk and placeCue", () => {
+  it("keeps the cue ball a radius clear of every cushion", () => {
+    const e = setup();
+    e.place = "anywhere";
+    clearTable(e);
+    expect(e.cueSpotOk(11, 240)).toBe(false);
+    expect(e.cueSpotOk(12, 240)).toBe(true);
+    expect(e.cueSpotOk(960 - 11, 240)).toBe(false);
+    expect(e.cueSpotOk(500, 11)).toBe(false);
+    expect(e.cueSpotOk(500, 480 - 11)).toBe(false);
+  });
+
+  it("limits the break to behind the head string", () => {
+    const e = setup();
+    clearTable(e);
+    expect(e.place).toBe("kitchen");
+    expect(e.cueSpotOk(960 * 0.25, 240)).toBe(true);
+    expect(e.cueSpotOk(960 * 0.25 + 1, 240)).toBe(false);
+    e.place = "anywhere";
+    expect(e.cueSpotOk(960 * 0.25 + 1, 240)).toBe(true);
+  });
+
+  it("refuses spots too close to another ball", () => {
+    const e = setup();
+    e.place = "anywhere";
+    clearTable(e);
+    e.balls[3].u = 400;
+    e.balls[3].v = 240;
+    expect(e.cueSpotOk(400 + 12 * 2.05 - 0.1, 240)).toBe(false);
+    expect(e.cueSpotOk(400 + 12 * 2.05, 240)).toBe(true);
+  });
+
+  it("clamps a placement into the kitchen", () => {
+    const e = setup();
+    clearTable(e);
+    expect(e.placeCue(700, 900)).toBe(true);
+    expect(e.cue.u).toBe(960 * 0.25);
+    expect(e.cue.v).toBe(480 - 12);
+  });
+
+  it("ignores a placement onto another ball and keeps the old spot", () => {
+    const e = setup();
+    e.place = "anywhere";
+    clearTable(e);
+    e.cue.u = 200;
+    e.cue.v = 200;
+    e.balls[3].u = 400;
+    e.balls[3].v = 240;
+    expect(e.placeCue(405, 240)).toBe(false);
+    expect([e.cue.u, e.cue.v]).toEqual([200, 200]);
+  });
+
+  it("does nothing when there is no ball in hand", () => {
+    const e = setup();
+    e.place = null;
+    expect(e.placeCue(100, 100)).toBe(false);
+  });
+
+  it("ends ball in hand when a shot is taken", () => {
+    const e = setup();
+    expect(e.place).toBe("kitchen");
+    e.shoot(0, 0.5);
+    expect(e.place).toBeNull();
+  });
+});
+
+describe("ball in hand after fouls", () => {
+  const shot = (shooter: "you" | "james", over: Partial<Shot> = {}): Shot => ({
+    shooter,
+    firstHit: null,
+    potted: [],
+    scratch: false,
+    clearedBefore: false,
+    ...over,
+  });
+
+  it("gives James ball in hand when you foul", () => {
+    const e = setup();
+    e.shot = shot("you");
+    e.resolve();
+    expect(e.turn).toBe("james");
+    expect(e.place).toBe("anywhere");
+    expect(e.message).toBe("Foul: no ball hit. James has ball in hand.");
+  });
+
+  it("gives you ball in hand when James fouls", () => {
+    const e = setup();
+    e.turn = "james";
+    e.shot = shot("james");
+    e.resolve();
+    expect(e.turn).toBe("you");
+    expect(e.place).toBe("anywhere");
+    expect(e.message).toBe(
+      "Foul: no ball hit. Ball in hand: drag the white anywhere, then shoot.",
+    );
+  });
+
+  it("covers a potted cue ball too, respotted on the head string", () => {
+    const e = setup();
+    e.cue.on = false;
+    e.shot = shot("you", { firstHit: 1, scratch: true });
+    e.resolve();
+    expect(e.place).toBe("anywhere");
+    expect(e.cue.u).toBe(960 * HEAD_STRING);
+    expect(e.message).toContain("James has ball in hand.");
+  });
+
+  it("clears ball in hand after a legal shot", () => {
+    const e = setup();
+    e.place = "kitchen";
+    e.groups = { you: "solids", james: "stripes" };
+    e.shot = shot("you", { firstHit: 2 });
+    e.resolve();
+    expect(e.place).toBeNull();
+    expect(e.message).toBe("James is lining up a shot.");
+  });
+});
+
+describe("James with ball in hand", () => {
+  it("picks a legal spot inside the kitchen on the break", () => {
+    const e = setup();
+    const p = e.pickPlacement();
+    expect(p.u).toBeLessThanOrEqual(960 * 0.25);
+    expect(e.cueSpotOk(p.u, p.v)).toBe(true);
+  });
+
+  it("picks a spot that has a shot when anywhere is allowed", () => {
+    const e = setup();
+    clearTable(e);
+    e.place = "anywhere";
+    e.groups = { you: "stripes", james: "solids" };
+    e.balls[15].on = false;
+    // A single target near a pocket, with the cue ball far from a good angle.
+    e.balls[1].u = 120;
+    e.balls[1].v = 90;
+    e.cue.u = 800;
+    e.cue.v = 400;
+    const p = e.pickPlacement();
+    expect(e.cueSpotOk(p.u, p.v)).toBe(true);
+    const chosen = e.bestShot(p);
+    expect(chosen).not.toBeNull();
+    const original = e.bestShot({ u: 800, v: 400 });
+    if (original) expect(chosen!.score).toBeLessThanOrEqual(original.score);
+  });
+
+  it("stays put when no placement gives a shot", () => {
+    const e = setup();
+    clearTable(e);
+    e.place = "anywhere";
+    e.groups = { you: "stripes", james: "solids" };
+    for (const n of [1, 2, 3, 4, 5, 6, 7]) e.balls[n].on = false;
+    e.balls[8].on = false;
+    e.cue.u = 300;
+    e.cue.v = 200;
+    expect(e.pickPlacement()).toEqual({ u: 300, v: 200 });
+  });
+
+  it("plans a shot from an explicit origin without moving the cue ball", () => {
+    const e = setup();
+    clearTable(e);
+    e.place = "anywhere";
+    e.groups = { you: "stripes", james: "solids" };
+    e.balls[15].on = false;
+    e.balls[1].u = 120;
+    e.balls[1].v = 90;
+    e.cue.u = 800;
+    e.cue.v = 400;
+    const from = { u: 260, v: 140 };
+    const plan = e.planAi(0, from);
+    // Aiming at the ghost ball for ball 1 from the origin, not from the cue ball.
+    const angToBall = Math.atan2(90 - from.v, 120 - from.u);
+    expect(Math.abs(plan.ang - angToBall)).toBeLessThan(0.5);
+    expect([e.cue.u, e.cue.v]).toEqual([800, 400]);
   });
 });

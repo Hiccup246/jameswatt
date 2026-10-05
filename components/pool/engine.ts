@@ -122,10 +122,32 @@ export const SINK_ROLL_END = 0.45;
 export const SINK_FALL_START = 0.2;
 /** Sink progress at which the falling ball starts to fade out. */
 export const SINK_FADE_START = 0.8;
+/** The head string, as a fraction of the table length from the head rail. */
+export const HEAD_STRING = 0.25;
+/** The foot spot (the rack apex), as a fraction of the table length. */
+export const FOOT_SPOT = 0.75;
 export const BREAK_MESSAGE =
-  "Your break. Aim with the cursor, then press and drag to set power.";
+  "Your break. Drag the white to place it behind the line, then aim and drag to shoot.";
+/** Gap between neighbouring balls in the rack, as a spacing beyond 2r. */
+const RACK_GAP = 0.02;
+/** A cue ball placement must keep at least this many radii from other balls. */
+const PLACE_CLEARANCE = 2.05;
+/** The AI samples this many columns and rows when choosing where to place the cue ball. */
+const PLACE_GRID_U = 17;
+const PLACE_GRID_V = 9;
 
 export type Rng = () => number;
+
+/**
+ * Where the player to shoot may put the cue ball. `kitchen` is behind the head
+ * string (the break), `anywhere` is ball in hand after a foul, null is none.
+ */
+export type Placement = "kitchen" | "anywhere" | null;
+
+/** A shot chosen for the AI, with the score the chooser ranked it by (lower is better). */
+export interface ScoredShot extends AiPlan {
+  score: number;
+}
 
 const normalise = (v: Vec3): Vec3 => {
   const l = Math.hypot(v[0], v[1], v[2]) || 1;
@@ -177,6 +199,8 @@ export class PoolEngine {
   moving = false;
   shot: Shot | null = null;
   message = BREAK_MESSAGE;
+  /** Ball in hand: where the player to shoot may place the cue ball. */
+  place: Placement = "kitchen";
   /** Pots since the renderer last drained this queue. */
   potEvents: PotEvent[] = [];
 
@@ -211,15 +235,15 @@ export class PoolEngine {
   /** Resets to a fresh break with the cue ball on the head string. */
   rack() {
     const { L, Wd, r } = this.cfg;
-    const balls: Ball[] = [this.makeBall(0, L * 0.25, Wd / 2)];
+    const balls: Ball[] = [this.makeBall(0, L * HEAD_STRING, Wd / 2)];
     let k = 0;
     for (let i = 0; i < 5; i++) {
       for (let j = 0; j <= i; j++) {
         const n = RACK_ORDER[k++];
         balls[n] = this.makeBall(
           n,
-          L * 0.73 + i * r * 2 * 0.8661 + i * 0.3,
-          Wd / 2 + (j - i / 2) * (r * 2 + 0.4),
+          L * FOOT_SPOT + i * r * 2 * 0.8661,
+          Wd / 2 + (j - i / 2) * (r * 2 + RACK_GAP),
         );
       }
     }
@@ -230,6 +254,7 @@ export class PoolEngine {
     this.moving = false;
     this.shot = null;
     this.message = BREAK_MESSAGE;
+    this.place = "kitchen";
     this.potEvents = [];
   }
 
@@ -263,6 +288,44 @@ export class PoolEngine {
       clearedBefore: !!g && this.left(g).length === 0,
     };
     this.moving = true;
+    this.place = null;
+  }
+
+  /** Whether the cue ball may rest at (u, v) under the current ball in hand. */
+  cueSpotOk(u: number, v: number): boolean {
+    const { L, Wd, r } = this.cfg;
+    if (u < r || u > L - r || v < r || v > Wd - r) return false;
+    if (this.place === "kitchen" && u > L * HEAD_STRING) return false;
+    return this.balls.every(
+      (b) =>
+        !b.on ||
+        b.n === 0 ||
+        Math.hypot(b.u - u, b.v - v) >= r * PLACE_CLEARANCE,
+    );
+  }
+
+  /** The furthest the cue ball may be placed along the long axis. */
+  private placeMaxU(): number {
+    const { L, r } = this.cfg;
+    return this.place === "kitchen" ? L * HEAD_STRING : L - r;
+  }
+
+  /**
+   * Moves the cue ball towards (u, v), clamped to the allowed area. Ignored if
+   * the clamped spot overlaps another ball. Returns whether it moved.
+   */
+  placeCue(u: number, v: number): boolean {
+    if (!this.place) return false;
+    const { Wd, r } = this.cfg;
+    const tu = Math.max(r, Math.min(this.placeMaxU(), u));
+    const tv = Math.max(r, Math.min(Wd - r, v));
+    if (!this.cueSpotOk(tu, tv)) return false;
+    const c = this.cue;
+    c.u = tu;
+    c.v = tv;
+    c.du = 0;
+    c.dv = 0;
+    return true;
   }
 
   /** Advance sink animations. Call once per frame whether or not moving. */
@@ -458,8 +521,17 @@ export class PoolEngine {
 
     if (sh.scratch) this.respotCue();
 
-    const next =
-      this.turn === "you" ? "Your shot." : "James is lining up a shot.";
+    // A foul gives the other player (who now has the turn) ball in hand.
+    this.place = reason ? "anywhere" : null;
+    let next: string;
+    if (reason) {
+      next =
+        this.turn === "you"
+          ? "Ball in hand: drag the white anywhere, then shoot."
+          : "James has ball in hand.";
+    } else {
+      next = this.turn === "you" ? "Your shot." : "James is lining up a shot.";
+    }
     this.message =
       (reason ? `Foul: ${reason}. ` : "") +
       note +
@@ -478,7 +550,7 @@ export class PoolEngine {
     c.sink = null;
     c.du = 0;
     c.dv = 0;
-    c.u = L * 0.25;
+    c.u = L * HEAD_STRING;
     c.v = Wd / 2;
     for (
       let k = 0;
@@ -530,16 +602,22 @@ export class PoolEngine {
     };
   }
 
-  /** Choose an aim angle and power for James. Does not mutate game state. */
-  planAi(currentAim: number): AiPlan {
-    const { L, r } = this.cfg;
-    const c = this.cue;
+  /** Balls James is allowed to hit first: his group, then the 8 once they are cleared. */
+  private aiTargets(): Ball[] {
     const g = this.groups.james;
     let targets = g
       ? this.left(g)
       : this.balls.filter((b) => b.on && b.n !== 0 && b.n !== 8);
     if (g && !targets.length) targets = [this.balls[8]].filter((b) => b.on);
+    return targets;
+  }
 
+  /**
+   * The best ghost-ball shot at a pocket for a cue ball resting at `origin`,
+   * or null if no clear cut exists. Lower scores are better.
+   */
+  bestShot(origin: { u: number; v: number }): ScoredShot | null {
+    const { L, r } = this.cfg;
     const clear = (
       au: number,
       av: number,
@@ -559,8 +637,8 @@ export class PoolEngine {
         return Math.hypot(au + du * t - o.u, av + dv * t - o.v) > r * 2;
       });
 
-    let best: (AiPlan & { score: number }) | null = null;
-    for (const t of targets) {
+    let best: ScoredShot | null = null;
+    for (const t of this.aiTargets()) {
       for (const p of this.pockets) {
         const pu = p.u - t.u;
         const pv = p.v - t.v;
@@ -569,12 +647,16 @@ export class PoolEngine {
         const nv = pv / pl;
         const gu = t.u - nu * r * 2;
         const gv = t.v - nv * r * 2;
-        const au = gu - c.u;
-        const av = gv - c.v;
+        const au = gu - origin.u;
+        const av = gv - origin.v;
         const al = Math.hypot(au, av);
+        if (al < r) continue;
         const cos = (au * nu + av * nv) / al;
         if (cos < 0.35) continue;
-        if (!clear(c.u, c.v, gu, gv, t) || !clear(t.u, t.v, p.u, p.v, t))
+        if (
+          !clear(origin.u, origin.v, gu, gv, t) ||
+          !clear(t.u, t.v, p.u, p.v, t)
+        )
           continue;
         const score = (1 - cos) * 3 + al / L + pl / L;
         if (!best || score < best.score) {
@@ -586,17 +668,52 @@ export class PoolEngine {
         }
       }
     }
+    return best;
+  }
 
+  /**
+   * Where James puts the cue ball with ball in hand: the legal spot on a
+   * 17 by 9 grid with the best shot, or where it already is if none has one.
+   */
+  pickPlacement(): { u: number; v: number } {
+    const { Wd, r } = this.cfg;
+    const c = this.cue;
+    const uMax = this.placeMaxU();
+    let best: { u: number; v: number; score: number } | null = null;
+    for (let i = 0; i < PLACE_GRID_U; i++) {
+      for (let j = 0; j < PLACE_GRID_V; j++) {
+        const u = r + ((uMax - r) * i) / (PLACE_GRID_U - 1);
+        const v = r + ((Wd - 2 * r) * j) / (PLACE_GRID_V - 1);
+        if (!this.cueSpotOk(u, v)) continue;
+        const shot = this.bestShot({ u, v });
+        if (shot && (!best || shot.score < best.score)) {
+          best = { u, v, score: shot.score };
+        }
+      }
+    }
+    return best ? { u: best.u, v: best.v } : { u: c.u, v: c.v };
+  }
+
+  /**
+   * Choose an aim angle and power for James, as if the cue ball rested at
+   * `origin` (default: where it is). Does not mutate game state.
+   */
+  planAi(
+    currentAim: number,
+    origin: { u: number; v: number } = this.cue,
+  ): AiPlan {
     let plan: AiPlan;
+    const best = this.bestShot(origin);
     if (best) {
       plan = { ang: best.ang, power: best.power };
     } else {
-      const t = [...targets].sort(
+      const t = [...this.aiTargets()].sort(
         (a, b) =>
-          Math.hypot(a.u - c.u, a.v - c.v) - Math.hypot(b.u - c.u, b.v - c.v),
+          Math.hypot(a.u - origin.u, a.v - origin.v) -
+          Math.hypot(b.u - origin.u, b.v - origin.v),
       )[0];
       plan = t
-        ? { ang: Math.atan2(t.v - c.v, t.u - c.u), power: 0.6 }
+        ? { ang: Math.atan2(t.v - origin.v, t.u - origin.u), power: 0.6 }
         : { ang: 0, power: 0.5 };
     }
 
@@ -604,7 +721,7 @@ export class PoolEngine {
     const isBreak = this.balls.filter((b) => b.on).length === 16;
     if (isBreak) {
       plan = {
-        ang: Math.atan2(this.balls[1].v - c.v, this.balls[1].u - c.u),
+        ang: Math.atan2(this.balls[1].v - origin.v, this.balls[1].u - origin.u),
         power: 0.95,
       };
     }

@@ -19,6 +19,8 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import JamesWattImage from "../../public/panthy-tiny.webp";
 import {
+  FOOT_SPOT,
+  HEAD_STRING,
   PoolEngine,
   SINK_FADE_START,
   SINK_FALL_START,
@@ -611,8 +613,8 @@ export default function PoolGame({
   });
 
   // Head string at a quarter of the table, foot spot at the rack apex.
-  const [hx, hy] = map(L * 0.25, 0);
-  const [fx, fy] = map(L * 0.73, Wd / 2);
+  const [hx, hy] = map(L * HEAD_STRING, 0);
+  const [fx, fy] = map(L * FOOT_SPOT, Wd / 2);
   // The clip circle grows past the corners so the cue is never clipped.
   const clipOpen = Math.hypot(TW, TH) / 2 + L * 0.65;
   const clip = `circle(${open ? clipOpen : D / 2 - 1}px at 50% 50%)`;
