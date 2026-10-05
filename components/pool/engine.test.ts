@@ -2,6 +2,7 @@ import {
   BREAK_MESSAGE,
   PoolEngine,
   RACK_ORDER,
+  SINK_RATE,
   isOwn,
   pocketsFor,
   roll,
@@ -148,6 +149,74 @@ describe("physics", () => {
     e.moving = true;
     runUntilResolved(e);
     expect(e.balls[1].on).toBe(false);
+  });
+});
+
+describe("sinking", () => {
+  function potBall(e: PoolEngine, n: number) {
+    clearTable(e);
+    e.cue.u = 300;
+    e.cue.v = 300;
+    e.balls[n].u = 40;
+    e.balls[n].v = 40;
+    e.balls[n].du = -6;
+    e.balls[n].dv = -6;
+    e.shot = {
+      shooter: "you",
+      firstHit: n,
+      potted: [],
+      scratch: false,
+      clearedBefore: false,
+    };
+    e.moving = true;
+    for (let i = 0; i < 60 && e.potEvents.length === 0; i++) e.step();
+  }
+
+  it("queues one pot event with the pocket index", () => {
+    const e = setup();
+    potBall(e, 1);
+    expect(e.potEvents).toEqual([{ n: 1, pocket: 0, scratch: false }]);
+    expect(e.balls[1].sink?.pocket).toBe(0);
+    expect(e.balls[1].sink?.R).toBeCloseTo(12 * 2.1, 5);
+  });
+
+  it("flags the cue ball as a scratch", () => {
+    const e = setup();
+    clearTable(e);
+    e.cue.u = 40;
+    e.cue.v = 40;
+    e.cue.du = -6;
+    e.cue.dv = -6;
+    e.shot = {
+      shooter: "you",
+      firstHit: null,
+      potted: [],
+      scratch: false,
+      clearedBefore: false,
+    };
+    e.moving = true;
+    for (let i = 0; i < 60 && e.potEvents.length === 0; i++) e.step();
+    expect(e.potEvents[0]).toMatchObject({ n: 0, scratch: true });
+  });
+
+  it("finishes the sink in about half a second", () => {
+    const e = setup();
+    potBall(e, 1);
+    let ticks = 0;
+    while (e.balls[1].sink && ticks < 100) {
+      e.tickSinks();
+      ticks++;
+    }
+    expect(ticks).toBe(Math.ceil(1 / SINK_RATE));
+    expect(ticks).toBeGreaterThanOrEqual(30);
+    expect(ticks).toBeLessThanOrEqual(33);
+  });
+
+  it("clears queued events on rack", () => {
+    const e = setup();
+    potBall(e, 1);
+    e.rack();
+    expect(e.potEvents).toEqual([]);
   });
 });
 

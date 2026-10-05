@@ -21,7 +21,12 @@ export interface Orientation {
 }
 
 export interface Sink {
+  /** 0 to 1 over about half a second. */
   t: number;
+  /** Index into `PoolEngine.pockets`. */
+  pocket: number;
+  /** Radius of that pocket. */
+  R: number;
   u0: number;
   v0: number;
   pu: number;
@@ -37,6 +42,12 @@ export interface Ball {
   on: boolean;
   sink: Sink | null;
   o: Orientation;
+}
+
+export interface PotEvent {
+  n: number;
+  pocket: number;
+  scratch: boolean;
 }
 
 export interface Pocket {
@@ -67,6 +78,8 @@ export interface AiPlan {
 
 export const RACK_ORDER = [1, 9, 2, 10, 8, 3, 11, 7, 14, 4, 5, 13, 15, 6, 12];
 export const SUBSTEPS = 8;
+/** Sink progress per frame (t runs 0 to 1, about half a second at 60fps). */
+export const SINK_RATE = 0.032;
 export const BREAK_MESSAGE =
   "Your break. Aim with the cursor, then press and drag to set power.";
 
@@ -118,6 +131,8 @@ export class PoolEngine {
   moving = false;
   shot: Shot | null = null;
   message = BREAK_MESSAGE;
+  /** Pots since the renderer last drained this queue. */
+  potEvents: PotEvent[] = [];
 
   constructor(cfg: TableConfig, rng: Rng = Math.random) {
     this.cfg = cfg;
@@ -168,6 +183,7 @@ export class PoolEngine {
     this.moving = false;
     this.shot = null;
     this.message = BREAK_MESSAGE;
+    this.potEvents = [];
   }
 
   get cue(): Ball {
@@ -204,7 +220,7 @@ export class PoolEngine {
   tickSinks() {
     for (const b of this.balls) {
       if (b.sink) {
-        b.sink.t += 0.1;
+        b.sink.t += SINK_RATE;
         if (b.sink.t >= 1) b.sink = null;
       }
     }
@@ -301,9 +317,19 @@ export class PoolEngine {
         }
         if (pk) {
           b.on = false;
-          b.sink = { t: 0, u0: b.u, v0: b.v, pu: pk.u, pv: pk.v };
+          const pocket = this.pockets.indexOf(pk);
+          b.sink = {
+            t: 0,
+            pocket,
+            R: pk.R,
+            u0: b.u,
+            v0: b.v,
+            pu: pk.u,
+            pv: pk.v,
+          };
           b.du = 0;
           b.dv = 0;
+          this.potEvents.push({ n: b.n, pocket, scratch: b.n === 0 });
           if (this.shot) {
             if (b.n === 0) this.shot.scratch = true;
             else this.shot.potted.push(b.n);
