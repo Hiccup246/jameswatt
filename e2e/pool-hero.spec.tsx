@@ -58,10 +58,10 @@ test.describe("Pool hero", () => {
     await expect(felt).toBeVisible();
     await expect(page.getByText(/Your break/)).toBeVisible();
 
-    await test.step("The coin is no longer available to click", async () => {
-      await expect(page.getByRole("button", { name: /pool game/ })).toHaveCount(
-        0,
-      );
+    await test.step("The coin is inert so it cannot be clicked or focused", async () => {
+      await expect(
+        page.locator("[inert] button[aria-label=\"Open pool game\"]"),
+      ).toHaveCount(1);
     });
   });
 
