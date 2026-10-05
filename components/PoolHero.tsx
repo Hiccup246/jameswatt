@@ -19,18 +19,13 @@ import {
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import JamesWattImage from "../public/panthy-tiny.webp";
+import { MAX_TILT, coinTilt } from "./coinTilt";
 
 // The game is only needed after the first click, so keep it out of the
 // initial bundle. Hovering the coin preloads it.
 const loadGame = () => import("./pool/PoolGame");
 const PoolGame = dynamic(loadGame, { ssr: false });
 
-const clamp = (n: number) => Math.max(-1, Math.min(1, n));
-
-/** Maximum coin tilt in degrees. */
-const MAX_TILT = 30;
-/** The cursor must be this many coin-widths away to reach the maximum tilt. */
-const TILT_RANGE = 2.2;
 /** Perspective distance in px for the coin's 3D tilt (smaller is stronger). */
 const COIN_PERSPECTIVE = 700;
 
@@ -139,14 +134,10 @@ export default function PoolHero() {
     const onPointerMove = (e: PointerEvent) => {
       const coin = coinRef.current?.parentElement;
       if (!coin) return;
-      const r = coin.getBoundingClientRect();
-      const dx = clamp(
-        (e.clientX - (r.left + r.width / 2)) / (r.width * TILT_RANGE),
+      mouseRef.current = coinTilt(
+        { x: e.clientX, y: e.clientY },
+        coin.getBoundingClientRect(),
       );
-      const dy = clamp(
-        (e.clientY - (r.top + r.height / 2)) / (r.height * TILT_RANGE),
-      );
-      mouseRef.current = { x: -dy * MAX_TILT, y: dx * MAX_TILT };
       startLoop();
     };
     window.addEventListener("pointermove", onPointerMove);
