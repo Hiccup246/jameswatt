@@ -18,7 +18,7 @@ export const BOOKS: Book[] = [
     genre: "Nonfiction",
     status: BookStatus.Reading,
     dateStarted: "03/10/2026",
-    dateCompleted: "",
+    dateCompleted: "05/10/2026",
   },
   {
     name: "Politics On the Edge: A Memoir From Within",
