@@ -31,6 +31,8 @@ const clamp = (n: number) => Math.max(-1, Math.min(1, n));
 const MAX_TILT = 30;
 /** The cursor must be this many coin-widths away to reach the maximum tilt. */
 const TILT_RANGE = 2.2;
+/** Perspective distance in px for the coin's 3D tilt (smaller is stronger). */
+const COIN_PERSPECTIVE = 700;
 
 // Keep in sync with `coinDiameter` in pool/geometry.ts, which the photo
 // sticker on the felt must match. Literal classes so Tailwind can see them.
@@ -272,7 +274,6 @@ export default function PoolHero() {
             inert={open}
             className={`absolute inset-0 z-[2] m-auto ${COIN_SIZE} ${open ? "pointer-events-none" : ""}`}
             style={{
-              perspective: 700,
               opacity: open ? 0 : 1,
               transition: reduced || !open ? "none" : "opacity .2s ease .3s",
             }}
@@ -286,33 +287,40 @@ export default function PoolHero() {
               onFocus={loadGame}
               className="absolute inset-0 cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
+              {/* The perspective must sit on the direct parent of the rotating
+                  coin. Set on an ancestor above the button it is flattened away. */}
               <div
-                ref={coinRef}
-                className="relative h-full w-full"
-                style={{ transformStyle: "preserve-3d" }}
+                className="absolute inset-0"
+                style={{ perspective: COIN_PERSPECTIVE }}
               >
                 <div
-                  className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
-                  style={{ transform: "translateZ(-9px)" }}
-                />
-                <div
-                  className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
-                  style={{ transform: "translateZ(-4.5px)" }}
-                />
-                <div className="bg-darkbrown dark:bg-darkteal absolute inset-0 overflow-hidden rounded-full border-4 border-white shadow-[0_0_0_2px_rgba(44,54,57,.28),0_26px_40px_-18px_rgba(120,80,40,.45)] dark:border-[#3f4e4f] dark:shadow-[0_0_0_2px_rgba(215,220,226,.55),0_26px_40px_-18px_rgba(0,0,0,.7)]">
-                  <Image
-                    src={JamesWattImage}
-                    alt="James Watt"
-                    fill
-                    priority
-                    placeholder="blur"
-                    sizes="180px"
-                    className="pointer-events-none object-cover object-[50%_22%]"
+                  ref={coinRef}
+                  className="relative h-full w-full"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div
+                    className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
+                    style={{ transform: "translateZ(-9px)" }}
                   />
                   <div
-                    ref={glintRef}
-                    className="pointer-events-none absolute inset-0 rounded-full opacity-0"
+                    className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
+                    style={{ transform: "translateZ(-4.5px)" }}
                   />
+                  <div className="bg-darkbrown dark:bg-darkteal absolute inset-0 overflow-hidden rounded-full border-4 border-white shadow-[0_0_0_2px_rgba(44,54,57,.28),0_26px_40px_-18px_rgba(120,80,40,.45)] dark:border-[#3f4e4f] dark:shadow-[0_0_0_2px_rgba(215,220,226,.55),0_26px_40px_-18px_rgba(0,0,0,.7)]">
+                    <Image
+                      src={JamesWattImage}
+                      alt="James Watt"
+                      fill
+                      priority
+                      placeholder="blur"
+                      sizes="180px"
+                      className="pointer-events-none object-cover object-[50%_22%]"
+                    />
+                    <div
+                      ref={glintRef}
+                      className="pointer-events-none absolute inset-0 rounded-full opacity-0"
+                    />
+                  </div>
                 </div>
               </div>
             </button>
