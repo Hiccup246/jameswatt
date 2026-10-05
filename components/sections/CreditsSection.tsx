@@ -28,7 +28,6 @@ export default function CreditsSection() {
             <a
               className="pr-2 group-hover:underline"
               href="https://icons8.com/"
-              aria-label="Icons8 Homepage"
             >
               Icons8 (Icons)
             </a>
@@ -46,7 +45,6 @@ export default function CreditsSection() {
             <a
               className="pr-2 group-hover:underline"
               href="https://fontawesome.com/"
-              aria-label="Font Awesome Homepage"
             >
               Font Awesome (Icons)
             </a>
@@ -64,7 +62,6 @@ export default function CreditsSection() {
             <a
               className="pr-2 group-hover:underline"
               href="https://brittanychiang.com/"
-              aria-label="Brittany Chiang Website"
             >
               Brittany Chiang (Inspired the programming experience component)
             </a>
@@ -82,7 +79,6 @@ export default function CreditsSection() {
             <a
               className="pr-2 group-hover:underline"
               href="https://marguerite.io/"
-              aria-label="Marguerite Roth Website"
             >
               Marguerite Roth (Inspired the bookshelf component)
             </a>
@@ -105,7 +101,6 @@ export default function CreditsSection() {
             <a
               className="pr-2 group-hover:underline"
               href="https://fresh.deno.dev/"
-              aria-label="Fresh Framework Homepage"
             >
               Fresh Framework (Dripping Design + Project Showcase)
             </a>
@@ -123,7 +118,6 @@ export default function CreditsSection() {
             <a
               className="pr-2 group-hover:underline"
               href="https://www.joshwcomeau.com/"
-              aria-label="Josh Comeau Website"
             >
               Josh Comeau (Moon Icon)
             </a>
@@ -143,11 +137,7 @@ export default function CreditsSection() {
           </li>
 
           <li className="hover group mb-5">
-            <a
-              className="pr-2 group-hover:underline"
-              href="https://nuxt.com/"
-              aria-label="Nuxt Framework Homepage"
-            >
+            <a className="pr-2 group-hover:underline" href="https://nuxt.com/">
               Nuxt Framework (Technologies Section)
             </a>
 

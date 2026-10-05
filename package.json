@@ -10,6 +10,12 @@
   },
   "license": "MIT",
   "packageManager": "pnpm@10.7.1",
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 safari versions",
+    "last 2 edge versions"
+  ],
   "keywords": [
     "nextjs",
     "tailwind",

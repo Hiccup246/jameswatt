@@ -40,10 +40,9 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           <Image
             src={props.projectImageSrc}
             width={600}
-            className="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
+            className="border-lightgrey aspect-video w-full rounded-lg border-2 object-cover transition-shadow duration-150 group-hover:shadow-lg"
             height={337}
-            sizes="(min-width: 768px) 480px,
-                               180px"
+            sizes="(min-width: 768px) 320px, 100vw"
             alt={`${props.projectName} Website Screenshot`}
           />
         </a>

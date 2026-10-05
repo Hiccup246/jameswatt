@@ -3,6 +3,14 @@ import { Metadata } from "next";
 import { Roboto, Open_Sans } from "next/font/google";
 import ThemeProvider from "../components/ThemeProvider";
 import Script from "next/script";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+// Inlined so the theme is applied before first paint without a blocking request.
+const themeLoader = readFileSync(
+  join(process.cwd(), "public", "themeLoader.js"),
+  "utf8",
+);
 
 const _roboto = Roboto({
   weight: ["400", "700"],
@@ -66,9 +74,7 @@ export default function RootLayout({
       <head>
         <script
           id="themeLoader"
-          async={false}
-          defer={false}
-          src="./themeLoader.js"
+          dangerouslySetInnerHTML={{ __html: themeLoader }}
         />
       </head>
       <body className="bg-brown dark:bg-darkgrey">

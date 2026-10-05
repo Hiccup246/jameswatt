@@ -26,7 +26,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Icons8 Homepage"
               class="pr-2 group-hover:underline"
               href="https://icons8.com/"
             >
@@ -54,7 +53,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Font Awesome Homepage"
               class="pr-2 group-hover:underline"
               href="https://fontawesome.com/"
             >
@@ -80,7 +78,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Brittany Chiang Website"
               class="pr-2 group-hover:underline"
               href="https://brittanychiang.com/"
             >
@@ -129,7 +126,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Marguerite Roth Website"
               class="pr-2 group-hover:underline"
               href="https://marguerite.io/"
             >
@@ -156,7 +152,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Fresh Framework Homepage"
               class="pr-2 group-hover:underline"
               href="https://fresh.deno.dev/"
             >
@@ -198,7 +193,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Josh Comeau Website"
               class="pr-2 group-hover:underline"
               href="https://www.joshwcomeau.com/"
             >
@@ -225,7 +219,6 @@ exports[`CreditsSection renders correctly 1`] = `
             class="hover group mb-5"
           >
             <a
-              aria-label="Nuxt Framework Homepage"
               class="pr-2 group-hover:underline"
               href="https://nuxt.com/"
             >

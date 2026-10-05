@@ -32,6 +32,8 @@ const COIN_PERSPECTIVE = 700;
 
 // Keep in sync with `coinDiameter` in pool/geometry.ts, which the photo
 // sticker on the felt must match. Literal classes so Tailwind can see them.
+const TABLE_PORTRAIT = { w: 340, h: 620 };
+const TABLE_LANDSCAPE = { w: 1028, h: 548 };
 const COIN_SIZE = "h-[130px] w-[130px] md:h-[180px] md:w-[180px]";
 
 /**
@@ -64,7 +66,6 @@ export default function PoolHero() {
   } | null>(null);
 
   const outerRef = useRef<HTMLDivElement>(null);
-  const boxRef = useRef<HTMLDivElement>(null);
   const coinRef = useRef<HTMLDivElement>(null);
   const coinButtonRef = useRef<HTMLButtonElement>(null);
   const glintRef = useRef<HTMLDivElement>(null);
@@ -162,27 +163,22 @@ export default function PoolHero() {
   }, []);
 
   // Scale the table down to fit narrow containers, keeping aspect ratio. A
-  // layout effect so the first paint is already scaled.
+  // layout effect so the first paint is already scaled. Until it has run the
+  // wrapper reserves the same space in CSS, so nothing shifts.
   useLayoutEffect(() => {
     const outer = outerRef.current;
-    const box = boxRef.current;
-    if (!outer || !box || typeof ResizeObserver === "undefined") return;
+    if (!outer || typeof ResizeObserver === "undefined") return;
+    const natural = layoutMobile ? TABLE_PORTRAIT : TABLE_LANDSCAPE;
     const measure = () => {
-      const avail = outer.parentElement?.clientWidth ?? box.offsetWidth;
-      const scale = Math.min(1, avail / box.offsetWidth);
-      setSize({
-        scale,
-        w: box.offsetWidth * scale,
-        h: box.offsetHeight * scale,
-      });
+      const avail = outer.parentElement?.clientWidth ?? natural.w;
+      const scale = Math.min(1, avail / natural.w);
+      setSize({ scale, w: natural.w * scale, h: natural.h * scale });
     };
     measure();
     const ro = new ResizeObserver(measure);
     if (outer.parentElement) ro.observe(outer.parentElement);
-    // The box changes size when the portrait/landscape breakpoint is crossed.
-    ro.observe(box);
     return () => ro.disconnect();
-  }, []);
+  }, [layoutMobile]);
 
   // The game mounts closed so the open transition has something to animate
   // from, then calls back here to flip it open.
@@ -230,13 +226,20 @@ export default function PoolHero() {
     <div className="flex w-full flex-col items-center gap-[36px] md:gap-[48px]">
       <div
         ref={outerRef}
-        className="relative flex-none"
+        className={`relative flex-none ${
+          size
+            ? ""
+            : "aspect-340/620 w-full max-w-[340px] md:aspect-1028/548 md:max-w-[1028px]"
+        }`}
         style={size ? { width: size.w, height: size.h } : undefined}
       >
         <div
-          ref={boxRef}
           className={`relative origin-top-left ${
-            layoutMobile ? "h-[620px] w-[340px]" : "h-[548px] w-[1028px]"
+            size
+              ? layoutMobile
+                ? "h-[620px] w-[340px]"
+                : "h-[548px] w-[1028px]"
+              : "size-full"
           }`}
           style={size ? { transform: `scale(${size.scale})` } : undefined}
         >
@@ -293,6 +296,7 @@ export default function PoolHero() {
                       alt="James Watt"
                       fill
                       priority
+                      fetchPriority="high"
                       placeholder="blur"
                       sizes="180px"
                       className="pointer-events-none object-cover object-[50%_22%]"
