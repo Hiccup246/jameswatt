@@ -84,14 +84,14 @@ exports[`AboutMeSection renders correctly 1`] = `
             </svg>
           </div>
           <div
-            class="bg-brown dark:bg-darkgrey invisible absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
+            class="bg-brown dark:bg-darkgrey invisible absolute top-[50px] left-[-128px] h-fit w-[246px] rounded-lg opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
             role="tooltip"
           >
             <div
               class="relative"
             >
               <div
-                class="bg-brown dark:bg-darkgrey absolute -top-[20px] right-[90px] z-10 h-4 w-4 rotate-45"
+                class="bg-brown dark:bg-darkgrey absolute top-[-20px] right-[90px] z-10 size-4 rotate-45"
               />
               <div
                 class="z-20 my-3 flex w-full justify-center"
@@ -107,7 +107,7 @@ exports[`AboutMeSection renders correctly 1`] = `
                   Open in email
                 </a>
                 <button
-                  class="bg-darkbrown dark:bg-darkteal z-20 ml-2 h-fit w-fit rounded p-1 px-2 hover:opacity-70 active:-translate-y-0.5"
+                  class="bg-darkbrown dark:bg-darkteal z-20 ml-2 size-fit rounded p-1 px-2 hover:opacity-70 active:-translate-y-0.5"
                 >
                   Copy email
                 </button>

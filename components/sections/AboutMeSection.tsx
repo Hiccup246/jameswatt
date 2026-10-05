@@ -65,10 +65,10 @@ export default function AboutMeSection() {
 
           <div
             role="tooltip"
-            className="bg-brown dark:bg-darkgrey invisible absolute top-[50px] -left-[128px] h-fit w-[246px] rounded-lg opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
+            className="bg-brown dark:bg-darkgrey invisible absolute top-[50px] left-[-128px] h-fit w-[246px] rounded-lg opacity-0 shadow delay-200 duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
           >
             <div className="relative">
-              <div className="bg-brown dark:bg-darkgrey absolute -top-[20px] right-[90px] z-10 h-4 w-4 rotate-45" />
+              <div className="bg-brown dark:bg-darkgrey absolute top-[-20px] right-[90px] z-10 size-4 rotate-45" />
 
               <div className="z-20 my-3 flex w-full justify-center">
                 <a
@@ -88,7 +88,7 @@ export default function AboutMeSection() {
                       process.env.NEXT_PUBLIC_AUTHOR_CONTACT_EMAIL,
                     )
                   }
-                  className="bg-darkbrown dark:bg-darkteal z-20 ml-2 h-fit w-fit rounded p-1 px-2 hover:opacity-70 active:-translate-y-0.5"
+                  className="bg-darkbrown dark:bg-darkteal z-20 ml-2 size-fit rounded p-1 px-2 hover:opacity-70 active:-translate-y-0.5"
                 >
                   Copy email
                 </button>

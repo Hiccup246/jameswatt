@@ -817,7 +817,7 @@ export default function PoolGame({
         {diamonds.map((d, i) => (
           <div
             key={i}
-            className="absolute h-[6px] w-[6px] rounded-full"
+            className="absolute size-[6px] rounded-full"
             style={{
               left: d.x,
               top: d.y,
@@ -1062,7 +1062,7 @@ export default function PoolGame({
               ref={(el) => {
                 ringEls.current[i] = el;
               }}
-              className="pointer-events-none absolute -inset-[3px] rounded-full border-[3px] opacity-0"
+              className="pointer-events-none absolute inset-[-3px] rounded-full border-[3px] opacity-0"
               style={{ borderColor: pal.ringInk }}
             />
           </div>

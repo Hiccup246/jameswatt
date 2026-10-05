@@ -31,7 +31,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="SavvyDiction Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -56,7 +56,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 SavvyDiction
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               />
             </div>
           </div>
@@ -80,7 +80,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Satirical podcast fan site Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -105,7 +105,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Satirical podcast fan site
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Satirical podcast fan site Github Project"
@@ -143,7 +143,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="World leader leaderboard Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -168,7 +168,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 World leader leaderboard
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               />
             </div>
           </div>
@@ -188,7 +188,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Gaff Bingo Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -213,7 +213,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Gaff Bingo
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Gaff Bingo App Store Link"
@@ -251,7 +251,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Orca Chase Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -276,7 +276,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Orca Chase
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Orca Chase Github Project"
@@ -314,7 +314,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Npm Expansions Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -339,7 +339,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Npm Expansions
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Npm Expansions Github Project"
@@ -377,7 +377,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="MacOS Development Setup Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -402,7 +402,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 MacOS Development Setup
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="MacOS Development Setup Github Project"
@@ -440,7 +440,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Custom Sound Board Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -465,7 +465,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Custom Sound Board
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Custom Sound Board Github Project"
@@ -503,7 +503,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="James Watt Calling Card Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -528,7 +528,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 James Watt Calling Card
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="James Watt Calling Card Github Project"
@@ -566,7 +566,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Gun Control Policies Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -591,7 +591,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Gun Control Policies
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Gun Control Policies Github Project"
@@ -629,7 +629,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Norm MacDonald Quotes Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -654,7 +654,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Norm MacDonald Quotes
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Norm MacDonald Quotes Github Project"
@@ -692,7 +692,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Free Online Text Edit Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -717,7 +717,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Free Online Text Edit
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Free Online Text Edit Github Project"
@@ -755,7 +755,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
             >
               <img
                 alt="Old Portfolio Site Website Screenshot"
-                class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+                class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
                 data-nimg="1"
                 decoding="async"
                 height="337"
@@ -780,7 +780,7 @@ exports[`ProjectShowcaseSection renders correctly 1`] = `
                 Old Portfolio Site
               </a>
               <div
-                class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+                class="my-auto ml-2 size-6 min-w-6"
               >
                 <a
                   aria-label="Old Portfolio Site Github Project"

@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import js from "@eslint/js";
 import { FlatCompat } from "@eslint/eslintrc";
+import betterTailwind from "eslint-plugin-better-tailwindcss";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,6 +38,21 @@ export default defineConfig([
     "playwright/.cache/",
     "design_handoff_*/",
   ]),
+  {
+    // Tailwind class checks. Class order is left to prettier-plugin-tailwindcss,
+    // and no-unknown-classes is off because custom marker classes (for example
+    // `hover` and `tr-gap`) are not registered with Tailwind.
+    files: ["**/*.{ts,tsx}"],
+    plugins: { "better-tailwindcss": betterTailwind },
+    settings: {
+      "better-tailwindcss": { entryPoint: "styles/globals.css" },
+    },
+    rules: {
+      "better-tailwindcss/enforce-canonical-classes": "error",
+      "better-tailwindcss/no-conflicting-classes": "error",
+      "better-tailwindcss/no-duplicate-classes": "error",
+    },
+  },
   {
     extends: compat.extends("next/core-web-vitals", "next"),
 

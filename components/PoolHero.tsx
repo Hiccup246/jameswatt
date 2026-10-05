@@ -263,7 +263,7 @@ export default function PoolHero() {
           )}
           <div
             inert={open}
-            className={`absolute inset-0 z-[2] m-auto ${COIN_SIZE} ${open ? "pointer-events-none" : ""}`}
+            className={`absolute inset-0 z-2 m-auto ${COIN_SIZE} ${open ? "pointer-events-none" : ""}`}
             style={{
               opacity: open ? 0 : 1,
               transition: reduced || !open ? "none" : "opacity .2s ease .3s",
@@ -286,7 +286,7 @@ export default function PoolHero() {
               >
                 <div
                   ref={coinRef}
-                  className="relative h-full w-full"
+                  className="relative size-full"
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <div
@@ -297,7 +297,7 @@ export default function PoolHero() {
                     className="absolute inset-0 rounded-full bg-[#e3c9b1] dark:bg-[#1d2426]"
                     style={{ transform: "translateZ(-4.5px)" }}
                   />
-                  <div className="bg-darkbrown dark:bg-darkteal absolute inset-0 overflow-hidden rounded-full border-4 border-white shadow-[0_0_0_2px_rgba(44,54,57,.28),0_26px_40px_-18px_rgba(120,80,40,.45)] dark:border-[#3f4e4f] dark:shadow-[0_0_0_2px_rgba(215,220,226,.55),0_26px_40px_-18px_rgba(0,0,0,.7)]">
+                  <div className="bg-darkbrown dark:bg-darkteal dark:border-darkteal absolute inset-0 overflow-hidden rounded-full border-4 border-white shadow-[0_0_0_2px_rgba(44,54,57,.28),0_26px_40px_-18px_rgba(120,80,40,.45)] dark:shadow-[0_0_0_2px_rgba(215,220,226,.55),0_26px_40px_-18px_rgba(0,0,0,.7)]">
                     <Image
                       src={JamesWattImage}
                       alt="James Watt"

@@ -6,7 +6,7 @@ exports[`ThemeToggle renders correctly when a ThemeContext is set 1`] = `
     class="hover group flex justify-center"
   >
     <div
-      class="mr-2 h-4 w-4"
+      class="mr-2 size-4"
     >
       <svg
         fill="currentColor"

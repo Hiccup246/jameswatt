@@ -37,7 +37,7 @@ export default function ThemeToggle() {
       className="hover group flex justify-center"
       onClick={() => flipTheme()}
     >
-      <div className="mr-2 h-4 w-4">{themeIcon(siteTheme)}</div>
+      <div className="mr-2 size-4">{themeIcon(siteTheme)}</div>
 
       <span className="group-hover:underline">{themeLabel(siteTheme)}</span>
     </button>

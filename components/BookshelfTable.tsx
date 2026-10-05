@@ -4,7 +4,7 @@ import { ThemeContext } from "./ThemeProvider";
 import { BookStatus } from "../constants/Books";
 
 const whiteClipboardChecked = (
-  <div className="mx-auto h-5 w-5">
+  <div className="mx-auto size-5">
     <Image
       src={"/clipboard-checked-white.webp"}
       width={20}
@@ -16,7 +16,7 @@ const whiteClipboardChecked = (
 );
 
 const blackClipboardChecked = (
-  <div className="mx-auto h-5 w-5">
+  <div className="mx-auto size-5">
     <Image
       src={"/clipboard-checked-black.webp"}
       width={20}
@@ -28,7 +28,7 @@ const blackClipboardChecked = (
 );
 
 const whiteAnimatedBook = (
-  <div className="mx-auto h-5 w-5">
+  <div className="mx-auto size-5">
     <Image
       unoptimized
       src={"/animated-book-white.gif"}
@@ -41,7 +41,7 @@ const whiteAnimatedBook = (
 );
 
 const blackAnimatedBook = (
-  <div className="mx-auto h-5 w-5">
+  <div className="mx-auto size-5">
     <Image
       unoptimized
       src={"/animated-book-black.gif"}

@@ -17,7 +17,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
       >
         <img
           alt="Project One Website Screenshot"
-          class="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+          class="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
           data-nimg="1"
           decoding="async"
           height="337"
@@ -42,7 +42,7 @@ exports[`ShowcaseProject renders correctly 1`] = `
           Project One
         </a>
         <div
-          class="my-auto ml-2 h-6 w-6 min-w-[1.5rem]"
+          class="my-auto ml-2 size-6 min-w-6"
         >
           <a
             aria-label="Project One Github Project"

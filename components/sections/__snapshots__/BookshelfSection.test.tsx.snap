@@ -80,7 +80,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                   class="align-top"
                 >
                   <div
-                    class="mx-auto h-5 w-5"
+                    class="mx-auto size-5"
                   >
                     <img
                       alt="Currently Reading Icon"
@@ -129,7 +129,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                   class="align-top"
                 >
                   <div
-                    class="mx-auto h-5 w-5"
+                    class="mx-auto size-5"
                   >
                     <img
                       alt="Completed Book Icon"
@@ -180,7 +180,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                   class="align-top"
                 >
                   <div
-                    class="mx-auto h-5 w-5"
+                    class="mx-auto size-5"
                   >
                     <img
                       alt="Completed Book Icon"
@@ -231,7 +231,7 @@ exports[`BookshelfSection renders correctly 1`] = `
                   class="align-top"
                 >
                   <div
-                    class="mx-auto h-5 w-5"
+                    class="mx-auto size-5"
                   >
                     <img
                       alt="Completed Book Icon"

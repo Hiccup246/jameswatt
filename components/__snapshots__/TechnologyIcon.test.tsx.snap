@@ -4,18 +4,18 @@ exports[`TechnologyIcon renders correctly 1`] = `
 <div>
   <a
     aria-label="example icon"
-    class="group border-lightgrey dark:bg-softwhite relative mt-1 flex h-[86px] w-[86px] items-center justify-center rounded-md border bg-white duration-300"
+    class="group border-lightgrey dark:bg-softwhite relative mt-1 flex size-[86px] items-center justify-center rounded-md border bg-white duration-300"
     href="www.example.com"
     tabindex="-1"
     title="example icon"
   >
     <div
-      class="flex h-12 w-12 justify-center"
+      class="flex size-12 justify-center"
     >
       <svg />
     </div>
     <div
-      class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 h-[calc(100%+4px)] w-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
+      class="group-hover:animation-play tech-icon-gradient group-hover:rotate dark:dark-tech-icon-gradient absolute -top-0.5 -left-0.5 -z-10 size-[calc(100%+4px)] rounded-lg opacity-0 transition-all duration-300 ease-linear group-hover:opacity-100"
     />
   </a>
 </div>

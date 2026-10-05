@@ -30,7 +30,7 @@ function PlayerCard({ engine, who, pal, horizontal }: PlayerProps) {
   const turnDot = (
     <span
       aria-hidden
-      className="h-2 w-2 rounded-full"
+      className="size-2 rounded-full"
       style={{ background: pal.ink, opacity: active ? 1 : 0 }}
     />
   );
@@ -68,7 +68,7 @@ function PlayerCard({ engine, who, pal, horizontal }: PlayerProps) {
         {remaining.map((b) => (
           <span
             key={b.n}
-            className="h-3.5 w-3.5 rounded-full"
+            className="size-3.5 rounded-full"
             style={{
               background: ballBackground(b.n, horizontal),
               boxShadow: "inset 0 -1px 2px rgba(0,0,0,.3)",

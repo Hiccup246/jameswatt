@@ -40,7 +40,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
           <Image
             src={props.projectImageSrc}
             width={600}
-            className="border-lightgrey aspect-video w-full rounded-lg border border-2 transition-shadow duration-150 group-hover:shadow-lg"
+            className="border-lightgrey aspect-video w-full rounded-lg border-2 transition-shadow duration-150 group-hover:shadow-lg"
             height={337}
             sizes="(min-width: 768px) 480px,
                                180px"
@@ -59,7 +59,7 @@ export default function ShowcaseProject(props: ShowcaseProject) {
             {props.projectName}
           </a>
 
-          <div className="my-auto ml-2 h-6 w-6 min-w-[1.5rem]">
+          <div className="my-auto ml-2 size-6 min-w-6">
             {props.githubRepoUrl && (
               <GithubLink
                 projectName={props.projectName}
