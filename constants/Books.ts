@@ -16,7 +16,7 @@ export const BOOKS: Book[] = [
     name: "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection",
     author: "John Green",
     genre: "Nonfiction",
-    status: BookStatus.Reading,
+    status: BookStatus.Read,
     dateStarted: "03/10/2026",
     dateCompleted: "05/10/2026",
   },
