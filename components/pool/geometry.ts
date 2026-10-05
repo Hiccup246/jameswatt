@@ -232,3 +232,39 @@ export function placementOverlay(
     ringDiameter: r * 3.4,
   };
 }
+
+/** Distance from point `p` to the segment `a`-`b`. */
+export function distToSegment(
+  p: { u: number; v: number },
+  a: { u: number; v: number },
+  b: { u: number; v: number },
+): number {
+  const du = b.u - a.u;
+  const dv = b.v - a.v;
+  const len2 = du * du + dv * dv;
+  const t = len2
+    ? Math.max(0, Math.min(1, ((p.u - a.u) * du + (p.v - a.v) * dv) / len2))
+    : 0;
+  return Math.hypot(p.u - (a.u + t * du), p.v - (a.v + t * dv));
+}
+
+/**
+ * Power from 0 to 1 for a cue dragged from `from` to `to`. Only the movement
+ * away from the cue ball (opposite the aim) counts, so sideways drift and
+ * pushing forward add nothing.
+ *
+ * @param angle Aim angle in radians in table space.
+ * @param fullDrag Backward drag distance that gives full power.
+ */
+export function powerFromDrag(
+  from: { u: number; v: number },
+  to: { u: number; v: number },
+  angle: number,
+  fullDrag: number,
+): number {
+  const back = -(
+    (to.u - from.u) * Math.cos(angle) +
+    (to.v - from.v) * Math.sin(angle)
+  );
+  return Math.max(0, Math.min(1, back / fullDrag));
+}

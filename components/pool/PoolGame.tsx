@@ -32,9 +32,11 @@ import {
 import { capTransform, discTransform } from "./ballPaint";
 import {
   cushionSegments,
+  distToSegment,
   guideLines,
   placementKeyDelta,
   placementOverlay,
+  powerFromDrag,
   tableLayout,
   type Line,
 } from "./geometry";
@@ -118,6 +120,10 @@ const setAttrs = (el: SVGElement | null, attrs: Record<string, number>) => {
 
 /** Pressing within this many ball radii of the cue ball grabs it (ball in hand). */
 const GRAB_RADIUS = 2.4;
+/** Fingers are less precise, so touch grabs the white from further away. */
+const TOUCH_GRAB_RADIUS = 3.5;
+/** A touch within this many cue thicknesses of the cue grabs it to pull back. */
+const CUE_GRAB_THICKNESS = 3.5;
 
 /** Keys that hold to charge power and release to shoot. */
 const CHARGE_KEYS = [" ", "Enter"];
@@ -187,6 +193,8 @@ export default function PoolGame({
   const strike = useRef<Strike | null>(null);
   /** Whether the player is dragging the cue ball (ball in hand). */
   const dragCue = useRef(false);
+  /** Whether the current power drag is a touch pull of the cue itself. */
+  const cuePull = useRef(false);
   // The pointer that owns the current aim or cue drag; other touches are ignored.
   const activeId = useRef<number | null>(null);
   const kitchenRef = useRef<HTMLDivElement>(null);
@@ -227,6 +235,7 @@ export default function PoolGame({
     dragCue.current = false;
     document.body.style.cursor = "";
     pull.current = null;
+    cuePull.current = false;
     keyCharge.current = false;
     pullAmt.current = 0;
     strike.current = null;
@@ -273,6 +282,9 @@ export default function PoolGame({
   useEffect(() => {
     const onMove = (e: PointerEvent) => {
       if (activeId.current !== null && e.pointerId !== activeId.current) return;
+      // A touch only counts while it owns an aim or cue drag, so a scroll that
+      // started off the table can't swing the aim.
+      if (e.pointerType === "touch" && activeId.current === null) return;
       ptr.current = toTable(e);
       // Move the white straight away so a quick flick still lands, rather
       // than waiting for the next frame.
@@ -286,6 +298,7 @@ export default function PoolGame({
       if (!pull.current) return;
       const p = pullAmt.current;
       pull.current = null;
+      cuePull.current = false;
       if (shoot && p > MIN_POWER) {
         strike.current = { ang: aim.current, power: p, pull: p };
       } else {
@@ -295,6 +308,8 @@ export default function PoolGame({
     const onUp = (e: PointerEvent) => {
       if (activeId.current !== null && e.pointerId !== activeId.current) return;
       activeId.current = null;
+      // The aim is left where the finger put it, not chased by a stale point.
+      if (e.pointerType === "touch") ptr.current = null;
       if (dragCue.current) {
         dragCue.current = false;
         return;
@@ -304,6 +319,7 @@ export default function PoolGame({
     const onCancel = (e: PointerEvent) => {
       if (activeId.current !== null && e.pointerId !== activeId.current) return;
       activeId.current = null;
+      if (e.pointerType === "touch") ptr.current = null;
       dragCue.current = false;
       release(false);
     };
@@ -318,23 +334,64 @@ export default function PoolGame({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [SW, SH, horiz]);
 
-  /** Pressing the felt locks the aim and starts the power drag. */
-  const onSurfaceDown = (e: React.PointerEvent) => {
+  /** Whether table-space point `p` is on the cue, with a finger-sized margin. */
+  const onCue = (p: Point) => {
+    const cb = engine.cue;
+    const du = Math.cos(aim.current);
+    const dv = Math.sin(aim.current);
+    const near = r + 4 + pullAmt.current * L * MAX_PULL_BACK;
+    const far = near + L * 0.5;
+    return (
+      distToSegment(
+        p,
+        { u: cb.u - du * near, v: cb.v - dv * near },
+        { u: cb.u - du * far, v: cb.v - dv * far },
+      ) <
+      cueH * CUE_GRAB_THICKNESS
+    );
+  };
+
+  /**
+   * Pressing the board. With a mouse, the felt locks the aim and starts the
+   * power drag. With a touch, like 8 Ball Pool: the felt only aims, and power
+   * comes from grabbing the cue and pulling it back.
+   */
+  const onBoardDown = (e: React.PointerEvent) => {
     if (activeId.current !== null) return;
-    ptr.current = toTable(e);
-    if (!ptr.current || !engine.canAim() || strike.current) return;
-    activeId.current = e.pointerId;
+    const touch = e.pointerType === "touch";
+    const onFelt = surfRef.current?.contains(e.target as Node) ?? false;
+    // Mouse presses on the rails do nothing. A touch can grab the cue there.
+    if (!touch && !onFelt) return;
+    const p = toTable(e);
+    if (!p || !engine.canAim() || strike.current) return;
+    ptr.current = p;
+    surfRef.current?.focus({ preventScroll: true });
     const cb = engine.cue;
     // Ball in hand: pressing on the white picks it up instead of aiming.
     if (
       engine.place &&
-      Math.hypot(ptr.current.u - cb.u, ptr.current.v - cb.v) < r * GRAB_RADIUS
+      Math.hypot(p.u - cb.u, p.v - cb.v) <
+        r * (touch ? TOUCH_GRAB_RADIUS : GRAB_RADIUS)
     ) {
+      activeId.current = e.pointerId;
       dragCue.current = true;
       return;
     }
-    aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
-    pull.current = { ...ptr.current };
+    if (touch) {
+      if (onCue(p)) {
+        activeId.current = e.pointerId;
+        cuePull.current = true;
+        pull.current = { ...p };
+        pullAmt.current = 0;
+      } else if (onFelt) {
+        activeId.current = e.pointerId;
+        aim.current = Math.atan2(p.v - cb.v, p.u - cb.u);
+      }
+      return;
+    }
+    activeId.current = e.pointerId;
+    aim.current = Math.atan2(p.v - cb.v, p.u - cb.u);
+    pull.current = { ...p };
     pullAmt.current = 0;
   };
 
@@ -490,14 +547,21 @@ export default function PoolGame({
         aim.current = Math.atan2(ptr.current.v - cb.v, ptr.current.u - cb.u);
       }
       if (pull.current && ptr.current) {
-        pullAmt.current = Math.min(
-          1,
-          Math.hypot(
-            ptr.current.u - pull.current.u,
-            ptr.current.v - pull.current.v,
-          ) /
-            (L * FULL_POWER_DRAG),
-        );
+        pullAmt.current = cuePull.current
+          ? powerFromDrag(
+              pull.current,
+              ptr.current,
+              aim.current,
+              L * FULL_POWER_DRAG,
+            )
+          : Math.min(
+              1,
+              Math.hypot(
+                ptr.current.u - pull.current.u,
+                ptr.current.v - pull.current.v,
+              ) /
+                (L * FULL_POWER_DRAG),
+            );
       }
       if (keyCharge.current) {
         pullAmt.current = Math.min(1, pullAmt.current + KEY_CHARGE_RATE);
@@ -802,9 +866,15 @@ export default function PoolGame({
         )}
       <div
         inert={!open}
-        className={`absolute inset-0 ${open ? "" : "pointer-events-none"}`}
+        className={`absolute inset-0 select-none ${open ? "" : "pointer-events-none"}`}
+        onDragStart={(e) => e.preventDefault()}
+        onMouseDown={(e) => e.preventDefault()}
+        onPointerDown={onBoardDown}
         style={{
           boxSizing: "border-box",
+          WebkitUserSelect: "none",
+          WebkitTouchCallout: "none",
+          touchAction: "none",
           borderRadius: railRadius,
           background: pal.railBg,
           boxShadow: pal.railShadow,
@@ -868,7 +938,6 @@ export default function PoolGame({
               : "")
           }
           tabIndex={0}
-          onPointerDown={onSurfaceDown}
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
           onBlur={() => releaseKeyCharge(false)}
@@ -920,6 +989,7 @@ export default function PoolGame({
               src={JamesWattImage}
               alt=""
               fill
+              draggable={false}
               sizes="180px"
               className="pointer-events-none object-cover object-[50%_22%]"
             />

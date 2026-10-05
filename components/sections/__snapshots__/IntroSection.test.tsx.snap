@@ -81,6 +81,7 @@ exports[`IntroSection renders correctly 1`] = `
                       class="pointer-events-none object-cover object-[50%_22%]"
                       data-nimg="fill"
                       decoding="async"
+                      draggable="false"
                       fetchpriority="high"
                       sizes="180px"
                       src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"

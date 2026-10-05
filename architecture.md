@@ -75,6 +75,7 @@ The code is split so game rules are testable without a DOM:
 - **Lazy loading.** `PoolGame` is loaded with `next/dynamic` (`ssr: false`) on first hover, focus or click of the coin, to keep it out of the initial bundle.
 - **Layout is frozen while a game is open.** `PoolHero` follows the 768px breakpoint only while closed (`layoutMobile`). The layout is the React `key` on `PoolGame`, so crossing the breakpoint mid-game would otherwise remount it and reset the match.
 - **Pointer ownership.** `PoolGame` records the `pointerId` that starts an aim or cue drag and ignores other pointers until it ends (multi-touch safety).
+- **Touch vs mouse input.** `PoolGame.onBoardDown` branches on `pointerType`. Touch aims from the felt and only shoots by grabbing the cue (`onCue`, `powerFromDrag`); mouse presses the felt and drags for power. `PoolHero` picks the coin behaviour with `(hover: none) and (pointer: coarse)`, not the 768px breakpoint: touch devices run `coinOrbit` instead of following the cursor.
 - **Opening break** is detected with `engine.shots === 0`, not ball count.
 - **Coin size is duplicated** by hand: `COIN_SIZE` in `PoolHero.tsx` and `coinDiameter` in `pool/geometry.ts` must match.
 

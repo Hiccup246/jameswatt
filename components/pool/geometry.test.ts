@@ -1,9 +1,11 @@
 import { tableConfig, type RayResult } from "./engine";
 import {
   cushionSegments,
+  distToSegment,
   guideLines,
   placementKeyDelta,
   placementOverlay,
+  powerFromDrag,
   tableLayout,
 } from "./geometry";
 
@@ -121,5 +123,31 @@ describe("placementOverlay", () => {
       kitchenH: 145,
       ringDiameter: 9 * 3.4,
     });
+  });
+});
+
+describe("distToSegment", () => {
+  const a = { u: 0, v: 0 };
+  const b = { u: 10, v: 0 };
+  it("measures perpendicular distance beside the segment", () => {
+    expect(distToSegment({ u: 5, v: 3 }, a, b)).toBe(3);
+  });
+  it("measures distance to the nearest end past the segment", () => {
+    expect(distToSegment({ u: 13, v: 4 }, a, b)).toBe(5);
+  });
+  it("handles a zero-length segment", () => {
+    expect(distToSegment({ u: 3, v: 4 }, a, a)).toBe(5);
+  });
+});
+
+describe("powerFromDrag", () => {
+  const from = { u: 0, v: 0 };
+  it("counts only movement away from the aim direction", () => {
+    expect(powerFromDrag(from, { u: -50, v: 0 }, 0, 100)).toBeCloseTo(0.5);
+    expect(powerFromDrag(from, { u: 50, v: 0 }, 0, 100)).toBe(0);
+    expect(powerFromDrag(from, { u: 0, v: 80 }, 0, 100)).toBeCloseTo(0);
+  });
+  it("follows the aim angle and caps at 1", () => {
+    expect(powerFromDrag(from, { u: 0, v: -300 }, Math.PI / 2, 100)).toBe(1);
   });
 });

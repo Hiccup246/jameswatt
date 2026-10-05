@@ -19,7 +19,7 @@ import {
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import JamesWattImage from "../public/panthy-tiny.webp";
-import { MAX_TILT, coinTilt } from "./coinTilt";
+import { MAX_TILT, coinOrbit, coinTilt } from "./coinTilt";
 import { GLINT_COLOR, GLINT_FADE } from "./pool/theme";
 
 // The game is only needed after the first click, so keep it out of the
@@ -77,6 +77,8 @@ export default function PoolHero() {
   const rafRef = useRef(0);
   const reducedRef = useRef(false);
   const wantOpenRef = useRef(false);
+  // Touch devices have no cursor to follow, so the coin orbits by itself.
+  const orbitRef = useRef(false);
 
   // Eases the coin toward the cursor and its press scale toward its target.
   // Writes styles directly so React never re-renders per frame, and sleeps
@@ -86,8 +88,11 @@ export default function PoolHero() {
     const tick = () => {
       rafRef.current = 0;
       const t = tiltRef.current;
-      const target =
-        openRef.current || reducedRef.current || !mouseRef.current
+      const orbiting =
+        orbitRef.current && !openRef.current && !reducedRef.current;
+      const target = orbiting
+        ? coinOrbit(performance.now())
+        : openRef.current || reducedRef.current || !mouseRef.current
           ? { x: 0, y: 0 }
           : mouseRef.current;
       const targetScale = pressedRef.current ? 0.9 : 1;
@@ -110,7 +115,7 @@ export default function PoolHero() {
         Math.abs(target.x - t.x) < 0.01 &&
         Math.abs(target.y - t.y) < 0.01 &&
         Math.abs(targetScale - t.s) < 0.001;
-      if (!settled) rafRef.current = requestAnimationFrame(tick);
+      if (!settled || orbiting) rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
   }, []);
@@ -131,7 +136,18 @@ export default function PoolHero() {
     };
     motion.addEventListener?.("change", onMotion);
 
+    const touchOnly = window.matchMedia("(hover: none) and (pointer: coarse)");
+    orbitRef.current = touchOnly.matches;
+    const onTouchOnly = (e: MediaQueryListEvent) => {
+      orbitRef.current = e.matches;
+      mouseRef.current = null;
+      startLoop();
+    };
+    touchOnly.addEventListener?.("change", onTouchOnly);
+
     const onPointerMove = (e: PointerEvent) => {
+      // A touch would pin the tilt where the finger last landed.
+      if (orbitRef.current || e.pointerType === "touch") return;
       const coin = coinRef.current?.parentElement;
       if (!coin) return;
       mouseRef.current = coinTilt(
@@ -141,9 +157,11 @@ export default function PoolHero() {
       startLoop();
     };
     window.addEventListener("pointermove", onPointerMove);
+    startLoop();
 
     return () => {
       motion.removeEventListener?.("change", onMotion);
+      touchOnly.removeEventListener?.("change", onTouchOnly);
       window.removeEventListener("pointermove", onPointerMove);
       cancelAnimationFrame(rafRef.current);
       rafRef.current = 0;
@@ -295,6 +313,7 @@ export default function PoolHero() {
                       src={JamesWattImage}
                       alt="James Watt"
                       fill
+                      draggable={false}
                       priority
                       fetchPriority="high"
                       placeholder="blur"

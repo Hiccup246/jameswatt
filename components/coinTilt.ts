@@ -37,3 +37,22 @@ export function coinTilt(
   // Normalise -0 to 0 so a centred cursor reads as no tilt.
   return { x: -dy * MAX_TILT + 0, y: dx * MAX_TILT + 0 };
 }
+
+/** Tilt amplitude in degrees for the touch-device orbit. */
+export const ORBIT_TILT = 12;
+/** Time in ms for one full lap of the touch-device orbit. */
+export const ORBIT_PERIOD = 7000;
+
+/**
+ * The coin's tilt at `ms` on touch devices, which have no cursor to follow:
+ * the rim leans around in a slow circle, so the face sweeps through every
+ * direction and never flips.
+ */
+export function coinOrbit(
+  ms: number,
+  amplitude = ORBIT_TILT,
+  period = ORBIT_PERIOD,
+): { x: number; y: number } {
+  const a = (ms / period) * Math.PI * 2;
+  return { x: Math.sin(a) * amplitude, y: Math.cos(a) * amplitude };
+}

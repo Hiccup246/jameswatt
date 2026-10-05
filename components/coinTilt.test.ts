@@ -1,4 +1,11 @@
-import { MAX_TILT, TILT_RANGE, coinTilt } from "./coinTilt";
+import {
+  MAX_TILT,
+  ORBIT_PERIOD,
+  ORBIT_TILT,
+  TILT_RANGE,
+  coinOrbit,
+  coinTilt,
+} from "./coinTilt";
 
 // A 180px coin centred at (500, 400).
 const rect = { left: 410, top: 310, width: 180, height: 180 };
@@ -55,5 +62,27 @@ describe("coinTilt", () => {
     expect(t.y).toBeGreaterThan(0);
     expect(t.x).toBeLessThan(0);
     expect(Math.abs(t.x)).toBeCloseTo(t.y, 5);
+  });
+});
+
+describe("coinOrbit", () => {
+  it("stays within the amplitude and keeps a constant tilt magnitude", () => {
+    for (let ms = 0; ms < ORBIT_PERIOD; ms += 500) {
+      const t = coinOrbit(ms);
+      expect(Math.hypot(t.x, t.y)).toBeCloseTo(ORBIT_TILT);
+    }
+  });
+
+  it("returns to its start after one period", () => {
+    const a = coinOrbit(0);
+    const b = coinOrbit(ORBIT_PERIOD);
+    expect(b.x).toBeCloseTo(a.x);
+    expect(b.y).toBeCloseTo(a.y);
+  });
+
+  it("moves round the circle rather than back and forth", () => {
+    expect(coinOrbit(0).y).toBeGreaterThan(0);
+    expect(coinOrbit(ORBIT_PERIOD / 2).y).toBeLessThan(0);
+    expect(coinOrbit(ORBIT_PERIOD / 4).x).toBeGreaterThan(0);
   });
 });

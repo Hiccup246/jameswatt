@@ -74,7 +74,7 @@ This file contains some site metadata and lists out all of the sites 'sections'.
 
 ## 🎱 The pool hero
 
-The top of the page is a photo "coin" that tilts towards the cursor. Clicking it expands an 8-ball pool table out of the photo, and the visitor plays against a computer opponent called James (plain geometry and a little randomness, no AI model). There is no hint text under the coin; its tilt invites the click. Once the table is open, the only ways out are "Play again" after a win and the "End game" button, which collapses the table back to the coin (opening it again starts a fresh game). Clicking the photo on the felt does nothing.
+The top of the page is a photo "coin" that tilts towards the cursor (on touch devices, which have no cursor, it slowly tilts in a circle instead). Clicking it expands an 8-ball pool table out of the photo, and the visitor plays against a computer opponent called James (plain geometry and a little randomness, no AI model). There is no hint text under the coin; its tilt invites the click. Once the table is open, the only ways out are "Play again" after a win and the "End game" button, which collapses the table back to the coin (opening it again starts a fresh game). Clicking the photo on the felt does nothing.
 
 ### Rules
 
@@ -122,7 +122,7 @@ A simplified version of 8-ball. You always break, and James plays the other side
 
 - Below Tailwind's `md` breakpoint (768px) the table is portrait (300 by 580 felt); at `md` and up it is landscape (960 by 480). Changing orientation remounts the game, so `PoolHero` only follows the breakpoint while the table is closed. Resizing across it mid-game keeps the current layout and match until the game is ended.
 - The table is scaled down with a CSS transform to fit narrow containers. Pointer coordinates are converted back through `getBoundingClientRect`, so aiming stays accurate at any scale.
-- Touch input uses pointer events with `touch-action: none` on the felt, so dragging to set power does not scroll the page.
+- Touch input uses pointer events with `touch-action: none` on the whole board, so dragging does not scroll the page. Touch works like 8 Ball Pool: tapping or dragging the felt only aims (the aim stays where you leave it), and the shot is taken by grabbing the cue and pulling it back (`powerFromDrag` counts only the movement away from the aim). Mouse input is unchanged: press the felt to lock the aim, then drag to set power.
 
 ### Theming
 
