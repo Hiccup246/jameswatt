@@ -9,6 +9,8 @@ interface Props {
   /** Widest the panel may grow, normally the table width. */
   maxWidth: number;
   onPlayAgain: () => void;
+  /** Collapses the table back to the coin. */
+  onEndGame: () => void;
 }
 
 interface PlayerProps {
@@ -88,6 +90,7 @@ export default function StatusPanel({
   horizontal,
   maxWidth,
   onPlayAgain,
+  onEndGame,
 }: Props) {
   return (
     <div
@@ -120,6 +123,18 @@ export default function StatusPanel({
           pal={pal}
           horizontal={horizontal}
         />
+        <button
+          type="button"
+          onClick={onEndGame}
+          className="flex-none cursor-pointer self-center rounded-full border-[1.5px] bg-transparent px-3.5 py-1.5 text-xs font-semibold tracking-[.04em] opacity-70 hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2"
+          style={{
+            color: pal.ink,
+            borderColor: pal.ink,
+            outlineColor: pal.ink,
+          }}
+        >
+          End game
+        </button>
         <PlayerCard
           engine={engine}
           who="you"

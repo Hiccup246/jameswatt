@@ -6,6 +6,7 @@ import { LIGHT } from "./theme";
 const setup = () => {
   const engine = new PoolEngine(tableConfig(false));
   const onPlayAgain = jest.fn();
+  const onEndGame = jest.fn();
   const view = () =>
     render(
       <StatusPanel
@@ -14,9 +15,10 @@ const setup = () => {
         horizontal
         maxWidth={1028}
         onPlayAgain={onPlayAgain}
+        onEndGame={onEndGame}
       />,
     );
-  return { engine, onPlayAgain, view };
+  return { engine, onPlayAgain, onEndGame, view };
 };
 
 describe("StatusPanel", () => {
@@ -39,9 +41,17 @@ describe("StatusPanel", () => {
         horizontal
         maxWidth={1028}
         onPlayAgain={onPlayAgain}
+        onEndGame={jest.fn()}
       />,
     );
     fireEvent.click(screen.getByRole("button", { name: "Play again" }));
     expect(onPlayAgain).toHaveBeenCalledTimes(1);
+  });
+
+  it("always offers End game and calls back when it is clicked", () => {
+    const { onEndGame, view } = setup();
+    view();
+    fireEvent.click(screen.getByRole("button", { name: "End game" }));
+    expect(onEndGame).toHaveBeenCalledTimes(1);
   });
 });

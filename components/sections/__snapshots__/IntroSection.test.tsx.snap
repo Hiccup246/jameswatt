@@ -92,11 +92,6 @@ exports[`IntroSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="flex h-5 items-center text-[13px] tracking-[.04em] text-black dark:text-[#d7dce2]"
-      >
-        Click me to play
-      </div>
-      <div
         class="flex w-full justify-center"
       />
     </div>

@@ -64,6 +64,7 @@ export default function PoolHero() {
   const outerRef = useRef<HTMLDivElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
   const coinRef = useRef<HTMLDivElement>(null);
+  const coinButtonRef = useRef<HTMLButtonElement>(null);
   const glintRef = useRef<HTMLDivElement>(null);
 
   const openRef = useRef(open);
@@ -204,7 +205,21 @@ export default function PoolHero() {
     );
   }, []);
 
-  // The coin only opens the table. Once open, "Play again" is the only reset.
+  // "End game" is the only way to close the table. It collapses back to the
+  // coin, and opening it again starts a new game.
+  const close = useCallback(() => {
+    wantOpenRef.current = false;
+    setOpen(false);
+  }, []);
+
+  // Hand keyboard focus back to the coin once the game has been ended.
+  const wasOpenRef = useRef(false);
+  useEffect(() => {
+    if (wasOpenRef.current && !open) coinButtonRef.current?.focus();
+    wasOpenRef.current = open;
+  }, [open]);
+
+  // The coin only opens the table.
   const openTable = () => {
     if (open) return;
     wantOpenRef.current = true;
@@ -242,6 +257,7 @@ export default function PoolHero() {
               reduced={reduced}
               statusHost={statusHost}
               onReady={handleReady}
+              onEnd={close}
             />
           )}
           <div
@@ -254,6 +270,7 @@ export default function PoolHero() {
             }}
           >
             <button
+              ref={coinButtonRef}
               type="button"
               aria-label="Open pool game"
               onClick={openTable}
@@ -295,11 +312,6 @@ export default function PoolHero() {
         </div>
       </div>
 
-      {!open && (
-        <div className="flex h-5 items-center text-[13px] tracking-[.04em] text-black dark:text-[#d7dce2]">
-          Click me to play
-        </div>
-      )}
       <div
         ref={setStatusHost}
         className="flex w-full justify-center"

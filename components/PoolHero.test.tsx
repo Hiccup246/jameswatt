@@ -14,12 +14,12 @@ describe("PoolHero", () => {
     });
   });
 
-  it("renders the closed coin with a play hint", () => {
+  it("renders the closed coin without a play hint", () => {
     render(<PoolHero />);
 
     expect(
       screen.getByRole("button", { name: "Open pool game" }),
     ).toBeInTheDocument();
-    expect(screen.getByText("Click me to play")).toBeInTheDocument();
+    expect(screen.queryByText("Click me to play")).not.toBeInTheDocument();
   });
 });

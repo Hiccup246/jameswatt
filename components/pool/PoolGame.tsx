@@ -57,6 +57,8 @@ interface Props {
   statusHost: HTMLElement | null;
   /** Called once the (closed) board has mounted, so the open transition can run. */
   onReady: () => void;
+  /** Called when the player ends the game, so the table collapses to the coin. */
+  onEnd: () => void;
 }
 
 /** The cue striking forward: `pull` runs from the drawn-back power down past zero. */
@@ -116,6 +118,7 @@ export default function PoolGame({
   reduced,
   statusHost,
   onReady,
+  onEnd,
 }: Props) {
   const cfg = useMemo(() => tableConfig(mobile), [mobile]);
   const { L, Wd, r } = cfg;
@@ -202,16 +205,21 @@ export default function PoolGame({
     for (const n of [...clones.current.keys()]) removeClone(n);
   };
 
-  /** Re-racks and clears every in-flight interaction. */
-  const newGame = () => {
-    engine.rack();
-    clearClones();
-    aim.current = 0;
+  /** Drops any drag, aim, pull, strike or AI plan that is in flight. */
+  const cancelInteraction = () => {
     pull.current = null;
     keyCharge.current = false;
     pullAmt.current = 0;
     strike.current = null;
     aiTurn.current = null;
+  };
+
+  /** Re-racks and clears every in-flight interaction. */
+  const newGame = () => {
+    engine.rack();
+    clearClones();
+    aim.current = 0;
+    cancelInteraction();
     prevPos.current = [];
     bump();
   };
@@ -224,7 +232,11 @@ export default function PoolGame({
 
   // Re-rack whenever the table is opened, and hand keyboard focus to the felt.
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      // Ending the game collapses the table: stop everything in flight.
+      cancelInteraction();
+      return;
+    }
     newGame();
     surfRef.current?.focus({ preventScroll: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -626,6 +638,7 @@ export default function PoolGame({
             horizontal={horiz}
             maxWidth={TW}
             onPlayAgain={newGame}
+            onEndGame={onEnd}
           />,
           statusHost,
         )}

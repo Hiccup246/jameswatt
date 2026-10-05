@@ -19,20 +19,38 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Pool hero", () => {
-  test("Shows the coin and a play hint while closed", async ({ page }) => {
+  test("Shows only the coin while closed", async ({ page }) => {
     await expect(
       page.getByRole("button", { name: "Open pool game" }),
     ).toBeVisible();
-    await expect(page.getByText("Click me to play")).toBeVisible();
+    await expect(page.getByText("Click me to play")).toHaveCount(0);
     await expect(page.getByTestId("pool-felt")).toHaveCount(0);
   });
 
   test("Opens the table when the coin is clicked", async ({ page }) => {
     await openTable(page);
 
-    await expect(page.getByText("Click me to play")).toBeHidden();
     await expect(page.getByText("James", { exact: true })).toBeVisible();
     await expect(page.getByText("You", { exact: true })).toBeVisible();
+  });
+
+  test("End game collapses to the coin and reopening starts a new game", async ({
+    page,
+  }) => {
+    await openTable(page);
+
+    await page.getByRole("button", { name: "End game" }).click();
+
+    // The faded-out board is inert (opacity 0 still counts as visible).
+    await expect(page.locator("[inert] [data-testid=\"pool-felt\"]")).toHaveCount(
+      1,
+    );
+    const coin = page.getByRole("button", { name: "Open pool game" });
+    await expect(coin).toBeVisible();
+
+    await coin.click();
+    await expect(page.getByText(/Your break/)).toBeVisible();
+    await expect(page.getByTestId("pool-felt")).toBeVisible();
   });
 
   test("Lays the table out for the viewport size", async ({ page }) => {
