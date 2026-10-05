@@ -74,7 +74,7 @@ This file contains some site metadata and lists out all of the sites 'sections'.
 
 ## 🎱 The pool hero
 
-The top of the page is a photo "coin" that tilts towards the cursor. Clicking it expands an 8-ball pool table out of the photo, and the visitor plays against an AI called James. Reset with "Play again" after a win; there is no close button.
+The top of the page is a photo "coin" that tilts towards the cursor. Clicking it expands an 8-ball pool table out of the photo, and the visitor plays against an AI called James. There is no hint text under the coin; its tilt invites the click. Once the table is open, the only ways out are "Play again" after a win and the "End game" button, which collapses the table back to the coin (opening it again starts a fresh game). Clicking the photo on the felt does nothing.
 
 ### File map
 
@@ -83,9 +83,9 @@ The top of the page is a photo "coin" that tilts towards the cursor. Clicking it
 | `components/PoolHero.tsx`         | Closed coin, tilt, open state, theme and breakpoint detection, scale-to-fit. Lazy-loads the game.                               |
 | `components/pool/PoolGame.tsx`    | The table: rendering, pointer and keyboard input, the `requestAnimationFrame` loop, AI turn timing, sink and pocket animations. |
 | `components/pool/engine.ts`       | Pure game logic: physics, rules, AI shot choice. No DOM or React.                                                               |
-| `components/pool/geometry.ts`     | Pure helpers: table furniture sizes, cushion polygons, aiming guide lines.                                                      |
+| `components/pool/geometry.ts`     | Pure helpers: table furniture sizes, cushion polygons, aiming guide lines, ball in hand overlay sizes and W A S D key deltas.   |
 | `components/pool/ballPaint.ts`    | Pure maths turning a ball's 3D orientation into CSS transforms for its number and stripes.                                      |
-| `components/pool/StatusPanel.tsx` | Message, scoreboard and "Play again" button, portalled below the table.                                                         |
+| `components/pool/StatusPanel.tsx` | Message, scoreboard, "End game" and "Play again" buttons, portalled below the table.                                            |
 | `components/pool/theme.ts`        | Palettes for colours set from JS (light and dark) and ball colours.                                                             |
 
 ### How it works
@@ -95,7 +95,9 @@ The top of the page is a photo "coin" that tilts towards the cursor. Clicking it
 - **Lazy loading.** `PoolHero` loads `PoolGame` with `next/dynamic` on first hover, focus or click of the coin, so the game stays out of the initial bundle. The game mounts closed, calls `onReady`, and `PoolHero` then flips `open` so the clip-path transition has something to animate from.
 - **Opening animation.** The table layer animates `clip-path: circle()` from the coin's radius out past the corners. The coin fades while an identical photo "sticker" sits on the felt.
 - **Ball sinking.** A potted ball rolls to the pocket centre under the hole layer while a clone inside the pocket "well" shrinks, darkens and fades. Sink timings are the `SINK_*` constants in `engine.ts`.
-- **James.** `engine.planAi` picks the best legal ball and pocket with a small aim error. `PoolGame` plays that out over about five seconds (see the `AI_*` constants).
+- **Regulation rack.** The front ball sits on the foot spot (`FOOT_SPOT`, 0.75 of the table length) and the rack is tight, with balls `2r + 0.02` apart across a row.
+- **Ball in hand.** `engine.place` is `"kitchen"` on the break (the white may go anywhere behind the head string, `HEAD_STRING` at a quarter of the table) and `"anywhere"` for the other player after any foul. A shot clears it. `engine.cueSpotOk` and `engine.placeCue` validate and clamp placements (inside the cushions, in the kitchen on the break, and at least `2.05r` from other balls). While placing, a dashed ring pulses around the white, the kitchen is shaded on the break, and the cursor is `grab` over the white and `grabbing` while dragging it.
+- **James.** `engine.planAi` picks the best legal ball and pocket with a small aim error. `PoolGame` plays that out over about five seconds (see the `AI_*` constants). With ball in hand, `engine.pickPlacement` samples a 17 by 9 grid for the legal spot with the best shot, and James slides the white there over the first 1.2 seconds of his turn before aiming.
 
 ### Responsive behaviour
 
@@ -110,9 +112,9 @@ Static colours use Tailwind `dark:` utilities. Colours set from JS (gradients, c
 ### Accessibility
 
 - The coin is a real `<button aria-label="Open pool game">` with a visible focus ring. Once the table is open the coin is `inert`.
-- On opening, focus moves to the felt. Keyboard play: arrow keys aim (hold Shift for bigger steps), hold Space or Enter to charge power, release to shoot.
+- On opening, focus moves to the felt. Keyboard play: arrow keys aim (hold Shift for bigger steps), hold Space or Enter to charge power, release to shoot. With ball in hand, W A S D move the white (Shift for bigger steps), and the felt's label says so. "End game" returns focus to the coin.
 - The status message is a `role="status"` live region, so turn changes, fouls and wins are announced. Balls, cue and chips are decorative and hidden from assistive tech.
-- `prefers-reduced-motion` disables the coin tilt, the open and close transition, and the pocket effects.
+- `prefers-reduced-motion` disables the coin tilt, the open and close transition and the pocket effects, and holds the ball in hand ring at full opacity instead of pulsing.
 
 ### Changing the game
 
