@@ -163,16 +163,9 @@ export default function PoolHero() {
     );
   }, []);
 
-  const close = useCallback(() => {
-    wantOpenRef.current = false;
-    setOpen(false);
-  }, []);
-
-  const toggle = () => {
-    if (open) {
-      close();
-      return;
-    }
+  // The coin only opens the table. Once open, "Play again" is the only reset.
+  const openTable = () => {
+    if (open) return;
     wantOpenRef.current = true;
     pressedRef.current = true;
     startLoop();
@@ -207,7 +200,6 @@ export default function PoolHero() {
               dark={dark}
               reduced={reduced}
               statusHost={statusHost}
-              onClose={close}
               onReady={handleReady}
             />
           )}
@@ -222,8 +214,8 @@ export default function PoolHero() {
           >
             <button
               type="button"
-              aria-label={open ? "Close pool game" : "Open pool game"}
-              onClick={toggle}
+              aria-label="Open pool game"
+              onClick={openTable}
               onPointerEnter={loadGame}
               onFocus={loadGame}
               tabIndex={open ? -1 : 0}

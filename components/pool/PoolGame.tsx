@@ -32,7 +32,6 @@ interface Props {
   reduced: boolean;
   /** Element below the table that the status panel is portalled into. */
   statusHost: HTMLElement | null;
-  onClose: () => void;
   /** Called once the (closed) board has mounted, so the open transition can run. */
   onReady: () => void;
 }
@@ -64,7 +63,6 @@ export default function PoolGame({
   dark,
   reduced,
   statusHost,
-  onClose,
   onReady,
 }: Props) {
   const cfg = useMemo(() => tableConfig(mobile), [mobile]);
@@ -687,12 +685,8 @@ export default function PoolGame({
               background: pal.lineInk,
             }}
           />
-          <button
-            type="button"
-            aria-label="Close pool game"
-            tabIndex={open ? 0 : -1}
-            onClick={onClose}
-            className="absolute box-border cursor-pointer overflow-hidden rounded-full p-0"
+          <div
+            className="absolute box-border overflow-hidden rounded-full"
             style={{
               left: SW / 2 - D / 2,
               top: SH / 2 - D / 2,
@@ -711,7 +705,7 @@ export default function PoolGame({
               sizes="180px"
               className="pointer-events-none object-cover object-[50%_22%]"
             />
-          </button>
+          </div>
           {Array.from({ length: 16 }, (_, n) => {
             const stripe = n > 8;
             return (
