@@ -8,15 +8,15 @@ Broad-strokes map of this repo for colleagues and AI agents. For setup and the p
 
 ## Stack
 
-| Concern    | Choice                                                                   |
-| ---------- | ------------------------------------------------------------------------ |
-| Framework  | Next.js 16, App Router, React 19                                         |
-| Language   | TypeScript (strict type-check via `tsc` and `next build`)                |
-| Styling    | Tailwind CSS 4 (via `@tailwindcss/postcss`), dark mode via `html.dark`   |
-| Unit tests | Jest 30 + Testing Library, jsdom, snapshot tests                         |
-| E2E tests  | Playwright (`e2e/`)                                                      |
-| Tooling    | pnpm 10, ESLint 9, Prettier (with tailwind plugin), Husky pre-commit     |
-| Hosting    | Vercel                                                                   |
+| Concern    | Choice                                                                 |
+| ---------- | ---------------------------------------------------------------------- |
+| Framework  | Next.js 16, App Router, React 19                                       |
+| Language   | TypeScript (strict type-check via `tsc` and `next build`)              |
+| Styling    | Tailwind CSS 4 (via `@tailwindcss/postcss`), dark mode via `html.dark` |
+| Unit tests | Jest 30 + Testing Library, jsdom, snapshot tests                       |
+| E2E tests  | Playwright (`e2e/`)                                                    |
+| Tooling    | pnpm 10, ESLint 9, Prettier (with tailwind plugin), Husky pre-commit   |
+| Hosting    | Vercel                                                                 |
 
 ## Layout
 
@@ -58,15 +58,15 @@ Each section wraps itself in `SectionLayout`. Section content comes from `consta
 
 The code is split so game rules are testable without a DOM:
 
-| File                            | Role                                                                                                          |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `components/PoolHero.tsx`       | Client shell. Coin tilt, open/close transition, breakpoint and theme detection, scale-to-fit. Lazy-loads the game. |
-| `components/pool/PoolGame.tsx`  | The table UI. Rendering, pointer and keyboard input, the `requestAnimationFrame` loop, opponent turn timing, pot animations. |
-| `components/pool/engine.ts`     | Pure logic: physics, rules, ball in hand, opponent shot planning. No DOM, no React.                            |
-| `components/pool/geometry.ts`   | Pure helpers: furniture sizes, cushion polygons, aim guide lines, placement overlay.                          |
-| `components/pool/ballPaint.ts`  | Pure maths turning a ball's 3D orientation into CSS transforms.                                               |
-| `components/pool/StatusPanel.tsx` | Message, scoreboard, "End game" and "Play again", portalled below the table.                                |
-| `components/pool/theme.ts`      | Light and dark palettes and ball colours.                                                                     |
+| File                              | Role                                                                                                                         |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `components/PoolHero.tsx`         | Client shell. Coin tilt, open/close transition, breakpoint and theme detection, scale-to-fit. Lazy-loads the game.           |
+| `components/pool/PoolGame.tsx`    | The table UI. Rendering, pointer and keyboard input, the `requestAnimationFrame` loop, opponent turn timing, pot animations. |
+| `components/pool/engine.ts`       | Pure logic: physics, rules, ball in hand, opponent shot planning. No DOM, no React.                                          |
+| `components/pool/geometry.ts`     | Pure helpers: furniture sizes, cushion polygons, aim guide lines, placement overlay.                                         |
+| `components/pool/ballPaint.ts`    | Pure maths turning a ball's 3D orientation into CSS transforms.                                                              |
+| `components/pool/StatusPanel.tsx` | Message, scoreboard, "End game" and "Play again", portalled below the table.                                                 |
+| `components/pool/theme.ts`        | Light and dark palettes and ball colours.                                                                                    |
 
 ### Key design decisions
 
@@ -80,13 +80,13 @@ The code is split so game rules are testable without a DOM:
 
 ## Testing
 
-| Command              | What it runs                                                            |
-| -------------------- | ----------------------------------------------------------------------- |
-| `pnpm test:unit`     | Jest. Component snapshots plus deterministic engine, geometry and paint tests. |
-| `pnpm test:e2e`      | Playwright. Page wiring and pool game behaviour, not shot outcomes.     |
-| `pnpm type-check`    | `tsc`                                                                   |
-| `pnpm lint` / `pnpm format` | ESLint check / autofix                                           |
-| `pnpm prettier` / `pnpm fix` | Prettier check / write                                          |
+| Command                      | What it runs                                                                   |
+| ---------------------------- | ------------------------------------------------------------------------------ |
+| `pnpm test:unit`             | Jest. Component snapshots plus deterministic engine, geometry and paint tests. |
+| `pnpm test:e2e`              | Playwright. Page wiring and pool game behaviour, not shot outcomes.            |
+| `pnpm type-check`            | `tsc`                                                                          |
+| `pnpm lint` / `pnpm format`  | ESLint check / autofix                                                         |
+| `pnpm prettier` / `pnpm fix` | Prettier check / write                                                         |
 
 Pre-commit (`.husky/pre-commit`) runs unit tests, type-check, `fix` and `format`. If a UI change is intentional and a snapshot fails, update it with `pnpm test:unit -u` and review the diff.
 
