@@ -653,6 +653,7 @@ export default function PoolGame({
         </svg>
         <div
           ref={surfRef}
+          data-testid="pool-felt"
           onPointerDown={onSurfaceDown}
           className="absolute cursor-crosshair overflow-hidden"
           style={{
