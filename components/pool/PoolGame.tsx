@@ -76,7 +76,7 @@ interface Strike {
 type Point = { u: number; v: number };
 
 /** James's turn, timed from `t0`. */
-interface AiTurn {
+interface OpponentTurn {
   from: number;
   to: number;
   power: number;
@@ -86,15 +86,15 @@ interface AiTurn {
 }
 
 // James takes about five seconds per turn. Times are ms since his turn began.
-const AI_SWAY_END = 1400;
-const AI_AIM_END = 3100;
-const AI_PULL_START = 3300;
-const AI_PULL_END = 4700;
-const AI_STRIKE = 4850;
+const OPPONENT_SWAY_END = 1400;
+const OPPONENT_AIM_END = 3100;
+const OPPONENT_PULL_START = 3300;
+const OPPONENT_PULL_END = 4700;
+const OPPONENT_STRIKE = 4850;
 /** With ball in hand, James slides the cue ball into place over this long. */
-const AI_PLACE_END = 1200;
+const OPPONENT_PLACE_END = 1200;
 /** Idle sway amplitude in radians while James "thinks". */
-const AI_SWAY = 0.06;
+const OPPONENT_SWAY = 0.06;
 
 /** Drag distance for full power, as a fraction of the table length. */
 const FULL_POWER_DRAG = 0.28;
@@ -190,7 +190,7 @@ export default function PoolGame({
   const dragCue = useRef(false);
   const kitchenRef = useRef<HTMLDivElement>(null);
   const handRef = useRef<HTMLDivElement>(null);
-  const aiTurn = useRef<AiTurn | null>(null);
+  const opponentTurn = useRef<OpponentTurn | null>(null);
   const prevPos = useRef<({ x: number; y: number } | null)[]>([]);
 
   /** Table space to screen space. */
@@ -221,7 +221,7 @@ export default function PoolGame({
     for (const n of [...clones.current.keys()]) removeClone(n);
   };
 
-  /** Drops any drag, aim, pull, strike or AI plan that is in flight. */
+  /** Drops any drag, aim, pull, strike or James's plan that is in flight. */
   const cancelInteraction = () => {
     dragCue.current = false;
     document.body.style.cursor = "";
@@ -229,7 +229,7 @@ export default function PoolGame({
     keyCharge.current = false;
     pullAmt.current = 0;
     strike.current = null;
-    aiTurn.current = null;
+    opponentTurn.current = null;
   };
 
   /** Re-racks and clears every in-flight interaction. */
@@ -497,13 +497,13 @@ export default function PoolGame({
     };
 
     /** James: idle sway, ease the aim round, draw the cue back, strike. */
-    const stepAi = () => {
-      if (!aiTurn.current) {
+    const stepOpponent = () => {
+      if (!opponentTurn.current) {
         const cb = engine.cue;
         // With ball in hand, choose the best spot and plan the shot from it.
         const spot = engine.place ? engine.pickPlacement() : null;
-        const plan = engine.planAi(aim.current, spot ?? cb);
-        aiTurn.current = {
+        const plan = engine.planOpponentShot(aim.current, spot ?? cb);
+        opponentTurn.current = {
           from: aim.current,
           to: plan.ang,
           power: plan.power,
@@ -511,11 +511,11 @@ export default function PoolGame({
           place: spot ? { from: { u: cb.u, v: cb.v }, to: spot } : null,
         };
       }
-      const a = aiTurn.current;
+      const a = opponentTurn.current;
       const el = performance.now() - a.t0;
       if (a.place) {
         // Ease-in-out slide of the white to its new spot.
-        const q = Math.min(1, el / AI_PLACE_END);
+        const q = Math.min(1, el / OPPONENT_PLACE_END);
         const e2 = q < 0.5 ? 2 * q * q : 1 - Math.pow(-2 * q + 2, 2) / 2;
         const cb = engine.cue;
         cb.u = a.place.from.u + (a.place.to.u - a.place.from.u) * e2;
@@ -529,23 +529,28 @@ export default function PoolGame({
       // Ease-in-out between the starting aim and the chosen angle.
       const k = Math.max(
         0,
-        Math.min(1, (el - AI_SWAY_END) / (AI_AIM_END - AI_SWAY_END)),
+        Math.min(
+          1,
+          (el - OPPONENT_SWAY_END) / (OPPONENT_AIM_END - OPPONENT_SWAY_END),
+        ),
       );
       const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
       const sway =
-        el < AI_SWAY_END
-          ? Math.sin(el / 260) * AI_SWAY * (el / AI_SWAY_END)
+        el < OPPONENT_SWAY_END
+          ? Math.sin(el / 260) * OPPONENT_SWAY * (el / OPPONENT_SWAY_END)
           : 0;
       aim.current = a.from + (a.to - a.from) * e + sway;
-      if (el > AI_PULL_START) {
+      if (el > OPPONENT_PULL_START) {
         pullAmt.current = Math.min(
           a.power,
-          ((el - AI_PULL_START) / (AI_PULL_END - AI_PULL_START)) * a.power,
+          ((el - OPPONENT_PULL_START) /
+            (OPPONENT_PULL_END - OPPONENT_PULL_START)) *
+            a.power,
         );
       }
-      if (el > AI_STRIKE) {
+      if (el > OPPONENT_STRIKE) {
         strike.current = { ang: a.to, power: a.power, pull: a.power };
-        aiTurn.current = null;
+        opponentTurn.current = null;
       }
     };
 
@@ -713,7 +718,7 @@ export default function PoolGame({
         engine.turn === "james" &&
         engine.cue.on
       ) {
-        stepAi();
+        stepOpponent();
       }
 
       paintBalls();
@@ -724,7 +729,7 @@ export default function PoolGame({
         !engine.moving &&
         !engine.winner &&
         !dragCue.current &&
-        !aiTurn.current?.place;
+        !opponentTurn.current?.place;
       paintCue(showCue);
       paintGuides(showCue && engine.turn === "you" && !strike.current);
     };

@@ -12,7 +12,7 @@ import {
   type Shot,
 } from "./engine";
 
-// Deterministic rng so racks and AI error are repeatable.
+// Deterministic rng so racks and James's aim error are repeatable.
 function seeded(seed = 1) {
   let s = seed;
   return () => {
@@ -359,10 +359,10 @@ describe("ray", () => {
   });
 });
 
-describe("planAi", () => {
+describe("planOpponentShot", () => {
   it("aims the break at the 1 ball with high power", () => {
     const e = setup();
-    const plan = e.planAi(0);
+    const plan = e.planOpponentShot(0);
     expect(plan.power).toBe(0.95);
     expect(Math.abs(plan.ang)).toBeLessThan(0.2);
   });
@@ -377,14 +377,14 @@ describe("planAi", () => {
     e.balls[1].v = 120;
     // A ball off the table so this is not treated as the break.
     e.balls[15].on = false;
-    const plan = e.planAi(0);
+    const plan = e.planOpponentShot(0);
     expect(plan.power).toBeGreaterThan(0.29);
     expect(plan.power).toBeLessThanOrEqual(0.92);
   });
 
   it("returns an angle within pi of the current aim", () => {
     const e = setup();
-    const plan = e.planAi(10);
+    const plan = e.planOpponentShot(10);
     expect(Math.abs(plan.ang - 10)).toBeLessThanOrEqual(Math.PI + 0.1);
   });
 });
@@ -595,7 +595,7 @@ describe("James with ball in hand", () => {
     e.cue.u = 800;
     e.cue.v = 400;
     const from = { u: 260, v: 140 };
-    const plan = e.planAi(0, from);
+    const plan = e.planOpponentShot(0, from);
     // Aiming at the ghost ball for ball 1 from the origin, not from the cue ball.
     const angToBall = Math.atan2(90 - from.v, 120 - from.u);
     expect(Math.abs(plan.ang - angToBall)).toBeLessThan(0.5);

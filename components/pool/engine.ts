@@ -5,7 +5,7 @@
  * it (0..Wd). The renderer maps (u, v) to screen coordinates, which lets one
  * engine serve both the landscape (desktop) and portrait (mobile) tables.
  *
- * The engine owns physics, the simplified 8-ball rules and the AI opponent.
+ * The engine owns physics, the simplified 8-ball rules and the computer opponent (James).
  * The renderer drives it once per animation frame: `step()` then
  * `tickSinks()`, and reads `balls`, `turn`, `message` and `winner` back.
  */
@@ -104,7 +104,7 @@ export interface RayResult {
 }
 
 /** A shot chosen for James. */
-export interface AiPlan {
+export interface OpponentPlan {
   /** Aim angle in radians. */
   ang: number;
   /** Power from 0 to 1. */
@@ -132,7 +132,7 @@ export const BREAK_MESSAGE =
 const RACK_GAP = 0.02;
 /** A cue ball placement must keep at least this many radii from other balls. */
 const PLACE_CLEARANCE = 2.05;
-/** The AI samples this many columns and rows when choosing where to place the cue ball. */
+/** James samples this many columns and rows when choosing where to place the cue ball. */
 const PLACE_GRID_U = 17;
 const PLACE_GRID_V = 9;
 
@@ -144,8 +144,8 @@ export type Rng = () => number;
  */
 export type Placement = "kitchen" | "anywhere" | null;
 
-/** A shot chosen for the AI, with the score the chooser ranked it by (lower is better). */
-export interface ScoredShot extends AiPlan {
+/** A shot chosen for James, with the score the chooser ranked it by (lower is better). */
+export interface ScoredShot extends OpponentPlan {
   score: number;
 }
 
@@ -186,7 +186,7 @@ export function isOwn(group: Group, n: number): boolean {
   return group === "solids" ? n > 0 && n < 8 : n > 8;
 }
 
-/** Game state, physics, rules and AI for one 8-ball match against James. */
+/** Game state, physics, rules and the computer opponent for one 8-ball match against James. */
 export class PoolEngine {
   readonly cfg: TableConfig;
   readonly pockets: Pocket[];
@@ -603,7 +603,7 @@ export class PoolEngine {
   }
 
   /** Balls James is allowed to hit first: his group, then the 8 once they are cleared. */
-  private aiTargets(): Ball[] {
+  private opponentTargets(): Ball[] {
     const g = this.groups.james;
     let targets = g
       ? this.left(g)
@@ -638,7 +638,7 @@ export class PoolEngine {
       });
 
     let best: ScoredShot | null = null;
-    for (const t of this.aiTargets()) {
+    for (const t of this.opponentTargets()) {
       for (const p of this.pockets) {
         const pu = p.u - t.u;
         const pv = p.v - t.v;
@@ -698,16 +698,16 @@ export class PoolEngine {
    * Choose an aim angle and power for James, as if the cue ball rested at
    * `origin` (default: where it is). Does not mutate game state.
    */
-  planAi(
+  planOpponentShot(
     currentAim: number,
     origin: { u: number; v: number } = this.cue,
-  ): AiPlan {
-    let plan: AiPlan;
+  ): OpponentPlan {
+    let plan: OpponentPlan;
     const best = this.bestShot(origin);
     if (best) {
       plan = { ang: best.ang, power: best.power };
     } else {
-      const t = [...this.aiTargets()].sort(
+      const t = [...this.opponentTargets()].sort(
         (a, b) =>
           Math.hypot(a.u - origin.u, a.v - origin.v) -
           Math.hypot(b.u - origin.u, b.v - origin.v),
